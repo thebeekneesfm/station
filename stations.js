@@ -8161,6 +8161,1111 @@ window.STATIONS = [
   ]
  },
  {
+  "id": "classical",
+  "name": "Classical",
+  "group": "Music",
+  "music": true,
+  "blurb": "Opera stars, violinists, pianists and orchestras on 78s, 1900s to the '50s.",
+  "card": "art/cards/classical.png",
+  "epoch": "2026-11-01T00:00:00-07:00",
+  "sound": {
+   "level": true,
+   "declick": 0.8,
+   "decrackle": 0.8,
+   "tone": 7500
+  },
+  "tracks": [
+   {
+    "src": "https://archive.org/download/pat-84004/pat-84004.mp3",
+    "length": 144.0,
+    "series": "Enrico Caruso",
+    "title": "Tosca, E lucevan le stelle",
+    "date": "1903",
+    "item": "https://archive.org/details/pat-84004"
+   },
+   {
+    "src": "https://archive.org/download/78_nocturne-complaint_josef-hofmann-hofmann_gbia0009325b/Nocturne%20%28Complaint%29%20-%20Josef%20Hofmann%20-%20Hofmann.mp3",
+    "length": 143.0,
+    "series": "Josef Hofmann",
+    "title": "Nocturne (Complaint)",
+    "date": "1923",
+    "item": "https://archive.org/details/78_nocturne-complaint_josef-hofmann-hofmann_gbia0009325b"
+   },
+   {
+    "src": "https://archive.org/download/78_bohme-mi-chiamano-mimi-my-name-is-mimi-act-i_geraldine-farrar-victor-orchest_gbia0259022a/Boh%C3%AAme%20-%20Mi%20chiamano%20Mimi%20%28My%20Name%20is%20M%20-%20Geraldine%20Farrar.mp3",
+    "length": 266.59,
+    "series": "Geraldine Farrar",
+    "title": "Bohême - Mi chiamano Mimi (My Name is Mimi) (Act I)",
+    "date": "1912",
+    "item": "https://archive.org/details/78_bohme-mi-chiamano-mimi-my-name-is-mimi-act-i_geraldine-farrar-victor-orchest_gbia0259022a"
+   },
+   {
+    "src": "https://archive.org/download/MischaElman/MischaElman-Humoresque.mp3",
+    "length": 233.0,
+    "series": "Mischa Elman",
+    "title": "Humoresque",
+    "date": "1910",
+    "item": "https://archive.org/details/MischaElman"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OVALTINE.MP3",
+    "length": 126.24,
+    "series": "A word from our sponsor",
+    "title": "Ovaltine",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_ein-feste-burg-ist-unser-gott-a-sure-stronghold-our-god-is-still_lotte-lehmann_gbia0196255a/EIN%20FESTE%20BURG%20IST%20UNSER%20GOTT%20%28A%20sure%20Stro%20-%20LOTTE%20LEHMANN.mp3",
+    "length": 195.0,
+    "series": "Lotte Lehmann",
+    "title": "EIN FESTE BURG IST UNSER GOTT (A sure Stronghold our God is still)",
+    "date": "1937",
+    "item": "https://archive.org/details/78_ein-feste-burg-ist-unser-gott-a-sure-stronghold-our-god-is-still_lotte-lehmann_gbia0196255a"
+   },
+   {
+    "src": "https://archive.org/download/78_annie-laurie_nellie-melba-douglas-scott_gbia0115184a/Annie%20Laurie%20-%20Nellie%20Melba%20-%20Douglas%20-%20Scott.mp3",
+    "length": 185.0,
+    "series": "Nellie Melba",
+    "title": "Annie Laurie",
+    "date": "1916",
+    "item": "https://archive.org/details/78_annie-laurie_nellie-melba-douglas-scott_gbia0115184a"
+   },
+   {
+    "src": "https://archive.org/download/78_onward-christian-soldiers_ernestine-schumann-heink-s-baring-gould-sir-arthur-sull_gbia0039038a/Onward%2C%20Christian%20Soldiers%20-%20Ernestine%20Schumann-Heink.mp3",
+    "length": 191.0,
+    "series": "Ernestine Schumann-Heink",
+    "title": "Onward, Christian Soldiers",
+    "date": "1918",
+    "item": "https://archive.org/details/78_onward-christian-soldiers_ernestine-schumann-heink-s-baring-gould-sir-arthur-sull_gbia0039038a"
+   },
+   {
+    "src": "https://archive.org/download/78_nessun-dorma-none-shall-sleep_beniamino-gigli-the-philharmonia-orchestra-adami-s_gbia7003091b/NESSUN%20DORMA%21%20%28None%20shall%20sleep%29%20-%20BENIAMINO%20GIGLI.mp3",
+    "length": 211.92,
+    "series": "Beniamino Gigli",
+    "title": "NESSUN DORMA! (None shall sleep)",
+    "date": "1950",
+    "item": "https://archive.org/details/78_nessun-dorma-none-shall-sleep_beniamino-gigli-the-philharmonia-orchestra-adami-s_gbia7003091b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUDWEISER.mp3",
+    "length": 19.07,
+    "series": "A word from our sponsor",
+    "title": "Budweiser",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_down-the-petersky-moscow-street-song_feodor-chaliapin-chaliapin_gbia0005696a/Down%20The%20Petersky%20%28Moscow%20Street%20Song%29%20-%20Feodor%20Chaliapin-restored.mp3",
+    "length": 136.22,
+    "series": "Feodor Chaliapin",
+    "title": "Down The Petersky (Moscow Street Song)",
+    "date": "1925",
+    "item": "https://archive.org/details/78_down-the-petersky-moscow-street-song_feodor-chaliapin-chaliapin_gbia0005696a"
+   },
+   {
+    "src": "https://archive.org/download/78_largo_maud-powell-handel-waldmar-liachowsky_gbia0015777b/Largo%20-%20Maud%20Powell%20-%20Handel%20-%20Waldmar%20Liachowsky.mp3",
+    "length": 172.0,
+    "series": "Maud Powell",
+    "title": "Largo",
+    "date": "1916",
+    "item": "https://archive.org/details/78_largo_maud-powell-handel-waldmar-liachowsky_gbia0015777b"
+   },
+   {
+    "src": "https://archive.org/download/78_au-clair-de-la-lune-in-the-moonlight_geraldine-farrar-edmond-clement-rosario-bour_gbia0298537a/Au%20Clair%20de%20la%20Lune%20%28In%20%20-%20Geraldine%20Farrar-Edmond%20Clement.mp3",
+    "length": 166.27,
+    "series": "Geraldine Farrar-Edmond Clement",
+    "title": "Au Clair de la Lune (In the Moonlight)",
+    "date": "1913",
+    "item": "https://archive.org/details/78_au-clair-de-la-lune-in-the-moonlight_geraldine-farrar-edmond-clement-rosario-bour_gbia0298537a"
+   },
+   {
+    "src": "https://archive.org/download/TCHAIKOVSKYNutcrackerSuiteOp.71a-NEWTRANSFER/01.OvertureMiniature.mp3",
+    "length": 194.04,
+    "series": "Leopold Stokowski, conductor",
+    "title": "TCHAIKOVSKY: Nutcracker Suite, Op. 71a",
+    "date": "1934",
+    "item": "https://archive.org/details/TCHAIKOVSKYNutcrackerSuiteOp.71a-NEWTRANSFER"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdmiral.mp3",
+    "length": 77.38,
+    "series": "A word from our sponsor",
+    "title": "Admiral",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_chanson-hebraique-hebrew-song_alma-gluck-and-efrem-zimbalist-ravel-pasternack_gbia0033106a/Chanson%20Hebraique%20%28Hebrew%20-%20Alma%20Gluck%20and%20Efrem%20Zimbalist.mp3",
+    "length": 178.0,
+    "series": "Alma Gluck and Efrem Zimbalist",
+    "title": "Chanson Hèbraique (Hebrew Song)",
+    "date": "1917",
+    "item": "https://archive.org/details/78_chanson-hebraique-hebrew-song_alma-gluck-and-efrem-zimbalist-ravel-pasternack_gbia0033106a"
+   },
+   {
+    "src": "https://archive.org/download/78_lakm-dov-iindiana-bruna-bell-song-act-2_amelita-galli-curci-lo-delibes_gbia0259027a/Lakm%C3%A9%20-%20Dov%27%C3%A8%20I%27Indiana%20bruna%20%28Bell%20%20-%20Amelita%20Galli-Curci.mp3",
+    "length": 255.74,
+    "series": "Amelita Galli-Curci",
+    "title": "Lakmé - Dov'è I'Indiana bruna (Bell Song) (Act 2)",
+    "date": "1917",
+    "item": "https://archive.org/details/78_lakm-dov-iindiana-bruna-bell-song-act-2_amelita-galli-curci-lo-delibes_gbia0259027a"
+   },
+   {
+    "src": "https://archive.org/download/78_boheme-o-soave-fanciulla-thou-sweetest-maiden_nellie-melba-and-enrico-caruso-pucc_gbia0105023a/Boheme-O%20soave%20fanciulla%20%20-%20Nellie%20Melba%20and%20Enrico%20Caruso.mp3",
+    "length": 200.0,
+    "series": "Nellie Melba and Enrico Caruso",
+    "title": "Boheme-O soave fanciulla (Thou Sweetest Maiden)",
+    "date": "1907",
+    "item": "https://archive.org/details/78_boheme-o-soave-fanciulla-thou-sweetest-maiden_nellie-melba-and-enrico-caruso-pucc_gbia0105023a"
+   },
+   {
+    "src": "https://archive.org/download/CarusoAlmaGluck/CarusoAlmaGluck-Brindisi.mp3",
+    "length": 188.0,
+    "series": "Caruso & Alma Gluck",
+    "title": "Brindisi",
+    "date": "1914",
+    "item": "https://archive.org/details/CarusoAlmaGluck"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWhiteKingSoap.mp3",
+    "length": 81.37,
+    "series": "A word from our sponsor",
+    "title": "White King Soap",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_1-le-tambourin-2-le-coucou-rondo_wanda-landowska-jean-philippe-rameau-claude-daqu_gbia0297820b/1.%20Le%20Tambourin%202.%20Le%20Coucou-Rondo%20-%20Wanda%20Landowska.mp3",
+    "length": 209.21,
+    "series": "Wanda Landowska",
+    "title": "1. Le Tambourin 2. Le Coucou-Rondo",
+    "date": "1926",
+    "item": "https://archive.org/details/78_1-le-tambourin-2-le-coucou-rondo_wanda-landowska-jean-philippe-rameau-claude-daqu_gbia0297820b"
+   },
+   {
+    "src": "https://archive.org/download/78_ada-la-fatal-pietra-the-fatal-stone_rosa-ponselle-giovanni-martinelli-verdi_gbia0351606a/A%C3%AFda-La%20fatal%20pietra%20%28%20-%20Rosa%20Ponselle-Giovanni%20Martinelli.mp3",
+    "length": 204.1,
+    "series": "Rosa Ponselle-Giovanni Martinelli",
+    "title": "Aïda-La fatal pietra (The Fatal Stone)",
+    "date": "1926",
+    "item": "https://archive.org/details/78_ada-la-fatal-pietra-the-fatal-stone_rosa-ponselle-giovanni-martinelli-verdi_gbia0351606a"
+   },
+   {
+    "src": "https://archive.org/download/78_etude-in-c-moll-revolutions-etude_ignace-jan-paderewski-chopin_gbia0123357a/ETUDE%20IN%20C-MOLL%20%28Revolutions-Etude%20-%20Ignace%20Jan%20Paderewski.mp3",
+    "length": 159.0,
+    "series": "Ignace Jan Paderewski",
+    "title": "ETUDE IN C-MOLL (Revolutions-Etude)",
+    "date": "1928",
+    "item": "https://archive.org/details/78_etude-in-c-moll-revolutions-etude_ignace-jan-paderewski-chopin_gbia0123357a"
+   },
+   {
+    "src": "https://archive.org/download/78_a-perfect-day_rosa-ponselle-carrie-jacobs-bond_gbia0243576b/A%20Perfect%20Day%20-%20Rosa%20Ponselle%20-%20Carrie%20Jacobs.mp3",
+    "length": 180.48,
+    "series": "Rosa Ponselle",
+    "title": "A Perfect Day",
+    "date": "1925",
+    "item": "https://archive.org/details/78_a-perfect-day_rosa-ponselle-carrie-jacobs-bond_gbia0243576b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceKrispies.mp3",
+    "length": 58.26,
+    "series": "A word from our sponsor",
+    "title": "Rice Krispies",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_andante-cantabile_elman-string-quartet-mischa-elman-bak-rissland-and-nagel-of-the_gbia7003749a/Andante%20Cantabile%20-%20ELMAN%20STRING%20QUARTET.mp3",
+    "length": 253.49,
+    "series": "Elman String Quartet",
+    "title": "Andante Cantabile",
+    "date": "1918",
+    "item": "https://archive.org/details/78_andante-cantabile_elman-string-quartet-mischa-elman-bak-rissland-and-nagel-of-the_gbia7003749a"
+   },
+   {
+    "src": "https://archive.org/download/78_musette_pablo-casals-nicolai-mednikoff-bach-pollain_gbia0289005b/MUSETTE%20-%20Pablo%20Casals%20-%20Nicolai%20Mednikoff.mp3",
+    "length": 230.88,
+    "series": "Pablo Casals",
+    "title": "Musette",
+    "date": "1928",
+    "item": "https://archive.org/details/78_musette_pablo-casals-nicolai-mednikoff-bach-pollain_gbia0289005b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-far-away-bells_john-mccormack-furber-gordon_gbia7025670b/THE%20FAR-AWAY%20BELLS%20-%20John%20McCormack%20-%20Furber.mp3",
+    "length": 164.0,
+    "series": "John McCormack",
+    "title": "The Far-away Bells",
+    "date": "1926",
+    "item": "https://archive.org/details/78_the-far-away-bells_john-mccormack-furber-gordon_gbia7025670b"
+   },
+   {
+    "src": "https://archive.org/download/78_il-gitano-re-el-rey-gitano_titta-ruffo-alfredo-gandolfi-anthony-f-paganucci_gbia0038705b/Il%20Gitano%20Re%20%28El%20Rey%20Gitano%29%20-%20Titta%20Ruffo.mp3",
+    "length": 176.0,
+    "series": "Titta Ruffo",
+    "title": "Il Gitano Re (El Rey Gitano)",
+    "date": "1929",
+    "item": "https://archive.org/details/78_il-gitano-re-el-rey-gitano_titta-ruffo-alfredo-gandolfi-anthony-f-paganucci_gbia0038705b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsHouseholdFinanceCorp.mp3",
+    "length": 22.72,
+    "series": "A word from our sponsor",
+    "title": "Household Finance Corp",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_serenade_efrem-zimbalist-pierne-emanuel-balaban_gbia0012574a/Serenade%20-%20Efrem%20Zimbalist%20-%20Pierne%20-%20Emanuel%20Balaban.mp3",
+    "length": 149.0,
+    "series": "Efrem Zimbalist",
+    "title": "Serenade",
+    "date": "1921",
+    "item": "https://archive.org/details/78_serenade_efrem-zimbalist-pierne-emanuel-balaban_gbia0012574a"
+   },
+   {
+    "src": "https://archive.org/download/DidosLamentDB6913/Didos%20Lament%20DB%206913.mp3",
+    "length": 276.0,
+    "series": "Kirsten FLAGSTAD - Sopran",
+    "title": "Didos Lament DB 6913",
+    "date": "1948",
+    "item": "https://archive.org/details/DidosLamentDB6913"
+   },
+   {
+    "src": "https://archive.org/download/78_la-juive-vous-qui-du-dieu-vivant-you-who-have-the-clemency-act-iii_ezio-pinza_gbia0292494b/La%20Juive%20-%20Vous%20qui%20du%20Dieu%20vivant%20%28You%20Who%20H%20-%20Ezio%20Pinza.mp3",
+    "length": 195.19,
+    "series": "Ezio Pinza",
+    "title": "La Juive - Vous qui du Dieu vivant (You Who Have the Clemency) (Act III)",
+    "date": "1927",
+    "item": "https://archive.org/details/78_la-juive-vous-qui-du-dieu-vivant-you-who-have-the-clemency-act-iii_ezio-pinza_gbia0292494b"
+   },
+   {
+    "src": "https://archive.org/download/78_song-of-the-volga-boatmen_fritz-kreisler-carl-lamson-kreisler_gbia0015765a/Song%20of%20the%20Volga%20Boatmen%20-%20Fritz%20Kreisler.mp3",
+    "length": 190.0,
+    "series": "Fritz Kreisler",
+    "title": "Song of the Volga Boatmen",
+    "date": "1925",
+    "item": "https://archive.org/details/78_song-of-the-volga-boatmen_fritz-kreisler-carl-lamson-kreisler_gbia0015765a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUSTERCREAM.mp3",
+    "length": 50.11,
+    "series": "A word from our sponsor",
+    "title": "Lustre-Creme Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_komm-ssser-tod-come-sweet-death_marian-anderson-kosti-vehanen-bach_gbia0124246b/KOMM%27%2C%20S%C3%9CSSER%20TOD%20%28COME%2C%20SWEET%20DEATH%29%20-%20Marian%20Anderson.mp3",
+    "length": 192.0,
+    "series": "Marian Anderson",
+    "title": "Komm', Süsser Tod (come, Sweet Death)",
+    "date": "1936",
+    "item": "https://archive.org/details/78_komm-ssser-tod-come-sweet-death_marian-anderson-kosti-vehanen-bach_gbia0124246b"
+   },
+   {
+    "src": "https://archive.org/download/78_open-road_john-charles-thomas-victor-concert-orchestra-ronnell-strauss-frank-tours_gbia3046349b/OPEN%20ROAD%20-%20JOHN%20CHARLES%20THOMAS%20-%20Victor%20Concert%20Orchestra.mp3",
+    "length": 176.0,
+    "series": "John Charles Thomas",
+    "title": "Open Road",
+    "date": "1946",
+    "item": "https://archive.org/details/78_open-road_john-charles-thomas-victor-concert-orchestra-ronnell-strauss-frank-tours_gbia3046349b"
+   },
+   {
+    "src": "https://archive.org/download/78_ich-liebe-dich-i-love-thee_kirsten-flagstad-edwin-mcarthur-grieg_gbia0077200a/Ich%20Liebe%20Dich%20%28I%20Love%20Thee%29%20-%20Kirsten%20Flagstad.mp3",
+    "length": 197.0,
+    "series": "Kirsten Flagstad",
+    "title": "Ich Liebe Dich (I Love Thee)",
+    "date": "1936",
+    "item": "https://archive.org/details/78_ich-liebe-dich-i-love-thee_kirsten-flagstad-edwin-mcarthur-grieg_gbia0077200a"
+   },
+   {
+    "src": "https://archive.org/download/mattinata1903/mattinata1903.mp3",
+    "length": 129.0,
+    "series": "Enrico Caruso and Ruggiero Leoncavallo",
+    "title": "Mattinata",
+    "date": "1903",
+    "item": "https://archive.org/details/mattinata1903"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/WHEATIESCEREAL.mp3",
+    "length": 85.21,
+    "series": "A word from our sponsor",
+    "title": "Wheaties",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_a-la-orilla-de-un-palmar_tito-schipa-m-m-ponce_gbia0038706b/A%20la%20Orilla%20de%20un%20Palmar%20-%20Tito%20Schipa%20-%20M.%20M.%20Ponce.mp3",
+    "length": 186.0,
+    "series": "Tito Schipa",
+    "title": "A la Orilla de un Palmar",
+    "date": "1926",
+    "item": "https://archive.org/details/78_a-la-orilla-de-un-palmar_tito-schipa-m-m-ponce_gbia0038706b"
+   },
+   {
+    "src": "https://archive.org/download/DEBUSSYPreludesBookI-Cortot-NewTransfer/01.%20No.%201%20-%20Danseuses%20de%20Delphes.mp3",
+    "length": 161.04,
+    "series": "Alfred Cortot, piano",
+    "title": "DEBUSSY: Preludes, Book I",
+    "date": "1931",
+    "item": "https://archive.org/details/DEBUSSYPreludesBookI-Cortot-NewTransfer"
+   },
+   {
+    "src": "https://archive.org/download/78_sonatina-in-a-major_andrs-segovia-torroba_gbia3032379a/Sonatina%20in%20A%20Major%20-%20Andr%C3%A9s%20Segovia%20-%20Torroba.mp3",
+    "length": 203.0,
+    "series": "Andrés Segovia",
+    "title": "Sonatina in A Major",
+    "date": "1928",
+    "item": "https://archive.org/details/78_sonatina-in-a-major_andrs-segovia-torroba_gbia3032379a"
+   },
+   {
+    "src": "https://archive.org/download/JohnGayTheBeggarsOpera/01.Overture.mp3",
+    "length": 168.46,
+    "series": "Glyndebourne Festival Orchestra and Chorus",
+    "title": "John Gay: THE BEGGAR'S OPERA",
+    "date": "1940",
+    "item": "https://archive.org/details/JohnGayTheBeggarsOpera"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWildRootCreamOil.mp3",
+    "length": 42.5,
+    "series": "A word from our sponsor",
+    "title": "Wildroot Cream-Oil",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_nessun-dorma-none-shall-sleep_jussi-bjorling-adami-simoni-puccini-nils-grevilli_gbia0120508a/Nessun%20Dorma%20%28None%20Shall%20Sleep%29%20-%20Jussi%20Bjorling.mp3",
+    "length": 205.0,
+    "series": "Jussi Bjorling",
+    "title": "Nessun Dorma (None Shall Sleep)",
+    "date": "1944",
+    "item": "https://archive.org/details/78_nessun-dorma-none-shall-sleep_jussi-bjorling-adami-simoni-puccini-nils-grevilli_gbia0120508a"
+   },
+   {
+    "src": "https://archive.org/download/78_aloha-oe-farewell-to-thee_alma-gluck-and-orpheus-quartet-queen-liliuokalani_gbia0290540a/Aloha%20Oe%20%28Farewell%20to%20Thee%29%20-%20Alma%20Gluck%20and%20Orpheus%20Quartet.mp3",
+    "length": 231.65,
+    "series": "Alma Gluck and Orpheus Quartet",
+    "title": "Aloha Oe (Farewell to Thee)",
+    "date": "1917",
+    "item": "https://archive.org/details/78_aloha-oe-farewell-to-thee_alma-gluck-and-orpheus-quartet-queen-liliuokalani_gbia0290540a"
+   },
+   {
+    "src": "https://archive.org/download/78_prelude-in-c-sharp-minor_sergei-rachmaninoff-rachmaninoff_gbia0016543a/Prelude%20in%20C%20Sharp%20Minor%20-%20Sergei%20Rachmaninoff-restored.mp3",
+    "length": 210.72,
+    "series": "Sergei Rachmaninoff",
+    "title": "Prelude in C Sharp Minor",
+    "date": "1928",
+    "item": "https://archive.org/details/78_prelude-in-c-sharp-minor_sergei-rachmaninoff-rachmaninoff_gbia0016543a"
+   },
+   {
+    "src": "https://archive.org/download/78_and-love-was-born_lawrence-tibbett-oscar-hammerstein-jerome-kern_gbia0292473a/AND%20LOVE%20WAS%20BORN%20-%20Lawrence%20Tibbett%20-%20Oscar%20Hammerstein.mp3",
+    "length": 207.46,
+    "series": "Lawrence Tibbett",
+    "title": "And Love Was Born",
+    "date": "1932",
+    "item": "https://archive.org/details/78_and-love-was-born_lawrence-tibbett-oscar-hammerstein-jerome-kern_gbia0292473a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCampbellsSoup.mp3",
+    "length": 68.87,
+    "series": "A word from our sponsor",
+    "title": "Campbell's Soup",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jesu-joy-of-mans-desiring_myra-hess-bach-myra-hess_gbia7030373a/JESU%2C%20JOY%20OF%20MAN%27S%20DESIRING%20-%20MYRA%20HESS%20-%20Bach.mp3",
+    "length": 211.0,
+    "series": "Myra Hess",
+    "title": "Jesu, Joy of Man's Desiring",
+    "date": "1940",
+    "item": "https://archive.org/details/78_jesu-joy-of-mans-desiring_myra-hess-bach-myra-hess_gbia7030373a"
+   },
+   {
+    "src": "https://archive.org/download/78_1-lever-du-jour-daybreak_serge-koussevitzky-and-the-boston-symphony-orchestra-ra_gbia7002688a/1.%20Lever%20du%20jour%20%28Daybreak%29%20-%20SERGE%20KOUSSEVITZKY%20and%20the%20BOSTON%20SYMPHONY%20ORCHESTRA.mp3",
+    "length": 265.92,
+    "series": "SERGE KOUSSEVITZKY and the BOSTON SYMPHONY ORCHESTRA",
+    "title": "1. Lever du jour (Daybreak)",
+    "date": "1945",
+    "item": "https://archive.org/details/78_1-lever-du-jour-daybreak_serge-koussevitzky-and-the-boston-symphony-orchestra-ra_gbia7002688a"
+   },
+   {
+    "src": "https://archive.org/download/78_serenade-a-la-poupee-serenade-for-the-doll_vladimir-horowitz-claude-a-debussy_gbia0094878a/Serenade%20a%20la%20Poupee%20%28Serenade%20for%20the%20-%20Vladimir%20Horowitz.mp3",
+    "length": 194.0,
+    "series": "Vladimir Horowitz",
+    "title": "Serenade a la Poupee (Serenade for the Doll)",
+    "date": "1928",
+    "item": "https://archive.org/details/78_serenade-a-la-poupee-serenade-for-the-doll_vladimir-horowitz-claude-a-debussy_gbia0094878a"
+   },
+   {
+    "src": "https://archive.org/download/78_gymnopdie-no-1_boston-symphony-orchestra-erik-satie-serge-koussevitzky_gbia0295164b/GYMNOP%C3%89DIE%20No.%201%20-%20Boston%20Symphony%20Orchestra.mp3",
+    "length": 265.1,
+    "series": "Boston Symphony Orchestra",
+    "title": "GYMNOPÉDIE No. 1",
+    "date": "1930",
+    "item": "https://archive.org/details/78_gymnopdie-no-1_boston-symphony-orchestra-erik-satie-serge-koussevitzky_gbia0295164b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/HALLOSHAMPOO.mp3",
+    "length": 25.7,
+    "series": "A word from our sponsor",
+    "title": "Halo Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_clair-de-lune-moonlight_leopold-stokowski-and-the-philadelphia-orchestra-debussy_gbia7000480a/CLAIR%20DE%20LUNE%20%28MOONLIGHT%29%20-%20LEOPOLD%20STOKOWSKI%20and%20the%20PHILADELPHIA%20ORCHESTRA.mp3",
+    "length": 171.31,
+    "series": "LEOPOLD STOKOWSKI and the PHILADELPHIA ORCHESTRA",
+    "title": "Clair De Lune (moonlight)",
+    "date": "1938",
+    "item": "https://archive.org/details/78_clair-de-lune-moonlight_leopold-stokowski-and-the-philadelphia-orchestra-debussy_gbia7000480a"
+   },
+   {
+    "src": "https://archive.org/download/78_a-laksin-min-kesayon-kaymn-summer-night-b-tuku-tuku-lampaitani-the-litt_gbia0121651b/%28a%29%20LAKSIN%20MIN%C3%84%20KESAYON%C3%84%20KAYM%C3%84%C3%84N%20%28Summer%20-%20MArian%20Anderson.mp3",
+    "length": 196.0,
+    "series": "MArian Anderson",
+    "title": "(a) LAKSIN MINÄ KESAYONÄ KAYMÄÄN (Summer Night); (b) TUKU TUKU LAMPAITANI (The Little Shepherdess)",
+    "date": "1936",
+    "item": "https://archive.org/details/78_a-laksin-min-kesayon-kaymn-summer-night-b-tuku-tuku-lampaitani-the-litt_gbia0121651b"
+   },
+   {
+    "src": "https://archive.org/download/9145aahsweetmysteryoflifer14698427/9145-A%20-%20Ah%20Sweet%20Mystery%20Of%20Life%20%5Br14698427%5D.mp3",
+    "length": 263.0,
+    "series": "Victor Salon Orchestra, Victor Light Opera Company, Victor Salon Group, Victor Concert Orchestra, Nathaniel Shilkret",
+    "title": "9145 A Ah Sweet Mystery Of Life [r 14698427]",
+    "date": "1927",
+    "item": "https://archive.org/details/9145aahsweetmysteryoflifer14698427"
+   },
+   {
+    "src": "https://archive.org/download/J.S.BACHGoldbergVariations-NEWTRANSFER/01.Aria.mp3",
+    "length": 152.19,
+    "series": "Wanda Landowska, harpsichord",
+    "title": "J. S. BACH: Goldberg Variations",
+    "date": "1945",
+    "item": "https://archive.org/details/J.S.BACHGoldbergVariations-NEWTRANSFER"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ELGINAMERICAN.mp3",
+    "length": 105.57,
+    "series": "A word from our sponsor",
+    "title": "Elgin American",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_2nd-movement-andante-con-moto_artur-rubinstein-royal-philharmonic-orchestra-beethov_gbia7004461b/2nd%20Movement-Andante%20con%20moto%20-%20ARTUR%20RUBINSTEIN.mp3",
+    "length": 288.96,
+    "series": "Artur Rubinstein",
+    "title": "2nd Movement-Andante con moto",
+    "date": "1950",
+    "item": "https://archive.org/details/78_2nd-movement-andante-con-moto_artur-rubinstein-royal-philharmonic-orchestra-beethov_gbia7004461b"
+   },
+   {
+    "src": "https://archive.org/download/78_vesti-la-giubba-on-with-the-motley_jussi-bjrling-leoncavallo-nils-grevillius_gbia7002891a/VESTI%20LA%20GIUBBA%20%28ON%20WITH%20THE%20MOTLEY%29%20-%20JUSSI%20BJ%C3%96RLING.mp3",
+    "length": 224.5,
+    "series": "Jussi Björling",
+    "title": "Vesti La Giubba (on with the Motley)",
+    "date": "1944",
+    "item": "https://archive.org/details/78_vesti-la-giubba-on-with-the-motley_jussi-bjrling-leoncavallo-nils-grevillius_gbia7002891a"
+   },
+   {
+    "src": "https://archive.org/download/78_suite-in-a-major-17th-century-no-5-gigue_andres-segovia-l-s-weiss_gbia0289052a/SUITE%20IN%20A%20MAJOR%20%2817TH%20CENTURY%29%20-%20No.%205-G%20-%20ANDRES%20SEGOVIA.mp3",
+    "length": 286.25,
+    "series": "Andres Segovia",
+    "title": "SUITE IN A MAJOR (17TH CENTURY) - No. 5-Gigue",
+    "date": "1932",
+    "item": "https://archive.org/details/78_suite-in-a-major-17th-century-no-5-gigue_andres-segovia-l-s-weiss_gbia0289052a"
+   },
+   {
+    "src": "https://archive.org/download/MoussorgskyPicturesAtAnExhibitioned.Horowitz/01.Promenade.mp3",
+    "length": 91.82,
+    "series": "Vladimir Horowitz, piano",
+    "title": "MOUSSORGSKY: Pictures at an Exhibition (ed. Horowitz)",
+    "date": "1947",
+    "item": "https://archive.org/details/MoussorgskyPicturesAtAnExhibitioned.Horowitz"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Chesterfield Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_du-du-liegst-mir-im-herzen-you-live-in-my-heart_alma-gluck-paul-reimers-pax-wilh_gbia0012691a/Du%2C%20Du%20Liegst%20mir%20im%20Herzen%20%28You%20Live%20in%20My%20H%20-%20Alma%20Gluck.mp3",
+    "length": 147.0,
+    "series": "Alma Gluck",
+    "title": "Du, Du Liegst mir im Herzen (You Live in My Heart)",
+    "date": "1914",
+    "item": "https://archive.org/details/78_du-du-liegst-mir-im-herzen-you-live-in-my-heart_alma-gluck-paul-reimers-pax-wilh_gbia0012691a"
+   },
+   {
+    "src": "https://archive.org/download/AlmaGluckwithOrpheusQuartet/AlmaGluckwithOrpheusQuartet-BringBackMyBonnietoMeWorldWarISong.mp3",
+    "length": 180.0,
+    "series": "Alma Gluck with Orpheus Quartet",
+    "title": "Bring Back My Bonnie to Me (World War I Song)",
+    "date": "1919",
+    "item": "https://archive.org/details/AlmaGluckwithOrpheusQuartet"
+   },
+   {
+    "src": "https://archive.org/download/edgm-12258/edgm-12258.mp3",
+    "length": 112.0,
+    "series": "Ernst Kraus",
+    "title": "Schwanlied aus Lohengrin (Nun sei bedankt, mein lieber Schwan)",
+    "date": "1905",
+    "item": "https://archive.org/details/edgm-12258"
+   },
+   {
+    "src": "https://archive.org/download/CHOPINSonataInB-flatMinor-NEWTRANSFER/01.I.Grave.mp3",
+    "length": 353.59,
+    "series": "Sergei Rachmaninoff, piano",
+    "title": "CHOPIN: Sonata in B-flat Minor",
+    "date": "1930",
+    "item": "https://archive.org/details/CHOPINSonataInB-flatMinor-NEWTRANSFER"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
+    "length": 36.39,
+    "series": "A word from our sponsor",
+    "title": "Lux Toilet Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/CarusoAmelitaGalli-CurciFloraPeriniGiuseppedeLuca/CarusoAmelitaGalli-CurciFloraPeriniGiuseppedeLuca-BellaFigliaDellamore.mp3",
+    "length": 240.0,
+    "series": "Caruso, Amelita Galli-Curci, Flora Perini, Giuseppe de Luca",
+    "title": "Bella Figlia Dell'amore",
+    "date": "1917",
+    "item": "https://archive.org/details/CarusoAmelitaGalli-CurciFloraPeriniGiuseppedeLuca"
+   },
+   {
+    "src": "https://archive.org/download/Peony_Su_White_Hibiscus_At_Night/Peony_Su-White_Hibiscus_At_Night_Part_1.mp3",
+    "length": 184.0,
+    "series": "Peony Su",
+    "title": "Peony Su - White Hibiscus At Night",
+    "date": "1920",
+    "item": "https://archive.org/details/Peony_Su_White_Hibiscus_At_Night"
+   },
+   {
+    "src": "https://archive.org/download/78_der-rosenkavalier_richard-strauss-tanzwalzer-armand-vecesey-and-his-hungarian-orche_gbia0000083b/Der%20Rosenkavalier%20-%20Richard%20Strauss%20-%20Tanzwalzer-restored.mp3",
+    "length": 217.32,
+    "series": "Richard Strauss",
+    "title": "Der Rosenkavalier",
+    "date": "1922",
+    "item": "https://archive.org/details/78_der-rosenkavalier_richard-strauss-tanzwalzer-armand-vecesey-and-his-hungarian-orche_gbia0000083b"
+   },
+   {
+    "src": "https://archive.org/download/J.S.BACHDoubleConcertoInDMinor-NEWTRANSFER/01.I.Vivace.mp3",
+    "length": 239.52,
+    "series": "Yehudi Menuhin / Georges Enesco, violin",
+    "title": "J. S. BACH: Double Concerto in D Minor",
+    "date": "1932",
+    "item": "https://archive.org/details/J.S.BACHDoubleConcertoInDMinor-NEWTRANSFER"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLEMAN.MP3",
+    "length": 41.38,
+    "series": "A word from our sponsor",
+    "title": "Coleman",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_gavotte_andrs-segovia-bach_gbia7027500b/GAVOTTE%20-%20ANDR%C3%88S%20SEGOVIA%20-%20BACH.mp3",
+    "length": 172.0,
+    "series": "Andrès Segovia",
+    "title": "Gavotte",
+    "date": "1927",
+    "item": "https://archive.org/details/78_gavotte_andrs-segovia-bach_gbia7027500b"
+   },
+   {
+    "src": "https://archive.org/download/78_lolita_enrico-caruso-buzzi-pecia_gbia0299616a/Lolita%20-%20Enrico%20Caruso%20-%20Buzzi%20-%20Pecia.mp3",
+    "length": 176.98,
+    "series": "Enrico Caruso",
+    "title": "Lolita",
+    "date": "1908",
+    "item": "https://archive.org/details/78_lolita_enrico-caruso-buzzi-pecia_gbia0299616a"
+   },
+   {
+    "src": "https://archive.org/download/RachmaninoffPreludeInC-sharpMinor/Rachmaninoff-PreludeInC-sharpMinorhofmann.mp3",
+    "length": 207.88,
+    "series": "Josef Hofmann",
+    "title": "RACHMANINOFF: Prelude in C-Sharp Minor",
+    "date": "1910",
+    "item": "https://archive.org/details/RachmaninoffPreludeInC-sharpMinor"
+   },
+   {
+    "src": "https://archive.org/download/78_carmen-love-is-like-a-wood-bird-act-1_geraldine-farrar-bizet_gbia0354066a/Carmen%20%28%22Love%20is%20Like%20a%20Wood%20Bird%22%29%20%28Ac%20-%20Geraldine%20Farrar.mp3",
+    "length": 198.7,
+    "series": "Geraldine Farrar",
+    "title": "Carmen (\"Love is Like a Wood Bird\") (Act 1)",
+    "date": "1914",
+    "item": "https://archive.org/details/78_carmen-love-is-like-a-wood-bird-act-1_geraldine-farrar-bizet_gbia0354066a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/HALEYSMO.MP3",
+    "length": 42.55,
+    "series": "A word from our sponsor",
+    "title": "Haley's M-O",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_canzonetta_mischa-elman-a.-dambrosio_gbia0010523a/Canzonetta%20-%20Mischa%20Elman%20-%20A.%20d%27Ambrosio.mp3",
+    "length": 158.0,
+    "series": "Mischa Elman",
+    "title": "Canzonetta",
+    "date": "1921",
+    "item": "https://archive.org/details/78_canzonetta_mischa-elman-a.-dambrosio_gbia0010523a"
+   },
+   {
+    "src": "https://archive.org/download/78_ich-bete-an-die-macht-der-liebe-to-the-power-of-love-i-make-my-prayer_lotte-lehma_gbia0196255b/ICH%20BETE%20AN%20DIE%20MACHT%20DER%20LIEBE%20%28To%20the%20Po%20-%20LOTTE%20LEHMANN.mp3",
+    "length": 190.27,
+    "series": "Lotte Lehmann",
+    "title": "ICH BETE AN DIE MACHT DER LIEBE (To the Power of Love I make my Prayer)",
+    "date": "1937",
+    "item": "https://archive.org/details/78_ich-bete-an-die-macht-der-liebe-to-the-power-of-love-i-make-my-prayer_lotte-lehma_gbia0196255b"
+   },
+   {
+    "src": "https://archive.org/download/78_believe-me-if-all-those-endearing-young-charms_nellie-melba-mme-melba-moore_gbia0298376a/Believe%20Me%20If%20All%20Those%20Endearing%20Young%20Cha%20-%20Nellie%20Melba.mp3",
+    "length": 152.04,
+    "series": "Nellie Melba",
+    "title": "Believe Me If All Those Endearing Young Charms",
+    "date": "1909",
+    "item": "https://archive.org/details/78_believe-me-if-all-those-endearing-young-charms_nellie-melba-mme-melba-moore_gbia0298376a"
+   },
+   {
+    "src": "https://archive.org/download/78_der-tannenbaum-the-christmas-tree_ernestine-schumann-heink_gbia0015761a/Der%20Tannenbaum%20%28The%20Christmas%20T%20-%20Ernestine%20Schumann-Heink.mp3",
+    "length": 183.0,
+    "series": "Ernestine Schumann-Heink",
+    "title": "Der Tannenbaum (The Christmas Tree)",
+    "date": "1924",
+    "item": "https://archive.org/details/78_der-tannenbaum-the-christmas-tree_ernestine-schumann-heink_gbia0015761a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NABISCO.MP3",
+    "length": 89.11,
+    "series": "A word from our sponsor",
+    "title": "Nabisco",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_havaiana_beniamino-gigli-neapolitan-novelty-orchestra-munzi-di-veroli-p-troise_gbia7015075b/HAVAIANA%20-%20BENIAMINO%20GIGLI%20-%20Neapolitan%20Novelty%20Orchestra.mp3",
+    "length": 204.29,
+    "series": "Beniamino Gigli",
+    "title": "Havaiana",
+    "date": "1953",
+    "item": "https://archive.org/details/78_havaiana_beniamino-gigli-neapolitan-novelty-orchestra-munzi-di-veroli-p-troise_gbia7015075b"
+   },
+   {
+    "src": "https://archive.org/download/78_dubinushka-russian-laborers-song_feodor-chaliapin_gbia0005696b/Dubinushka%20%28Russian%20Laborers_%20Song%29%20-%20Feodor%20Chaliapin-restored.mp3",
+    "length": 204.0,
+    "series": "Feodor Chaliapin",
+    "title": "Dubinushka (Russian Laborers' Song)",
+    "date": "1925",
+    "item": "https://archive.org/details/78_dubinushka-russian-laborers-song_feodor-chaliapin_gbia0005696b"
+   },
+   {
+    "src": "https://archive.org/download/78_salut-damour-loves-greeting_maud-powell-george-falkenstein-elgar_gbia0009818b/Salut%20d%27Amour%20%28Love%27s%20Greeting%29%20-%20Maud%20Powell.mp3",
+    "length": 186.0,
+    "series": "Maud Powell",
+    "title": "Salut d'Amour (Love's Greeting)",
+    "date": "1913",
+    "item": "https://archive.org/details/78_salut-damour-loves-greeting_maud-powell-george-falkenstein-elgar_gbia0009818b"
+   },
+   {
+    "src": "https://archive.org/download/78_elegie-song-of-mourning_alma-gluck-and-efrem-zimbalist-massenet_gbia0009500a/Elegie%20%28Song%20of%20Mourning%29%20-%20Alma%20Gluck%20and%20Efrem%20Zimbalist.mp3",
+    "length": 190.0,
+    "series": "Alma Gluck and Efrem Zimbalist",
+    "title": "Elegie (Song of Mourning)",
+    "date": "1912",
+    "item": "https://archive.org/details/78_elegie-song-of-mourning_alma-gluck-and-efrem-zimbalist-massenet_gbia0009500a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
+    "length": 40.72,
+    "series": "A word from our sponsor",
+    "title": "Anacin",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_sernata-serenade_amelita-galli-curci-g-a-cesareo-f-paolo-tosti-homer-samuels_gbia0016552b/Sernata%20%28Serenade%29%20-%20Amelita%20Galli-Curci.mp3",
+    "length": 186.0,
+    "series": "Amelita Galli-Curci",
+    "title": "Serenata (Serenade)",
+    "date": "1925",
+    "item": "https://archive.org/details/78_sernata-serenade_amelita-galli-curci-g-a-cesareo-f-paolo-tosti-homer-samuels_gbia0016552b"
+   },
+   {
+    "src": "https://archive.org/download/78_turkish-march_wanda-landowska-mozart_gbia0094877b/Turkish%20March%20-%20Wanda%20Landowska%20-%20Mozart.mp3",
+    "length": 137.0,
+    "series": "Wanda Landowska",
+    "title": "Turkish March",
+    "date": "1923",
+    "item": "https://archive.org/details/78_turkish-march_wanda-landowska-mozart_gbia0094877b"
+   },
+   {
+    "src": "https://archive.org/download/78_moonlight-sonata-adagio-sostenuto_ignace-jan-paderewski-beethoven_gbia7041594b/MOONLIGHT%20SONATA%20-%20ADAGIO%20SOSTENUT%20-%20Ignace%20Jan%20Paderewski.mp3",
+    "length": 297.0,
+    "series": "Ignace Jan Paderewski",
+    "title": "Moonlight Sonata - Adagio Sostenuto",
+    "date": "1926",
+    "item": "https://archive.org/details/78_moonlight-sonata-adagio-sostenuto_ignace-jan-paderewski-beethoven_gbia7041594b"
+   },
+   {
+    "src": "https://archive.org/download/78_cradle-song-brahms-op.-49-no.-4_rosa-ponselle-brahms_gbia0005361a/Cradle%20Song%20%28Brahms%2C%20Op.%2049%2C%20No.%204%29%20-%20Rosa%20Ponselle.mp3",
+    "length": 144.0,
+    "series": "Rosa Ponselle",
+    "title": "Cradle Song (Brahms, Op. 49, No. 4)",
+    "date": "1924",
+    "item": "https://archive.org/details/78_cradle-song-brahms-op.-49-no.-4_rosa-ponselle-brahms_gbia0005361a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BLUECOAL.MP3",
+    "length": 22.27,
+    "series": "A word from our sponsor",
+    "title": "Blue Coal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_chanson-villageoise-a-country-song_pablo-casals-edward-gendron-david-popper_gbia0105706b/Chanson%20Villageoise%20%28A%20Country%20Song%29%20-%20Pablo%20Casals.mp3",
+    "length": 150.0,
+    "series": "Pablo Casals",
+    "title": "Chanson Villageoise (A Country Song)",
+    "date": "1926",
+    "item": "https://archive.org/details/78_chanson-villageoise-a-country-song_pablo-casals-edward-gendron-david-popper_gbia0105706b"
+   },
+   {
+    "src": "https://archive.org/download/78_jesus-my-lord-my-god-my-all_john-mccormack_gbia0044042a/Jesus%2C%20My%20Lord%2C%20My%20God%2C%20My%20All%20-%20John%20McCormack-restored.mp3",
+    "length": 178.92,
+    "series": "John McCormack",
+    "title": "Jesus, My Lord, My God, My All",
+    "date": "1918",
+    "item": "https://archive.org/details/78_jesus-my-lord-my-god-my-all_john-mccormack_gbia0044042a"
+   },
+   {
+    "src": "https://archive.org/download/78_ardon-gl-incensi-the-incense-rises-mad-scene-1st-record_lily-pons-george-posse_gbia7003875a/ARDON%20GL%27%20INCENSI%20%28The%20incense%20rises%29%20%28Mad%20Sce%20-%20LILY%20PONS.mp3",
+    "length": 272.74,
+    "series": "Lily Pons",
+    "title": "ARDON GL' INCENSI (The incense rises) (Mad Scene-1st Record)",
+    "date": "1931",
+    "item": "https://archive.org/details/78_ardon-gl-incensi-the-incense-rises-mad-scene-1st-record_lily-pons-george-posse_gbia7003875a"
+   },
+   {
+    "src": "https://archive.org/download/78_torna-a-surriento-vuelve-a-sorrento_titta-ruffo-de-curtis_gbia0038705a/Torna%20a%20Surriento%20%28Vuelve%20A%20Sorrento%29%20-%20Titta%20Ruffo.mp3",
+    "length": 212.0,
+    "series": "Titta Ruffo",
+    "title": "Torna a Surriento (Vuelve A Sorrento)",
+    "date": "1929",
+    "item": "https://archive.org/details/78_torna-a-surriento-vuelve-a-sorrento_titta-ruffo-de-curtis_gbia0038705a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MARCHOFDIMES.mp3",
+    "length": 70.39,
+    "series": "A word from our sponsor",
+    "title": "March Of Dimes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_deh-vieni-alla-finestra-don-giovannis-serenade_ezio-pinza-mozart_gbia7000420b/DEH%20VIENI%20ALLA%20FINESTRA%20%28Don%20Giovanni%27s%20Seren%20-%20EZIO%20PINZA.mp3",
+    "length": 107.14,
+    "series": "Ezio Pinza",
+    "title": "DEH VIENI ALLA FINESTRA (Don Giovanni's Serenade)",
+    "date": "1930",
+    "item": "https://archive.org/details/78_deh-vieni-alla-finestra-don-giovannis-serenade_ezio-pinza-mozart_gbia7000420b"
+   },
+   {
+    "src": "https://archive.org/download/FritzKreisler/FritzKreisler-PoorButterfly.mp3",
+    "length": 188.0,
+    "series": "Fritz Kreisler",
+    "title": "Poor Butterfly",
+    "date": "1917",
+    "item": "https://archive.org/details/FritzKreisler"
+   },
+   {
+    "src": "https://archive.org/download/78_i-know-lord-laid-his-hands-on-me_marian-anderson-kosti-vehanen_gbia0057951b/I%20Know%20Lord%20Laid%20His%20Hands%20On%20Me%20-%20Marian%20Anderson.mp3",
+    "length": 118.0,
+    "series": "Marian Anderson",
+    "title": "I Know Lord Laid His Hands On Me",
+    "date": "1938",
+    "item": "https://archive.org/details/78_i-know-lord-laid-his-hands-on-me_marian-anderson-kosti-vehanen_gbia0057951b"
+   },
+   {
+    "src": "https://archive.org/download/78_love-can-be-dreamed-mine-alone_john-charles-thomas-victor-concert-orchestra-ronnell_gbia3046349a/LOVE%20CAN%20BE%20DREAMED%3A%20MINE%20ALONE%20-%20JOHN%20CHARLES%20THOMAS.mp3",
+    "length": 246.0,
+    "series": "John Charles Thomas",
+    "title": "Love Can Be Dreamed: Mine Alone",
+    "date": "1946",
+    "item": "https://archive.org/details/78_love-can-be-dreamed-mine-alone_john-charles-thomas-victor-concert-orchestra-ronnell_gbia3046349a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROITANCIGARS.mp3",
+    "length": 15.56,
+    "series": "A word from our sponsor",
+    "title": "Roi-Tan Cigars",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_saeterjentenssondag_142_01/Saeterjentens%20Sondag%20-%20Kirsten%20Flagstad%20-%20Ole%20Bull.mp3",
+    "length": 199.0,
+    "series": "Kirsten Flagstad",
+    "title": "Saeterjentens Sondag",
+    "date": "1919",
+    "item": "https://archive.org/details/78_saeterjentenssondag_142_01"
+   },
+   {
+    "src": "https://archive.org/download/78_mamma-mia-che-v-sapete-if-my-mother-only-knew_tito-schipa-emanuele-nutile_gbia7028623b/MAMMA%20MIA%2C%20CHE%20V%C3%92%20SAPETE%21%20%28IF%20MY%20MOTHER%20ONLY%20-%20Tito%20Schipa.mp3",
+    "length": 210.0,
+    "series": "Tito Schipa",
+    "title": "Mamma Mia, Che Vò Sapete! (if My Mother Only Knew)",
+    "date": "1926",
+    "item": "https://archive.org/details/78_mamma-mia-che-v-sapete-if-my-mother-only-knew_tito-schipa-emanuele-nutile_gbia7028623b"
+   },
+   {
+    "src": "https://archive.org/download/CHOPINEtudes-Cortot-NEWTRANSFER/01.Op10No.1InCMajor.mp3",
+    "length": 119.59,
+    "series": "Alfred Cortot, piano",
+    "title": "CHOPIN: Etudes",
+    "date": "1933",
+    "item": "https://archive.org/details/CHOPINEtudes-Cortot-NEWTRANSFER"
+   },
+   {
+    "src": "https://archive.org/download/78_du-gar-som-en-litten-prinsessa-violen-fran-monmartre_jussi-bjorling-kalman-englin_gbia0076819a/Du%20Gar%20Som%20En%20Litten%20Prinsessa%20%28Violen%20fr%20-%20Jussi%20Bjorling.mp3",
+    "length": 202.0,
+    "series": "Jussi Bjorling",
+    "title": "Du Gar Som En Litten Prinsessa (Violen fran Monmartre)",
+    "date": "1931",
+    "item": "https://archive.org/details/78_du-gar-som-en-litten-prinsessa-violen-fran-monmartre_jussi-bjorling-kalman-englin_gbia0076819a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
+    "length": 52.84,
+    "series": "A word from our sponsor",
+    "title": "Popsicle",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_carmen-chanson-du-torador-toreador-song_lawrence-tibbett-metropolitan-opera-chor_gbia7027620a/CARMEN-CHANSON%20DU%20TOR%C3%89ADOR%20%28TOREADOR%20SO%20-%20Lawrence%20Tibbett.mp3",
+    "length": 265.0,
+    "series": "Lawrence Tibbett",
+    "title": "Carmen-chanson Du Toréador (toreador Song)",
+    "date": "1929",
+    "item": "https://archive.org/details/78_carmen-chanson-du-torador-toreador-song_lawrence-tibbett-metropolitan-opera-chor_gbia7027620a"
+   },
+   {
+    "src": "https://archive.org/download/78_lohengrin-prelude-act-3_boston-symphony-orchestra-wagner-dr-karl-muck_gbia0199527a/Lohengrin-Prelude%20%28Act%203%29%20-%20Boston%20Symphony%20Orchestra.mp3",
+    "length": 203.93,
+    "series": "Boston Symphony Orchestra",
+    "title": "Lohengrin-Prelude (Act 3)",
+    "date": "1917",
+    "item": "https://archive.org/details/78_lohengrin-prelude-act-3_boston-symphony-orchestra-wagner-dr-karl-muck_gbia0199527a"
+   },
+   {
+    "src": "https://archive.org/download/78_a-night-on-the-bare-mountain-part-1_leopold-stokowski-and-the-philadelphia-orches_gbia0234111a/A%20NIGHT%20-%20LEOPOLD%20STOKOWSKI%20and%20the%20PHILADELPHIA%20ORCHESTRA.mp3",
+    "length": 254.3,
+    "series": "LEOPOLD STOKOWSKI and the PHILADELPHIA ORCHESTRA",
+    "title": "A NIGHT ON THE BARE MOUNTAIN (Part 1)",
+    "date": "1941",
+    "item": "https://archive.org/details/78_a-night-on-the-bare-mountain-part-1_leopold-stokowski-and-the-philadelphia-orches_gbia0234111a"
+   },
+   {
+    "src": "https://archive.org/download/78_suite-in-a-major-17th-century-no-1-prelude-no-2-allemande_andres-segovia-l_gbia0289052b/SUITE%20IN%20A%20MAJOR%20%2817TH%20CENTURY%29%20-%20No.%201-P%20-%20ANDRES%20SEGOVIA.mp3",
+    "length": 273.0,
+    "series": "Andres Segovia",
+    "title": "SUITE IN A MAJOR (17TH CENTURY) - No. 1-Prelude - No. 2-Allemande",
+    "date": "1932",
+    "item": "https://archive.org/details/78_suite-in-a-major-17th-century-no-1-prelude-no-2-allemande_andres-segovia-l_gbia0289052b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsTempoCigarettes.mp3",
+    "length": 59.74,
+    "series": "A word from our sponsor",
+    "title": "Tempo Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/overthere1918/overthere1918.mp3",
+    "length": 168.0,
+    "series": "Enrico Caruso",
+    "title": "Over There",
+    "date": "1918",
+    "item": "https://archive.org/details/overthere1918"
+   },
+   {
+    "src": "https://archive.org/download/78_wanderers-nachtlied-wanderers-night-song_geraldine-farrar-ernestine-schumann-he_gbia0195747a/Wanderer%27s%20Nachtlied%20%28Wanderer%27s%20Night%20%20-%20Geraldine%20Farrar.mp3",
+    "length": 196.0,
+    "series": "Geraldine Farrar",
+    "title": "Wanderer's Nachtlied (Wanderer's Night Song)",
+    "date": "1913",
+    "item": "https://archive.org/details/78_wanderers-nachtlied-wanderers-night-song_geraldine-farrar-ernestine-schumann-he_gbia0195747a"
+   },
+   {
+    "src": "https://archive.org/download/78_tango_mischa-elman-josef-bonime-i.-albeniz-elman_gbia0010962a/Tango%20-%20Mischa%20Elman%20-%20Josef%20Bonime%20-%20I.%20Albeniz.mp3",
+    "length": 133.0,
+    "series": "Mischa Elman",
+    "title": "Tango",
+    "date": "1919",
+    "item": "https://archive.org/details/78_tango_mischa-elman-josef-bonime-i.-albeniz-elman_gbia0010962a"
+   },
+   {
+    "src": "https://archive.org/download/78_schlafe-mein-susses-kind-old-german-folk-slumber-song_lotte-lehmann-karl-alwin-er_gbia0105629b/Schlafe%20Mein%20Susses%20Kind%20%28Old%20German%20Folk%20%20-%20Lotte%20Lehmann.mp3",
+    "length": 192.0,
+    "series": "Lotte Lehmann",
+    "title": "Schlafe Mein Susses Kind (Old German Folk Slumber Song)",
+    "date": "1939",
+    "item": "https://archive.org/details/78_schlafe-mein-susses-kind-old-german-folk-slumber-song_lotte-lehmann-karl-alwin-er_gbia0105629b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCheverolet.mp3",
+    "length": 67.99,
+    "series": "A word from our sponsor",
+    "title": "Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_clairdelune_312_04/Clairde%20Lune%20-%20Nellie%20Melba%20-%20Jozef%20Szulc%20-%20Harold%20Craxton.mp3",
+    "length": 199.0,
+    "series": "Nellie Melba",
+    "title": "Clairde Lune",
+    "date": "1926",
+    "item": "https://archive.org/details/78_clairdelune_312_04"
+   },
+   {
+    "src": "https://archive.org/download/78_reviens-mon-amour-so-deep-is-the-night_beniamino-gigli-marietti-vlaud-chopin-melf_gbia7017602a/REVIENS%20MON%20AMOUR%20%28SO%20DEEP%20IS%20THE%20NIGHT%29%20-%20BENIAMINO%20GIGLI.mp3",
+    "length": 156.84,
+    "series": "Beniamino Gigli",
+    "title": "Reviens Mon Amour (so Deep is the Night)",
+    "date": "1948",
+    "item": "https://archive.org/details/78_reviens-mon-amour-so-deep-is-the-night_beniamino-gigli-marietti-vlaud-chopin-melf_gbia7017602a"
+   },
+   {
+    "src": "https://archive.org/download/78_song-of-the-volga-boatmen-russian-folk-song_feodor-chaliapin-chaliapin-and-koenem_gbia0305689a/Song%20of%20the%20Volga%20Boatmen%20%28Russian%20Folk%20-%20Feodor%20Chaliapin.mp3",
+    "length": 198.58,
+    "series": "Feodor Chaliapin",
+    "title": "Song of the Volga Boatmen (Russian Folk Song)",
+    "date": "1923",
+    "item": "https://archive.org/details/78_song-of-the-volga-boatmen-russian-folk-song_feodor-chaliapin-chaliapin-and-koenem_gbia0305689a"
+   },
+   {
+    "src": "https://archive.org/download/78_poupee-valsante-waltzing-doll_maud-powell-george-falkenstein-poldini-hartmann_gbia0009813a/Poupee%20Valsante%20%28Waltzing%20Doll%29%20-%20Maud%20Powell.mp3",
+    "length": 144.0,
+    "series": "Maud Powell",
+    "title": "Poupée Valsante (Waltzing Doll)",
+    "date": "1917",
+    "item": "https://archive.org/details/78_poupee-valsante-waltzing-doll_maud-powell-george-falkenstein-poldini-hartmann_gbia0009813a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
+    "length": 14.08,
+    "series": "A word from our sponsor",
+    "title": "Colgate Tooth Powder",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_hatikva-zionist-hymn-hatikvoh_alma-gluck-and-efrem-zimbalist-imber_gbia0051200a/Hatikva%20%28Zionist%20Hymn%2C%20%22H%20-%20Alma%20Gluck%20and%20Efrem%20Zimbalist.mp3",
+    "length": 175.0,
+    "series": "Alma Gluck and Efrem Zimbalist",
+    "title": "Hatikva (Zionist Hymn, \"Hatikvoh\")",
+    "date": "1918",
+    "item": "https://archive.org/details/78_hatikva-zionist-hymn-hatikvoh_alma-gluck-and-efrem-zimbalist-imber_gbia0051200a"
+   },
+   {
+    "src": "https://archive.org/download/78_carceleras-prison-song_amelita-galli-curci-chapi-homer-samuel_gbia0016552a/Carceleras%20%28Prison%20Song%29%20-%20Amelita%20Galli-Curci.mp3",
+    "length": 126.0,
+    "series": "Amelita Galli-Curci",
+    "title": "Carceleras (Prison Song)",
+    "date": "1926",
+    "item": "https://archive.org/details/78_carceleras-prison-song_amelita-galli-curci-chapi-homer-samuel_gbia0016552a"
+   },
+   {
+    "src": "https://archive.org/download/78_harmonious-blacksmith_wanda-landowska-handel_gbia0094877a/Harmonious%20Blacksmith%20-%20Wanda%20Landowska%20-%20Handel.mp3",
+    "length": 170.0,
+    "series": "Wanda Landowska",
+    "title": "Harmonious Blacksmith",
+    "date": "1923",
+    "item": "https://archive.org/details/78_harmonious-blacksmith_wanda-landowska-handel_gbia0094877a"
+   },
+   {
+    "src": "https://archive.org/download/78_mazurka-in-f-sharp-minor_ignace-jan-paderewski-chopin_gbia0015773a/Mazurka%20in%20F%20Sharp%20Minor%20-%20Ignace%20Jan%20Paderewski.mp3",
+    "length": 209.0,
+    "series": "Ignace Jan Paderewski",
+    "title": "Mazurka in F Sharp Minor",
+    "date": "1924",
+    "item": "https://archive.org/details/78_mazurka-in-f-sharp-minor_ignace-jan-paderewski-chopin_gbia0015773a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
+    "length": 50.35,
+    "series": "A word from our sponsor",
+    "title": "Northwest Orient Airlines",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_lullaby_rosa-ponselle-christina-rossetti-cyril-scott_gbia0005361b/Lullaby%20-%20Rosa%20Ponselle%20-%20Christina%20Rossetti.mp3",
+    "length": 155.0,
+    "series": "Rosa Ponselle",
+    "title": "Lullaby",
+    "date": "1924",
+    "item": "https://archive.org/details/78_lullaby_rosa-ponselle-christina-rossetti-cyril-scott_gbia0005361b"
+   },
+   {
+    "src": "https://archive.org/download/78_moment-musical_pablo-casals-schubert-nicolai-mednikoff_gbia0045279b/Moment%20Musical%20-%20Pablo%20Casals%20-%20Schubert.mp3",
+    "length": 189.0,
+    "series": "Pablo Casals",
+    "title": "Moment Musical",
+    "date": "1926",
+    "item": "https://archive.org/details/78_moment-musical_pablo-casals-schubert-nicolai-mednikoff_gbia0045279b"
+   },
+   {
+    "src": "https://archive.org/download/78_god-keep-you-is-my-prayer_john-mccormack-arale-ray_gbia0077212b/%22God%20Keep%20You%22%20Is%20My%20Prayer%20-%20John%20McCormack.mp3",
+    "length": 166.0,
+    "series": "John McCormack",
+    "title": "\"God Keep You\" Is My Prayer",
+    "date": "1941",
+    "item": "https://archive.org/details/78_god-keep-you-is-my-prayer_john-mccormack-arale-ray_gbia0077212b"
+   },
+   {
+    "src": "https://archive.org/download/78_bell-song-ou-va-la-jeune-indoue-1st-record-act-2_lily-pons-lakme-delibes_gbia0121648a/BELL%20SONG%20%28OU%20VA%20LA%20JEUNE%20INDOUE%29%20%281st%20Record%29%20-%20Lily%20Pons.mp3",
+    "length": 189.0,
+    "series": "Lily Pons",
+    "title": "BELL SONG (OU VA LA JEUNE INDOUE) (1st Record) Act 2",
+    "date": "1931",
+    "item": "https://archive.org/details/78_bell-song-ou-va-la-jeune-indoue-1st-record-act-2_lily-pons-lakme-delibes_gbia0121648a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCrestToothpaste.mp3",
+    "length": 61.97,
+    "series": "A word from our sponsor",
+    "title": "Crest Toothpaste",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_amleto-essere-o-non-essere-monlogo-damleto_titta-ruffo-shakespeare_gbia0196912b/Amleto-Essere%20o%20non%20essere%20%28Mon%C3%B3logo%20d%27Amlet%20-%20Titta%20Ruffo.mp3",
+    "length": 203.0,
+    "series": "Titta Ruffo",
+    "title": "Amleto-Essere o non essere (Monólogo d'Amleto)",
+    "date": "1912",
+    "item": "https://archive.org/details/78_amleto-essere-o-non-essere-monlogo-damleto_titta-ruffo-shakespeare_gbia0196912b"
+   }
+  ]
+ },
+ {
   "id": "hawaiian",
   "name": "Hawaiian & Exotica",
   "group": "Music",

@@ -81,7 +81,7 @@ window.SKIN = {
     {"id": "ambience-switch", "type": "text", "bind": "ambience", "action": "ambience", "x": 530, "y": 326, "w": 330, "h": 26, "font": "Archivo", "size": 15, "color": "#5d5244", "align": "left", "uppercase": false, "spacing": 0, "italic": true},
     {"id": "reaction-air", "type": "reactfloat", "x": 300, "y": 116, "w": 560, "h": 236},
     {"id": "guide-frame", "src": "art/guide-frame.png", "x": 40, "y": 372, "w": 1120, "h": 566, "look": "listings"},
-    {"id": "guide", "type": "guide", "mode": "timeline", "hours": 2, "x": 48, "y": 386, "w": 1104, "h": 546, "rowHeight": 26, "labelWidth": 280, "font": "Archivo", "size": 14, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "Archivo", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
+    {"id": "guide", "type": "guide", "mode": "timeline", "hours": 2, "x": 48, "y": 386, "w": 1104, "h": 546, "rowHeight": 24, "labelWidth": 280, "font": "Archivo", "size": 14, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "Archivo", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
     {"id": "tv", "type": "tv", "x": 880, "y": 124, "w": 280, "h": 210, "font": "Archivo", "size": 18, "color": "#efe5cc"},
     {"id": "tv-set", "src": "art/tv-set.png", "x": 868, "y": 118, "w": 304, "h": 222, "look": "tvset"},
     {"id": "tv-title", "type": "text", "bind": "tv.title", "href": "tv.item", "x": 860, "y": 336, "w": 320, "h": 18, "font": "Archivo", "size": 13, "color": "#f6eed8", "align": "center", "uppercase": false, "spacing": 0, "italic": true},

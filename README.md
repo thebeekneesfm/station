@@ -86,7 +86,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 
 ## Stations
 
-`stations.js` has sixteen stations. The guide groups them under **Radio shows** and **Music**:
+`stations.js` has seventeen stations. The guide groups them under **Radio shows** and **Music**:
 
 | Station | What's on | Loops every |
 |---|---|---|
@@ -103,6 +103,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Swing | Big bands of the 1930s and '40s | about 6 hours |
 | Crooners | Singers from the late 1920s to the '50s | about 6 hours |
 | After Hours | Late-night jazz and torch songs, 1936–1959 | about 6 hours |
+| Classical | Opera singers, violinists, pianists and orchestras on 78s, 1900s–1950s. Only complete short pieces, never "part 2" of something | about 6 hours |
 | Hawaiian & Exotica | Steel guitars, island songs and exotica | about 4 hours |
 | Sleepy Time | Slow waltzes and sweet bands, muffled and echoey as if playing in another room, with rain or a fire underneath. No commercials. | about 4 hours |
 | Christmas | Holiday 78s from every era | about 6 hours |
