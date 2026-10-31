@@ -46,13 +46,13 @@ window.SKIN = {
     "tone": 9000
   },
   "sounds": {
-    "tuning": "art/sounds/tuning.mp3",
     "rain": "art/sounds/rain.mp3",
     "fire": "art/sounds/fire.mp3"
   },
   "name": "TheBeesKnees",
   "tagline": "An online radio station of 1920s–1960s music and radio theatre",
   "badge": ".fm",
+  "ambienceLevel": 0.3,
   "layers": [
     {"id": "background", "type": "plate", "src": "art/background.png", "x": 0, "y": 0, "w": 1600, "h": 1000, "look": "wall"},
     {"id": "masthead", "look": "paper", "x": 24, "y": 10, "w": 1552, "h": 98},
@@ -77,7 +77,7 @@ window.SKIN = {
     {"id": "now-left", "type": "text", "bind": "now.remaining", "x": 510, "y": 294, "w": 150, "h": 26, "font": "Archivo", "size": 15, "color": "#5d5244", "align": "left", "uppercase": false, "spacing": 0, "italic": false},
     {"id": "via-archive", "type": "text", "text": "via archive.org", "href": "now.item", "when": "tuned", "x": 670, "y": 294, "w": 190, "h": 26, "font": "Archivo", "size": 15, "color": "#5d5244", "align": "left", "uppercase": false, "spacing": 0, "italic": false},
     {"id": "reactions", "type": "reactbar", "size": 22, "x": 300, "y": 324, "w": 220, "h": 30},
-    {"id": "ambience-switch", "type": "text", "bind": "ambience", "action": "ambience", "station": "sleepy", "x": 530, "y": 326, "w": 330, "h": 26, "font": "Archivo", "size": 15, "color": "#5d5244", "align": "left", "uppercase": false, "spacing": 0, "italic": true},
+    {"id": "ambience-switch", "type": "text", "bind": "ambience", "action": "ambience", "x": 530, "y": 326, "w": 330, "h": 26, "font": "Archivo", "size": 15, "color": "#5d5244", "align": "left", "uppercase": false, "spacing": 0, "italic": true},
     {"id": "reaction-air", "type": "reactfloat", "x": 300, "y": 116, "w": 560, "h": 236},
     {"id": "guide-frame", "src": "art/guide-frame.png", "x": 40, "y": 372, "w": 1120, "h": 566, "look": "listings"},
     {"id": "guide", "type": "guide", "mode": "timeline", "hours": 2, "x": 48, "y": 386, "w": 1104, "h": 546, "rowHeight": 26, "labelWidth": 280, "font": "Archivo", "size": 14, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "Archivo", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
@@ -114,7 +114,7 @@ window.SKIN = {
       {"id": "via-archive", "type": "text", "text": "via archive.org", "href": "now.item", "when": "tuned", "x": 30, "y": 364, "w": 260, "h": 24, "font": "Archivo", "size": 14, "color": "#cdbf9f", "align": "left", "uppercase": false, "spacing": 0, "italic": false},
       {"id": "reactions", "type": "reactbar", "size": 26, "x": 30, "y": 370, "w": 250, "h": 40},
       {"id": "recent-link", "type": "text", "text": "Recently played", "action": "recent", "x": 300, "y": 376, "w": 280, "h": 28, "font": "Archivo", "size": 14, "color": "#efe5cc", "align": "right", "uppercase": false, "spacing": 0, "italic": false, "weight": 500},
-      {"id": "ambience-switch", "type": "text", "bind": "ambience", "action": "ambience", "station": "sleepy", "x": 30, "y": 414, "w": 540, "h": 22, "font": "Archivo", "size": 13, "color": "#cdbf9f", "align": "center", "uppercase": false, "spacing": 0, "italic": true},
+      {"id": "ambience-switch", "type": "text", "bind": "ambience", "action": "ambience", "x": 30, "y": 414, "w": 540, "h": 22, "font": "Archivo", "size": 13, "color": "#cdbf9f", "align": "center", "uppercase": false, "spacing": 0, "italic": true},
       {"id": "reaction-air", "type": "reactfloat", "x": 12, "y": 152, "w": 576, "h": 282},
       {"id": "tv", "type": "tv", "x": 20, "y": 470, "w": 322, "h": 246, "font": "Archivo", "size": 18, "color": "#efe5cc"},
       {"id": "tv-set", "src": "art/phone/tv-set.png", "x": 8, "y": 458, "w": 346, "h": 270, "look": "tvset"},

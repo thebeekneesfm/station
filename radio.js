@@ -22,9 +22,9 @@
     listeningHere: "{n} listening",
     listeningAlone: "",
     nowOn: "{station}: {series} — {title}",
-    amb_rain: "Rain on the window",
-    amb_fire: "A fire going",
-    amb_off: "No rain, no fire",
+    amb_rain: "Rain on the window (click for a fire)",
+    amb_fire: "A fire going (click to turn off)",
+    amb_off: "Add rain or a fire",
     tip: "Tip TheBeesKnees",
     sleepOff: "Sleep timer",
     sleepOn: "Off in {min} min",
@@ -90,7 +90,7 @@
     selected: null,
     clean: store.get("clean", true),     // false = Original: no sound cleanup at all
     sleepEnd: 0,                         // when the sleep timer turns the radio off
-    ambience: store.get("ambience", "rain")  // background sound on "room" stations: rain, fire or off
+    ambience: store.get("ambience2", "off")  // rain, fire or off, on any station
   };
   const dials = STATIONS.map(s => s.dial).sort((a, b) => a - b);
   const CAPTURE = Math.min(0.035, ...dials.slice(1).map((d, i) => (d - dials[i]) / 2.2));
@@ -113,7 +113,7 @@
       ctx = new (window.AudioContext || window.webkitAudioContext)();
       buildChain();
       tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
-      ["tuning", "rain", "fire"].forEach(loadSound);
+      ["rain", "fire"].forEach(loadSound);
     } catch (e) { ctx = null; }
   }
 
@@ -266,7 +266,7 @@
   }
   function setAmbience() {
     if (!fx.room) return;
-    const R = fx.room, want = R.on ? state.ambience : "off";
+    const R = fx.room, want = state.on ? state.ambience : "off";
     if (R.kind !== want) {
       if (R.src) { try { R.src.stop(); } catch (e) {} R.src = null; }
       R.kind = want;
@@ -281,12 +281,14 @@
       }
     }
     const room = roomFor(state.on ? state.station : null);
-    R.amb.gain.setTargetAtTime(room && want !== "off" ? room.ambience : 0, ctx.currentTime, 0.6);
+    const level = room ? room.ambience : (SKIN.ambienceLevel || 0.3);
+    R.amb.gain.setTargetAtTime(want !== "off" ? level * state.vol : 0, ctx.currentTime, 0.6);
   }
   function cycleAmbience() {
-    const order = ["rain", "fire", "off"];
+    const order = ["off", "rain", "fire"];
     state.ambience = order[(order.indexOf(state.ambience) + 1) % order.length];
-    store.set("ambience", state.ambience); setAmbience(); render();
+    if (!state.on) power(true);
+    store.set("ambience2", state.ambience); setAmbience(); render();
   }
   // songs fade out over their last few seconds and fade in when they start
   const FADE_OUT = 3, FADE_IN = 1.5;
@@ -372,7 +374,7 @@
     } else state.early = null;
     const src = now.track.src;
     setPhase(reason === "next" || reason === "early" ? "next" : "warming");
-    if (state.phase === "warming") tuningSound(true);
+
     const seek = () => {
       if (reason === "early") { gate.arm(true); audio.play().catch(() => {}); return; }
       const fresh = at(st);

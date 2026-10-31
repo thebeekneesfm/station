@@ -146,13 +146,11 @@ A station can sound like it's playing in another room. Give it a `"room"` settin
 - `echo`: how much room echo, from 0 to 1.
 - `ambience`: how loud the rain or fire is, from 0 to 1.
 
-A slight tape wobble is added too. Listeners pick rain, fireplace or nothing with "Background:" on the radio. The rain and fire are real recordings, cut into seamless two-minute loops: `art/sounds/rain.mp3` (rain on a window, Laurent Guidali, CC BY-SA 4.0) and `art/sounds/fire.mp3` (a fireplace, inchadney, CC0). Replace either file with your own recording to change it.
+A slight tape wobble is added too. Rain or a fire can play under any station: each listener clicks "Add rain or a fire" under the show title, and their choice sticks as they change stations. `"ambienceLevel"` in `skin.js` sets how loud it is (a "room" station uses its own `ambience` setting instead). The rain and fire are real recordings, cut into seamless two-minute loops: `art/sounds/rain.mp3` (rain on a window, Laurent Guidali, CC BY-SA 4.0) and `art/sounds/fire.mp3` (a fireplace, inchadney, CC0). Replace either file with your own recording to change it.
 
 ## Between songs
 
 Old records start and end with a few seconds of needle hiss. The radio listens for that: a new record stays silent until its music starts, then fades in. When a record's music ends and only hiss is left, it fades out and starts the next record early. It also fetches the next record shortly before it's needed.
-
-When you change stations, a few seconds of a real shortwave dial being turned plays until the show starts (`art/sounds/tuning.mp3`, D. D. Teoli Jr., public domain). Swap in your own recording to change it.
 
 ## Reactions
 
