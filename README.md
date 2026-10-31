@@ -107,7 +107,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Classical | Opera singers, violinists, pianists and orchestras on 78s, 1900s–1950s. Only complete short pieces, never "part 2" of something | about 6 hours |
 | Hawaiian & Exotica | Steel guitars, island songs and exotica | about 4 hours |
 | Sleepy Time | Slow waltzes and sweet bands, muffled and echoey as if playing in another room No commercials. | about 4 hours |
-| Christmas | Holiday 78s from every era | about 6 hours |
+| Christmas | Holiday 78s from the 1930s to 1959 | about 6 hours |
 
 The shows take turns, so you don't get six Gunsmokes in a row. To add shows or build a new station, open `builder.html`, paste Archive links, tick what you want, and copy the result into `stations.js`.
 
