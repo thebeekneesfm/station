@@ -163,7 +163,8 @@
   .ad-via { color: var(--g-ink); text-underline-offset: 3px; }
   .ad-img { cursor: zoom-in; }
   #ad-zoom { position: fixed; inset: 0; z-index: 20; background: rgba(10, 8, 6, .9); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
-           #ad-zoom img { max-width: 100%; max-height: calc(100% - 60px); object-fit: contain; box-shadow: 0 10px 40px rgba(0,0,0,.6); }
+             padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); box-sizing: border-box; }
+  #ad-zoom img { max-width: 100%; max-height: calc(100% - 60px); object-fit: contain; box-shadow: 0 10px 40px rgba(0,0,0,.6); }
   #ad-zoom .zcap { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; color: #eadfca; font-size: 14px; }
   #ad-zoom a { color: #eadfca; text-underline-offset: 3px; }
   #ad-zoom button { font: inherit; background: #eadfca; color: #171310; border: 0; padding: 5px 12px; cursor: pointer; }
@@ -185,7 +186,8 @@
 
   /* recently played */
   #overlay { position: fixed; inset: 0; z-index: 20; background: rgba(10, 8, 6, .85); display: flex; align-items: center; justify-content: center;
-           .ov-card { background: #211c18; border: 1px solid #4a3f33; width: min(640px, 100%); max-height: 100%; overflow: auto; padding: 18px 20px; box-sizing: border-box; color: #eadfca; }
+             padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+  .ov-card { background: #211c18; border: 1px solid #4a3f33; width: min(640px, 100%); max-height: 100%; overflow: auto; padding: 18px 20px; box-sizing: border-box; color: #eadfca; }
   .ov-head { display: flex; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
   .ov-head h2 { margin: 0; font-size: 16px; letter-spacing: .04em; color: #f0b44c; }
   .ov-head button { font: inherit; background: #eadfca; color: #171310; border: 0; padding: 5px 12px; cursor: pointer; }
@@ -436,12 +438,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101u"></script>
-<script src="stations.js?v=20261101u"></script>
-<script src="config.js?v=20261101u"></script>
-<script src="ads.js?v=20261101u"></script>
-<script src="tv.js?v=20261101u"></script>
+<script src="skin.js?v=20261101v"></script>
+<script src="stations.js?v=20261101v"></script>
+<script src="config.js?v=20261101v"></script>
+<script src="ads.js?v=20261101v"></script>
+<script src="tv.js?v=20261101v"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101u"></script>
+<script src="radio.js?v=20261101v"></script>
 </body>
 </html>
