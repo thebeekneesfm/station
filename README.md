@@ -86,7 +86,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 
 ## Stations
 
-`stations.js` has seventeen stations. The guide groups them under **Radio shows** and **Music**:
+`stations.js` has sixteen stations. The guide groups them under **Radio shows** and **Music**:
 
 | Station | What's on | Loops every |
 |---|---|---|
@@ -104,8 +104,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Crooners | Singers from the late 1920s to the '50s | about 6 hours |
 | After Hours | Late-night jazz and torch songs, 1936–1959 | about 6 hours |
 | Hawaiian & Exotica | Steel guitars, island songs and exotica | about 4 hours |
-| Sleepy Time | Slow waltzes, lullabies and sweet bands, no commercials | about 4 hours |
-| From Another Room | The sleepy records, muffled and echoey as if playing down the hall, with rain or a fire underneath | about 4 hours |
+| Sleepy Time | Slow waltzes and sweet bands, muffled and echoey as if playing in another room, with rain or a fire underneath. No commercials. | about 4 hours |
 | Christmas | Holiday 78s from every era | about 6 hours |
 
 The shows take turns, so you don't get six Gunsmokes in a row. To add shows or build a new station, open `builder.html`, paste Archive links, tick what you want, and copy the result into `stations.js`.
@@ -137,7 +136,7 @@ Each station has its own settings in `stations.js`, for example `"sound": { "lev
 
 If the records still sound rough after that, the next step is cleaning them ahead of time with proper restoration tools and hosting the cleaned files yourself. That's more work and a bigger copyright step, since you'd be distributing your own copies.
 
-## From Another Room
+## Sounding like another room
 
 A station can sound like it's playing in another room. Give it a `"room"` setting in `stations.js`:
 
@@ -147,11 +146,13 @@ A station can sound like it's playing in another room. Give it a `"room"` settin
 - `echo`: how much room echo, from 0 to 1.
 - `ambience`: how loud the rain or fire is, from 0 to 1.
 
-A slight tape wobble is added too. Listeners pick rain, fireplace or nothing with "Background:" on the radio. The rain and fire are generated in the browser, so there are no files to host. To use your own recordings, save them as `art/sounds/rain.mp3` and `art/sounds/fire.mp3`.
+A slight tape wobble is added too. Listeners pick rain, fireplace or nothing with "Background:" on the radio. The rain and fire are real recordings, cut into seamless two-minute loops: `art/sounds/rain.mp3` (rain on a window, Laurent Guidali, CC BY-SA 4.0) and `art/sounds/fire.mp3` (a fireplace, inchadney, CC0). Replace either file with your own recording to change it.
 
 ## Between songs
 
-Each song fades out over its last three seconds and the next one fades in, with silence rather than static in between. Static only plays when you change stations, or when a recording won't load.
+Old records start and end with a few seconds of needle hiss. The radio listens for that: a new record stays silent until its music starts, then fades in. When a record's music ends and only hiss is left, it fades out and starts the next record early. It also fetches the next record shortly before it's needed.
+
+When you change stations, a few seconds of a real shortwave dial being turned plays until the show starts (`art/sounds/tuning.mp3`, D. D. Teoli Jr., public domain). Swap in your own recording to change it.
 
 ## Reactions
 

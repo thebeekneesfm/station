@@ -103,7 +103,7 @@
   const audio = new Audio();
   audio.preload = "auto";
   audio.crossOrigin = "anonymous";   // lets the browser clean up the sound; the Archive allows it
-  let ctx = null, noiseGain = null, staticEl = null, staticOk = false;
+  let ctx = null;
   const fx = { ready: false };       // the sound-cleaning chain
   const SOUND = Object.assign({ level: true, declick: 0.5, tone: 9000 }, SKIN.sound || {});
   function initAudio() {
@@ -111,13 +111,8 @@
     try {
       ctx = new (window.AudioContext || window.webkitAudioContext)();
       buildChain();
-      const len = ctx.sampleRate * 2, buf = ctx.createBuffer(1, len, ctx.sampleRate), d = buf.getChannelData(0);
-      let b = 0;
-      for (let i = 0; i < len; i++) { const w = Math.random() * 2 - 1; b = 0.97 * b + 0.03 * w; d[i] = (w * 0.5 + b * 2) * (Math.random() < 0.0008 ? 3 : 1); }
-      const src = ctx.createBufferSource(); src.buffer = buf; src.loop = true;
-      const bp = ctx.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 1800; bp.Q.value = 0.6;
-      noiseGain = ctx.createGain(); noiseGain.gain.value = 0;
-      src.connect(bp); bp.connect(noiseGain); noiseGain.connect(ctx.destination); src.start();
+      tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
+      ["tuning", "rain", "fire"].forEach(loadSound);
     } catch (e) { ctx = null; }
   }
 
@@ -188,7 +183,9 @@
       const master = ctx.createGain(); master.gain.value = state.vol;
       const fade = ctx.createGain();                       // song fade in / fade out
       hp.connect(lp); lp.connect(an); an.connect(agc); agc.connect(comp); comp.connect(lim); lim.connect(fade); fade.connect(master); master.connect(ctx.destination);
-      Object.assign(fx, { ready: true, src, hp, lp, an, agc, comp, lim, fade, master, level: null, buf: new Float32Array(an.fftSize) });
+      const probe = ctx.createAnalyser(); probe.fftSize = 2048; const sink = ctx.createGain(); sink.gain.value = 0;
+      src.connect(probe); probe.connect(sink); sink.connect(ctx.destination);
+      Object.assign(fx, { ready: true, src, hp, lp, an, agc, comp, lim, fade, master, probe, pbuf: new Float32Array(2048), level: null, buf: new Float32Array(an.fftSize) });
       buildRoom();
       routeSound();
       audio.volume = 1;
@@ -207,6 +204,7 @@
     if (!fx.ready) return;
     try { fx.src.disconnect(); } catch (e) {}
     fx.src.connect(state.clean === false ? fx.fade : fx.hp);
+    if (fx.probe) fx.src.connect(fx.probe);
     routeRoom();
   }
   function toggleClean() {
@@ -250,53 +248,35 @@
     } else {
       tail.connect(fx.fade);
     }
+    if (state.clean === false && fx.probe) fx.src.connect(fx.probe);
     R.on = !!want;
     setAmbience();
   }
-  // rain and fire are generated here, so they need no files; art/sounds/rain.mp3 or fire.mp3 replace them
-  function ambienceBuffer(kind) {
-    const sr = ctx.sampleRate, n = sr * 12, b = ctx.createBuffer(2, n, sr);
-    for (let c = 0; c < 2; c++) {
-      const d = b.getChannelData(c); let br = 0, lp = 0, hp = 0;
-      for (let i = 0; i < n; i++) {
-        const w = Math.random() * 2 - 1;
-        if (kind === "fire") {
-          br = (br + 0.02 * w) / 1.02; d[i] = br * 3.2;                         // low roar
-        } else {
-          lp += (w - lp) * 0.35; hp = lp - hp * 0.0; d[i] = lp * 0.22;            // steady hiss of rain
-        }
-      }
-      // drops (rain) or crackles and pops (fire)
-      const count = kind === "fire" ? 90 : 900;
-      for (let k = 0; k < count; k++) {
-        const at = Math.floor(Math.random() * (n - 4000)), big = Math.random() < (kind === "fire" ? 0.15 : 0.05);
-        const len = kind === "fire" ? (big ? 900 : 260) : 120, amp = kind === "fire" ? (big ? 0.55 : 0.22) : 0.05 + Math.random() * 0.08;
-        for (let j = 0; j < len; j++) d[at + j] += (Math.random() * 2 - 1) * amp * Math.exp(-j / (len / 5));
-      }
-      // fade the loop's ends together so it doesn't click
-      for (let i = 0; i < sr; i++) { const t = i / sr; d[i] *= t; d[n - 1 - i] *= t; }
-    }
-    return b;
+  // recorded sounds (art/sounds): the station-change tuning clip, and rain and fire loops
+  const sounds = {}, soundWaiters = {};
+  function loadSound(name) {
+    const file = SKIN.sounds && SKIN.sounds[name];
+    if (!file || sounds[name] !== undefined) return;
+    sounds[name] = null;
+    fetch(file).then(r => { if (!r.ok) throw 0; return r.arrayBuffer(); })
+      .then(b => new Promise((ok, no) => ctx.decodeAudioData(b, ok, no)))
+      .then(buf => { sounds[name] = buf; (soundWaiters[name] || []).forEach(f => f()); })
+      .catch(() => { sounds[name] = false; });
   }
-  const ambienceFiles = {};
   function setAmbience() {
     if (!fx.room) return;
     const R = fx.room, want = R.on ? state.ambience : "off";
     if (R.kind !== want) {
       if (R.src) { try { R.src.stop(); } catch (e) {} R.src = null; }
-      if (R.el) { R.el.pause(); R.el = null; }
       R.kind = want;
       if (want !== "off") {
-        const file = SKIN.sounds && SKIN.sounds[want];
-        if (file && ambienceFiles[want] !== false) {
-          const el = new Audio(file); el.loop = true; el.crossOrigin = "anonymous";
-          el.addEventListener("error", () => { ambienceFiles[want] = false; R.kind = null; setAmbience(); }, { once: true });
-          try { ctx.createMediaElementSource(el).connect(R.amb); el.play().catch(() => {}); R.el = el; } catch (e) {}
-        } else {
-          const src = ctx.createBufferSource(); src.buffer = ambienceBuffer(want); src.loop = true;
-          const f = ctx.createBiquadFilter(); f.type = "lowpass"; f.frequency.value = want === "fire" ? 2600 : 5200;
-          src.connect(f); f.connect(R.amb); src.start(); R.src = src;
-        }
+        const start = () => {
+          const buf = sounds[want]; if (!buf || R.kind !== want || R.src) return;
+          const src = ctx.createBufferSource(); src.buffer = buf; src.loop = true;
+          src.loopStart = 0.06; src.loopEnd = buf.duration - 0.06;      // skip the file's encoder padding so the loop is seamless
+          src.connect(R.amb); src.start(0, 0.06); R.src = src;
+        };
+        if (sounds[want]) start(); else { loadSound(want); (soundWaiters[want] = soundWaiters[want] || []).push(start); }
       }
     }
     const room = roomFor(state.on ? state.station : null);
@@ -344,19 +324,21 @@
     fx.agc.gain.setTargetAtTime(Math.pow(10, g / 20), ctx.currentTime, fx.fresh > 0 ? 0.3 : 1.5);
   }, 200);
   function newTrackLevel() { if (fx.ready) { fx.level = null; fx.fresh = 15; } }
-  if (SKIN.sounds && SKIN.sounds.static) {
-    staticEl = new Audio(SKIN.sounds.static); staticEl.loop = true; staticEl.volume = 0;
-    staticEl.addEventListener("canplay", () => { staticOk = true; }, { once: true });
-    staticEl.addEventListener("error", () => { staticOk = false; }, { once: true });
-  }
-  function setStatic(level) {
-    const v = Math.max(0, Math.min(1, level * state.vol));
-    if (staticOk && staticEl) {
-      staticEl.volume = v;
-      if (v > 0 && staticEl.paused) staticEl.play().catch(() => {});
-      if (v === 0 && !staticEl.paused) staticEl.pause();
-    } else if (noiseGain) {
-      noiseGain.gain.setTargetAtTime(v * 0.35, ctx.currentTime, 0.05);
+  // when you change stations, a few seconds of a real radio dial being turned plays until the show starts
+  let tuneGain = null, tuneSrc = null;
+  function tuningSound(on) {
+    if (!ctx || !tuneGain) return;
+    if (on) {
+      const buf = sounds.tuning;
+      if (!buf) { if (sounds.tuning == null) (soundWaiters.tuning = soundWaiters.tuning || []).push(() => { if (state.phase === "warming") tuningSound(true); }); return; }
+      if (tuneSrc) { try { tuneSrc.stop(); } catch (e) {} }
+      tuneSrc = ctx.createBufferSource(); tuneSrc.buffer = buf; tuneSrc.connect(tuneGain);
+      const t = ctx.currentTime;
+      tuneGain.gain.cancelScheduledValues(t); tuneGain.gain.setValueAtTime(0.0001, t); tuneGain.gain.linearRampToValueAtTime(0.55 * state.vol, t + 0.15);
+      tuneSrc.start(t, Math.random() * Math.max(0, buf.duration - 4));       // start somewhere different on the dial each time
+    } else if (tuneSrc) {
+      tuneGain.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.25);
+      const s0 = tuneSrc; tuneSrc = null; setTimeout(() => { try { s0.stop(); } catch (e) {} }, 1500);
     }
   }
   function sleepFade() {
@@ -366,22 +348,39 @@
   function applyVolume() {
     const v = state.vol * sleepFade();
     if (fx.ready) fx.master.gain.setTargetAtTime(v, ctx.currentTime, 0.3); else audio.volume = v;
-    const lvl = { warming: 0.5, between: 0.8, lost: 0.25 }[state.phase] || 0;   // "next" (between songs) and "gap" stay quiet
-    setStatic(state.on ? lvl : 0);
+    // the tuning sound plays only while changing stations; between songs and on a lost signal it's quiet
+    if (!(state.on && state.phase === "warming")) tuningSound(false);
   }
 
   let lostTimer = 0;
+  const trace = [];   // last few playback decisions, for troubleshooting in the browser console (RADIO.trace)
   function play(reason) {
+    trace.push(new Date().toISOString().slice(11, 19) + " play " + (reason || "tune") + " " + (audio.dataset.src || "").split("/").pop().slice(0, 30)); if (trace.length > 30) trace.shift();
     clearTimeout(lostTimer);
     const st = state.station;
     if (!state.on || !st) return;
-    const now = at(st);
+    let now = at(st);
+    // "early": the record ran out of music before its scheduled end, so start the next one now
+    if (reason === "early") {
+      const playing = st.tracks.findIndex(t => t.src === audio.dataset.src);
+      const ni = ((playing >= 0 ? playing : now.i) + 1) % st.tracks.length, nx = st.tracks[ni];
+      state.early = nx.src;
+      now = { i: ni, track: nx, offset: 0, left: nx.length };
+    } else if (state.early && now.track.src === state.early) {
+      // still playing the record we started early: carry on, don't jump back
+    } else state.early = null;
     const src = now.track.src;
-    setPhase(reason === "next" ? "next" : "warming");
+    setPhase(reason === "next" || reason === "early" ? "next" : "warming");
+    if (state.phase === "warming") tuningSound(true);
     const seek = () => {
+      if (reason === "early") { gate.arm(true); audio.play().catch(() => {}); return; }
       const fresh = at(st);
-      if (fresh.track.src !== src) return play();
+      if (fresh.track.src !== src) {
+        if (state.early === src) { gate.arm(false); audio.play().catch(() => {}); return; }
+        return play();
+      }
       if (audio.duration && fresh.offset >= audio.duration - 1) return waitForNext(fresh);
+      gate.arm(fresh.offset < 3);       // starting a record from the top: wait for the music before fading in
       try { audio.currentTime = fresh.offset; } catch (e) {}
       audio.play().catch(() => {});
     };
@@ -401,9 +400,13 @@
     setPhase("gap");
     lostTimer = setTimeout(play, Math.max(500, now.left * 1000 + 300));
   }
-  audio.addEventListener("playing", () => { audio.dataset.retried = ""; if (state.on && state.station) { if (state.phase !== "playing") fadeIn(); setPhase("playing"); } });
+  audio.addEventListener("playing", () => { audio.dataset.retried = ""; if (state.on && state.station) { if (state.phase !== "playing" && !gate.waiting) fadeIn(); setPhase("playing"); } });
   audio.addEventListener("waiting", () => { if (state.phase === "playing") setPhase("next"); });
-  audio.addEventListener("ended", () => play("next"));
+  audio.addEventListener("ended", () => {
+    // finished ahead of the schedule (we skipped its run-out, or started it early): go straight to the next record
+    const st = state.station, now = st && at(st);
+    play(now && (now.track.src === audio.dataset.src || state.early === audio.dataset.src) && now.left > 1 ? "early" : "next");
+  });
   audio.addEventListener("error", () => {
     if (!state.on || !state.station || !audio.dataset.src) return;
     if (!audio.dataset.retried) { audio.dataset.retried = "1"; audio.dataset.src = ""; setTimeout(play, 800); return; }   // one retry first
@@ -417,9 +420,63 @@
   setInterval(() => {
     if (!state.on || !state.station || state.phase !== "playing") return;
     const now = at(state.station);
+    if (state.early && audio.dataset.src === state.early) {
+      if (now.track.src === state.early) state.early = null;      // the schedule has caught up
+      return;
+    }
     if (now.track.src !== audio.dataset.src) return play();
     if (Math.abs(audio.currentTime - now.offset) > 6) { try { audio.currentTime = now.offset; } catch (e) {} }
   }, 10000);
+
+  /* Old records start and end with a few seconds of needle hiss (the lead-in and run-out grooves).
+     The gate listens to the record: it keeps a new record silent until the music starts, and when
+     the music ends and only hiss is left, it fades out and starts the next record early. */
+  const gate = {
+    waiting: false, start: 0, floor: 0, peak: -100, quiet: 0, loud: 0, done: false, next: null,
+    arm(fromTop) {
+      this.waiting = !!fromTop && !!fx.ready; this.start = Date.now(); this.floor = 0; this.peak = -100; this.quiet = 0; this.loud = 0; this.done = false;
+      if (this.waiting) { fx.fade.gain.cancelScheduledValues(ctx.currentTime); fx.fade.gain.setValueAtTime(0.0001, ctx.currentTime); }
+    }
+  };
+  function probeDb() {
+    if (!fx.probe) return null;
+    fx.probe.getFloatTimeDomainData(fx.pbuf);
+    let sum = 0; for (let i = 0; i < fx.pbuf.length; i++) sum += fx.pbuf[i] * fx.pbuf[i];
+    return 10 * Math.log10(sum / fx.pbuf.length + 1e-12);
+  }
+  setInterval(() => {
+    if (!fx.ready || !state.on || state.phase !== "playing" || audio.paused) return;
+    const db = probeDb(); if (db == null) return;
+    const t = (Date.now() - gate.start) / 1000;
+    if (gate.waiting) {
+      if (t < 0.4) { gate.floor = gate.floor ? Math.max(gate.floor, db) : db; return; }      // listen to the hiss for a moment
+      const music = db > Math.max(-46, gate.floor + 7);
+      gate.loud = music ? gate.loud + 1 : 0;
+      if (gate.loud >= 2 || t > 7) { gate.waiting = false; fadeIn(); }
+      return;
+    }
+    if (db > gate.peak) gate.peak = db;
+    const rem = (audio.duration || 0) - audio.currentTime;
+    if (gate.done || !audio.duration || rem > 25 || rem < 1.5) return;
+    const tail = db < Math.max(-50, gate.peak - 26);
+    gate.quiet = tail ? gate.quiet + 1 : 0;
+    if (gate.quiet >= 7) {                           // ~0.7 s of nothing but hiss near the end
+      gate.done = true;
+      fx.fade.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.15);
+      setTimeout(() => { if (state.on && state.phase === "playing") play("early"); }, 600);
+    }
+  }, 100);
+  // fetch the next record shortly before it's needed, so it starts quickly
+  let warmed = "";
+  setInterval(() => {
+    if (!state.on || !state.station || !audio.duration) return;
+    const st = state.station, rem = audio.duration - audio.currentTime;
+    if (rem > 30) return;
+    const cur = st.tracks.findIndex(t => t.src === audio.dataset.src); if (cur < 0) return;
+    const nx = st.tracks[(cur + 1) % st.tracks.length].src;
+    if (warmed === nx) return;
+    warmed = nx; const a = new Audio(); a.preload = "auto"; a.crossOrigin = "anonymous"; a.muted = true; a.src = nx;
+  }, 2000);
 
   function setPhase(p) { state.phase = p; applyVolume(); render(); presenceUpdate(); }
 
@@ -1279,7 +1336,7 @@
   }
 
   /* ---------- go ---------- */
-  window.RADIO = { state, fx, presence, audio };   // handy for poking at it in the browser console
+  window.RADIO = { state, fx, presence, audio, trace };   // handy for poking at it in the browser console
   build();
   fit();
   startPresence();
