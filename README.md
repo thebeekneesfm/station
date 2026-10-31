@@ -16,6 +16,8 @@ Double-click `index.html`. Press **Space** (or click the power switch) to turn i
 | ↑ ↓ | Previous / next station |
 | ← → | Volume |
 | C | Clean / Original sound |
+| S | Sleep timer (15 → 30 → 60 → 90 minutes → off) |
+| R | Recently played |
 | E | Layout mode |
 
 Each station has its own link, like `…/otr-radio/#noir`. Opening that link starts on that station, so you can share a station directly.
@@ -63,13 +65,14 @@ Each piece in `skin.js` has `id`, `x`, `y`, `w`, `h`, and usually `src` (the art
 | `"type": "plate"` | Full-stage art. It disappears when the file is missing, instead of showing a box. |
 | `"type": "knob", "bind": "volume"` or `"tuning"` | Spins. `"turn": [-140, 140]` sets how far, in degrees. |
 | `"type": "needle", "track": {"from": 510, "to": 1090}` | A dial needle, if you ever want a dial back. Slides between those x positions. |
-| `"type": "button", "action": "power"` | Clickable. Actions: `power`, `next`, `prev`, `volup`, `voldown`, `dial`, `tune:chills` (jump to a station). |
+| `"type": "button", "action": "power"` | Clickable. Actions: `power`, `next`, `prev`, `volup`, `voldown`, `sleep`, `recent`, `clean`, `tune:chills` (jump to a station). |
 | `"type": "card"` | Shows the current station's card art. |
 | `"type": "ticker"` | A scrolling strip. `"show"`, `"speed"` (pixels per second), `font`, `size`, `color`. |
 | `"type": "guide"` | The channel guide. `"mode": "timeline"` (a TV-listings grid) or `"list"` (now and next, for phones). `"hours"`, `"rowHeight"`, `"labelWidth"`, `font`, `size`, `color`, `dim`, `highlight`, `line`, `block`, `selected`. |
 | `"type": "ad"` | The vintage ad panel. `"every"` is how many seconds each ad stays up. |
+| `"type": "reactbar"` / `"reactfloat"` | The reaction buttons, and the area reactions float up through. |
 | `"type": "tv"` | The cartoon TV. Text pieces can show `"bind": "tv.title"` and link with `"href": "tv.item"`. |
-| `"type": "text", "bind": "…"` | Live text. Binds: `now.series`, `now.title`, `now.date`, `now.remaining`, `station.name`, `station.freq`, `station.blurb`, `station.listeners`, `clock`, `guide` (with `"count": 5`), `status`. Or fixed words with `"text": "…"`. Add `"href"` to make it a link: a web address, or `"now.item"` for the current show's Archive page. Style with `font`, `size`, `color`, `align`, `lineHeight`, `uppercase`, `spacing`. Long titles shrink to fit. |
+| `"type": "text", "bind": "…"` | Live text. Binds: `sleep`, `clean`, `tv.title`, `now.series`, `now.title`, `now.date`, `now.remaining`, `station.name`, `station.freq`, `station.blurb`, `station.listeners`, `clock`, `guide` (with `"count": 5`), `status`. Or fixed words with `"text": "…"`. Add `"action"` to make text clickable, like the buttons (`sleep`, `recent`, `clean` and the rest). Add `"href"` to make it a link: a web address, or `"now.item"` for the current show's Archive page. Style with `font`, `size`, `color`, `align`, `lineHeight`, `uppercase`, `spacing`. Long titles shrink to fit. |
 | `"when": "on"` | Only show at certain times: `on`, `off`, `playing`, `warming`, `between` (dial between stations), `lost` (a broken tape), `tuned`. Combine them with commas. |
 | `"station": "chills"` | Only show on that station, for example a different dial glow per station. |
 | `"frames": ["art/tube-1.png", "art/tube-2.png"], "fps": 6` | A looping animation, like flickering tubes or a turning record. |
@@ -126,6 +129,22 @@ Each station has its own settings in `stations.js`, for example `"sound": { "lev
 - `level: false` turns off the automatic leveling.
 
 If the records still sound rough after that, the next step is cleaning them ahead of time with proper restoration tools and hosting the cleaned files yourself. That's more work and a bigger copyright step, since you'd be distributing your own copies.
+
+## Reactions
+
+The emoji buttons under what's playing (👻 ♥ 🎺 😂) float a reaction up the screen. Everyone tuned to the same station sees it at the same moment. Like the listener count, sharing reactions needs the Supabase keys in `config.js`; until then you only see your own. Each person can send about two a second, so nobody can flood the screen.
+
+Change the set in `skin.js` under `"reactions"`. Each one needs an `id` and an `emoji`. To use your own drawings instead of emoji, add `"src": "art/react-ghost.png"`.
+
+## Sleep timer and recently played
+
+**Sleep timer:** click "Sleep timer: off" (or press S) to step through 15, 30, 60 and 90 minutes, then off. Over the last 45 seconds the sound fades out, and then the radio switches off.
+
+**Recently played:** click "Recently played" (or press R) to see the last 15 things on the current station, with times and Archive links. It's worked out from the schedule, so nothing is stored.
+
+## Radio commercials
+
+The music stations play an old radio commercial after every four records: about 100 real 1940s–50s spots (Lucky Strike, Chiquita Banana, Alka-Seltzer, Pepsi and more), from the Archive's vintage radio commercial collections. In `stations.js` they're the tracks with `"ad": true`. Delete one to drop it, or remove them all from a station.
 
 ## The little TV
 

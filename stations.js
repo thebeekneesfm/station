@@ -2039,6 +2039,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_motor-march_vess-l-ossman_gbia0061084b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/CONTADINATOMATOPASTE.mp3",
+    "length": 18.06,
+    "series": "A word from our sponsor",
+    "title": "Contadina Tomato Paste",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_kitten-on-the-keys_zez-confrey-and-his-orchestra-zez-confrey_gbia0121085b/Kitten%20on%20the%20keys%20-%20Zez%20Confrey%20and%20His%20Orchestra.mp3",
     "length": 180.0,
     "series": "Zez Confrey and His Orchestra",
@@ -2069,6 +2077,14 @@ window.STATIONS = [
     "title": "A Hot Time March",
     "date": "1900",
     "item": "https://archive.org/details/edbw-103"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUCKYBEER.mp3",
+    "length": 21.33,
+    "series": "A word from our sponsor",
+    "title": "Lucky Beer",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_russian-rag_jim-europes-band-cobb_gbia0302341b/Russian%20Rag%20-%20Jim%20Europe%27s%20Band%20-%20Cobb.mp3",
@@ -2103,6 +2119,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/Fred_Van_Eps-A_Rag_Time_Episode"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/FITCH.MP3",
+    "length": 123.67,
+    "series": "A word from our sponsor",
+    "title": "Fitch Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/EuropesSocietyOrchestraDownHomeRag1914/Europes_Society_Orchestra-Down_Home_Rag-1914.mp3",
     "length": 203.0,
     "series": "Europe's Society Orchestra",
@@ -2133,6 +2157,14 @@ window.STATIONS = [
     "title": "The College Rag",
     "date": "1913",
     "item": "https://archive.org/details/78_the-college-rag_olly-oakley-w-hunter_gbia3036757b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/IRONIZEDYEAST.mp3",
+    "length": 53.55,
+    "series": "A word from our sponsor",
+    "title": "Ironized Yeast",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/edgm-10104/edgm-10104.mp3",
@@ -2167,6 +2199,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_a-la-paree_rega-dance-orchestra-henri-verdin_gbia0351117a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/PHILIPMORRISCIGARETTES.mp3",
+    "length": 52.61,
+    "series": "A word from our sponsor",
+    "title": "Philip Morris Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_ive-got-the-red-white-and-blues_noble-sissle-eubie-blake-clarnce-gaskill_gbia0170603a/I%27VE%20GOT%20THE%20RED%2C%20WHITE%20AND%20BLUES%20-%20NOBLE%20SISSLE.mp3",
     "length": 158.0,
     "series": "Noble Sissle",
@@ -2197,6 +2237,14 @@ window.STATIONS = [
     "title": "New York blues - rag classical",
     "date": "1916",
     "item": "https://archive.org/details/EDIS-SRP-0195-07"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PONTIAC.MP3",
+    "length": 27.1,
+    "series": "A word from our sponsor",
+    "title": "Pontiac",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_somebody_van-eps-specialty-four-van-eps-green-banta-glantz-little-stanley-dellon_gbia0421618a/SOMEBODY%20-%20VAN%20EPS%20SPECIALTY%20FOUR%20-%20Van%20Eps.mp3",
@@ -2231,6 +2279,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/BorbeesJassOrchestraTheRagtimeVolunteersAreOffToWar1917"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/REYNOLDSALUMINUM.mp3",
+    "length": 36.23,
+    "series": "A word from our sponsor",
+    "title": "Reynolds Aluminum",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_at-the-jazz-band-ball_synco-jazz-band-la-rocca-shields_gbia0516713b/AT%20THE%20JAZZ%20BAND%20BALL%20-%20SYNCO%20JAZZ%20BAND%20-%20La%20Rocca.mp3",
     "length": 173.0,
     "series": "Synco Jazz Band",
@@ -2261,6 +2317,14 @@ window.STATIONS = [
     "title": "Arizona Jack - the Ghost of the Violin (cinch5057)",
     "date": "1913",
     "item": "https://archive.org/details/ArizonaJack-TheGhostOfTheViolincinch50571913"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/VIMMSVITAMINS.mp3",
+    "length": 21.64,
+    "series": "A word from our sponsor",
+    "title": "Vimms Vitamins",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/LouisianaFive-SlowAndEasy/Louisiana_Five_Jazz_Orchestra-Slow_and_Easy-1919.mp3",
@@ -2295,6 +2359,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/ColumbiaBandTheBurningOfRome1920"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
+    "length": 49.1,
+    "series": "A word from our sponsor",
+    "title": "Goodyear Lifeguard Tires",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_swanee_sanfords-famous-dance-orchestra-geo-gershwin_gbia0432186b/SWANEE%20-%20SANFORD%27S%20FAMOUS%20DANCE%20ORCHESTRA.mp3",
     "length": 187.3,
     "series": "Sanford's Famous Dance Orchestra",
@@ -2325,6 +2397,14 @@ window.STATIONS = [
     "title": "Listen to This - One-Step",
     "date": "1916",
     "item": "https://archive.org/details/78_listen-to-this-one-step_jaudas-society-orchestra-mel-b-kaufman_gbia0299007b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/DUPONT.MP3",
+    "length": 127.33,
+    "series": "A word from our sponsor",
+    "title": "Dupont",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_bow-wow_saxi-holtsworth-harmonie-hounds-wadsworth-albert_gbia0464659a/BOW-WOW%20-%20SAXI%20HOLTSWORTH%20HARMONIE%20HOUNDS.mp3",
@@ -2359,6 +2439,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_the-pussy-cat-rag_peerless-quartet-daly-and-allen_gbia0082848b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
+    "length": 49.71,
+    "series": "A word from our sponsor",
+    "title": "Creamo Cigars",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_laughing-rag_sam-moore-sam-moore_gbia0395844b/LAUGHING%20RAG%20-%20SAM%20MOORE%20-%20Sam%20Moore.mp3",
     "length": 175.51,
     "series": "Sam Moore",
@@ -2389,6 +2477,14 @@ window.STATIONS = [
     "title": "Hello, Hello!",
     "date": "1919",
     "item": "https://archive.org/details/WilburSweatmansOriginalJazzBandHelloHello1919"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATESHAVINGCREAM.mp3",
+    "length": 40.99,
+    "series": "A word from our sponsor",
+    "title": "Colgate Shaving Cream",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_in-and-out_joseph-samuels-and-larry-briers-joe-samuels_gbia0416903a/IN%20AND%20OUT%20-%20JOSEPH%20SAMUELS%20AND%20LARRY%20BRIERS.mp3",
@@ -2423,6 +2519,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_stumbling_yerkes-ss-flotilla-orchestra-zez-confrey_gbia0079705a"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsFatimaCigarettes.mp3",
+    "length": 126.66,
+    "series": "A word from our sponsor",
+    "title": "Fatima Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/EddiePeabodyTheYellowDogBlues1925/Eddie_Peabody-The_Yellow_Dog_Blues-1925.mp3",
     "length": 202.0,
     "series": "Eddie Peabody",
@@ -2453,6 +2557,14 @@ window.STATIONS = [
     "title": "Hawaiian Twilight",
     "date": "1920",
     "item": "https://archive.org/details/78_hawaiian-twilight_ferera-franchini-sherwood-vandersloot_gbia3020039b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CARTERSLITTLELIVERPILLS.mp3",
+    "length": 47.62,
+    "series": "A word from our sponsor",
+    "title": "Carter's Little Liver Pills",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/bouncerag1902/bouncerag1902.mp3",
@@ -2487,6 +2599,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_xylophone-rag_leonard-derby-abbey_gbia3014421b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsiCola.mp3",
+    "length": 33.38,
+    "series": "A word from our sponsor",
+    "title": "Pepsi Cola",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_cutie_eubie-blake-and-his-orchestra-rudolf-friml_gbia0476572b/CUTIE%20-%20EUBIE%20BLAKE%20AND%20HIS%20ORCHESTRA%20-%20RUDOLF%20FRIML.mp3",
     "length": 195.36,
     "series": "Eubie Blake and His Orchestra",
@@ -2517,6 +2637,14 @@ window.STATIONS = [
     "title": "Felix Arndt - Desecration Rag ( A Classic Nightmare)",
     "date": "1914",
     "item": "https://archive.org/details/DesecrationRagAClassicNightmareFelixArndt"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/FORD.MP3",
+    "length": 87.16,
+    "series": "A word from our sponsor",
+    "title": "Ford",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_ma_eubie-blake-con-conrad_gbia0471288b/MA%20-%20EUBIE%20BLAKE%20-%20CON%20CONRAD.mp3",
@@ -2551,6 +2679,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/Arthur_Pryors_Band-A_Cyclone_In_Darktown"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/POSTUM.MP3",
+    "length": 120.78,
+    "series": "A word from our sponsor",
+    "title": "Postum",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/Princes_Band-Too_Much_Mustard/Princes_Band-Too_Much_Mustard.mp3",
     "length": 207.0,
     "series": "Princes Band",
@@ -2581,6 +2717,14 @@ window.STATIONS = [
     "title": "Peggy One-Step",
     "date": "1920",
     "item": "https://archive.org/details/78_peggy-one-step_lopez-hamiltons-kings-of-harmony-orchestra-neil-moret_gbia0083365a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
+    "length": 59.17,
+    "series": "A word from our sponsor",
+    "title": "Armour Hot Dogs",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_nightingale_james-brockman-frisco-syncopators_gbia0000490a/Nightingale%20-%20James%20Brockman%20-%20Frisco%20Syncopators.mp3",
@@ -2615,6 +2759,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_stumbling_majestic-dance-orchestra-arthur-hall-zez-confrey_gbia0395383b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
+    "length": 60.33,
+    "series": "A word from our sponsor",
+    "title": "Palmolive Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_do-what-you-did-last-night_ethel-waters-james-p-johnson-razaf-johnson_gbia0304348b/DO%20WHAT%20YOU%20DID%20LAST%20NIGHT%21%20-%20ETHEL%20WATERS.mp3",
     "length": 167.42,
     "series": "Ethel Waters",
@@ -2647,6 +2799,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/Robert_Brooks-Salome_Intermezzo"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAutoLite.mp3",
+    "length": 57.75,
+    "series": "A word from our sponsor",
+    "title": "Auto-Lite",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/edison-50988_01_8455/cusb_ed_50988_01_8455_0a.mp3",
     "length": 235.0,
     "series": "Vincent Lopez Orchestra",
@@ -2677,6 +2837,14 @@ window.STATIONS = [
     "title": "Midnight Fire Alarm",
     "date": "1920",
     "item": "https://archive.org/details/PrincesOrchestra-MidnightFireAlarm"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PATTICAKECOOKIES.mp3",
+    "length": 45.98,
+    "series": "A word from our sponsor",
+    "title": "Patti-Cake Cookies",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/Sousas_Band-Chinese_Blues/Sousas_Band-Chinese_Blues.mp3",
@@ -2752,6 +2920,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/original-dixieland-jazz-band-tiger-rag-victor-18472-b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
+    "length": 59.17,
+    "series": "A word from our sponsor",
+    "title": "Armour Hot Dogs",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/OriginalMemphisFive-MeanestBlues/Original_Memphis_Five-Meanest_Blues-1924.mp3",
     "length": 198.0,
     "series": "Original Memphis Five",
@@ -2782,6 +2958,14 @@ window.STATIONS = [
     "title": "Bees' Knees",
     "date": "1922",
     "item": "https://archive.org/details/edison-51094_01_8662"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
+    "length": 60.33,
+    "series": "A word from our sponsor",
+    "title": "Palmolive Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/edison-51486_01_9939/cusb_ed_51486_01_9939_0b.mp3",
@@ -2816,6 +3000,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/victor-18983-a-pack-up-your-sins"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAutoLite.mp3",
+    "length": 57.75,
+    "series": "A word from our sponsor",
+    "title": "Auto-Lite",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_orys-creole-trombone_kid-orys-sunshine-orchestra-papa-mutt-carey-kid-ory-dink-joh_gbia0215087a/ORY%27S%20CREOLE%20TROMBONE%20-%20KID%20ORY%27S%20SUNSHINE%20ORCHESTRA.mp3",
     "length": 202.99,
     "series": "Kid Ory's Sunshine Orchestra",
@@ -2846,6 +3038,14 @@ window.STATIONS = [
     "title": "Bee's Knees",
     "date": "1922",
     "item": "https://archive.org/details/78_bees-knees_the-original-memphis-five-lopez-and-lewis_gbia0278930a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PATTICAKECOOKIES.mp3",
+    "length": 45.98,
+    "series": "A word from our sponsor",
+    "title": "Patti-Cake Cookies",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/brunswick-5027-a-avalon/Brunswick%205027A%20-%20Avalon%20-%203.0%20CT%20800N-16%20EQ.mp3",
@@ -2880,6 +3080,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/edison-51317_01_9402"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGmGuardianMaintenance.mp3",
+    "length": 59.74,
+    "series": "A word from our sponsor",
+    "title": "GM Guardian Maintenance",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_broken-hearted-melody_arthur-langes-dance-orchestra-isham-jones_gbia0107243a/Broken%20Hearted%20Melody%20-%20Arthur%20Lange%27s%20Dance%20Orchestra.mp3",
     "length": 156.0,
     "series": "Arthur Lange's Dance Orchestra",
@@ -2910,6 +3118,14 @@ window.STATIONS = [
     "title": "Chirping The Blues",
     "date": "1923",
     "item": "https://archive.org/details/78_chirping-the-blues_alberta-hunter-fletcher-henderson_gbia0418706a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CAMELCIGARETTES.mp3",
+    "length": 126.01,
+    "series": "A word from our sponsor",
+    "title": "Camel Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/victor-18983-b-crinoline-days/Victor%2018983B%20-%20Crinoline%20Days%20-%203.0%20CT%20630N-16%20EQ.mp3",
@@ -2944,6 +3160,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_charleston-crazy_fletcher-henderson-and-his-orchestra-grainger-ricketts_gbia0039230a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/OVALTINE.MP3",
+    "length": 126.24,
+    "series": "A word from our sponsor",
+    "title": "Ovaltine",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_after-the-storm_ben-selvin-and-his-moulin-rouge-orchestra-jack-nelson_gbia0046619a/After%20the%20Storm%20-%20Ben%20Selvin%20and%20His%20Moulin%20Rouge%20Orchestra.mp3",
     "length": 184.0,
     "series": "Ben Selvin and His Moulin Rouge Orchestra",
@@ -2974,6 +3198,14 @@ window.STATIONS = [
     "title": "Take, Oh Take Those Lips Away",
     "date": "1923",
     "item": "https://archive.org/details/78_take-oh-take-those-lips-away_ben-selvin-and-his-moulin-rouge-orchestra-tirney-mcca_gbia0097403a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUDWEISER.mp3",
+    "length": 19.07,
+    "series": "A word from our sponsor",
+    "title": "Budweiser",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/edison-51542_01_10292/cusb_ed_51542_01_10292_0b.mp3",
@@ -3008,6 +3240,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_eddie-leonard-blues_the-california-ramblers-stanton_gbia0002730b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdmiral.mp3",
+    "length": 77.38,
+    "series": "A word from our sponsor",
+    "title": "Admiral",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/rhapblue11924/rhapblue11924.mp3",
     "length": 275,
     "series": "Paul Whiteman and George Gershwin",
@@ -3038,6 +3278,14 @@ window.STATIONS = [
     "title": "Rhapsody In Blue Part 2",
     "date": "1924",
     "item": "https://archive.org/details/rhapblue21924"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWhiteKingSoap.mp3",
+    "length": 81.37,
+    "series": "A word from our sponsor",
+    "title": "White King Soap",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_at-the-new-jump-steady-ball_ethel-waters-alburys-blue-and-jazz-seven-delaney-easto_gbia0275389a/AT%20THE%20NEW%20JUMP%20STEADY%20BALL%20-%20ETHEL%20WATERS.mp3",
@@ -3072,6 +3320,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_someone-else-will-take-your-place_alberta-hunter-fletcher-henderson-david-warfield_gbia0418706b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceKrispies.mp3",
+    "length": 58.26,
+    "series": "A word from our sponsor",
+    "title": "Rice Krispies",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_dont-pan-me_alberta-hunter-gus-butler_gbia0377248a/Don%27t%20Pan%20Me%20-%20Alberta%20Hunter%20-%20Gus.%20Butler.mp3",
     "length": 191.52,
     "series": "Alberta Hunter",
@@ -3102,6 +3358,14 @@ window.STATIONS = [
     "title": "Show Me The Way",
     "date": "1924",
     "item": "https://archive.org/details/coon-sanders-original-night-hawk-orchestra-show-me-the-way-victor-19525-b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsHouseholdFinanceCorp.mp3",
+    "length": 22.72,
+    "series": "A word from our sponsor",
+    "title": "Household Finance Corp",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/i-gave-you-up-just-before-you-threw-me-down-by-marion-harris-restored/I%20gave%20you%20up%20just%20before%20you%20threw%20me%20down%20by%20Marion%20Harris%20Restored.mp3",
@@ -3136,6 +3400,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_those-dogs-of-mine-famous-cornfield-blues_ma-rainey-lovie-austin-and-her-blues_gbia0377247a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUSTERCREAM.mp3",
+    "length": 50.11,
+    "series": "A word from our sponsor",
+    "title": "Lustre-Creme Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_of-all-the-wrongs-you-done-to-me_clarence-williams-blue-five-eva-taylor-len-payton_gbia0100514b/Of%20all%20the%20Wrongs%20You%20Done%20%20-%20Clarence%20Williams%27%20Blue%20Five.mp3",
     "length": 183.0,
     "series": "Clarence Williams' Blue Five",
@@ -3166,6 +3438,14 @@ window.STATIONS = [
     "title": "I Wish I Could Shimmy Like My Sister Kate",
     "date": "1922",
     "item": "https://archive.org/details/78_i-wish-i-could-shimmy-like-my-sister-kate_original-memphis-five-clarence-williams_gbia0039641a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/WHEATIESCEREAL.mp3",
+    "length": 85.21,
+    "series": "A word from our sponsor",
+    "title": "Wheaties",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/king-olivers-jazz-band-chattanooga-stomp-shimmy-one-step-columbia-13003-d-81300-/King%20Oliver%27s%20Jazz%20Band%20-%20Chattanooga%20Stomp%2C%20Shimmy%20One%20Step%20-%20Columbia%2013003D%2C%2081300%2C%20Matrix%2081300%203-1%20-%20October%2015%2C%201923.mp3",
@@ -3200,6 +3480,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/IshamJonesRainboOrchestraJingaBulaJingJing1920"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWildRootCreamOil.mp3",
+    "length": 42.5,
+    "series": "A word from our sponsor",
+    "title": "Wildroot Cream-Oil",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_lazy-daddy_bix-beiderbecke-and-the-wolverines-la-rocca-shields-ragas-bix-beiderbeck_gbia0030788b/Lazy%20Daddy%20-%20Bix%20Beiderbecke%20and%20the%20Wolverines.mp3",
     "length": 170.0,
     "series": "Bix Beiderbecke and the Wolverines",
@@ -3230,6 +3518,14 @@ window.STATIONS = [
     "title": "Riverboat Shuffle",
     "date": "1924",
     "item": "https://archive.org/details/78_riverbeat-shuffle_wolverine-orchestra-carmichael_gbia0009181a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCampbellsSoup.mp3",
+    "length": 68.87,
+    "series": "A word from our sponsor",
+    "title": "Campbell's Soup",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_oh-baby_wolverine-orchestra-de-sylva-donaldson_gbia0009180a/Oh%21%20Baby%20-%20Wolverine%20Orchestra%20-%20De%20Sylva.mp3",
@@ -3264,6 +3560,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/whispering_202105"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/HALLOSHAMPOO.mp3",
+    "length": 25.7,
+    "series": "A word from our sponsor",
+    "title": "Halo Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_society-blues_kid-orys-sunshine-orchestra-papa-mutt-carey-kid-ory-dink-johnson-fre_gbia0215087b/SOCIETY%20BLUES%20-%20KID%20ORY%27S%20SUNSHINE%20ORCHESTRA.mp3",
     "length": 192.34,
     "series": "Kid Ory's Sunshine Orchestra",
@@ -3294,6 +3598,14 @@ window.STATIONS = [
     "title": "The Road Is Rocky (But I Am Gonna Find My Way)",
     "date": "1920",
     "item": "https://archive.org/details/78_the-road-is-rocky-but-i-am-gonna-find-my-way_mamie-smith-and-her-jazz-hounds-perr_gbia0295933a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ELGINAMERICAN.mp3",
+    "length": 105.57,
+    "series": "A word from our sponsor",
+    "title": "Elgin American",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_youve-got-to-see-mamma-evry-night-or-you-cant-see-mamma-at-all_mamie-smith-and_gbia0295928a/YOU%27VE%20GOT%20TO%20SEE%20MAMMA%20%20-%20MAMIE%20SMITH%20AND%20HER%20JAZZ%20HOUNDS.mp3",
@@ -3328,6 +3640,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_arkansas-blues-a-down-home-chant_mamie-smith-and-her-jazz-band-anton-lada-spencer_gbia0295930b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Chesterfield Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/original-dixieland-jazz-band-skeleton-jangle-victor-18472-a/Original%20Dixieland%20Jazz%20Band%20-%20Skeleton%20Jangle%20-%20Victor%2018472-A.mp3",
     "length": 169.9,
     "series": "Original Dixieland Jazz Band",
@@ -3358,6 +3678,14 @@ window.STATIONS = [
     "title": "Clarinet Marmalade Blues",
     "date": "1918",
     "item": "https://archive.org/details/original-dixieland-jazz-band-clarinet-marmalade-blues-victor-18513-b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
+    "length": 36.39,
+    "series": "A word from our sponsor",
+    "title": "Lux Toilet Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/charleston1925/charleston1925.mp3",
@@ -3392,6 +3720,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/1920-USA-Archives-1920-11-28-Ted-Lewis-Jazz-Band-Margie"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLEMAN.MP3",
+    "length": 41.38,
+    "series": "A word from our sponsor",
+    "title": "Coleman",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/coon-sanders-original-night-hawk-orchestra-some-of-these-days-victor-19600-b/Coon-Sanders%20Original%20Night%20Hawk%20Orchestra%20-%20Some%20Of%20These%20Days%20-%20Victor%2019600-B.mp3",
     "length": 181.05,
     "series": "Coon-Sanders Original Night Hawk Orchestra",
@@ -3422,6 +3758,14 @@ window.STATIONS = [
     "title": "My daddy's dreamtime lullaby",
     "date": "1924",
     "item": "https://archive.org/details/loc-jukebox-69880-my-daddy-s-dreamtime-lullaby"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/HALEYSMO.MP3",
+    "length": 42.55,
+    "series": "A word from our sponsor",
+    "title": "Haley's M-O",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_aggravatin-papa_ladds-black-aces-turk-robinson_gbia0009099a/Aggravatin%27%20Papa%20-%20Ladd%27s%20Black%20Aces%20-%20Turk.mp3",
@@ -3456,6 +3800,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_stop-your-kidding_ladds-black-aces-mills-groffe-hugh_gbia0009462b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/NABISCO.MP3",
+    "length": 89.11,
+    "series": "A word from our sponsor",
+    "title": "Nabisco",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_jungo-land_ray-miller-melody-king-and-his-black-and-white-melody-boys-joe-bren_gbia0009669b/Jungo%20Land%20-%20Ray%20Miller%20Melody%20King%20and%20his%20Black%20and%20White%20Melody%20Boys.mp3",
     "length": 183.0,
     "series": "Ray Miller and His Orchestra",
@@ -3486,6 +3838,14 @@ window.STATIONS = [
     "title": "Georgia",
     "date": "1922",
     "item": "https://archive.org/details/78_georgia_ray-miller-and-his-orch-johnson-donaldson_gbia0046954b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
+    "length": 40.72,
+    "series": "A word from our sponsor",
+    "title": "Anacin",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    }
   ]
  },
@@ -3537,6 +3897,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/AndyKirkAndHisCloudsOfJoy-TakeThoseBluesAway"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/ELGINAMERICAN.mp3",
+    "length": 105.57,
+    "series": "A word from our sponsor",
+    "title": "Elgin American",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_tis-autumn_bunny-berigan-bunny-berigan-and-his-orchestra-lynne-richards-henry-nein_gbia0026891a/%27Tis%20Autumn%20-%20Bunny%20Berigan%20-%20Bunny%20Berigan%20and%20his%20Orchestra.mp3",
     "length": 210.0,
     "series": "Bunny Berigan",
@@ -3567,6 +3935,14 @@ window.STATIONS = [
     "title": "Call the Police!",
     "date": "1947",
     "item": "https://archive.org/details/78_call-the-police_jimmie-lunceford-and-his-orchestra-joe-thomas-artie-sims_gbia0069527a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Chesterfield Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_whats-the-use-of-getting-sober-moonglow_les-brown-and-his-orchestra-butch-stone_gbia0520210b/WHAT%27S%20THE%20USE%20OF%20GETTING%20SO%20-%20Les%20Brown%20and%20his%20Orchestra.mp3",
@@ -3601,6 +3977,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_the-wheels-keep-spinning-around_larry-clinton-orchestra-janette-davis-clinton-and-h_gbia8005233"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
+    "length": 36.39,
+    "series": "A word from our sponsor",
+    "title": "Lux Toilet Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/trafficjamartieshaw/Traffic%20Jam%20Artie%20Shaw.mp3",
     "length": 138.0,
     "series": "Artie Shaw and His Orchestra",
@@ -3631,6 +4015,14 @@ window.STATIONS = [
     "title": "Deep Purple",
     "date": "1946",
     "item": "https://archive.org/details/78_deep-purple_larry-clinton-derose-parrishs_gbia0105118b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLEMAN.MP3",
+    "length": 41.38,
+    "series": "A word from our sponsor",
+    "title": "Coleman",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/GlenGrayCasaLomaOrchestra-JimtownBlues/Glen_Gray_Casa_Loma_Orchestra-Jimtown_Blues-1940.mp3",
@@ -3665,6 +4057,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_cafe-society-blues_count-basie-and-his-all-american-rhythm-section-basie_gbia7010359a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/HALEYSMO.MP3",
+    "length": 42.55,
+    "series": "A word from our sponsor",
+    "title": "Haley's M-O",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/ChickWebbOrchestra-GoHarlem/Chick_Webb_Orchestra-Go_Harlem-1936.mp3",
     "length": 144.0,
     "series": "Chick Webb Orchestra",
@@ -3695,6 +4095,14 @@ window.STATIONS = [
     "title": "Taps Miller",
     "date": "1944",
     "item": "https://archive.org/details/78_taps-miller_georgie-auld-count-basie-bob-russell_gbia0026071b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NABISCO.MP3",
+    "length": 89.11,
+    "series": "A word from our sponsor",
+    "title": "Nabisco",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_jingle-bells-boogie-woogie_will-bradley-and-his-boogie-woogie-boys-will-bradley-bil_gbia0023170a/Jingle%20Bells%20Boogie%20Woogie%20-%20Will%20Bradley%20and%20his%20Boogie%20Woogie%20Boys.mp3",
@@ -3729,6 +4137,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_after-youve-gone_miff-mole-and-his-little-molers-miff-mole-phil-napoleon-jimmy-dor_gbia0423861b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
+    "length": 40.72,
+    "series": "A word from our sponsor",
+    "title": "Anacin",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_good-morning-corinee_wynonie-harris-lionel-hampton-in-the-evenin-blues-a.-cobbs-c._gbia0001429a/Good%20Morning%20Corinee%20-%20Wynonie%20Harris%20-%20Lionel%20Hampton.mp3",
     "length": 184.0,
     "series": "Wynonie Harris",
@@ -3759,6 +4175,14 @@ window.STATIONS = [
     "title": "The Sheik of Araby",
     "date": "1946",
     "item": "https://archive.org/details/78_the-sheik-of-araby_harry-james-and-his-orchestra-snyder-wheeler-smith_gbia0030704a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BLUECOAL.MP3",
+    "length": 22.27,
+    "series": "A word from our sponsor",
+    "title": "Blue Coal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_drum-boogie_gene-krupa-and-his-orchestra-irene-day-ensemble-krupa-hill_gbia7006392b/DRUM%20BOOGIE%20-%20GENE%20KRUPA%20and%20HIS%20ORCHESTRA.mp3",
@@ -3793,6 +4217,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_ta-ra-ra-boom-de-ay_gene-krupa-and-his-orch-sayers_gbia0121286b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/MARCHOFDIMES.mp3",
+    "length": 70.39,
+    "series": "A word from our sponsor",
+    "title": "March Of Dimes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_fish-market_gene-krupa-and-his-new-orchestra-verdi-krupa-biondi_gbia0278255c/FISH%20MARKET%20-%20Gene%20Krupa%20and%20his%20New%20Orchestra.mp3",
     "length": 325.34,
     "series": "Gene Krupa and his New Orchestra",
@@ -3823,6 +4255,14 @@ window.STATIONS = [
     "title": "A Lover's Lullaby",
     "date": "1944",
     "item": "https://archive.org/details/78_a-lovers-lullaby_glen-gray-and-the-casa-loma-orchestra-carle-wagner-razaf_gbia0423187b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROITANCIGARS.mp3",
+    "length": 15.56,
+    "series": "A word from our sponsor",
+    "title": "Roi-Tan Cigars",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/JimmieLuncefordOrchestra-TwoVersionsOfWhiteHeat/Jimmie_Lunceford_Orchestra-White_Heat-1934.mp3",
@@ -3857,6 +4297,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_cement-mixer-put-ti-put-ti_jimmie-lunceford-and-his-orchestra-lunceford-quartet-g_gbia0030776a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
+    "length": 52.84,
+    "series": "A word from our sponsor",
+    "title": "Popsicle",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_my-heart-at-thy-sweet-voice_dartega-and-his-orchestra-milton-kaye-tschaikowsky_gbia0032714/01%20-%20Tschaikowsky%27s%20Piano%20Concerto%20-%20D%27Artega%20and%20his%20Orchestra.mp3",
     "length": 170.0,
     "series": "D'Artega and his Orchestra",
@@ -3887,6 +4335,14 @@ window.STATIONS = [
     "title": "Flight of the Bumble Bee",
     "date": "1940",
     "item": "https://archive.org/details/78_flight-of-the-bumble-bee_harry-james-and-his-orchestra_gbia0267673b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsTempoCigarettes.mp3",
+    "length": 59.74,
+    "series": "A word from our sponsor",
+    "title": "Tempo Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/in-the-mood_202112/In%20The%20Mood%20%28Flat%20eq%29.mp3",
@@ -3921,6 +4377,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/Heartaches_201811"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCheverolet.mp3",
+    "length": 67.99,
+    "series": "A word from our sponsor",
+    "title": "Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_alexanders-ragtime-band_bessie-smith-her-blue-boys-buster-bailey-c-green-kaiser-mar_gbia3043090b/ALEXANDER%27S%20RAGTIME%20BAND%20-%20BESSIE%20SMITH%20%26%20HER%20BLUE%20BOYS.mp3",
     "length": 185.0,
     "series": "Bessie Smith & Her Blue Boys",
@@ -3951,6 +4415,14 @@ window.STATIONS = [
     "title": "Ah, Your Father's Mustache",
     "date": "1945",
     "item": "https://archive.org/details/78_ah-your-fathers-mustache_woody-herman-and-his-orchestra-the-glee-club-herman-harr_gbia0346962a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
+    "length": 14.08,
+    "series": "A word from our sponsor",
+    "title": "Colgate Tooth Powder",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_on-the-alamo_benny-goodman-his-sextet-count-basie-gus-kahn-isham-jones_gbia0120448a/ON%20THE%20ALAMO%20-%20Benny%20Goodman%20%26%20His%20Sextet.mp3",
@@ -3985,6 +4457,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_craze-o-logy_bud-freeman-bud-freeman-and-his-orchestra-john-mandel-floyd-obrien-bu_gbia0022853a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
+    "length": 50.35,
+    "series": "A word from our sponsor",
+    "title": "Northwest Orient Airlines",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/05-duke-ellington-cotton-club-1938-vol-2-musidisc-ja-5169_202106/01-Duke%20Ellington%20-%20Cotton%20Club%201938%20vol%202%20-%20Musidisc%20JA%205169.mp3",
     "length": 279.01,
     "series": "Duke Ellington a.h. Orchestra",
@@ -4015,6 +4495,14 @@ window.STATIONS = [
     "title": "Overture to a Jam Session - Part I",
     "date": "1947",
     "item": "https://archive.org/details/78_overture-to-a-jam-session-part-2_duke-ellington-and-his-orchestra-strayhorn_gbia0039398"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCrestToothpaste.mp3",
+    "length": 61.97,
+    "series": "A word from our sponsor",
+    "title": "Crest Toothpaste",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_exactly-like-you_harry-james-and-his-orchestra-mccarthy-tierney_gbia0020168/01%20-%20Alice%20Blue%20Gown%20-%20Harry%20James%20and%20his%20Orchestra.mp3",
@@ -4049,6 +4537,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_king-joe-part-1_count-basie-and-his-orch-paul-robeson-wright-basie_gbia7010379a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHIQUITABANANNA.mp3",
+    "length": 34.75,
+    "series": "A word from our sponsor",
+    "title": "Chiquita Banana",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_whose-theme-song-pt-2-tema-de-canciones_richard-himber-and-his-orchestra-pari_gbia0059874/01%20-%20Whose%20Theme%20Song%3F%20-%20Pt.%20-%20Richard%20Himber%20and%20his%20Orchestra.mp3",
     "length": 201.0,
     "series": "Baldridge",
@@ -4079,6 +4575,14 @@ window.STATIONS = [
     "title": "You Won't Be Satisfied; Honeydripper",
     "date": "1946",
     "item": "https://archive.org/details/78_you-wont-be-satisfied-honeydripper_les-brown-doris-day-cab-calloway-and-his-orchest_gbia0526135a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROLSTONCEREAL.mp3",
+    "length": 35.84,
+    "series": "A word from our sponsor",
+    "title": "Ralston Cereal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_bean-at-the-met._coleman-hawkins-and-his-quintet-teddy-wilson-coleman-hawkins-li_gbia0003952a/%22Bean%22%20At%20The%20Met.%20-%20Coleman%20Hawkins%20and%20his%20Quintet.mp3",
@@ -4113,6 +4617,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_lee-wiley-rodgers-and-hart-album_miss-lee-wiley-joe-bushkins-orchestra-rodgers-hart_gbia8006614"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/ENERGINESHOEWHITE.mp3",
+    "length": 26.01,
+    "series": "A word from our sponsor",
+    "title": "Energine Shoe White",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/ErskineHawkinsOrchestra-RaidTheJoint/Erskine_Hawkins_Orchestra-Raid_The_Joint-1939.mp3",
     "length": 182.0,
     "series": "Erskine Hawkins Orchestra",
@@ -4143,6 +4655,14 @@ window.STATIONS = [
     "title": "Atchinson, Topeka & Santa Fe",
     "date": "1944",
     "item": "https://archive.org/details/78_atchinson-topeka--santa-fe_bob-crosby-and-orchestra-peggy-lee--bob-crosby-warren_gbia0005285a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWingCigarettes.mp3",
+    "length": 32.99,
+    "series": "A word from our sponsor",
+    "title": "Wing Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/ChickWebbAndHisOrchestra-MidniteInAMadhouse/Chick_Webb_Orchestra-Midnite_In_A_Madhouse-1937.mp3",
@@ -4177,6 +4697,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/BobCrosbyOrchestra-ChainGang"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLowenbrauBeer.mp3",
+    "length": 56.53,
+    "series": "A word from our sponsor",
+    "title": "Löwenbräu Beer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/CharlieBarnetOrchestra-Nowhere/Charlie_Barnet_Orchestra-Nowhere-1940.mp3",
     "length": 203.0,
     "series": "Charlie Barnet Orchestra",
@@ -4207,6 +4735,14 @@ window.STATIONS = [
     "title": "Jungle Jitters",
     "date": "1936",
     "item": "https://archive.org/details/GlenGrayCasaLomaOrchestra-JungleJitters"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDodge.mp3",
+    "length": 62.27,
+    "series": "A word from our sponsor",
+    "title": "Dodge",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/LesBrownOrchestraBlueDivelJazz1939/Les_Brown_Orchestra-Blue_Divel_Jazz-1939.mp3",
@@ -4241,6 +4777,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_cryin-the-boogie-blues_will-bradley-and-his-boogie-woogie-boys-will-bradley-billy_gbia0023170b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
+    "length": 49.41,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Health Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_in-the-evenin-blues_wynonie-harris-lionel-hampton-the-hamp-tone-all-stars-a.-cobbs_gbia0001429b/In%20The%20Evenin%20Blues%20-%20Wynonie%20Harris%20-%20Lionel%20Hampton-restored.mp3",
     "length": 167.0,
     "series": "Wynonie Harris",
@@ -4271,6 +4815,14 @@ window.STATIONS = [
     "title": "The White Cliffs of Dover",
     "date": "1941",
     "item": "https://archive.org/details/78_the-white-cliffs-of-dover_bunny-berigan-and-his-orchestra-lynne-richards-burton-ken_gbia0103466b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
+    "length": 86.85,
+    "series": "A word from our sponsor",
+    "title": "Sal Hepatica",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_sunset-strip_jimmy-dorsey-and-his-orchestra-dorsey-burke_gbia0423217a/SUNSET%20STRIP%20-%20Jimmy%20Dorsey%20and%20his%20Orchestra.mp3",
@@ -4305,6 +4857,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_burma-road-blues-part-1_roy-miltons-sextet-r-milton-h-sapp-d-robinson-l-floy_gbia0060955a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/PEPSI.MP3",
+    "length": 42.47,
+    "series": "A word from our sponsor",
+    "title": "Pepsi",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/AndyKirkAndHisCloudsOfJoyInTheGroove1937/Andy_Kirk_and_His_Clouds_of_Joy-In_The_Groove-1937.mp3",
     "length": 185.0,
     "series": "Andy Kirk and His Clouds of Joy",
@@ -4337,6 +4897,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_hi-ho-trailus-boot-whip_anita-oday-will-bradley-and-his-orchestra-harding-palmer-r_gbia0008335b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercials1957Chevrolet.mp3",
+    "length": 36.48,
+    "series": "A word from our sponsor",
+    "title": "1957 Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_willow-weep-for-me_cab-calloway-his-orch-hilton-jefferson-ronell-gibson_gbia7000526b/WILLOW%20WEEP%20FOR%20ME%20-%20CAB%20CALLOWAY%20%26%20HIS%20ORCH..mp3",
     "length": 202.61,
     "series": "Cab Calloway & His Orchestra",
@@ -4367,6 +4935,14 @@ window.STATIONS = [
     "title": "Two Selections from \"Hot Mikado",
     "date": "1939",
     "item": "https://archive.org/details/ErskineHawkinsOrchestra-TwoSelectionsFromhotMikado"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/INTERNATIONALSTERLING.mp3",
+    "length": 95.28,
+    "series": "A word from our sponsor",
+    "title": "International Sterling",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/BobCrosbyOrchestra-BlackZephyr/Bob_Crosby_Orchestra-Black_Zephyr-1942.mp3",
@@ -4434,6 +5010,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_lonesome-road_jo-stafford-and-her-v-disc-boys-austin-shilkret-billy-butterfield-lou_gbia0104502b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROLSTONCEREAL.mp3",
+    "length": 35.84,
+    "series": "A word from our sponsor",
+    "title": "Ralston Cereal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_ill-see-you-in-my-dreams_tony-martin-the-starlighters-al-sack-and-his-orchestra-t_gbia0047589b/I%27ll%20See%20You%20in%20My%20Dreams%20-%20Tony%20Martin%20-%20The%20Starlighters.mp3",
     "length": 205.0,
     "series": "Tony Martin",
@@ -4464,6 +5048,14 @@ window.STATIONS = [
     "title": "Let's just pretend",
     "date": "1944",
     "item": "https://archive.org/details/letsjustpretend"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ENERGINESHOEWHITE.mp3",
+    "length": 26.01,
+    "series": "A word from our sponsor",
+    "title": "Energine Shoe White",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_night-and-day_artie-shaw-and-his-orchestra-mel-torme-cole-porter_gbia0020169/01%20-%20Get%20Out%20of%20Town%20-%20Artie%20Shaw%20and%20his%20Orchestra-restored.mp3",
@@ -4498,6 +5090,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/PaulWhitemanwithRhythmBoysBingCrosby"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWingCigarettes.mp3",
+    "length": 32.99,
+    "series": "A word from our sponsor",
+    "title": "Wing Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_all-i-sing-is-blues_billy-eckstine-and-his-orchestra-billy-eckstine-fred-gray_gbia0072650b/All%20I%20Sing%20Is%20Blues%20-%20Billy%20Eckstine%20And%20His%20Orchestra.mp3",
     "length": 179.0,
     "series": "Billy Eckstine And His Orchestra",
@@ -4528,6 +5128,14 @@ window.STATIONS = [
     "title": "If I Had My Way",
     "date": "1946",
     "item": "https://archive.org/details/78_if-i-had-my-way_nick-lucas-klein-kendis_gbia0054803b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLowenbrauBeer.mp3",
+    "length": 56.53,
+    "series": "A word from our sponsor",
+    "title": "Löwenbräu Beer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_everyone-is-looking-for-the-rainbow_nick-lucas-and-his-orchestra-marks-koppell_gbia0037491b/Everyone%20is%20Looking%20for%20the%20-%20Nick%20Lucas%20and%20his%20Orchestra.mp3",
@@ -4562,6 +5170,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_to-love-again_vic-damone-percy-faith-his-orchestra-and-chorus-n-washington-stoloff-_gbia3025737a"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDodge.mp3",
+    "length": 62.27,
+    "series": "A word from our sponsor",
+    "title": "Dodge",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_sunrise-follows-sunset_bob-eberly-heathertones-danny-mendelson-and-orch-lamarge-jo_gbia0024304b/Sunrise%20Follows%20Sunset%20-%20Bob%20Eberly%20-%20Heathertones.mp3",
     "length": 189.0,
     "series": "Bob Eberly",
@@ -4592,6 +5208,14 @@ window.STATIONS = [
     "title": "Riders in the Sky",
     "date": "1949",
     "item": "https://archive.org/details/78_riders-in-the-sky_vaughn-monroe-and-his-orchestra-vaughn-monroe-and-the-quartette-s_gbia0122980a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
+    "length": 49.41,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Health Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_buddy-clark-substitutes-raleigh-room-with-hildegarde_buddy-clark-harry-sosnik-orche_gbia0354810a/BUDDY%20CLARK%20SUBSTITUTES%20RALEIGH%20ROOM%20WITH%20HI%20-%20BUDDY%20CLARK.mp3",
@@ -4626,6 +5250,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_negra-consentida-stuff-like-that-there_andy-russell-betty-hutton-pardave-harper-li_gbia0520182b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
+    "length": 86.85,
+    "series": "A word from our sponsor",
+    "title": "Sal Hepatica",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_cindy-oh-cindy_eddie-fisher-hugo-winterhalters-orchestra-and-chorus-barron-long_gbia7011711a/CINDY%2C%20OH%20CINDY%20-%20EDDIE%20FISHER%20-%20Hugo%20Winterhalter%27s%20Orchestra%20and%20Chorus.mp3",
     "length": 181.27,
     "series": "Eddie Fisher",
@@ -4656,6 +5288,14 @@ window.STATIONS = [
     "title": "Deep Night",
     "date": "1941",
     "item": "https://archive.org/details/78_deep-night_tommy-dorsey-and-his-orchestra-rudy-vallee-charlie-henderson_gbia0011422b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PEPSI.MP3",
+    "length": 42.47,
+    "series": "A word from our sponsor",
+    "title": "Pepsi",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_i-couldnt-believe-my-eyes_rudy-vallee-and-his-connecticut-yankees-samuels-whitcup_gbia0037478b/I%20Couldn%27t%20Believe%20My%20Eyes%20-%20Rudy%20Vallee%20and%20His%20Connecticut%20Yankees.mp3",
@@ -4690,6 +5330,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/you-wont-be-satisfied-until-you-break-my-heart"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercials1957Chevrolet.mp3",
+    "length": 36.48,
+    "series": "A word from our sponsor",
+    "title": "1957 Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_alouetta_rudy-vallee-rudy-vallee-and-the-sportsmen-and-orchestra-collins-h.-driggs_gbia0000499a/Alouetta%20-%20Rudy%20Vallee%20-%20Rudy%20Vallee%20and%20The%20Sportsmen%20and%20Orchestra.mp3",
     "length": 173.0,
     "series": "Rudy Vallee",
@@ -4720,6 +5368,14 @@ window.STATIONS = [
     "title": "Born to Be Blue",
     "date": "1946",
     "item": "https://archive.org/details/78_born-to-be-blue_mel-torme-sonny-burke-and-his-orchestra-torme-wells_gbia0072499b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/INTERNATIONALSTERLING.mp3",
+    "length": 95.28,
+    "series": "A word from our sponsor",
+    "title": "International Sterling",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_you-wont-be-satisfied-honeydripper_les-brown-doris-day-cab-calloway-and-his-orchest_gbia0526135a/YOU%20WON%27T%20BE%20SATISFIED%3B%20HONEYDRIPPER%20-%20Les%20Brown.mp3",
@@ -4754,6 +5410,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_if-thats-the-way-you-feel_billy-eckstine-and-his-orchestra-billy-eckstine-g.-valen_gbia0003810a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/BRISKTOOTHPASTE.mp3",
+    "length": 34.51,
+    "series": "A word from our sponsor",
+    "title": "Brisk Toothpaste",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_youll-never-get-away_vaughn-monroe-his-orchestra-vaughn-monroe-the-moon-maids-wh_gbia7000076a/YOU%27LL%20NEVER%20GET%20AWAY%20-%20VAUGHN%20MONROE%20%26%20HIS%20ORCHESTRA.mp3",
     "length": 140.5,
     "series": "Vaughn Monroe & His Orchestra",
@@ -4784,6 +5448,14 @@ window.STATIONS = [
     "title": "Down in Nashville, Tennessee (Chick-A-Ling-Bone)",
     "date": "1951",
     "item": "https://archive.org/details/78_down-in-nashville-tennessee-chick-a-ling-bone_dinah-shore-and-the-mellowmen-henr_gbia7000094b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsodent.mp3",
+    "length": 38.53,
+    "series": "A word from our sponsor",
+    "title": "Pepsodent",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/star-dust/Star%20Dust.mp3",
@@ -4818,6 +5490,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_outside-of-heaven_eddie-fisher-with-hugo-winterhalters-orchestra-chorus-gallop-c_gbia0021822a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/JELLO1955.mp3",
+    "length": 15.17,
+    "series": "A word from our sponsor",
+    "title": "Jell-O",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/dont-you-notice-anything-new_202107/Don%27t%20You%20Notice%20Anything%20New.mp3",
     "length": 169.66,
     "series": "Andy Russell - Paul Weston and his Orchestra",
@@ -4848,6 +5528,14 @@ window.STATIONS = [
     "title": "All of ME (Quiéreme Del Todo); Good Night Ladies",
     "date": "1932",
     "item": "https://archive.org/details/78_all-of-me-quireme-del-todo-good-night-ladies_nick-lucas-and-his-troubadours_gbia0386951a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLifebouySoap.mp3",
+    "length": 64.18,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Soap",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_and-mimi_mel-torm-kennedy-simon_gbia0183350b/AND%20MIMI%20-%20MEL%20TORM%C3%89%20-%20Kennedy%20-%20Simon.mp3",
@@ -4882,6 +5570,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/stranger-in-paradise"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/GEMBLADES.mp3",
+    "length": 14.23,
+    "series": "A word from our sponsor",
+    "title": "Gem Razor Blades",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/82487-bing-crosby-white-christmas/82487%20Bing%20Crosby%20-%20White%20Christmas.mp3",
     "length": 186.0,
     "series": "Bing Crosby - Gesang, John Scott Trotter & His Orchestra, Ken Darby Singers",
@@ -4912,6 +5608,14 @@ window.STATIONS = [
     "title": "Havana for A Night",
     "date": "1948",
     "item": "https://archive.org/details/78_havana-for-a-night_tony-martin_gbia0343600b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CAMPANA.MP3",
+    "length": 122.11,
+    "series": "A word from our sponsor",
+    "title": "Campana",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_one-foot-in-heaven_dean-martin-hal-kanner-orchestra-roth-drake-aycock_gbia0284382a/ONE%20FOOT%20IN%20HEAVEN%20-%20DEAN%20MARTIN%20-%20HAL%20KANNER%20ORCHESTRA.mp3",
@@ -4946,6 +5650,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_gloomy-sunday_billy-eckstine-and-his-orchestra-billy-eckstine-rezso-seress-sam-m-l_gbia0087820a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/VELVEETA.MP3",
+    "length": 36.31,
+    "series": "A word from our sponsor",
+    "title": "Velveeta",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_tip-toe-through-the-tulips_nick-lucas-burke-dubin_gbia0172313a/TIP%20TOE%20THROUGH%20THE%20TULIPS%20-%20NICK%20LUCAS%20-%20Burke.mp3",
     "length": 175.0,
     "series": "Nick Lucas",
@@ -4976,6 +5688,14 @@ window.STATIONS = [
     "title": "My Blue Heaven / Are You Thinking of Me To-night?",
     "date": "1927",
     "item": "https://archive.org/details/Victor_20964"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAjax.mp3",
+    "length": 40.3,
+    "series": "A word from our sponsor",
+    "title": "Ajax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_my-heart-cries-for-you-george-stabo-and-his-orchestraaliman/22802%20My%20heart%20cries%20for%20you.mp3",
@@ -5010,6 +5730,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_this-is-the-beginning-of-the-end_buddy-clark-bud-freeman-morey-feld-jess-stacy-mart_gbia0101628b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceARoni.mp3",
+    "length": 38.06,
+    "series": "A word from our sponsor",
+    "title": "Rice-A-Roni",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/route-66_202608/Route%2066.mp3",
     "length": 180.0,
     "series": "King Cole Trio",
@@ -5040,6 +5768,14 @@ window.STATIONS = [
     "title": "(I'm Always Hearing) Wedding Bells",
     "date": "1955",
     "item": "https://archive.org/details/78_im-always-hearing-wedding-bells_eddie-fisher-hugo-winterhalters-orchestra-chorus-me_gbia0538900b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/STUDEBAKERLARK.mp3",
+    "length": 43.17,
+    "series": "A word from our sponsor",
+    "title": "Studebaker Lark",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_i-wouldnt-take-a-million-no-la-doy-mi-por-una-million_harry-james-and-his-orches_gbia0062461a/I%20Wouldn%27t%20Take%20a%20Million%20%20-%20Harry%20James%20and%20his%20Orchestra.mp3",
@@ -5074,6 +5810,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_when-the-red-red-robin-comes-bob-bob-bobbin-along_doris-day-paul-weston-and-his-orc_gbia3025661b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzer.mp3",
+    "length": 117.36,
+    "series": "A word from our sponsor",
+    "title": "Alka Seltzer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_2nd-balcony-jump_billy-eckstine-and-his-orchestra-billy-eckstine-gerald-valentine_gbia0072649b/2nd%20Balcony%20Jump%20-%20Billy%20Eckstine%20and%20his%20Orchestra.mp3",
     "length": 179.0,
     "series": "Billy Eckstine and his Orchestra",
@@ -5104,6 +5848,14 @@ window.STATIONS = [
     "title": "Three Little Words",
     "date": "1947",
     "item": "https://archive.org/details/78_ill-always-be-in-love-with-you_mel-torm-kalman-ruby_gbia8005463"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnchorHocking.mp3",
+    "length": 44.85,
+    "series": "A word from our sponsor",
+    "title": "Anchor Hocking",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_to-each-his-own_tony-martin-the-starlighters-al-sack-and-his-orchestra-tony-martin_gbia0047589a/To%20Each%20His%20Own%20-%20Tony%20Martin%20-%20The%20Starlighters.mp3",
@@ -5138,6 +5890,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_pakistan_dinah-shore-rogan-williams-harry-geller-bregman_gbia7001374b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAridDeoderant.mp3",
+    "length": 46.02,
+    "series": "A word from our sponsor",
+    "title": "Arrid Deodorant",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/Victor_20411/%5B1928%5D%20Gene%20Austin%20-%20Thinking%20of%20You%20%28I%27ve%20Grown%20So%20Lonesome%29%3B%20Sunday%20%5BVictor%2020411%5D/%5BA1%5D%20Gene%20Austin%20-%20Thinking%20of%20You%20%28I%27ve%20Grown%20So%20Lonesome%29.mp3",
     "length": 187.0,
     "series": "Gene Austin",
@@ -5168,6 +5928,14 @@ window.STATIONS = [
     "title": "From Another World (De Autro Mundo)",
     "date": "1940",
     "item": "https://archive.org/details/78_from-another-world-de-autro-mundo_buddy-clark-bud-freeman-morey-feld-jess-stacy-m_gbia0101627b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/JELLOCHOCOLATEPUDDING.mp3",
+    "length": 51.44,
+    "series": "A word from our sponsor",
+    "title": "Jell-O Chocolate Pudding",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/i-cant-see-for-lookin/I%20Can%27t%20See%20for%20Lookin%27.mp3",
@@ -5202,6 +5970,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_the-moon-wont-talk-la-luna-no-hablara_harry-james-and-his-orchestra-dick-haymes_gbia0062462a"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdamHats.mp3",
+    "length": 72.35,
+    "series": "A word from our sponsor",
+    "title": "Adam Hats",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_sixteen-tons_frankie-laine-buddy-cole-and-his-orchestra-and-the-mellomen-merle-trav_gbia3025642a/SIXTEEN%20TONS%20-%20FRANKIE%20LAINE%20-%20Buddy%20Cole%20and%20His%20Orchestra%20And%20The%20Mellomen.mp3",
     "length": 179.0,
     "series": "Frankie Laine",
@@ -5234,6 +6010,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_the-musicians_dinah-shore-betty-hutton-tony-martin-phil-harris-henri-rene-and-his-o_gbia7010745a"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGlocoatWax.mp3",
+    "length": 16.06,
+    "series": "A word from our sponsor",
+    "title": "Glo-Coat Wax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/Victor_21334/%5B1928%5D%20Gene%20Austin%20-%20Ramona%3B%20Girl%20of%20My%20Dreams%20%5BVictor%2021334%5D/%5BA1%5D%20Gene%20Austin%20-%20Ramona.mp3",
     "length": 173.0,
     "series": "Gene Austin",
@@ -5264,6 +6048,14 @@ window.STATIONS = [
     "title": "Song of Songs",
     "date": "1947",
     "item": "https://archive.org/details/victor-20-2142-a-song-of-songs"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/RINSO.MP3",
+    "length": 84.67,
+    "series": "A word from our sponsor",
+    "title": "Rinso",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_a-girl-a-girl-zoom-ba-di-alli-nella_eddie-fisher-hugo-winterhalters-orchestra-b_gbia7015319a/A%20GIRL%2C%20A%20GIRL%20%28Zoom-BA%20Di%20Alli%20Nella%29%20-%20EDDIE%20FISHER.mp3",
@@ -5331,6 +6123,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_me-and-the-blues_mildred-bailey-with-ellis-larkins-conducting-warren-koehler_gbia0026417a"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAjax.mp3",
+    "length": 40.3,
+    "series": "A word from our sponsor",
+    "title": "Ajax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/03-duke-ellington-cotton-club-1938-vol-1-musidisc-ja-5168/01-Duke%20Ellington%20-%20Cotton%20Club%201938%20vol%201%20-%20Musidisc%20JA%205168.mp3",
     "length": 161.18,
     "series": "Duke Ellington a.n. Orchestra",
@@ -5361,6 +6161,14 @@ window.STATIONS = [
     "title": "Tootsie Roll",
     "date": "1950",
     "item": "https://archive.org/details/78_tootsie-roll_the-stan-getz-quartet-steadwell_gbia0059654a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceARoni.mp3",
+    "length": 38.06,
+    "series": "A word from our sponsor",
+    "title": "Rice-A-Roni",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_art-tatum_art-tatum-james-swift-tatum_gbia0005678/01%20-%20Fine%20And%20Dandy%20-%20Art%20Tatum%20-%20James%20-%20Swift-restored.mp3",
@@ -5395,6 +6203,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/11-my-man-i-cried-for-you-fine-and-mellow-waterfront-moonlight"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/STUDEBAKERLARK.mp3",
+    "length": 43.17,
+    "series": "A word from our sponsor",
+    "title": "Studebaker Lark",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_how-high-the-moon-part-2_willie-smith-illinois-jacquet-charles-ventura-joe-guy-ho_gbia8002589/01%20-%20HOW%20HIGH%20THE%20MOON%20-%20Part%201%20-%20Willie%20Smith.mp3",
     "length": 259.9,
     "series": "Willie Smith",
@@ -5425,6 +6241,14 @@ window.STATIONS = [
     "title": "I Never Knew",
     "date": "1943",
     "item": "https://archive.org/details/78_just-you-just-me_lester-young-quartet-lester-young-john-guarnieri-sidney-catlett-_gbia0022793"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzer.mp3",
+    "length": 117.36,
+    "series": "A word from our sponsor",
+    "title": "Alka Seltzer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_dark-shadows_charlie-parker-quartet-earl-coleman-charlie-parker-erroll-garner-red-c_gbia0039343b/Dark%20Shadows%20-%20Charlie%20Parker%20Quartet%20-%20Earl%20Coleman.mp3",
@@ -5459,6 +6283,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/JohnnyHodgesOrchestra-SwinginOnTheCampus"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnchorHocking.mp3",
+    "length": 44.85,
+    "series": "A word from our sponsor",
+    "title": "Anchor Hocking",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/OgawaShizue-BluesInTheMorningAndBoogieWoogieGirl/Ogawa_Shizue-Blues_In_The_Morning-1949.mp3",
     "length": 179.0,
     "series": "Kasagi Shizuko",
@@ -5489,6 +6321,14 @@ window.STATIONS = [
     "title": "Night Train",
     "date": "1952",
     "item": "https://archive.org/details/78_night-train_jimmy-forest-and-all-star-combo-forrest_gbia0009916b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAridDeoderant.mp3",
+    "length": 46.02,
+    "series": "A word from our sponsor",
+    "title": "Arrid Deodorant",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_if-you-could-see-me-now_sarah-vaughan-tad-dameron_gbia0039431a/If%20You%20Could%20See%20Me%20Now%20-%20Sarah%20Vaughan%20-%20Tad%20Dameron.mp3",
@@ -5523,6 +6363,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_lee-wiley-rodgers-and-hart-album_miss-lee-wiley-joe-bushkins-orchestra-rodgers-hart_gbia8006614"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/JELLOCHOCOLATEPUDDING.mp3",
+    "length": 51.44,
+    "series": "A word from our sponsor",
+    "title": "Jell-O Chocolate Pudding",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_whispering_lena-horne-rogers-hart-phil-moore_gbia8000013/01%20-%20LITTLE%20GIRL%20BLUE%20-%20LENA%20HORNE%20-%20Rogers%20-%20Hart.mp3",
     "length": 161.88,
     "series": "Lena Horne",
@@ -5553,6 +6401,14 @@ window.STATIONS = [
     "title": "Rika Jika Jack",
     "date": "1946",
     "item": "https://archive.org/details/rikajikajack"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdamHats.mp3",
+    "length": 72.35,
+    "series": "A word from our sponsor",
+    "title": "Adam Hats",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/11-retrospection/01%20In%20a%20sentimental%20mood.mp3",
@@ -5587,6 +6443,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_memories-of-you_art-tatum-robin-youmans-grey_gbia0032161"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGlocoatWax.mp3",
+    "length": 16.06,
+    "series": "A word from our sponsor",
+    "title": "Glo-Coat Wax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/1-erroll-garner-blue-star-144/1%20Erroll%20Garner%20-%20Blue%20Star%20144.mp3",
     "length": 193.0,
     "series": "Erroll Garner and his Rhythm",
@@ -5617,6 +6481,14 @@ window.STATIONS = [
     "title": "I Cried for You; Tampico",
     "date": "1945",
     "item": "https://archive.org/details/78_i-cried-for-you-tampico_jerry-colonna-stan-kenton-and-his-orchestra-june-christy-f_gbia0382490b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/RINSO.MP3",
+    "length": 84.67,
+    "series": "A word from our sponsor",
+    "title": "Rinso",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/01-s-wonderful/01%20-%20%27S%20Wonderful%21.mp3",
@@ -5651,6 +6523,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/07-duke-ellington-night-stick"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/QUAKER.MP3",
+    "length": 128.43,
+    "series": "A word from our sponsor",
+    "title": "Quaker",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_you-know-it_babe-russin-quintet-the-quintet-babe-russin-tommy-todd-al-hendrickson-j_gbia0072062/01%20-%205054%20Whisett%20-%20Babe%20Russin%20Quintet%20-%20The%20Quintet.mp3",
     "length": 166.0,
     "series": "Babe Russin Quintet",
@@ -5681,6 +6561,14 @@ window.STATIONS = [
     "title": "Rifftide",
     "date": "1945",
     "item": "https://archive.org/details/04-coleman-hawkins-capitol-dag-127"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MAYFIELDCIGARETTES.mp3",
+    "length": 43.02,
+    "series": "A word from our sponsor",
+    "title": "Mayfield Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/2-stan-getz-quartet-jazz-selection-js-768-1951/1%20Stan%20Getz%20Quartet%20-%20Jazz%20Selection%20JS%20768%201951.mp3",
@@ -5715,6 +6603,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_moon-nocturne-part-ii_charlie-ventura-and-his-orchestra-henri-woode-al-neiburg-st_gbia0072646"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzerPlopPlopFizzFizz.mp3",
+    "length": 29.98,
+    "series": "A word from our sponsor",
+    "title": "Alka Seltzer Plop Plop Fizz Fizz",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_squeeze-me-but-dont-tease-me_lena-horne-phil-moore-ellington-gains_gbia0076849a/Squeeze%20Me%20%28But%20Don%27t%20Tease%20Me%29%20-%20Lena%20Horne.mp3",
     "length": 185.0,
     "series": "Lena Horne",
@@ -5745,6 +6641,14 @@ window.STATIONS = [
     "title": "Bird of paradise",
     "date": "1949",
     "item": "https://archive.org/details/1-charlie-parker-quintet-bird-of-paradise_202303"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OLGACOAL.MP3",
+    "length": 26.25,
+    "series": "A word from our sponsor",
+    "title": "Olga Coal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/10-don-byas-musidisc-30-ja-5106/01%20Don%20Byas%20-%20Musidisc%20JA%205106.mp3",
@@ -5779,6 +6683,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_it-dont-count_harry-parrys-radio-rhythm-club-sextet-george-shearing_gbia0384625a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/JERGENSLOTION.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Jergens Lotion",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/WashboardSamAndHisWashboardBand-JustGotToHoldYou/Washboard_Sam_And_His_Washboard_Band-Just_Got_To_Hold_You-1940.mp3",
     "length": 162.0,
     "series": "Washboard Sam and his Washboard Band",
@@ -5809,6 +6721,14 @@ window.STATIONS = [
     "title": "Easy To Love",
     "date": "1953",
     "item": "https://archive.org/details/easy-to-love-remaster"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoQuinine.mp3",
+    "length": 26.09,
+    "series": "A word from our sponsor",
+    "title": "Bromo Quinine",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_ill-never-be-the-same_g.-kahn-m.-malneck-f.-signorelli-charlie-ventura-and-his-gre_gbia0000981a/I%27ll%20Never%20Be%20The%20Same%20-%20G.%20Kahn%20-%20M.%20Malneck.mp3",
@@ -5843,6 +6763,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_blue-moon_the-melody-maker-columbia-jazz-rally-of-1947_wave_202407"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDoublemintGum.mp3",
+    "length": 17.98,
+    "series": "A word from our sponsor",
+    "title": "Doublemint Gum",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_blues-on-the-delta_walter-thomas-and-his-jump-cats-walter-thomas-emmett-berry-oscar_gbia0023000b/Blues%20on%20the%20Delta%20-%20Walter%20Thomas%20And%20His%20Jump%20Cats.mp3",
     "length": 200.0,
     "series": "Walter Thomas And His Jump Cats",
@@ -5873,6 +6801,14 @@ window.STATIONS = [
     "title": "Moonlight in Vermont",
     "date": "1952",
     "item": "https://archive.org/details/78_moonlight-in-vermont_johnny-smith-quintet-johnny-smith-stan-getz-eddie-safranksi-sa_gbia0004575b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
+    "length": 45.51,
+    "series": "A word from our sponsor",
+    "title": "Bubble Up",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/04-lester-young-musidisc-30-ja-5171/01%20Lester%20Young%20Musidisc%2030JA5171.mp3",
@@ -5907,6 +6843,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_s-k-blues-part-ii_joe-turner-pete-johnsons-all-stars-saunders-king-pete-johnso_gbia0072621"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoSeltzer.mp3",
+    "length": 95.08,
+    "series": "A word from our sponsor",
+    "title": "Bromo Seltzer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_dont-get-scared_stan-getz-and-swedish-all-stars-bengi-hallberg-lars-gullin-jack-ko_gbia0039520a/Don%27t%20Get%20Scared%20-%20Stan%20Getz%20And%20Swedish%20All%20Stars.mp3",
     "length": 188.0,
     "series": "Stan Getz And Swedish All Stars",
@@ -5937,6 +6881,14 @@ window.STATIONS = [
     "title": "I'll Never Be The Same",
     "date": "1937",
     "item": "https://archive.org/details/78_ill-never-be-the-same_billy-holiday-teddy-wilsons-orch-malneck-signorelli-kahn-l_gbia0039479b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
+    "length": 45.43,
+    "series": "A word from our sponsor",
+    "title": "Signal Gasoline",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/aint-goin-no-place/Ain%60t%20Goin%60%20No%20Place.mp3",
@@ -5971,6 +6923,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/01perdidopart1"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/NESCAFE.MP3",
+    "length": 32.95,
+    "series": "A word from our sponsor",
+    "title": "Nescafé",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_yardbird-suite_charlie-parker-septet-charlie-parker-lucky-thompson-miles-davis-dodo_gbia0054840b/Yardbird%20Suite%20-%20Charlie%20Parker%20Septet%20-%20Charlie%20Parker.mp3",
     "length": 177.0,
     "series": "Charlie Parker Septet",
@@ -6001,6 +6961,14 @@ window.STATIONS = [
     "title": "Bella Notte",
     "date": "1955",
     "item": "https://archive.org/details/78_bella-notte-svend-nicolaisens-orkester-gy-holdorf-sonny-burke-peggy"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OLDSPICE.MP3",
+    "length": 20.16,
+    "series": "A word from our sponsor",
+    "title": "Old Spice",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_atchinson-topeka--santa-fe_bob-crosby-and-orchestra-peggy-lee--bob-crosby-warren_gbia0005285a/Atchinson%2C%20Topeka%20%26%20Santa%20Fe%20-%20Bob%20Crosby%20and%20Orchestra.mp3",
@@ -6035,6 +7003,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_almost-like-being-in-love_mildred-bailey-julian-work-lerner-loewe_gbia0103485a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/GROVESNOSEDROPS.mp3",
+    "length": 70.71,
+    "series": "A word from our sponsor",
+    "title": "Grove's Nose Drops",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/ColemanHawkinsSwingFour-GetHappy/Coleman_Hawkins_Swing_Four-Get_Happy-1943.mp3",
     "length": 203.0,
     "series": "Coleman Hawkins Swing Four",
@@ -6065,6 +7041,14 @@ window.STATIONS = [
     "title": "No Regrets",
     "date": "1951",
     "item": "https://archive.org/details/78_no-regrets_billie-holiday-tobias-ingraham-bunny-berigan-artie-shaw-joe-bushkin-dick_gbia0087220a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/TOPVALUESTAMPS.mp3",
+    "length": 40.44,
+    "series": "A word from our sponsor",
+    "title": "Top Value Stamps",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_i-never-knew_lester-young-quartet-lester-young-john-guarnieri-sidney-catlett-slam_gbia0010357a/I%20Never%20Knew%20-%20Lester%20Young%20Quartet%20-%20Lester%20Young.mp3",
@@ -6099,6 +7083,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/JohnnyHodgesOrchestra-TheRabbitsJump"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsIngramGasoline.mp3",
+    "length": 60.83,
+    "series": "A word from our sponsor",
+    "title": "Ingram Gasoline",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/c808abirminghamjailr13831835/C-808-A%20-%20Birmingham%20Jail%20%5Br13831835%5D.mp3",
     "length": 131.0,
     "series": "Peggy Lee",
@@ -6131,6 +7123,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_a-little-birdie-told-me-so_miss-lee-wiley-joe-bushkins-orchestra-brad-gowans-ernie_gbia0035312b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsJackBennyDennisDayForTexaco.mp3",
+    "length": 59.64,
+    "series": "A word from our sponsor",
+    "title": "Texaco (with Jack Benny and Dennis Day)",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_blues-too_teddy-wilson-sextet-teddy-wilson-ben-webster-al-casey-buck-clayton-al-hal_gbia0010706b/Blues%20Too%20-%20Teddy%20Wilson%20Sextet%20-%20Teddy%20Wilson.mp3",
     "length": 192.0,
     "series": "Teddy Wilson Sextet",
@@ -6161,6 +7161,14 @@ window.STATIONS = [
     "title": "Beale Street Blues",
     "date": "1947",
     "item": "https://archive.org/details/78_hesitation-blues_lena-horne-handy-phil-moore_gbia8000135"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MAXWELLHOUSECOFFEE.mp3",
+    "length": 79.13,
+    "series": "A word from our sponsor",
+    "title": "Maxwell House Coffee",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_rich-mans-blues_dinah-washington-lucky-thompson-and-his-all-stars-lucky-thompson-j_gbia0076161b/Rich%20Man%27s%20Blues%20-%20Dinah%20Washington%20-%20Lucky%20Thompson%20and%20his%20All%20Stars.mp3",
@@ -6217,6 +7225,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_christmas-carols_joseph-walikis-and-his-accordian_gbia0001738a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
+    "length": 45.51,
+    "series": "A word from our sponsor",
+    "title": "Bubble Up",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/edbw-2814/edbw-2814.mp3",
     "length": 155.06,
     "series": "Frank S. Mazziotta",
@@ -6246,6 +7262,14 @@ window.STATIONS = [
     "series": "Dorothy Cameron",
     "title": "Best in Town\" (a. an Angel with Only One Wing)",
     "item": "https://archive.org/details/78_best-in-town-b-lets-go-to-puerto-rico_dorothy-cameron-edwin-m-rich_gbia0341971"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoSeltzer.mp3",
+    "length": 95.08,
+    "series": "A word from our sponsor",
+    "title": "Bromo Seltzer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear_george-wright_gbia8005224/01%20-%20SILENT%20NIGHT%20-%20GEORGE%20WRIGHT.mp3",
@@ -6278,6 +7302,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/silent1912"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
+    "length": 45.43,
+    "series": "A word from our sponsor",
+    "title": "Signal Gasoline",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/ChristmasSymphonyByLenSpencer1914/ChristmasSymphony1914.mp3",
     "length": 283.33,
     "series": "Len Spencer",
@@ -6306,6 +7338,14 @@ window.STATIONS = [
     "title": "Auld Lang Syne",
     "date": "1948",
     "item": "https://archive.org/details/78_auld-lang-syne_joe-gumin-and-his-orchestra-with-vocal-quartet_gbia0006829b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NESCAFE.MP3",
+    "length": 32.95,
+    "series": "A word from our sponsor",
+    "title": "Nescafé",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_frosty-the-snow-man_dick-edwards-the-peter-pan-chorus-and-orchestra-vicky-kasen-nel_gbia0006809a/Frosty%20The%20Snow%20Man%20-%20Dick%20Edwards%20-%20The%20Peter%20Pan%20Chorus%20and%20Orchestra.mp3",
@@ -6339,6 +7379,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_a-santa-barbara_celina-y-reutilio_gbia0021521a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/OLDSPICE.MP3",
+    "length": 20.16,
+    "series": "A word from our sponsor",
+    "title": "Old Spice",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/ChristmasEveInTheOldHomesteadByGeorgeIslon1907_799/ChristmasEveInTheOldHomestead1907.mp3",
     "length": 154.96,
     "series": "George Islon",
@@ -6367,6 +7415,14 @@ window.STATIONS = [
     "title": "Cantique de Noël (Holy Night)",
     "date": "1916",
     "item": "https://archive.org/details/78_cantique-de-nol-holy-night_enrico-caruso-adolphe-adam_gbia0322461a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GROVESNOSEDROPS.mp3",
+    "length": 70.71,
+    "series": "A word from our sponsor",
+    "title": "Grove's Nose Drops",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/Abdessamad_Soura_Maryam_19_1-36_78rpm/SoeraMaryam191-9.mp3",
@@ -6399,6 +7455,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_pat-omalley-the-sandpipers-mitchell-miller-and-orch_gbia0499437"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/TOPVALUESTAMPS.mp3",
+    "length": 40.44,
+    "series": "A word from our sponsor",
+    "title": "Top Value Stamps",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_rudolph-the-rednose-reindeer_meadowlarks-nelson_gbia0323211/01%20-%20FROSTY%20THE%20SNOWMAN%20-%20MEADOWLARKS%20-%20Nelson.mp3",
     "length": 147.65,
     "series": "Meadowlarks",
@@ -6427,6 +7491,14 @@ window.STATIONS = [
     "title": "Christmas Bells",
     "date": "1919",
     "item": "https://archive.org/details/christmasbells1919"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsIngramGasoline.mp3",
+    "length": 60.83,
+    "series": "A word from our sponsor",
+    "title": "Ingram Gasoline",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_...title-songs_mark-warnow-and-his-hit-parade-orchestra_gbia0001208b/Title%20Songs%20-%20Mark%20Warnow%20and%20his%20Hit%20Parade%20Orchestra.mp3",
@@ -6460,6 +7532,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_christmas-bells_betsy-lane-shephard-s.-liddle_gbia0012662b"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsJackBennyDennisDayForTexaco.mp3",
+    "length": 59.64,
+    "series": "A word from our sponsor",
+    "title": "Texaco (with Jack Benny and Dennis Day)",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_marusia-and-the-peacock-on-the-jordan-new-years-and-christmas-carols_ukrainian_gbia0095067b/Marusia%20And%20The%20Peacock%3B%20On%20the%20Jordan%20%20-%20Ukrainian%20Chorus.mp3",
     "length": 206.0,
     "series": "Ukrainian Chorus",
@@ -6489,6 +7569,14 @@ window.STATIONS = [
     "title": "I Want a Hippopotamus for Christmas",
     "date": "1953",
     "item": "https://archive.org/details/78_i-want-a-hippopotamus-for-christmas_toby-deane-enoch-light-and-his-orchestra-john-r_gbia0476360a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MAXWELLHOUSECOFFEE.mp3",
+    "length": 79.13,
+    "series": "A word from our sponsor",
+    "title": "Maxwell House Coffee",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_christmas-chopsticks-twas-the-night-before-christmas_fred-heider-bobby-burns-pet_gbia0000281b/Christmas%20Chopsticks%20%28%27Twas%20The%20Night%20Before%20Christmas%29%20-%20Fred%20Heider.mp3",
@@ -6522,6 +7610,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/electra-600"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/IVORYSOAP.mp3",
+    "length": 75.62,
+    "series": "A word from our sponsor",
+    "title": "Ivory Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0006810a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Arizona%20Cliff%20Martin.mp3",
     "length": 177.0,
     "series": "Arizona Cliff Martin",
@@ -6551,6 +7647,14 @@ window.STATIONS = [
     "title": "We Three Kings of Orient Are; At Solemn Midnight; Lo, How a Rose E'er Blooming",
     "date": "1960",
     "item": "https://archive.org/details/78_we-three-kings-of-orient-are-at-solemn-midnight-lo-how-a-rose-eer-blooming_char_gbia0034358a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/WINSTONCIGARETTES.mp3",
+    "length": 29.29,
+    "series": "A word from our sponsor",
+    "title": "Winston Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j._gbia0005291b/Funny%20Little%20Snow%20Man%20-%20Bobby%20Sabatino%20and%20The%20Charles%20Kenny%20Orchestra.mp3",
@@ -6584,6 +7688,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/82487-bing-crosby-white-christmas"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARRUBBERCEMENT.mp3",
+    "length": 66.57,
+    "series": "A word from our sponsor",
+    "title": "Goodyear Rubber Cement",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_silent-night-holy-night_hackel-berge-trio-franz-gruber_gbia0016346b/Silent%20Night%2C%20Holy%20Night%20-%20Hackel%20Berge%20Trio.mp3",
     "length": 177.0,
     "series": "Hackel Berge Trio",
@@ -6615,6 +7727,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_nuttin-for-xmas_joe-ward-dave-terry-bennett-tepper_gbia0010371a"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/STURDYDOGFOOD.mp3",
+    "length": 19.54,
+    "series": "A word from our sponsor",
+    "title": "Sturdy Dog Food",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_christmas-bells_robert-gaylee_gbia0300512b/Christmas%20Bells%20-%20ROBERT%20GAYLEE.mp3",
     "length": 187.73,
     "series": "Robert Gaylee",
@@ -6643,6 +7763,14 @@ window.STATIONS = [
     "series": "Jack & Jill Singers",
     "title": "Jingle Bells; the Farmer in the Dell; Sing a Song of Sixpence",
     "item": "https://archive.org/details/78_jingle-bells-the-farmer-in-the-dell-sing-a-song-of-sixpence_jack-jill-singers-maste_gbia0533815"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUCKYSTRIKECIGARETTES.mp3",
+    "length": 69.54,
+    "series": "A word from our sponsor",
+    "title": "Lucky Strike Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_der-tannenbaum-the-christmas-tree_hulda-lashanska-paul-reimers_gbia0041336b/Der%20Tannenbaum%20%28The%20Christmas%20Tree%29%20-%20Hulda%20Lashanska.mp3",
@@ -6676,6 +7804,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_the-story-of-the-first-christmas-tree_jim-ameche-fr.-flannery-j.-oliver_gbia0006803b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/CONTADINATOMATOPASTE.mp3",
+    "length": 18.06,
+    "series": "A word from our sponsor",
+    "title": "Contadina Tomato Paste",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_the-be-bop-santa-claus_babs-gonzalez-lloyd-williams_gbia0052890a/The%20Be-Bop%20Santa%20Claus%20-%20Babs%20Gonzalez%20-%20Lloyd%20Williams.mp3",
     "length": 203.0,
     "series": "Babs Gonzalez",
@@ -6704,6 +7840,14 @@ window.STATIONS = [
     "series": "Adolf Gluck",
     "title": "Weihnachten Am Klavier",
     "item": "https://archive.org/details/AdolfGluck-WeihnachtenAmKlavier"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUCKYBEER.mp3",
+    "length": 21.33,
+    "series": "A word from our sponsor",
+    "title": "Lucky Beer",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_great-christmas-part-2_errol-garner-garner_gbia0062402/01%20-%20Great%20Christmas%20-%20Part%201%20-%20Errol%20Garner%20-%20Garner.mp3",
@@ -6738,6 +7882,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/colwdc-10003"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/FITCH.MP3",
+    "length": 123.67,
+    "series": "A word from our sponsor",
+    "title": "Fitch Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/SantaAndTheDoodle-li-booptwasTheNightBeforeChristmas-artCarney/SantaAndTheDoodle-li-boop--artCarney.mp3",
     "length": 154.0,
     "series": "Abel",
@@ -6766,6 +7918,14 @@ window.STATIONS = [
     "title": "O Sanctissima (O Du Frohliche)",
     "date": "1929",
     "item": "https://archive.org/details/78_o-sanctissima-o-du-frohliche_richard-tauber_gbia0021682b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/IRONIZEDYEAST.mp3",
+    "length": 53.55,
+    "series": "A word from our sponsor",
+    "title": "Ironized Yeast",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_jingle-bells_country-dance-band_gbia0006954a/Jingle%20Bells%20-%20Country%20Dance%20Band.mp3",
@@ -6799,6 +7959,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_i-wouldnt-have-you-on-a-christmas-tree_dick-stratton-and-his-nite-owls-dick-stratt_gbia0006817b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/PHILIPMORRISCIGARETTES.mp3",
+    "length": 52.61,
+    "series": "A word from our sponsor",
+    "title": "Philip Morris Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_o-little-town-of-bethlehem_st-marys-seminary-choir-gravier-manzetti-rev-john-c_gbia8000505/01%20-%20ADESTE%20FIDELES%20-%20St.%20Mary%27s%20Seminary%20Choir.mp3",
     "length": 182.54,
     "series": "St. Mary's Seminary Choir",
@@ -6828,6 +7996,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_der-tannenbaum-the-christmas-tree_alma-gluck-paul-reimers-volkslied_gbia0006813b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/PONTIAC.MP3",
+    "length": 27.1,
+    "series": "A word from our sponsor",
+    "title": "Pontiac",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_art-gentry-with-the-happy-tones-johnny-marks_gbia0546454a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20ART%20GENTRY%20with%20The%20Happy%20Tones.mp3",
     "length": 166.0,
     "series": "Art Gentry with the Happy Tones",
@@ -6855,6 +8031,14 @@ window.STATIONS = [
     "title": "Merry Christmas Baby",
     "date": "1948",
     "item": "https://archive.org/details/78_merry-christmas-baby_thelma-cooper-three-smarties_gbia0059116a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/REYNOLDSALUMINUM.mp3",
+    "length": 36.23,
+    "series": "A word from our sponsor",
+    "title": "Reynolds Aluminum",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_white-christmas_jack-russell-the-honey-dreamers-vicky-kasen-irving-berlin_gbia0043957a/White%20Christmas%20-%20Jack%20Russell%20-%20The%20Honey%20Dreamers.mp3",
@@ -6888,6 +8072,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/santahide1922"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/VIMMSVITAMINS.mp3",
+    "length": 21.64,
+    "series": "A word from our sponsor",
+    "title": "Vimms Vitamins",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_christmas-in-heaven_billy-ward-and-his-dominoes-billy-ward_gbia0063125b/Christmas%20In%20Heaven%20-%20Billy%20Ward%20And%20His%20Dominoes.mp3",
     "length": 169.0,
     "series": "Billy Ward And His Dominoes",
@@ -6916,6 +8108,14 @@ window.STATIONS = [
     "title": "Boheme-Racconto di Rodolfo (Rudolph's Narrative)",
     "date": "1926",
     "item": "https://archive.org/details/78_boheme-racconto-di-rodolfo-rudolphs-narrative_giovanni-martinelli-puccini_gbia0105027b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
+    "length": 49.1,
+    "series": "A word from our sponsor",
+    "title": "Goodyear Lifeguard Tires",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_cicha-noc-silent-night_polish-flyers-quartet-jan-wojewdka-and-warsaw-polish-orchest_gbia0531169a/CICHA%20NOC%20-%20SILENT%20NIGHT%20-%20Polish%20Flyers%20Quartet.mp3",
@@ -6949,6 +8149,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0024837b"
    },
    {
+    "src": "https://archive.org/download/RadioCommercialsShows/DUPONT.MP3",
+    "length": 127.33,
+    "series": "A word from our sponsor",
+    "title": "Dupont",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_winter-wonderland_lenny-and-judith-lil-wally-and-the-lucky-harmony-boys-orchestra_gbia0082304b/Winter%20Wonderland%20-%20Lenny%20and%20Judith%20-%20Li%27l%20Wally%20And%20The%20Lucky%20Harmony%20Boys%20Orchestra.mp3",
     "length": 130.0,
     "series": "Lenny and Judith",
@@ -6980,6 +8188,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_hell-be-coming-down-the-chimney_enoch-light-and-his-orch.-jack-brown-al-j.-neibirg_gbia0001781a"
    },
    {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
+    "length": 49.71,
+    "series": "A word from our sponsor",
+    "title": "Creamo Cigars",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
     "src": "https://archive.org/download/78_the-chipmunk-song_r.-bagdesarian-paul-sherman_gbia0000453a/The%20Chipmunk%20Song%20-%20R.%20Bagdesarian%20-%20Paul%20Sherman-restored.mp3",
     "length": 135.19,
     "series": "R. Bagdesarian",
@@ -7008,6 +8224,14 @@ window.STATIONS = [
     "series": "Three Reinerts and Sussie",
     "title": "Underneath the misteltoe",
     "item": "https://archive.org/details/78_underneath-the-misteltoe_three-reinerts-and-sussie-don-gais-trio-don-gais-helge-ja_gbia0124299a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATESHAVINGCREAM.mp3",
+    "length": 40.99,
+    "series": "A word from our sponsor",
+    "title": "Colgate Shaving Cream",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_ray-bloch-and-his-orchestra-cahn-styne-the-eldorado-f_gbia0014393/01%20-%20Santa%20Claus%20Is%20Comin%27%20to%20Town%20-%20Ray%20Bloch%20and%20his%20Orchestra.mp3",

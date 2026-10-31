@@ -22,6 +22,10 @@
     listeningHere: "{n} listening",
     listeningAlone: "",
     nowOn: "{station}: {series} — {title}",
+    sleepOff: "Sleep timer: off",
+    sleepOn: "Sleeping in {min} min",
+    recentTitle: "Recently played on {station}",
+    recentNone: "Tune in to a station first.",
     cleanOn: "Sound: cleaned up (click for original)",
     cleanOff: "Sound: original (click to clean up)",
     tvTuning: "",
@@ -80,7 +84,8 @@
     editing: false,
     showAll: false,
     selected: null,
-    clean: store.get("clean", true)      // false = Original: no sound cleanup at all
+    clean: store.get("clean", true),     // false = Original: no sound cleanup at all
+    sleepEnd: 0                          // when the sleep timer turns the radio off
   };
   const dials = STATIONS.map(s => s.dial).sort((a, b) => a - b);
   const CAPTURE = Math.min(0.035, ...dials.slice(1).map((d, i) => (d - dials[i]) / 2.2));
@@ -242,8 +247,13 @@
       noiseGain.gain.setTargetAtTime(v * 0.35, ctx.currentTime, 0.05);
     }
   }
+  function sleepFade() {
+    if (!state.sleepEnd) return 1;
+    return Math.max(0, Math.min(1, (state.sleepEnd - Date.now()) / 45000));   // fades over the last 45 seconds
+  }
   function applyVolume() {
-    if (fx.ready) fx.master.gain.setTargetAtTime(state.vol, ctx.currentTime, 0.03); else audio.volume = state.vol;
+    const v = state.vol * sleepFade();
+    if (fx.ready) fx.master.gain.setTargetAtTime(v, ctx.currentTime, 0.3); else audio.volume = v;
     const lvl = { warming: 0.5, between: 0.8, lost: 0.25, gap: 0.08 }[state.phase] || 0;
     setStatic(state.on ? lvl : 0);
   }
@@ -363,6 +373,7 @@
     return img;
   }
   function build() {
+    reactArea = null;
     stage.innerHTML = "";
     els.clear();
     stage.style.width = W + "px"; stage.style.height = H + "px";
@@ -407,6 +418,17 @@
           rec.tv.standby.hidden = false; rec.tv.standby.textContent = WORDS.tvStandby;
           rec.tv.until = Date.now() + (now ? now.left * 1000 + 500 : 30000);
         });
+      } else if (type === "reactbar") {
+        el.classList.add("hot");
+        (SKIN.reactions || []).forEach(r => {
+          const b = document.createElement("button");
+          b.type = "button"; b.className = "react"; b.dataset.r = r.id; b.setAttribute("aria-label", r.label || r.id);
+          if (r.src) { const im = new Image(); im.src = r.src; im.alt = ""; b.appendChild(im); } else b.textContent = r.emoji || "♥";
+          b.addEventListener("click", () => { if (!state.editing) react(r.id); });
+          el.appendChild(b);
+        });
+      } else if (type === "reactfloat") {
+        reactArea = rec;
       } else if (type === "ad") {
         el.classList.add("hot");
         el.innerHTML = '<div class="ad-img"><img alt=""></div><div class="ad-cap"><span class="ad-title"></span> <a class="ad-via" target="_blank" rel="noopener">via archive.org</a></div>';
@@ -453,6 +475,7 @@
       el.style.left = L.x + "px"; el.style.top = L.y + "px";
       el.style.width = L.w + "px"; el.style.height = L.h + "px";
       el.style.zIndex = SK.layers.indexOf(L) + 1;
+      if (L.type === "reactbar") el.style.setProperty("--r-size", (L.size || 26) + "px");
       if (L.type === "guide" || L.type === "ad" || L.type === "tv") {
         const v = (k, val) => { if (val != null) el.style.setProperty(k, val); };
         el.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
@@ -516,6 +539,7 @@
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
       case "clean": return state.clean === false ? WORDS.cleanOff : WORDS.cleanOn;
+      case "sleep": return state.sleepEnd ? WORDS.sleepOn.replace("{min}", Math.max(1, Math.ceil((state.sleepEnd - Date.now()) / 60000))) : WORDS.sleepOff;
       case "tv.title": { const n = tvAt(); return n ? n.c.title + (n.c.date ? ", " + n.c.date : "") : ""; }
       case "station.listeners": {
         if (!st || !presence.live) return "";
@@ -585,6 +609,82 @@
     const top = g.el.scrollTop;
     g.el.innerHTML = h;
     g.el.scrollTop = top;
+  }
+
+  /* ---------- reactions: emoji that float up for everyone on the same station ---------- */
+  let reactArea = null, lastReact = 0;
+  function floatReaction(id) {
+    if (!reactArea || reactArea.el.hidden) return;
+    const area = reactArea.el;
+    if (area.childElementCount > 40) return;
+    const r = (SKIN.reactions || []).find(x => x.id === id); if (!r) return;
+    const f = document.createElement("span"); f.className = "floater";
+    if (r.src) { const im = new Image(); im.src = r.src; im.alt = ""; f.appendChild(im); } else f.textContent = r.emoji || "♥";
+    f.style.left = (8 + Math.random() * 84) + "%";
+    f.style.setProperty("--drift", (Math.random() * 60 - 30) + "px");
+    f.style.animationDuration = (2.6 + Math.random() * 1.4) + "s";
+    f.addEventListener("animationend", () => f.remove());
+    area.appendChild(f);
+  }
+  function react(id) {
+    const now = Date.now();
+    if (now - lastReact < 500) return;
+    lastReact = now;
+    floatReaction(id);
+    if (presence.ch && state.station) presence.ch.send({ type: "broadcast", event: "react", payload: { s: state.station.id, r: id } }).catch(() => {});
+  }
+  function heardReaction(p) { if (p && state.station && p.s === state.station.id) floatReaction(p.r); }
+
+  /* ---------- sleep timer ---------- */
+  const SLEEP_STEPS = [0, 15, 30, 60, 90];
+  function cycleSleep() {
+    const left = state.sleepEnd ? (state.sleepEnd - Date.now()) / 60000 : 0;
+    const next = SLEEP_STEPS.find(m => m > left + 0.5) || 0;
+    state.sleepEnd = next ? Date.now() + next * 60000 : 0;
+    if (next && !state.on) power(true);
+    applyVolume(); render();
+  }
+  setInterval(() => {
+    if (!state.sleepEnd) return;
+    if (Date.now() >= state.sleepEnd) { state.sleepEnd = 0; power(false); return; }
+    if (state.sleepEnd - Date.now() < 46000) applyVolume();
+  }, 1000);
+
+  /* ---------- recently played ---------- */
+  function overlay() {
+    let box = document.getElementById("overlay");
+    if (!box) {
+      box = document.createElement("div"); box.id = "overlay"; box.setAttribute("role", "dialog"); box.hidden = true;
+      box.innerHTML = '<div class="ov-card"><div class="ov-head"><h2 id="ov-title"></h2><button type="button" id="ov-close">Close</button></div><ol id="ov-list"></ol></div>';
+      document.body.appendChild(box);
+      box.addEventListener("click", e => { if (e.target === box) closeOverlay(); });
+      box.querySelector("#ov-close").addEventListener("click", closeOverlay);
+    }
+    return box;
+  }
+  function closeOverlay() { const b = document.getElementById("overlay"); if (b) b.hidden = true; }
+  function openRecent() {
+    const box = overlay(), st = state.station, list = box.querySelector("#ov-list"), title = box.querySelector("#ov-title");
+    list.innerHTML = "";
+    if (!st) { title.textContent = WORDS.recentNone; box.hidden = false; return; }
+    title.textContent = WORDS.recentTitle.replace("{station}", st.name);
+    const now = Date.now(), cur = at(st, now);
+    let start = now - cur.offset * 1000, i = cur.i;
+    for (let k = 0; k < 15 && k < st.tracks.length; k++) {
+      const tr = st.tracks[i];
+      const li = document.createElement("li");
+      const when = document.createElement("span"); when.className = "ov-when"; when.textContent = k === 0 ? WORDS.guideNow : hhmm(start);
+      const what = document.createElement("span"); what.className = "ov-what";
+      const b = document.createElement("b"); b.textContent = tr.series || ""; what.appendChild(b);
+      what.appendChild(document.createTextNode(" " + (tr.title || "") + (tr.date ? " (" + tr.date + ")" : "")));
+      li.appendChild(when); li.appendChild(what);
+      if (tr.item) { const a = document.createElement("a"); a.href = tr.item; a.target = "_blank"; a.rel = "noopener"; a.textContent = "via archive.org"; li.appendChild(a); }
+      list.appendChild(li);
+      i = (i - 1 + st.tracks.length) % st.tracks.length;
+      start -= st.tracks[i].length * 1000;
+    }
+    box.hidden = false;
+    box.querySelector("#ov-close").focus();
   }
 
   /* ---------- the little TV (tv.js): cartoons with the sound off ---------- */
@@ -750,6 +850,8 @@
         const a = L.action || "";
         if (a === "power") power();
         else if (a === "clean") toggleClean();
+        else if (a === "sleep") cycleSleep();
+        else if (a === "recent") openRecent();
         else if (a === "next") stepStation(1);
         else if (a === "prev") stepStation(-1);
         else if (a === "volup") setVol(state.vol + 0.1);
@@ -807,6 +909,9 @@
     if (state.editing) { editKeys(e); return; }
     if (k === " ") { e.preventDefault(); power(); }
     else if (k === "c" || k === "C") toggleClean();
+    else if (k === "s" || k === "S") cycleSleep();
+    else if (k === "r" || k === "R") openRecent();
+    else if (k === "Escape") closeOverlay();
     else if (k === "ArrowDown") { e.preventDefault(); stepStation(1); }
     else if (k === "ArrowUp") { e.preventDefault(); stepStation(-1); }
     else if (k === "ArrowRight") setVol(state.vol + 0.05);
@@ -985,6 +1090,7 @@
   function startPresence() {
     const c = CONFIG.listeners || {};
     if (/[?&]fakelisteners\b/.test(location.search)) {
+      setInterval(() => { if (state.on && state.station && Math.random() < 0.5) { const R = SKIN.reactions || []; if (R.length) floatReaction(R[Math.floor(Math.random() * R.length)].id); } }, 1800);
       setTimeout(() => { presence.live = true; presence.counts = { _total: 14, chills: 6, noir: 4, laughs: 3, hotwax: 1 }; els.forEach(r => { if (r.tick) r.tick.text = null; }); render(); }, 300); return;
     }
     if (!c.url || !c.key) return;
@@ -993,6 +1099,7 @@
         const client = window.supabase.createClient(c.url, c.key);
         presence.ch = client.channel(c.room || "radio", { config: { presence: { key: presence.me } } });
         presence.ch.on("presence", { event: "sync" }, presenceCount)
+          .on("broadcast", { event: "react" }, m => heardReaction(m.payload))
           .subscribe(status => { if (status === "SUBSCRIBED") { presence.last = undefined; presenceUpdate(); } });
       } catch (e) {}
     };

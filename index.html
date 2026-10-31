@@ -89,6 +89,35 @@
   #ad-zoom button { font: inherit; background: #eadfca; color: #171310; border: 0; padding: 5px 12px; cursor: pointer; }
   @media (prefers-reduced-motion: reduce) { .ad-img img { transition: none; } }
 
+
+  /* reactions */
+  .t-reactbar { display: flex; gap: 6px; align-items: center; }
+  .react { font: inherit; font-size: var(--r-size, 26px); line-height: 1; width: 1.5em; height: 1.3em; padding: 0; border: 0; border-radius: 6px; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+  .react:hover { background: rgba(233,220,195,.12); }
+  .react:active { transform: scale(.9); }
+  .react img { max-width: 100%; max-height: 100%; }
+  .t-reactfloat { overflow: hidden; pointer-events: none; }
+  .floater { position: absolute; bottom: 0; font-size: 34px; line-height: 1; animation: floatup 3s ease-out forwards; }
+  .floater img { width: 40px; height: 40px; object-fit: contain; }
+  @keyframes floatup { 0% { transform: translate(0, 0) scale(.6); opacity: 0; } 12% { opacity: 1; transform: translate(0, -20px) scale(1); }
+                       100% { transform: translate(var(--drift, 0), -230px) scale(1.1); opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) { .floater { animation-duration: 1.2s !important; } }
+
+  /* recently played */
+  #overlay { position: fixed; inset: 0; z-index: 20; background: rgba(10, 8, 6, .85); display: flex; align-items: center; justify-content: center;
+             padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+  .ov-card { background: #211c18; border: 1px solid #4a3f33; width: min(640px, 100%); max-height: 100%; overflow: auto; padding: 18px 20px; box-sizing: border-box; color: #eadfca; }
+  .ov-head { display: flex; gap: 12px; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+  .ov-head h2 { margin: 0; font-size: 16px; letter-spacing: .04em; color: #f0b44c; }
+  .ov-head button { font: inherit; background: #eadfca; color: #171310; border: 0; padding: 5px 12px; cursor: pointer; }
+  #ov-list { list-style: none; margin: 0; padding: 0; display: grid; }
+  #ov-list li { display: grid; grid-template-columns: 5.5em 1fr auto; gap: 4px 12px; align-items: baseline; padding: 8px 0; border-top: 1px solid #3e342b; font-size: 14px; }
+  #ov-list li:first-child { border-top: 0; }
+  .ov-when { color: #a99a83; font-variant-numeric: tabular-nums; }
+  .ov-what { min-width: 0; overflow-wrap: anywhere; }
+  #ov-list a { color: #eadfca; font-size: 12px; text-underline-offset: 3px; white-space: nowrap; }
+  @media (max-width: 480px) { #ov-list li { grid-template-columns: 4.5em 1fr; } #ov-list a { grid-column: 2; } }
+
   /* dashed template boxes, shown until your art is in the art folder */
   .tpl { display: none; position: absolute; inset: 0; border: 2px dashed var(--line); padding: 10px 12px;
          color: var(--ink); font-size: 15px; line-height: 1.35; overflow: hidden; box-sizing: border-box; }
@@ -169,12 +198,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261031c"></script>
-<script src="stations.js?v=20261031c"></script>
-<script src="config.js?v=20261031c"></script>
-<script src="ads.js?v=20261031c"></script>
-<script src="tv.js?v=20261031c"></script>
+<script src="skin.js?v=20261031d"></script>
+<script src="stations.js?v=20261031d"></script>
+<script src="config.js?v=20261031d"></script>
+<script src="ads.js?v=20261031d"></script>
+<script src="tv.js?v=20261031d"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261031c"></script>
+<script src="radio.js?v=20261031d"></script>
 </body>
 </html>
