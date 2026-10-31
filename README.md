@@ -105,7 +105,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | After Hours | Late-night jazz and torch songs, 1936–1959 | about 6 hours |
 | Classical | Opera singers, violinists, pianists and orchestras on 78s, 1900s–1950s. Only complete short pieces, never "part 2" of something | about 6 hours |
 | Hawaiian & Exotica | Steel guitars, island songs and exotica | about 4 hours |
-| Sleepy Time | Slow waltzes and sweet bands, muffled and echoey as if playing in another room, with rain or a fire underneath. No commercials. | about 4 hours |
+| Sleepy Time | Slow waltzes and sweet bands, muffled and echoey as if playing in another room No commercials. | about 4 hours |
 | Christmas | Holiday 78s from every era | about 6 hours |
 
 The shows take turns, so you don't get six Gunsmokes in a row. To add shows or build a new station, open `builder.html`, paste Archive links, tick what you want, and copy the result into `stations.js`.
@@ -145,9 +145,8 @@ A station can sound like it's playing in another room. Give it a `"room"` settin
 
 - `muffle`: how much treble gets through the wall, in Hz. Lower is more muffled.
 - `echo`: how much room echo, from 0 to 1.
-- `ambience`: how loud the rain or fire is, from 0 to 1.
 
-A slight tape wobble is added too. Rain or a fire can play under any station: each listener clicks "Add rain or a fire" under the show title, and their choice sticks as they change stations. `"ambienceLevel"` in `skin.js` sets how loud it is (a "room" station uses its own `ambience` setting instead). The rain and fire are real recordings, cut into seamless two-minute loops: `art/sounds/rain.mp3` (rain on a window, Laurent Guidali, CC BY-SA 4.0) and `art/sounds/fire.mp3` (a fireplace, inchadney, CC0). Replace either file with your own recording to change it.
+A slight tape wobble is added too. A crackling fire can play under any station: the **Fire** slider under the fireplace sets its volume (all the way left is off), and each listener's setting sticks as they change stations. `"fireMax"` in `skin.js` sets how loud the slider's top end is (0.6 if not set). The fire is a real recording cut into a seamless two-minute loop, `art/sounds/fire.mp3` (a fireplace, inchadney, CC0). Replace it with your own recording to change it.
 
 ## Between songs
 

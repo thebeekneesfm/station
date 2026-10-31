@@ -102,7 +102,7 @@
     selected: null,
     clean: store.get("clean", true),     // false = Original: no sound cleanup at all
     sleepEnd: 0,                         // when the sleep timer turns the radio off
-    ambience: store.get("ambience2", "off")  // rain, fire or off, on any station
+    fireVol: Math.max(0, Math.min(1, +store.get("fireVol", 0) || 0))   // the fire's crackle, 0 (off) to 1, on any station
   };
   const dials = STATIONS.map(s => s.dial).sort((a, b) => a - b);
   const CAPTURE = Math.min(0.035, ...dials.slice(1).map((d, i) => (d - dials[i]) / 2.2));
@@ -125,7 +125,7 @@
       ctx = new (window.AudioContext || window.webkitAudioContext)();
       buildChain();
       tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
-      ["tuning", "rain", "fire"].forEach(loadSound);
+      ["tuning", "fire"].forEach(loadSound);
     } catch (e) { ctx = null; }
   }
 
@@ -352,7 +352,7 @@
   }
   function setAmbience() {
     if (!fx.room) return;
-    const R = fx.room, want = state.on ? state.ambience : "off";
+    const R = fx.room, want = state.on && state.fireVol > 0 ? "fire" : "off";
     if (R.kind !== want) {
       if (R.src) { try { R.src.stop(); } catch (e) {} R.src = null; }
       R.kind = want;
@@ -366,15 +366,16 @@
         if (sounds[want]) start(); else { loadSound(want); (soundWaiters[want] = soundWaiters[want] || []).push(start); }
       }
     }
-    const room = roomFor(state.on ? state.station : null);
-    const level = room ? room.ambience : (SKIN.ambienceLevel || 0.3);
-    R.amb.gain.setTargetAtTime(want !== "off" ? level * state.vol : 0, ctx.currentTime, 0.6);
+    // the slider's top is a cosy-but-loud fire; it follows the main volume too
+    const top = SKIN.fireMax || 0.6;
+    R.amb.gain.setTargetAtTime(want !== "off" ? state.fireVol * state.fireVol * top * state.vol : 0, ctx.currentTime, 0.25);
   }
-  function cycleAmbience() {
-    const order = ["off", "rain", "fire"];
-    state.ambience = order[(order.indexOf(state.ambience) + 1) % order.length];
-    if (!state.on) power(true);
-    store.set("ambience2", state.ambience); setAmbience(); render();
+  function setFire(v) {
+    state.fireVol = Math.max(0, Math.min(1, v));
+    store.set("fireVol", state.fireVol);
+    if (state.fireVol > 0 && !state.on) power(true);
+    setAmbience();
+    els.forEach(r => { if (r.fire && +r.fire.value !== Math.round(state.fireVol * 100)) r.fire.value = Math.round(state.fireVol * 100); });
   }
   // songs fade out over their last few seconds and fade in when they start
   const FADE_OUT = 3, FADE_IN = 1.5;
@@ -737,6 +738,17 @@
           rec.tv.standby.hidden = false; rec.tv.standby.textContent = WORDS.tvStandby;
           rec.tv.until = Date.now() + (now ? now.left * 1000 + 500 : 30000);
         });
+      } else if (type === "slider") {
+        // the fire's volume, next to the fireplace
+        el.classList.add("hot");
+        el.innerHTML = '<label class="fire-vol"><span class="fv-label"></span><input type="range" min="0" max="100" step="1"></label>';
+        el.querySelector(".fv-label").textContent = L.label || "Fire";
+        const r = el.querySelector("input");
+        r.value = Math.round(state.fireVol * 100);
+        r.setAttribute("aria-label", L.aria || "Fire sound volume");
+        r.addEventListener("input", () => { if (!state.editing) setFire(r.value / 100); });
+        r.addEventListener("pointerdown", e => { if (!state.editing) e.stopPropagation(); });
+        rec.fire = r;
       } else if (type === "reactbar") {
         el.classList.add("hot");
         (SKIN.reactions || []).forEach(r => {
@@ -1318,7 +1330,7 @@
         if (a === "power") power();
         else if (a === "clean") toggleClean();
         else if (a === "sleep") cycleSleep();
-        else if (a === "ambience") cycleAmbience();
+        else if (a === "ambience") setFire(state.fireVol > 0 ? 0 : 0.5);
         else if (a === "recent") openRecent();
         else if (a === "next") stepStation(1);
         else if (a === "prev") stepStation(-1);

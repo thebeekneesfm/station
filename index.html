@@ -379,6 +379,11 @@
   [data-id="now-title"] .txt { font-optical-sizing: none; font-variation-settings: "opsz" 11; letter-spacing: 0; }
   .t-reactbar { gap: 10px; }
   .react { flex: 0 0 auto; }
+  /* fire volume slider under the fireplace */
+  .t-slider { display: flex; align-items: center; }
+  .fire-vol { display: flex; align-items: center; gap: 10px; width: 100%; font: italic 600 14px/1 "Archivo", sans-serif; color: #f6eed8; text-shadow: 0 1px 2px rgba(0,0,0,.85); cursor: pointer; }
+  .fire-vol input { flex: 1; min-width: 0; accent-color: #e3a92f; height: 18px; cursor: pointer; margin: 0; }
+  .fire-vol input:focus-visible { outline: 2px solid #e3a92f; outline-offset: 3px; }
 </style>
 </head>
 <body>
@@ -418,12 +423,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101e"></script>
-<script src="stations.js?v=20261101e"></script>
-<script src="config.js?v=20261101e"></script>
-<script src="ads.js?v=20261101e"></script>
-<script src="tv.js?v=20261101e"></script>
+<script src="skin.js?v=20261101f"></script>
+<script src="stations.js?v=20261101f"></script>
+<script src="config.js?v=20261101f"></script>
+<script src="ads.js?v=20261101f"></script>
+<script src="tv.js?v=20261101f"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101e"></script>
+<script src="radio.js?v=20261101f"></script>
 </body>
 </html>
