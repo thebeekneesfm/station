@@ -530,6 +530,14 @@
     if (broken.size < state.station.tracks.length) play("early");
     else { state.resumeAt = Date.now() + 60000; setPhase("lost"); clearTimeout(lostTimer); lostTimer = setTimeout(() => { broken.clear(); audio.dataset.src = ""; play(); }, 60000); }
   });
+  // watchdog: if a record has been "loading" for 25 seconds without a single second playing, treat it as broken
+  let lastT = -1, stuckSince = 0;
+  setInterval(() => {
+    if (!state.on || !state.station || !(state.phase === "warming" || state.phase === "next")) { stuckSince = 0; return; }
+    if (audio.currentTime !== lastT) { lastT = audio.currentTime; stuckSince = Date.now(); return; }
+    if (!stuckSince) stuckSince = Date.now();
+    if (Date.now() - stuckSince > 25000) { stuckSince = Date.now(); audio.dispatchEvent(new Event("error")); }
+  }, 2500);
   // keep everyone on the same second
   setInterval(() => {
     if (!state.on || !state.station || state.phase !== "playing") return;

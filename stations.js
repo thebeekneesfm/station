@@ -2630,7 +2630,7 @@ window.STATIONS = [
     "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
    },
    {
-    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-440529_082InternationalSweethearts ofRhythm.mp3",
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-440529_082InternationalSweetheartsofRhythm.mp3",
     "length": 1862.33,
     "series": "Jubilee",
     "title": "International Sweethearts of Rhythm",
