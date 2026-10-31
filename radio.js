@@ -1062,20 +1062,22 @@
   }
   loadTips(); setInterval(loadTips, 3 * 60 * 1000);
   function tickerText(L) {
-    const parts = [], show = L.show || ["listeners", "now"], sep = L.separator || "\u00a0\u00a0\u00a0\u00a0✻\u00a0\u00a0\u00a0\u00a0";
+    const parts = [], show = L.show || ["listeners", "tips", "announcements"], sep = L.separator || "\u00a0\u00a0\u00a0\u00a0✻\u00a0\u00a0\u00a0\u00a0";
     if (show.includes("listeners") && presence.live) {
       const total = presence.counts._total || 0;
       parts.push(total <= 1 ? WORDS.listenersOne : WORDS.listeners.replace("{n}", total));
-      STATIONS.forEach(st => { const n = presence.counts[st.id]; if (n) parts.push(WORDS.listenersStation.replace("{station}", st.name).replace("{n}", n)); });
+      if (show.includes("stations")) STATIONS.forEach(st => { const n = presence.counts[st.id]; if (n) parts.push(WORDS.listenersStation.replace("{station}", st.name).replace("{n}", n)); });
     }
     // thank-yous for recent Ko-fi tips, newest first (see supabase: tips table, kofi-webhook function)
-    tips.list.forEach(t => {
+    if (show.includes("tips")) tips.list.forEach(t => {
       const who = t.from_name || WORDS.tipSomeone;
       let line = (t.kind === "New member" ? WORDS.tipMember : WORDS.tipThanks).replace("{name}", who).replace("{tier}", t.tier_name || "");
       line = line.replace(/\s+/g, " ").replace(" ,", ",");
       if (t.message) line += WORDS.tipSaid.replace("{message}", t.message);
       parts.push(line);
     });
+    // your own notes, from config.js
+    if (show.includes("announcements")) (CONFIG.announcements || []).forEach(a => { if (a && String(a).trim()) parts.push(String(a).trim()); });
     if (show.includes("now")) STATIONS.forEach(st => {
       const t = at(st).track;
       parts.push(WORDS.nowOn.replace("{station}", st.name).replace("{series}", t.series || "").replace("{title}", t.title || ""));

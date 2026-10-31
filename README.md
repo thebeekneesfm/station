@@ -238,3 +238,7 @@ The audio streams from the Internet Archive, so it costs you nothing to host. Sp
 When someone tips or joins a membership on Ko-fi, Ko-fi sends the details to a small Supabase function (`kofi-webhook`), which saves it in the `tips` table. The ticker shows the five most recent from the last two weeks. Names and messages are only saved when the supporter made the tip public on Ko-fi; emails are never saved, and the website can't read the amounts.
 
 Setup: in Ko-fi, go to **Settings → API**, paste `https://rjpztitddezmkzeiteaa.supabase.co/functions/v1/kofi-webhook` as the webhook URL, and copy the verification token into the Supabase secret `KOFI_VERIFICATION_TOKEN`. The wording is in `radio.js` under `tipThanks`, `tipMember`, `tipSaid` and `tipSomeone`.
+
+## The ticker
+
+The bottom ticker shows how many people are listening, thank-yous for recent Ko-fi tips and memberships, and your announcements. Edit the announcements in `config.js` under `"announcements"`. In `skin.js`, the ticker's `"show"` list picks what appears: `listeners`, `stations` (per-station counts), `tips`, `announcements`, `now` (what's on every station).

@@ -90,7 +90,7 @@ window.SKIN = {
     {"id": "ads-heading", "type": "text", "text": "A word from our sponsors", "x": 1190, "y": 372, "w": 370, "h": 30, "font": "Bodoni Moda", "size": 28, "color": "#e3a92f", "align": "center", "uppercase": false, "spacing": 0, "italic": true, "weight": 700},
     {"id": "ad", "type": "ad", "every": 40, "x": 1190, "y": 408, "w": 370, "h": 530, "font": "Archivo", "size": 14, "color": "#cdbf9f", "dim": "#cdbf9f"},
     {"id": "ticker-strip", "src": "art/ticker-strip.png", "x": 0, "y": 950, "w": 1600, "h": 50, "look": "strip"},
-    {"id": "ticker", "type": "ticker", "show": ["listeners", "now"], "speed": 70, "x": 20, "y": 950, "w": 1560, "h": 50, "font": "Archivo", "size": 21, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
+    {"id": "ticker", "type": "ticker", "show": ["listeners", "tips", "announcements"], "speed": 70, "x": 20, "y": 950, "w": 1560, "h": 50, "font": "Archivo", "size": 21, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
   ],
   "portrait": {
     "stage": {"width": 600, "height": 2380, "color": "transparent", "fit": "width"},
@@ -129,7 +129,7 @@ window.SKIN = {
       {"id": "ads-link", "type": "text", "text": "Ads", "href": "ads.html", "x": 110, "y": 2283, "w": 60, "h": 30, "font": "Archivo", "size": 15, "color": "#efe5cc", "align": "left", "uppercase": false, "spacing": 0, "italic": false, "weight": 500},
       {"id": "donate-link", "type": "text", "text": "Donate to the Archive", "href": "https://archive.org/donate", "x": 180, "y": 2283, "w": 260, "h": 30, "font": "Archivo", "size": 15, "color": "#efe5cc", "align": "left", "uppercase": false, "spacing": 0, "italic": false, "weight": 500},
       {"id": "ticker-strip", "src": "art/phone/ticker-strip.png", "x": 0, "y": 2324, "w": 600, "h": 44, "look": "strip"},
-      {"id": "ticker", "type": "ticker", "show": ["listeners", "now"], "speed": 60, "x": 12, "y": 2324, "w": 576, "h": 44, "font": "Archivo", "size": 17, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
+      {"id": "ticker", "type": "ticker", "show": ["listeners", "tips", "announcements"], "speed": 60, "x": 12, "y": 2324, "w": 576, "h": 44, "font": "Archivo", "size": 17, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
     ]
   }
 };
