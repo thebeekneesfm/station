@@ -289,12 +289,9 @@
   .g-row:hover { background: rgba(31,27,23,.05); }
   .g-nowmark { background: var(--g-hi); width: 2px; }
 
-  /* the ad is clipped out of a magazine and taped up */
+  /* the ad is clipped out of a magazine */
   .ad-img img { transform: rotate(-1.2deg); box-shadow: 2px 3px 0 rgba(0,0,0,.4); }
   .ad-img { position: relative; }
-  .ad-img::before, .ad-img::after { content: ""; position: absolute; z-index: 2; width: 74px; height: 22px; background: rgba(236,226,196,.72); box-shadow: 0 1px 1px rgba(0,0,0,.2); }
-  .ad-img::before { top: 2%; left: 14%; transform: rotate(-8deg); }
-  .ad-img::after { top: 2%; right: 14%; transform: rotate(6deg); }
   .ad-cap { font-family: "Archivo", sans-serif; font-style: italic; }
 
   /* reactions are printed tokens, not emoji */
@@ -423,12 +420,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101g"></script>
-<script src="stations.js?v=20261101g"></script>
-<script src="config.js?v=20261101g"></script>
-<script src="ads.js?v=20261101g"></script>
-<script src="tv.js?v=20261101g"></script>
+<script src="skin.js?v=20261101h"></script>
+<script src="stations.js?v=20261101h"></script>
+<script src="config.js?v=20261101h"></script>
+<script src="ads.js?v=20261101h"></script>
+<script src="tv.js?v=20261101h"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101g"></script>
+<script src="radio.js?v=20261101h"></script>
 </body>
 </html>
