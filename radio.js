@@ -453,6 +453,7 @@
   }
 
   let lostTimer = 0;
+  const broken = new Set();   // recordings that wouldn't load this visit
   const trace = [];   // last few playback decisions, for troubleshooting in the browser console (RADIO.trace)
   function play(reason) {
     trace.push(new Date().toISOString().slice(11, 19) + " play " + (reason || "tune") + " " + (audio.dataset.src || "").split("/").pop().slice(0, 30)); if (trace.length > 30) trace.shift();
@@ -460,10 +461,13 @@
     const st = state.station;
     if (!state.on || !st) return;
     let now = at(st);
-    // "early": the record ran out of music before its scheduled end, so start the next one now
+    // "early": the record ran out of music before its scheduled end (or wouldn't load), so start the next one now
+    if (reason !== "early" && broken.has(now.track.src) && !(state.early && now.track.src === state.early)) { audio.dataset.src = now.track.src; reason = "early"; }
     if (reason === "early") {
       const playing = st.tracks.findIndex(t => t.src === audio.dataset.src);
-      const ni = ((playing >= 0 ? playing : now.i) + 1) % st.tracks.length, nx = st.tracks[ni];
+      let ni = ((playing >= 0 ? playing : now.i) + 1) % st.tracks.length;
+      for (let k = 0; k < st.tracks.length && broken.has(st.tracks[ni].src); k++) ni = (ni + 1) % st.tracks.length;
+      const nx = st.tracks[ni];
       state.early = nx.src;
       now = { i: ni, track: nx, offset: 0, left: nx.length };
     } else if (state.early && now.track.src === state.early) {
@@ -501,21 +505,30 @@
     setPhase("gap");
     lostTimer = setTimeout(play, Math.max(500, now.left * 1000 + 300));
   }
-  audio.addEventListener("playing", () => { audio.dataset.retried = ""; if (state.on && state.station) { if (state.phase !== "playing" && !gate.waiting) fadeIn(); setPhase("playing"); } });
+  audio.addEventListener("playing", () => { audio.dataset.tries = ""; audio.dataset.failing = ""; if (state.on && state.station) { if (state.phase !== "playing" && !gate.waiting) fadeIn(); setPhase("playing"); } });
   audio.addEventListener("waiting", () => { if (state.phase === "playing") setPhase("next"); });
   audio.addEventListener("ended", () => {
     // finished ahead of the schedule (we skipped its run-out, or started it early): go straight to the next record
     const st = state.station, now = st && at(st);
     play(now && (now.track.src === audio.dataset.src || state.early === audio.dataset.src) && now.left > 1 ? "early" : "next");
   });
+  // a recording that won't load (the Archive is busy, or the file is gone): try again twice,
+  // then skip ahead to the next record instead of sitting in silence until the schedule moves on
   audio.addEventListener("error", () => {
-    if (!state.on || !state.station || !audio.dataset.src) return;
-    if (!audio.dataset.retried) { audio.dataset.retried = "1"; audio.dataset.src = ""; setTimeout(play, 800); return; }   // one retry first
-    const now = at(state.station);
-    state.resumeAt = Date.now() + now.left * 1000;
-    setPhase("lost");
-    clearTimeout(lostTimer);
-    lostTimer = setTimeout(() => { audio.dataset.src = ""; play(); }, now.left * 1000 + 500);
+    if (!state.on || !state.station) return;
+    const src = audio.dataset.src || audio.dataset.failing; if (!src) return;
+    const tries = +(audio.dataset.tries || 0);
+    if (tries < 2) {
+      audio.dataset.tries = tries + 1; audio.dataset.failing = src; audio.dataset.src = "";
+      trace.push(new Date().toISOString().slice(11, 19) + " retry " + (tries + 1) + " " + src.split("/").pop().slice(0, 30));
+      setTimeout(play, tries ? 4000 : 1200); return;
+    }
+    audio.dataset.tries = "";
+    broken.add(src);
+    trace.push(new Date().toISOString().slice(11, 19) + " skip broken " + src.split("/").pop().slice(0, 30));
+    audio.dataset.src = src;
+    if (broken.size < state.station.tracks.length) play("early");
+    else { state.resumeAt = Date.now() + 60000; setPhase("lost"); clearTimeout(lostTimer); lostTimer = setTimeout(() => { broken.clear(); audio.dataset.src = ""; play(); }, 60000); }
   });
   // keep everyone on the same second
   setInterval(() => {
