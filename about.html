@@ -3,115 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>About TheBeesKnees.fm</title>
+<title>About · The Bee's Knees.fm</title>
 <link rel="icon" href="art/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png">
-<link rel="stylesheet" href="art/fonts/fonts.css">
+<link rel="stylesheet" href="art/fonts/fonts.css?v=20261101o">
 <style>
-  :root {
-    color-scheme: dark;
-    --bg: #241710;
-    --ink: #eadfca;
-    --dim: #a99a83;
-    --line: #3e342b;
-    --hi: #e3a92f;
-  }
-  html { background: var(--bg); }
-  body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 16px/1.65 "BK Serif", "Arial Narrow", Arial, sans-serif; }
-  main { max-width: 68ch; margin: 0 auto; padding-block: 40px 80px;
-         padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-  a { color: var(--ink); text-underline-offset: 3px; }
-  a:focus-visible { outline: 2px solid var(--hi); outline-offset: 2px; }
-  .back { display: inline-block; margin-bottom: 28px; color: var(--dim); }
-  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 8px; text-wrap: balance; }
-  h2 { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--hi); margin: 36px 0 8px; }
-  p { margin: 0 0 14px; }
-  .lede { color: var(--dim); }
-  ul { margin: 0 0 14px; padding-left: 1.2em; }
-  li { margin-bottom: 6px; }
-  .stations { display: grid; gap: 14px; margin-top: 12px; }
-  .stations div { border-top: 1px solid var(--line); padding-top: 10px; }
-  .stations b { display: block; }
-  .stations span { color: var(--dim); font-size: 14px; }
-
-  h1 { font-family: "BK Script", Georgia, serif; font-style: italic; font-weight: 900; font-size: 40px; line-height: 1.05; }
-  h2 { font-family: "BK Script", Georgia, serif; font-style: italic; font-weight: 800; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--hi); }
-  body { font-size: 17px; line-height: 1.6; }
-  h1, h2 { word-spacing: 0.18em; letter-spacing: 0.01em; font-weight: 400; font-style: normal; }
-  h1 { font-size: 46px; }
-  h2 { font-size: 28px; }
+  /* same room as the radio: 1953 wallpaper, paper cards, ink and station red */
+  :root { --paper: #e9e1c9; --ink: #1f1b17; --ink-2: #4a4036; --dim: #6b5f50; --red: #c8321f; --honey: #e3a92f; --line: rgba(31,27,23,.22); }
+  html { background: #3f5a46; }
+  body { margin: 0; color: var(--ink); background: transparent; font: 18px/1.6 "BK Serif", Georgia, serif; }
+  body::before { content: ""; position: fixed; inset: 0; z-index: -1;
+    background: linear-gradient(rgba(20,15,10,.22), rgba(20,15,10,.22)), url("art/wallpaper.jpg") center / 700px repeat; }
+  .wrap { max-width: 760px; margin: 0 auto; padding-block: 18px 60px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 18px; }
+  .paper { background: var(--paper); box-shadow: 0 3px 0 rgba(0,0,0,.28), 0 12px 28px rgba(0,0,0,.25); }
+  .mast { padding: 16px 26px 14px; transform: rotate(-.25deg); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px; }
+  .logo { font: 400 clamp(30px, 7.5vw, 48px)/1 "BK Deco", Georgia, serif; color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .logo span { color: var(--red); font-size: .55em; }
+  .tag { margin: 4px 0 0; font-style: italic; color: var(--ink-2); font-size: 16px; }
+  .back { color: var(--ink); font-size: 17px; text-underline-offset: 4px; text-decoration-thickness: 1px; white-space: nowrap; }
+  main.paper { padding: 26px clamp(18px, 5vw, 44px) 34px; }
+  h1, h2 { font-family: "BK Script", Georgia, serif; font-weight: 400; word-spacing: .18em; line-height: 1.1; margin: 0; text-wrap: balance; }
+  h1 { font-size: clamp(40px, 8vw, 54px); }
+  h2 { font-size: 32px; margin-top: 34px; padding-bottom: 6px; border-bottom: 2px solid var(--ink); }
+  p { margin: 12px 0 0; }
+  a { color: var(--ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:focus-visible { outline: 2px solid var(--honey); outline-offset: 3px; }
+  .lede { font-size: 20px; margin-top: 14px; }
+  .banner { display: block; margin-top: 16px; box-shadow: 0 2px 0 rgba(0,0,0,.25); }
+  .banner img { display: block; width: 100%; height: auto; }
+  .tip { color: var(--red); font-weight: 600; }
+  .email { font-weight: 600; user-select: all; }
+  ul { margin: 12px 0 0; padding-left: 1.2em; }
+  li { margin-top: 6px; }
+  .small { font-size: 15.5px; color: var(--ink-2); line-height: 1.55; }
+  .small p { margin-top: 10px; }
 </style>
 </head>
 <body>
-<main>
-  <a class="back" href="index.html">← Back to the radio</a>
+<div class="wrap">
+  <header class="paper mast">
+    <div>
+      <a class="logo" href="index.html">The Bee's Knees<span>.fm</span></a>
+      <p class="tag">An online radio station of 1920s–1960s music and radio theatre</p>
+    </div>
+    <a class="back" href="index.html">Back to the radio</a>
+  </header>
 
-  <h1>About TheBeesKnees.fm</h1>
-  <p class="lede">Old radio shows and 78 records, playing all the time on eighteen stations, with cartoons on the TV and ads from old magazines. Every station was on before you got here.</p>
+  <main class="paper">
+    <h1>About the station</h1>
+    <p class="lede">Old radio shows and 78 records, playing all the time on eighteen stations. You don't pick what plays: you tune in, and whatever is on is on, for everyone on that station at the same second. That's how radio worked.</p>
+    <p>I made The Bee's Knees.fm so these shows and records have somewhere to play all day, the way they did on the radio. It's a one-woman station: I pick the shows and records, build the schedules and keep it on the air.</p>
 
-  <p>TheBeesKnees.fm was inspired by <a href="https://spelunkr.tv" target="_blank" rel="noopener">Spelunkr</a>, a free TV network of forgotten Internet Archive video, made by one person. Go watch it.</p>
+    <h2>Keep it on the air</h2>
+    <p>Listening is free, with no account and no ads except the vintage ones. If you'd like to help with the web address and upkeep, you can <a class="tip" href="https://ko-fi.com/thebeeskneesfm" target="_blank" rel="noopener">tip the station on Ko-fi</a>. Members get their name in the ticker, and Sponsors can put their name on a station for the month.</p>
+    <a class="banner" href="https://ko-fi.com/thebeeskneesfm" target="_blank" rel="noopener" aria-label="The Bee's Knees.fm on Ko-fi"><img src="art/kofi-banner.jpg" alt="The Bee's Knees.fm, with three vintage phonograph and radio ads" width="1200" height="400"></a>
+    <p>A Discord for listeners is coming soon.</p>
 
-  <h2>How it works</h2>
-  <p>You don't pick what plays. You tune in, and whatever is on is on, for you and for everyone else on that station at the same second. That's how radio worked.</p>
-  <p>It costs nothing. There's no account and nothing to buy. The only ads are the vintage ones.</p>
+    <h2>Say hello</h2>
+    <p>Requests, a recording that won't play, or a show that shouldn't be here: write to <a class="email" href="mailto:thebeeskneesfm@gmail.com">thebeeskneesfm@gmail.com</a>.</p>
 
-  <p>If you'd like to help keep TheBeesKnees.fm on the air, you can <a href="https://ko-fi.com/thebeeskneesfm" target="_blank" rel="noopener">tip the station on Ko-fi</a>. It helps with the web address and upkeep. Every show stays free either way.</p>
+    <h2>Whose recordings these are</h2>
+    <p>Not mine. Every show and record plays straight from the <a href="https://archive.org" target="_blank" rel="noopener">Internet Archive</a>, a non-profit library, and this site hosts no audio of its own. "via archive.org" under each title opens that recording's page at the Archive. Much of the radio collection was gathered by the <a href="https://www.otrr.org" target="_blank" rel="noopener">Old Time Radio Researchers</a>, and the 78s by the people who digitized them. The station isn't affiliated with the Archive, and they run on donations, so if you enjoy something, <a href="https://archive.org/donate" target="_blank" rel="noopener">give them something</a>.</p>
+    <p>Records released in 1925 or earlier are in the US public domain. Many records here are newer, and some may still be under copyright. The radio shows are widely treated as public domain, but not every part of every show is settled. If a recording is yours and you want it off a station, email me and it will come off the schedule. Removing it from the Archive itself is a <a href="https://help.archive.org/help/how-do-i-request-to-remove-something-from-archive-org/" target="_blank" rel="noopener">separate request to them</a>.</p>
 
-  <h2>Whose recordings these are</h2>
-  <p>Not mine. Every show and record plays straight from the <a href="https://archive.org" target="_blank" rel="noopener">Internet Archive</a>, a non-profit library. This site hosts no audio of its own. Your browser plays the Archive's file, and "via archive.org" under each title opens that recording's page at the Archive, where you can see who uploaded it.</p>
-  <p>Listening here uses the Archive's bandwidth, the same as listening there. They run on donations, so if you enjoyed something, <a href="https://archive.org/donate" target="_blank" rel="noopener">give them something</a>.</p>
-  <p>This station isn't affiliated with or endorsed by the Internet Archive. Much of the radio collection was gathered and labeled by the <a href="https://www.otrr.org" target="_blank" rel="noopener">Old Time Radio Researchers</a>, and the 78s by the people who digitized them. The credit goes to them.</p>
-  <p>The cartoons on the little TV come from the Archive's classic cartoon collections. They play with the sound off, on the same clock as the stations.</p>
-  <p>The wallpaper is a real 1953 sample, scanned from that year's Sears wallpaper book (<a href="https://archive.org/details/Sears1953WallpaperBook" target="_blank" rel="noopener">public domain, via the Internet Archive</a>). The fireplace is footage of a real fire in Glen Lake, Michigan (<a href="https://archive.org/details/fireplace" target="_blank" rel="noopener">public domain</a>).</p>
-  <p>The sounds: a fireplace recorded by <a href="https://freesound.org/people/inchadney/" target="_blank" rel="noopener">inchadney</a> (CC0), and the radio-tuning sound by patolenin (via Pixabay).</p>
-  <p>The lettering: Odalisque NF by Nick Curtis (Nick's Fonts), Mervale Script by Astigmatic (SIL Open Font License) and TeX Gyre Pagella by the GUST e-foundry (GUST Font License), all found on <a href="https://www.fontspace.com" target="_blank" rel="noopener">FontSpace</a>.</p>
-  <p>The radio commercials between records come from the Archive's vintage radio commercial collections.</p>
-  <p>The vintage ads come from the Archive too: its Magazine Rack and its collections of old Australian and British print ads. <a href="ads.html">See them all in the vintage gallery</a>.</p>
-  <p>What's mine: the schedule, the drawings and the station breaks.</p>
+    <h2>What's kept</h2>
+    <ul>
+      <li>No accounts and no cookies. Your browser remembers your last station and volume, on your own device.</li>
+      <li>Listener counts and reactions are anonymous: no one, including me, can tell who sent them.</li>
+      <li>If you tip on Ko-fi and make it public, your Ko-fi name and message can show in the ticker for two weeks. Amounts and email addresses never do.</li>
+    </ul>
 
-  <h2>What's on</h2>
-  <div class="stations" id="stations"></div>
+    <h2>A note about the shows</h2>
+    <p>These programs are played as they were made. Some are frightening, and some carry the attitudes of their time, including stereotypes that were wrong then too. Nothing is rated or filtered.</p>
 
-  <h2>If something won't play</h2>
-  <p>Recordings sometimes disappear from the Archive. When that happens the station plays static until the next show starts, so nobody falls out of step. I check for dead recordings and take them off the schedule.</p>
-
-  <h2>If something shouldn't be here</h2>
-  <p id="contact-line">If you uploaded a recording or hold the rights to one and want it off a station, get in touch with the station name and the title, and it will come off the schedule.<span id="contact-slot"></span> Removing the file from the Archive itself is a separate request to them, and <a href="https://help.archive.org/help/how-do-i-request-to-remove-something-from-archive-org/" target="_blank" rel="noopener">they explain how to make it</a>.</p>
-  <p>Records released in 1925 or earlier are in the US public domain. Many of the records here are newer than that, from the late 1920s to the 1950s, and some may still be under copyright. The radio shows were broadcast between the 1930s and early 1960s and are widely treated as public domain, but not every part of every show is settled. If something here is yours, the request above is the fastest way to get it off.</p>
-
-  <h2>What's kept</h2>
-  <ul>
-    <li>No account and no cookies.</li>
-    <li>Your browser remembers your last station and volume, on your own device.</li>
-    <li>The "listening" counts come from a random number your tab makes when you turn the radio on. It only says which station you're on, it goes away when you close the tab. Reactions you send carry only the station and which emoji, never who sent them, and no one, including me, can tell who it belongs to. The count runs on <a href="https://supabase.com" target="_blank" rel="noopener">Supabase</a>, which sees the connection while it's open. Nothing about you is saved there.</li>
-    <li>If you tip on Ko-fi and make your tip public, your Ko-fi name and message may show up in the ticker for a couple of weeks. Private tips show as "a kind listener". Email addresses and amounts are never shown or kept for the ticker.</li>
-    <li>Your browser fetches audio from archive.org. The site itself is hosted on GitHub Pages, and like any host, GitHub sees your connection in its own server logs.</li>
-  </ul>
-
-  <h2>A note about the shows</h2>
-  <p>These programs are played as they were made. Some are frightening, and some carry the attitudes of their time, including stereotypes that were wrong then too. Nothing is rated or filtered.</p>
-</main>
-<script src="stations.js?v=20261101n"></script>
-<script src="config.js?v=20261101n"></script>
-<script>
-  (function () {
-    var box = document.getElementById("stations");
-    (window.STATIONS || []).slice().sort(function (a, b) { return a.dial - b.dial; }).forEach(function (st) {
-      var shows = [];
-      st.tracks.forEach(function (t) { if (t.series && shows.indexOf(t.series) < 0) shows.push(t.series); });
-      var hours = st.tracks.reduce(function (a, t) { return a + (+t.length || 0); }, 0) / 3600;
-      var d = document.createElement("div");
-      var b = document.createElement("b"); b.textContent = st.name + (st.freq ? " · " + st.freq : "");
-      var p = document.createElement("span");
-      p.textContent = (st.blurb ? st.blurb + " " : "") +
-        (shows.length > 12 ? shows.length + " artists." : shows.join(", ") + ".") +
-        " Loops every " + (hours >= 2 ? Math.round(hours) + " hours" : Math.round(hours * 60) + " minutes") + ".";
-      d.appendChild(b); d.appendChild(p); box.appendChild(d);
-    });
-    var c = (window.RADIO_CONFIG || {}).contact;
-    if (c) document.getElementById("contact-slot").textContent = " Reach me at " + c + ".";
-  })();
-</script>
+    <div class="small">
+      <h2>Credits</h2>
+      <p>Cartoons, radio commercials and the <a href="ads.html">vintage gallery</a> come from the Internet Archive's collections. The wallpaper is a 1953 sample from that year's <a href="https://archive.org/details/Sears1953WallpaperBook" target="_blank" rel="noopener">Sears wallpaper book</a>, and the fireplace is <a href="https://archive.org/details/fireplace" target="_blank" rel="noopener">footage of a real fire</a> in Glen Lake, Michigan, both public domain.</p>
+      <p>Fire sound by <a href="https://freesound.org/people/inchadney/" target="_blank" rel="noopener">inchadney</a> (CC0). Radio-tuning sound by patolenin (Pixabay). Lettering: Odalisque NF by Nick Curtis, Mervale Script by Astigmatic (SIL Open Font License) and TeX Gyre Pagella by the GUST e-foundry, all from <a href="https://www.fontspace.com" target="_blank" rel="noopener">FontSpace</a>.</p>
+    </div>
+  </main>
+</div>
 </body>
 </html>

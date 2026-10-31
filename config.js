@@ -6,7 +6,7 @@
 window.RADIO_CONFIG = {
   /* How people reach you, shown on the About page (an email address, a Discord invite, anything).
      Rights holders use it to ask for a show to come off the schedule. */
-  "contact": "",
+  "contact": "thebeeskneesfm@gmail.com",
 
   /* Your tip page (Ko-fi or similar). The "Tip TheBeesKnees" link appears once this is filled in. */
   "tip": "https://ko-fi.com/thebeeskneesfm",
