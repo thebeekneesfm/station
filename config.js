@@ -9,7 +9,7 @@ window.RADIO_CONFIG = {
   "contact": "",
 
   /* Your tip page (Ko-fi or similar). The "Tip TheBeesKnees" link appears once this is filled in. */
-  "tip": "",
+  "tip": "https://ko-fi.com/thebeeskneesfm",
 
   "listeners": {
     "url": "https://rjpztitddezmkzeiteaa.supabase.co",
