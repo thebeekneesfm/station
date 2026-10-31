@@ -30,6 +30,11 @@
     tipMember: "Welcome, {name}, our newest {tier} member",
     tipSaid: ": \u201c{message}\u201d",
     tipSomeone: "a kind listener",
+    cardKicker: "This hour is brought to you by",
+    cardThanks: "Thank you for buying the station a coffee!",
+    cardMemberKicker: "Please welcome our newest member",
+    cardMemberThanks: "Thank you for joining the {tier} club!",
+    cardLink: "Tip The Bee's Knees too",
     sleepOff: "Sleep timer",
     sleepOn: "Off in {min} min",
     recentTitle: "Recently played on {station}",
@@ -677,6 +682,10 @@
         img.addEventListener("load", () => { img.style.opacity = 1; });
         el.querySelector(".ad-via").addEventListener("click", e => { if (state.editing) e.preventDefault(); });
         rec.ad = { img, title: el.querySelector(".ad-title"), via: el.querySelector(".ad-via"), cur: -1 };
+        const card = document.createElement("div"); card.className = "tipcard"; card.hidden = true; card.setAttribute("role", "status");
+        card.innerHTML = '<div class="tc-inner"><div class="tc-kicker"></div><div class="tc-name"></div><div class="tc-msg"></div><div class="tc-thanks"></div><a class="tc-link" target="_blank" rel="noopener"></a></div>';
+        card.addEventListener("click", e => { if (!e.target.closest("a")) { e.stopPropagation(); card.hidden = true; } });
+        el.appendChild(card); rec.ad.card = card;
         el.querySelector(".ad-img").addEventListener("click", () => { if (!state.editing && rec.ad.cur >= 0) openAd((window.ADS || [])[rec.ad.cur]); });
       } else if (type === "ticker") {
         const run = document.createElement("div"); run.className = "tick";
@@ -1061,6 +1070,39 @@
       .then(r => r.ok ? r.json() : []).then(list => { if (Array.isArray(list)) tips.list = list; }).catch(() => {});
   }
   loadTips(); setInterval(loadTips, 3 * 60 * 1000);
+  // a tip just came in (Ko-fi → kofi-webhook → broadcast): thank them over the sponsors' ad.
+  // The broadcast is only a nudge. What's shown is read back from the tips table, which only
+  // the Ko-fi webhook can write to, so nobody can pop up a fake thank-you.
+  let lastCard = Date.now() - 3 * 60 * 1000;
+  function newTip() {
+    const L = CONFIG.listeners || {};
+    if (!L.url || !L.key || !window.fetch) return;
+    setTimeout(() => fetch(L.url + "/rest/v1/tips?select=created_at,kind,from_name,message,tier_name&order=created_at.desc&limit=5",
+      { headers: { apikey: L.key, Authorization: "Bearer " + L.key } })
+      .then(r => r.ok ? r.json() : []).then(list => {
+        if (!Array.isArray(list) || !list.length) return;
+        tips.list = list.filter(t => Date.parse(t.created_at) > Date.now() - 14 * 864e5);
+        els.forEach(r => { if (r.tick) r.tick.text = null; });
+        const t = list[0], when = Date.parse(t.created_at);
+        if (when > lastCard) { lastCard = when; showTipCard(t); }
+      }).catch(() => {}), 800);
+  }
+  function showTipCard(t) {
+    const member = t.kind === "New member" || t.kind === "Member";
+    const name = String(t.from_name || WORDS.tipSomeone).slice(0, 60);
+    els.forEach(r => {
+      const card = r.ad && r.ad.card; if (!card) return;
+      card.querySelector(".tc-kicker").textContent = member ? WORDS.cardMemberKicker : WORDS.cardKicker;
+      card.querySelector(".tc-name").textContent = name;
+      const msg = card.querySelector(".tc-msg"); msg.textContent = t.message ? "\u201c" + String(t.message).slice(0, 200) + "\u201d" : ""; msg.hidden = !t.message;
+      card.querySelector(".tc-thanks").textContent = member ? WORDS.cardMemberThanks.replace("{tier}", t.tier_name || "").replace(/\s+/g, " ") : WORDS.cardThanks;
+      const link = card.querySelector(".tc-link");
+      if (CONFIG.tip) { link.href = CONFIG.tip; link.textContent = WORDS.cardLink; link.hidden = false; } else link.hidden = true;
+      card.hidden = false; card.classList.remove("tc-in"); void card.offsetWidth; card.classList.add("tc-in");
+      clearTimeout(card._t); card._t = setTimeout(() => { card.hidden = true; }, 20000);
+    });
+  }
+  if (/[?&]testtip\b/.test(location.search)) setTimeout(() => showTipCard({ kind: "Donation", from_name: "Margaret", message: "Play more Lights Out, please!" }), 2500);   // preview only, on your own screen
   function tickerText(L) {
     const parts = [], show = L.show || ["listeners", "tips", "announcements"], sep = L.separator || "\u00a0\u00a0\u00a0\u00a0✻\u00a0\u00a0\u00a0\u00a0";
     if (show.includes("listeners") && presence.live) {
@@ -1420,6 +1462,7 @@
         presence.ch = client.channel(c.room || "radio", { config: { presence: { key: presence.me } } });
         presence.ch.on("presence", { event: "sync" }, presenceCount)
           .on("broadcast", { event: "react" }, m => heardReaction(m.payload))
+          .on("broadcast", { event: "tip" }, () => newTip())
           .subscribe(status => { if (status === "SUBSCRIBED") { presence.last = undefined; presenceUpdate(); } });
       } catch (e) {}
     };

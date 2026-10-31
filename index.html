@@ -351,6 +351,23 @@
   #bigscreen .bs-bar { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; justify-content: center; padding-top: 12px; font: italic 15px/1.3 "Archivo", sans-serif; color: #efe5cc; }
   #bigscreen button { font: 500 15px "Archivo", sans-serif; color: #1f1b17; background: #e9e1c9; border: 0; padding: 6px 14px; cursor: pointer; }
   #bigscreen button:focus-visible { outline: 2px solid #e3a92f; outline-offset: 2px; }
+  /* a tip just came in: a thank-you card drops over the sponsors' ad for 20 seconds */
+  .tipcard { position: absolute; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center; padding: 6%; box-sizing: border-box; background: rgba(20, 15, 10, .55); cursor: pointer; }
+  .tipcard[hidden] { display: none; }
+  .tc-inner { background: #efe5cc; color: #1f1b17; border: 3px solid #c8321f; outline: 6px solid #efe5cc; box-shadow: 0 0 0 9px #c8321f, 0 18px 40px rgba(0,0,0,.5);
+    padding: 26px 22px 20px; text-align: center; display: grid; gap: 10px; max-width: 100%; transform: rotate(-2deg); }
+  .tc-kicker { font: italic 600 17px/1.2 "Bodoni Moda", Georgia, serif; color: #5d5244; }
+  .tc-name { font: 400 38px/1.05 "Limelight", Georgia, serif; color: #c8321f; overflow-wrap: anywhere; }
+  .tc-msg { font: italic 500 18px/1.35 "Bodoni Moda", Georgia, serif; }
+  .tc-msg[hidden] { display: none; }
+  .tc-thanks { font: 600 15px/1.3 "Archivo", sans-serif; }
+  .tc-link { font: 600 14px "Archivo", sans-serif; color: #c8321f; text-underline-offset: 3px; }
+  .tc-link[hidden] { display: none; }
+  .tipcard.tc-in .tc-inner { animation: tc-drop .7s cubic-bezier(.2, 1.4, .4, 1) both; }
+  .tipcard.tc-in { animation: tc-fade .3s ease-out both; }
+  @keyframes tc-drop { from { transform: translateY(-40px) rotate(-8deg) scale(.85); opacity: 0; } to { transform: rotate(-2deg); opacity: 1; } }
+  @keyframes tc-fade { from { background: rgba(20, 15, 10, 0); } }
+  @media (prefers-reduced-motion: reduce) { .tipcard.tc-in .tc-inner, .tipcard.tc-in { animation: none; } }
 </style>
 </head>
 <body>
@@ -390,12 +407,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261031x"></script>
-<script src="stations.js?v=20261031x"></script>
-<script src="config.js?v=20261031x"></script>
-<script src="ads.js?v=20261031x"></script>
-<script src="tv.js?v=20261031x"></script>
+<script src="skin.js?v=20261031y"></script>
+<script src="stations.js?v=20261031y"></script>
+<script src="config.js?v=20261031y"></script>
+<script src="ads.js?v=20261031y"></script>
+<script src="tv.js?v=20261031y"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261031x"></script>
+<script src="radio.js?v=20261031y"></script>
 </body>
 </html>
