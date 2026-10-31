@@ -1131,7 +1131,7 @@
     const parts = [], show = L.show || ["listeners", "members", "tips", "announcements"], sep = L.separator || "\u00a0\u00a0\u00a0\u00a0✻\u00a0\u00a0\u00a0\u00a0";
     if (show.includes("listeners") && presence.live) {
       const total = presence.counts._total || 0;
-      parts.push(total <= 1 ? WORDS.listenersOne : WORDS.listeners.replace("{n}", total));
+      if (total > 1) parts.push(WORDS.listeners.replace("{n}", total));   // say nothing when you are the only one
       if (show.includes("stations")) STATIONS.forEach(st => { const n = presence.counts[st.id]; if (n) parts.push(WORDS.listenersStation.replace("{station}", st.name).replace("{n}", n)); });
     }
     // thank-yous for recent Ko-fi tips, newest first (see supabase: tips table, kofi-webhook function)
