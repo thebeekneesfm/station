@@ -4,7 +4,7 @@ A web radio that plays old-time radio shows and 78s straight from the Internet A
 
 The main screen is a channel guide: every station in a list, with what's on now and what's coming up. Click a station to tune in. There's also a vintage ad panel that changes on the same clock for everyone, and a gallery of all the ads at `ads.html`.
 
-Every piece you see is your own drawing. Until you add art, each piece shows as a dashed box with its name, file name and size.
+Every piece has a built-in 1950s look (walnut cabinet, cream TV listings, bakelite knobs, atomic starbursts) until you replace it with your own drawing. Drop a PNG with the right name into the `art` folder and it takes that piece's place.
 
 ## Try it
 
@@ -26,8 +26,10 @@ Each station has its own link, like `…/otr-radio/#noir`. Opening that link sta
 
 1. Open `art-templates/layout-guide.png` in Procreate as a reference layer. It's the whole stage (1600 × 1000) with every piece boxed and labeled.
 2. Draw each piece on its own layer.
-3. Export each piece as a **transparent PNG** at the size on its template, with the same file name, into the `art` folder. For example, `art-templates/cabinet.png` is 840 × 880, so your drawing goes to `art/cabinet.png`.
-4. Refresh the page. Your drawing replaces the dashed box.
+3. Export each piece as a **transparent PNG** at the size on its template, with the same file name, into the `art` folder. For example, `art-templates/player.png` is 1520 × 240, so your drawing goes to `art/player.png`.
+4. Refresh the page. Your drawing replaces that piece's built-in look. Press E to see every piece's outline, name and size.
+
+The station name and tagline in the logo come from `"name"` and `"tagline"` at the top of `skin.js`. Change them there, or draw a logo as `art/logo.png`. The lettering uses three free Google fonts: Yellowtail (script), Oswald (tall capitals) and Courier Prime (typewriter). Change any piece's `"font"` in `skin.js` to use something else, including your own font in `art/fonts`.
 
 The `art-templates` folder has a blank, correctly sized PNG for each piece if you'd rather draw on those directly.
 
@@ -84,7 +86,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 
 ## Stations
 
-`stations.js` has twelve stations. The guide groups them under **Radio shows** and **Music**:
+`stations.js` has seventeen stations. The guide groups them under **Radio shows** and **Music**:
 
 | Station | What's on | Loops every |
 |---|---|---|
@@ -93,13 +95,18 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Suspense | Suspense, Escape, The Whistler, The Shadow | about 13 hours |
 | Sci-Fi | X Minus One, Dimension X, 2000 Plus, Exploring Tomorrow, Space Patrol, Tom Corbett, Space Cadet | about 18 hours |
 | Out West | Gunsmoke, Frontier Gentleman, Fort Laramie, The Six Shooter, Have Gun – Will Travel | about 15 hours |
+| Theater | Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Orson Welles' Mercury Theatre (including *The War of the Worlds*) and Campbell Playhouse, Columbia Workshop | about 32 hours |
 | Laughs | Jack Benny, Fibber McGee and Molly, Burns and Allen, The Great Gildersleeve, Our Miss Brooks | about 16 hours |
 | Ragtime | Rags, cakewalks and brass bands, 1898–1928 | about 5 hours |
 | Jazz Age | Hot jazz, blues and dance bands, 1917–1925 | about 5 hours |
+| Blues | Delta and country blues, 1920s to the '50s | about 3 hours |
 | Swing | Big bands of the 1930s and '40s | about 6 hours |
 | Crooners | Singers from the late 1920s to the '50s | about 6 hours |
 | After Hours | Late-night jazz and torch songs, 1936–1959 | about 6 hours |
-| Christmas | Holiday 78s from every era | about 5 hours |
+| Hawaiian & Exotica | Steel guitars, island songs and exotica | about 4 hours |
+| Sleepy Time | Slow waltzes, lullabies and sweet bands, no commercials | about 4 hours |
+| From Another Room | The sleepy records, muffled and echoey as if playing down the hall, with rain or a fire underneath | about 4 hours |
+| Christmas | Holiday 78s from every era | about 6 hours |
 
 The shows take turns, so you don't get six Gunsmokes in a row. To add shows or build a new station, open `builder.html`, paste Archive links, tick what you want, and copy the result into `stations.js`.
 
@@ -129,6 +136,22 @@ Each station has its own settings in `stations.js`, for example `"sound": { "lev
 - `level: false` turns off the automatic leveling.
 
 If the records still sound rough after that, the next step is cleaning them ahead of time with proper restoration tools and hosting the cleaned files yourself. That's more work and a bigger copyright step, since you'd be distributing your own copies.
+
+## From Another Room
+
+A station can sound like it's playing in another room. Give it a `"room"` setting in `stations.js`:
+
+`"room": { "muffle": 1100, "echo": 0.55, "ambience": 0.35 }`
+
+- `muffle`: how much treble gets through the wall, in Hz. Lower is more muffled.
+- `echo`: how much room echo, from 0 to 1.
+- `ambience`: how loud the rain or fire is, from 0 to 1.
+
+A slight tape wobble is added too. Listeners pick rain, fireplace or nothing with "Background:" on the radio. The rain and fire are generated in the browser, so there are no files to host. To use your own recordings, save them as `art/sounds/rain.mp3` and `art/sounds/fire.mp3`.
+
+## Between songs
+
+Each song fades out over its last three seconds and the next one fades in, with silence rather than static in between. Static only plays when you change stations, or when a recording won't load.
 
 ## Reactions
 

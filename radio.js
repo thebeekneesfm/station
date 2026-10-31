@@ -22,6 +22,9 @@
     listeningHere: "{n} listening",
     listeningAlone: "",
     nowOn: "{station}: {series} — {title}",
+    amb_rain: "Background: rain (click to change)",
+    amb_fire: "Background: fireplace (click to change)",
+    amb_off: "Background: off (click to change)",
     sleepOff: "Sleep timer: off",
     sleepOn: "Sleeping in {min} min",
     recentTitle: "Recently played on {station}",
@@ -85,7 +88,8 @@
     showAll: false,
     selected: null,
     clean: store.get("clean", true),     // false = Original: no sound cleanup at all
-    sleepEnd: 0                          // when the sleep timer turns the radio off
+    sleepEnd: 0,                         // when the sleep timer turns the radio off
+    ambience: store.get("ambience", "rain")  // background sound on "room" stations: rain, fire or off
   };
   const dials = STATIONS.map(s => s.dial).sort((a, b) => a - b);
   const CAPTURE = Math.min(0.035, ...dials.slice(1).map((d, i) => (d - dials[i]) / 2.2));
@@ -182,8 +186,10 @@
       const lim = ctx.createDynamicsCompressor();
       lim.threshold.value = -4; lim.knee.value = 0; lim.ratio.value = 20; lim.attack.value = 0.001; lim.release.value = 0.08;
       const master = ctx.createGain(); master.gain.value = state.vol;
-      hp.connect(lp); lp.connect(an); an.connect(agc); agc.connect(comp); comp.connect(lim); lim.connect(master); master.connect(ctx.destination);
-      Object.assign(fx, { ready: true, src, hp, lp, an, agc, comp, master, level: null, buf: new Float32Array(an.fftSize) });
+      const fade = ctx.createGain();                       // song fade in / fade out
+      hp.connect(lp); lp.connect(an); an.connect(agc); agc.connect(comp); comp.connect(lim); lim.connect(fade); fade.connect(master); master.connect(ctx.destination);
+      Object.assign(fx, { ready: true, src, hp, lp, an, agc, comp, lim, fade, master, level: null, buf: new Float32Array(an.fftSize) });
+      buildRoom();
       routeSound();
       audio.volume = 1;
       if (ctx.audioWorklet && window.Blob) {
@@ -200,12 +206,118 @@
   function routeSound() {
     if (!fx.ready) return;
     try { fx.src.disconnect(); } catch (e) {}
-    fx.src.connect(state.clean === false ? fx.master : fx.hp);
+    fx.src.connect(state.clean === false ? fx.fade : fx.hp);
+    routeRoom();
   }
   function toggleClean() {
     state.clean = state.clean === false;
     store.set("clean", state.clean);
     routeSound(); applySound(); render();
+  }
+  /* "From another room": muffled, echoey, slightly warbly, with rain or a fire underneath */
+  function impulse(seconds, decay) {
+    const n = Math.floor(ctx.sampleRate * seconds), b = ctx.createBuffer(2, n, ctx.sampleRate);
+    for (let c = 0; c < 2; c++) { const d = b.getChannelData(c); for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, decay); }
+    return b;
+  }
+  function buildRoom() {
+    try {
+      const inp = ctx.createGain(), muffle = ctx.createBiquadFilter(), muffle2 = ctx.createBiquadFilter();
+      muffle.type = "lowpass"; muffle.frequency.value = 1100; muffle.Q.value = 0.4;
+      muffle2.type = "lowpass"; muffle2.frequency.value = 2400; muffle2.Q.value = 0.3;
+      const dry = ctx.createGain(), wet = ctx.createGain(), verb = ctx.createConvolver(), out = ctx.createGain();
+      verb.buffer = impulse(2.8, 2.6); dry.gain.value = 0.62; wet.gain.value = 0.55;
+      const wow = ctx.createDelay(0.05), lfo = ctx.createOscillator(), depth = ctx.createGain();
+      wow.delayTime.value = 0.012; lfo.frequency.value = 0.35; depth.gain.value = 0.0016; lfo.connect(depth); depth.connect(wow.delayTime); lfo.start();
+      inp.connect(muffle); muffle.connect(muffle2); muffle2.connect(dry); muffle2.connect(verb); verb.connect(wet);
+      dry.connect(wow); wet.connect(wow); wow.connect(out); out.gain.value = 0.9;
+      const amb = ctx.createGain(); amb.gain.value = 0; amb.connect(fx.master);
+      fx.room = { inp, out, muffle, wet, dry, amb, on: false, kind: null, src: null };
+    } catch (e) { fx.room = null; }
+  }
+  function roomFor(st) { return st && st.room ? Object.assign({ muffle: 1100, echo: 0.55, ambience: 0.35 }, st.room) : null; }
+  function routeRoom() {
+    if (!fx.ready || !fx.room) return;
+    const R = fx.room, want = roomFor(state.on ? state.station : null);
+    const tail = state.clean === false ? fx.src : fx.lim;
+    try { fx.lim.disconnect(); } catch (e) {}
+    try { R.out.disconnect(); } catch (e) {}
+    if (state.clean === false) { try { fx.src.disconnect(); } catch (e) {} }
+    if (want) {
+      R.muffle.frequency.value = want.muffle; R.wet.gain.value = want.echo;
+      tail.connect(R.inp); R.out.connect(fx.fade);
+      if (state.clean !== false) fx.lim.connect(R.inp);
+    } else {
+      tail.connect(fx.fade);
+    }
+    R.on = !!want;
+    setAmbience();
+  }
+  // rain and fire are generated here, so they need no files; art/sounds/rain.mp3 or fire.mp3 replace them
+  function ambienceBuffer(kind) {
+    const sr = ctx.sampleRate, n = sr * 12, b = ctx.createBuffer(2, n, sr);
+    for (let c = 0; c < 2; c++) {
+      const d = b.getChannelData(c); let br = 0, lp = 0, hp = 0;
+      for (let i = 0; i < n; i++) {
+        const w = Math.random() * 2 - 1;
+        if (kind === "fire") {
+          br = (br + 0.02 * w) / 1.02; d[i] = br * 3.2;                         // low roar
+        } else {
+          lp += (w - lp) * 0.35; hp = lp - hp * 0.0; d[i] = lp * 0.22;            // steady hiss of rain
+        }
+      }
+      // drops (rain) or crackles and pops (fire)
+      const count = kind === "fire" ? 90 : 900;
+      for (let k = 0; k < count; k++) {
+        const at = Math.floor(Math.random() * (n - 4000)), big = Math.random() < (kind === "fire" ? 0.15 : 0.05);
+        const len = kind === "fire" ? (big ? 900 : 260) : 120, amp = kind === "fire" ? (big ? 0.55 : 0.22) : 0.05 + Math.random() * 0.08;
+        for (let j = 0; j < len; j++) d[at + j] += (Math.random() * 2 - 1) * amp * Math.exp(-j / (len / 5));
+      }
+      // fade the loop's ends together so it doesn't click
+      for (let i = 0; i < sr; i++) { const t = i / sr; d[i] *= t; d[n - 1 - i] *= t; }
+    }
+    return b;
+  }
+  const ambienceFiles = {};
+  function setAmbience() {
+    if (!fx.room) return;
+    const R = fx.room, want = R.on ? state.ambience : "off";
+    if (R.kind !== want) {
+      if (R.src) { try { R.src.stop(); } catch (e) {} R.src = null; }
+      if (R.el) { R.el.pause(); R.el = null; }
+      R.kind = want;
+      if (want !== "off") {
+        const file = SKIN.sounds && SKIN.sounds[want];
+        if (file && ambienceFiles[want] !== false) {
+          const el = new Audio(file); el.loop = true; el.crossOrigin = "anonymous";
+          el.addEventListener("error", () => { ambienceFiles[want] = false; R.kind = null; setAmbience(); }, { once: true });
+          try { ctx.createMediaElementSource(el).connect(R.amb); el.play().catch(() => {}); R.el = el; } catch (e) {}
+        } else {
+          const src = ctx.createBufferSource(); src.buffer = ambienceBuffer(want); src.loop = true;
+          const f = ctx.createBiquadFilter(); f.type = "lowpass"; f.frequency.value = want === "fire" ? 2600 : 5200;
+          src.connect(f); f.connect(R.amb); src.start(); R.src = src;
+        }
+      }
+    }
+    const room = roomFor(state.on ? state.station : null);
+    R.amb.gain.setTargetAtTime(room && want !== "off" ? room.ambience : 0, ctx.currentTime, 0.6);
+  }
+  function cycleAmbience() {
+    const order = ["rain", "fire", "off"];
+    state.ambience = order[(order.indexOf(state.ambience) + 1) % order.length];
+    store.set("ambience", state.ambience); setAmbience(); render();
+  }
+  // songs fade out over their last few seconds and fade in when they start
+  const FADE_OUT = 3, FADE_IN = 1.5;
+  setInterval(() => {
+    if (!fx.ready || state.phase !== "playing" || !audio.duration) return;
+    const rem = audio.duration - audio.currentTime;
+    if (rem < FADE_OUT) fx.fade.gain.setTargetAtTime(Math.max(0, rem / FADE_OUT), ctx.currentTime, 0.08);
+  }, 100);
+  function fadeIn() {
+    if (!fx.ready) return;
+    const g = fx.fade.gain, t = ctx.currentTime;
+    g.cancelScheduledValues(t); g.setValueAtTime(0.0001, t); g.linearRampToValueAtTime(1, t + FADE_IN);
   }
   function soundFor(st) { return Object.assign({}, SOUND, (st && st.sound) || {}); }
   function applySound() {
@@ -254,18 +366,18 @@
   function applyVolume() {
     const v = state.vol * sleepFade();
     if (fx.ready) fx.master.gain.setTargetAtTime(v, ctx.currentTime, 0.3); else audio.volume = v;
-    const lvl = { warming: 0.5, between: 0.8, lost: 0.25, gap: 0.08 }[state.phase] || 0;
+    const lvl = { warming: 0.5, between: 0.8, lost: 0.25 }[state.phase] || 0;   // "next" (between songs) and "gap" stay quiet
     setStatic(state.on ? lvl : 0);
   }
 
   let lostTimer = 0;
-  function play() {
+  function play(reason) {
     clearTimeout(lostTimer);
     const st = state.station;
     if (!state.on || !st) return;
     const now = at(st);
     const src = now.track.src;
-    setPhase("warming");
+    setPhase(reason === "next" ? "next" : "warming");
     const seek = () => {
       const fresh = at(st);
       if (fresh.track.src !== src) return play();
@@ -289,9 +401,9 @@
     setPhase("gap");
     lostTimer = setTimeout(play, Math.max(500, now.left * 1000 + 300));
   }
-  audio.addEventListener("playing", () => { audio.dataset.retried = ""; if (state.on && state.station) setPhase("playing"); });
-  audio.addEventListener("waiting", () => { if (state.phase === "playing") setPhase("warming"); });
-  audio.addEventListener("ended", () => play());
+  audio.addEventListener("playing", () => { audio.dataset.retried = ""; if (state.on && state.station) { if (state.phase !== "playing") fadeIn(); setPhase("playing"); } });
+  audio.addEventListener("waiting", () => { if (state.phase === "playing") setPhase("next"); });
+  audio.addEventListener("ended", () => play("next"));
   audio.addEventListener("error", () => {
     if (!state.on || !state.station || !audio.dataset.src) return;
     if (!audio.dataset.retried) { audio.dataset.retried = "1"; audio.dataset.src = ""; setTimeout(play, 800); return; }   // one retry first
@@ -315,7 +427,7 @@
     initAudio();
     if (ctx && ctx.state === "suspended") ctx.resume();
     state.on = on == null ? !state.on : on;
-    if (!state.on) { audio.pause(); clearTimeout(lostTimer); state.phase = "off"; applyVolume(); render(); presenceUpdate(); return; }
+    if (!state.on) { audio.pause(); clearTimeout(lostTimer); state.phase = "off"; routeRoom(); applyVolume(); render(); presenceUpdate(); return; }
     retune(true);
   }
   function retune(force) {
@@ -325,6 +437,7 @@
     state.station = st;
     if (st && location.hash !== "#" + st.id) { try { history.replaceState(null, "", "#" + st.id); } catch (e) {} }
     if (!state.on) { render(); return; }
+    routeRoom();
     if (!st) { audio.pause(); clearTimeout(lostTimer); setPhase("between"); return; }
     play();
   }
@@ -351,6 +464,49 @@
   (SKIN.fonts || []).forEach(f => {
     try { new FontFace(f.family, `url("${f.src}")`).load().then(ff => { document.fonts.add(ff); fitAllText(); }).catch(() => {}); } catch (e) {}
   });
+
+  /* ---------- built-in 1950s looks: shown until your own art is in the art folder ---------- */
+  const PALETTE = ["#b23a2a", "#2f7f7a", "#d6a03c", "#3b5b8c", "#8a4a6b", "#5f7a3a"];
+  function starburst(color, rays = 12, op = 1) {
+    let lines = "";
+    for (let i = 0; i < rays; i++) {
+      const a = (i / rays) * Math.PI * 2, r = i % 2 ? 26 : 46;
+      lines += `<line x1="50" y1="50" x2="${(50 + Math.cos(a) * r).toFixed(1)}" y2="${(50 + Math.sin(a) * r).toFixed(1)}"/>`;
+    }
+    return `<svg viewBox="0 0 100 100" aria-hidden="true" style="opacity:${op}"><g stroke="${color}" stroke-width="2.4" stroke-linecap="round">${lines}</g><circle cx="50" cy="50" r="6" fill="${color}"/></svg>`;
+  }
+  const LOOKS = {
+    walnut: () => "",
+    grain: () => "",
+    paper: () => "",
+    listings: () => "",
+    strip: () => "",
+    cabinet: () => `<span class="lk-trim"></span>`,
+    logo: () => `<span class="lk-logo">${esc(SKIN.name || "Old Time Radio")}</span><span class="lk-tag">${esc(SKIN.tagline || "Always on · from the Internet Archive")}</span>`,
+    power: () => `<span class="lk-btn-face"><span class="lk-power-icon"></span></span><span class="lk-btn-label">On · Off</span>`,
+    "lamp-on": () => "",
+    "lamp-off": () => "",
+    knob: () => `<span class="lk-knob-face"><span class="lk-knob-mark"></span></span>`,
+    "chan-up": () => `<span class="lk-chan">▲ <small>Channel</small></span>`,
+    "chan-down": () => `<span class="lk-chan">▼ <small>Channel</small></span>`,
+    tvset: () => `<span class="lk-tv-badge">Tele-Vue</span>`,
+    star: () => starburst("#d6a03c", 12, 0.9)
+  };
+  function makeLook(name, L) {
+    const f = LOOKS[name]; if (!f) return null;
+    const d = document.createElement("div");
+    d.className = "look look-" + name;
+    d.innerHTML = f(L);
+    return d;
+  }
+  function stationCardLook(st, i) {
+    const d = document.createElement("div");
+    d.className = "look look-card";
+    d.style.setProperty("--c", st.color || PALETTE[i % PALETTE.length]);
+    d.innerHTML = `<span class="lc-star">${starburst("rgba(243,230,204,.55)", 14)}</span>` +
+      `<span class="lc-num">Channel ${esc(st.num)}</span><span class="lc-name">${esc(st.name)}</span><span class="lc-group">${esc(st.group || "")}</span>`;
+    return d;
+  }
 
   /* ---------- building the stage ---------- */
   const els = new Map();
@@ -448,6 +604,7 @@
           const holder = document.createElement("div"); holder.className = "card"; holder.dataset.station = s.id;
           const img = makeImg(s.card || "", ok => { holder.classList.toggle("missing", !ok); });
           holder.appendChild(img);
+          holder.appendChild(stationCardLook(s, STATIONS.indexOf(s))); holder.classList.add("has-look");
           holder.appendChild(templateLabel({ id: s.name + " card", w: L.w, h: L.h }, s.card));
           el.appendChild(holder); rec.cards[s.id] = holder;
         });
@@ -457,8 +614,13 @@
       } else if (L.src) {
         rec.img = makeImg(L.src, ok => { rec.ok = ok; el.classList.toggle("missing", !ok); });
         el.appendChild(rec.img);
+        if (L.look) { const lk = makeLook(L.look, L); if (lk) { el.appendChild(lk); el.classList.add("has-look"); rec.look = lk; } }
         el.appendChild(templateLabel(L, L.src));
         el.classList.add("missing");
+      } else if (L.look) {
+        const lk = makeLook(L.look, L); if (lk) { el.appendChild(lk); rec.look = lk; }
+        el.classList.add("has-look", "missing");
+        el.appendChild(templateLabel(L, "(built-in look)"));
       } else {
         el.appendChild(templateLabel(L, ""));
       }
@@ -483,6 +645,7 @@
         v("--g-line", L.line || "rgba(233,220,195,.16)"); v("--g-hi", L.highlight || "#f0b44c");
         v("--g-block", L.block || "rgba(233,220,195,.06)"); v("--g-sel", L.selected || "rgba(240,180,76,.14)");
         v("--g-row", (L.rowHeight || 54) + "px"); v("--g-lab", (L.labelWidth || 300) + "px");
+        v("--g-paper", L.paper); v("--g-label-font", L.labelFont ? `"${L.labelFont}", "Arial Narrow", sans-serif` : null);
       }
       if (L.type === "ticker") {
         const t = el.firstChild;
@@ -499,6 +662,7 @@
         t.style.lineHeight = L.lineHeight || 1.2;
         t.style.textTransform = L.uppercase ? "uppercase" : "none";
         t.style.letterSpacing = L.spacing ? L.spacing + "px" : "";
+        t.style.fontWeight = L.weight || "";
       }
     });
     fitAllText();
@@ -539,6 +703,7 @@
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
       case "clean": return state.clean === false ? WORDS.cleanOff : WORDS.cleanOn;
+      case "ambience": return WORDS["amb_" + state.ambience] || "";
       case "sleep": return state.sleepEnd ? WORDS.sleepOn.replace("{min}", Math.max(1, Math.ceil((state.sleepEnd - Date.now()) / 60000))) : WORDS.sleepOff;
       case "tv.title": { const n = tvAt(); return n ? n.c.title + (n.c.date ? ", " + n.c.date : "") : ""; }
       case "station.listeners": {
@@ -814,7 +979,8 @@
       } else if (type === "knob") {
         const [a, b] = L.turn || [-140, 140];
         const v = L.bind === "volume" ? state.vol : state.dial;
-        (rec.img || el).style.transform = `rotate(${a + (b - a) * v}deg)`;
+        const spin = rec.ok ? rec.img : (rec.look ? rec.look.firstElementChild || rec.look : rec.img || el);
+        if (spin) spin.style.transform = `rotate(${a + (b - a) * v}deg)`;
       } else if (type === "guide") {
         renderGuide(rec);
       } else if (type === "ad") {
@@ -851,6 +1017,7 @@
         if (a === "power") power();
         else if (a === "clean") toggleClean();
         else if (a === "sleep") cycleSleep();
+        else if (a === "ambience") cycleAmbience();
         else if (a === "recent") openRecent();
         else if (a === "next") stepStation(1);
         else if (a === "prev") stepStation(-1);
@@ -1110,7 +1277,7 @@
   }
 
   /* ---------- go ---------- */
-  window.RADIO = { state, fx, presence };   // handy for poking at it in the browser console
+  window.RADIO = { state, fx, presence, audio };   // handy for poking at it in the browser console
   build();
   fit();
   startPresence();

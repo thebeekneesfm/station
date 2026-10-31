@@ -3,11 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Radio</title>
+<title>Old Time Radio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;500;600&family=Yellowtail&display=swap">
 <style>
   :root {
     color-scheme: dark;
-    --ground: #171310;
+    --ground: #1a100b;
     --line: rgba(233, 220, 195, .38);
     --ink: rgba(233, 220, 195, .62);
     --sel: #f0b44c;
@@ -35,6 +38,72 @@
   .txt { width: 100%; height: 100%; overflow: hidden; white-space: pre-line; overflow-wrap: anywhere; }
 
 
+
+  /* ===== built-in 1950s looks (hidden once your own art loads) ===== */
+  :root { --walnut: #2a1a12; --walnut-2: #3d2619; --walnut-3: #5a3a26; --cream: #f2e6cc; --paper: #efe2c4; --ink: #2b1d14; --ink-2: #6b5443;
+          --red: #b23a2a; --teal: #2f7f7a; --mustard: #d6a03c; --brass: #c9a35a; }
+  .look { display: none; position: absolute; inset: 0; pointer-events: none; }
+  .missing > .look { display: block; }
+  .has-look.missing > .tpl { display: none; }
+  .editing .has-look.missing > .tpl { display: block; background: rgba(23,19,16,.25); }
+  .t-plate.missing.has-look { display: block; }
+
+  .look-walnut { background:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360'%3E%3Cg stroke='%23d6a03c' stroke-width='2' stroke-linecap='round' opacity='.09'%3E%3Cpath d='M60 40v40M40 60h40M46 46l28 28M74 46l-28 28'/%3E%3Cpath d='M250 120v24M238 132h24M241 123l18 18M259 123l-18 18'/%3E%3Cpath d='M150 250v56M122 278h56M130 258l40 40M170 258l-40 40'/%3E%3Cpath d='M320 300v18M311 309h18'/%3E%3C/g%3E%3Cg fill='%23d6a03c' opacity='.1'%3E%3Ccircle cx='60' cy='60' r='4'/%3E%3Ccircle cx='250' cy='132' r='3'/%3E%3Ccircle cx='150' cy='278' r='5'/%3E%3Ccircle cx='200' cy='40' r='2'/%3E%3Ccircle cx='30' cy='200' r='2'/%3E%3C/g%3E%3C/svg%3E"),
+      radial-gradient(120% 90% at 50% 0%, #4a2e1f 0%, #2a1a12 55%, #1a100b 100%); }
+  .look-grain { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .4 0 0 0 0 .3 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); opacity: .5; }
+  .look-logo { display: none; }
+  .missing > .look-logo { display: flex; flex-direction: column; justify-content: center; }
+  .lk-logo { font: 400 64px/0.95 "Yellowtail", cursive; color: var(--cream); text-shadow: 3px 3px 0 var(--red), 5px 5px 0 rgba(0,0,0,.35); white-space: nowrap; }
+  .lk-tag { font: 500 14px/1.2 "Oswald", "Arial Narrow", sans-serif; letter-spacing: .22em; text-transform: uppercase; color: var(--mustard); margin-top: 6px; padding-left: 6px; }
+  .look-cabinet { border-radius: 22px;
+      background: repeating-linear-gradient(92deg, rgba(0,0,0,.08) 0 3px, rgba(255,255,255,.025) 3px 7px, rgba(0,0,0,.05) 7px 12px),
+                  linear-gradient(180deg, #6a4329 0%, #4a2e1d 45%, #3a2316 100%);
+      box-shadow: 0 14px 30px rgba(0,0,0,.55), inset 0 2px 0 rgba(255,255,255,.12), inset 0 -3px 0 rgba(0,0,0,.35); }
+  .lk-trim { position: absolute; inset: 8px; border-radius: 16px; border: 2px solid rgba(201,163,90,.55); }
+  .look-paper { border-radius: 6px; background: radial-gradient(rgba(107,84,67,.09) 1px, transparent 1.2px) 0 0 / 6px 6px, var(--paper);
+      box-shadow: inset 0 0 0 1px rgba(43,29,20,.25), inset 0 0 40px rgba(107,84,67,.18), 0 3px 8px rgba(0,0,0,.35); }
+  .look-listings { border-radius: 4px; background: radial-gradient(rgba(107,84,67,.08) 1px, transparent 1.2px) 0 0 / 5px 5px, var(--paper);
+      box-shadow: 0 10px 28px rgba(0,0,0,.5), inset 0 0 0 1px rgba(43,29,20,.3); border-top: 10px solid var(--red); }
+  .look-strip { background: var(--red); box-shadow: inset 0 3px 0 var(--mustard), inset 0 6px 0 var(--red), inset 0 8px 0 rgba(242,230,204,.7); }
+  .look-power { display: none; }
+  .missing > .look-power { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+  .lk-btn-face { width: 70%; aspect-ratio: 1; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: radial-gradient(circle at 35% 30%, #fff8e8 0%, #ead9b6 45%, #c9b48c 100%); box-shadow: 0 0 0 4px var(--red), 0 0 0 7px #1a100b, 0 6px 12px rgba(0,0,0,.5); }
+  .lk-power-icon { width: 38%; aspect-ratio: 1; border-radius: 50%; border: 4px solid var(--red); border-top-color: transparent; position: relative; }
+  .lk-power-icon::after { content: ""; position: absolute; left: 50%; top: -30%; width: 4px; height: 55%; background: var(--red); transform: translateX(-50%); border-radius: 2px; }
+  .lk-btn-label, .lk-chan small { font: 500 12px/1 "Oswald", "Arial Narrow", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--cream); }
+  .look-lamp-on { border-radius: 50%; background: radial-gradient(circle at 40% 35%, #fff3c4, #f0b44c 45%, #b2661c); box-shadow: 0 0 14px 4px rgba(240,180,76,.65); }
+  .look-lamp-off { border-radius: 50%; background: radial-gradient(circle at 40% 35%, #6b4a2a, #3a2416); box-shadow: inset 0 0 0 2px rgba(0,0,0,.4); }
+  .lk-knob-face { position: absolute; inset: 0; border-radius: 50%;
+      background: radial-gradient(circle at 38% 32%, #fff8e8 0%, #e8d6b2 38%, #b99f74 75%, #8a7050 100%);
+      box-shadow: 0 0 0 5px rgba(26,16,11,.85), 0 8px 16px rgba(0,0,0,.55), inset 0 0 0 8px rgba(255,255,255,.08); transition: transform .08s linear; }
+  .lk-knob-face::before { content: ""; position: absolute; inset: 6%; border-radius: 50%;
+      background: repeating-conic-gradient(rgba(0,0,0,.14) 0 4deg, transparent 4deg 10deg); -webkit-mask: radial-gradient(circle, transparent 62%, #000 63%); mask: radial-gradient(circle, transparent 62%, #000 63%); }
+  .lk-knob-mark { position: absolute; left: 50%; top: 9%; width: 6px; height: 30%; margin-left: -3px; border-radius: 3px; background: var(--red); }
+  .look-chan-up, .look-chan-down { display: none; }
+  .missing > .look-chan-up, .missing > .look-chan-down { display: flex; align-items: center; justify-content: center; border-radius: 10px;
+      background: linear-gradient(180deg, #3e6f6b, #2a524f); box-shadow: 0 0 0 2px rgba(26,16,11,.8), 0 4px 8px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.2); }
+  .lk-chan { font: 600 20px/1 "Oswald", "Arial Narrow", sans-serif; color: var(--cream); display: flex; gap: 8px; align-items: center; }
+  .look-tvset { border-radius: 20px; border: 10px solid #24160f; box-shadow: inset 0 0 0 3px #120a06, inset 0 0 36px 8px rgba(0,0,0,.65), 0 10px 22px rgba(0,0,0,.55), 0 0 0 3px rgba(201,163,90,.55); }
+  .lk-tv-badge { position: absolute; right: 14px; top: -10px; transform: translateY(-50%); font: 400 15px/1 "Yellowtail", cursive; color: var(--brass); background: #24160f; padding: 1px 8px; border-radius: 8px; }
+  .t-tv { border-radius: 14px; }
+  .t-button { container-type: inline-size; }
+  @container (max-width: 110px) { .lk-chan small { display: none; } .lk-chan { font-size: 24px; } }
+  .look-card { border-radius: 10px; overflow: hidden; background: var(--c); color: var(--cream);
+      box-shadow: inset 0 0 0 4px rgba(242,230,204,.85), inset 0 0 0 7px var(--c), inset 0 0 0 8px rgba(242,230,204,.5), 0 8px 18px rgba(0,0,0,.45); }
+  .missing > .look-card { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 10%; box-sizing: border-box; gap: 4%; }
+  .lc-star { position: absolute; width: 85%; left: 7.5%; top: 7.5%; }
+  .lc-star svg, .look-star svg { width: 100%; height: auto; display: block; }
+  .lc-num { position: relative; font: 600 13px/1 "Oswald", "Arial Narrow", sans-serif; letter-spacing: .25em; text-transform: uppercase; }
+  .lc-name { position: relative; font: 400 34px/1 "Yellowtail", cursive; text-shadow: 2px 2px 0 rgba(0,0,0,.25); overflow-wrap: anywhere; }
+  .lc-group { position: relative; font: 500 10px/1 "Oswald", "Arial Narrow", sans-serif; letter-spacing: .3em; text-transform: uppercase; opacity: .8; }
+  .card .look-card { position: absolute; inset: 0; }
+  .g-name { font-family: var(--g-label-font, inherit); }
+  .g-head { background: var(--g-paper, var(--ground)); }
+  .t-text.hot .txt { cursor: pointer; }
+  .t-text.hot:hover .txt { text-decoration: underline; text-underline-offset: 3px; }
+
   /* the stage is drawn at full size and scaled into this frame */
   #frame { position: fixed; inset: 0; overflow: hidden; }
   /* phone layout scrolls instead of shrinking */
@@ -45,7 +114,7 @@
   .t-guide { font-size: var(--g-size); color: var(--g-ink); }
   .guide { position: absolute; inset: 0; overflow-y: auto; overflow-x: hidden; touch-action: pan-y; scrollbar-width: thin; scrollbar-color: var(--g-line) transparent; }
   .g-head, .g-row { display: flex; align-items: stretch; width: 100%; }
-  .g-head { position: sticky; top: 0; z-index: 2; height: 34px; background: var(--ground); border-bottom: 1px solid var(--g-line); color: var(--g-dim); font-size: .8em; }
+  .g-head { position: sticky; top: 0; z-index: 2; height: 34px; background: var(--g-paper, var(--ground)); border-bottom: 1px solid var(--g-line); color: var(--g-dim); font-size: .8em; }
   .g-lab { flex: 0 0 var(--g-lab); display: flex; align-items: center; gap: .6em; padding: 0 .7em; box-sizing: border-box; min-width: 0; }
   .g-line { position: relative; flex: 1; min-width: 0; }
   .g-tick { position: absolute; top: 0; bottom: 0; display: flex; align-items: center; padding-left: .5em; border-left: 1px solid var(--g-line); white-space: nowrap; }
@@ -198,12 +267,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261031e"></script>
-<script src="stations.js?v=20261031e"></script>
-<script src="config.js?v=20261031e"></script>
-<script src="ads.js?v=20261031e"></script>
-<script src="tv.js?v=20261031e"></script>
+<script src="skin.js?v=20261031f"></script>
+<script src="stations.js?v=20261031f"></script>
+<script src="config.js?v=20261031f"></script>
+<script src="ads.js?v=20261031f"></script>
+<script src="tv.js?v=20261031f"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261031e"></script>
+<script src="radio.js?v=20261031f"></script>
 </body>
 </html>

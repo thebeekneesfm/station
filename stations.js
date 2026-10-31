@@ -1424,6 +1424,393 @@ window.STATIONS = [
   ]
  },
  {
+  "id": "theater",
+  "name": "Theater",
+  "group": "Radio shows",
+  "blurb": "Hollywood stars in radio versions of the movies, and Orson Welles' Mercury Theatre.",
+  "card": "art/cards/theater.png",
+  "epoch": "2026-11-01T00:00:00-07:00",
+  "sound": {
+   "level": true,
+   "declick": 0.5,
+   "decrackle": 0.5,
+   "tone": 9000
+  },
+  "tracks": [
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-10-30%20-%2017%29%20War%20Of%20The%20Worlds.mp3",
+    "length": 3084.55,
+    "series": "The Mercury Theatre on the Air",
+    "title": "War Of The Worlds",
+    "date": "October 30, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/390917_AhWilderness.mp3",
+    "length": 2611.31,
+    "series": "The Campbell Playhouse",
+    "title": "Ah, Wilderness",
+    "date": "September 17, 1939",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460330_01_Jezebel.mp3",
+    "length": 1733.43,
+    "series": "Academy Award Theater",
+    "title": "Jezebel",
+    "date": "March 30, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-01-09_001_Stagecoach.mp3",
+    "length": 1795.19,
+    "series": "Screen Directors Playhouse",
+    "title": "Stagecoach",
+    "date": "January 9, 1949",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/360919_Hamlet_Part_1.mp3",
+    "length": 1326.16,
+    "series": "Columbia Workshop",
+    "title": "Hamlet Part 1",
+    "date": "September 19, 1936",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-07-11%20-%2001%29%20Dracula.mp3",
+    "length": 3346.16,
+    "series": "The Mercury Theatre on the Air",
+    "title": "Dracula",
+    "date": "July 11, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-01-07-509YouCameAlong.mp3",
+    "length": 3572.82,
+    "series": "Lux Radio Theatre",
+    "title": "You Came Along",
+    "date": "January 7, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_40-04-07_ep051_Vivacious_Lady.mp3",
+    "length": 1796.16,
+    "series": "Screen Guild Theater",
+    "title": "Vivacious Lady",
+    "date": "April 7, 1940",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/400121_TheCitadel.mp3",
+    "length": 3243.08,
+    "series": "The Campbell Playhouse",
+    "title": "Citadel",
+    "date": "January 21, 1940",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460504_06_Stagecoach.mp3",
+    "length": 1703.66,
+    "series": "Academy Award Theater",
+    "title": "Stagecoach",
+    "date": "May 4, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-05-08_018_Its_a_Wonderful_Life.mp3",
+    "length": 1785.78,
+    "series": "Screen Directors Playhouse",
+    "title": "It's a Wonderful Life",
+    "date": "May 8, 1949",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/370928_Alice_in_Wonderland.mp3",
+    "length": 1349.57,
+    "series": "Columbia Workshop",
+    "title": "Alice in Wonderland Part 1",
+    "date": "September 28, 1937",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-07-25%20-%2003%29%20A%20Tale%20Of%20Two%20Cities.mp3",
+    "length": 3572.63,
+    "series": "The Mercury Theatre on the Air",
+    "title": "A Tale Of Two Cities",
+    "date": "July 25, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-11-18-546Oss.mp3",
+    "length": 3508.03,
+    "series": "Lux Radio Theatre",
+    "title": "OSS",
+    "date": "November 18, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_42-04-12_ep112_Tight_Shoes.mp3",
+    "length": 1771.97,
+    "series": "Screen Guild Theater",
+    "title": "Tight Shoes",
+    "date": "April 12, 1942",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-02-10TheGreenGoddess.mp3",
+    "length": 3431.59,
+    "series": "The Campbell Playhouse",
+    "title": "Green Goddess",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460608_11_RugglesOfRedGap.mp3",
+    "length": 1690.86,
+    "series": "Academy Award Theater",
+    "title": "Ruggles Of Red Gap",
+    "date": "June 8, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-09-23_035_Dont_Trust_Your_Husband.mp3",
+    "length": 1791.92,
+    "series": "Screen Directors Playhouse",
+    "title": "Don't Trust Your Husband",
+    "date": "September 23, 1949",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/390810_Radio_Play_Saroyan.mp3",
+    "length": 1306.35,
+    "series": "Columbia Workshop",
+    "title": "Radio Play - Saroyan",
+    "date": "August 10, 1939",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-08-08%20-%2005%29%20Three%20Short%20Stories%20I%27m%20A%20Fool%2C%20The%20Open%20Window%20And%20My%20Little%20Boy.mp3",
+    "length": 3486.32,
+    "series": "The Mercury Theatre on the Air",
+    "title": "Three Short Stories",
+    "date": "August 8, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1947-12-01-592TheGhostAndMrsMuir.mp3",
+    "length": 3589.71,
+    "series": "Lux Radio Theatre",
+    "title": "The Ghost and Mrs Muir",
+    "date": "December 1, 1947",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_43-10-18_ep166_My_Sister_Eileen.mp3",
+    "length": 1777.66,
+    "series": "Screen Guild Theater",
+    "title": "My Sister Eileen",
+    "date": "October 18, 1943",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-05-26.ThingsWeHave.mp3",
+    "length": 3415.56,
+    "series": "The Campbell Playhouse",
+    "title": "The Things We Have",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460710_16_YoungMrLincoln.mp3",
+    "length": 1728.37,
+    "series": "Academy Award Theater",
+    "title": "Young Mr. Lincoln",
+    "date": "July 10, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_50-01-20_052_Mr_Lucky.mp3",
+    "length": 1792.94,
+    "series": "Screen Directors Playhouse",
+    "title": "Mr Lucky",
+    "date": "January 20, 1950",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/440523_Tel_Aviv.mp3",
+    "length": 1342.46,
+    "series": "Columbia Workshop",
+    "title": "Tel Aviv",
+    "date": "May 23, 1944",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-08-22%20-%2007%29%20The%20Affairs%20Of%20Anatole.mp3",
+    "length": 3626.03,
+    "series": "The Mercury Theatre on the Air",
+    "title": "The Affairs Of Anatole",
+    "date": "August 22, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1949-09-05-666Saigon.mp3",
+    "length": 3371.43,
+    "series": "Lux Radio Theatre",
+    "title": "Saigon",
+    "date": "September 5, 1949",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_44-10-30_ep218_Anna_Karenina.mp3",
+    "length": 1746.46,
+    "series": "Screen Guild Theater",
+    "title": "Anna Karenina",
+    "date": "October 30, 1944",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-11-05TheHurricane.mp3",
+    "length": 2680.55,
+    "series": "The Campbell Playhouse",
+    "title": "Hurricane",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460821_22_KeysOfTheKingdom.mp3",
+    "length": 1614.89,
+    "series": "Academy Award Theater",
+    "title": "Keys of the Kingdom",
+    "date": "August 21, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_50-05-26_070_Flamingo_Road.mp3",
+    "length": 1519.73,
+    "series": "Screen Directors Playhouse",
+    "title": "Flamingo Road",
+    "date": "May 26, 1950",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/460302_Slim.mp3",
+    "length": 1325.06,
+    "series": "Columbia Workshop",
+    "title": "Slim",
+    "date": "March 2, 1946",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-09-05%20-%2009%29%20The%20Man%20Who%20Was%20Thursday.mp3",
+    "length": 3444.52,
+    "series": "The Mercury Theatre on the Air",
+    "title": "The Man Who Was Thursday",
+    "date": "September 5, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1951-04-02-740WhereTheSidewalkEnds.mp3",
+    "length": 3358.97,
+    "series": "Lux Radio Theatre",
+    "title": "Where the Sidewalk Ends",
+    "date": "April 2, 1951",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_45-11-26_ep273_Biography_of_a_Bachelor_Girl.mp3",
+    "length": 1785.22,
+    "series": "Screen Guild Theater",
+    "title": "Biography of a Bachelor Girl",
+    "date": "November 26, 1945",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse40-01-14TheodoraGoesWild.mp3",
+    "length": 3398.67,
+    "series": "The Campbell Playhouse",
+    "title": "Theodora Goes Wild",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460925_27_GuestInTheHouse.mp3",
+    "length": 1749.48,
+    "series": "Academy Award Theater",
+    "title": "Guest in the House",
+    "date": "September 25, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-02-08_089_Lucky_Jordan.mp3",
+    "length": 3597.95,
+    "series": "Screen Directors Playhouse",
+    "title": "Lucky Jordan",
+    "date": "February 8, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/460728_Legend_in_Brocade.mp3",
+    "length": 1335.06,
+    "series": "Columbia Workshop",
+    "title": "Legend in Brocade",
+    "date": "July 28, 1946",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-10-09%20-%2014%29%20Hell%20On%20Ice.mp3",
+    "length": 3511.3,
+    "series": "The Mercury Theatre on the Air",
+    "title": "Hell On Ice",
+    "date": "October 9, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1953-02-23-817YoureMyEverything.mp3",
+    "length": 3408.51,
+    "series": "Lux Radio Theatre",
+    "title": "You're My Everything",
+    "date": "February 23, 1953",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_46-11-18_ep322_Blind_Alley.mp3",
+    "length": 2126.84,
+    "series": "Screen Guild Theater",
+    "title": "Blind Alley",
+    "date": "November 18, 1946",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse40-03-24JuneMoon.mp3",
+    "length": 3543.44,
+    "series": "The Campbell Playhouse",
+    "title": "June Moon",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_461030_32_Suspicion.mp3",
+    "length": 1522.84,
+    "series": "Academy Award Theater",
+    "title": "Suspicion",
+    "date": "October 30, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-06-07_106_The_Gunfighter.mp3",
+    "length": 3587.47,
+    "series": "Screen Directors Playhouse",
+    "title": "Gunfighter",
+    "date": "June 7, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/460928_The_Day_Baseball_Die.mp3",
+    "length": 1302.3,
+    "series": "Columbia Workshop",
+    "title": "Day Baseball Died",
+    "date": "September 28, 1946",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   }
+  ]
+ },
+ {
   "id": "outwest",
   "name": "Out West",
   "group": "Radio shows",
@@ -3846,6 +4233,599 @@ window.STATIONS = [
     "title": "Anacin",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
+   }
+  ]
+ },
+ {
+  "id": "blues",
+  "name": "Blues",
+  "group": "Music",
+  "music": true,
+  "blurb": "Delta and country blues, 1920s to the '50s.",
+  "card": "art/cards/blues.png",
+  "epoch": "2026-11-01T00:00:00-07:00",
+  "sound": {
+   "level": true,
+   "declick": 0.9,
+   "decrackle": 0.9,
+   "tone": 6500
+  },
+  "tracks": [
+   {
+    "src": "https://archive.org/download/78_mighty-long-time_sonny-boy-williamson-his-harmonica--houserockers-s.-b.-williamson_gbia0001652a/Mighty%20Long%20Time%20-%20Sonny%20Boy%20Williamson%20His%20Harmonica%20%26%20Houserockers-restored.mp3",
+    "length": 176.18,
+    "series": "Sonny Boy Williamson His Harmonica & Houserockers",
+    "title": "Mighty Long Time",
+    "date": "1952",
+    "item": "https://archive.org/details/78_mighty-long-time_sonny-boy-williamson-his-harmonica--houserockers-s.-b.-williamson_gbia0001652a"
+   },
+   {
+    "src": "https://archive.org/download/78_sonny-boys-christmas-blues_sonny-boy-williamson_gbia0057732a/Sonny%20Boy%27s%20Christmas%20Blues%20-%20Sonny%20Boy%20Williamson.mp3",
+    "length": 159.0,
+    "series": "Sonny Boy Williamson",
+    "title": "Sonny Boy's Christmas Blues",
+    "date": "1951",
+    "item": "https://archive.org/details/78_sonny-boys-christmas-blues_sonny-boy-williamson_gbia0057732a"
+   },
+   {
+    "src": "https://archive.org/download/78_blues-in-my-soul_lonnie-johnson-john-davis_gbia0054494a/Blues%20in%20My%20Soul%20-%20Lonnie%20Johnson%20-%20John%20Davis.mp3",
+    "length": 178.0,
+    "series": "Lonnie Johnson",
+    "title": "Blues in My Soul",
+    "date": "1947",
+    "item": "https://archive.org/details/78_blues-in-my-soul_lonnie-johnson-john-davis_gbia0054494a"
+   },
+   {
+    "src": "https://archive.org/download/78_plain-old-down-home-blues_t-bone-walker-and-his-guitar-william-k-hadnott-willard-m_gbia0077353a/Plain%20Old%20Down%20Home%20Blues%20-%20T-Bone%20Walker%20and%20His%20Guitar.mp3",
+    "length": 193.0,
+    "series": "T-Bone Walker and His Guitar",
+    "title": "Plain Old Down Home Blues",
+    "date": "1948",
+    "item": "https://archive.org/details/78_plain-old-down-home-blues_t-bone-walker-and-his-guitar-william-k-hadnott-willard-m_gbia0077353a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PONTIAC.MP3",
+    "length": 27.1,
+    "series": "A word from our sponsor",
+    "title": "Pontiac",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_graveyard-dream-blues_ida-cox-lovie-austin-and-her-blues-serenaders-tommy-ladnier-j_gbia0385232a/GRAVEYARD%20DREAM%20BLUES%20-%20Ida%20Cox%20-%20Lovie%20Austin%20and%20her%20Blues%20Serenaders.mp3",
+    "length": 183.24,
+    "series": "Ida Cox",
+    "title": "Graveyard Dream Blues",
+    "date": "1923",
+    "item": "https://archive.org/details/78_graveyard-dream-blues_ida-cox-lovie-austin-and-her-blues-serenaders-tommy-ladnier-j_gbia0385232a"
+   },
+   {
+    "src": "https://archive.org/download/Blind_Lemon_Jefferson_Grave_Kept_Clean/Blind_Lemon_Jefferson_Grave_Kept_Clean.mp3",
+    "length": 173.0,
+    "series": "Blind Lemon Jefferson",
+    "title": "See That My Grave Is Kept Clean",
+    "date": "1928",
+    "item": "https://archive.org/details/Blind_Lemon_Jefferson_Grave_Kept_Clean"
+   },
+   {
+    "src": "https://archive.org/download/78_bad-women-noted-rider-big-fat-woman-borrow-love-and-go_lead-belly_gbia8001615/01%20-%20BAD%20MAN%20John%20Hardy%20-%20LEAD%20BELLY.mp3",
+    "length": 259.9,
+    "series": "Lead Belly",
+    "title": "BAD MAN John Hardy",
+    "date": "1946",
+    "item": "https://archive.org/details/78_bad-women-noted-rider-big-fat-woman-borrow-love-and-go_lead-belly_gbia8001615"
+   },
+   {
+    "src": "https://archive.org/download/78_t-bone-boogie_t-bone-walker-marl-youngs-orchestra-t-bone-walker-c-glenn_gbia0059633b/T-Bone%20Boogie%20-%20T-Bone%20Walker%20-%20Marl%20Young%27s%20Orchestra.mp3",
+    "length": 188.0,
+    "series": "T-Bone Walker",
+    "title": "T-Bone Boogie",
+    "date": "1945",
+    "item": "https://archive.org/details/78_t-bone-boogie_t-bone-walker-marl-youngs-orchestra-t-bone-walker-c-glenn_gbia0059633b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/REYNOLDSALUMINUM.mp3",
+    "length": 36.23,
+    "series": "A word from our sponsor",
+    "title": "Reynolds Aluminum",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_long-way-from-texas_lightnin-hopkins_gbia0061636b/Long%20Way%20from%20Texas%20-%20Lightnin%27%20Hopkins.mp3",
+    "length": 194.0,
+    "series": "Lightnin' Hopkins",
+    "title": "Long Way from Texas",
+    "date": "1951",
+    "item": "https://archive.org/details/78_long-way-from-texas_lightnin-hopkins_gbia0061636b"
+   },
+   {
+    "src": "https://archive.org/download/07-mississippi-john-hurt-frankie/01%20-%20Mississippi%20John%20Hurt%20-%20Ain%27t%20No%20Tellin%27.mp3",
+    "length": 176.0,
+    "series": "Mississippi John Hurt",
+    "title": "Ain't No Tellin'",
+    "date": "1928",
+    "item": "https://archive.org/details/07-mississippi-john-hurt-frankie"
+   },
+   {
+    "src": "https://archive.org/download/memphisminnielookingtheworldover/Looking%20The%20World%20Over.mp3",
+    "length": 158.0,
+    "series": "Memphis Minnie",
+    "title": "Looking The World Over",
+    "date": "1941",
+    "item": "https://archive.org/details/memphisminnielookingtheworldover"
+   },
+   {
+    "src": "https://archive.org/download/78_a-conch-aint-got-no-bone_blind-blake-and-his-royal-victoria-calypsos-blind-blake-b_gbia0484772a/A%20CONCH%20AIN%27T%20GOT%20NO%20BONE%20-%20BLIND%20BLAKE%20And%20His%20Royal%20Victoria%20Calypsos.mp3",
+    "length": 158.0,
+    "series": "Blind Blake and His Royal Victoria Calypsos",
+    "title": "A Conch Ain't Got No Bone",
+    "date": "1953",
+    "item": "https://archive.org/details/78_a-conch-aint-got-no-bone_blind-blake-and-his-royal-victoria-calypsos-blind-blake-b_gbia0484772a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/VIMMSVITAMINS.mp3",
+    "length": 21.64,
+    "series": "A word from our sponsor",
+    "title": "Vimms Vitamins",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_she-brought-life-back-to-the-dead_sonny-boy-williamson-and-his-house-rockers-w-w_gbia0057166a/She%20Brought%20-%20%22Sonny%20Boy%22%20Williamson%20and%20His%20House%20Rockers.mp3",
+    "length": 161.0,
+    "series": "\"Sonny Boy\" Williamson and His House Rockers",
+    "title": "She Brought Life Back to the Dead",
+    "date": "1951",
+    "item": "https://archive.org/details/78_she-brought-life-back-to-the-dead_sonny-boy-williamson-and-his-house-rockers-w-w_gbia0057166a"
+   },
+   {
+    "src": "https://archive.org/download/78_world-of-trouble_memphis-minnie-and-her-combo-e-lawlars_gbia0063832b/World%20of%20Trouble%20-%20Memphis%20Minnie%20and%20Her%20Combo.mp3",
+    "length": 190.0,
+    "series": "Memphis Minnie and Her Combo",
+    "title": "World of Trouble",
+    "date": "1953",
+    "item": "https://archive.org/details/78_world-of-trouble_memphis-minnie-and-her-combo-e-lawlars_gbia0063832b"
+   },
+   {
+    "src": "https://archive.org/download/78_hastings-street_charlie-spand-blind-blake-spand_gbia0385215b/%22HASTINGS%20STREET%22%20-%20CHARLIE%20SPAND%20-%20BLIND%20BLAKE.mp3",
+    "length": 198.02,
+    "series": "Charlie Spand",
+    "title": "hastings Street",
+    "date": "1929",
+    "item": "https://archive.org/details/78_hastings-street_charlie-spand-blind-blake-spand_gbia0385215b"
+   },
+   {
+    "src": "https://archive.org/download/78_blue-blood-blues_king-oliver-blind-willie-dunns-gin-bottle-four-eddie-lang-lonni_gbia0243621b/BLUE%20BLOOD%20BLUES%20-%20KING%20OLIVER%20-%20Blind%20Willie%20Dunn%27s%20Gin%20Bottle%20Four.mp3",
+    "length": 195.58,
+    "series": "King Oliver",
+    "title": "Blue Blood Blues",
+    "date": "1929",
+    "item": "https://archive.org/details/78_blue-blood-blues_king-oliver-blind-willie-dunns-gin-bottle-four-eddie-lang-lonni_gbia0243621b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
+    "length": 49.1,
+    "series": "A word from our sponsor",
+    "title": "Goodyear Lifeguard Tires",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/BigBillBabyIDoneGotWiseVocalion04706/Big%20Bill%20-%20Baby%20I%20Done%20Got%20Wise%20-%20Vocalion%2004706.mp3",
+    "length": 151.0,
+    "series": "Big Bill Broonzy",
+    "title": "I Done Got Wise",
+    "date": "1939",
+    "item": "https://archive.org/details/BigBillBabyIDoneGotWiseVocalion04706"
+   },
+   {
+    "src": "https://archive.org/download/78_house-of-the-rising-sun_josh-white-and-his-guitar_gbia0001628b/House%20Of%20The%20Rising%20Sun%20-%20Josh%20White%20and%20his%20Guitar-restored.mp3",
+    "length": 182.26,
+    "series": "Josh White and his Guitar",
+    "title": "House Of The Rising Sun",
+    "date": "1942",
+    "item": "https://archive.org/details/78_house-of-the-rising-sun_josh-white-and-his-guitar_gbia0001628b"
+   },
+   {
+    "src": "https://archive.org/download/78_milk-cow-blues_kokomo-arnold-arnold_gbia0050679a_item/Milk%20Cow%20Blues-Kokomo%20Arnold.mp3",
+    "length": 188.0,
+    "series": "Kokomo Arnold",
+    "title": "Milk Cow Blues",
+    "date": "1934",
+    "item": "https://archive.org/details/78_milk-cow-blues_kokomo-arnold-arnold_gbia0050679a_item"
+   },
+   {
+    "src": "https://archive.org/download/Original_Memphis_Five-Four_O_Clock_Blues/Original_Memphis_Five-Four_O_Clock_Blues-Vocalion-14506-1923.mp3",
+    "length": 170.0,
+    "series": "Original Memphis Five",
+    "title": "Four O'Clock Blues",
+    "date": "1923",
+    "item": "https://archive.org/details/Original_Memphis_Five-Four_O_Clock_Blues"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/DUPONT.MP3",
+    "length": 127.33,
+    "series": "A word from our sponsor",
+    "title": "Dupont",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_weary-way-blues_claude-luter-et-ses-lorientais-pierre-merlin-and-claude-rabanit-cla_gbia8004272/01%20-%20SWEET%20LOVIN%27%20MAN%20-%20CLAUDE%20LUTER%20et%20Ses%20Lorientais.mp3",
+    "length": 173.0,
+    "series": "Claude Luter Et Ses Lorientais",
+    "title": "Vive Le Jazz Hot!",
+    "date": "1948",
+    "item": "https://archive.org/details/78_weary-way-blues_claude-luter-et-ses-lorientais-pierre-merlin-and-claude-rabanit-cla_gbia8004272"
+   },
+   {
+    "src": "https://archive.org/download/Kansas_Joe_Memphis_Minnie-When_Levee_Breaks/Kansas_Joe_and_Memphis_Minnie-When_the_Levee_Breaks.mp3",
+    "length": 192.77,
+    "series": "Kansas Joe and Memphis Minnie",
+    "title": "When The Levee Breaks",
+    "date": "1929",
+    "item": "https://archive.org/details/Kansas_Joe_Memphis_Minnie-When_Levee_Breaks"
+   },
+   {
+    "src": "https://archive.org/download/78_weary-way-blues_claude-luter-et-ses-lorientais-hugues-panassie-ida-cox-lovie-austin_gbia0003973b/Weary%20Way%20Blues%20-%20Claude%20Luter%20et%20Ses%20Lorientais.mp3",
+    "length": 165.0,
+    "series": "Claude Luter et Ses Lorientais",
+    "title": "Weary Way Blues",
+    "date": "1946",
+    "item": "https://archive.org/details/78_weary-way-blues_claude-luter-et-ses-lorientais-hugues-panassie-ida-cox-lovie-austin_gbia0003973b"
+   },
+   {
+    "src": "https://archive.org/download/78_lonesome-old-feeling_bumble-bee-slim-a-easton_gbia0054552a/Lonesome%20Old%20Feeling%20-%20Bumble%20Bee%20Slim%20-%20A%20Easton.mp3",
+    "length": 184.0,
+    "series": "Bumble Bee Slim",
+    "title": "Lonesome Old Feeling",
+    "date": "1952",
+    "item": "https://archive.org/details/78_lonesome-old-feeling_bumble-bee-slim-a-easton_gbia0054552a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
+    "length": 49.71,
+    "series": "A word from our sponsor",
+    "title": "Creamo Cigars",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_hold-im-joe-jump-in-the-line-wheel-and-turn-me_blind-blake-and-his-royal-victoria_gbia0291709b/HOLD%20%27IM%20JOE%20-%20BLIND%20BLAKE%20and%20his%20Royal%20Victoria%20Calypsos.mp3",
+    "length": 187.18,
+    "series": "Blind Blake and His Royal Victoria Calypsos",
+    "title": "Hold 'IM Joe-jump in the Line-wheel and Turn ME",
+    "date": "1952",
+    "item": "https://archive.org/details/78_hold-im-joe-jump-in-the-line-wheel-and-turn-me_blind-blake-and-his-royal-victoria_gbia0291709b"
+   },
+   {
+    "src": "https://archive.org/download/louis-armstrong-and-his-orchestra-no-vocalion-3205-18882/Louis%20Armstrong%20And%20His%20Orchestra%20-%20No%20-%20Vocalion%203205%20%2818882%29.mp3",
+    "length": 172.25,
+    "series": "Louis Armstrong And His Orchestra",
+    "title": "No (Fox Trot)",
+    "date": "1936",
+    "item": "https://archive.org/details/louis-armstrong-and-his-orchestra-no-vocalion-3205-18882"
+   },
+   {
+    "src": "https://archive.org/download/Lucille_Hegamin-Everybodys_Blues/Lucille_Hegamin-Everybodys_Blues-Bell-P45-1920.mp3",
+    "length": 169.0,
+    "series": "Lucille Hegamin",
+    "title": "Everybody's Blues",
+    "date": "1920",
+    "item": "https://archive.org/details/Lucille_Hegamin-Everybodys_Blues"
+   },
+   {
+    "src": "https://archive.org/download/78_description-blues_t-bone-walker-and-his-guitar-willard-mcdaniel-oscar-bradley-bu_gbia0066438b/%22Description%20Blues%22%20-%20T-Bone%20Walker%20and%20his%20Guitar.mp3",
+    "length": 189.0,
+    "series": "T-Bone Walker and his Guitar",
+    "title": "Description Blues",
+    "date": "1949",
+    "item": "https://archive.org/details/78_description-blues_t-bone-walker-and-his-guitar-willard-mcdaniel-oscar-bradley-bu_gbia0066438b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATESHAVINGCREAM.mp3",
+    "length": 40.99,
+    "series": "A word from our sponsor",
+    "title": "Colgate Shaving Cream",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jazzbo-stomp_memphis-jug-band_gbia0366406b/JAZZBO%20STOMP%20-%20MEMPHIS%20JUG%20BAND.mp3",
+    "length": 182.4,
+    "series": "Memphis Jug Band",
+    "title": "Jazzbo Stomp",
+    "date": "1934",
+    "item": "https://archive.org/details/78_jazzbo-stomp_memphis-jug-band_gbia0366406b"
+   },
+   {
+    "src": "https://archive.org/download/78_hot-potatoes_johnny-dodds-blind-blake-j-bertrand_gbia0297187a/HOT%20POTATOES%20-%20JOHNNY%20DODDS%20-%20BLIND%20BLAKE.mp3",
+    "length": 185.59,
+    "series": "Johnny Dodds",
+    "title": "Hot Potatoes",
+    "date": "1946",
+    "item": "https://archive.org/details/78_hot-potatoes_johnny-dodds-blind-blake-j-bertrand_gbia0297187a"
+   },
+   {
+    "src": "https://archive.org/download/Mary_Stafford-Im_Gonna_Jazz_My_Way/Mary_Stafford_Im_Gonna_Jazz_My_Way-Columbia-A3390.mp3",
+    "length": 188.0,
+    "series": "Mary Stafford",
+    "title": "Im Gonna Jazz My Way",
+    "date": "1921",
+    "item": "https://archive.org/details/Mary_Stafford-Im_Gonna_Jazz_My_Way"
+   },
+   {
+    "src": "https://archive.org/download/78_no-worry-blues_t-bone-walker-and-his-guitar-jack-mcvea--all-stars-t-bone-and-baxte_gbia0001642a/No%20Worry%20Blues%20-%20T%20Bone%20Walker%20and%20his%20Guitar.mp3",
+    "length": 167.0,
+    "series": "T Bone Walker and his Guitar",
+    "title": "No Worry Blues",
+    "date": "1946",
+    "item": "https://archive.org/details/78_no-worry-blues_t-bone-walker-and-his-guitar-jack-mcvea--all-stars-t-bone-and-baxte_gbia0001642a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsFatimaCigarettes.mp3",
+    "length": 126.66,
+    "series": "A word from our sponsor",
+    "title": "Fatima Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/Leona_Williams-Struttin_Blues/Leona_Williams-Struttin_Blues.mp3",
+    "length": 162.0,
+    "series": "Leona Williams",
+    "title": "Struttin Blues",
+    "date": "1922",
+    "item": "https://archive.org/details/Leona_Williams-Struttin_Blues"
+   },
+   {
+    "src": "https://archive.org/download/78_pontiac-blues_sonny-boy-williamson_gbia0057732b/Pontiac%20Blues%20-%20Sonny%20Boy%20Williamson.mp3",
+    "length": 165.0,
+    "series": "Sonny Boy Williamson",
+    "title": "Pontiac Blues",
+    "date": "1951",
+    "item": "https://archive.org/details/78_pontiac-blues_sonny-boy-williamson_gbia0057732b"
+   },
+   {
+    "src": "https://archive.org/download/78_nothin-clicken-chicken_lonnie-johnson_gbia0001435a/Nothin%27%20Clicken%27%20Chicken%20-%20Lonnie%20Johnson.mp3",
+    "length": 158.0,
+    "series": "Lonnie Johnson",
+    "title": "Nothin' Clicken' Chicken",
+    "date": "1950",
+    "item": "https://archive.org/details/78_nothin-clicken-chicken_lonnie-johnson_gbia0001435a"
+   },
+   {
+    "src": "https://archive.org/download/78_blues-for-rampart-st_ida-cox-tommy-ladnier_gbia0191243b/BLUES%20FOR%20RAMPART%20ST.%20-%20IDA%20COX%20-%20Tommy%20Ladnier.mp3",
+    "length": 171.0,
+    "series": "Ida Cox",
+    "title": "Blues for Rampart St.",
+    "date": "1923",
+    "item": "https://archive.org/details/78_blues-for-rampart-st_ida-cox-tommy-ladnier_gbia0191243b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CARTERSLITTLELIVERPILLS.mp3",
+    "length": 47.62,
+    "series": "A word from our sponsor",
+    "title": "Carter's Little Liver Pills",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/Blind_Lemon_Jefferson_Bad_Luck_Blues/Blind_Lemon_Jefferson_Bad_Luck_Blues.mp3",
+    "length": 173.0,
+    "series": "Blind Lemon Jefferson",
+    "title": "Bad Luck Blues",
+    "date": "1926",
+    "item": "https://archive.org/details/Blind_Lemon_Jefferson_Bad_Luck_Blues"
+   },
+   {
+    "src": "https://archive.org/download/78_alabama-bound_lead-belly-woody-guthrie-cisco-houston_gbia0001538a/Alabama%20Bound%20-%20Lead%20Belly%20-%20Woody%20Guthrie-restored.mp3",
+    "length": 139.51,
+    "series": "Lead Belly",
+    "title": "Alabama Bound",
+    "date": "1946",
+    "item": "https://archive.org/details/78_alabama-bound_lead-belly-woody-guthrie-cisco-houston_gbia0001538a"
+   },
+   {
+    "src": "https://archive.org/download/78_tell-me-boogie_lightnin-hopkins_gbia0061636a/Tell%20Me%20Boogie%20-%20Lightnin%27%20Hopkins.mp3",
+    "length": 181.0,
+    "series": "Lightnin' Hopkins",
+    "title": "Tell Me Boogie",
+    "date": "1951",
+    "item": "https://archive.org/details/78_tell-me-boogie_lightnin-hopkins_gbia0061636a"
+   },
+   {
+    "src": "https://archive.org/download/78_gettin-out-of-town_sonny-boy-williamson-and-his-house-rockers-w-williamson_gbia0057166b/Gettin%27%20out%20of%20Town%20-%20%22Sonny%20Boy%22%20Williamson%20and%20His%20House%20Rockers.mp3",
+    "length": 148.0,
+    "series": "\"Sonny Boy\" Williamson and His House Rockers",
+    "title": "Gettin' out of Town",
+    "date": "1951",
+    "item": "https://archive.org/details/78_gettin-out-of-town_sonny-boy-williamson-and-his-house-rockers-w-williamson_gbia0057166b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsiCola.mp3",
+    "length": 33.38,
+    "series": "A word from our sponsor",
+    "title": "Pepsi Cola",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_kissing-in-the-dark_memphis-minnie-and-her-combo-e-lawlars_gbia0063832a/Kissing%20in%20the%20Dark%20-%20Memphis%20Minnie%20and%20Her%20Combo-restored.mp3",
+    "length": 146.88,
+    "series": "Memphis Minnie and Her Combo",
+    "title": "Kissing in the Dark",
+    "date": "1953",
+    "item": "https://archive.org/details/78_kissing-in-the-dark_memphis-minnie-and-her-combo-e-lawlars_gbia0063832a"
+   },
+   {
+    "src": "https://archive.org/download/78_jet-black-blues_king-oliver-blind-willie-dunns-gin-bottle-four-eddie-lang-lonnie_gbia0243621a/JET%20BLACK%20BLUES%20-%20KING%20OLIVER%20-%20Blind%20Willie%20Dunn%27s%20Gin%20Bottle%20Four.mp3",
+    "length": 198.24,
+    "series": "King Oliver",
+    "title": "Jet Black Blues",
+    "date": "1929",
+    "item": "https://archive.org/details/78_jet-black-blues_king-oliver-blind-willie-dunns-gin-bottle-four-eddie-lang-lonnie_gbia0243621a"
+   },
+   {
+    "src": "https://archive.org/download/BigBillJustADreamVocalion04706/Big%20Bill%20-%20Just%20A%20Dream%20-%20Vocalion%2004706.mp3",
+    "length": 154.0,
+    "series": "Big Bill Broonzy",
+    "title": "Just A Dream",
+    "date": "1938",
+    "item": "https://archive.org/details/BigBillJustADreamVocalion04706"
+   },
+   {
+    "src": "https://archive.org/download/78_old-original-kokomo-blues_kokomo-arnold-arnold_gbia0050679b_item/Old%20Original%20Kokomo%20Blues-Kokomo%20Arnold.mp3",
+    "length": 171.0,
+    "series": "Kokomo Arnold",
+    "title": "Old Original Kokomo Blues",
+    "date": "1934",
+    "item": "https://archive.org/details/78_old-original-kokomo-blues_kokomo-arnold-arnold_gbia0050679b_item"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/FORD.MP3",
+    "length": 87.16,
+    "series": "A word from our sponsor",
+    "title": "Ford",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_ida-red_bumble-bee-slim-a-easton_gbia0054552b/Ida%20Red%20-%20Bumble%20Bee%20Slim%20-%20A.%20Easton.mp3",
+    "length": 130.0,
+    "series": "Bumble Bee Slim",
+    "title": "Ida Red",
+    "date": "1952",
+    "item": "https://archive.org/details/78_ida-red_bumble-bee-slim-a-easton_gbia0054552b"
+   },
+   {
+    "src": "https://archive.org/download/78_dont-leave-me-baby_t-bone-walker-and-his-guitar-jack-mcvea--all-stars-t-bone-and_gbia0001642b/Don%27t%20Leave%20Me%20Baby%20-%20T%20Bone%20Walker%20and%20his%20Guitar.mp3",
+    "length": 173.0,
+    "series": "T Bone Walker and his Guitar",
+    "title": "Don't Leave Me Baby",
+    "date": "1946",
+    "item": "https://archive.org/details/78_dont-leave-me-baby_t-bone-walker-and-his-guitar-jack-mcvea--all-stars-t-bone-and_gbia0001642b"
+   },
+   {
+    "src": "https://archive.org/download/78_how-could-you-be-so-mean_lonnie-johnson-blind-john-davis_gbia0054528a/How%20Could%20You%20Be%20So%20Mean%20-%20Lonnie%20Johnson.mp3",
+    "length": 178.0,
+    "series": "Lonnie Johnson",
+    "title": "How Could You Be So Mean",
+    "date": "1946",
+    "item": "https://archive.org/details/78_how-could-you-be-so-mean_lonnie-johnson-blind-john-davis_gbia0054528a"
+   },
+   {
+    "src": "https://archive.org/download/Blind_Lemon_Jefferson_That_Crawlin_Baby_Blues/Blind_Lemon_Jefferson_That_Crawlin_Baby_Blues.mp3",
+    "length": 162.0,
+    "series": "Blind Lemon Jefferson",
+    "title": "That Crawlin' Baby Blues",
+    "date": "1928",
+    "item": "https://archive.org/details/Blind_Lemon_Jefferson_That_Crawlin_Baby_Blues"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POSTUM.MP3",
+    "length": 120.78,
+    "series": "A word from our sponsor",
+    "title": "Postum",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_aint-goin-down-to-the-well-no-mo-go-down-old-hannah_lead-belly_gbia0047555/03%20-%20Looky%2C%20Looky%2C%20Yonder%20Black%20Betty%20Yallow%20Wom%20-%20Lead%20Belly-restored.mp3",
+    "length": 184.0,
+    "series": "Lead Belly",
+    "title": "Looky, Looky, Yonder; Black Betty; Yallow Women's Door Bells",
+    "date": "1939",
+    "item": "https://archive.org/details/78_aint-goin-down-to-the-well-no-mo-go-down-old-hannah_lead-belly_gbia0047555"
+   },
+   {
+    "src": "https://archive.org/download/78_tap-dance-boogie_lightnin-hopkins_gbia0334374b/%22TAP%20DANCE%20BOOGIE%22%20-%20Lightnin%27%20Hopkins.mp3",
+    "length": 159.55,
+    "series": "Lightnin' Hopkins",
+    "title": "tap Dance Boogie",
+    "date": "1954",
+    "item": "https://archive.org/details/78_tap-dance-boogie_lightnin-hopkins_gbia0334374b"
+   },
+   {
+    "src": "https://archive.org/download/baby-i-done-got-wise/Baby%20I%20Done%20Got%20Wise.mp3",
+    "length": 152.0,
+    "series": "Big Bill Broonzy",
+    "title": "Baby I Done Got Wise",
+    "date": "1939",
+    "item": "https://archive.org/details/baby-i-done-got-wise"
+   },
+   {
+    "src": "https://archive.org/download/Blind_Lemon_Jefferson_Hot_Dogs/Blind_Lemon_Jefferson_Hot_Dogs.mp3",
+    "length": 179.0,
+    "series": "Blind Lemon Jefferson",
+    "title": "Hot Dogs",
+    "date": "1927",
+    "item": "https://archive.org/details/Blind_Lemon_Jefferson_Hot_Dogs"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
+    "length": 59.17,
+    "series": "A word from our sponsor",
+    "title": "Armour Hot Dogs",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_songs-by-lead-belly_lead-belly-sanders-terry_gbia8005779/01%20-%20AIN%27T%20YOU%20GLAD%20-%20LEAD%20BELLY%20-%20Sanders%20Terry.mp3",
+    "length": 131.0,
+    "series": "Lead Belly, Sanders Terry",
+    "title": "Ain't You Glad - Lead Belly - Sanders Terry",
+    "date": "1943",
+    "item": "https://archive.org/details/78_songs-by-lead-belly_lead-belly-sanders-terry_gbia8005779"
+   },
+   {
+    "src": "https://archive.org/download/78_grieving-blues_lightnin-hopkins-lightnin-hopkins-l-hopkins_gbia0408922b/%22GRIEVING%20BLUES%22%20-%20LIGHTNIN%27%20HOPKINS%20-%20Lightnin%27%20Hopkins.mp3",
+    "length": 157.3,
+    "series": "Lightnin' Hopkins",
+    "title": "grieving Blues",
+    "date": "1955",
+    "item": "https://archive.org/details/78_grieving-blues_lightnin-hopkins-lightnin-hopkins-l-hopkins_gbia0408922b"
+   },
+   {
+    "src": "https://archive.org/download/just-a-dream-no-2/Just%20a%20Dream%2C%20No%202.mp3",
+    "length": 170.0,
+    "series": "Big Bill Broonzy",
+    "title": "Just A Dream, No. 2",
+    "date": "1939",
+    "item": "https://archive.org/details/just-a-dream-no-2"
+   },
+   {
+    "src": "https://archive.org/download/Blind_Lemon_Jefferson_One_Dime_Blues/Blind_Lemon_Jefferson_One_Dime_Blues.mp3",
+    "length": 169.0,
+    "series": "Blind Lemon Jefferson",
+    "title": "One Dime Blues",
+    "date": "1927",
+    "item": "https://archive.org/details/Blind_Lemon_Jefferson_One_Dime_Blues"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
+    "length": 60.33,
+    "series": "A word from our sponsor",
+    "title": "Palmolive Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_de-kalb-blues_lead-belly_gbia0001543b/De%20Kalb%20Blues%20-%20LEad%20Belly-restored.mp3",
+    "length": 183.19,
+    "series": "Lead Belly",
+    "title": "De Kalb Blues",
+    "date": "1939",
+    "item": "https://archive.org/details/78_de-kalb-blues_lead-belly_gbia0001543b"
+   },
+   {
+    "src": "https://archive.org/download/78_you-caused-my-heart-to-weep_lightnin-hopkins_gbia0334374a/%22YOU%20CAUSED%20MY%20HEART%20TO%20WEEP%22%20-%20Lightnin%27%20Hopkins.mp3",
+    "length": 158.11,
+    "series": "Lightnin' Hopkins",
+    "title": "you Caused My Heart to Weep",
+    "date": "1954",
+    "item": "https://archive.org/details/78_you-caused-my-heart-to-weep_lightnin-hopkins_gbia0334374a"
    }
   ]
  },
@@ -7177,6 +8157,2070 @@ window.STATIONS = [
     "title": "Rich Man's Blues",
     "date": "1945",
     "item": "https://archive.org/details/78_rich-mans-blues_dinah-washington-lucky-thompson-and-his-all-stars-lucky-thompson-j_gbia0076161b"
+   }
+  ]
+ },
+ {
+  "id": "hawaiian",
+  "name": "Hawaiian & Exotica",
+  "group": "Music",
+  "music": true,
+  "blurb": "Steel guitars, island songs and exotica.",
+  "card": "art/cards/hawaiian.png",
+  "epoch": "2026-11-01T00:00:00-07:00",
+  "sound": {
+   "level": true,
+   "declick": 0.8,
+   "decrackle": 0.8,
+   "tone": 7500
+  },
+  "tracks": [
+   {
+    "src": "https://archive.org/download/78_my-little-grass-shack-in-kealakekua-hawaii_roy-smeck-wizard-of-the-strings-and_gbia0014550b/My%20L%20-%20Roy%20Smeck%20%28Wizard%20of%20the%20Strings%29%20and%20the%20Music%20Men.mp3",
+    "length": 176.0,
+    "series": "Roy Smeck",
+    "title": "My Little Grass Shack (In Kealakekua, Hawaii)",
+    "date": "1946",
+    "item": "https://archive.org/details/78_my-little-grass-shack-in-kealakekua-hawaii_roy-smeck-wizard-of-the-strings-and_gbia0014550b"
+   },
+   {
+    "src": "https://archive.org/download/tpickin1928/tpickin1928.mp3",
+    "length": 195.0,
+    "series": "Roy Smeck and Carson Robinson",
+    "title": "Tough Picking'",
+    "date": "1928",
+    "item": "https://archive.org/details/tpickin1928"
+   },
+   {
+    "src": "https://archive.org/download/78_sweet-hawaiian-moonlight_toots-paka-troupe-frost-klickman_gbia0011317a/Sweet%20Hawaiian%20Moonlight%20-%20Toots%20Paka%20Troupe.mp3",
+    "length": 182.0,
+    "series": "Toots Paka Troupe",
+    "title": "Sweet Hawaiian Moonlight",
+    "date": "1920",
+    "item": "https://archive.org/details/78_sweet-hawaiian-moonlight_toots-paka-troupe-frost-klickman_gbia0011317a"
+   },
+   {
+    "src": "https://archive.org/download/78_kawaihau-medley_toots-paka-hawaiian-company_gbia0004000a/Kawaihau%20%28Medley%29%20-%20Toots%20Paka%20Hawaiian%20Company.mp3",
+    "length": 212.0,
+    "series": "Toots Paka Hawaiian Company",
+    "title": "Kawaihau (Medley)",
+    "date": "1920",
+    "item": "https://archive.org/details/78_kawaihau-medley_toots-paka-hawaiian-company_gbia0004000a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BLUECOAL.MP3",
+    "length": 22.27,
+    "series": "A word from our sponsor",
+    "title": "Blue Coal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_you-are-like-a-beautiful-flower-makalapua_lani-mcintire-and-his-aloha-islanders-c_gbia0071959/01%20-%20Song%20of%20the%20Island%20-%20Lani%20McIntire%20and%20his%20Aloha%20Islanders.mp3",
+    "length": 205.0,
+    "series": "Lani McIntire and his Aloha Islanders",
+    "title": "Song of the Islands (Na Lei O Hawaii)",
+    "date": "1944",
+    "item": "https://archive.org/details/78_you-are-like-a-beautiful-flower-makalapua_lani-mcintire-and-his-aloha-islanders-c_gbia0071959"
+   },
+   {
+    "src": "https://archive.org/download/loc-jukebox-817329-apple-sauce/jukebox-817329_apple-sauce.mp3",
+    "length": 187.53,
+    "series": "Columbians Dance Orchestra De Luxe",
+    "title": "Apple sauce",
+    "date": "1923",
+    "item": "https://archive.org/details/loc-jukebox-817329-apple-sauce"
+   },
+   {
+    "src": "https://archive.org/download/78_youve-been-so-good-to-me-daddy_jeri-sullivan-the-les-baxter-quintet-and-johnny-whi_gbia0369161a/YOU%27VE%20BEEN%20SO%20GOOD%20TO%20ME%20DADDY%20-%20JERI%20SULLIVAN.mp3",
+    "length": 185.59,
+    "series": "Jeri Sullivan",
+    "title": "You've Been So Good to Me Daddy",
+    "date": "1948",
+    "item": "https://archive.org/details/78_youve-been-so-good-to-me-daddy_jeri-sullivan-the-les-baxter-quintet-and-johnny-whi_gbia0369161a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MARCHOFDIMES.mp3",
+    "length": 70.39,
+    "series": "A word from our sponsor",
+    "title": "March Of Dimes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_my-heart-cries-for-you_jimmy-wakely-the-les-baxter-chorus-percy-faith-carl-sigman_gbia7011233a/MY%20HEART%20CRIES%20FOR%20YOU%20-%20JIMMY%20WAKELY%20-%20The%20Les%20Baxter%20Chorus.mp3",
+    "length": 173.69,
+    "series": "Jimmy Wakely",
+    "title": "My Heart Cries for You",
+    "date": "1950",
+    "item": "https://archive.org/details/78_my-heart-cries-for-you_jimmy-wakely-the-les-baxter-chorus-percy-faith-carl-sigman_gbia7011233a"
+   },
+   {
+    "src": "https://archive.org/download/hawaiian-medley-two-step_202102/Hawaiian%20Medley%20Two-Step%20%28remix%202%29.mp3",
+    "length": 178.0,
+    "series": "Helen Louise - Frank Ferera",
+    "title": "Hawaiian Medley Two-Step",
+    "date": "1916",
+    "item": "https://archive.org/details/hawaiian-medley-two-step_202102"
+   },
+   {
+    "src": "https://archive.org/download/78_hawaiian-nights_hilo-hawaiian-orchestra-roberts_gbia0123157a/HAWAIIAN%20NIGHTS%20-%20Hilo-Hawaiian%20Orchestra.mp3",
+    "length": 176.0,
+    "series": "Hilo-Hawaiian Orchestra",
+    "title": "Hawaiian Nights",
+    "date": "1928",
+    "item": "https://archive.org/details/78_hawaiian-nights_hilo-hawaiian-orchestra-roberts_gbia0123157a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-five-hula-lessons_andy-iona-and-his-islanders-iona-shapiro_gbia0485768b/THE%20FIVE%20HULA%20LESSONS%20-%20ANDY%20IONA%20And%20His%20Islanders.mp3",
+    "length": 176.0,
+    "series": "Andy Iona and His Islanders",
+    "title": "The Five Hula Lessons",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-five-hula-lessons_andy-iona-and-his-islanders-iona-shapiro_gbia0485768b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROITANCIGARS.mp3",
+    "length": 15.56,
+    "series": "A word from our sponsor",
+    "title": "Roi-Tan Cigars",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_it-aint-gonna-rain-no-mo_al-bernard-frank-ferera-wendell-hall-and-fred-forster_gbia0022440a/It%20Ain%27t%20Gonna%20Rain%20No%20Mo%27%20-%20Al%20Bernard%20-%20Frank%20Ferera.mp3",
+    "length": 198.0,
+    "series": "Al Bernard",
+    "title": "It Ain't Gonna Rain No Mo'",
+    "date": "1924",
+    "item": "https://archive.org/details/78_it-aint-gonna-rain-no-mo_al-bernard-frank-ferera-wendell-hall-and-fred-forster_gbia0022440a"
+   },
+   {
+    "src": "https://archive.org/download/78_sweet-hawaiian-dreams_hilo-hawaiian-orchestra-arthur-coleman_gbia7001021a/SWEET%20HAWAIIAN%20DREAMS%20-%20HILO%20HAWAIIAN%20ORCHESTRA.mp3",
+    "length": 185.3,
+    "series": "Hilo Hawaiian Orchestra",
+    "title": "Sweet Hawaiian Dreams",
+    "date": "1926",
+    "item": "https://archive.org/details/78_sweet-hawaiian-dreams_hilo-hawaiian-orchestra-arthur-coleman_gbia7001021a"
+   },
+   {
+    "src": "https://archive.org/download/SolHoopiiNoveltyQuartette-DontStopLovingMe/Sol_Hoopii_Novelty_Quartette-Dont_Stop_Loving_Me-1933.mp3",
+    "length": 185.0,
+    "series": "Sol Hoopii Novelty Quartette",
+    "title": "Don't Stop Loving Me",
+    "date": "1933",
+    "item": "https://archive.org/details/SolHoopiiNoveltyQuartette-DontStopLovingMe"
+   },
+   {
+    "src": "https://archive.org/download/78_one-two-three-four_crescent-trio-ferera-franchini-kalama-alau_gbia0364071a/ONE%2C%20TWO%2C%20THREE%2C%20FOUR%20-%20CRESCENT%20TRIO%20-%20Ferera.mp3",
+    "length": 177.91,
+    "series": "Crescent Trio",
+    "title": "One, Two, Three, Four",
+    "date": "1920",
+    "item": "https://archive.org/details/78_one-two-three-four_crescent-trio-ferera-franchini-kalama-alau_gbia0364071a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
+    "length": 52.84,
+    "series": "A word from our sponsor",
+    "title": "Popsicle",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_tico-tico_les-baxter-trio-bernie-parke-leo-dukehorn-abreu-oliveira-drake_gbia0183501a/TICO%20TICO%20-%20LES%20BAXTER%20TRIO%20-%20Bernie%20Parke.mp3",
+    "length": 166.0,
+    "series": "Les Baxter Trio",
+    "title": "Tico Tico",
+    "date": "1949",
+    "item": "https://archive.org/details/78_tico-tico_les-baxter-trio-bernie-parke-leo-dukehorn-abreu-oliveira-drake_gbia0183501a"
+   },
+   {
+    "src": "https://archive.org/download/sweet-hawaiian-moonlight-tell-her-of-my-love/Sweet%20Hawaiian%20Moonlight%20%28Tell%20Her%20Of%20My%20Love%29.mp3",
+    "length": 157.42,
+    "series": "Ray Kinney And His Hawaiians",
+    "title": "Sweet Hawaiian Moonlight (Tell Her Of My Love)",
+    "date": "1939",
+    "item": "https://archive.org/details/sweet-hawaiian-moonlight-tell-her-of-my-love"
+   },
+   {
+    "src": "https://archive.org/download/78_linger-awhile_fletcher-henderson-and-his-orchestra-harry-owens-and-vincent-rose_gbia0083248b/Linger%20Awhile%20-%20Fletcher%20Henderson%20and%20His%20Orchestra.mp3",
+    "length": 243.0,
+    "series": "Fletcher Henderson and His Orchestra",
+    "title": "Linger Awhile",
+    "date": "1923",
+    "item": "https://archive.org/details/78_linger-awhile_fletcher-henderson-and-his-orchestra-harry-owens-and-vincent-rose_gbia0083248b"
+   },
+   {
+    "src": "https://archive.org/download/royal-hawaiian-hotel/Royal%20Hawaiian%20Hotel.mp3",
+    "length": 178.58,
+    "series": "Dick McIntire And His Harmony Hawaiians",
+    "title": "Royal Hawaiian Hotel",
+    "date": "1934",
+    "item": "https://archive.org/details/royal-hawaiian-hotel"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsTempoCigarettes.mp3",
+    "length": 59.74,
+    "series": "A word from our sponsor",
+    "title": "Tempo Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_hawaiian-hula-medley_mid-pacific-hawaiians-w-kalama_gbia0527415b/HAWAIIAN%20HULA%20MEDLEY%20-%20MID-PACIFIC%20HAWAIIANS.mp3",
+    "length": 243.0,
+    "series": "Mid-pacific Hawaiians",
+    "title": "Hawaiian Hula Medley",
+    "date": "1927",
+    "item": "https://archive.org/details/78_hawaiian-hula-medley_mid-pacific-hawaiians-w-kalama_gbia0527415b"
+   },
+   {
+    "src": "https://archive.org/download/the-four-king-sisters-ferry-boat-serenade-vocadance-rca-bluebird-b-10856-a/The%20Four%20King%20Sisters%20-%20Ferry-Boat%20Serenade-Vocadance%20-%20RCA%20Bluebird%20B-10856-A.mp3",
+    "length": 176.2,
+    "series": "Four King Sisters",
+    "title": "Ferry Boat Serenade - Vocadance",
+    "date": "1940",
+    "item": "https://archive.org/details/the-four-king-sisters-ferry-boat-serenade-vocadance-rca-bluebird-b-10856-a"
+   },
+   {
+    "src": "https://archive.org/download/MoanaOrchestra-TwoHawaiianFoxtrots/Moana_Orchestra-Aloha_Oe_Blues-1927.mp3",
+    "length": 200.0,
+    "series": "Moana Orchestra",
+    "title": "Two Hawaiian Foxtrots",
+    "date": "1927",
+    "item": "https://archive.org/details/MoanaOrchestra-TwoHawaiianFoxtrots"
+   },
+   {
+    "src": "https://archive.org/download/pathe-actuelle-x-9763-mendelssohn-schubert-andolfi-quartet/Path%C3%A9%20Actuelle%20X%209763%20%5BN%208924-1%5D%20Mendelssohn%20Quartet%20in%20Eb%20Op12%20%28ii%29%20Canzonetta%20Andolfi%20Quartet.mp3",
+    "length": 191.0,
+    "series": "Felix Mendelssohn",
+    "title": "Pathé Actuelle X 9763 Mendelssohn Op.12 Canzonetta, Schubert Moment musical No.3, Andolfi Quartet",
+    "date": "1929",
+    "item": "https://archive.org/details/pathe-actuelle-x-9763-mendelssohn-schubert-andolfi-quartet"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCheverolet.mp3",
+    "length": 67.99,
+    "series": "A word from our sponsor",
+    "title": "Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_one-two-three-four_criterion-quartet-ferrara-franchini-kalama_gbia0438926b/ONE-TWO-THREE-FOUR%20-%20CRITERION%20QUARTET%20-%20Ferrara%20%26%20Franchini.mp3",
+    "length": 184.99,
+    "series": "Criterion Quartet",
+    "title": "One-two-three-four",
+    "date": "1923",
+    "item": "https://archive.org/details/78_one-two-three-four_criterion-quartet-ferrara-franchini-kalama_gbia0438926b"
+   },
+   {
+    "src": "https://archive.org/download/78_kamehameha-march_helen-louise-and-frank-ferera_gbia0299588a/Kamehameha%20March%20-%20HELEN%20LOUISE%20AND%20FRANK%20FERERA.mp3",
+    "length": 195.41,
+    "series": "Helen Louise and Frank Ferera",
+    "title": "Kamehameha March",
+    "date": "1916",
+    "item": "https://archive.org/details/78_kamehameha-march_helen-louise-and-frank-ferera_gbia0299588a"
+   },
+   {
+    "src": "https://archive.org/download/hawaiian-vamp/Hawaiian%20Vamp.mp3",
+    "length": 183.26,
+    "series": "Lani McIntire - Orchestra",
+    "title": "Hawaiian Vamp",
+    "date": "1937",
+    "item": "https://archive.org/details/hawaiian-vamp"
+   },
+   {
+    "src": "https://archive.org/download/78_oua-oua_kanui-lula_gbia7015315a/OUA%2C%20OUA%20-%20KANUI%20%26%20LULA.mp3",
+    "length": 171.74,
+    "series": "Kanui & Lula",
+    "title": "Oua, Oua",
+    "date": "1933",
+    "item": "https://archive.org/details/78_oua-oua_kanui-lula_gbia7015315a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
+    "length": 14.08,
+    "series": "A word from our sponsor",
+    "title": "Colgate Tooth Powder",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/JohnnyNobleHawaiianMusic-IWentToHilo/Johnny_Noble_Hawaiian_Music-I_Went_To_Hilo-1928.mp3",
+    "length": 181.0,
+    "series": "Johnny Noble Hawaiian Music",
+    "title": "I Went To Hilo",
+    "date": "1928",
+    "item": "https://archive.org/details/JohnnyNobleHawaiianMusic-IWentToHilo"
+   },
+   {
+    "src": "https://archive.org/download/78_isle-of-golden-dreams_lani-mcintire-and-his-aloha-islanders_gbia0048548/07%20-%20Isle%20of%20Golden%20Dreams%20-%20Lani%20McIntire%20and%20his%20Aloha%20Islanders.mp3",
+    "length": 199.0,
+    "series": "Lani McIntire and his Aloha Islanders",
+    "title": "Isle of Golden Dreams",
+    "date": "1944",
+    "item": "https://archive.org/details/78_isle-of-golden-dreams_lani-mcintire-and-his-aloha-islanders_gbia0048548"
+   },
+   {
+    "src": "https://archive.org/download/TheOneRoseThatsLeftInMyHeart/The%20One%20Rose%20%28That%60s%20Left%20In%20My%20Heart%29.mp3",
+    "length": 189.0,
+    "series": "Dick McIntire`s Harmony Hawaiians - Lani McIntire",
+    "title": "The One Rose (That`s Left In My Heart)",
+    "date": "1936",
+    "item": "https://archive.org/details/TheOneRoseThatsLeftInMyHeart"
+   },
+   {
+    "src": "https://archive.org/download/AndyIonaAndHisIslanders-TwoSidesOfHawaiianSwing/Andy_Iona_and_His_Islanders-Minnehaha-1934.mp3",
+    "length": 184.0,
+    "series": "Andy Iona and His Islanders",
+    "title": "Two Sides of Hawaiian Swing",
+    "date": "1934",
+    "item": "https://archive.org/details/AndyIonaAndHisIslanders-TwoSidesOfHawaiianSwing"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
+    "length": 50.35,
+    "series": "A word from our sponsor",
+    "title": "Northwest Orient Airlines",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/HelenLouiseAndFrankFereraMyOldKentuckyHomeColumbia1814/Helen%20Louise%20And%20Frank%20Ferera%20-%20My%20Old%20Kentucky%20Home%20-%20Columbia%201814.mp3",
+    "length": 150.0,
+    "series": "Helen Louise And Frank Ferera",
+    "title": "My Old Kentucky Home",
+    "date": "1915",
+    "item": "https://archive.org/details/HelenLouiseAndFrankFereraMyOldKentuckyHomeColumbia1814"
+   },
+   {
+    "src": "https://archive.org/download/78_but-the-lord-is-mindful-of-his-own-_christine-miller-felix-mendelssohn_gbia0023324a/But%20the%20Lord%20is%20mindful%20of%20his%20own-%20-%20Christine%20Miller.mp3",
+    "length": 231.0,
+    "series": "Christine Miller",
+    "title": "But the Lord is mindful of his own",
+    "date": "1916",
+    "item": "https://archive.org/details/78_but-the-lord-is-mindful-of-his-own-_christine-miller-felix-mendelssohn_gbia0023324a"
+   },
+   {
+    "src": "https://archive.org/download/DickMcintiresHarmonyHawaiians-HoonaneaAndUluWehiOkaala/Dick_McIntires_Harmony_Hawaiians-Hoonanea-1934.mp3",
+    "length": 189.0,
+    "series": "Dick McIntire's Harmony Hawaiians",
+    "title": "Hoonanea and Ulu Wehi Okaala",
+    "date": "1934",
+    "item": "https://archive.org/details/DickMcintiresHarmonyHawaiians-HoonaneaAndUluWehiOkaala"
+   },
+   {
+    "src": "https://archive.org/download/78_cocoanut-grove_jay-edwards-harry-owens_gbia0025064b/Cocoanut%20Grove%20-%20Jay%20Edwards%20-%20Harry%20Owens.mp3",
+    "length": 214.0,
+    "series": "Jay Edwards",
+    "title": "Cocoanut Grove",
+    "date": "1953",
+    "item": "https://archive.org/details/78_cocoanut-grove_jay-edwards-harry-owens_gbia0025064b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCrestToothpaste.mp3",
+    "length": 61.97,
+    "series": "A word from our sponsor",
+    "title": "Crest Toothpaste",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/KukunaOKaLa/Kukuna%20O%20Ka%20La.mp3",
+    "length": 175.0,
+    "series": "Dick McIntire`s Harmony Hawaiians",
+    "title": "Kukuna Oka La",
+    "date": "1936",
+    "item": "https://archive.org/details/KukunaOKaLa"
+   },
+   {
+    "src": "https://archive.org/download/78_linger-awhile_al-trace-and-his-new-orchestra-bob-vincent-harry-owens-vincent-rose_gbia0358411a/LINGER%20AWHILE%20-%20AL%20TRACE%20And%20His%20New%20Orchestra.mp3",
+    "length": 180.82,
+    "series": "AL Trace and His New Orchestra",
+    "title": "Linger Awhile",
+    "date": "1948",
+    "item": "https://archive.org/details/78_linger-awhile_al-trace-and-his-new-orchestra-bob-vincent-harry-owens-vincent-rose_gbia0358411a"
+   },
+   {
+    "src": "https://archive.org/download/78_blue-rey_alvino-rey--orchestra_gbia0003333a/Blue%20Rey%20-%20Alvino%20Rey%20%26%20Orchestra.mp3",
+    "length": 154.0,
+    "series": "Alvino Rey & Orchestra",
+    "title": "Blue Rey",
+    "date": "1946",
+    "item": "https://archive.org/details/78_blue-rey_alvino-rey--orchestra_gbia0003333a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHIQUITABANANNA.mp3",
+    "length": 34.75,
+    "series": "A word from our sponsor",
+    "title": "Chiquita Banana",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/SolHoopiisNoveltyTrio-ThreeEarlyBluesForHawaiianGuitar/Sol_Hoopiis_Novelty_Trio-Farewell_Blues-1926.mp3",
+    "length": 174.0,
+    "series": "Sol Hoopii's Novelty Trio",
+    "title": "Three Early Blues for Hawaiian Guitar",
+    "date": "1926",
+    "item": "https://archive.org/details/SolHoopiisNoveltyTrio-ThreeEarlyBluesForHawaiianGuitar"
+   },
+   {
+    "src": "https://archive.org/download/78_fascinating-rhythm_joop-carlquists-kahulas-hawaiians-sol-hoopii_gbia7024335a/FASCINATING%20RHYTHM%20-%20Joop%20Carlquist%27s%20Kahula%27s%20Hawaiians.mp3",
+    "length": 169.0,
+    "series": "Joop Carlquist's Kahula's Hawaiians",
+    "title": "Fascinating Rhythm",
+    "date": "1941",
+    "item": "https://archive.org/details/78_fascinating-rhythm_joop-carlquists-kahulas-hawaiians-sol-hoopii_gbia7024335a"
+   },
+   {
+    "src": "https://archive.org/download/edison-bell-0172-tchaikovsky-mendelssohn-brosa-quartet/Edison%20Bell%200172%20%5B10940%5D%20Tchaikovsky-anon%20Chant%20sans%20paroles%20Op2%20No3%20Brosa%20Quartet.mp3",
+    "length": 166.0,
+    "series": "Pyotr Ilyich Tchaikovsky",
+    "title": "Edison Bell 0172 Tchaikovsky, Mendelssohn, Brosa Quartet",
+    "date": "1927",
+    "item": "https://archive.org/details/edison-bell-0172-tchaikovsky-mendelssohn-brosa-quartet"
+   },
+   {
+    "src": "https://archive.org/download/muliwai-hula/Muliwai%20Hula.mp3",
+    "length": 187.87,
+    "series": "Dick McIntire And His Harmony Hawaiians - Danny Kuanna",
+    "title": "Muliwai Hula",
+    "date": "1938",
+    "item": "https://archive.org/details/muliwai-hula"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROLSTONCEREAL.mp3",
+    "length": 35.84,
+    "series": "A word from our sponsor",
+    "title": "Ralston Cereal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/JohnnyNobleAndHisHawaiianMusicAmaAma1928/Johnny_Noble_and_his_Hawaiian_Music-Ama_Ama-1928.mp3",
+    "length": 159.0,
+    "series": "Johnny Noble",
+    "title": "And His Hawaiian Music - Ama Ama",
+    "date": "1928",
+    "item": "https://archive.org/details/JohnnyNobleAndHisHawaiianMusicAmaAma1928"
+   },
+   {
+    "src": "https://archive.org/download/edison-50713_01_7565/cusb_ed_50713_01_7565_0a.mp3",
+    "length": 222.0,
+    "series": "Harry Raderman's Jazz Orchestra",
+    "title": "The Hula Blues",
+    "date": "1920",
+    "item": "https://archive.org/details/edison-50713_01_7565"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ENERGINESHOEWHITE.mp3",
+    "length": 26.01,
+    "series": "A word from our sponsor",
+    "title": "Energine Shoe White",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/AndyIonaAndHisOrchestraInAndOldHawaiianVillageColumbia35843/Andy%20Iona%20And%20His%20Orchestra%20-%20In%20And%20Old%20Hawaiian%20Village%20-%20Columbia%2035843.mp3",
+    "length": 179.0,
+    "series": "Andy Iona And His Orchestra",
+    "title": "In And Old Hawaiian Village Columbia 35843",
+    "date": "1942",
+    "item": "https://archive.org/details/AndyIonaAndHisOrchestraInAndOldHawaiianVillageColumbia35843"
+   },
+   {
+    "src": "https://archive.org/download/dhawaii1923/dhawaii1923.mp3",
+    "length": 234.0,
+    "series": "Virginia Burt",
+    "title": "Dreamy Hawaiian Shore (With Vocal Steel Guitar Imitation)",
+    "date": "1923",
+    "item": "https://archive.org/details/dhawaii1923"
+   },
+   {
+    "src": "https://archive.org/download/alvino-rey-guitar-boogie/Alvino%20Rey%20-%20Guitar%20Boogie.mp3",
+    "length": 179.0,
+    "series": "Alvino REY - guitar",
+    "title": "Boogie",
+    "date": "1951",
+    "item": "https://archive.org/details/alvino-rey-guitar-boogie"
+   },
+   {
+    "src": "https://archive.org/download/78_hilo-march_louise-ferrara-greenus-pale-k-lua-david-kailor_gbia3026618a/HILO%20MARCH%20-%20LOUISE%20FERRARA%20%26%20GREENUS%20-%20Pale%20K.%20Lua%20%26%20David%20Kailor.mp3",
+    "length": 197.0,
+    "series": "Louise Ferrara & Greenus",
+    "title": "Hilo March",
+    "date": "1922",
+    "item": "https://archive.org/details/78_hilo-march_louise-ferrara-greenus-pale-k-lua-david-kailor_gbia3026618a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWingCigarettes.mp3",
+    "length": 32.99,
+    "series": "A word from our sponsor",
+    "title": "Wing Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_lovely-night_danny-mays-orch-roy-smeck-the-crackerjacks-smeck-kamile_gbia0057229/03%20-%20Lovin%27%20Time%20-%20Danny%20May%27s%20Orch.%20-%20Roy%20Smeck%20%26%20the%20Crackerjacks.mp3",
+    "length": 151.0,
+    "series": "Danny May's Orchestra",
+    "title": "Lovin' Time",
+    "date": "1952",
+    "item": "https://archive.org/details/78_lovely-night_danny-mays-orch-roy-smeck-the-crackerjacks-smeck-kamile_gbia0057229"
+   },
+   {
+    "src": "https://archive.org/download/78_drowsy-waters-wailana_lani-mcintire-and-his-aloha-islanders-lani-mcintire-michael_gbia0071974/01%20-%20Moonlight%20in%20Hawaii%20-%20Lani%20McIntire%20and%20his%20Aloha%20Islanders.mp3",
+    "length": 186.0,
+    "series": "Lani McIntire and his Aloha Islanders",
+    "title": "Moonlight in Hawaii",
+    "date": "1945",
+    "item": "https://archive.org/details/78_drowsy-waters-wailana_lani-mcintire-and-his-aloha-islanders-lani-mcintire-michael_gbia0071974"
+   },
+   {
+    "src": "https://archive.org/download/a2077bwaiululiluir14575679/A2077-B%20-%20Waiu%20Lulilui%20%5Br14575679%5D.mp3",
+    "length": 192.0,
+    "series": "Helen Louise, Frank Ferera, Sam Kainoa",
+    "title": "Waiu Lulilui",
+    "date": "1916",
+    "item": "https://archive.org/details/a2077bwaiululiluir14575679"
+   },
+   {
+    "src": "https://archive.org/download/78_de-ducks-done-got-me_al.-bernard-and-frank-ferera-bernard-ferera_gbia0012640a/De%20Ducks%20Done%20Got%20Me%20-%20Al.%20Bernard%20and%20Frank%20Ferera.mp3",
+    "length": 207.0,
+    "series": "Al. Bernard and Frank Ferera",
+    "title": "De Ducks Done Got Me",
+    "date": "1923",
+    "item": "https://archive.org/details/78_de-ducks-done-got-me_al.-bernard-and-frank-ferera-bernard-ferera_gbia0012640a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLowenbrauBeer.mp3",
+    "length": 56.53,
+    "series": "A word from our sponsor",
+    "title": "Löwenbräu Beer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/Irene_West_Royal_Hawaiians_Hawaiian_Waltz_Medly_Hawaiian_Guitar_Duet_/HawaiianWaltzMedly.mp3",
+    "length": 195.0,
+    "series": "Irene West Royal Hawaiians",
+    "title": "Hawaiian Waltz Medly Hawaiian Guitar Duet (Palie K. Lua-David K. Kaili of the Irene West Royal Hawaiians: Dec.16, 1914)",
+    "date": "1914",
+    "item": "https://archive.org/details/Irene_West_Royal_Hawaiians_Hawaiian_Waltz_Medly_Hawaiian_Guitar_Duet_"
+   },
+   {
+    "src": "https://archive.org/download/HawaiinHulaMedley/HawaiinHulaMedleyno2SouthSeaIslandersRegalZonophoneC20081.mp3",
+    "length": 185.73,
+    "series": "Helen Louis and Frank Ferera",
+    "title": "Hawaiin Hula Medley",
+    "date": "1927",
+    "item": "https://archive.org/details/HawaiinHulaMedley"
+   },
+   {
+    "src": "https://archive.org/download/a8542btoowonderfulforwordsjessestaffordraykinney/A8542B%20Too%20Wonderful%20For%20Words%20-%20Jesse%20Stafford%20-%20Ray%20Kinney.mp3",
+    "length": 205.0,
+    "series": "Jesse Stafford - Ray Kinney",
+    "title": "Too Wonderful For Words - Jesse Stafford - Ray Kinney",
+    "date": "1929",
+    "item": "https://archive.org/details/a8542btoowonderfulforwordsjessestaffordraykinney"
+   },
+   {
+    "src": "https://archive.org/download/78_hawaiian-smiles_frank-ferera-dave-kaili-mary-earl_gbia0010600a/Hawaiian%20Smiles%20-%20Frank%20Ferera%20-%20Dave%20Kaili.mp3",
+    "length": 188.0,
+    "series": "Frank Ferera",
+    "title": "Hawaiian Smiles",
+    "date": "1920",
+    "item": "https://archive.org/details/78_hawaiian-smiles_frank-ferera-dave-kaili-mary-earl_gbia0010600a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDodge.mp3",
+    "length": 62.27,
+    "series": "A word from our sponsor",
+    "title": "Dodge",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/in-the-royal-hawaiian-hotel/In%20The%20Royal%20Hawaiian%20Hotel.mp3",
+    "length": 186.96,
+    "series": "Dick McIntire - Harmony Hawaiians",
+    "title": "In The Royal Hawaiian Hotel",
+    "date": "1934",
+    "item": "https://archive.org/details/in-the-royal-hawaiian-hotel"
+   },
+   {
+    "src": "https://archive.org/download/78_the-anniversary-waltz_roy-smeck-wizard-of-the-strings-and-the-music-men-bob-houst_gbia0014550a/The%20Anniversary%20Waltz%20-%20Roy%20Smeck%20%28Wizard%20of%20the%20Strings%29%20and%20the%20Music%20Men.mp3",
+    "length": 155.0,
+    "series": "Roy Smeck",
+    "title": "The Anniversary Waltz",
+    "date": "1946",
+    "item": "https://archive.org/details/78_the-anniversary-waltz_roy-smeck-wizard-of-the-strings-and-the-music-men-bob-houst_gbia0014550a"
+   },
+   {
+    "src": "https://archive.org/download/78_beautiful-ohio-waltz_toots-paka-troupe-mary-earl_gbia0018340a/Beautiful%20Ohio%20Waltz%20-%20Toots%20Paka%20Troupe.mp3",
+    "length": 164.0,
+    "series": "Toots Paka Troupe",
+    "title": "Beautiful Ohio Waltz",
+    "date": "1920",
+    "item": "https://archive.org/details/78_beautiful-ohio-waltz_toots-paka-troupe-mary-earl_gbia0018340a"
+   },
+   {
+    "src": "https://archive.org/download/78_baby-wont-you-please-come-home_jeri-sullivan-the-les-baxter-quintet-and-johnny-wh_gbia0369161b/BABY%2C%20WON%27T%20YOU%20PLEASE%20COME%20HOME%20-%20JERI%20SULLIVAN.mp3",
+    "length": 166.37,
+    "series": "Jeri Sullivan",
+    "title": "Baby, Won't You Please Come Home",
+    "date": "1948",
+    "item": "https://archive.org/details/78_baby-wont-you-please-come-home_jeri-sullivan-the-les-baxter-quintet-and-johnny-wh_gbia0369161b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
+    "length": 49.41,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Health Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-roses-will-remember_andy-iona-and-his-islanders-iona-shapiro_gbia0485768a/THE%20ROSES%20WILL%20REMEMBER%20-%20ANDY%20IONA%20And%20His%20Islanders.mp3",
+    "length": 166.0,
+    "series": "Andy Iona and His Islanders",
+    "title": "The Roses Will Remember",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-roses-will-remember_andy-iona-and-his-islanders-iona-shapiro_gbia0485768a"
+   },
+   {
+    "src": "https://archive.org/download/78_me-no-speaks-good-english_al-bernard-frank-ferera-h-pease-ec-nelson-and-m-sche_gbia0022440b/Me%20No%20Speaks%20Good%20English%20-%20Al%20Bernard%20-%20Frank%20Ferera.mp3",
+    "length": 181.0,
+    "series": "Al Bernard",
+    "title": "Me No Speaks Good English",
+    "date": "1924",
+    "item": "https://archive.org/details/78_me-no-speaks-good-english_al-bernard-frank-ferera-h-pease-ec-nelson-and-m-sche_gbia0022440b"
+   },
+   {
+    "src": "https://archive.org/download/78_all-through-the-night_hilo-hawaiian-orchestra-york-clarke-vallee_gbia0120480b/ALL%20THROUGH%20THE%20NIGHT%20-%20Hilo%20Hawaiian%20Orchestra.mp3",
+    "length": 197.0,
+    "series": "Hilo Hawaiian Orchestra",
+    "title": "All Through the Night",
+    "date": "1930",
+    "item": "https://archive.org/details/78_all-through-the-night_hilo-hawaiian-orchestra-york-clarke-vallee_gbia0120480b"
+   },
+   {
+    "src": "https://archive.org/download/SolHoopiiNoveltyQuartette-ILikeYou/Sol_Hoopii_Novelty_Quartette-I_Like_You-1933.mp3",
+    "length": 192.0,
+    "series": "Sol Hoopii Novelty Quartette",
+    "title": "I Like You",
+    "date": "1933",
+    "item": "https://archive.org/details/SolHoopiiNoveltyQuartette-ILikeYou"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
+    "length": 86.85,
+    "series": "A word from our sponsor",
+    "title": "Sal Hepatica",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_night-and-day_les-baxter-trio-bernie-parke-leo-dukehorn-cole-porter_gbia0183501b/NIGHT%20AND%20DAY%20-%20LES%20BAXTER%20TRIO%20-%20Bernie%20Parke.mp3",
+    "length": 157.0,
+    "series": "Les Baxter Trio",
+    "title": "Night and Day",
+    "date": "1949",
+    "item": "https://archive.org/details/78_night-and-day_les-baxter-trio-bernie-parke-leo-dukehorn-cole-porter_gbia0183501b"
+   },
+   {
+    "src": "https://archive.org/download/pagan-love-song/Pagan%20Love%20Song.mp3",
+    "length": 172.3,
+    "series": "Ray Kinney And His Hawaiians",
+    "title": "Pagan Love Song",
+    "date": "1940",
+    "item": "https://archive.org/details/pagan-love-song"
+   },
+   {
+    "src": "https://archive.org/download/the-four-king-sisters-ill-get-by-vocadance-rca-bluebird-b-10856-b/The%20Four%20King%20Sisters%20-%20I%27ll%20Get%20By-Vocadance%20-%20RCA%20Bluebird%20B-10856-B.mp3",
+    "length": 186.96,
+    "series": "Four King Sisters",
+    "title": "I'll Get By (As Long As I Have You)",
+    "date": "1940",
+    "item": "https://archive.org/details/the-four-king-sisters-ill-get-by-vocadance-rca-bluebird-b-10856-b"
+   },
+   {
+    "src": "https://archive.org/download/salabert-3242-tchaikovsky-andante-cantabile-mendelssohn-spring-song-krettly-quintet/Salabert%203242%20%5BSS%201115%5D%20Mendelssohn-Salabert%20Spring%20Song%20Op62%20No6%20Krettly%20Quintet.mp3",
+    "length": 145.0,
+    "series": "Felix Mendelssohn",
+    "title": "Salabert 3242 Mendelssohn Spring Song, Tchaikovsky Andante cantabile, Krettly Quintet",
+    "date": "1933",
+    "item": "https://archive.org/details/salabert-3242-tchaikovsky-andante-cantabile-mendelssohn-spring-song-krettly-quintet"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PEPSI.MP3",
+    "length": 42.47,
+    "series": "A word from our sponsor",
+    "title": "Pepsi",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_my-sweet-sweeting-waltz_helen-louise-and-frank-ferera-peters_gbia0083423a/My%20Sweet%20Sweeting%20Waltz%20-%20Helen%20Louise%20and%20Frank%20Ferera.mp3",
+    "length": 206.0,
+    "series": "Helen Louise and Frank Ferera",
+    "title": "My Sweet Sweeting Waltz",
+    "date": "1916",
+    "item": "https://archive.org/details/78_my-sweet-sweeting-waltz_helen-louise-and-frank-ferera-peters_gbia0083423a"
+   },
+   {
+    "src": "https://archive.org/download/78_tomi-tomi_kanui-lula_gbia7015315b/TOMI%2C%20TOMI%20-%20KANUI%20%26%20LULA.mp3",
+    "length": 175.82,
+    "series": "Kanui & Lula",
+    "title": "Tomi, Tomi",
+    "date": "1933",
+    "item": "https://archive.org/details/78_tomi-tomi_kanui-lula_gbia7015315b"
+   },
+   {
+    "src": "https://archive.org/download/78_farewell-to-thee-aloha-oe_lani-mcintire-and-his-aloha-islanders_gbia0014428a/Farewell%20to%20Thee%20%28Aloha%20Oe%29%20-%20Lani%20McIntire%20and%20his%20Aloha%20Islanders.mp3",
+    "length": 186.0,
+    "series": "Lani McIntire and his Aloha Islanders",
+    "title": "Farewell to Thee (Aloha Oe)",
+    "date": "~194",
+    "item": "https://archive.org/details/78_farewell-to-thee-aloha-oe_lani-mcintire-and-his-aloha-islanders_gbia0014428a"
+   },
+   {
+    "src": "https://archive.org/download/AndyIonaAndHisOrchestraIslandSerenadeColumbia35844/Andy%20Iona%20And%20His%20Orchestra%20-%20Island%20Serenade%20-%20Columbia%2035844.mp3",
+    "length": 161.0,
+    "series": "Andy Iona And His Orchestra",
+    "title": "Island Serenade Columbia 35844",
+    "date": "1940",
+    "item": "https://archive.org/details/AndyIonaAndHisOrchestraIslandSerenadeColumbia35844"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercials1957Chevrolet.mp3",
+    "length": 36.48,
+    "series": "A word from our sponsor",
+    "title": "1957 Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_till-we-meet-again_toots-paka-troupe-whiting_gbia0018340b/%27Till%20We%20Meet%20Again%20-%20Toots%20Paka%20Troupe%20-%20Whiting.mp3",
+    "length": 199.0,
+    "series": "Toots Paka Troupe",
+    "title": "'Till We Meet Again",
+    "date": "1920",
+    "item": "https://archive.org/details/78_till-we-meet-again_toots-paka-troupe-whiting_gbia0018340b"
+   },
+   {
+    "src": "https://archive.org/download/78_aloha-oe-farewell-to-thee_hilo-hawaiian-orchestra-queen-liliuokalani_gbia7000862a/ALOHA%20OE%21%20%28FAREWELL%20TO%20THEE%29%20-%20HILO%20HAWAIIAN%20ORCHESTRA.mp3",
+    "length": 164.04,
+    "series": "Hilo Hawaiian Orchestra",
+    "title": "Aloha Oe! (farewell to Thee)",
+    "date": "1930",
+    "item": "https://archive.org/details/78_aloha-oe-farewell-to-thee_hilo-hawaiian-orchestra-queen-liliuokalani_gbia7000862a"
+   },
+   {
+    "src": "https://archive.org/download/SolHoopiiNoveltyQuartette-KingKamehameha/Sol_Hoopii_Novelty_Quartette-King_Kamehameha-1934.mp3",
+    "length": 184.0,
+    "series": "Sol Hoopii Novelty Quartette",
+    "title": "King Kamehameha",
+    "date": "1934",
+    "item": "https://archive.org/details/SolHoopiiNoveltyQuartette-KingKamehameha"
+   },
+   {
+    "src": "https://archive.org/download/the-four-king-sisters-java-jive-vocadance-rca-bluebird-b-10746-b/The%20Four%20King%20Sisters%20-%20Java%20Jive-Vocadance%20-%20RCA%20Bluebird%20B-10746-B.mp3",
+    "length": 166.9,
+    "series": "Four King Sisters",
+    "title": "Java Jive - Vocadance",
+    "date": "1940",
+    "item": "https://archive.org/details/the-four-king-sisters-java-jive-vocadance-rca-bluebird-b-10746-b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/INTERNATIONALSTERLING.mp3",
+    "length": 95.28,
+    "series": "A word from our sponsor",
+    "title": "International Sterling",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_my-little-grass-shack-in-kealakekua_kanui-lula-b-cogswell-t-harrison-johnny-nob_gbia7035070a/MY%20LITTLE%20GRASS%20SHACK%20IN%20KEALAKEKUA%20-%20KANUI%20%26%20LULA.mp3",
+    "length": 170.0,
+    "series": "Kanui & Lula",
+    "title": "My Little Grass Shack in Kealakekua",
+    "date": "1934",
+    "item": "https://archive.org/details/78_my-little-grass-shack-in-kealakekua_kanui-lula-b-cogswell-t-harrison-johnny-nob_gbia7035070a"
+   },
+   {
+    "src": "https://archive.org/download/78_you-are-like-a-beautiful-flower-makalapua_lani-mcintire-and-his-aloha-islanders-c_gbia0020044/01%20-%20Song%20of%20the%20Island%20-%20Lani%20McIntire%20and%20his%20Aloha%20Islanders.mp3",
+    "length": 203.0,
+    "series": "Lani McIntire and his Aloha Islanders",
+    "title": "Song of the Islands (Na Lei O Hawaii)",
+    "date": "1944",
+    "item": "https://archive.org/details/78_you-are-like-a-beautiful-flower-makalapua_lani-mcintire-and-his-aloha-islanders-c_gbia0020044"
+   },
+   {
+    "src": "https://archive.org/download/78_kohala-march_toots-paka-troupe_gbia0011317b/Kohala%20March%20-%20Toots%20Paka%20Troupe.mp3",
+    "length": 184.0,
+    "series": "Toots Paka Troupe",
+    "title": "Kohala March",
+    "date": "1920",
+    "item": "https://archive.org/details/78_kohala-march_toots-paka-troupe_gbia0011317b"
+   },
+   {
+    "src": "https://archive.org/download/78_moana-chimes_hilo-hawaiian-orchestra-ferera-and-franchini-otto-motzan_gbia7000054b/MOANA%20CHIMES%20-%20HILO%20HAWAIIAN%20ORCHESTRA%20-%20Ferera%20and%20Franchini.mp3",
+    "length": 205.56,
+    "series": "Hilo Hawaiian Orchestra",
+    "title": "Moana Chimes",
+    "date": "1924",
+    "item": "https://archive.org/details/78_moana-chimes_hilo-hawaiian-orchestra-ferera-and-franchini-otto-motzan_gbia7000054b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BRISKTOOTHPASTE.mp3",
+    "length": 34.51,
+    "series": "A word from our sponsor",
+    "title": "Brisk Toothpaste",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   }
+  ]
+ },
+ {
+  "id": "sleepy",
+  "name": "Sleepy Time",
+  "group": "Music",
+  "music": true,
+  "blurb": "Slow waltzes, lullabies and sweet bands for drifting off. No commercials.",
+  "card": "art/cards/sleepy.png",
+  "epoch": "2026-11-01T00:00:00-07:00",
+  "sound": {
+   "level": true,
+   "declick": 0.8,
+   "decrackle": 0.8,
+   "tone": 6500
+  },
+  "tracks": [
+   {
+    "src": "https://archive.org/download/1933-USA-Archives-1933-09-07-Hal-Kemp-Orch-Its-Only-A-Paper-Moon/1933%28USA%29Archives19330907HalKempOrch-ItsOnlyAPaperMoon.mp3",
+    "length": 175.7,
+    "series": "Hal Kemp Orchestra",
+    "title": "It's Only a Paper Moonn",
+    "date": "1933",
+    "item": "https://archive.org/details/1933-USA-Archives-1933-09-07-Hal-Kemp-Orch-Its-Only-A-Paper-Moon"
+   },
+   {
+    "src": "https://archive.org/download/78_smoke-gets-in-your-eyes_ray-bloch-and-his-orchestra-fields-kern_gbia8000735/01%20-%20THE%20WAY%20YOU%20LOOK%20TONIGHT%20-%20RAY%20BLOCH%20and%20his%20Orchestra.mp3",
+    "length": 200.16,
+    "series": "Ray Bloch and His Orchestra",
+    "title": "The Way You Look Tonight",
+    "date": "1946",
+    "item": "https://archive.org/details/78_smoke-gets-in-your-eyes_ray-bloch-and-his-orchestra-fields-kern_gbia8000735"
+   },
+   {
+    "src": "https://archive.org/download/decca-24825-a-enjoy-yourself/Decca%2024825A%20-%20Enjoy%20Yourself%20-%203.0%20CT%20629N-12%20EQ.mp3",
+    "length": 198.69,
+    "series": "Guy Lombardo and His Royal Canadians",
+    "title": "Enjoy Yourself (It's Later Than You Think)",
+    "date": "1949",
+    "item": "https://archive.org/details/decca-24825-a-enjoy-yourself"
+   },
+   {
+    "src": "https://archive.org/download/78_the-lords-prayer_ralph-sigwald-horace-heidt-and-his-musical-knights-albert-hay-mal_gbia0010750a/The%20Lord%27s%20Prayer%20-%20Ralph%20Sigwald%20-%20Horace%20Heidt%20and%20His%20Musical%20Knights.mp3",
+    "length": 178.0,
+    "series": "Ralph Sigwald",
+    "title": "The Lord's Prayer",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-lords-prayer_ralph-sigwald-horace-heidt-and-his-musical-knights-albert-hay-mal_gbia0010750a"
+   },
+   {
+    "src": "https://archive.org/download/1936-USA-Archives-1936-02-13-Eddy-Duchin-Orch-Love-Is-Like-A-Cigarette/1936%28USA%29Archives19360213EddyDuchinOrch-LoveIsLikeACigarette.mp3",
+    "length": 192.99,
+    "series": "Eddy Duchin Orchestra",
+    "title": "Eddy Duchin Orch Love Is Like A Cigarette",
+    "date": "1936",
+    "item": "https://archive.org/details/1936-USA-Archives-1936-02-13-Eddy-Duchin-Orch-Love-Is-Like-A-Cigarette"
+   },
+   {
+    "src": "https://archive.org/download/78_my-rancho-rio-grande_shep-fields-and-his-orchestra-bob-johnstone-cindy-walker_gbia0072482b/My%20Rancho%20Rio%20Grande%20-%20Shep%20Fields%20and%20his%20Orchestra.mp3",
+    "length": 173.0,
+    "series": "Shep Fields and his Orchestra",
+    "title": "My Rancho Rio Grande",
+    "date": "1948",
+    "item": "https://archive.org/details/78_my-rancho-rio-grande_shep-fields-and-his-orchestra-bob-johnstone-cindy-walker_gbia0072482b"
+   },
+   {
+    "src": "https://archive.org/download/78_getting-sentimental-over-you_carmen-cavallaro_wave/cant%20we%20talk%20it%20over_carmen%20cavallaro.mp3",
+    "length": 159.0,
+    "series": "Carmen Cavallaro",
+    "title": "Getting Sentimental Over You Piano Solos",
+    "date": "1940",
+    "item": "https://archive.org/details/78_getting-sentimental-over-you_carmen-cavallaro_wave"
+   },
+   {
+    "src": "https://archive.org/download/78_lone-star-moon_shep-fields-and-his-rippling-rhythm-orchestra-bob-johnstone-and-grou_gbia0161456b/LONE%20STAR%20MOON%20-%20SHEP%20FIELDS%20and%20his%20RIPPLING%20RHYTHM%20ORCHESTRA.mp3",
+    "length": 176.04,
+    "series": "Shep Fields and His Rippling Rhythm Orchestra",
+    "title": "Lone Star Moon",
+    "date": "1948",
+    "item": "https://archive.org/details/78_lone-star-moon_shep-fields-and-his-rippling-rhythm-orchestra-bob-johnstone-and-grou_gbia0161456b"
+   },
+   {
+    "src": "https://archive.org/download/78_turkish-delight_ray-noble-and-his-new-mayfair-orchestra-kester-noble_gbia0192511b/TURKISH%20DELIGHT%20-%20RAY%20NOBLE%20AND%20HIS%20NEW%20MAYFAIR%20ORCHESTRA.mp3",
+    "length": 183.0,
+    "series": "Ray Noble and His New Mayfair Orchestra",
+    "title": "Turkish Delight",
+    "date": "1933",
+    "item": "https://archive.org/details/78_turkish-delight_ray-noble-and-his-new-mayfair-orchestra-kester-noble_gbia0192511b"
+   },
+   {
+    "src": "https://archive.org/download/78_my-buddy_sammy-kaye-and-his-swing-and-sway-orchestra-sammy-kaye-donaldson-kahn_gbia0185653b/MY%20BUDDY%20-%20SAMMY%20KAYE%20and%20his%20Swing%20and%20Sway%20ORCHESTRA.mp3",
+    "length": 178.0,
+    "series": "Sammy Kaye and His Swing and Sway Orchestra",
+    "title": "My Buddy",
+    "date": "1940",
+    "item": "https://archive.org/details/78_my-buddy_sammy-kaye-and-his-swing-and-sway-orchestra-sammy-kaye-donaldson-kahn_gbia0185653b"
+   },
+   {
+    "src": "https://archive.org/download/78_oh-helen-oh-elena_swing-and-sway-with-sammy-kaye-and-his-orchestra-the-three-kay_gbia0062460a/Oh%20Helen%21%20%28Oh%20Elena%29%20-%20Swing%20and%20Sway%20with%20Sammy%20Kaye%20and%20his%20Orchestra.mp3",
+    "length": 169.0,
+    "series": "Swing and Sway with Sammy Kaye and his Orchestra",
+    "title": "Oh Helen! (Oh Elena)",
+    "date": "1940",
+    "item": "https://archive.org/details/78_oh-helen-oh-elena_swing-and-sway-with-sammy-kaye-and-his-orchestra-the-three-kay_gbia0062460a"
+   },
+   {
+    "src": "https://archive.org/download/5120b5125aolmanriverpaulrobeson/5120b_5125a_Ol%27%20Man%20River%20-%20Paul%20Robeson.mp3",
+    "length": 243.0,
+    "series": "Paul Robeson - Victor Young",
+    "title": "Ol' Man River - Paul Robeson - Victor Young",
+    "date": "1932",
+    "item": "https://archive.org/details/5120b5125aolmanriverpaulrobeson"
+   },
+   {
+    "src": "https://archive.org/download/1929-USA-Archives-1929-03-11-Leo-Reisman-Casino-Royal-Orch-The-Wedding-Of-The-Painted-Doll/1929%28USA%29Archives19290311LeoReismanCasinoRoyalOrch-TheWeddingOfThePaintedDoll.mp3",
+    "length": 182.34,
+    "series": "Leo Reisman Casino Royal Orchestra",
+    "title": "Leo Reisman Casino Royal Orch The Wedding Of The Painted Doll",
+    "date": "1929",
+    "item": "https://archive.org/details/1929-USA-Archives-1929-03-11-Leo-Reisman-Casino-Royal-Orch-The-Wedding-Of-The-Painted-Doll"
+   },
+   {
+    "src": "https://archive.org/download/Victor_20105/%5B1926%5D%20Johnny%20Hamp%27s%20Kentucky%20Serenaders%20-%20That%27s%20Why%20I%20Love%20You%20Baby%3B%20Jan%20Garber%20%26%20His%20Orchestra%20-%20Baby%20Face%20%5BVictor%2020105%5D/%5BA1%5D%20Johnny%20Hamp%27s%20Kentucky%20Serenaders%20-%20That%27s%20Why%20I%20Love%20You%20Baby.mp3",
+    "length": 186.0,
+    "series": "Johnny Hamp’s Kentucky Serenaders",
+    "title": "That’s Why I Love You Baby / Baby Face",
+    "date": "1926",
+    "item": "https://archive.org/details/Victor_20105"
+   },
+   {
+    "src": "https://archive.org/download/23765ahumoresquer13933034/23765-A%20-%20Humoresque%20%5Br13933034%5D.mp3",
+    "length": 145.0,
+    "series": "Guy Lombardo And His Royal Canadians",
+    "title": "Humoresque",
+    "date": "1946",
+    "item": "https://archive.org/details/23765ahumoresquer13933034"
+   },
+   {
+    "src": "https://archive.org/download/victor-25651-a-got-a-date-with-an-angel/Victor%2025651A%20-%20Got%20a%20Date%20with%20an%20Angel%20-%203.0%20CT%20250N-8%20EQ.mp3",
+    "length": 136.36,
+    "series": "Hal Kemp and his Orchestra",
+    "title": "Got a Date with an Angel",
+    "date": "1937",
+    "item": "https://archive.org/details/victor-25651-a-got-a-date-with-an-angel"
+   },
+   {
+    "src": "https://archive.org/download/78_piano-concerto-in-b-flat_freddy-martin-and-his-orch.-tschaikowsy-ray-austin_gbia0009473b/Piano%20Concerto%20In%20B%20Flat%20-%20Freddy%20Martin%20and%20his%20Orch..mp3",
+    "length": 200.0,
+    "series": "Freddy Martin and his Orchestra",
+    "title": "Piano Concerto In B Flat",
+    "date": "1941",
+    "item": "https://archive.org/details/78_piano-concerto-in-b-flat_freddy-martin-and-his-orch.-tschaikowsy-ray-austin_gbia0009473b"
+   },
+   {
+    "src": "https://archive.org/download/78_go-to-sleep-go-to-sleep-go-to-sleep_dave-hamilton-joan-cherry-horace-heidt-and_gbia0038962b/Go%20to%20Sleep%2C%20Go%20to%20Sleep%2C%20Go%20-%20Dave%20Hamilton%20%26%20Joan%20Cherry.mp3",
+    "length": 204.0,
+    "series": "Dave Hamilton & Joan Cherry",
+    "title": "Go to Sleep, Go to Sleep, Go to Sleep",
+    "date": "1950",
+    "item": "https://archive.org/details/78_go-to-sleep-go-to-sleep-go-to-sleep_dave-hamilton-joan-cherry-horace-heidt-and_gbia0038962b"
+   },
+   {
+    "src": "https://archive.org/download/warsaw-concerto/Warsaw%20Concerto.mp3",
+    "length": 160.78,
+    "series": "Carmen  Cavallaro And His Orchestra",
+    "title": "Warsaw Concerto",
+    "date": "1945",
+    "item": "https://archive.org/details/warsaw-concerto"
+   },
+   {
+    "src": "https://archive.org/download/1935-USA-Archives-1935-04-17-Russ-Morgan-Orch-Tell-Me-That-You-Love-Me-Tonight/1935%28USA%29Archives19350417RussMorganOrch-TellMeThatYouLoveMeTonight.mp3",
+    "length": 172.51,
+    "series": "Russ Morgan Orchestra",
+    "title": "Russ Morgan Orch Tell Me That You Love Me Tonight",
+    "date": "1935",
+    "item": "https://archive.org/details/1935-USA-Archives-1935-04-17-Russ-Morgan-Orch-Tell-Me-That-You-Love-Me-Tonight"
+   },
+   {
+    "src": "https://archive.org/download/78_santiago-waltz_a.-corbin-peerless-orchestra_gbia0000855b/Santiago%20Waltz%20-%20A.%20Corbin%20-%20Peerless%20Orchestra-restored.mp3",
+    "length": 221.18,
+    "series": "A. Corbin",
+    "title": "Santiago Waltz",
+    "date": "1921",
+    "item": "https://archive.org/details/78_santiago-waltz_a.-corbin-peerless-orchestra_gbia0000855b"
+   },
+   {
+    "src": "https://archive.org/download/78_a-ghost-of-a-chance_the-bill-davison-six-wild-bill-davison-garvin-bushell-jimmy-arc_gbia0160344b/A%20GHOST%20OF%20A%20CHANCE%20-%20THE%20BILL%20DAVISON%20SIX.mp3",
+    "length": 173.14,
+    "series": "The Bill Davison Six",
+    "title": "A Ghost of a Chance",
+    "date": "1947",
+    "item": "https://archive.org/details/78_a-ghost-of-a-chance_the-bill-davison-six-wild-bill-davison-garvin-bushell-jimmy-arc_gbia0160344b"
+   },
+   {
+    "src": "https://archive.org/download/1933-USA-Archives-1933-09-22-Jan-Garber-Orch-Three-Of-Us/1933%28USA%29Archives19330922JanGarberOrch-ThreeOfUs.mp3",
+    "length": 173.64,
+    "series": "Jan Garber Orchestra",
+    "title": "Jan Garber Orch Three Of Us",
+    "date": "1933",
+    "item": "https://archive.org/details/1933-USA-Archives-1933-09-22-Jan-Garber-Orch-Three-Of-Us"
+   },
+   {
+    "src": "https://archive.org/download/78_arent-you-glad-youre-you_shep-fields-and-his-orchestra-meredith-blake-johnny-burk_gbia0079892b/Aren%27t%20You%20Glad%20You%27re%20You%20-%20Shep%20Fields%20and%20His%20Orchestra.mp3",
+    "length": 181.0,
+    "series": "Shep Fields and His Orchestra",
+    "title": "Aren't You Glad You're You",
+    "date": "1946",
+    "item": "https://archive.org/details/78_arent-you-glad-youre-you_shep-fields-and-his-orchestra-meredith-blake-johnny-burk_gbia0079892b"
+   },
+   {
+    "src": "https://archive.org/download/203872awaltzofthewindr14069382/20-3872-A%20-%20Waltz%20Of%20The%20Wind%20%5Br14069382%5D.mp3",
+    "length": 154.0,
+    "series": "Wayne King And His Orchestra",
+    "title": "20 3872 A Waltz Of The Wind",
+    "date": "1950",
+    "item": "https://archive.org/details/203872awaltzofthewindr14069382"
+   },
+   {
+    "src": "https://archive.org/download/78_siberian-sleigh-ride_hal-kemp-and-his-orchestra-raymond-scott_gbia7014944b/SIBERIAN%20SLEIGH%20RIDE%20-%20HAL%20KEMP%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 182.95,
+    "series": "Hal Kemp and His Orchestra",
+    "title": "Siberian Sleigh Ride",
+    "date": "1939",
+    "item": "https://archive.org/details/78_siberian-sleigh-ride_hal-kemp-and-his-orchestra-raymond-scott_gbia7014944b"
+   },
+   {
+    "src": "https://archive.org/download/78_brighter-than-the-sun-_ray-noble-and-his-orchestra-noble--anona-winn_gbia0002501b/Brighter%20Than%20The%20Sun%20%20-%20Ray%20Noble%20and%20his%20Orchestra.mp3",
+    "length": 164.0,
+    "series": "Ray Noble and his Orchestra",
+    "title": "Brighter Than The Sun",
+    "date": "1933",
+    "item": "https://archive.org/details/78_brighter-than-the-sun-_ray-noble-and-his-orchestra-noble--anona-winn_gbia0002501b"
+   },
+   {
+    "src": "https://archive.org/download/a-love-like-this/A%20Love%20Like%20This.mp3",
+    "length": 195.29,
+    "series": "Carmen Cavallaro And His Orchestra - Gloria Foster",
+    "title": "A Love Like This",
+    "date": "1945",
+    "item": "https://archive.org/details/a-love-like-this"
+   },
+   {
+    "src": "https://archive.org/download/78_missouri-waltz_lawrence-piano-roll-cook-shannon-eppel_gbia0073261b/Missouri%20Waltz%20-%20Lawrence%20%28Piano%20Roll%29%20Cook.mp3",
+    "length": 130.0,
+    "series": "Lawrence",
+    "title": "Missouri Waltz",
+    "date": "1950",
+    "item": "https://archive.org/details/78_missouri-waltz_lawrence-piano-roll-cook-shannon-eppel_gbia0073261b"
+   },
+   {
+    "src": "https://archive.org/download/78_just-a-gigolo_the-bill-davidon-six-wild-bill-davidson-garvin-bushell-jimmy-archey-r_gbia0092099/01%20-%20Why%20Was%20I%20Born%20-%20The%20Bill%20Davidon%20Six%20-%20Wild%20Bill%20Davidson.mp3",
+    "length": 212.0,
+    "series": "The Bill Davidon Six",
+    "title": "Why Was I Born",
+    "date": "1947",
+    "item": "https://archive.org/details/78_just-a-gigolo_the-bill-davidon-six-wild-bill-davidson-garvin-bushell-jimmy-archey-r_gbia0092099"
+   },
+   {
+    "src": "https://archive.org/download/78_i-dont-stand-a-ghost-of-a-chance_ernie-andrews-wilbert-baranco-trio-bing-crosby-vi_gbia0063441b/I%20Don%27t%20Stand%20a%20Ghost%20of%20a%20Chance%20-%20Ernie%20Andrews.mp3",
+    "length": 180.0,
+    "series": "Ernie Andrews",
+    "title": "I Don't Stand a Ghost of a Chance",
+    "date": "1945",
+    "item": "https://archive.org/details/78_i-dont-stand-a-ghost-of-a-chance_ernie-andrews-wilbert-baranco-trio-bing-crosby-vi_gbia0063441b"
+   },
+   {
+    "src": "https://archive.org/download/1931-USA-Archives-1931-02-18-Wayne-King-Orch-Dream-A-Little-Dream-Of-Me/1931%28USA%29Archives19310218WayneKingOrch-DreamALittleDreamOfMe.mp3",
+    "length": 201.22,
+    "series": "Wayne King Orchestra",
+    "title": "Wayne King Orch Dream A Little Dream Of Me",
+    "date": "1931",
+    "item": "https://archive.org/details/1931-USA-Archives-1931-02-18-Wayne-King-Orch-Dream-A-Little-Dream-Of-Me"
+   },
+   {
+    "src": "https://archive.org/download/columbia-36224-b-my-twilight-dream/Columbia%2036224B%20-%20My%20Twilight%20Dream%20-%203.0%20CT%20300N-16%20EQ.mp3",
+    "length": 208.72,
+    "series": "Eddy Duchin and his Orchestra",
+    "title": "My Twilight Dream",
+    "date": "1940",
+    "item": "https://archive.org/details/columbia-36224-b-my-twilight-dream"
+   },
+   {
+    "src": "https://archive.org/download/EmalineLawrenceWelk/Emaline%20-%20Lawrence%20Welk.mp3",
+    "length": 143.0,
+    "series": "Lawrence Welk",
+    "title": "Emaline - Lawrence Welk",
+    "date": "1938",
+    "item": "https://archive.org/details/EmalineLawrenceWelk"
+   },
+   {
+    "src": "https://archive.org/download/78_a-peruvian-triste-b-pan-american-waltz_carlos-valderrama_gbia0001886a/%28a%29%20Peruvian%20Triste%20%28b%29%20Pan-American%20Waltz%20-%20Carlos%20Valderrama-restored.mp3",
+    "length": 281.0,
+    "series": "Carlos Valderrama",
+    "title": "(a) Peruvian Triste; (b) Pan-American Waltz",
+    "date": "1920",
+    "item": "https://archive.org/details/78_a-peruvian-triste-b-pan-american-waltz_carlos-valderrama_gbia0001886a"
+   },
+   {
+    "src": "https://archive.org/download/TheVeryThoughtOfYouRayNobleAlBowlly/The%20Very%20Thought%20Of%20You%20-%20Ray%20Noble%20-%20Al%20Bowlly.mp3",
+    "length": 211.0,
+    "series": "Ray Noble - Al Bowlly",
+    "title": "The Very Thought Of You - Ray Noble - Al Bowlly",
+    "date": "1934",
+    "item": "https://archive.org/details/TheVeryThoughtOfYouRayNobleAlBowlly"
+   },
+   {
+    "src": "https://archive.org/download/78_what-a-diffrence-a-day-made_sammy-kaye-and-his-orchestra-nancy-norman-adamis-greve_gbia0278295c/WHAT%20A%20DIFF%27RENCE%20A%20DAY%20MADE%20-%20Sammy%20Kaye%20and%20his%20Orchestra.mp3",
+    "length": 229.85,
+    "series": "Sammy Kaye and his Orchestra",
+    "title": "What a Diff'rence a Day Made",
+    "date": "1944",
+    "item": "https://archive.org/details/78_what-a-diffrence-a-day-made_sammy-kaye-and-his-orchestra-nancy-norman-adamis-greve_gbia0278295c"
+   },
+   {
+    "src": "https://archive.org/download/EDIS-SRP-0197-09/EDIS-SRP-0197-09.mp3",
+    "length": 266.99,
+    "series": "Bellini Ensemble Unique",
+    "title": "Moonlight sonata",
+    "date": "1924",
+    "item": "https://archive.org/details/EDIS-SRP-0197-09"
+   },
+   {
+    "src": "https://archive.org/download/78_i-didnt-know-the-gun-was-loaded_the-pepperettes-horace-heidt-and-his-musical-kingh_gbia0035265a/I%20Didn%27t%20Know%20the%20Gun%20was%20Loaded%20-%20The%20Pepperettes.mp3",
+    "length": 178.0,
+    "series": "The Pepperettes",
+    "title": "I Didn't Know the Gun was Loaded",
+    "date": "1949",
+    "item": "https://archive.org/details/78_i-didnt-know-the-gun-was-loaded_the-pepperettes-horace-heidt-and-his-musical-kingh_gbia0035265a"
+   },
+   {
+    "src": "https://archive.org/download/78_call-me-darling-call-me-sweetheart-call-me-dear-yah-ta-ta-yah-ta-ta_the-king-si_gbia0423236a/CALL%20ME%20D%20-%20The%20King%20Sisters%2C%20Buddy%20Cole%20and%20his%20Orchestra.mp3",
+    "length": 324.87,
+    "series": "The King Sisters, Buddy Cole and his Orchestra",
+    "title": "Call Me Darling, Call Me Sweetheart, Call Me Dear; Yah-ta-ta, Yah-ta-ta",
+    "date": "1945",
+    "item": "https://archive.org/details/78_call-me-darling-call-me-sweetheart-call-me-dear-yah-ta-ta-yah-ta-ta_the-king-si_gbia0423236a"
+   },
+   {
+    "src": "https://archive.org/download/233249460660/Midnight%2C%20The%20Stars%20And%20You.mp3",
+    "length": 211.28,
+    "series": "Ray Noble And His Orchestra, Al Bowlly",
+    "title": "Midnight, The Stars And You",
+    "date": "1934",
+    "item": "https://archive.org/details/233249460660"
+   },
+   {
+    "src": "https://archive.org/download/ShowBoat-Selections1932/01.Overture.mp3",
+    "length": 261.15,
+    "series": "Victor Young and his Orchestra",
+    "title": "Overture",
+    "date": "1932",
+    "item": "https://archive.org/details/ShowBoat-Selections1932"
+   },
+   {
+    "src": "https://archive.org/download/78_baby-dont-be-mad-at-me_shep-fields-and-his-rippling-rhythm-orchestra-toni-arden-da_gbia0129218b/BABY%20DON%27T%20BE%20MAD%20AT%20ME%20-%20Shep%20Fields%20and%20his%20Rippling%20Rhythm%20Orchestra.mp3",
+    "length": 193.0,
+    "series": "Shep Fields and his Rippling Rhythm Orchestra",
+    "title": "Baby Don't Be Mad at Me",
+    "date": "1948",
+    "item": "https://archive.org/details/78_baby-dont-be-mad-at-me_shep-fields-and-his-rippling-rhythm-orchestra-toni-arden-da_gbia0129218b"
+   },
+   {
+    "src": "https://archive.org/download/78_in-a-little-carolina-town-en-un-pueblecito-de-carolina_guy-lombardo-his-royal-c_gbia0153458b/IN%20A%20LITTLE%20CAROLINA%20%20-%20Guy%20Lombardo%20%26%20his%20Royal%20Canadians.mp3",
+    "length": 181.0,
+    "series": "Guy Lombardo & his Royal Canadians",
+    "title": "IN a Little Carolina Town (En Un Pueblecito De Carolina)",
+    "date": "1937",
+    "item": "https://archive.org/details/78_in-a-little-carolina-town-en-un-pueblecito-de-carolina_guy-lombardo-his-royal-c_gbia0153458b"
+   },
+   {
+    "src": "https://archive.org/download/78_drowsy-waters-wailana_lani-mcintire-and-his-aloha-islanders-lani-mcintire-michael_gbia0071974/01%20-%20Moonlight%20in%20Hawaii%20-%20Lani%20McIntire%20and%20his%20Aloha%20Islanders.mp3",
+    "length": 186.0,
+    "series": "Lani McIntire and his Aloha Islanders",
+    "title": "Moonlight in Hawaii",
+    "date": "1945",
+    "item": "https://archive.org/details/78_drowsy-waters-wailana_lani-mcintire-and-his-aloha-islanders-lani-mcintire-michael_gbia0071974"
+   },
+   {
+    "src": "https://archive.org/download/78_theyre-either-too-young-or-too-old_jan-garber-and-his-orchestra-liz-tilton-loesser_gbia0061334b/They%27re%20Either%20Too%20Young%20or%20-%20Jan%20Garber%20and%20his%20Orchestra.mp3",
+    "length": 196.0,
+    "series": "Jan Garber and his Orchestra",
+    "title": "They're Either Too Young or Too Old",
+    "date": "1943",
+    "item": "https://archive.org/details/78_theyre-either-too-young-or-too-old_jan-garber-and-his-orchestra-liz-tilton-loesser_gbia0061334b"
+   },
+   {
+    "src": "https://archive.org/download/1.-tchaikovsky-piano-concerto-no.-1/1.%20Tchaikovsky%20Piano%20Concerto%20No.%201.mp3",
+    "length": 193.61,
+    "series": "Freddy Martin",
+    "title": "Tchaikovsky Piano Concerto No. 1",
+    "date": "1947",
+    "item": "https://archive.org/details/1.-tchaikovsky-piano-concerto-no.-1"
+   },
+   {
+    "src": "https://archive.org/download/Decca_A-512_23768/%5B1946%5D%20Guy%20Lombardo%20%26%20His%20Royal%20Canadians%20-%20The%20Twin%20Pianos%20%5BDecca%20A-512%3B%20incomplete%5D/%5BG1%5D%20Guy%20Lombardo%20%26%20His%20Royal%20Canadians%20-%20Barcarolle.mp3",
+    "length": 124.0,
+    "series": "Guy Lombardo & His Royal Canadians",
+    "title": "Barcarolle / Doll Dance",
+    "date": "1946",
+    "item": "https://archive.org/details/Decca_A-512_23768"
+   },
+   {
+    "src": "https://archive.org/download/78_lets-say-good-night-to-the-ladies-and-well-come-right-back-again-olvidemos-las_gbia0055943a/Let%27s%20Say%20Good%20Night%20to%20the%20-%20Wayne%20King%20and%20his%20Orchestra.mp3",
+    "length": 168.0,
+    "series": "Wayne King and his Orchestra",
+    "title": "Let's Say Good Night to the Ladies (And We'll Come Right Back Again) (Olvidemos las Mujeres)",
+    "date": "1939",
+    "item": "https://archive.org/details/78_lets-say-good-night-to-the-ladies-and-well-come-right-back-again-olvidemos-las_gbia0055943a"
+   },
+   {
+    "src": "https://archive.org/download/78_ive-got-you-on-my-mind_leo-reisman-and-his-orchestra-fred-astaire-cole-porter_gbia0304421b/I%27VE%20GOT%20YOU%20ON%20MY%20MIND%20-%20LEO%20REISMAN%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 171.19,
+    "series": "Leo Reisman and His Orchestra",
+    "title": "I've Got You on My Mind",
+    "date": "1942",
+    "item": "https://archive.org/details/78_ive-got-you-on-my-mind_leo-reisman-and-his-orchestra-fred-astaire-cole-porter_gbia0304421b"
+   },
+   {
+    "src": "https://archive.org/download/if-you-talk-in-your-sleep-dont-mention-my-name/If%20You%20Talk%20In%20Your%20Sleep%2C%20Don%60t%20Mention%20My%20Name%20%28Flat%20eq%29.mp3",
+    "length": 165.84,
+    "series": "Lawrence Welk - Parnell Grina",
+    "title": "If You Talk In Your Sleep, Don`t Mention My Name",
+    "date": "1940",
+    "item": "https://archive.org/details/if-you-talk-in-your-sleep-dont-mention-my-name"
+   },
+   {
+    "src": "https://archive.org/download/78_its-in-the-book_johnny-standley-horace-heidt-and-his-musical-knights_gbia0214527a/IT%27S%20IN%20THE%20BOOK%20-%20JOHNNY%20STANDLEY%20-%20HORACE%20HEIDT%20and%20His%20Musical%20Knights.mp3",
+    "length": 216.38,
+    "series": "Johnny Standley",
+    "title": "It's in the Book",
+    "date": "1952",
+    "item": "https://archive.org/details/78_its-in-the-book_johnny-standley-horace-heidt-and-his-musical-knights_gbia0214527a"
+   },
+   {
+    "src": "https://archive.org/download/CantWeBeFriendsLeoReismanHisOrchestra78Transfer/Can%27t%20We%20Be%20Friends%20-%20Leo%20Reisman%20%26%20His%20Orchestra%2078%20transfer.mp3",
+    "length": 153.02,
+    "series": "Leo Reisman & His Orchestra",
+    "title": "Can't We Be Friends Leo Reisman & His Orchestra 78 Transfer",
+    "date": "1929",
+    "item": "https://archive.org/details/CantWeBeFriendsLeoReismanHisOrchestra78Transfer"
+   },
+   {
+    "src": "https://archive.org/download/78_im-waiting-for-ships-that-never-come-in-esperando-en-vano_wayne-king-his-orche_gbia0196767a/I%27M%20WAITING%20FOR%20SHIPS%20THAT%20NE%20-%20Wayne%20King%20%26%20his%20Orchestra.mp3",
+    "length": 196.0,
+    "series": "Wayne King & his Orchestra",
+    "title": "I'M Waiting for Ships That Never Come in (Esperando En Vano)",
+    "date": "1940",
+    "item": "https://archive.org/details/78_im-waiting-for-ships-that-never-come-in-esperando-en-vano_wayne-king-his-orche_gbia0196767a"
+   },
+   {
+    "src": "https://archive.org/download/MOZARTSerenadeEineKleineNachtmusikK.525-NEWTRANSFER01.I.Allegro/01.I.Allegro.mp3",
+    "length": 248.03,
+    "series": "Bruno Walter, Vienna Philharmonic Orchestra",
+    "title": "I. Allegro",
+    "date": "1936",
+    "item": "https://archive.org/details/MOZARTSerenadeEineKleineNachtmusikK.525-NEWTRANSFER01.I.Allegro"
+   },
+   {
+    "src": "https://archive.org/download/78_rain_dave-hamilton-the-pepperettes-with-horace-heidt-and-his-musical-knights-eugene_gbia0038962a/Rain%20-%20Dave%20Hamilton%20-%20The%20Pepperettes%20with%20Horace%20Heidt%20and%20His%20Musical%20Knights.mp3",
+    "length": 179.0,
+    "series": "Dave Hamilton",
+    "title": "Rain",
+    "date": "1950",
+    "item": "https://archive.org/details/78_rain_dave-hamilton-the-pepperettes-with-horace-heidt-and-his-musical-knights-eugene_gbia0038962a"
+   },
+   {
+    "src": "https://archive.org/download/1933-USA-Archives-1933-03-09-Hal-Kemp-Orch-Lovey/1933%28USA%29Archives19330309HalKempOrch-Lovey.mp3",
+    "length": 203.3,
+    "series": "Hal Kemp Orchestra",
+    "title": "Lovey",
+    "date": "1933",
+    "item": "https://archive.org/details/1933-USA-Archives-1933-03-09-Hal-Kemp-Orch-Lovey"
+   },
+   {
+    "src": "https://archive.org/download/78_the-gypsy_jan-garber-and-his-orchestra-tommy-traynor-billy-reid_gbia0017406b/The%20Gypsy%20-%20Jan%20Garber%20and%20His%20Orchestra.mp3",
+    "length": 192.0,
+    "series": "Jan Garber and His Orchestra",
+    "title": "The Gypsy",
+    "date": "1946",
+    "item": "https://archive.org/details/78_the-gypsy_jan-garber-and-his-orchestra-tommy-traynor-billy-reid_gbia0017406b"
+   },
+   {
+    "src": "https://archive.org/download/78_with-a-smile-and-a-song_guy-lombardo-and-his-royal-canadians-churchill-morey_gbia7008808a/WITH%20A%20SMILE%20AND%20A%20SONG%20-%20GUY%20LOMBARDO%20AND%20HIS%20ROYAL%20CANADIANS.mp3",
+    "length": 183.14,
+    "series": "Guy Lombardo and His Royal Canadians",
+    "title": "With a Smile and a Song",
+    "date": "1938",
+    "item": "https://archive.org/details/78_with-a-smile-and-a-song_guy-lombardo-and-his-royal-canadians-churchill-morey_gbia7008808a"
+   },
+   {
+    "src": "https://archive.org/download/78_never-been-kissed_freddy-martin-and-his-orchestra-merv-griffin-and-the-martin-men-c_gbia7000676b/NEVER%20BEEN%20KISSED%20-%20FREDDY%20MARTIN%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 157.9,
+    "series": "Freddy Martin and His Orchestra",
+    "title": "Never Been Kissed",
+    "date": "1951",
+    "item": "https://archive.org/details/78_never-been-kissed_freddy-martin-and-his-orchestra-merv-griffin-and-the-martin-men-c_gbia7000676b"
+   },
+   {
+    "src": "https://archive.org/download/1935-USA-Archives-1935-12-23-Eddy-Duchin-Orch-Moonburn/1935%28USA%29Archives19351223EddyDuchinOrch-Moonburn.mp3",
+    "length": 177.68,
+    "series": "Eddy Duchin Orchestra",
+    "title": "Eddy Duchin Orch Moonburn",
+    "date": "1935",
+    "item": "https://archive.org/details/1935-USA-Archives-1935-12-23-Eddy-Duchin-Orch-Moonburn"
+   },
+   {
+    "src": "https://archive.org/download/78_time-on-my-hands_carmen-cavallaro_wave/time%20on%20my%20hands_carmen%20cavallaro.mp3",
+    "length": 200.0,
+    "series": "Carmen Cavallaro",
+    "title": "Time on my Hands",
+    "date": "1940",
+    "item": "https://archive.org/details/78_time-on-my-hands_carmen-cavallaro_wave"
+   },
+   {
+    "src": "https://archive.org/download/78_the-world-is-in-my-arms-el-mundo-en-mis-brazos_swing-and-sway-with-sammy-kaye-and_gbia0096971a/The%20Wor%20-%20Swing%20and%20Sway%20with%20Sammy%20Kaye%20and%20his%20Orchestra.mp3",
+    "length": 197.0,
+    "series": "Swing and Sway with Sammy Kaye and his Orchestra",
+    "title": "The World Is in My Arms (El Mundo En Mis Brazos)",
+    "date": "1940",
+    "item": "https://archive.org/details/78_the-world-is-in-my-arms-el-mundo-en-mis-brazos_swing-and-sway-with-sammy-kaye-and_gbia0096971a"
+   },
+   {
+    "src": "https://archive.org/download/1935-USA-Archives-1935-05-03-Russ-Morgan-Orch-Phantom-Phantasie/1935%28USA%29Archives19350503RussMorganOrch-PhantomPhantasie.mp3",
+    "length": 168.48,
+    "series": "Russ Morgan Orchestra",
+    "title": "Russ Morgan Orch Phantom Phantasie",
+    "date": "1935",
+    "item": "https://archive.org/details/1935-USA-Archives-1935-05-03-Russ-Morgan-Orch-Phantom-Phantasie"
+   },
+   {
+    "src": "https://archive.org/download/78_atlanta-ga_shep-fields-and-his-orchestra-jack-prince-skylar-and-shaftel_gbia0079892a/Atlanta%20G.A.%20-%20Shep%20Fields%20and%20His%20Orchestra.mp3",
+    "length": 179.0,
+    "series": "Shep Fields and His Orchestra",
+    "title": "Atlanta G.A.",
+    "date": "1946",
+    "item": "https://archive.org/details/78_atlanta-ga_shep-fields-and-his-orchestra-jack-prince-skylar-and-shaftel_gbia0079892a"
+   },
+   {
+    "src": "https://archive.org/download/1930-USA-Archives-1930-11-07-Wayne-King-Orch-The-Waltz-You-Saved-For-Me/1930%28USA%29Archives19301107WayneKingOrch-TheWaltzYouSavedForMe.mp3",
+    "length": 189.48,
+    "series": "Wayne King Orchestra",
+    "title": "Wayne King Orch The Waltz You Saved For Me",
+    "date": "1930",
+    "item": "https://archive.org/details/1930-USA-Archives-1930-11-07-Wayne-King-Orch-The-Waltz-You-Saved-For-Me"
+   },
+   {
+    "src": "https://archive.org/download/kentuckys-way-of-sayin-good-mornin/Kentucky%60s%20Way%20Of%20Sayin%60%20Good%20Mornin%60%20%28Flat%20eq%29.mp3",
+    "length": 170.33,
+    "series": "Lawrence Welk",
+    "title": "Kentucky`s Way Of Sayin` Good Mornin`",
+    "date": "1939",
+    "item": "https://archive.org/details/kentuckys-way-of-sayin-good-mornin"
+   },
+   {
+    "src": "https://archive.org/download/78_shepherds-serenade_leo-reisman-and-his-orchestra-grey-stothart_gbia0208563a/SHEPHERD%27S%20SERENADE%20-%20LEO%20REISMAN%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 191.42,
+    "series": "Leo Reisman and His Orchestra",
+    "title": "Shepherd's Serenade",
+    "date": "1930",
+    "item": "https://archive.org/details/78_shepherds-serenade_leo-reisman-and-his-orchestra-grey-stothart_gbia0208563a"
+   },
+   {
+    "src": "https://archive.org/download/1931-USA-Archives-1931-05-15-Hal-Kemp-Orch-I-Found-A-Million-Dollar-Baby/1931%28USA%29Archives19310515HalKempOrch-IFoundAMillionDollarBaby.mp3",
+    "length": 177.88,
+    "series": "Hal Kemp Orchestra",
+    "title": "I Found A Million Dollar Baby",
+    "date": "1931",
+    "item": "https://archive.org/details/1931-USA-Archives-1931-05-15-Hal-Kemp-Orch-I-Found-A-Million-Dollar-Baby"
+   },
+   {
+    "src": "https://archive.org/download/1933-USA-Archives-1933-03-23-Eddy-Duchin-Orch-Hold-Me/1933%28USA%29Archives19330323EddyDuchinOrch-HoldMe.mp3",
+    "length": 166.06,
+    "series": "Eddy Duchin Orchestra",
+    "title": "Eddy Duchin Orch Hold Me",
+    "date": "1933",
+    "item": "https://archive.org/details/1933-USA-Archives-1933-03-23-Eddy-Duchin-Orch-Hold-Me"
+   },
+   {
+    "src": "https://archive.org/download/78_stormy-weather_carmen-cavallaro_wave/stormy%20weather_carmen%20cavallaro.mp3",
+    "length": 189.0,
+    "series": "Carmen Cavallaro",
+    "title": "Stormy Weather",
+    "date": "1940",
+    "item": "https://archive.org/details/78_stormy-weather_carmen-cavallaro_wave"
+   },
+   {
+    "src": "https://archive.org/download/1935-USA-Archives-1935-03-14-Russ-Morgan-Orch-You-Opened-My-Eyes/1935%28USA%29Archives19350314RussMorganOrch-YouOpenedMyEyes.mp3",
+    "length": 185.76,
+    "series": "Russ Morgan Orchestra",
+    "title": "Russ Morgan Orch You Opened My Eyes",
+    "date": "1935",
+    "item": "https://archive.org/details/1935-USA-Archives-1935-03-14-Russ-Morgan-Orch-You-Opened-My-Eyes"
+   },
+   {
+    "src": "https://archive.org/download/ThatsAPlentyLawrenceWelk/That%27s%20A%20Plenty%20-%20Lawrence%20Welk.mp3",
+    "length": 150.0,
+    "series": "Lawrence Welk",
+    "title": "That's A Plenty - Lawrence Welk",
+    "date": "1938",
+    "item": "https://archive.org/details/ThatsAPlentyLawrenceWelk"
+   },
+   {
+    "src": "https://archive.org/download/1932-USA-Archives-1932-12-07-Eddy-Duchin-Orch-Night-And-Day/1932%28USA%29Archives19321207EddyDuchinOrch-NightAndDay.mp3",
+    "length": 185.87,
+    "series": "Eddy Duchin Orchestra",
+    "title": "Eddy Duchin Orch Night And Day",
+    "date": "1932",
+    "item": "https://archive.org/details/1932-USA-Archives-1932-12-07-Eddy-Duchin-Orch-Night-And-Day"
+   },
+   {
+    "src": "https://archive.org/download/1930-USA-Archives-1930-09-02-Russ-Morgan-Orch-Im-Yours/1930%28USA%29Archives19300902RussMorganOrch-ImYours.mp3",
+    "length": 206.11,
+    "series": "Russ Morgan Orchestra",
+    "title": "Russ Morgan Orch Im Yours",
+    "date": "1930",
+    "item": "https://archive.org/details/1930-USA-Archives-1930-09-02-Russ-Morgan-Orch-Im-Yours"
+   }
+  ]
+ },
+ {
+  "id": "anotherroom",
+  "name": "From Another Room",
+  "group": "Music",
+  "music": true,
+  "blurb": "Sleepy oldies drifting in from down the hall, with rain or a fire.",
+  "card": "art/cards/anotherroom.png",
+  "epoch": "2026-11-01T03:17:00-07:00",
+  "sound": {
+   "level": true,
+   "declick": 0.8,
+   "decrackle": 0.8,
+   "tone": 6500
+  },
+  "room": {
+   "muffle": 1100,
+   "echo": 0.55,
+   "ambience": 0.35
+  },
+  "tracks": [
+   {
+    "src": "https://archive.org/download/1.-tchaikovsky-piano-concerto-no.-1/1.%20Tchaikovsky%20Piano%20Concerto%20No.%201.mp3",
+    "length": 193.61,
+    "series": "Freddy Martin",
+    "title": "Tchaikovsky Piano Concerto No. 1",
+    "date": "1947",
+    "item": "https://archive.org/details/1.-tchaikovsky-piano-concerto-no.-1"
+   },
+   {
+    "src": "https://archive.org/download/warsaw-concerto/Warsaw%20Concerto.mp3",
+    "length": 160.78,
+    "series": "Carmen  Cavallaro And His Orchestra",
+    "title": "Warsaw Concerto",
+    "date": "1945",
+    "item": "https://archive.org/details/warsaw-concerto"
+   },
+   {
+    "src": "https://archive.org/download/78_what-a-diffrence-a-day-made_sammy-kaye-and-his-orchestra-nancy-norman-adamis-greve_gbia0278295c/WHAT%20A%20DIFF%27RENCE%20A%20DAY%20MADE%20-%20Sammy%20Kaye%20and%20his%20Orchestra.mp3",
+    "length": 229.85,
+    "series": "Sammy Kaye and his Orchestra",
+    "title": "What a Diff'rence a Day Made",
+    "date": "1944",
+    "item": "https://archive.org/details/78_what-a-diffrence-a-day-made_sammy-kaye-and-his-orchestra-nancy-norman-adamis-greve_gbia0278295c"
+   },
+   {
+    "src": "https://archive.org/download/78_turkish-delight_ray-noble-and-his-new-mayfair-orchestra-kester-noble_gbia0192511b/TURKISH%20DELIGHT%20-%20RAY%20NOBLE%20AND%20HIS%20NEW%20MAYFAIR%20ORCHESTRA.mp3",
+    "length": 183.0,
+    "series": "Ray Noble and His New Mayfair Orchestra",
+    "title": "Turkish Delight",
+    "date": "1933",
+    "item": "https://archive.org/details/78_turkish-delight_ray-noble-and-his-new-mayfair-orchestra-kester-noble_gbia0192511b"
+   },
+   {
+    "src": "https://archive.org/download/78_lone-star-moon_shep-fields-and-his-rippling-rhythm-orchestra-bob-johnstone-and-grou_gbia0161456b/LONE%20STAR%20MOON%20-%20SHEP%20FIELDS%20and%20his%20RIPPLING%20RHYTHM%20ORCHESTRA.mp3",
+    "length": 176.04,
+    "series": "Shep Fields and His Rippling Rhythm Orchestra",
+    "title": "Lone Star Moon",
+    "date": "1948",
+    "item": "https://archive.org/details/78_lone-star-moon_shep-fields-and-his-rippling-rhythm-orchestra-bob-johnstone-and-grou_gbia0161456b"
+   },
+   {
+    "src": "https://archive.org/download/78_never-been-kissed_freddy-martin-and-his-orchestra-merv-griffin-and-the-martin-men-c_gbia7000676b/NEVER%20BEEN%20KISSED%20-%20FREDDY%20MARTIN%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 157.9,
+    "series": "Freddy Martin and His Orchestra",
+    "title": "Never Been Kissed",
+    "date": "1951",
+    "item": "https://archive.org/details/78_never-been-kissed_freddy-martin-and-his-orchestra-merv-griffin-and-the-martin-men-c_gbia7000676b"
+   },
+   {
+    "src": "https://archive.org/download/1935-USA-Archives-1935-03-14-Russ-Morgan-Orch-You-Opened-My-Eyes/1935%28USA%29Archives19350314RussMorganOrch-YouOpenedMyEyes.mp3",
+    "length": 185.76,
+    "series": "Russ Morgan Orchestra",
+    "title": "Russ Morgan Orch You Opened My Eyes",
+    "date": "1935",
+    "item": "https://archive.org/details/1935-USA-Archives-1935-03-14-Russ-Morgan-Orch-You-Opened-My-Eyes"
+   },
+   {
+    "src": "https://archive.org/download/1935-USA-Archives-1935-12-23-Eddy-Duchin-Orch-Moonburn/1935%28USA%29Archives19351223EddyDuchinOrch-Moonburn.mp3",
+    "length": 177.68,
+    "series": "Eddy Duchin Orchestra",
+    "title": "Eddy Duchin Orch Moonburn",
+    "date": "1935",
+    "item": "https://archive.org/details/1935-USA-Archives-1935-12-23-Eddy-Duchin-Orch-Moonburn"
+   },
+   {
+    "src": "https://archive.org/download/78_in-a-little-carolina-town-en-un-pueblecito-de-carolina_guy-lombardo-his-royal-c_gbia0153458b/IN%20A%20LITTLE%20CAROLINA%20%20-%20Guy%20Lombardo%20%26%20his%20Royal%20Canadians.mp3",
+    "length": 181.0,
+    "series": "Guy Lombardo & his Royal Canadians",
+    "title": "IN a Little Carolina Town (En Un Pueblecito De Carolina)",
+    "date": "1937",
+    "item": "https://archive.org/details/78_in-a-little-carolina-town-en-un-pueblecito-de-carolina_guy-lombardo-his-royal-c_gbia0153458b"
+   },
+   {
+    "src": "https://archive.org/download/78_call-me-darling-call-me-sweetheart-call-me-dear-yah-ta-ta-yah-ta-ta_the-king-si_gbia0423236a/CALL%20ME%20D%20-%20The%20King%20Sisters%2C%20Buddy%20Cole%20and%20his%20Orchestra.mp3",
+    "length": 324.87,
+    "series": "The King Sisters, Buddy Cole and his Orchestra",
+    "title": "Call Me Darling, Call Me Sweetheart, Call Me Dear; Yah-ta-ta, Yah-ta-ta",
+    "date": "1945",
+    "item": "https://archive.org/details/78_call-me-darling-call-me-sweetheart-call-me-dear-yah-ta-ta-yah-ta-ta_the-king-si_gbia0423236a"
+   },
+   {
+    "src": "https://archive.org/download/victor-25651-a-got-a-date-with-an-angel/Victor%2025651A%20-%20Got%20a%20Date%20with%20an%20Angel%20-%203.0%20CT%20250N-8%20EQ.mp3",
+    "length": 136.36,
+    "series": "Hal Kemp and his Orchestra",
+    "title": "Got a Date with an Angel",
+    "date": "1937",
+    "item": "https://archive.org/details/victor-25651-a-got-a-date-with-an-angel"
+   },
+   {
+    "src": "https://archive.org/download/1930-USA-Archives-1930-11-07-Wayne-King-Orch-The-Waltz-You-Saved-For-Me/1930%28USA%29Archives19301107WayneKingOrch-TheWaltzYouSavedForMe.mp3",
+    "length": 189.48,
+    "series": "Wayne King Orchestra",
+    "title": "Wayne King Orch The Waltz You Saved For Me",
+    "date": "1930",
+    "item": "https://archive.org/details/1930-USA-Archives-1930-11-07-Wayne-King-Orch-The-Waltz-You-Saved-For-Me"
+   },
+   {
+    "src": "https://archive.org/download/78_the-gypsy_jan-garber-and-his-orchestra-tommy-traynor-billy-reid_gbia0017406b/The%20Gypsy%20-%20Jan%20Garber%20and%20His%20Orchestra.mp3",
+    "length": 192.0,
+    "series": "Jan Garber and His Orchestra",
+    "title": "The Gypsy",
+    "date": "1946",
+    "item": "https://archive.org/details/78_the-gypsy_jan-garber-and-his-orchestra-tommy-traynor-billy-reid_gbia0017406b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-dont-stand-a-ghost-of-a-chance_ernie-andrews-wilbert-baranco-trio-bing-crosby-vi_gbia0063441b/I%20Don%27t%20Stand%20a%20Ghost%20of%20a%20Chance%20-%20Ernie%20Andrews.mp3",
+    "length": 180.0,
+    "series": "Ernie Andrews",
+    "title": "I Don't Stand a Ghost of a Chance",
+    "date": "1945",
+    "item": "https://archive.org/details/78_i-dont-stand-a-ghost-of-a-chance_ernie-andrews-wilbert-baranco-trio-bing-crosby-vi_gbia0063441b"
+   },
+   {
+    "src": "https://archive.org/download/78_rain_dave-hamilton-the-pepperettes-with-horace-heidt-and-his-musical-knights-eugene_gbia0038962a/Rain%20-%20Dave%20Hamilton%20-%20The%20Pepperettes%20with%20Horace%20Heidt%20and%20His%20Musical%20Knights.mp3",
+    "length": 179.0,
+    "series": "Dave Hamilton",
+    "title": "Rain",
+    "date": "1950",
+    "item": "https://archive.org/details/78_rain_dave-hamilton-the-pepperettes-with-horace-heidt-and-his-musical-knights-eugene_gbia0038962a"
+   },
+   {
+    "src": "https://archive.org/download/78_just-a-gigolo_the-bill-davidon-six-wild-bill-davidson-garvin-bushell-jimmy-archey-r_gbia0092099/01%20-%20Why%20Was%20I%20Born%20-%20The%20Bill%20Davidon%20Six%20-%20Wild%20Bill%20Davidson.mp3",
+    "length": 212.0,
+    "series": "The Bill Davidon Six",
+    "title": "Why Was I Born",
+    "date": "1947",
+    "item": "https://archive.org/details/78_just-a-gigolo_the-bill-davidon-six-wild-bill-davidson-garvin-bushell-jimmy-archey-r_gbia0092099"
+   },
+   {
+    "src": "https://archive.org/download/78_ive-got-you-on-my-mind_leo-reisman-and-his-orchestra-fred-astaire-cole-porter_gbia0304421b/I%27VE%20GOT%20YOU%20ON%20MY%20MIND%20-%20LEO%20REISMAN%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 171.19,
+    "series": "Leo Reisman and His Orchestra",
+    "title": "I've Got You on My Mind",
+    "date": "1942",
+    "item": "https://archive.org/details/78_ive-got-you-on-my-mind_leo-reisman-and-his-orchestra-fred-astaire-cole-porter_gbia0304421b"
+   },
+   {
+    "src": "https://archive.org/download/CantWeBeFriendsLeoReismanHisOrchestra78Transfer/Can%27t%20We%20Be%20Friends%20-%20Leo%20Reisman%20%26%20His%20Orchestra%2078%20transfer.mp3",
+    "length": 153.02,
+    "series": "Leo Reisman & His Orchestra",
+    "title": "Can't We Be Friends Leo Reisman & His Orchestra 78 Transfer",
+    "date": "1929",
+    "item": "https://archive.org/details/CantWeBeFriendsLeoReismanHisOrchestra78Transfer"
+   },
+   {
+    "src": "https://archive.org/download/1935-USA-Archives-1935-05-03-Russ-Morgan-Orch-Phantom-Phantasie/1935%28USA%29Archives19350503RussMorganOrch-PhantomPhantasie.mp3",
+    "length": 168.48,
+    "series": "Russ Morgan Orchestra",
+    "title": "Russ Morgan Orch Phantom Phantasie",
+    "date": "1935",
+    "item": "https://archive.org/details/1935-USA-Archives-1935-05-03-Russ-Morgan-Orch-Phantom-Phantasie"
+   },
+   {
+    "src": "https://archive.org/download/1935-USA-Archives-1935-04-17-Russ-Morgan-Orch-Tell-Me-That-You-Love-Me-Tonight/1935%28USA%29Archives19350417RussMorganOrch-TellMeThatYouLoveMeTonight.mp3",
+    "length": 172.51,
+    "series": "Russ Morgan Orchestra",
+    "title": "Russ Morgan Orch Tell Me That You Love Me Tonight",
+    "date": "1935",
+    "item": "https://archive.org/details/1935-USA-Archives-1935-04-17-Russ-Morgan-Orch-Tell-Me-That-You-Love-Me-Tonight"
+   },
+   {
+    "src": "https://archive.org/download/78_santiago-waltz_a.-corbin-peerless-orchestra_gbia0000855b/Santiago%20Waltz%20-%20A.%20Corbin%20-%20Peerless%20Orchestra-restored.mp3",
+    "length": 221.18,
+    "series": "A. Corbin",
+    "title": "Santiago Waltz",
+    "date": "1921",
+    "item": "https://archive.org/details/78_santiago-waltz_a.-corbin-peerless-orchestra_gbia0000855b"
+   },
+   {
+    "src": "https://archive.org/download/233249460660/Midnight%2C%20The%20Stars%20And%20You.mp3",
+    "length": 211.28,
+    "series": "Ray Noble And His Orchestra, Al Bowlly",
+    "title": "Midnight, The Stars And You",
+    "date": "1934",
+    "item": "https://archive.org/details/233249460660"
+   },
+   {
+    "src": "https://archive.org/download/78_its-in-the-book_johnny-standley-horace-heidt-and-his-musical-knights_gbia0214527a/IT%27S%20IN%20THE%20BOOK%20-%20JOHNNY%20STANDLEY%20-%20HORACE%20HEIDT%20and%20His%20Musical%20Knights.mp3",
+    "length": 216.38,
+    "series": "Johnny Standley",
+    "title": "It's in the Book",
+    "date": "1952",
+    "item": "https://archive.org/details/78_its-in-the-book_johnny-standley-horace-heidt-and-his-musical-knights_gbia0214527a"
+   },
+   {
+    "src": "https://archive.org/download/decca-24825-a-enjoy-yourself/Decca%2024825A%20-%20Enjoy%20Yourself%20-%203.0%20CT%20629N-12%20EQ.mp3",
+    "length": 198.69,
+    "series": "Guy Lombardo and His Royal Canadians",
+    "title": "Enjoy Yourself (It's Later Than You Think)",
+    "date": "1949",
+    "item": "https://archive.org/details/decca-24825-a-enjoy-yourself"
+   },
+   {
+    "src": "https://archive.org/download/1933-USA-Archives-1933-03-09-Hal-Kemp-Orch-Lovey/1933%28USA%29Archives19330309HalKempOrch-Lovey.mp3",
+    "length": 203.3,
+    "series": "Hal Kemp Orchestra",
+    "title": "Lovey",
+    "date": "1933",
+    "item": "https://archive.org/details/1933-USA-Archives-1933-03-09-Hal-Kemp-Orch-Lovey"
+   },
+   {
+    "src": "https://archive.org/download/78_atlanta-ga_shep-fields-and-his-orchestra-jack-prince-skylar-and-shaftel_gbia0079892a/Atlanta%20G.A.%20-%20Shep%20Fields%20and%20His%20Orchestra.mp3",
+    "length": 179.0,
+    "series": "Shep Fields and His Orchestra",
+    "title": "Atlanta G.A.",
+    "date": "1946",
+    "item": "https://archive.org/details/78_atlanta-ga_shep-fields-and-his-orchestra-jack-prince-skylar-and-shaftel_gbia0079892a"
+   },
+   {
+    "src": "https://archive.org/download/kentuckys-way-of-sayin-good-mornin/Kentucky%60s%20Way%20Of%20Sayin%60%20Good%20Mornin%60%20%28Flat%20eq%29.mp3",
+    "length": 170.33,
+    "series": "Lawrence Welk",
+    "title": "Kentucky`s Way Of Sayin` Good Mornin`",
+    "date": "1939",
+    "item": "https://archive.org/details/kentuckys-way-of-sayin-good-mornin"
+   },
+   {
+    "src": "https://archive.org/download/if-you-talk-in-your-sleep-dont-mention-my-name/If%20You%20Talk%20In%20Your%20Sleep%2C%20Don%60t%20Mention%20My%20Name%20%28Flat%20eq%29.mp3",
+    "length": 165.84,
+    "series": "Lawrence Welk - Parnell Grina",
+    "title": "If You Talk In Your Sleep, Don`t Mention My Name",
+    "date": "1940",
+    "item": "https://archive.org/details/if-you-talk-in-your-sleep-dont-mention-my-name"
+   },
+   {
+    "src": "https://archive.org/download/78_arent-you-glad-youre-you_shep-fields-and-his-orchestra-meredith-blake-johnny-burk_gbia0079892b/Aren%27t%20You%20Glad%20You%27re%20You%20-%20Shep%20Fields%20and%20His%20Orchestra.mp3",
+    "length": 181.0,
+    "series": "Shep Fields and His Orchestra",
+    "title": "Aren't You Glad You're You",
+    "date": "1946",
+    "item": "https://archive.org/details/78_arent-you-glad-youre-you_shep-fields-and-his-orchestra-meredith-blake-johnny-burk_gbia0079892b"
+   },
+   {
+    "src": "https://archive.org/download/78_with-a-smile-and-a-song_guy-lombardo-and-his-royal-canadians-churchill-morey_gbia7008808a/WITH%20A%20SMILE%20AND%20A%20SONG%20-%20GUY%20LOMBARDO%20AND%20HIS%20ROYAL%20CANADIANS.mp3",
+    "length": 183.14,
+    "series": "Guy Lombardo and His Royal Canadians",
+    "title": "With a Smile and a Song",
+    "date": "1938",
+    "item": "https://archive.org/details/78_with-a-smile-and-a-song_guy-lombardo-and-his-royal-canadians-churchill-morey_gbia7008808a"
+   },
+   {
+    "src": "https://archive.org/download/78_siberian-sleigh-ride_hal-kemp-and-his-orchestra-raymond-scott_gbia7014944b/SIBERIAN%20SLEIGH%20RIDE%20-%20HAL%20KEMP%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 182.95,
+    "series": "Hal Kemp and His Orchestra",
+    "title": "Siberian Sleigh Ride",
+    "date": "1939",
+    "item": "https://archive.org/details/78_siberian-sleigh-ride_hal-kemp-and-his-orchestra-raymond-scott_gbia7014944b"
+   },
+   {
+    "src": "https://archive.org/download/78_piano-concerto-in-b-flat_freddy-martin-and-his-orch.-tschaikowsy-ray-austin_gbia0009473b/Piano%20Concerto%20In%20B%20Flat%20-%20Freddy%20Martin%20and%20his%20Orch..mp3",
+    "length": 200.0,
+    "series": "Freddy Martin and his Orchestra",
+    "title": "Piano Concerto In B Flat",
+    "date": "1941",
+    "item": "https://archive.org/details/78_piano-concerto-in-b-flat_freddy-martin-and-his-orch.-tschaikowsy-ray-austin_gbia0009473b"
+   },
+   {
+    "src": "https://archive.org/download/EmalineLawrenceWelk/Emaline%20-%20Lawrence%20Welk.mp3",
+    "length": 143.0,
+    "series": "Lawrence Welk",
+    "title": "Emaline - Lawrence Welk",
+    "date": "1938",
+    "item": "https://archive.org/details/EmalineLawrenceWelk"
+   },
+   {
+    "src": "https://archive.org/download/1933-USA-Archives-1933-09-22-Jan-Garber-Orch-Three-Of-Us/1933%28USA%29Archives19330922JanGarberOrch-ThreeOfUs.mp3",
+    "length": 173.64,
+    "series": "Jan Garber Orchestra",
+    "title": "Jan Garber Orch Three Of Us",
+    "date": "1933",
+    "item": "https://archive.org/details/1933-USA-Archives-1933-09-22-Jan-Garber-Orch-Three-Of-Us"
+   },
+   {
+    "src": "https://archive.org/download/78_lets-say-good-night-to-the-ladies-and-well-come-right-back-again-olvidemos-las_gbia0055943a/Let%27s%20Say%20Good%20Night%20to%20the%20-%20Wayne%20King%20and%20his%20Orchestra.mp3",
+    "length": 168.0,
+    "series": "Wayne King and his Orchestra",
+    "title": "Let's Say Good Night to the Ladies (And We'll Come Right Back Again) (Olvidemos las Mujeres)",
+    "date": "1939",
+    "item": "https://archive.org/details/78_lets-say-good-night-to-the-ladies-and-well-come-right-back-again-olvidemos-las_gbia0055943a"
+   },
+   {
+    "src": "https://archive.org/download/203872awaltzofthewindr14069382/20-3872-A%20-%20Waltz%20Of%20The%20Wind%20%5Br14069382%5D.mp3",
+    "length": 154.0,
+    "series": "Wayne King And His Orchestra",
+    "title": "20 3872 A Waltz Of The Wind",
+    "date": "1950",
+    "item": "https://archive.org/details/203872awaltzofthewindr14069382"
+   },
+   {
+    "src": "https://archive.org/download/78_my-rancho-rio-grande_shep-fields-and-his-orchestra-bob-johnstone-cindy-walker_gbia0072482b/My%20Rancho%20Rio%20Grande%20-%20Shep%20Fields%20and%20his%20Orchestra.mp3",
+    "length": 173.0,
+    "series": "Shep Fields and his Orchestra",
+    "title": "My Rancho Rio Grande",
+    "date": "1948",
+    "item": "https://archive.org/details/78_my-rancho-rio-grande_shep-fields-and-his-orchestra-bob-johnstone-cindy-walker_gbia0072482b"
+   },
+   {
+    "src": "https://archive.org/download/78_getting-sentimental-over-you_carmen-cavallaro_wave/cant%20we%20talk%20it%20over_carmen%20cavallaro.mp3",
+    "length": 159.0,
+    "series": "Carmen Cavallaro",
+    "title": "Getting Sentimental Over You Piano Solos",
+    "date": "1940",
+    "item": "https://archive.org/details/78_getting-sentimental-over-you_carmen-cavallaro_wave"
+   },
+   {
+    "src": "https://archive.org/download/78_baby-dont-be-mad-at-me_shep-fields-and-his-rippling-rhythm-orchestra-toni-arden-da_gbia0129218b/BABY%20DON%27T%20BE%20MAD%20AT%20ME%20-%20Shep%20Fields%20and%20his%20Rippling%20Rhythm%20Orchestra.mp3",
+    "length": 193.0,
+    "series": "Shep Fields and his Rippling Rhythm Orchestra",
+    "title": "Baby Don't Be Mad at Me",
+    "date": "1948",
+    "item": "https://archive.org/details/78_baby-dont-be-mad-at-me_shep-fields-and-his-rippling-rhythm-orchestra-toni-arden-da_gbia0129218b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-world-is-in-my-arms-el-mundo-en-mis-brazos_swing-and-sway-with-sammy-kaye-and_gbia0096971a/The%20Wor%20-%20Swing%20and%20Sway%20with%20Sammy%20Kaye%20and%20his%20Orchestra.mp3",
+    "length": 197.0,
+    "series": "Swing and Sway with Sammy Kaye and his Orchestra",
+    "title": "The World Is in My Arms (El Mundo En Mis Brazos)",
+    "date": "1940",
+    "item": "https://archive.org/details/78_the-world-is-in-my-arms-el-mundo-en-mis-brazos_swing-and-sway-with-sammy-kaye-and_gbia0096971a"
+   },
+   {
+    "src": "https://archive.org/download/78_my-buddy_sammy-kaye-and-his-swing-and-sway-orchestra-sammy-kaye-donaldson-kahn_gbia0185653b/MY%20BUDDY%20-%20SAMMY%20KAYE%20and%20his%20Swing%20and%20Sway%20ORCHESTRA.mp3",
+    "length": 178.0,
+    "series": "Sammy Kaye and His Swing and Sway Orchestra",
+    "title": "My Buddy",
+    "date": "1940",
+    "item": "https://archive.org/details/78_my-buddy_sammy-kaye-and-his-swing-and-sway-orchestra-sammy-kaye-donaldson-kahn_gbia0185653b"
+   },
+   {
+    "src": "https://archive.org/download/Decca_A-512_23768/%5B1946%5D%20Guy%20Lombardo%20%26%20His%20Royal%20Canadians%20-%20The%20Twin%20Pianos%20%5BDecca%20A-512%3B%20incomplete%5D/%5BG1%5D%20Guy%20Lombardo%20%26%20His%20Royal%20Canadians%20-%20Barcarolle.mp3",
+    "length": 124.0,
+    "series": "Guy Lombardo & His Royal Canadians",
+    "title": "Barcarolle / Doll Dance",
+    "date": "1946",
+    "item": "https://archive.org/details/Decca_A-512_23768"
+   },
+   {
+    "src": "https://archive.org/download/78_a-ghost-of-a-chance_the-bill-davison-six-wild-bill-davison-garvin-bushell-jimmy-arc_gbia0160344b/A%20GHOST%20OF%20A%20CHANCE%20-%20THE%20BILL%20DAVISON%20SIX.mp3",
+    "length": 173.14,
+    "series": "The Bill Davison Six",
+    "title": "A Ghost of a Chance",
+    "date": "1947",
+    "item": "https://archive.org/details/78_a-ghost-of-a-chance_the-bill-davison-six-wild-bill-davison-garvin-bushell-jimmy-arc_gbia0160344b"
+   },
+   {
+    "src": "https://archive.org/download/a-love-like-this/A%20Love%20Like%20This.mp3",
+    "length": 195.29,
+    "series": "Carmen Cavallaro And His Orchestra - Gloria Foster",
+    "title": "A Love Like This",
+    "date": "1945",
+    "item": "https://archive.org/details/a-love-like-this"
+   },
+   {
+    "src": "https://archive.org/download/78_im-waiting-for-ships-that-never-come-in-esperando-en-vano_wayne-king-his-orche_gbia0196767a/I%27M%20WAITING%20FOR%20SHIPS%20THAT%20NE%20-%20Wayne%20King%20%26%20his%20Orchestra.mp3",
+    "length": 196.0,
+    "series": "Wayne King & his Orchestra",
+    "title": "I'M Waiting for Ships That Never Come in (Esperando En Vano)",
+    "date": "1940",
+    "item": "https://archive.org/details/78_im-waiting-for-ships-that-never-come-in-esperando-en-vano_wayne-king-his-orche_gbia0196767a"
+   },
+   {
+    "src": "https://archive.org/download/78_oh-helen-oh-elena_swing-and-sway-with-sammy-kaye-and-his-orchestra-the-three-kay_gbia0062460a/Oh%20Helen%21%20%28Oh%20Elena%29%20-%20Swing%20and%20Sway%20with%20Sammy%20Kaye%20and%20his%20Orchestra.mp3",
+    "length": 169.0,
+    "series": "Swing and Sway with Sammy Kaye and his Orchestra",
+    "title": "Oh Helen! (Oh Elena)",
+    "date": "1940",
+    "item": "https://archive.org/details/78_oh-helen-oh-elena_swing-and-sway-with-sammy-kaye-and-his-orchestra-the-three-kay_gbia0062460a"
+   },
+   {
+    "src": "https://archive.org/download/1933-USA-Archives-1933-09-07-Hal-Kemp-Orch-Its-Only-A-Paper-Moon/1933%28USA%29Archives19330907HalKempOrch-ItsOnlyAPaperMoon.mp3",
+    "length": 175.7,
+    "series": "Hal Kemp Orchestra",
+    "title": "It's Only a Paper Moonn",
+    "date": "1933",
+    "item": "https://archive.org/details/1933-USA-Archives-1933-09-07-Hal-Kemp-Orch-Its-Only-A-Paper-Moon"
+   },
+   {
+    "src": "https://archive.org/download/1933-USA-Archives-1933-03-23-Eddy-Duchin-Orch-Hold-Me/1933%28USA%29Archives19330323EddyDuchinOrch-HoldMe.mp3",
+    "length": 166.06,
+    "series": "Eddy Duchin Orchestra",
+    "title": "Eddy Duchin Orch Hold Me",
+    "date": "1933",
+    "item": "https://archive.org/details/1933-USA-Archives-1933-03-23-Eddy-Duchin-Orch-Hold-Me"
+   },
+   {
+    "src": "https://archive.org/download/EDIS-SRP-0197-09/EDIS-SRP-0197-09.mp3",
+    "length": 266.99,
+    "series": "Bellini Ensemble Unique",
+    "title": "Moonlight sonata",
+    "date": "1924",
+    "item": "https://archive.org/details/EDIS-SRP-0197-09"
+   },
+   {
+    "src": "https://archive.org/download/78_stormy-weather_carmen-cavallaro_wave/stormy%20weather_carmen%20cavallaro.mp3",
+    "length": 189.0,
+    "series": "Carmen Cavallaro",
+    "title": "Stormy Weather",
+    "date": "1940",
+    "item": "https://archive.org/details/78_stormy-weather_carmen-cavallaro_wave"
+   },
+   {
+    "src": "https://archive.org/download/78_time-on-my-hands_carmen-cavallaro_wave/time%20on%20my%20hands_carmen%20cavallaro.mp3",
+    "length": 200.0,
+    "series": "Carmen Cavallaro",
+    "title": "Time on my Hands",
+    "date": "1940",
+    "item": "https://archive.org/details/78_time-on-my-hands_carmen-cavallaro_wave"
+   },
+   {
+    "src": "https://archive.org/download/78_brighter-than-the-sun-_ray-noble-and-his-orchestra-noble--anona-winn_gbia0002501b/Brighter%20Than%20The%20Sun%20%20-%20Ray%20Noble%20and%20his%20Orchestra.mp3",
+    "length": 164.0,
+    "series": "Ray Noble and his Orchestra",
+    "title": "Brighter Than The Sun",
+    "date": "1933",
+    "item": "https://archive.org/details/78_brighter-than-the-sun-_ray-noble-and-his-orchestra-noble--anona-winn_gbia0002501b"
+   },
+   {
+    "src": "https://archive.org/download/78_a-peruvian-triste-b-pan-american-waltz_carlos-valderrama_gbia0001886a/%28a%29%20Peruvian%20Triste%20%28b%29%20Pan-American%20Waltz%20-%20Carlos%20Valderrama-restored.mp3",
+    "length": 281.0,
+    "series": "Carlos Valderrama",
+    "title": "(a) Peruvian Triste; (b) Pan-American Waltz",
+    "date": "1920",
+    "item": "https://archive.org/details/78_a-peruvian-triste-b-pan-american-waltz_carlos-valderrama_gbia0001886a"
+   },
+   {
+    "src": "https://archive.org/download/78_drowsy-waters-wailana_lani-mcintire-and-his-aloha-islanders-lani-mcintire-michael_gbia0071974/01%20-%20Moonlight%20in%20Hawaii%20-%20Lani%20McIntire%20and%20his%20Aloha%20Islanders.mp3",
+    "length": 186.0,
+    "series": "Lani McIntire and his Aloha Islanders",
+    "title": "Moonlight in Hawaii",
+    "date": "1945",
+    "item": "https://archive.org/details/78_drowsy-waters-wailana_lani-mcintire-and-his-aloha-islanders-lani-mcintire-michael_gbia0071974"
+   },
+   {
+    "src": "https://archive.org/download/ShowBoat-Selections1932/01.Overture.mp3",
+    "length": 261.15,
+    "series": "Victor Young and his Orchestra",
+    "title": "Overture",
+    "date": "1932",
+    "item": "https://archive.org/details/ShowBoat-Selections1932"
+   },
+   {
+    "src": "https://archive.org/download/78_theyre-either-too-young-or-too-old_jan-garber-and-his-orchestra-liz-tilton-loesser_gbia0061334b/They%27re%20Either%20Too%20Young%20or%20-%20Jan%20Garber%20and%20his%20Orchestra.mp3",
+    "length": 196.0,
+    "series": "Jan Garber and his Orchestra",
+    "title": "They're Either Too Young or Too Old",
+    "date": "1943",
+    "item": "https://archive.org/details/78_theyre-either-too-young-or-too-old_jan-garber-and-his-orchestra-liz-tilton-loesser_gbia0061334b"
+   },
+   {
+    "src": "https://archive.org/download/1929-USA-Archives-1929-03-11-Leo-Reisman-Casino-Royal-Orch-The-Wedding-Of-The-Painted-Doll/1929%28USA%29Archives19290311LeoReismanCasinoRoyalOrch-TheWeddingOfThePaintedDoll.mp3",
+    "length": 182.34,
+    "series": "Leo Reisman Casino Royal Orchestra",
+    "title": "Leo Reisman Casino Royal Orch The Wedding Of The Painted Doll",
+    "date": "1929",
+    "item": "https://archive.org/details/1929-USA-Archives-1929-03-11-Leo-Reisman-Casino-Royal-Orch-The-Wedding-Of-The-Painted-Doll"
+   },
+   {
+    "src": "https://archive.org/download/ThatsAPlentyLawrenceWelk/That%27s%20A%20Plenty%20-%20Lawrence%20Welk.mp3",
+    "length": 150.0,
+    "series": "Lawrence Welk",
+    "title": "That's A Plenty - Lawrence Welk",
+    "date": "1938",
+    "item": "https://archive.org/details/ThatsAPlentyLawrenceWelk"
+   },
+   {
+    "src": "https://archive.org/download/78_smoke-gets-in-your-eyes_ray-bloch-and-his-orchestra-fields-kern_gbia8000735/01%20-%20THE%20WAY%20YOU%20LOOK%20TONIGHT%20-%20RAY%20BLOCH%20and%20his%20Orchestra.mp3",
+    "length": 200.16,
+    "series": "Ray Bloch and His Orchestra",
+    "title": "The Way You Look Tonight",
+    "date": "1946",
+    "item": "https://archive.org/details/78_smoke-gets-in-your-eyes_ray-bloch-and-his-orchestra-fields-kern_gbia8000735"
+   },
+   {
+    "src": "https://archive.org/download/78_i-didnt-know-the-gun-was-loaded_the-pepperettes-horace-heidt-and-his-musical-kingh_gbia0035265a/I%20Didn%27t%20Know%20the%20Gun%20was%20Loaded%20-%20The%20Pepperettes.mp3",
+    "length": 178.0,
+    "series": "The Pepperettes",
+    "title": "I Didn't Know the Gun was Loaded",
+    "date": "1949",
+    "item": "https://archive.org/details/78_i-didnt-know-the-gun-was-loaded_the-pepperettes-horace-heidt-and-his-musical-kingh_gbia0035265a"
+   },
+   {
+    "src": "https://archive.org/download/columbia-36224-b-my-twilight-dream/Columbia%2036224B%20-%20My%20Twilight%20Dream%20-%203.0%20CT%20300N-16%20EQ.mp3",
+    "length": 208.72,
+    "series": "Eddy Duchin and his Orchestra",
+    "title": "My Twilight Dream",
+    "date": "1940",
+    "item": "https://archive.org/details/columbia-36224-b-my-twilight-dream"
+   },
+   {
+    "src": "https://archive.org/download/1930-USA-Archives-1930-09-02-Russ-Morgan-Orch-Im-Yours/1930%28USA%29Archives19300902RussMorganOrch-ImYours.mp3",
+    "length": 206.11,
+    "series": "Russ Morgan Orchestra",
+    "title": "Russ Morgan Orch Im Yours",
+    "date": "1930",
+    "item": "https://archive.org/details/1930-USA-Archives-1930-09-02-Russ-Morgan-Orch-Im-Yours"
+   },
+   {
+    "src": "https://archive.org/download/1931-USA-Archives-1931-05-15-Hal-Kemp-Orch-I-Found-A-Million-Dollar-Baby/1931%28USA%29Archives19310515HalKempOrch-IFoundAMillionDollarBaby.mp3",
+    "length": 177.88,
+    "series": "Hal Kemp Orchestra",
+    "title": "I Found A Million Dollar Baby",
+    "date": "1931",
+    "item": "https://archive.org/details/1931-USA-Archives-1931-05-15-Hal-Kemp-Orch-I-Found-A-Million-Dollar-Baby"
+   },
+   {
+    "src": "https://archive.org/download/78_shepherds-serenade_leo-reisman-and-his-orchestra-grey-stothart_gbia0208563a/SHEPHERD%27S%20SERENADE%20-%20LEO%20REISMAN%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 191.42,
+    "series": "Leo Reisman and His Orchestra",
+    "title": "Shepherd's Serenade",
+    "date": "1930",
+    "item": "https://archive.org/details/78_shepherds-serenade_leo-reisman-and-his-orchestra-grey-stothart_gbia0208563a"
+   },
+   {
+    "src": "https://archive.org/download/1932-USA-Archives-1932-12-07-Eddy-Duchin-Orch-Night-And-Day/1932%28USA%29Archives19321207EddyDuchinOrch-NightAndDay.mp3",
+    "length": 185.87,
+    "series": "Eddy Duchin Orchestra",
+    "title": "Eddy Duchin Orch Night And Day",
+    "date": "1932",
+    "item": "https://archive.org/details/1932-USA-Archives-1932-12-07-Eddy-Duchin-Orch-Night-And-Day"
+   },
+   {
+    "src": "https://archive.org/download/1936-USA-Archives-1936-02-13-Eddy-Duchin-Orch-Love-Is-Like-A-Cigarette/1936%28USA%29Archives19360213EddyDuchinOrch-LoveIsLikeACigarette.mp3",
+    "length": 192.99,
+    "series": "Eddy Duchin Orchestra",
+    "title": "Eddy Duchin Orch Love Is Like A Cigarette",
+    "date": "1936",
+    "item": "https://archive.org/details/1936-USA-Archives-1936-02-13-Eddy-Duchin-Orch-Love-Is-Like-A-Cigarette"
+   },
+   {
+    "src": "https://archive.org/download/MOZARTSerenadeEineKleineNachtmusikK.525-NEWTRANSFER01.I.Allegro/01.I.Allegro.mp3",
+    "length": 248.03,
+    "series": "Bruno Walter, Vienna Philharmonic Orchestra",
+    "title": "I. Allegro",
+    "date": "1936",
+    "item": "https://archive.org/details/MOZARTSerenadeEineKleineNachtmusikK.525-NEWTRANSFER01.I.Allegro"
+   },
+   {
+    "src": "https://archive.org/download/5120b5125aolmanriverpaulrobeson/5120b_5125a_Ol%27%20Man%20River%20-%20Paul%20Robeson.mp3",
+    "length": 243.0,
+    "series": "Paul Robeson - Victor Young",
+    "title": "Ol' Man River - Paul Robeson - Victor Young",
+    "date": "1932",
+    "item": "https://archive.org/details/5120b5125aolmanriverpaulrobeson"
+   },
+   {
+    "src": "https://archive.org/download/Victor_20105/%5B1926%5D%20Johnny%20Hamp%27s%20Kentucky%20Serenaders%20-%20That%27s%20Why%20I%20Love%20You%20Baby%3B%20Jan%20Garber%20%26%20His%20Orchestra%20-%20Baby%20Face%20%5BVictor%2020105%5D/%5BA1%5D%20Johnny%20Hamp%27s%20Kentucky%20Serenaders%20-%20That%27s%20Why%20I%20Love%20You%20Baby.mp3",
+    "length": 186.0,
+    "series": "Johnny Hamp’s Kentucky Serenaders",
+    "title": "That’s Why I Love You Baby / Baby Face",
+    "date": "1926",
+    "item": "https://archive.org/details/Victor_20105"
+   },
+   {
+    "src": "https://archive.org/download/78_go-to-sleep-go-to-sleep-go-to-sleep_dave-hamilton-joan-cherry-horace-heidt-and_gbia0038962b/Go%20to%20Sleep%2C%20Go%20to%20Sleep%2C%20Go%20-%20Dave%20Hamilton%20%26%20Joan%20Cherry.mp3",
+    "length": 204.0,
+    "series": "Dave Hamilton & Joan Cherry",
+    "title": "Go to Sleep, Go to Sleep, Go to Sleep",
+    "date": "1950",
+    "item": "https://archive.org/details/78_go-to-sleep-go-to-sleep-go-to-sleep_dave-hamilton-joan-cherry-horace-heidt-and_gbia0038962b"
+   },
+   {
+    "src": "https://archive.org/download/78_missouri-waltz_lawrence-piano-roll-cook-shannon-eppel_gbia0073261b/Missouri%20Waltz%20-%20Lawrence%20%28Piano%20Roll%29%20Cook.mp3",
+    "length": 130.0,
+    "series": "Lawrence",
+    "title": "Missouri Waltz",
+    "date": "1950",
+    "item": "https://archive.org/details/78_missouri-waltz_lawrence-piano-roll-cook-shannon-eppel_gbia0073261b"
+   },
+   {
+    "src": "https://archive.org/download/1931-USA-Archives-1931-02-18-Wayne-King-Orch-Dream-A-Little-Dream-Of-Me/1931%28USA%29Archives19310218WayneKingOrch-DreamALittleDreamOfMe.mp3",
+    "length": 201.22,
+    "series": "Wayne King Orchestra",
+    "title": "Wayne King Orch Dream A Little Dream Of Me",
+    "date": "1931",
+    "item": "https://archive.org/details/1931-USA-Archives-1931-02-18-Wayne-King-Orch-Dream-A-Little-Dream-Of-Me"
+   },
+   {
+    "src": "https://archive.org/download/TheVeryThoughtOfYouRayNobleAlBowlly/The%20Very%20Thought%20Of%20You%20-%20Ray%20Noble%20-%20Al%20Bowlly.mp3",
+    "length": 211.0,
+    "series": "Ray Noble - Al Bowlly",
+    "title": "The Very Thought Of You - Ray Noble - Al Bowlly",
+    "date": "1934",
+    "item": "https://archive.org/details/TheVeryThoughtOfYouRayNobleAlBowlly"
+   },
+   {
+    "src": "https://archive.org/download/78_the-lords-prayer_ralph-sigwald-horace-heidt-and-his-musical-knights-albert-hay-mal_gbia0010750a/The%20Lord%27s%20Prayer%20-%20Ralph%20Sigwald%20-%20Horace%20Heidt%20and%20His%20Musical%20Knights.mp3",
+    "length": 178.0,
+    "series": "Ralph Sigwald",
+    "title": "The Lord's Prayer",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-lords-prayer_ralph-sigwald-horace-heidt-and-his-musical-knights-albert-hay-mal_gbia0010750a"
+   },
+   {
+    "src": "https://archive.org/download/23765ahumoresquer13933034/23765-A%20-%20Humoresque%20%5Br13933034%5D.mp3",
+    "length": 145.0,
+    "series": "Guy Lombardo And His Royal Canadians",
+    "title": "Humoresque",
+    "date": "1946",
+    "item": "https://archive.org/details/23765ahumoresquer13933034"
    }
   ]
  },
