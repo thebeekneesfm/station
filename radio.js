@@ -26,6 +26,10 @@
     amb_fire: "A fire going (click to turn off)",
     amb_off: "Add rain or a fire",
     tip: "Tip The Bee's Knees",
+    tipThanks: "Thank you, {name}, for buying the station a coffee",
+    tipMember: "Welcome, {name}, our newest {tier} member",
+    tipSaid: ": \u201c{message}\u201d",
+    tipSomeone: "a kind listener",
     sleepOff: "Sleep timer",
     sleepOn: "Off in {min} min",
     recentTitle: "Recently played on {station}",
@@ -1046,6 +1050,17 @@
     new Image().src = A[(k + 1) % A.length].src;   // fetch the next one early
   }
 
+  // recent Ko-fi tips (only names and messages the supporter made public are ever stored)
+  const tips = { list: [] };
+  function loadTips() {
+    const L = CONFIG.listeners || {};
+    if (!L.url || !L.key || !window.fetch) return;
+    const since = new Date(Date.now() - 14 * 864e5).toISOString();
+    fetch(L.url + "/rest/v1/tips?select=created_at,kind,from_name,message,tier_name&order=created_at.desc&limit=5&created_at=gte." + encodeURIComponent(since),
+      { headers: { apikey: L.key, Authorization: "Bearer " + L.key } })
+      .then(r => r.ok ? r.json() : []).then(list => { if (Array.isArray(list)) tips.list = list; }).catch(() => {});
+  }
+  loadTips(); setInterval(loadTips, 3 * 60 * 1000);
   function tickerText(L) {
     const parts = [], show = L.show || ["listeners", "now"], sep = L.separator || "\u00a0\u00a0\u00a0\u00a0✻\u00a0\u00a0\u00a0\u00a0";
     if (show.includes("listeners") && presence.live) {
@@ -1053,6 +1068,14 @@
       parts.push(total <= 1 ? WORDS.listenersOne : WORDS.listeners.replace("{n}", total));
       STATIONS.forEach(st => { const n = presence.counts[st.id]; if (n) parts.push(WORDS.listenersStation.replace("{station}", st.name).replace("{n}", n)); });
     }
+    // thank-yous for recent Ko-fi tips, newest first (see supabase: tips table, kofi-webhook function)
+    tips.list.forEach(t => {
+      const who = t.from_name || WORDS.tipSomeone;
+      let line = (t.kind === "New member" ? WORDS.tipMember : WORDS.tipThanks).replace("{name}", who).replace("{tier}", t.tier_name || "");
+      line = line.replace(/\s+/g, " ").replace(" ,", ",");
+      if (t.message) line += WORDS.tipSaid.replace("{message}", t.message);
+      parts.push(line);
+    });
     if (show.includes("now")) STATIONS.forEach(st => {
       const t = at(st).track;
       parts.push(WORDS.nowOn.replace("{station}", st.name).replace("{series}", t.series || "").replace("{title}", t.title || ""));
