@@ -100,7 +100,7 @@
     editing: false,
     showAll: false,
     selected: null,
-    clean: store.get("clean", true),     // false = Original: no sound cleanup at all
+    clean: store.get("clean2", true),     // false = Original: no sound cleanup at all
     sleepEnd: 0,                         // when the sleep timer turns the radio off
     fireVol: Math.max(0, Math.min(1, +store.get("fireVol", 0) || 0))   // the fire's crackle, 0 (off) to 1, on any station
   };
@@ -217,7 +217,7 @@
       const N = this.N, B = N / 2 + 1, re = s.re, im = s.im, w = this.win;
       for (let i = 0; i < N; i++) { re[i] = s.inb[(s.wi + i) % N] * w[i]; im[i] = 0; }
       this.fft(re, im, false);
-      const lo = 12, over = 1 + 4 * this.amt, floor = Math.pow(10, -(6 + 12 * this.amt) / 20);
+      const lo = 8, over = 1 + 12 * this.amt, floor = Math.pow(10, -(6 + 18 * this.amt) / 20);
       for (let k = 0; k < B; k++) {
         const p = re[k] * re[k] + im[k] * im[k];
         s.P[k] = s.P[k] * 0.7 + p * 0.3;
@@ -296,7 +296,7 @@
   }
   function toggleClean() {
     state.clean = state.clean === false;
-    store.set("clean", state.clean);
+    store.set("clean2", state.clean);
     routeSound(); applySound(); render();
   }
   /* "From another room": muffled, echoey, slightly warbly, with rain or a fire underneath */
@@ -399,7 +399,7 @@
     const amount = Math.max(snd.decrackle || 0, snd.declick || 0);
     if (fx.dc) fx.dc.port.postMessage({ kc: clean && amount ? 8.5 - 5 * Math.min(1, amount) : 999 });
     // hiss: music stations get the stronger setting; set "dehiss" per station in stations.js to override
-    const hiss = snd.dehiss != null ? snd.dehiss : (state.station && state.station.music ? 0.9 : 0.6);
+    const hiss = snd.dehiss != null ? snd.dehiss : (state.station && state.station.music ? 1 : 0.7);
     if (fx.dh) fx.dh.port.postMessage({ amt: clean ? hiss : 0 });
     if (!snd.level) fx.agc.gain.setTargetAtTime(1, ctx.currentTime, 0.2);
   }

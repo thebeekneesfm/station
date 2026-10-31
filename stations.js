@@ -13,9 +13,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.5,
-   "decrackle": 0.5,
-   "tone": 9000
+   "declick": 0.7,
+   "decrackle": 0.7,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -447,9 +447,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.5,
-   "decrackle": 0.5,
-   "tone": 9000
+   "declick": 0.7,
+   "decrackle": 0.7,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -840,9 +840,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.5,
-   "decrackle": 0.5,
-   "tone": 9000
+   "declick": 0.7,
+   "decrackle": 0.7,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -1080,9 +1080,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.5,
-   "decrackle": 0.5,
-   "tone": 9000
+   "declick": 0.7,
+   "decrackle": 0.7,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -1432,9 +1432,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.5,
-   "decrackle": 0.5,
-   "tone": 9000
+   "declick": 0.7,
+   "decrackle": 0.7,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -1819,9 +1819,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.5,
-   "decrackle": 0.5,
-   "tone": 9000
+   "declick": 0.7,
+   "decrackle": 0.7,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -2099,9 +2099,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.5,
-   "decrackle": 0.5,
-   "tone": 9000
+   "declick": 0.7,
+   "decrackle": 0.7,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -2388,8 +2388,8 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.9,
-   "decrackle": 0.9,
+   "declick": 1.0,
+   "decrackle": 1.0,
    "tone": 6000
   },
   "tracks": [
@@ -3269,8 +3269,8 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.9,
-   "decrackle": 0.9,
+   "declick": 1.0,
+   "decrackle": 1.0,
    "tone": 6000
   },
   "tracks": [
@@ -4246,8 +4246,8 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.9,
-   "decrackle": 0.9,
+   "declick": 1.0,
+   "decrackle": 1.0,
    "tone": 6500
   },
   "tracks": [
