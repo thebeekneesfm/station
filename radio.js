@@ -201,7 +201,7 @@
       this.win = new Float32Array(N); for (let i = 0; i < N; i++) this.win[i] = Math.sqrt(0.5 - 0.5 * Math.cos(2 * Math.PI * i / N));
       this.rev = new Uint32Array(N); for (let i = 0, b = Math.log2(N); i < N; i++) { let r = 0; for (let k = 0; k < b; k++) r |= ((i >> k) & 1) << (b - 1 - k); this.rev[i] = r; }
       this.cs = new Float32Array(N / 2); this.sn = new Float32Array(N / 2); for (let i = 0; i < N / 2; i++) { this.cs[i] = Math.cos(2 * Math.PI * i / N); this.sn[i] = -Math.sin(2 * Math.PI * i / N); }
-      this.port.onmessage = e => { if (e.data.amt != null) this.amt = e.data.amt; };
+      this.port.onmessage = e => { if (e.data.amt != null) this.amt = e.data.amt; if (e.data.reset) this.st.forEach(x => { x.fresh = 12; x.age = 0; }); };
     }
     fft(re, im, inv) {
       const N = this.N, rev = this.rev;
@@ -217,18 +217,22 @@
     }
     frame(s) {
       const N = this.N, B = N / 2 + 1, re = s.re, im = s.im, w = this.win;
-      for (let i = 0; i < N; i++) { re[i] = s.inb[(s.wi + i) % N] * w[i]; im[i] = 0; }
+      let en = 0;
+      for (let i = 0; i < N; i++) { const v = s.inb[(s.wi + i) % N]; en += v * v; re[i] = v * w[i]; im[i] = 0; }
+      s.energy = en;
       this.fft(re, im, false);
-      const lo = 8, over = 1 + 12 * this.amt, floor = Math.pow(10, -(6 + 18 * this.amt) / 20);
+      const lo = 8, over = 1 + 8 * this.amt, floor = Math.pow(10, -(6 + 18 * this.amt) / 20);
       for (let k = 0; k < B; k++) {
         const p = re[k] * re[k] + im[k] * im[k];
-        s.P[k] = s.P[k] * 0.7 + p * 0.3;
-        // hiss floor: falls quickly to quiet moments, creeps back up slowly
-        s.Nn[k] = s.P[k] < s.Nn[k] ? s.Nn[k] * 0.8 + s.P[k] * 0.2 : s.Nn[k] * 1.004 + 1e-14;
+        s.P[k] = s.fresh === 12 ? p : s.P[k] * 0.7 + p * 0.3;
+        // hiss floor: starts from the first moment of a record, falls quickly to quiet moments, creeps back up slowly
+        s.Nn[k] = s.fresh > 0 ? (s.fresh === 12 ? s.P[k] : Math.min(s.Nn[k], s.P[k])) : s.P[k] < s.Nn[k] ? s.Nn[k] * 0.8 + s.P[k] * 0.2 : s.Nn[k] * (s.age < 350 ? 1.02 : 1.004) + 1e-14;
         let g = k < lo ? 1 : Math.max(floor, 1 - over * s.Nn[k] / (s.P[k] + 1e-12));
         g = g > s.G[k] ? g : s.G[k] * 0.6 + g * 0.4;     // let go gently, so it doesn't warble
         s.G[k] = g;
       }
+      if (s.fresh > 0 && s.energy > 1e-4) s.fresh--;
+      if (s.fresh === 0 && s.age < 1e9) s.age++;   // learn from the first dozen moments that actually have sound in them
       for (let k = 0; k < B; k++) {
         const g = k > 0 && k < B - 1 ? 0.25 * s.G[k - 1] + 0.5 * s.G[k] + 0.25 * s.G[k + 1] : s.G[k];
         re[k] *= g; im[k] *= g; if (k > 0 && k < N / 2) { re[N - k] = re[k]; im[N - k] = -im[k]; }
@@ -244,7 +248,7 @@
         if (this.amt <= 0) { y.set(x); continue; }
         const B = N / 2 + 1;
         const s = this.st[c] || (this.st[c] = { inb: new Float32Array(N), ola: new Float32Array(N), re: new Float32Array(N), im: new Float32Array(N),
-          P: new Float32Array(B), Nn: new Float32Array(B).fill(1e-6), G: new Float32Array(B).fill(1), wi: 0, ro: 0, cnt: 0 });
+          P: new Float32Array(B), Nn: new Float32Array(B).fill(1e-6), G: new Float32Array(B).fill(1), wi: 0, ro: 0, cnt: 0, fresh: 12, energy: 0, age: 0 });
         for (let i = 0; i < y.length; i++) {
           s.inb[s.wi] = x[i]; s.wi = (s.wi + 1) % N;
           y[i] = s.ola[s.ro]; s.ola[s.ro] = 0; s.ro = (s.ro + 1) % N;
@@ -493,6 +497,7 @@
     else {
       audio.dataset.src = src;
       newTrackLevel();
+      if (fx.dh) fx.dh.port.postMessage({ reset: true });
       audio.src = src;
       audio.addEventListener("loadedmetadata", seek, { once: true });
       audio.load();
