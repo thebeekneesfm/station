@@ -154,7 +154,7 @@ Old records start and end with a few seconds of needle hiss. The radio listens f
 
 ## Changing stations
 
-When you change stations, about three seconds of an old tube radio being tuned plays (squeals and whistles sliding past) while the next show loads. It comes from a Major Records sound-effects 78, "Tuning Squealing Radio (Old Type Radio)", via the Internet Archive. A different slice plays each time. Replace `art/sounds/tuning.mp3` with your own recording to change it, or delete the `"tuning"` line in `skin.js` to switch it off.
+When you change stations, about three seconds of a radio being tuned plays while the next show loads ("ambient noise when tuning into FM radio" by patolenin, via Pixabay). A different slice plays each time. Replace `art/sounds/tuning.mp3` with your own recording to change it, or delete the `"tuning"` line in `skin.js` to switch it off.
 
 ## Reactions
 
