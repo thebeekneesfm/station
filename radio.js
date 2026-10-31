@@ -9,7 +9,9 @@
   let W = SK.stage.width, H = SK.stage.height;
   const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const WORDS = Object.assign({
-    off: "Turn the radio on",
+    off: "",
+    powerOn: "Start listening",
+    powerOff: "Turn the radio off",
     warming: "Warming up…",
     between: "",
     playing: "",
@@ -884,6 +886,7 @@
     const now = st ? at(st) : null;
     switch (L.bind) {
       case "clock": return hhmm(Date.now());
+      case "power": return state.on ? WORDS.powerOff : WORDS.powerOn;
       case "station.name": return st ? st.name : "";
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
