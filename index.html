@@ -27,6 +27,10 @@
   .t-knob > img { transform-origin: 50% 50%; transition: transform .08s linear; }
   .t-needle { transition: left .35s cubic-bezier(.3,.7,.2,1); }
   .card { position: absolute; inset: 0; }
+  .t-ticker { overflow: hidden; }
+  .tick { height: 100%; white-space: nowrap; }
+  .tick span { display: inline-block; will-change: transform; animation: tick 30s linear infinite; }
+  @keyframes tick { from { transform: translateX(var(--from, 100%)); } to { transform: translateX(var(--to, -100%)); } }
   .txt { width: 100%; height: 100%; overflow: hidden; white-space: pre-line; overflow-wrap: anywhere; }
 
   /* dashed template boxes, shown until your art is in the art folder */
@@ -69,7 +73,7 @@
   #panel :focus-visible, .layer:focus-visible { outline: 2px solid var(--sel); outline-offset: 2px; }
   #p-extra { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; }
   #p-extra:empty { display: none; }
-  @media (prefers-reduced-motion: reduce) { .t-needle, .t-knob > img { transition: none; } }
+  @media (prefers-reduced-motion: reduce) { .t-needle, .t-knob > img { transition: none; } .tick span { animation: none; transform: none; } }
 </style>
 </head>
 <body>
@@ -111,6 +115,7 @@
 
 <script src="skin.js"></script>
 <script src="stations.js"></script>
+<script src="config.js"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
 <script src="radio.js"></script>
 </body>

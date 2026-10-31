@@ -11,6 +11,8 @@ window.SKIN = {
     { "family": "Radio Hand", "src": "art/fonts/your-font.woff2" }
   ],
 
+  "sound": { "level": true, "declick": 0.5, "tone": 9000 },
+
   "sounds": {
     "static": "art/sounds/static.mp3"
   },
@@ -56,6 +58,10 @@ window.SKIN = {
 
     { "id": "status", "type": "text", "bind": "status",
       "x": 480, "y": 625, "w": 640, "h": 34, "font": "Radio Hand", "size": 20, "color": "#e9dcc3", "align": "center" },
+
+    { "id": "ticker-strip", "src": "art/ticker-strip.png", "x": 0, "y": 950, "w": 1600, "h": 50 },
+    { "id": "ticker", "type": "ticker", "show": ["listeners", "now"], "speed": 70,
+      "x": 20, "y": 950, "w": 1560, "h": 50, "font": "Radio Hand", "size": 22, "color": "#e9dcc3" },
 
     { "id": "grain", "type": "plate", "src": "art/grain.png", "blend": "multiply", "opacity": 0.35,
       "x": 0, "y": 0, "w": 1600, "h": 1000 }

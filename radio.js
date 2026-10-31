@@ -11,8 +11,13 @@
     playing: "",
     lost: "Lost the signal. Back at {time}",
     gap: "",
-    guideNow: "Now"
+    guideNow: "Now",
+    listeners: "{n} tuned in right now",
+    listenersOne: "Just you tonight",
+    listenersStation: "{station} {n}",
+    nowOn: "{station}: {series} — {title}"
   }, SKIN.words || {});
+  const CONFIG = window.RADIO_CONFIG || {};
 
   const $ = (s, el = document) => el.querySelector(s);
   const stage = $("#stage");
@@ -72,11 +77,15 @@
   /* ---------- audio ---------- */
   const audio = new Audio();
   audio.preload = "auto";
+  audio.crossOrigin = "anonymous";   // lets the browser clean up the sound; the Archive allows it
   let ctx = null, noiseGain = null, staticEl = null, staticOk = false;
+  const fx = { ready: false };       // the sound-cleaning chain
+  const SOUND = Object.assign({ level: true, declick: 0.5, tone: 9000 }, SKIN.sound || {});
   function initAudio() {
     if (ctx) return;
     try {
       ctx = new (window.AudioContext || window.webkitAudioContext)();
+      buildChain();
       const len = ctx.sampleRate * 2, buf = ctx.createBuffer(1, len, ctx.sampleRate), d = buf.getChannelData(0);
       let b = 0;
       for (let i = 0; i < len; i++) { const w = Math.random() * 2 - 1; b = 0.97 * b + 0.03 * w; d[i] = (w * 0.5 + b * 2) * (Math.random() < 0.0008 ? 3 : 1); }
@@ -86,6 +95,99 @@
       src.connect(bp); bp.connect(noiseGain); noiseGain.connect(ctx.destination); src.start();
     } catch (e) { ctx = null; }
   }
+
+  /* Sound cleaning: rumble filter → click remover → tone (softens hiss and crackle)
+     → automatic level → compressor → limiter → volume. Settings per station in stations.js. */
+  const DECLICK = `
+  // A click is a short spike that jumps one way and snaps back within a few samples.
+  // Drum hits and consonants last longer, so they're left alone. Repairs are drawn
+  // as a straight line across the spike, about 96 samples (2 ms) behind real time.
+  class Declick extends AudioWorkletProcessor {
+    constructor() { super(); this.k = 9; this.st = []; this.port.onmessage = e => { if (e.data.k != null) this.k = e.data.k; }; }
+    process(inputs, outputs) {
+      const inp = inputs[0], out = outputs[0], N = 4096, M = N - 1, D = 96;
+      for (let c = 0; c < out.length; c++) {
+        const x = inp[c] || inp[0], y = out[c];
+        if (!x) { y.fill(0); continue; }
+        const s = this.st[c] || (this.st[c] = { buf: new Float32Array(N), w: 0, env: 0.002, prev: 0, q: [], cand: null });
+        for (let i = 0; i < y.length; i++) {
+          const v = x[i], w = s.w;
+          s.buf[w & M] = v;
+          const dv = v - s.prev, d = Math.abs(dv); s.prev = v;
+          const big = this.k < 50 && d > this.k * s.env && d > 0.02;
+          const cd = s.cand;
+          if (big) {
+            if (!cd) s.cand = { s: w - 1, sign: Math.sign(dv), last: w, flips: 0 };
+            else { if (Math.sign(dv) !== cd.sign) { cd.flips++; cd.sign = Math.sign(dv); } cd.last = w; }
+          }
+          const c2 = s.cand;
+          if (c2) {
+            if (w - c2.s > 48) s.cand = null;                     // too long to be a click
+            else if (w - c2.last > 3) {                            // spike is over
+              if (c2.flips >= 1) s.q.push({ s: c2.s - 1, e: c2.last + 1 });
+              s.cand = null;
+            }
+          }
+          s.env += (Math.min(d, 0.25) - s.env) * 0.002;
+          const r = w - D;
+          let o = r >= 0 ? s.buf[r & M] : 0;
+          while (s.q.length && s.q[0].e < r) s.q.shift();
+          const g = s.q[0];
+          if (g && r >= g.s) { const a = s.buf[(g.s - 1) & M], b = s.buf[(g.e + 1) & M], t = (r - g.s + 1) / (g.e - g.s + 2); o = a + (b - a) * t; }
+          y[i] = o; s.w = w + 1;
+        }
+      }
+      return true;
+    }
+  }
+  registerProcessor("declick", Declick);`;
+  function buildChain() {
+    try {
+      const src = ctx.createMediaElementSource(audio);
+      const hp = ctx.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 70;
+      const lp = ctx.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = SOUND.tone; lp.Q.value = 0.5;
+      const an = ctx.createAnalyser(); an.fftSize = 2048;
+      const agc = ctx.createGain();
+      const comp = ctx.createDynamicsCompressor();
+      comp.threshold.value = -26; comp.knee.value = 12; comp.ratio.value = 3; comp.attack.value = 0.01; comp.release.value = 0.3;
+      const lim = ctx.createDynamicsCompressor();
+      lim.threshold.value = -4; lim.knee.value = 0; lim.ratio.value = 20; lim.attack.value = 0.001; lim.release.value = 0.08;
+      const master = ctx.createGain(); master.gain.value = state.vol;
+      src.connect(hp); hp.connect(lp); lp.connect(an); an.connect(agc); agc.connect(comp); comp.connect(lim); lim.connect(master); master.connect(ctx.destination);
+      Object.assign(fx, { ready: true, src, hp, lp, an, agc, comp, master, level: null, buf: new Float32Array(an.fftSize) });
+      audio.volume = 1;
+      if (ctx.audioWorklet && window.Blob) {
+        const url = URL.createObjectURL(new Blob([DECLICK], { type: "application/javascript" }));
+        ctx.audioWorklet.addModule(url).then(() => {
+          const dc = new AudioWorkletNode(ctx, "declick", { outputChannelCount: [2] });
+          hp.disconnect(); hp.connect(dc); dc.connect(lp);
+          fx.dc = dc; applySound();
+        }).catch(() => {});
+      }
+    } catch (e) { fx.ready = false; }
+  }
+  function soundFor(st) { return Object.assign({}, SOUND, (st && st.sound) || {}); }
+  function applySound() {
+    if (!fx.ready) return;
+    const snd = soundFor(state.station);
+    fx.lp.frequency.setTargetAtTime(snd.tone || 20000, ctx.currentTime, 0.1);
+    if (fx.dc) fx.dc.port.postMessage({ k: snd.declick ? 14 - 9 * Math.min(1, snd.declick) : 999 });
+    if (!snd.level) fx.agc.gain.setTargetAtTime(1, ctx.currentTime, 0.2);
+  }
+  // automatic level: listens to the show and slowly turns quiet ones up and loud ones down
+  setInterval(() => {
+    if (!fx.ready || state.phase !== "playing" || !soundFor(state.station).level) return;
+    fx.an.getFloatTimeDomainData(fx.buf);
+    let sum = 0; for (let i = 0; i < fx.buf.length; i++) sum += fx.buf[i] * fx.buf[i];
+    const db = 10 * Math.log10(sum / fx.buf.length + 1e-12);
+    if (db < -55) return;                                   // silence: leave the level alone
+    const a = fx.level == null ? 1 : (fx.fresh > 0 ? 0.25 : 0.04);
+    fx.level = fx.level == null ? db : fx.level + (db - fx.level) * a;
+    if (fx.fresh > 0) fx.fresh--;
+    const target = -21, g = Math.max(-10, Math.min(16, target - fx.level));
+    fx.agc.gain.setTargetAtTime(Math.pow(10, g / 20), ctx.currentTime, fx.fresh > 0 ? 0.3 : 1.5);
+  }, 200);
+  function newTrackLevel() { if (fx.ready) { fx.level = null; fx.fresh = 15; } }
   if (SKIN.sounds && SKIN.sounds.static) {
     staticEl = new Audio(SKIN.sounds.static); staticEl.loop = true; staticEl.volume = 0;
     staticEl.addEventListener("canplay", () => { staticOk = true; }, { once: true });
@@ -102,7 +204,7 @@
     }
   }
   function applyVolume() {
-    audio.volume = state.vol;
+    if (fx.ready) fx.master.gain.setTargetAtTime(state.vol, ctx.currentTime, 0.03); else audio.volume = state.vol;
     const lvl = { warming: 0.5, between: 0.8, lost: 0.25, gap: 0.08 }[state.phase] || 0;
     setStatic(state.on ? lvl : 0);
   }
@@ -125,11 +227,13 @@
     if (audio.dataset.src === src && audio.readyState >= 1) seek();
     else {
       audio.dataset.src = src;
+      newTrackLevel();
       audio.src = src;
       audio.addEventListener("loadedmetadata", seek, { once: true });
       audio.load();
     }
     mediaSession(st, now.track);
+    applySound();
   }
   function waitForNext(now) {
     audio.pause();
@@ -155,13 +259,13 @@
     if (Math.abs(audio.currentTime - now.offset) > 6) { try { audio.currentTime = now.offset; } catch (e) {} }
   }, 10000);
 
-  function setPhase(p) { state.phase = p; applyVolume(); render(); }
+  function setPhase(p) { state.phase = p; applyVolume(); render(); presenceUpdate(); }
 
   function power(on) {
     initAudio();
     if (ctx && ctx.state === "suspended") ctx.resume();
     state.on = on == null ? !state.on : on;
-    if (!state.on) { audio.pause(); clearTimeout(lostTimer); state.phase = "off"; applyVolume(); render(); return; }
+    if (!state.on) { audio.pause(); clearTimeout(lostTimer); state.phase = "off"; applyVolume(); render(); presenceUpdate(); return; }
     retune(true);
   }
   function retune(force) {
@@ -233,6 +337,11 @@
       const type = L.type || "image";
       if (type === "text") {
         el.appendChild(document.createElement("div")).className = "txt";
+      } else if (type === "ticker") {
+        const run = document.createElement("div"); run.className = "tick";
+        const span = document.createElement("span"); run.appendChild(span); el.appendChild(run);
+        rec.tick = { span, run, text: null, pending: null };
+        span.addEventListener("animationiteration", () => { if (rec.tick.pending != null) { setTick(rec, rec.tick.pending); } });
       } else if (type === "card") {
         rec.cards = {};
         STATIONS.forEach(s => {
@@ -266,6 +375,13 @@
       el.style.left = L.x + "px"; el.style.top = L.y + "px";
       el.style.width = L.w + "px"; el.style.height = L.h + "px";
       el.style.zIndex = SKIN.layers.indexOf(L) + 1;
+      if (L.type === "ticker") {
+        const t = el.firstChild;
+        t.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
+        t.style.color = L.color || "#e9dcc3";
+        t.style.fontSize = (L.size || 22) + "px";
+        t.style.lineHeight = L.h + "px";
+      }
       if (L.type === "text") {
         const t = el.firstChild;
         t.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
@@ -320,6 +436,28 @@
       default: return L.text || "";
     }
   }
+  function tickerText(L) {
+    const parts = [], show = L.show || ["listeners", "now"], sep = L.separator || "   ·   ";
+    if (show.includes("listeners") && presence.live) {
+      const total = presence.counts._total || 0;
+      parts.push(total <= 1 ? WORDS.listenersOne : WORDS.listeners.replace("{n}", total));
+      STATIONS.forEach(st => { const n = presence.counts[st.id]; if (n) parts.push(WORDS.listenersStation.replace("{station}", st.name).replace("{n}", n)); });
+    }
+    if (show.includes("now")) STATIONS.forEach(st => {
+      const t = at(st).track;
+      parts.push(WORDS.nowOn.replace("{station}", st.name).replace("{series}", t.series || "").replace("{title}", t.title || ""));
+    });
+    return parts.join(sep);
+  }
+  function setTick(rec, s) {
+    const t = rec.tick; t.text = s; t.pending = null;
+    t.span.textContent = s;
+    const speed = rec.L.speed || 70;              // stage pixels per second
+    const dist = rec.L.w + t.span.offsetWidth;
+    t.span.style.setProperty("--from", rec.L.w + "px");
+    t.span.style.setProperty("--to", -t.span.offsetWidth + "px");
+    t.span.style.animationDuration = Math.max(8, dist / speed) + "s";
+  }
   function fitText(rec) {
     const t = rec.el.firstChild, L = rec.L;
     let size = L.size || 20;
@@ -353,6 +491,10 @@
         const [a, b] = L.turn || [-140, 140];
         const v = L.bind === "volume" ? state.vol : state.dial;
         (rec.img || el).style.transform = `rotate(${a + (b - a) * v}deg)`;
+      } else if (type === "ticker") {
+        const s = tickerText(L);
+        if (rec.tick.text == null) setTick(rec, s);
+        else if (s !== rec.tick.text) rec.tick.pending = s;
       } else if (type === "card") {
         Object.entries(rec.cards).forEach(([id, h]) => { h.hidden = !(state.station && state.station.id === id); });
       }
@@ -587,9 +729,52 @@
     out.value = dead.map(x => `${x.st.name}: ${x.tr.series || ""} — ${x.tr.title}${x.err ? " (couldn't reach the Archive)" : ""}\n  ${x.tr.src}`).join("\n");
   }
 
+  /* ---------- who's listening (needs config.js) ---------- */
+  const presence = { live: false, counts: {}, ch: null, me: Math.random().toString(36).slice(2) };
+  function presenceUpdate() {
+    if (!presence.ch) return;
+    const payload = { station: state.on && state.station ? state.station.id : null };
+    if (presence.last === payload.station) return;
+    presence.last = payload.station;
+    presence.ch.track(payload).catch(() => {});
+  }
+  function presenceCount() {
+    const st = presence.ch.presenceState(), counts = { _total: 0 };
+    Object.values(st).forEach(list => {
+      const p = list[list.length - 1] || {};
+      if (!p.station) return;
+      counts._total++; counts[p.station] = (counts[p.station] || 0) + 1;
+    });
+    const first = !presence.live;
+    presence.counts = counts; presence.live = true;
+    if (first) els.forEach(r => { if (r.tick) r.tick.text = null; });   // show the count right away
+    render();
+  }
+  function startPresence() {
+    const c = CONFIG.listeners || {};
+    if (/[?&]fakelisteners\b/.test(location.search)) {
+      setTimeout(() => { presence.live = true; presence.counts = { _total: 14, chills: 6, noir: 4, laughs: 3, hotwax: 1 }; els.forEach(r => { if (r.tick) r.tick.text = null; }); render(); }, 300); return;
+    }
+    if (!c.url || !c.key) return;
+    const go = () => {
+      try {
+        const client = window.supabase.createClient(c.url, c.key);
+        presence.ch = client.channel(c.room || "radio", { config: { presence: { key: presence.me } } });
+        presence.ch.on("presence", { event: "sync" }, presenceCount)
+          .subscribe(status => { if (status === "SUBSCRIBED") { presence.last = undefined; presenceUpdate(); } });
+      } catch (e) {}
+    };
+    if (window.supabase) return go();
+    const sc = document.createElement("script");
+    sc.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js";
+    sc.onload = go; document.head.appendChild(sc);
+  }
+
   /* ---------- go ---------- */
+  window.RADIO = { state, fx, presence };   // handy for poking at it in the browser console
   build();
   fit();
+  startPresence();
   state.station = stationAtDial(state.dial);
   render();
   if (/[?&#]edit\b/.test(location.href)) toggleEdit(true);
