@@ -48,13 +48,23 @@ window.SKIN = {
     { "id": "now-left", "type": "text", "bind": "now.remaining",
       "x": 80, "y": 520, "w": 240, "h": 40, "font": "Radio Hand", "size": 20, "color": "#b9aa90", "align": "left" },
 
+    { "id": "via-archive", "type": "text", "text": "via archive.org", "href": "now.item", "when": "tuned",
+      "x": 80, "y": 556, "w": 240, "h": 28, "font": "Radio Hand", "size": 17, "color": "#b9aa90", "align": "left" },
+
+    { "id": "about-link", "type": "text", "text": "About", "href": "about.html",
+      "x": 50, "y": 70, "w": 90, "h": 34, "font": "Radio Hand", "size": 22, "color": "#e9dcc3", "align": "left" },
+    { "id": "donate-link", "type": "text", "text": "Donate to the Archive", "href": "https://archive.org/donate",
+      "x": 50, "y": 108, "w": 300, "h": 34, "font": "Radio Hand", "size": 22, "color": "#e9dcc3", "align": "left" },
+
     { "id": "clock", "type": "text", "bind": "clock",
       "x": 1260, "y": 70, "w": 290, "h": 60, "font": "Radio Hand", "size": 40, "color": "#e9dcc3", "align": "right" },
     { "id": "station-card", "type": "card", "x": 1260, "y": 170, "w": 290, "h": 380 },
     { "id": "station-name", "type": "text", "bind": "station.name",
       "x": 1260, "y": 565, "w": 290, "h": 44, "font": "Radio Hand", "size": 28, "color": "#e9dcc3", "align": "left" },
+    { "id": "station-listeners", "type": "text", "bind": "station.listeners",
+      "x": 1260, "y": 600, "w": 290, "h": 28, "font": "Radio Hand", "size": 18, "color": "#b9aa90", "align": "left" },
     { "id": "guide", "type": "text", "bind": "guide", "count": 5,
-      "x": 1260, "y": 620, "w": 290, "h": 300, "font": "Radio Hand", "size": 18, "color": "#cbbda4", "align": "left" },
+      "x": 1260, "y": 640, "w": 290, "h": 290, "font": "Radio Hand", "size": 18, "color": "#cbbda4", "align": "left" },
 
     { "id": "status", "type": "text", "bind": "status",
       "x": 480, "y": 625, "w": 640, "h": 34, "font": "Radio Hand", "size": 20, "color": "#e9dcc3", "align": "center" },

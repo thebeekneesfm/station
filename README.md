@@ -59,7 +59,7 @@ Each piece in `skin.js` has `id`, `x`, `y`, `w`, `h`, and usually `src` (the art
 | `"type": "button", "action": "power"` | Clickable. Actions: `power`, `next`, `prev`, `volup`, `voldown`, `dial`, `tune:chills` (jump to a station). |
 | `"type": "card"` | Shows the current station's card art. |
 | `"type": "ticker"` | A scrolling strip. `"show"`, `"speed"` (pixels per second), `font`, `size`, `color`. |
-| `"type": "text", "bind": "…"` | Live text. Binds: `now.series`, `now.title`, `now.date`, `now.remaining`, `station.name`, `station.freq`, `station.blurb`, `clock`, `guide` (with `"count": 5`), `status`. Style with `font`, `size`, `color`, `align`, `lineHeight`, `uppercase`, `spacing`. Long titles shrink to fit. |
+| `"type": "text", "bind": "…"` | Live text. Binds: `now.series`, `now.title`, `now.date`, `now.remaining`, `station.name`, `station.freq`, `station.blurb`, `station.listeners`, `clock`, `guide` (with `"count": 5`), `status`. Or fixed words with `"text": "…"`. Add `"href"` to make it a link: a web address, or `"now.item"` for the current show's Archive page. Style with `font`, `size`, `color`, `align`, `lineHeight`, `uppercase`, `spacing`. Long titles shrink to fit. |
 | `"when": "on"` | Only show at certain times: `on`, `off`, `playing`, `warming`, `between` (dial between stations), `lost` (a broken tape), `tuned`. Combine them with commas. |
 | `"station": "chills"` | Only show on that station, for example a different dial glow per station. |
 | `"frames": ["art/tube-1.png", "art/tube-2.png"], "fps": 6` | A looping animation, like flickering tubes or a turning record. |
@@ -105,9 +105,19 @@ Each station can have its own settings in `stations.js`, for example `"sound": {
 - `tone` is where the hiss cut starts, in Hz. Lower is softer and warmer. 20000 turns it off.
 - `level: false` turns off the automatic leveling.
 
+## About page and credits
+
+`about.html` explains the station: everything plays from the Internet Archive, it isn't affiliated with them, what's kept (nothing), and how a rights holder can ask for a show to come off. It lists the stations and shows automatically from `stations.js`. Edit the wording however you like.
+
+Put a way to reach you in `config.js` under `contact` (an email address or a Discord invite). The About page shows it to rights holders.
+
+On the radio, "via archive.org" under the current show links to that recording's Archive page. There are also **About** and **Donate to the Archive** links in the top left. Like everything else, you can restyle or move them in layout mode.
+
 ## Listener ticker
 
-The strip along the bottom scrolls what's on every station right now. It can also show how many people are listening, overall and per station, like "14 tuned in right now · Chills 6 · Noir 4".
+The strip along the bottom scrolls what's on every station right now. It can also show how many people are listening, overall and per station, like "14 tuned in right now · Chills 6 · Noir 4". Under the station name, the radio also shows how many are on the station you're tuned to.
+
+Only people who have the radio on and tuned to a station are counted. Someone with the page open and the radio off isn't counted, and neither is someone sitting between stations. A listener is counted on whichever station they're on and moves with them when they change it.
 
 Counting listeners needs a small live service, because a static site can't see other visitors. The radio uses Supabase's free plan for this. It only counts people while they're connected; it stores nothing and needs no database tables.
 

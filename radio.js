@@ -15,6 +15,8 @@
     listeners: "{n} tuned in right now",
     listenersOne: "Just you tonight",
     listenersStation: "{station} {n}",
+    listeningHere: "{n} listening",
+    listeningAlone: "",
     nowOn: "{station}: {series} — {title}"
   }, SKIN.words || {});
   const CONFIG = window.RADIO_CONFIG || {};
@@ -336,7 +338,13 @@
       const rec = { L, el, img: null, ok: false, frames: null, cards: null };
       const type = L.type || "image";
       if (type === "text") {
-        el.appendChild(document.createElement("div")).className = "txt";
+        const t = el.appendChild(document.createElement(L.href ? "a" : "div"));
+        t.className = "txt";
+        if (L.href) {
+          el.classList.add("hot");
+          t.target = "_blank"; t.rel = "noopener";
+          t.addEventListener("click", e => { if (state.editing) e.preventDefault(); });
+        }
       } else if (type === "ticker") {
         const run = document.createElement("div"); run.className = "tick";
         const span = document.createElement("span"); run.appendChild(span); el.appendChild(run);
@@ -421,6 +429,11 @@
       case "station.name": return st ? st.name : "";
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
+      case "station.listeners": {
+        if (!st || !presence.live) return "";
+        const n = presence.counts[st.id] || 0;
+        return n <= 1 ? (WORDS.listeningAlone || "") : WORDS.listeningHere.replace("{n}", n);
+      }
       case "now.series": return now ? now.track.series || "" : "";
       case "now.title": return now ? now.track.title || "" : "";
       case "now.date": return now ? now.track.date || "" : "";
@@ -477,6 +490,10 @@
       if (type === "text") {
         const s = textFor(L);
         if (el.firstChild.textContent !== s) { el.firstChild.textContent = s; fitText(rec); }
+        if (L.href) {
+          const st = state.station, href = L.href === "now.item" ? (st ? at(st).track.item || "" : "") : L.href;
+          if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
+        }
       } else if (type === "needle") {
         const tr = L.track || { from: L.x, to: L.x };
         if (L.mode === "rotate") {
