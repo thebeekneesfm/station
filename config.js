@@ -15,7 +15,6 @@ window.RADIO_CONFIG = {
      Add, change or delete lines here; each one is a line in quotes, followed by a comma. */
   "announcements": [
     "Welcome to The Bee's Knees.fm: old radio shows and 78s, playing around the clock",
-    "New station: Classical, with Caruso, Kreisler, Heifetz and Rachmaninoff on 78s",
     "Click the TV or the fireplace to make it bigger",
     "Keep the station on the air: tip us on Ko-fi at ko-fi.com/thebeeskneesfm",
   ],
