@@ -1177,6 +1177,8 @@
     while ((t.scrollHeight > L.h + 1 || t.scrollWidth > L.w + 1) && size > min) { size -= 1; t.style.fontSize = size + "px"; }
   }
   function fitAllText() { els.forEach(rec => { if (rec.L.type === "text") fitText(rec); }); }
+  // web fonts arrive after the first layout and change how wide text is, so fit everything again then
+  if (document.fonts) { document.fonts.ready.then(fitAllText); document.fonts.addEventListener && document.fonts.addEventListener("loadingdone", fitAllText); }
   let frameTick = 0;
   function render() {
     const tuning = SK.layers.find(l => l.type === "knob" && l.bind === "tuning");

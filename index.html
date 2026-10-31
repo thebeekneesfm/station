@@ -372,6 +372,13 @@
   .look-card { background-image: radial-gradient(rgba(0,0,0,.09) 1px, transparent 1.4px); }
   .lc-blurb { opacity: 1; font-weight: 600; font-size: min(14px, 7.8cqw); line-height: 1.3; }
   .look-card[data-ink="light"] .lc-name, .look-card[data-ink="light"] .lc-blurb { text-shadow: 0 1px 0 rgba(0,0,0,.25); }
+  /* masthead links: one tidy grid, all underlined the same way */
+  [data-id="recent-link"] .txt, [data-id="sleep-timer"] .txt, [data-id="tip-link"] .txt, [data-id="about-link"] .txt, [data-id="ads-link"] .txt, [data-id="donate-link"] .txt {
+    text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
+  /* song titles: Bodoni's "text" cut is sturdier and evenly spaced at this size */
+  [data-id="now-title"] .txt { font-optical-sizing: none; font-variation-settings: "opsz" 11; letter-spacing: 0; }
+  .t-reactbar { gap: 10px; }
+  .react { flex: 0 0 auto; }
 </style>
 </head>
 <body>
@@ -411,12 +418,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101c"></script>
-<script src="stations.js?v=20261101c"></script>
-<script src="config.js?v=20261101c"></script>
-<script src="ads.js?v=20261101c"></script>
-<script src="tv.js?v=20261101c"></script>
+<script src="skin.js?v=20261101d"></script>
+<script src="stations.js?v=20261101d"></script>
+<script src="config.js?v=20261101d"></script>
+<script src="ads.js?v=20261101d"></script>
+<script src="tv.js?v=20261101d"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101c"></script>
+<script src="radio.js?v=20261101d"></script>
 </body>
 </html>
