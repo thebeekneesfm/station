@@ -123,19 +123,20 @@
   // Clicks, pops and crackle are samples that stick out far more than their neighbours.
   // Each sample is compared with the long-run level and with the last ~30 samples, so
   // busy passages (snare drums, brushes, sibilants) aren't mistaken for crackle.
-  // Small ticks are replaced by the median of their neighbours; big pops get a short
-  // stretch bridged with a straight line. Output runs 96 samples (2 ms) behind.
+  // A click is followed until it dies away (up to ~0.3 ms), then the whole stretch is
+  // bridged from the clean sound on either side. Single-sample ticks get the median of
+  // their neighbours. Output runs 96 samples (2 ms) behind.
   class Declick extends AudioWorkletProcessor {
     constructor() {
-      super(); this.kc = 999; this.wide = 0; this.st = [];
-      this.port.onmessage = e => { if (e.data.kc != null) this.kc = e.data.kc; if (e.data.wide != null) this.wide = e.data.wide; };
+      super(); this.kc = 999; this.st = [];
+      this.port.onmessage = e => { if (e.data.kc != null) this.kc = e.data.kc; };
     }
     process(inputs, outputs) {
       const inp = inputs[0], out = outputs[0], N = 4096, M = N - 1, D = 96;
       for (let c = 0; c < out.length; c++) {
         const x = inp[c] || inp[0], y = out[c];
         if (!x) { y.fill(0); continue; }
-        const s = this.st[c] || (this.st[c] = { buf: new Float32Array(N), flag: new Uint8Array(N), w: 0, hf: 1e-6, hff: 1e-6 });
+        const s = this.st[c] || (this.st[c] = { buf: new Float32Array(N), flag: new Uint8Array(N), w: 0, hf: 1e-6, hff: 1e-6, on: 0, thr: 0 });
         for (let i = 0; i < y.length; i++) {
           const v = x[i], w = s.w;
           s.buf[w & M] = v;
@@ -144,23 +145,29 @@
             const n = w - 1, hv = s.buf[n & M] - 0.5 * (s.buf[(n - 1) & M] + v), ha = Math.abs(hv);
             const thr = this.kc * Math.sqrt(Math.max(s.hf, s.hff));
             if (ha > thr && ha > 0.004) {
-              s.flag[n & M] = 1;
-              if (this.wide && ha > 3 * thr && ha > 0.05) for (let j = -1; j <= this.wide; j++) s.flag[(n + j) & M] = 1;   // a big pop: mark its tail too
-            } else s.hf += (Math.min(hv * hv, 0.01) - s.hf) * 0.0015;
+              if (!s.on) { s.flag[(n - 1) & M] = 1; s.flag[(n - 2) & M] = 1; s.thr = thr; }
+              s.flag[n & M] = 1; s.on = 12;
+            } else if (s.on && ha > 0.7 * s.thr) { s.flag[n & M] = 1; s.on--; }
+            else {
+              if (s.on) { s.flag[n & M] = 1; s.flag[(n + 1) & M] = 1; s.on = 0; }
+              s.hf += (Math.min(hv * hv, 0.01) - s.hf) * 0.0015;
+            }
             s.hff += (Math.min(hv * hv, 4 * s.hff + 1e-6) - s.hff) * 0.06;
           }
           const r = w - D;
           let o = r >= 0 ? s.buf[r & M] : 0;
-          if (r > 40 && s.flag[r & M]) {
+          if (r > 60 && s.flag[r & M]) {
             let a = r, b = r;
-            while (a > r - 32 && s.flag[(a - 1) & M]) a--;
-            while (b < r + 32 && s.flag[(b + 1) & M]) b++;
-            if (b - a < 2 || b - a > 12) {
+            while (a > r - 48 && s.flag[(a - 1) & M]) a--;
+            while (b < r + 48 && s.flag[(b + 1) & M]) b++;
+            if (b - a < 2) {
               const m = [s.buf[(r - 3) & M], s.buf[(r - 2) & M], s.buf[(r - 1) & M], o, s.buf[(r + 1) & M], s.buf[(r + 2) & M], s.buf[(r + 3) & M]];
               m.sort((p, q) => p - q); o = m[3];
             } else {
-              const p0 = s.buf[(a - 1) & M], p1 = s.buf[(b + 1) & M];
-              o = p0 + (p1 - p0) * (r - a + 1) / (b - a + 2);
+              const p1 = s.buf[(a - 1) & M], p0 = s.buf[(a - 2) & M], q1 = s.buf[(b + 1) & M], q2 = s.buf[(b + 2) & M];
+              const L = b - a + 2, t = (r - a + 1) / L, m0 = q1 - p1, m1 = q1 - p1;
+              const t2 = t * t, t3 = t2 * t;
+              o = (2 * t3 - 3 * t2 + 1) * p1 + (t3 - 2 * t2 + t) * m0 + (-2 * t3 + 3 * t2) * q1 + (t3 - t2) * m1;
             }
           }
           y[i] = o; s.w = w + 1;
@@ -310,7 +317,7 @@
     const clean = state.clean !== false;
     // one detector handles pops and crackle; the stronger of the two settings sets its sensitivity
     const amount = Math.max(snd.decrackle || 0, snd.declick || 0);
-    if (fx.dc) fx.dc.port.postMessage({ kc: clean && amount ? 7 - 3.5 * Math.min(1, amount) : 999, wide: 0 });
+    if (fx.dc) fx.dc.port.postMessage({ kc: clean && amount ? 8.5 - 5 * Math.min(1, amount) : 999 });
     if (!snd.level) fx.agc.gain.setTargetAtTime(1, ctx.currentTime, 0.2);
   }
   // automatic level: listens to the show and slowly turns quiet ones up and loud ones down
@@ -624,6 +631,7 @@
         v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.disablePictureInPicture = true;
         v.src = L.video; el.appendChild(v);
         v.play().catch(() => {});
+        enlargeable(el, v, L.id === "fireplace" ? "fire" : "video");
         document.addEventListener("visibilitychange", () => { if (!document.hidden) v.play().catch(() => {}); });
       } else if (type === "guide") {
         const g = document.createElement("div"); g.className = "guide";
@@ -639,6 +647,7 @@
         const v = el.querySelector("video");
         v.muted = true; v.defaultMuted = true;
         rec.tv = { v, standby: el.querySelector(".tv-standby"), src: "", until: 0 };
+        enlargeable(el, v, "tv");
         v.addEventListener("ended", () => { rec.tv.src = ""; renderTV(rec, true); });
         v.addEventListener("playing", () => { rec.tv.standby.hidden = true; });
         v.addEventListener("error", () => {
@@ -946,7 +955,7 @@
     if (document.hidden && !force) return;
     const v = tv.v;
     if (tv.src !== now.c.src) {
-      tv.src = now.c.src; tv.standby.hidden = false; tv.standby.textContent = WORDS.tvTuning;
+      tv.src = now.c.src; setBigTitle(); tv.standby.hidden = false; tv.standby.textContent = WORDS.tvTuning;
       v.src = now.c.src;
       v.addEventListener("loadedmetadata", () => {
         const fresh = tvAt();
@@ -960,6 +969,49 @@
     }
   }
   document.addEventListener("visibilitychange", () => { if (!document.hidden) render(); });
+
+  /* ---------- big screen: click the TV or the fireplace to fill the window ----------
+     The same video element moves into the big view and back, so it stays in step;
+     the station's sound is separate and keeps playing. */
+  let big = null;
+  function enlargeable(el, v, kind) {
+    el.classList.add("hot");
+    el.title = "Click to make it bigger";
+    el.addEventListener("click", e => {
+      if (state.editing || e.target.closest("a")) return;
+      openBig(el, v, kind);
+    });
+  }
+  function openBig(el, v, kind) {
+    if (big) closeBig();
+    let box = document.getElementById("bigscreen");
+    if (!box) {
+      box = document.createElement("div"); box.id = "bigscreen"; box.setAttribute("role", "dialog"); box.setAttribute("aria-label", "Big screen");
+      box.innerHTML = '<div class="bs-screen"></div><div class="bs-bar"><span class="bs-title"></span><button type="button">Make it small again</button></div>';
+      document.body.appendChild(box);
+      box.addEventListener("click", e => { if (!e.target.closest("a")) closeBig(); });
+      window.addEventListener("keydown", e => { if (e.key === "Escape" && big) closeBig(); });
+    }
+    const t = box.classList; t.toggle("bs-tv", kind === "tv"); t.toggle("bs-fire", kind !== "tv");
+    big = { el, v, kind, home: v.parentNode, next: v.nextSibling, box };
+    box.querySelector(".bs-screen").appendChild(v);
+    setBigTitle();
+    box.hidden = false; v.play().catch(() => {});
+    box.querySelector("button").focus();
+  }
+  function closeBig() {
+    if (!big) return;
+    const { v, home, next, box } = big;
+    home.insertBefore(v, next && next.parentNode === home ? next : null);
+    box.hidden = true; big = null;
+    v.play().catch(() => {});
+  }
+  function setBigTitle() {
+    if (!big) return;
+    const span = big.box.querySelector(".bs-title");
+    if (big.kind === "tv") { const n = tvAt(); span.textContent = n ? n.c.title : ""; }
+    else span.textContent = "";
+  }
 
   /* ---------- vintage ads (ads.js) ---------- */
   function openAd(a) {
