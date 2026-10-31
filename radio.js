@@ -746,7 +746,6 @@
         v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.disablePictureInPicture = true;
         v.src = L.video; el.appendChild(v);
         v.play().catch(() => {});
-        enlargeable(el, v, L.id === "fireplace" ? "fire" : "video");
         document.addEventListener("visibilitychange", () => { if (!document.hidden) v.play().catch(() => {}); });
       } else if (type === "guide") {
         const g = document.createElement("div"); g.className = "guide";
@@ -762,7 +761,6 @@
         const v = el.querySelector("video");
         v.muted = true; v.defaultMuted = true;
         rec.tv = { v, standby: el.querySelector(".tv-standby"), src: "", until: 0 };
-        enlargeable(el, v, "tv");
         v.addEventListener("ended", () => { rec.tv.src = ""; renderTV(rec, true); });
         v.addEventListener("playing", () => { rec.tv.standby.hidden = true; });
         v.addEventListener("error", () => {
@@ -1089,7 +1087,7 @@
     if (document.hidden && !force) return;
     const v = tv.v;
     if (tv.src !== now.c.src) {
-      tv.src = now.c.src; setBigTitle(); tv.standby.hidden = false; tv.standby.textContent = WORDS.tvTuning;
+      tv.src = now.c.src; tv.standby.hidden = false; tv.standby.textContent = WORDS.tvTuning;
       v.src = now.c.src;
       v.addEventListener("loadedmetadata", () => {
         const fresh = tvAt();
@@ -1103,49 +1101,6 @@
     }
   }
   document.addEventListener("visibilitychange", () => { if (!document.hidden) render(); });
-
-  /* ---------- big screen: click the TV or the fireplace to fill the window ----------
-     The same video element moves into the big view and back, so it stays in step;
-     the station's sound is separate and keeps playing. */
-  let big = null;
-  function enlargeable(el, v, kind) {
-    el.classList.add("hot");
-    el.title = "Click to make it bigger";
-    el.addEventListener("click", e => {
-      if (state.editing || e.target.closest("a")) return;
-      openBig(el, v, kind);
-    });
-  }
-  function openBig(el, v, kind) {
-    if (big) closeBig();
-    let box = document.getElementById("bigscreen");
-    if (!box) {
-      box = document.createElement("div"); box.id = "bigscreen"; box.setAttribute("role", "dialog"); box.setAttribute("aria-label", "Big screen");
-      box.innerHTML = '<div class="bs-screen"></div><div class="bs-bar"><span class="bs-title"></span><button type="button">Make it small again</button></div>';
-      document.body.appendChild(box);
-      box.addEventListener("click", e => { if (!e.target.closest("a")) closeBig(); });
-      window.addEventListener("keydown", e => { if (e.key === "Escape" && big) closeBig(); });
-    }
-    const t = box.classList; t.toggle("bs-tv", kind === "tv"); t.toggle("bs-fire", kind !== "tv");
-    big = { el, v, kind, home: v.parentNode, next: v.nextSibling, box };
-    box.querySelector(".bs-screen").appendChild(v);
-    setBigTitle();
-    box.hidden = false; v.play().catch(() => {});
-    box.querySelector("button").focus();
-  }
-  function closeBig() {
-    if (!big) return;
-    const { v, home, next, box } = big;
-    home.insertBefore(v, next && next.parentNode === home ? next : null);
-    box.hidden = true; big = null;
-    v.play().catch(() => {});
-  }
-  function setBigTitle() {
-    if (!big) return;
-    const span = big.box.querySelector(".bs-title");
-    if (big.kind === "tv") { const n = tvAt(); span.textContent = n ? n.c.title : ""; }
-    else span.textContent = "";
-  }
 
   /* ---------- vintage ads (ads.js) ---------- */
   function openAd(a) {
