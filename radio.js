@@ -9,28 +9,28 @@
   let W = SK.stage.width, H = SK.stage.height;
   const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const WORDS = Object.assign({
-    off: "Switch me on",
+    off: "Turn the radio on",
     warming: "Warming up…",
     between: "",
     playing: "",
     lost: "Lost the signal. Back at {time}",
     gap: "",
     guideNow: "Now",
-    listeners: "{n} tuned in right now",
-    listenersOne: "Just you tonight",
+    listeners: "{n} people listening",
+    listenersOne: "Just you right now",
     listenersStation: "{station} {n}",
     listeningHere: "{n} listening",
     listeningAlone: "",
     nowOn: "{station}: {series} — {title}",
-    amb_rain: "Background: rain (click to change)",
-    amb_fire: "Background: fireplace (click to change)",
-    amb_off: "Background: off (click to change)",
-    sleepOff: "Sleep timer: off",
-    sleepOn: "Sleeping in {min} min",
+    amb_rain: "Rain on the window",
+    amb_fire: "A fire going",
+    amb_off: "No rain, no fire",
+    sleepOff: "Sleep timer",
+    sleepOn: "Off in {min} min",
     recentTitle: "Recently played on {station}",
     recentNone: "Tune in to a station first.",
-    cleanOn: "Sound: cleaned up (click for original)",
-    cleanOff: "Sound: original (click to clean up)",
+    cleanOn: "Hiss filter on",
+    cleanOff: "Hiss filter off",
     tvTuning: "",
     tvStandby: "Please stand by"
   }, SKIN.words || {});
@@ -466,7 +466,7 @@
   });
 
   /* ---------- built-in 1950s looks: shown until your own art is in the art folder ---------- */
-  const PALETTE = ["#b23a2a", "#2f7f7a", "#d6a03c", "#3b5b8c", "#8a4a6b", "#5f7a3a"];
+  const PALETTE = ["#e3a92f", "#c8321f", "#e3a92f", "#1f1b17", "#c8321f", "#e3a92f"];   // honey, red and black ink
   function starburst(color, rays = 12, op = 1) {
     let lines = "";
     for (let i = 0; i < rays; i++) {
@@ -482,13 +482,13 @@
     listings: () => "",
     strip: () => "",
     cabinet: () => `<span class="lk-trim"></span>`,
-    logo: () => `<span class="lk-logo">${esc(SKIN.name || "Old Time Radio")}</span><span class="lk-tag">${esc(SKIN.tagline || "Always on · from the Internet Archive")}</span>`,
-    power: () => `<span class="lk-btn-face"><span class="lk-power-icon"></span></span><span class="lk-btn-label">On · Off</span>`,
+    logo: () => `<span class="lk-logo"><span class="lk-name">${esc(SKIN.name || "Beeknees")}</span>${SKIN.badge ? `<span class="lk-badge">${esc(SKIN.badge)}</span>` : ""}</span><span class="lk-tag">${esc(SKIN.tagline || "")}</span>`,
+    power: () => `<span class="lk-btn-face"><span class="lk-power-icon"></span></span><span class="lk-btn-label">On / off</span>`,
     "lamp-on": () => "",
     "lamp-off": () => "",
     knob: () => `<span class="lk-knob-face"><span class="lk-knob-mark"></span></span>`,
-    "chan-up": () => `<span class="lk-chan">▲ <small>Channel</small></span>`,
-    "chan-down": () => `<span class="lk-chan">▼ <small>Channel</small></span>`,
+    "chan-up": () => `<span class="lk-chan">▲</span>`,
+    "chan-down": () => `<span class="lk-chan">▼</span>`,
     tvset: () => `<span class="lk-tv-badge">Tele-Vue</span>`,
     star: () => starburst("#d6a03c", 12, 0.9)
   };
@@ -503,8 +503,8 @@
     const d = document.createElement("div");
     d.className = "look look-card";
     d.style.setProperty("--c", st.color || PALETTE[i % PALETTE.length]);
-    d.innerHTML = `<span class="lc-star">${starburst("rgba(243,230,204,.55)", 14)}</span>` +
-      `<span class="lc-num">Channel ${esc(st.num)}</span><span class="lc-name">${esc(st.name)}</span><span class="lc-group">${esc(st.group || "")}</span>`;
+    d.dataset.ink = (st.color || PALETTE[i % PALETTE.length]) === "#1f1b17" ? "light" : "dark";
+    d.innerHTML = `<span class="lc-num">${esc(st.num)}</span><span class="lc-name">${esc(st.name)}</span><span class="lc-blurb">${esc(st.blurb || "")}</span>`;
     return d;
   }
 
@@ -663,6 +663,8 @@
         t.style.textTransform = L.uppercase ? "uppercase" : "none";
         t.style.letterSpacing = L.spacing ? L.spacing + "px" : "";
         t.style.fontWeight = L.weight || "";
+        t.style.fontStretch = L.stretch ? L.stretch + "%" : "";
+        t.style.fontStyle = L.italic ? "italic" : "";
       }
     });
     fitAllText();
@@ -920,7 +922,7 @@
   }
 
   function tickerText(L) {
-    const parts = [], show = L.show || ["listeners", "now"], sep = L.separator || "   ·   ";
+    const parts = [], show = L.show || ["listeners", "now"], sep = L.separator || "\u00a0\u00a0\u00a0\u00a0✻\u00a0\u00a0\u00a0\u00a0";
     if (show.includes("listeners") && presence.live) {
       const total = presence.counts._total || 0;
       parts.push(total <= 1 ? WORDS.listenersOne : WORDS.listeners.replace("{n}", total));
