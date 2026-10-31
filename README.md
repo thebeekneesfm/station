@@ -241,4 +241,6 @@ Setup: in Ko-fi, go to **Settings → API**, paste `https://rjpztitddezmkzeiteaa
 
 ## The ticker
 
-The bottom ticker shows how many people are listening, thank-yous for recent Ko-fi tips and memberships, and your announcements. Edit the announcements in `config.js` under `"announcements"`. In `skin.js`, the ticker's `"show"` list picks what appears: `listeners`, `stations` (per-station counts), `tips`, `announcements`, `now` (what's on every station).
+The bottom ticker shows how many people are listening, this month's station sponsors, a thank-you roll of current members (anyone whose Ko-fi membership was paid in the last 35 days and made public), thank-yous for recent tips and new members, and your announcements. Edit the announcements in `config.js` under `"announcements"`. In `skin.js`, the ticker's `"show"` list picks what appears: `listeners`, `members` (sponsors and the member roll), `stations` (per-station counts), `tips`, `announcements`, `now` (what's on every station).
+
+**Sponsors.** Sponsor-tier members pick a station for the month. Put them in `config.js` under `"sponsors"`, like `"chills": "Margaret",`. The station's page then says "Brought to you by Margaret" under its name, and the ticker says "Chills is brought to you by Margaret".

@@ -30,6 +30,9 @@
     tipMember: "Welcome, {name}, our newest {tier} member",
     tipSaid: ": \u201c{message}\u201d",
     tipSomeone: "a kind listener",
+    sponsorLine: "Brought to you by {name}",
+    sponsorTicker: "{station} is brought to you by {name}",
+    memberRoll: "Thank you to our members: {names}",
     cardKicker: "This hour is brought to you by",
     cardThanks: "Thank you for buying the station a coffee!",
     cardMemberKicker: "Please welcome our newest member",
@@ -804,9 +807,11 @@
       case "sleep": return state.sleepEnd ? WORDS.sleepOn.replace("{min}", Math.max(1, Math.ceil((state.sleepEnd - Date.now()) / 60000))) : WORDS.sleepOff;
       case "tv.title": { const n = tvAt(); return n ? n.c.title + (n.c.date ? ", " + n.c.date : "") : ""; }
       case "station.listeners": {
-        if (!st || !presence.live) return "";
-        const n = presence.counts[st.id] || 0;
-        return n <= 1 ? (WORDS.listeningAlone || "") : WORDS.listeningHere.replace("{n}", n);
+        if (!st) return "";
+        const sp = (CONFIG.sponsors || {})[st.id];
+        const n = presence.live ? presence.counts[st.id] || 0 : 0;
+        const count = !presence.live ? "" : n <= 1 ? (WORDS.listeningAlone || "") : WORDS.listeningHere.replace("{n}", n);
+        return [sp ? WORDS.sponsorLine.replace("{name}", sp) : "", count].filter(Boolean).join(" \u00b7 ");
       }
       case "now.series": return now ? now.track.series || "" : "";
       case "now.title": return now ? now.track.title || "" : "";
@@ -1067,9 +1072,28 @@
     const since = new Date(Date.now() - 14 * 864e5).toISOString();
     fetch(L.url + "/rest/v1/tips?select=created_at,kind,from_name,message,tier_name&order=created_at.desc&limit=5&created_at=gte." + encodeURIComponent(since),
       { headers: { apikey: L.key, Authorization: "Bearer " + L.key } })
-      .then(r => r.ok ? r.json() : []).then(list => { if (Array.isArray(list)) tips.list = list; }).catch(() => {});
+      .then(r => r.ok ? r.json() : []).then(list => { if (Array.isArray(list)) { const had = JSON.stringify(tips.list); tips.list = list; if (had !== JSON.stringify(list)) freshTicker(); } }).catch(() => {});
+  }
+  // show new ticker news straight away instead of waiting for the current loop to finish
+  function freshTicker() { els.forEach(r => { if (r.tick) r.tick.text = null; }); }
+  // members: anyone whose membership was paid in the last 35 days and who made it public on Ko-fi
+  const members = { list: [] };
+  function loadMembers() {
+    const L = CONFIG.listeners || {};
+    if (!L.url || !L.key || !window.fetch) return;
+    const since = new Date(Date.now() - 35 * 864e5).toISOString();
+    fetch(L.url + "/rest/v1/tips?select=created_at,from_name,tier_name&kind=in.(%22New%20member%22,%22Member%22)&from_name=not.is.null&order=created_at.desc&limit=300&created_at=gte." + encodeURIComponent(since),
+      { headers: { apikey: L.key, Authorization: "Bearer " + L.key } })
+      .then(r => r.ok ? r.json() : []).then(list => {
+        if (!Array.isArray(list)) return;
+        const seen = new Set(); members.list = [];
+        const had = JSON.stringify(members.list); members.list = [];
+        list.forEach(m => { const k = m.from_name.toLowerCase(); if (!seen.has(k)) { seen.add(k); members.list.push(m); } });
+        if (had !== JSON.stringify(members.list)) freshTicker();
+      }).catch(() => {});
   }
   loadTips(); setInterval(loadTips, 3 * 60 * 1000);
+  loadMembers(); setInterval(loadMembers, 10 * 60 * 1000);
   // a tip just came in (Ko-fi → kofi-webhook → broadcast): thank them over the sponsors' ad.
   // The broadcast is only a nudge. What's shown is read back from the tips table, which only
   // the Ko-fi webhook can write to, so nobody can pop up a fake thank-you.
@@ -1082,7 +1106,7 @@
       .then(r => r.ok ? r.json() : []).then(list => {
         if (!Array.isArray(list) || !list.length) return;
         tips.list = list.filter(t => Date.parse(t.created_at) > Date.now() - 14 * 864e5);
-        els.forEach(r => { if (r.tick) r.tick.text = null; });
+        freshTicker(); loadMembers();
         const t = list[0], when = Date.parse(t.created_at);
         if (when > lastCard) { lastCard = when; showTipCard(t); }
       }).catch(() => {}), 800);
@@ -1104,14 +1128,24 @@
   }
   if (/[?&]testtip\b/.test(location.search)) setTimeout(() => showTipCard({ kind: "Donation", from_name: "Margaret", message: "Play more Lights Out, please!" }), 2500);   // preview only, on your own screen
   function tickerText(L) {
-    const parts = [], show = L.show || ["listeners", "tips", "announcements"], sep = L.separator || "\u00a0\u00a0\u00a0\u00a0✻\u00a0\u00a0\u00a0\u00a0";
+    const parts = [], show = L.show || ["listeners", "members", "tips", "announcements"], sep = L.separator || "\u00a0\u00a0\u00a0\u00a0✻\u00a0\u00a0\u00a0\u00a0";
     if (show.includes("listeners") && presence.live) {
       const total = presence.counts._total || 0;
       parts.push(total <= 1 ? WORDS.listenersOne : WORDS.listeners.replace("{n}", total));
       if (show.includes("stations")) STATIONS.forEach(st => { const n = presence.counts[st.id]; if (n) parts.push(WORDS.listenersStation.replace("{station}", st.name).replace("{n}", n)); });
     }
     // thank-yous for recent Ko-fi tips, newest first (see supabase: tips table, kofi-webhook function)
-    if (show.includes("tips")) tips.list.forEach(t => {
+    // this month's sponsors (config.js) and the member roll
+    if (show.includes("members")) {
+      const sp = CONFIG.sponsors || {};
+      STATIONS.forEach(st => { if (sp[st.id]) parts.push(WORDS.sponsorTicker.replace("{station}", st.name).replace("{name}", sp[st.id])); });
+      if (members.list.length) {
+        const names = members.list.map(m => m.from_name + (m.tier_name ? " (" + m.tier_name + ")" : ""));
+        const joined = names.length > 1 ? names.slice(0, -1).join(", ") + " and " + names[names.length - 1] : names[0];
+        parts.push(WORDS.memberRoll.replace("{names}", joined));
+      }
+    }
+    if (show.includes("tips")) tips.list.filter(t => t.kind !== "Member").forEach(t => {
       const who = t.from_name || WORDS.tipSomeone;
       let line = (t.kind === "New member" ? WORDS.tipMember : WORDS.tipThanks).replace("{name}", who).replace("{tier}", t.tier_name || "");
       line = line.replace(/\s+/g, " ").replace(" ,", ",");
