@@ -46,7 +46,7 @@ window.SKIN = {
     "tone": 9000
   },
   "sounds": {
-    "tuning": "art/sounds/tuning.mp3",
+    "tuning": "art/sounds/tuning.mp3?v=2",
     "rain": "art/sounds/rain.mp3",
     "fire": "art/sounds/fire.mp3"
   },
