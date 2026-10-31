@@ -405,6 +405,9 @@
   [data-id="sleep-clock"]:hover img { transform: rotate(-8deg); }
   [data-id="sleep-timer"] .txt { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
   [data-id="station-card"] { cursor: pointer; }
+  /* the TV's "Please stand by" card, shown while a cartoon loads or if one won't play */
+  .tv-standby, .tv-standby:empty { display: block; background: #111 url("art/please-stand-by.jpg") center / cover no-repeat; color: transparent; font-size: 0; filter: contrast(1.05) sepia(.08); }
+  .tv-standby[hidden] { display: none; }
 </style>
 </head>
 <body>
@@ -444,12 +447,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101q"></script>
-<script src="stations.js?v=20261101q"></script>
-<script src="config.js?v=20261101q"></script>
-<script src="ads.js?v=20261101q"></script>
-<script src="tv.js?v=20261101q"></script>
+<script src="skin.js?v=20261101r"></script>
+<script src="stations.js?v=20261101r"></script>
+<script src="config.js?v=20261101r"></script>
+<script src="ads.js?v=20261101r"></script>
+<script src="tv.js?v=20261101r"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101q"></script>
+<script src="radio.js?v=20261101r"></script>
 </body>
 </html>
