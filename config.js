@@ -9,8 +9,8 @@ window.RADIO_CONFIG = {
   "contact": "",
 
   "listeners": {
-    "url": "",
-    "key": "",
+    "url": "https://rjpztitddezmkzeiteaa.supabase.co",
+    "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqcHp0aXRkZGV6bWt6ZWl0ZWFhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0MzI3NDAsImV4cCI6MjEwOTAwODc0MH0.wTOlfDrJT48AJwIqXX2iK1jgyz52D0CIxdGh9GO6egI",
     "room": "radio"
   }
 };
