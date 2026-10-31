@@ -22,6 +22,8 @@
     listeningHere: "{n} listening",
     listeningAlone: "",
     nowOn: "{station}: {series} — {title}",
+    cleanOn: "Sound: cleaned up (click for original)",
+    cleanOff: "Sound: original (click to clean up)",
     tvTuning: "",
     tvStandby: "Please stand by"
   }, SKIN.words || {});
@@ -77,7 +79,8 @@
     resumeAt: 0,
     editing: false,
     showAll: false,
-    selected: null
+    selected: null,
+    clean: store.get("clean", true)      // false = Original: no sound cleanup at all
   };
   const dials = STATIONS.map(s => s.dial).sort((a, b) => a - b);
   const CAPTURE = Math.min(0.035, ...dials.slice(1).map((d, i) => (d - dials[i]) / 2.2));
@@ -112,41 +115,49 @@
   /* Sound cleaning: rumble filter → click remover → tone (softens hiss and crackle)
      → automatic level → compressor → limiter → volume. Settings per station in stations.js. */
   const DECLICK = `
-  // A click is a short spike that jumps one way and snaps back within a few samples.
-  // Drum hits and consonants last longer, so they're left alone. Repairs are drawn
-  // as a straight line across the spike, about 96 samples (2 ms) behind real time.
+  // Clicks, pops and crackle are samples that stick out far more than their neighbours.
+  // Each sample is compared with the long-run level and with the last ~30 samples, so
+  // busy passages (snare drums, brushes, sibilants) aren't mistaken for crackle.
+  // Small ticks are replaced by the median of their neighbours; big pops get a short
+  // stretch bridged with a straight line. Output runs 96 samples (2 ms) behind.
   class Declick extends AudioWorkletProcessor {
-    constructor() { super(); this.k = 9; this.st = []; this.port.onmessage = e => { if (e.data.k != null) this.k = e.data.k; }; }
+    constructor() {
+      super(); this.kc = 999; this.wide = 0; this.st = [];
+      this.port.onmessage = e => { if (e.data.kc != null) this.kc = e.data.kc; if (e.data.wide != null) this.wide = e.data.wide; };
+    }
     process(inputs, outputs) {
       const inp = inputs[0], out = outputs[0], N = 4096, M = N - 1, D = 96;
       for (let c = 0; c < out.length; c++) {
         const x = inp[c] || inp[0], y = out[c];
         if (!x) { y.fill(0); continue; }
-        const s = this.st[c] || (this.st[c] = { buf: new Float32Array(N), w: 0, env: 0.002, prev: 0, q: [], cand: null });
+        const s = this.st[c] || (this.st[c] = { buf: new Float32Array(N), flag: new Uint8Array(N), w: 0, hf: 1e-6, hff: 1e-6 });
         for (let i = 0; i < y.length; i++) {
           const v = x[i], w = s.w;
           s.buf[w & M] = v;
-          const dv = v - s.prev, d = Math.abs(dv); s.prev = v;
-          const big = this.k < 50 && d > this.k * s.env && d > 0.02;
-          const cd = s.cand;
-          if (big) {
-            if (!cd) s.cand = { s: w - 1, sign: Math.sign(dv), last: w, flips: 0 };
-            else { if (Math.sign(dv) !== cd.sign) { cd.flips++; cd.sign = Math.sign(dv); } cd.last = w; }
+          s.flag[(w + 8) & M] = 0;
+          if (this.kc < 50 && w > 2) {
+            const n = w - 1, hv = s.buf[n & M] - 0.5 * (s.buf[(n - 1) & M] + v), ha = Math.abs(hv);
+            const thr = this.kc * Math.sqrt(Math.max(s.hf, s.hff));
+            if (ha > thr && ha > 0.004) {
+              s.flag[n & M] = 1;
+              if (this.wide && ha > 3 * thr && ha > 0.05) for (let j = -1; j <= this.wide; j++) s.flag[(n + j) & M] = 1;   // a big pop: mark its tail too
+            } else s.hf += (Math.min(hv * hv, 0.01) - s.hf) * 0.0015;
+            s.hff += (Math.min(hv * hv, 4 * s.hff + 1e-6) - s.hff) * 0.06;
           }
-          const c2 = s.cand;
-          if (c2) {
-            if (w - c2.s > 48) s.cand = null;                     // too long to be a click
-            else if (w - c2.last > 3) {                            // spike is over
-              if (c2.flips >= 1) s.q.push({ s: c2.s - 1, e: c2.last + 1 });
-              s.cand = null;
-            }
-          }
-          s.env += (Math.min(d, 0.25) - s.env) * 0.002;
           const r = w - D;
           let o = r >= 0 ? s.buf[r & M] : 0;
-          while (s.q.length && s.q[0].e < r) s.q.shift();
-          const g = s.q[0];
-          if (g && r >= g.s) { const a = s.buf[(g.s - 1) & M], b = s.buf[(g.e + 1) & M], t = (r - g.s + 1) / (g.e - g.s + 2); o = a + (b - a) * t; }
+          if (r > 40 && s.flag[r & M]) {
+            let a = r, b = r;
+            while (a > r - 32 && s.flag[(a - 1) & M]) a--;
+            while (b < r + 32 && s.flag[(b + 1) & M]) b++;
+            if (b - a < 2 || b - a > 12) {
+              const m = [s.buf[(r - 3) & M], s.buf[(r - 2) & M], s.buf[(r - 1) & M], o, s.buf[(r + 1) & M], s.buf[(r + 2) & M], s.buf[(r + 3) & M]];
+              m.sort((p, q) => p - q); o = m[3];
+            } else {
+              const p0 = s.buf[(a - 1) & M], p1 = s.buf[(b + 1) & M];
+              o = p0 + (p1 - p0) * (r - a + 1) / (b - a + 2);
+            }
+          }
           y[i] = o; s.w = w + 1;
         }
       }
@@ -166,8 +177,9 @@
       const lim = ctx.createDynamicsCompressor();
       lim.threshold.value = -4; lim.knee.value = 0; lim.ratio.value = 20; lim.attack.value = 0.001; lim.release.value = 0.08;
       const master = ctx.createGain(); master.gain.value = state.vol;
-      src.connect(hp); hp.connect(lp); lp.connect(an); an.connect(agc); agc.connect(comp); comp.connect(lim); lim.connect(master); master.connect(ctx.destination);
+      hp.connect(lp); lp.connect(an); an.connect(agc); agc.connect(comp); comp.connect(lim); lim.connect(master); master.connect(ctx.destination);
       Object.assign(fx, { ready: true, src, hp, lp, an, agc, comp, master, level: null, buf: new Float32Array(an.fftSize) });
+      routeSound();
       audio.volume = 1;
       if (ctx.audioWorklet && window.Blob) {
         const url = URL.createObjectURL(new Blob([DECLICK], { type: "application/javascript" }));
@@ -179,17 +191,31 @@
       }
     } catch (e) { fx.ready = false; }
   }
+  // Clean: the full cleanup chain. Original: straight from the record to the volume.
+  function routeSound() {
+    if (!fx.ready) return;
+    try { fx.src.disconnect(); } catch (e) {}
+    fx.src.connect(state.clean === false ? fx.master : fx.hp);
+  }
+  function toggleClean() {
+    state.clean = state.clean === false;
+    store.set("clean", state.clean);
+    routeSound(); applySound(); render();
+  }
   function soundFor(st) { return Object.assign({}, SOUND, (st && st.sound) || {}); }
   function applySound() {
     if (!fx.ready) return;
     const snd = soundFor(state.station);
     fx.lp.frequency.setTargetAtTime(snd.tone || 20000, ctx.currentTime, 0.1);
-    if (fx.dc) fx.dc.port.postMessage({ k: snd.declick ? 14 - 9 * Math.min(1, snd.declick) : 999 });
+    const clean = state.clean !== false;
+    // one detector handles pops and crackle; the stronger of the two settings sets its sensitivity
+    const amount = Math.max(snd.decrackle || 0, snd.declick || 0);
+    if (fx.dc) fx.dc.port.postMessage({ kc: clean && amount ? 7 - 3.5 * Math.min(1, amount) : 999, wide: 0 });
     if (!snd.level) fx.agc.gain.setTargetAtTime(1, ctx.currentTime, 0.2);
   }
   // automatic level: listens to the show and slowly turns quiet ones up and loud ones down
   setInterval(() => {
-    if (!fx.ready || state.phase !== "playing" || !soundFor(state.station).level) return;
+    if (!fx.ready || state.phase !== "playing" || state.clean === false || !soundFor(state.station).level) return;
     fx.an.getFloatTimeDomainData(fx.buf);
     let sum = 0; for (let i = 0; i < fx.buf.length; i++) sum += fx.buf[i] * fx.buf[i];
     const db = 10 * Math.log10(sum / fx.buf.length + 1e-12);
@@ -489,6 +515,7 @@
       case "station.name": return st ? st.name : "";
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
+      case "clean": return state.clean === false ? WORDS.cleanOff : WORDS.cleanOn;
       case "tv.title": { const n = tvAt(); return n ? n.c.title + (n.c.date ? ", " + n.c.date : "") : ""; }
       case "station.listeners": {
         if (!st || !presence.live) return "";
@@ -722,6 +749,7 @@
         if (state.editing) return;
         const a = L.action || "";
         if (a === "power") power();
+        else if (a === "clean") toggleClean();
         else if (a === "next") stepStation(1);
         else if (a === "prev") stepStation(-1);
         else if (a === "volup") setVol(state.vol + 0.1);
@@ -778,6 +806,7 @@
     if (k === "e" || k === "E") { toggleEdit(); return; }
     if (state.editing) { editKeys(e); return; }
     if (k === " ") { e.preventDefault(); power(); }
+    else if (k === "c" || k === "C") toggleClean();
     else if (k === "ArrowDown") { e.preventDefault(); stepStation(1); }
     else if (k === "ArrowUp") { e.preventDefault(); stepStation(-1); }
     else if (k === "ArrowRight") setVol(state.vol + 0.05);

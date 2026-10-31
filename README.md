@@ -15,6 +15,7 @@ Double-click `index.html`. Press **Space** (or click the power switch) to turn i
 | Space | Power on/off |
 | ↑ ↓ | Previous / next station |
 | ← → | Volume |
+| C | Clean / Original sound |
 | E | Layout mode |
 
 Each station has its own link, like `…/otr-radio/#noir`. Opening that link starts on that station, so you can share a station directly.
@@ -113,14 +114,18 @@ If the Archive takes a file down, that slot plays static with "Lost the signal" 
 ## Sound cleanup
 
 The browser cleans up the sound as it plays:
-- **Level.** It listens to each show and gently turns quiet ones up and loud ones down, so changing stations or moving to the next episode doesn't jump in volume. A compressor and limiter catch sudden peaks.
-- **Clicks and pops.** It finds short spikes that jump and snap back, and smooths over them. In a test it removed about 87% of the click energy and left drum hits mostly alone. It softens crackle; it can't make a worn 78 sound new.
-- **Tone.** It cuts the low rumble and rounds off the high hiss.
+- **Pops and crackle.** One detector compares every sample with its neighbors. A sample that sticks out far more than usual (a pop, or one tick of crackle) is replaced with the median of the samples around it. It also checks how busy the last few milliseconds were, so drums, brushes and "s" sounds aren't mistaken for crackle. On a test record full of crackle and pops it removed about half of both while barely touching the music (about 0.1% change). It softens a worn 78, but it can't make one sound new.
+- **Level.** It gently turns quiet recordings up and loud ones down, with a compressor and limiter for sudden peaks.
+- **Tone.** It cuts low rumble and rounds off high hiss. The early records (Ragtime, Jazz Age) get the softest top end, since that's where most of their surface noise lives.
 
-Each station can have its own settings in `stations.js`, for example `"sound": { "level": true, "declick": 0.8, "tone": 6500 }`.
-- `declick` runs from 0 (off) to 1 (strongest). The 78s use 0.8 and the shows use 0.4.
-- `tone` is where the hiss cut starts, in Hz. Lower is softer and warmer. 20000 turns it off.
+**Clean / Original switch.** "Sound: cleaned up" in the player panel switches between the cleaned sound and the untouched recording. Click it, or press **C**. Use it to compare, and tune the settings below by ear. Each listener's choice is remembered in their own browser.
+
+Each station has its own settings in `stations.js`, for example `"sound": { "level": true, "declick": 0.9, "decrackle": 0.9, "tone": 6000 }`.
+- `declick` and `decrackle` run from 0 (off) to 1 (most sensitive). The stronger of the two sets how eagerly the detector repairs. The music stations use 0.8–0.9, and the radio shows 0.5.
+- `tone` is where the hiss cut starts, in Hz. Lower is softer and warmer; 20000 turns it off.
 - `level: false` turns off the automatic leveling.
+
+If the records still sound rough after that, the next step is cleaning them ahead of time with proper restoration tools and hosting the cleaned files yourself. That's more work and a bigger copyright step, since you'd be distributing your own copies.
 
 ## The little TV
 
@@ -154,7 +159,7 @@ You can change what the ticker shows in `skin.js` (`"show": ["listeners", "now"]
 
 ## Updating the live site
 
-The pages load their scripts with a version tag, like `skin.js?v=20261031b`. When you change files, bump that tag in `index.html`, `about.html` and `ads.html`. Visitors then get the new files right away instead of an old cached copy. GitHub Pages takes a minute or two to publish each change.
+The pages load their scripts with a version tag, like `skin.js?v=20261031c`. When you change files, bump that tag in `index.html`, `about.html` and `ads.html`. Visitors then get the new files right away instead of an old cached copy. GitHub Pages takes a minute or two to publish each change.
 
 ## Putting it online for free
 

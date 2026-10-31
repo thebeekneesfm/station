@@ -12,7 +12,9 @@ window.STATIONS = [
   "card": "art/cards/chills.png",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
-   "declick": 0.4,
+   "level": true,
+   "declick": 0.5,
+   "decrackle": 0.5,
    "tone": 9000
   },
   "tracks": [
@@ -444,7 +446,9 @@ window.STATIONS = [
   "card": "art/cards/noir.png",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
-   "declick": 0.4,
+   "level": true,
+   "declick": 0.5,
+   "decrackle": 0.5,
    "tone": 9000
   },
   "tracks": [
@@ -835,7 +839,9 @@ window.STATIONS = [
   "card": "art/cards/suspense.png",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
-   "declick": 0.4,
+   "level": true,
+   "declick": 0.5,
+   "decrackle": 0.5,
    "tone": 9000
   },
   "tracks": [
@@ -1073,7 +1079,9 @@ window.STATIONS = [
   "card": "art/cards/scifi.png",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
-   "declick": 0.4,
+   "level": true,
+   "declick": 0.5,
+   "decrackle": 0.5,
    "tone": 9000
   },
   "tracks": [
@@ -1423,7 +1431,9 @@ window.STATIONS = [
   "card": "art/cards/outwest.png",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
-   "declick": 0.4,
+   "level": true,
+   "declick": 0.5,
+   "decrackle": 0.5,
    "tone": 9000
   },
   "tracks": [
@@ -1701,7 +1711,9 @@ window.STATIONS = [
   "card": "art/cards/laughs.png",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
-   "declick": 0.4,
+   "level": true,
+   "declick": 0.5,
+   "decrackle": 0.5,
    "tone": 9000
   },
   "tracks": [
@@ -1989,8 +2001,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.8,
-   "tone": 6500
+   "declick": 0.9,
+   "decrackle": 0.9,
+   "tone": 6000
   },
   "tracks": [
    {
@@ -2701,8 +2714,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.8,
-   "tone": 6500
+   "declick": 0.9,
+   "decrackle": 0.9,
+   "tone": 6000
   },
   "tracks": [
    {
@@ -3485,8 +3499,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.6,
-   "tone": 8500
+   "declick": 0.8,
+   "decrackle": 0.8,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -4381,8 +4396,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.6,
-   "tone": 8500
+   "declick": 0.8,
+   "decrackle": 0.8,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -5277,8 +5293,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.6,
-   "tone": 8500
+   "declick": 0.8,
+   "decrackle": 0.8,
+   "tone": 7500
   },
   "tracks": [
    {
@@ -6165,8 +6182,9 @@ window.STATIONS = [
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
-   "declick": 0.7,
-   "tone": 8000
+   "declick": 0.8,
+   "decrackle": 0.8,
+   "tone": 7500
   },
   "tracks": [
    {
