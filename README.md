@@ -244,3 +244,9 @@ Setup: in Ko-fi, go to **Settings → API**, paste `https://rjpztitddezmkzeiteaa
 The bottom ticker shows how many people are listening, this month's station sponsors, a thank-you roll of current members (anyone whose Ko-fi membership was paid in the last 35 days and made public), thank-yous for recent tips and new members, and your announcements. Edit the announcements in `config.js` under `"announcements"`. In `skin.js`, the ticker's `"show"` list picks what appears: `listeners`, `members` (sponsors and the member roll), `stations` (per-station counts), `tips`, `announcements`, `now` (what's on every station).
 
 **Sponsors.** Sponsor-tier members pick a station for the month. Put them in `config.js` under `"sponsors"`, like `"chills": "Margaret",`. The station's page then says "Brought to you by Margaret" under its name, and the ticker says "Chills is brought to you by Margaret".
+
+## Sound cleaning
+
+Every station runs through, in order: a rumble filter, the click and pop remover, the hiss remover, a tone filter, automatic level, and a limiter. Press **C** (or the hiss filter switch) to hear a station without any of it.
+
+The hiss remover splits the sound into 512 frequency bands, learns the steady hiss in each band from the quiet moments, and turns down only the bands where hiss is louder than the music. On the hissiest test records it lowers the hiss in quiet passages by about 5 to 7 dB, while the music itself changes by less than half a dB. Music stations use strength 0.9 and radio shows 0.6; set `"dehiss"` in a station's `sound` settings (0 to 1) to change it.

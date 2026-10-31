@@ -129,7 +129,7 @@
     } catch (e) { ctx = null; }
   }
 
-  /* Sound cleaning: rumble filter → click remover → tone (softens hiss and crackle)
+  /* Sound cleaning: rumble filter → click remover → hiss remover → tone (softens what's left)
      → automatic level → compressor → limiter → volume. Settings per station in stations.js. */
   const DECLICK = `
   // Clicks, pops and crackle are samples that stick out far more than their neighbours.
@@ -188,7 +188,71 @@
       return true;
     }
   }
-  registerProcessor("declick", Declick);`;
+  registerProcessor("declick", Declick);
+  // Hiss remover: splits the sound into 512 narrow frequency bands about 86 times a second,
+  // learns the steady hiss floor in each band from the quietest moments, and turns down
+  // only the bands where the hiss is louder than the music. Bass is left alone.
+  class Dehiss extends AudioWorkletProcessor {
+    constructor() {
+      super(); this.amt = 0; this.st = [];
+      const N = 1024; this.N = N; this.H = 256;
+      this.win = new Float32Array(N); for (let i = 0; i < N; i++) this.win[i] = Math.sqrt(0.5 - 0.5 * Math.cos(2 * Math.PI * i / N));
+      this.rev = new Uint32Array(N); for (let i = 0, b = Math.log2(N); i < N; i++) { let r = 0; for (let k = 0; k < b; k++) r |= ((i >> k) & 1) << (b - 1 - k); this.rev[i] = r; }
+      this.cs = new Float32Array(N / 2); this.sn = new Float32Array(N / 2); for (let i = 0; i < N / 2; i++) { this.cs[i] = Math.cos(2 * Math.PI * i / N); this.sn[i] = -Math.sin(2 * Math.PI * i / N); }
+      this.port.onmessage = e => { if (e.data.amt != null) this.amt = e.data.amt; };
+    }
+    fft(re, im, inv) {
+      const N = this.N, rev = this.rev;
+      for (let i = 0; i < N; i++) { const j = rev[i]; if (j > i) { let t = re[i]; re[i] = re[j]; re[j] = t; t = im[i]; im[i] = im[j]; im[j] = t; } }
+      for (let size = 2; size <= N; size <<= 1) {
+        const half = size >> 1, step = N / size;
+        for (let i = 0; i < N; i += size) for (let j = 0, k = 0; j < half; j++, k += step) {
+          const c = this.cs[k], s = inv ? -this.sn[k] : this.sn[k];
+          const a = i + j, b = a + half, tr = re[b] * c - im[b] * s, ti = re[b] * s + im[b] * c;
+          re[b] = re[a] - tr; im[b] = im[a] - ti; re[a] += tr; im[a] += ti;
+        }
+      }
+    }
+    frame(s) {
+      const N = this.N, B = N / 2 + 1, re = s.re, im = s.im, w = this.win;
+      for (let i = 0; i < N; i++) { re[i] = s.inb[(s.wi + i) % N] * w[i]; im[i] = 0; }
+      this.fft(re, im, false);
+      const lo = 12, over = 1 + 4 * this.amt, floor = Math.pow(10, -(6 + 12 * this.amt) / 20);
+      for (let k = 0; k < B; k++) {
+        const p = re[k] * re[k] + im[k] * im[k];
+        s.P[k] = s.P[k] * 0.7 + p * 0.3;
+        // hiss floor: falls quickly to quiet moments, creeps back up slowly
+        s.Nn[k] = s.P[k] < s.Nn[k] ? s.Nn[k] * 0.8 + s.P[k] * 0.2 : s.Nn[k] * 1.004 + 1e-14;
+        let g = k < lo ? 1 : Math.max(floor, 1 - over * s.Nn[k] / (s.P[k] + 1e-12));
+        g = g > s.G[k] ? g : s.G[k] * 0.6 + g * 0.4;     // let go gently, so it doesn't warble
+        s.G[k] = g;
+      }
+      for (let k = 0; k < B; k++) {
+        const g = k > 0 && k < B - 1 ? 0.25 * s.G[k - 1] + 0.5 * s.G[k] + 0.25 * s.G[k + 1] : s.G[k];
+        re[k] *= g; im[k] *= g; if (k > 0 && k < N / 2) { re[N - k] = re[k]; im[N - k] = -im[k]; }
+      }
+      this.fft(re, im, true);
+      for (let i = 0; i < N; i++) s.ola[(s.ro + i) % N] += re[i] * w[i] / N * 0.5;
+    }
+    process(inputs, outputs) {
+      const inp = inputs[0], out = outputs[0], N = this.N, H = this.H;
+      for (let c = 0; c < out.length; c++) {
+        const x = inp[c] || inp[0], y = out[c];
+        if (!x) { y.fill(0); continue; }
+        if (this.amt <= 0) { y.set(x); continue; }
+        const B = N / 2 + 1;
+        const s = this.st[c] || (this.st[c] = { inb: new Float32Array(N), ola: new Float32Array(N), re: new Float32Array(N), im: new Float32Array(N),
+          P: new Float32Array(B), Nn: new Float32Array(B).fill(1e-6), G: new Float32Array(B).fill(1), wi: 0, ro: 0, cnt: 0 });
+        for (let i = 0; i < y.length; i++) {
+          s.inb[s.wi] = x[i]; s.wi = (s.wi + 1) % N;
+          y[i] = s.ola[s.ro]; s.ola[s.ro] = 0; s.ro = (s.ro + 1) % N;
+          if (++s.cnt === H) { s.cnt = 0; this.frame(s); }
+        }
+      }
+      return true;
+    }
+  }
+  registerProcessor("dehiss", Dehiss);`;
   function buildChain() {
     try {
       const src = ctx.createMediaElementSource(audio);
@@ -213,8 +277,11 @@
         const url = URL.createObjectURL(new Blob([DECLICK], { type: "application/javascript" }));
         ctx.audioWorklet.addModule(url).then(() => {
           const dc = new AudioWorkletNode(ctx, "declick", { outputChannelCount: [2] });
-          hp.disconnect(); hp.connect(dc); dc.connect(lp);
-          fx.dc = dc; applySound();
+          let dh = null;
+          try { dh = new AudioWorkletNode(ctx, "dehiss", { outputChannelCount: [2] }); } catch (e) {}
+          hp.disconnect(); hp.connect(dc);
+          if (dh) { dc.connect(dh); dh.connect(lp); } else dc.connect(lp);
+          fx.dc = dc; fx.dh = dh; applySound();
         }).catch(() => {});
       }
     } catch (e) { fx.ready = false; }
@@ -330,6 +397,9 @@
     // one detector handles pops and crackle; the stronger of the two settings sets its sensitivity
     const amount = Math.max(snd.decrackle || 0, snd.declick || 0);
     if (fx.dc) fx.dc.port.postMessage({ kc: clean && amount ? 8.5 - 5 * Math.min(1, amount) : 999 });
+    // hiss: music stations get the stronger setting; set "dehiss" per station in stations.js to override
+    const hiss = snd.dehiss != null ? snd.dehiss : (state.station && state.station.music ? 0.9 : 0.6);
+    if (fx.dh) fx.dh.port.postMessage({ amt: clean ? hiss : 0 });
     if (!snd.level) fx.agc.gain.setTargetAtTime(1, ctx.currentTime, 0.2);
   }
   // automatic level: listens to the show and slowly turns quiet ones up and loud ones down
