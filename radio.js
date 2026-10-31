@@ -25,6 +25,7 @@
     amb_rain: "Rain on the window",
     amb_fire: "A fire going",
     amb_off: "No rain, no fire",
+    tip: "Tip TheBeesKnees",
     sleepOff: "Sleep timer",
     sleepOn: "Off in {min} min",
     recentTitle: "Recently played on {station}",
@@ -547,6 +548,9 @@
     "chan-up": () => `<span class="lk-chan">▲</span>`,
     "chan-down": () => `<span class="lk-chan">▼</span>`,
     tvset: () => `<span class="lk-tv-badge">Tele-Vue</span>`,
+    screen: () => "",
+    wall: () => "",
+    onair: () => `<span class="lk-onair">On Air</span>`,
     star: () => starburst("#d6a03c", 12, 0.9)
   };
   function makeLook(name, L) {
@@ -610,6 +614,13 @@
           t.target = "_blank"; t.rel = "noopener";
           t.addEventListener("click", e => { if (state.editing) e.preventDefault(); });
         }
+      } else if (type === "video") {
+        const v = document.createElement("video");
+        v.muted = true; v.defaultMuted = true; v.loop = true; v.autoplay = true; v.playsInline = true; v.preload = "auto";
+        v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.disablePictureInPicture = true;
+        v.src = L.video; el.appendChild(v);
+        v.play().catch(() => {});
+        document.addEventListener("visibilitychange", () => { if (!document.hidden) v.play().catch(() => {}); });
       } else if (type === "guide") {
         const g = document.createElement("div"); g.className = "guide";
         el.appendChild(g); el.classList.add("hot");
@@ -762,6 +773,7 @@
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
       case "clean": return state.clean === false ? WORDS.cleanOff : WORDS.cleanOn;
+      case "tip": return CONFIG.tip ? WORDS.tip : "";
       case "ambience": return WORDS["amb_" + state.ambience] || "";
       case "sleep": return state.sleepEnd ? WORDS.sleepOn.replace("{min}", Math.max(1, Math.ceil((state.sleepEnd - Date.now()) / 60000))) : WORDS.sleepOff;
       case "tv.title": { const n = tvAt(); return n ? n.c.title + (n.c.date ? ", " + n.c.date : "") : ""; }
@@ -1022,7 +1034,8 @@
         if (L.href) {
           const st = state.station;
           const href = L.href === "now.item" ? (st ? at(st).track.item || "" : "")
-                     : L.href === "tv.item" ? ((tvAt() || { c: {} }).c.item || "") : L.href;
+                     : L.href === "tv.item" ? ((tvAt() || { c: {} }).c.item || "")
+                     : L.href === "config.tip" ? (CONFIG.tip || "") : L.href;
           if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
         }
       } else if (type === "needle") {

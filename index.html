@@ -308,6 +308,36 @@
   .ov-when { color: var(--ink-2); font-weight: 700; font-stretch: 80%; }
   #ov-list a { color: var(--ink); }
   #ad-zoom .zcap { font-family: "Archivo", sans-serif; }
+
+  /* ===== the wall: 1953 Sears wallpaper, the masthead pinned to it, and the On Air sign ===== */
+  body::before { content: ""; position: fixed; inset: 0; z-index: -1;
+      background: linear-gradient(rgba(18,12,8,.22), rgba(18,12,8,.22)), url("art/wallpaper.jpg") center / cover no-repeat, #3f5a46; }
+  html { background: #3f5a46; }
+  body { background: transparent !important; }
+  #frame { background: transparent; }
+  .look-wall { background: transparent; }
+  .look-paper.masthead, .t-image[data-id="masthead"] .look-paper { transform: rotate(-.25deg); }
+  .lk-logo { font: 900 66px/0.9 "Archivo", "Arial Black", sans-serif; font-stretch: 68%; font-style: normal; color: var(--ink); text-shadow: none; letter-spacing: -0.5px; }
+  .lk-name { font: inherit; }
+  .lk-badge { font: 800 28px/1 "Archivo", sans-serif; font-stretch: 75%; color: var(--ivory); background: var(--red); padding: 5px 8px 4px; transform: rotate(-3deg) translateY(-8px); }
+  .lk-tag { font: 500 16px/1.25 "Archivo", sans-serif; font-style: normal; color: var(--ink-2); margin-top: 6px; padding-left: 2px; }
+  .look-logo .lk-tag { font-size: min(16px, 2.95cqw); white-space: nowrap; }
+  .look-onair { display: none; }
+  .missing > .look-onair { display: flex; align-items: center; justify-content: center; border-radius: 6px;
+      background: #3a1410; box-shadow: inset 0 0 0 3px #1a0d09, inset 0 0 0 5px #6b2a1f, 0 3px 0 rgba(0,0,0,.35); cursor: pointer; }
+  .lk-onair { font: 900 30px/1 "Archivo", sans-serif; font-stretch: 72%; letter-spacing: 1px; color: #6e3a2f; }
+  body:not([data-phase="off"]) .missing > .look-onair { background: #c8321f; box-shadow: inset 0 0 0 3px #1a0d09, inset 0 0 0 5px #ff7a5c, 0 0 18px 4px rgba(255,90,50,.45), 0 3px 0 rgba(0,0,0,.35); }
+  body:not([data-phase="off"]) .lk-onair { color: #fff1d6; text-shadow: 0 0 8px rgba(255,220,180,.9); }
+  body[data-phase="playing"] .missing > .look-onair { animation: onair 2.4s ease-in-out infinite; }
+  @keyframes onair { 0%, 100% { filter: brightness(1); } 50% { filter: brightness(.72); } }
+  @media (prefers-reduced-motion: reduce) { body[data-phase="playing"] .missing > .look-onair { animation: none; } }
+  .look-screen { border-radius: 16px; border: 11px solid #20140d; box-shadow: inset 0 0 0 2px #0e0805, inset 0 0 30px 6px rgba(0,0,0,.55), 0 5px 0 #120b07; }
+  .look-card { container-type: size; }
+  .lc-name { font-size: min(38px, 17cqw); }
+  .lc-blurb { font-size: min(13px, 7.4cqw); }
+  .lc-num { font-size: min(22px, 11cqw); }
+  .t-video { border-radius: 12px; overflow: hidden; background: #0c0805; }
+  .t-video video { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(.1) saturate(.95); }
 </style>
 </head>
 <body>
@@ -347,12 +377,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261031i"></script>
-<script src="stations.js?v=20261031i"></script>
-<script src="config.js?v=20261031i"></script>
-<script src="ads.js?v=20261031i"></script>
-<script src="tv.js?v=20261031i"></script>
+<script src="skin.js?v=20261031k"></script>
+<script src="stations.js?v=20261031k"></script>
+<script src="config.js?v=20261031k"></script>
+<script src="ads.js?v=20261031k"></script>
+<script src="tv.js?v=20261031k"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261031i"></script>
+<script src="radio.js?v=20261031k"></script>
 </body>
 </html>

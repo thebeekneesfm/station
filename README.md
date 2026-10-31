@@ -170,6 +170,18 @@ Change the set in `skin.js` under `"reactions"`. Each one needs an `id` and an `
 
 The music stations play an old radio commercial after every four records: about 100 real 1940s–50s spots (Lucky Strike, Chiquita Banana, Alka-Seltzer, Pepsi and more), from the Archive's vintage radio commercial collections. In `stations.js` they're the tracks with `"ad": true`. Delete one to drop it, or remove them all from a station.
 
+## The wall, the masthead and the On Air sign
+
+The page sits on a real 1953 wallpaper sample (`art/wallpaper.jpg`), scanned from the Sears wallpaper book of that year, public domain via the Internet Archive. The book has dozens more patterns if you'd like a different one. Replace the file to change it.
+
+The logo, links and clock are printed on a newsprint masthead pinned across the top. The **On Air** sign is the on/off switch. It's dark until someone tunes in, then lights up and blinks slowly while a show plays. The sleep timer and tip link sit beside it.
+
+**Tip link:** put your Ko-fi (or other tip page) address in `config.js` under `"tip"`, and "Tip TheBeesKnees" appears in the masthead.
+
+## The fireplace
+
+Next to the TV, a silent fireplace loops: real footage of a fire in Glen Lake, Michigan (public domain), cut into a seamless one-minute loop (`art/fireplace.mp4`). Any piece can be a looping video with `"type": "video", "video": "art/your-clip.mp4"`.
+
 ## The little TV
 
 `tv.js` lists about 230 old cartoons (Betty Boop, Popeye, Superman, Felix, Flip the Frog and more) from the Archive's cartoon collections. They play with the sound off, on the same clock as the stations, so everyone sees the same frame. The cartoon's title under the TV links to its Archive page. Wartime shorts and cartoons with racist caricatures were left out by title; delete a line in `tv.js` to drop anything else.
