@@ -152,6 +152,10 @@ Until those are filled in, the ticker just shows what's on. To preview the count
 
 You can change what the ticker shows in `skin.js` (`"show": ["listeners", "now"]`) and how it reads in `"words"` (`listeners`, `listenersOne`, `listenersStation`, `nowOn`). Draw a strip for it to sit on as `art/ticker-strip.png`.
 
+## Updating the live site
+
+The pages load their scripts with a version tag, like `skin.js?v=20261031b`. When you change files, bump that tag in `index.html`, `about.html` and `ads.html`. Visitors then get the new files right away instead of an old cached copy. GitHub Pages takes a minute or two to publish each change.
+
 ## Putting it online for free
 
 The whole site is plain files, so it can be hosted for free and your computer doesn't need to stay on.
