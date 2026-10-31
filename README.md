@@ -152,6 +152,10 @@ A slight tape wobble is added too. Rain or a fire can play under any station: ea
 
 Old records start and end with a few seconds of needle hiss. The radio listens for that: a new record stays silent until its music starts, then fades in. When a record's music ends and only hiss is left, it fades out and starts the next record early. It also fetches the next record shortly before it's needed.
 
+## Changing stations
+
+When you change stations, about three seconds of an old tube radio being tuned plays (squeals and whistles sliding past) while the next show loads. It comes from a Major Records sound-effects 78, "Tuning Squealing Radio (Old Type Radio)", via the Internet Archive. A different slice plays each time. Replace `art/sounds/tuning.mp3` with your own recording to change it, or delete the `"tuning"` line in `skin.js` to switch it off.
+
 ## Reactions
 
 The emoji buttons under what's playing (👻 ♥ 🎺 😂) float a reaction up the screen. Everyone tuned to the same station sees it at the same moment. Like the listener count, sharing reactions needs the Supabase keys in `config.js`; until then you only see your own. Each person can send about two a second, so nobody can flood the screen.

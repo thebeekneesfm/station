@@ -113,7 +113,7 @@
       ctx = new (window.AudioContext || window.webkitAudioContext)();
       buildChain();
       tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
-      ["rain", "fire"].forEach(loadSound);
+      ["tuning", "rain", "fire"].forEach(loadSound);
     } catch (e) { ctx = null; }
   }
 
@@ -338,7 +338,8 @@
       tuneSrc = ctx.createBufferSource(); tuneSrc.buffer = buf; tuneSrc.connect(tuneGain);
       const t = ctx.currentTime;
       tuneGain.gain.cancelScheduledValues(t); tuneGain.gain.setValueAtTime(0.0001, t); tuneGain.gain.linearRampToValueAtTime(0.55 * state.vol, t + 0.15);
-      tuneSrc.start(t, Math.random() * Math.max(0, buf.duration - 4));       // start somewhere different on the dial each time
+      tuneSrc.start(t, Math.random() * Math.max(0, buf.duration - 4), 3.2);   // a different 3-second slice of the dial each time
+      tuneGain.gain.setTargetAtTime(0.0001, t + 2.4, 0.25);
     } else if (tuneSrc) {
       tuneGain.gain.setTargetAtTime(0.0001, ctx.currentTime, 0.25);
       const s0 = tuneSrc; tuneSrc = null; setTimeout(() => { try { s0.stop(); } catch (e) {} }, 1500);
@@ -374,6 +375,7 @@
     } else state.early = null;
     const src = now.track.src;
     setPhase(reason === "next" || reason === "early" ? "next" : "warming");
+    if (state.phase === "warming") tuningSound(true);
 
     const seek = () => {
       if (reason === "early") { gate.arm(true); audio.play().catch(() => {}); return; }
