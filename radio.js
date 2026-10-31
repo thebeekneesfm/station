@@ -25,7 +25,7 @@
     amb_rain: "Rain on the window (click for a fire)",
     amb_fire: "A fire going (click to turn off)",
     amb_off: "Add rain or a fire",
-    tip: "Tip TheBeesKnees",
+    tip: "Tip The Bee's Knees",
     sleepOff: "Sleep timer",
     sleepOn: "Off in {min} min",
     recentTitle: "Recently played on {station}",

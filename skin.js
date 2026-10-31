@@ -50,7 +50,7 @@ window.SKIN = {
     "rain": "art/sounds/rain.mp3",
     "fire": "art/sounds/fire.mp3"
   },
-  "name": "TheBeesKnees",
+  "name": "The Bee's Knees",
   "tagline": "An online radio station of 1920s–1960s music and radio theatre",
   "badge": ".fm",
   "ambienceLevel": 0.3,
