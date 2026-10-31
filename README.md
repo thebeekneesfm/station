@@ -146,7 +146,7 @@ A station can sound like it's playing in another room. Give it a `"room"` settin
 - `muffle`: how much treble gets through the wall, in Hz. Lower is more muffled.
 - `echo`: how much room echo, from 0 to 1.
 
-A slight tape wobble is added too. A crackling fire can play under any station: the **Fire** slider under the fireplace sets its volume (all the way left is off), and each listener's setting sticks as they change stations. `"fireMax"` in `skin.js` sets how loud the slider's top end is (0.6 if not set). The fire is a real recording cut into a seamless two-minute loop, `art/sounds/fire.mp3` (a fireplace, inchadney, CC0). Replace it with your own recording to change it.
+A slight tape wobble is added too. A crackling fire can play under any station: the **Fire** slider under the fireplace sets its volume (all the way left is off), and each listener's setting sticks as they change stations. `"fireMax"` in `skin.js` sets how loud the slider's top end is (1.9 if not set, which makes the fire about as loud as the music). The fire is a real recording cut into a seamless two-minute loop, `art/sounds/fire.mp3` (a fireplace, inchadney, CC0). Replace it with your own recording to change it.
 
 ## Between songs
 

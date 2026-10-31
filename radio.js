@@ -316,7 +316,11 @@
       wow.delayTime.value = 0.012; lfo.frequency.value = 0.35; depth.gain.value = 0.0016; lfo.connect(depth); depth.connect(wow.delayTime); lfo.start();
       inp.connect(muffle); muffle.connect(muffle2); muffle2.connect(dry); muffle2.connect(verb); verb.connect(wet);
       dry.connect(wow); wet.connect(wow); wow.connect(out); out.gain.value = 0.9;
-      const amb = ctx.createGain(); amb.gain.value = 0; amb.connect(fx.master);
+      const amb = ctx.createGain(); amb.gain.value = 0;
+      // the fire gets its own limiter so its loudest crackles can't distort
+      const ambLim = ctx.createDynamicsCompressor();
+      ambLim.threshold.value = -6; ambLim.knee.value = 0; ambLim.ratio.value = 20; ambLim.attack.value = 0.002; ambLim.release.value = 0.1;
+      amb.connect(ambLim); ambLim.connect(fx.master);
       fx.room = { inp, out, muffle, wet, dry, amb, on: false, kind: null, src: null };
     } catch (e) { fx.room = null; }
   }
@@ -366,9 +370,9 @@
         if (sounds[want]) start(); else { loadSound(want); (soundWaiters[want] = soundWaiters[want] || []).push(start); }
       }
     }
-    // the slider's top is a cosy-but-loud fire; it follows the main volume too
-    const top = SKIN.fireMax || 0.6;
-    R.amb.gain.setTargetAtTime(want !== "off" ? state.fireVol * state.fireVol * top * state.vol : 0, ctx.currentTime, 0.25);
+    // all the way up, the fire is about as loud as the music (the main volume knob turns both)
+    const top = SKIN.fireMax || 1.9;
+    R.amb.gain.setTargetAtTime(want !== "off" ? Math.pow(state.fireVol, 1.5) * top : 0, ctx.currentTime, 0.25);
   }
   function setFire(v) {
     state.fireVol = Math.max(0, Math.min(1, v));
