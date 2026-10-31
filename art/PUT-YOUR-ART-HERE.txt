@@ -1,0 +1,2 @@
+Drop your PNGs here with the same names as the files in art-templates.
+Station cards go in cards/, a font in fonts/, a static recording in sounds/.

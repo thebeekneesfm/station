@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Station Builder</title>
+<style>
+  :root { color-scheme: dark; --bg:#171310; --card:#221c17; --ink:#eadfca; --dim:#a99a83; --line:#4a3f33; --hi:#f0b44c; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 ui-monospace,"Cascadia Mono",Consolas,"Courier New",monospace; }
+  main { max-width: 980px; margin: 0 auto; padding: 28px max(16px, env(safe-area-inset-left,0px)) 60px; display:grid; gap:22px; }
+  h1 { margin:0; font-size:20px; letter-spacing:.04em; }
+  h2 { margin:0 0 6px; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--hi); }
+  p { margin:0; color:var(--dim); max-width:70ch; }
+  section { display:grid; gap:10px; }
+  textarea, input { font:inherit; color:var(--ink); background:var(--card); border:1px solid var(--line); padding:8px; box-sizing:border-box; width:100%; }
+  textarea { min-height:90px; resize:vertical; }
+  button { font:inherit; background:var(--ink); color:var(--bg); border:0; padding:7px 12px; cursor:pointer; }
+  button.quiet { background:transparent; color:var(--ink); border:1px solid var(--line); }
+  .row { display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+  .item { border:1px solid var(--line); background:var(--card); padding:12px; display:grid; gap:8px; }
+  .item header { display:flex; flex-wrap:wrap; gap:8px 14px; align-items:center; }
+  .item header label { display:flex; gap:6px; align-items:center; color:var(--dim); }
+  .item header input[type=text] { width:auto; flex:1; min-width:180px; }
+  .files { max-height:260px; overflow:auto; display:grid; gap:2px; }
+  .files label { display:grid; grid-template-columns: 22px 1fr auto; gap:8px; align-items:center; padding:2px 4px; }
+  .files label:hover { background:#2c251f; }
+  .len { color:var(--dim); font-variant-numeric:tabular-nums; }
+  .err { color:#e4846a; }
+  :focus-visible { outline:2px solid var(--hi); outline-offset:2px; }
+</style>
+</head>
+<body>
+<main>
+  <div>
+    <h1>Station Builder</h1>
+    <p>Paste Internet Archive links, tick the episodes or records you want, and copy the finished track list into stations.js.</p>
+  </div>
+
+  <section>
+    <h2>1. Archive links</h2>
+    <p>One per line, like https://archive.org/details/Quiet_Please</p>
+    <textarea id="links" aria-label="Archive links" spellcheck="false"></textarea>
+    <div class="row"><button id="load" type="button">Load files</button><span id="loadNote" class="len" aria-live="polite"></span></div>
+  </section>
+
+  <section>
+    <h2>2. Pick tracks</h2>
+    <div id="items"><p>Nothing loaded yet.</p></div>
+  </section>
+
+  <section>
+    <h2>3. Copy the track list</h2>
+    <div class="row">
+      <label style="display:flex;gap:6px;align-items:center"><input id="mix" type="checkbox" checked style="width:auto"> Take turns between series instead of playing each one in a block</label>
+    </div>
+    <div class="row"><button id="make" type="button">Make track list</button><span id="makeNote" class="len" aria-live="polite"></span></div>
+    <textarea id="out" spellcheck="false" aria-label="Track list" style="min-height:220px"></textarea>
+    <p>In stations.js, replace a station's <b>"tracks": [ … ]</b> with this list, or add a new station block with its own name, freq and dial position.</p>
+  </section>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+const loaded = [];
+const secs = v => { if (v == null) return 0; v = String(v); if (v.includes(":")) return v.split(":").map(Number).reduce((a, b) => a * 60 + b, 0); return +v; };
+const mmss = s => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+function guessTitle(f) {
+  let t = (f.title || f.name).replace(/\.mp3$/i, "").replace(/_/g, " ").replace(/\(\d+-\d+\).*$/, "");
+  return t.replace(/\s+/g, " ").trim();
+}
+$("#load").addEventListener("click", async () => {
+  const ids = $("#links").value.split(/\s+/).map(s => { const m = s.match(/archive\.org\/(?:details|download)\/([^/?#\s]+)/); return m ? m[1] : s.trim(); }).filter(Boolean);
+  $("#loadNote").textContent = `Loading ${ids.length}…`;
+  for (const id of ids) {
+    if (loaded.some(x => x.id === id)) continue;
+    try {
+      const d = await (await fetch("https://archive.org/metadata/" + encodeURIComponent(id))).json();
+      if (!d.files) throw new Error("not found");
+      let files = d.files.filter(f => /\.mp3$/i.test(f.name));
+      const orig = files.filter(f => f.source === "original");
+      if (orig.length) files = orig; else files = files.filter(f => !/_64kb|_vbr/.test(f.name)).concat(files.filter(f => /_64kb|_vbr/.test(f.name))).slice(0, Math.max(1, files.filter(f => !/_64kb|_vbr/.test(f.name)).length));
+      const m = d.metadata || {}; const creator = Array.isArray(m.creator) ? m.creator[0] : (m.creator || "");
+      loaded.push({ id, title: m.title || id, creator, date: String(m.date || "").slice(0, 4), files: files.map(f => ({ name: f.name, length: secs(f.length), title: guessTitle(f), pick: files.length <= 3 })) });
+    } catch (e) { loaded.push({ id, error: true }); }
+  }
+  $("#loadNote").textContent = "";
+  draw();
+});
+function draw() {
+  $("#items").innerHTML = loaded.map((it, i) => it.error
+    ? `<div class="item"><span class="err">Couldn't load ${esc(it.id)}. Check the link.</span></div>`
+    : `<div class="item" data-i="${i}">
+        <header>
+          <label for="series-${i}">Show or artist</label><input type="text" id="series-${i}" value="${esc(it.files.length > 3 ? it.title.replace(/\s*-\s*Single Episodes$/i, "") : (it.creator || it.title))}">
+          <label><input type="checkbox" class="all" style="width:auto"> All ${it.files.length}</label>
+        </header>
+        <div class="files">${it.files.map((f, j) => `<label><input type="checkbox" data-j="${j}" ${f.pick ? "checked" : ""}><span>${esc(f.title)}</span><span class="len">${mmss(f.length)}</span></label>`).join("")}</div>
+      </div>`).join("") || "<p>Nothing loaded yet.</p>";
+  document.querySelectorAll(".item[data-i]").forEach(el => {
+    const it = loaded[el.dataset.i];
+    el.querySelectorAll(".files input").forEach(cb => cb.addEventListener("change", () => { it.files[cb.dataset.j].pick = cb.checked; }));
+    el.querySelector(".all").addEventListener("change", e => { it.files.forEach(f => f.pick = e.target.checked); el.querySelectorAll(".files input").forEach(cb => cb.checked = e.target.checked); });
+    el.querySelector("input[type=text]").addEventListener("input", e => { it.series = e.target.value; });
+  });
+}
+$("#make").addEventListener("click", () => {
+  const groups = loaded.filter(it => !it.error).map((it, i) => {
+    const series = it.series || document.getElementById("series-" + loaded.indexOf(it))?.value || it.title;
+    return it.files.filter(f => f.pick && f.length > 0).map(f => ({
+      src: `https://archive.org/download/${it.id}/${encodeURIComponent(f.name)}`,
+      length: Math.round(f.length * 100) / 100,
+      series, title: it.files.length > 3 ? f.title : (it.title || f.title), date: it.date || undefined,
+      item: `https://archive.org/details/${it.id}`
+    }));
+  }).filter(g => g.length);
+  let tracks = [];
+  if ($("#mix").checked) { const n = Math.max(0, ...groups.map(g => g.length)); for (let k = 0; k < n; k++) groups.forEach(g => { if (g[k]) tracks.push(g[k]); }); }
+  else tracks = groups.flat();
+  const total = tracks.reduce((a, t) => a + t.length, 0);
+  $("#makeNote").textContent = `${tracks.length} tracks, loops every ${(total / 3600).toFixed(1)} hours`;
+  $("#out").value = '"tracks": ' + JSON.stringify(tracks, null, 1);
+  $("#out").select();
+});
+</script>
+</body>
+</html>

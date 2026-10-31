@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radio</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --ground: #171310;
+    --line: rgba(233, 220, 195, .38);
+    --ink: rgba(233, 220, 195, .62);
+    --sel: #f0b44c;
+    --panel: #26201b;
+    --panel-ink: #eadfca;
+    --panel-dim: #a99a83;
+  }
+  [hidden] { display: none !important; }
+  html, body { height: 100%; margin: 0; overflow: hidden; background: var(--ground); }
+  body { font: 13px/1.4 ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace; color: var(--panel-ink); }
+
+  #stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; overflow: hidden; user-select: none; -webkit-user-select: none; touch-action: none; }
+  .layer { position: absolute; box-sizing: border-box; pointer-events: none; }
+  .layer.hot { pointer-events: auto; cursor: pointer; }
+  .t-knob.hot { cursor: grab; }
+  .layer > img, .card > img { display: block; width: 100%; height: 100%; object-fit: fill; pointer-events: none; }
+  .t-knob > img { transform-origin: 50% 50%; transition: transform .08s linear; }
+  .t-needle { transition: left .35s cubic-bezier(.3,.7,.2,1); }
+  .card { position: absolute; inset: 0; }
+  .txt { width: 100%; height: 100%; overflow: hidden; white-space: pre-line; overflow-wrap: anywhere; }
+
+  /* dashed template boxes, shown until your art is in the art folder */
+  .tpl { display: none; position: absolute; inset: 0; border: 2px dashed var(--line); padding: 10px 12px;
+         color: var(--ink); font-size: 15px; line-height: 1.35; overflow: hidden; box-sizing: border-box; }
+  .tpl b { display: block; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .tpl span, .tpl i { display: block; font-style: normal; }
+  .tiny > .tpl { overflow: visible; padding: 0; }
+  .tiny > .tpl > * { position: relative; top: calc(100% + 6px); white-space: nowrap; font-size: 13px; }
+  .cond > .tpl { display: none !important; }
+  .editing .cond.missing > .tpl, .missing.cond.show-tpl > .tpl { display: block !important; }
+  .when-on:not(.tiny) > .tpl { display: none; }
+  .when-on.missing:not(.tiny) > .tpl { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-end; text-align: right; border-style: dotted; }
+  .missing > img { display: none; }
+  .missing > .tpl { display: block; }
+  .t-plate.missing { display: none; }
+  .t-text { outline: none; }
+
+  /* layout mode */
+  .grip { display: none; }
+  .editing .layer { pointer-events: auto; cursor: move; outline: 1px solid rgba(240,180,76,.35); }
+  .editing .t-plate:not(.sel) { pointer-events: none; }
+  .editing .t-plate.missing { display: block; }
+  .editing .t-plate.missing > .tpl { display: block; }
+  .editing .layer.sel { outline: 3px solid var(--sel); }
+  .editing .layer.sel > .grip { display: block; position: absolute; right: -9px; bottom: -9px; width: 18px; height: 18px; background: var(--sel); cursor: nwse-resize; }
+  .editing .t-text::after { content: attr(data-id); position: absolute; left: 0; top: -20px; font-size: 13px; color: var(--sel); }
+
+  #panel { position: fixed; right: max(12px, env(safe-area-inset-right, 0px)); bottom: max(12px, env(safe-area-inset-bottom, 0px)); width: min(340px, calc(100vw - 24px));
+           max-height: calc(100% - 24px); overflow: auto; background: var(--panel); border: 1px solid #4a3f33; padding: 14px; box-sizing: border-box; z-index: 10; display: grid; gap: 10px; }
+  #panel h2 { margin: 0; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--sel); }
+  #panel p { margin: 0; color: var(--panel-dim); }
+  #panel .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; }
+  #panel label { display: grid; gap: 2px; color: var(--panel-dim); font-size: 12px; }
+  #panel input, #panel select, #panel textarea { font: inherit; color: var(--panel-ink); background: #171310; border: 1px solid #4a3f33; padding: 5px 6px; min-width: 0; }
+  #panel textarea { width: 100%; box-sizing: border-box; height: 140px; resize: vertical; }
+  #panel .row { display: flex; flex-wrap: wrap; gap: 6px; }
+  #panel button { font: inherit; color: #171310; background: var(--panel-ink); border: 0; padding: 6px 10px; cursor: pointer; }
+  #panel button.quiet { background: transparent; color: var(--panel-ink); border: 1px solid #4a3f33; }
+  #panel :focus-visible, .layer:focus-visible { outline: 2px solid var(--sel); outline-offset: 2px; }
+  #p-extra { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; }
+  #p-extra:empty { display: none; }
+  @media (prefers-reduced-motion: reduce) { .t-needle, .t-knob > img { transition: none; } }
+</style>
+</head>
+<body>
+<div id="stage" aria-label="Radio"></div>
+
+<div id="panel" hidden>
+  <h2>Layout</h2>
+  <p>Drag pieces to move them. Drag the orange corner to resize (hold Shift to keep the shape). Arrow keys nudge by 1, Shift+arrow by 10.</p>
+  <label for="p-layer">Piece
+    <select id="p-layer"></select>
+  </label>
+  <div class="grid">
+    <label for="p-id">Name<input id="p-id"></label>
+    <label for="p-when">Shows when<input id="p-when" placeholder="always"></label>
+  </div>
+  <label for="p-src">Art file<input id="p-src"></label>
+  <div class="grid">
+    <label for="p-x">x<input id="p-x" type="number"></label>
+    <label for="p-y">y<input id="p-y" type="number"></label>
+    <label for="p-w">width<input id="p-w" type="number"></label>
+    <label for="p-h">height<input id="p-h" type="number"></label>
+  </div>
+  <div id="p-extra"></div>
+  <div class="row">
+    <button class="quiet" id="p-up" type="button">Bring forward</button>
+    <button class="quiet" id="p-down" type="button">Send back</button>
+    <button class="quiet" id="p-add" type="button">Add piece</button>
+    <button class="quiet" id="p-remove" type="button">Remove layer</button>
+  </div>
+  <label for="p-showall" style="display:flex;gap:6px;align-items:center"><input id="p-showall" type="checkbox"> Show pieces that only appear on/off/between stations</label>
+  <div class="row">
+    <button id="p-copy" type="button">Copy skin.js</button>
+    <button class="quiet" id="p-check" type="button">Check station links</button>
+    <button class="quiet" id="p-done" type="button">Done</button>
+  </div>
+  <p id="p-note" aria-live="polite"></p>
+  <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
+</div>
+
+<script src="skin.js"></script>
+<script src="stations.js"></script>
+<script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
+<script src="radio.js"></script>
+</body>
+</html>
