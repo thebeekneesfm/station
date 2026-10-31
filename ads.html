@@ -62,7 +62,7 @@
     <div class="row"><span id="v-title"></span><a id="v-via" target="_blank" rel="noopener">via archive.org</a><button id="v-close" type="button">Close</button></div>
   </div>
 </dialog>
-<script src="ads.js?v=20261031z"></script>
+<script src="ads.js?v=20261101a"></script>
 <script>
   (function () {
     var ADS = (window.ADS || []).slice().sort(function (a, b) { return (a.date || "").localeCompare(b.date || "") || a.title.localeCompare(b.title); });
@@ -76,7 +76,7 @@
       b.addEventListener("click", function () { current = d; bar.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); draw(); });
       bar.appendChild(b);
     });
-    function thumb(a) { var id = (a.item || "").split("/").pop(); return id ? "https://archive.org/services/img/" + encodeURIComponent(id) : a.src; }
+    function thumb(a) { if (/^art\//.test(a.src)) return a.src; var id = (a.item || "").split("/").pop(); return id ? "https://archive.org/services/img/" + encodeURIComponent(id) : a.src; }
     function draw() {
       grid.innerHTML = "";
       var list = ADS.filter(function (a) { return current === "All" || a.date.slice(0, 3) + "0s" === current; });

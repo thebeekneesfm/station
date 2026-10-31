@@ -587,7 +587,7 @@
     const d = document.createElement("div");
     d.className = "look look-card";
     d.style.setProperty("--c", st.color || PALETTE[i % PALETTE.length]);
-    d.dataset.ink = (st.color || PALETTE[i % PALETTE.length]) === "#1f1b17" ? "light" : "dark";
+    d.dataset.ink = ["#1f1b17", "#c8321f"].includes(st.color || PALETTE[i % PALETTE.length]) ? "light" : "dark";   // light text on red and black cards
     d.innerHTML = `<span class="lc-num">${esc(st.num)}</span><span class="lc-name">${esc(st.name)}</span><span class="lc-blurb">${esc(st.blurb || "")}</span>`;
     return d;
   }
