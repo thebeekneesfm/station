@@ -6,9 +6,7 @@
 <title>About TheBeesKnees.fm</title>
 <link rel="icon" href="art/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap">
+<link rel="stylesheet" href="art/fonts/fonts.css">
 <style>
   :root {
     color-scheme: dark;
@@ -20,7 +18,7 @@
   }
   html { background: var(--bg); }
   body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 16px/1.65 "Archivo", "Arial Narrow", Arial, sans-serif; }
+         font: 16px/1.65 "BK Serif", "Arial Narrow", Arial, sans-serif; }
   main { max-width: 68ch; margin: 0 auto; padding-block: 40px 80px;
          padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
   a { color: var(--ink); text-underline-offset: 3px; }
@@ -37,9 +35,12 @@
   .stations b { display: block; }
   .stations span { color: var(--dim); font-size: 14px; }
 
-  h1 { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-weight: 900; font-size: 40px; line-height: 1.05; }
-  h2 { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-weight: 800; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--hi); }
+  h1 { font-family: "BK Script", Georgia, serif; font-style: italic; font-weight: 900; font-size: 40px; line-height: 1.05; }
+  h2 { font-family: "BK Script", Georgia, serif; font-style: italic; font-weight: 800; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--hi); }
   body { font-size: 17px; line-height: 1.6; }
+  h1, h2 { word-spacing: 0.18em; letter-spacing: 0.01em; font-weight: 400; font-style: normal; }
+  h1 { font-size: 46px; }
+  h2 { font-size: 28px; }
 </style>
 </head>
 <body>
@@ -64,6 +65,7 @@
   <p>The cartoons on the little TV come from the Archive's classic cartoon collections. They play with the sound off, on the same clock as the stations.</p>
   <p>The wallpaper is a real 1953 sample, scanned from that year's Sears wallpaper book (<a href="https://archive.org/details/Sears1953WallpaperBook" target="_blank" rel="noopener">public domain, via the Internet Archive</a>). The fireplace is footage of a real fire in Glen Lake, Michigan (<a href="https://archive.org/details/fireplace" target="_blank" rel="noopener">public domain</a>).</p>
   <p>The sounds: a fireplace recorded by <a href="https://freesound.org/people/inchadney/" target="_blank" rel="noopener">inchadney</a> (CC0), and the radio-tuning sound by patolenin (via Pixabay).</p>
+  <p>The lettering: Odalisque NF by Nick Curtis (Nick's Fonts), Mervale Script by Astigmatic (SIL Open Font License) and TeX Gyre Pagella by the GUST e-foundry (GUST Font License), all found on <a href="https://www.fontspace.com" target="_blank" rel="noopener">FontSpace</a>.</p>
   <p>The radio commercials between records come from the Archive's vintage radio commercial collections.</p>
   <p>The vintage ads come from the Archive too: its Magazine Rack and its collections of old Australian and British print ads. <a href="ads.html">See them all</a>.</p>
   <p>What's mine: the schedule, the drawings and the station breaks.</p>
@@ -90,8 +92,8 @@
   <h2>A note about the shows</h2>
   <p>These programs are played as they were made. Some are frightening, and some carry the attitudes of their time, including stereotypes that were wrong then too. Nothing is rated or filtered.</p>
 </main>
-<script src="stations.js?v=20261101j"></script>
-<script src="config.js?v=20261101j"></script>
+<script src="stations.js?v=20261101k"></script>
+<script src="config.js?v=20261101k"></script>
 <script>
   (function () {
     var box = document.getElementById("stations");

@@ -249,3 +249,7 @@ The bottom ticker shows how many people are listening, this month's station spon
 Every station runs through, in order: a rumble filter, the click and pop remover, the hiss remover, a tone filter, automatic level, and a limiter. Press **C** (or the hiss filter switch) to hear a station without any of it.
 
 The hiss remover splits the sound into 512 frequency bands, learns the steady hiss in each band from the quiet moments, and turns down only the bands where hiss is louder than the music. On the hissiest test records it lowers the hiss in quiet passages by about 9 to 10 dB, while the music itself changes by under 1 dB. Music stations use strength 1 and radio shows 0.7; set `"dehiss"` in a station's `sound` settings (0 to 1) to change it.
+
+## Fonts
+
+The lettering comes from FontSpace and lives in `art/fonts` (no Google Fonts): **Odalisque NF** for the masthead (Nick Curtis, freeware), **Mervale Script** for headings and station names (Astigmatic, SIL Open Font License, licence in `art/fonts`), and **TeX Gyre Pagella** for everything else (GUST e-foundry, GUST Font License). `art/fonts/fonts.css` names them "BK Deco", "BK Script" and "BK Serif"; use those names in `skin.js`.

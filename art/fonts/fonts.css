@@ -1,0 +1,10 @@
+/* The site's typefaces, all from FontSpace and free for commercial use:
+   Odalisque NF (Nick Curtis / Nick's Fonts, freeware) for the masthead,
+   Mervale Script (Astigmatic, SIL Open Font License) for headings and station names,
+   TeX Gyre Pagella (GUST e-foundry, GUST Font License) for everything else. */
+@font-face { font-family: "BK Deco"; src: url("odalisque.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "BK Script"; src: url("mervale-script.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "BK Serif"; src: url("pagella-regular.woff2") format("woff2"); font-weight: 100 549; font-style: normal; font-display: swap; }
+@font-face { font-family: "BK Serif"; src: url("pagella-bold.woff2") format("woff2"); font-weight: 550 1000; font-style: normal; font-display: swap; }
+@font-face { font-family: "BK Serif"; src: url("pagella-italic.woff2") format("woff2"); font-weight: 100 549; font-style: italic; font-display: swap; }
+@font-face { font-family: "BK Serif"; src: url("pagella-bolditalic.woff2") format("woff2"); font-weight: 550 1000; font-style: italic; font-display: swap; }

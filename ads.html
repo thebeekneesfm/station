@@ -6,14 +6,12 @@
 <title>TheBeesKnees.fm Ads</title>
 <link rel="icon" href="art/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap">
+<link rel="stylesheet" href="art/fonts/fonts.css">
 <style>
   :root { color-scheme: dark; --bg: #241710; --ink: #eadfca; --dim: #a99a83; --line: #3e342b; --hi: #e3a92f; --card: #211c18; }
   html { background: var(--bg); }
   body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 15px/1.5 "Archivo", "Arial Narrow", Arial, sans-serif; }
+         font: 15px/1.5 "BK Serif", "Arial Narrow", Arial, sans-serif; }
   header, main { max-width: 1200px; margin: 0 auto;
          padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
   header { padding-block: 32px 8px; display: grid; gap: 10px; }
@@ -40,9 +38,12 @@
   .big .row { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; font-size: 14px; }
   .big button { font: inherit; background: var(--ink); color: var(--bg); border: 0; padding: 5px 12px; cursor: pointer; }
 
-  h1 { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-weight: 900; font-size: 40px; line-height: 1.05; }
-  h2 { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-weight: 800; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--hi); }
+  h1 { font-family: "BK Script", Georgia, serif; font-style: italic; font-weight: 900; font-size: 40px; line-height: 1.05; }
+  h2 { font-family: "BK Script", Georgia, serif; font-style: italic; font-weight: 800; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--hi); }
   body { font-size: 17px; line-height: 1.6; }
+  h1, h2 { word-spacing: 0.18em; letter-spacing: 0.01em; font-weight: 400; font-style: normal; }
+  h1 { font-size: 46px; }
+  h2 { font-size: 28px; }
 </style>
 </head>
 <body>
@@ -62,7 +63,7 @@
     <div class="row"><span id="v-title"></span><a id="v-via" target="_blank" rel="noopener">via archive.org</a><button id="v-close" type="button">Close</button></div>
   </div>
 </dialog>
-<script src="ads.js?v=20261101j"></script>
+<script src="ads.js?v=20261101k"></script>
 <script>
   (function () {
     var ADS = (window.ADS || []).slice().sort(function (a, b) { return (a.date || "").localeCompare(b.date || "") || a.title.localeCompare(b.title); });
