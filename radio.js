@@ -388,6 +388,7 @@
         img.addEventListener("load", () => { img.style.opacity = 1; });
         el.querySelector(".ad-via").addEventListener("click", e => { if (state.editing) e.preventDefault(); });
         rec.ad = { img, title: el.querySelector(".ad-title"), via: el.querySelector(".ad-via"), cur: -1 };
+        el.querySelector(".ad-img").addEventListener("click", () => { if (!state.editing && rec.ad.cur >= 0) openAd((window.ADS || [])[rec.ad.cur]); });
       } else if (type === "ticker") {
         const run = document.createElement("div"); run.className = "tick";
         const span = document.createElement("span"); run.appendChild(span); el.appendChild(run);
@@ -594,6 +595,22 @@
   document.addEventListener("visibilitychange", () => { if (!document.hidden) render(); });
 
   /* ---------- vintage ads (ads.js) ---------- */
+  function openAd(a) {
+    if (!a) return;
+    let box = document.getElementById("ad-zoom");
+    if (!box) {
+      box = document.createElement("div"); box.id = "ad-zoom"; box.setAttribute("role", "dialog"); box.setAttribute("aria-label", "Ad");
+      box.innerHTML = '<img alt=""><div class="zcap"><span></span><a target="_blank" rel="noopener">via archive.org</a><button type="button">Close</button></div>';
+      document.body.appendChild(box);
+      const close = () => { box.hidden = true; };
+      box.addEventListener("click", e => { if (e.target === box || e.target.tagName === "BUTTON") close(); });
+      window.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) close(); });
+    }
+    box.querySelector("img").src = a.src; box.querySelector("img").alt = a.title;
+    box.querySelector("span").textContent = a.title + (a.date ? ", " + a.date : "");
+    box.querySelector("a").href = a.item || "https://archive.org";
+    box.hidden = false; box.querySelector("button").focus();
+  }
   const AD_EPOCH = Date.parse("2026-11-01T00:00:00Z");
   function renderAd(rec) {
     const A = window.ADS || [], ad = rec.ad;
