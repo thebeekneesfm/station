@@ -21,7 +21,9 @@
     listenersStation: "{station} {n}",
     listeningHere: "{n} listening",
     listeningAlone: "",
-    nowOn: "{station}: {series} — {title}"
+    nowOn: "{station}: {series} — {title}",
+    tvTuning: "",
+    tvStandby: "Please stand by"
   }, SKIN.words || {});
   const CONFIG = window.RADIO_CONFIG || {};
 
@@ -367,6 +369,18 @@
           const row = e.target.closest(".g-row"); if (!row) return;
           tuneTo(STATIONS.find(s => s.id === row.dataset.id));
         });
+      } else if (type === "tv") {
+        el.innerHTML = '<video muted playsinline preload="auto" disablepictureinpicture></video><div class="tv-standby"></div>';
+        const v = el.querySelector("video");
+        v.muted = true; v.defaultMuted = true;
+        rec.tv = { v, standby: el.querySelector(".tv-standby"), src: "", until: 0 };
+        v.addEventListener("ended", () => { rec.tv.src = ""; renderTV(rec, true); });
+        v.addEventListener("playing", () => { rec.tv.standby.hidden = true; });
+        v.addEventListener("error", () => {
+          const now = tvAt();
+          rec.tv.standby.hidden = false; rec.tv.standby.textContent = WORDS.tvStandby;
+          rec.tv.until = Date.now() + (now ? now.left * 1000 + 500 : 30000);
+        });
       } else if (type === "ad") {
         el.classList.add("hot");
         el.innerHTML = '<div class="ad-img"><img alt=""></div><div class="ad-cap"><span class="ad-title"></span> <a class="ad-via" target="_blank" rel="noopener">via archive.org</a></div>';
@@ -412,7 +426,7 @@
       el.style.left = L.x + "px"; el.style.top = L.y + "px";
       el.style.width = L.w + "px"; el.style.height = L.h + "px";
       el.style.zIndex = SK.layers.indexOf(L) + 1;
-      if (L.type === "guide" || L.type === "ad") {
+      if (L.type === "guide" || L.type === "ad" || L.type === "tv") {
         const v = (k, val) => { if (val != null) el.style.setProperty(k, val); };
         el.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
         v("--g-size", (L.size || 18) + "px"); v("--g-ink", L.color || "#e9dcc3"); v("--g-dim", L.dim || "#a99a83");
@@ -474,6 +488,7 @@
       case "station.name": return st ? st.name : "";
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
+      case "tv.title": { const n = tvAt(); return n ? n.c.title + (n.c.date ? ", " + n.c.date : "") : ""; }
       case "station.listeners": {
         if (!st || !presence.live) return "";
         const n = presence.counts[st.id] || 0;
@@ -544,6 +559,40 @@
     g.el.scrollTop = top;
   }
 
+  /* ---------- the little TV (tv.js): cartoons with the sound off ---------- */
+  const TVLIST = window.TV || [];
+  const TV_EPOCH = Date.parse("2026-11-01T00:00:00Z");
+  let tvTotal = 0;
+  const tvCum = TVLIST.map(c => { const s = tvTotal; tvTotal += Number(c.length) || 0; return s; });
+  function tvAt(ms = Date.now()) {
+    if (!tvTotal) return null;
+    let pos = ((ms - TV_EPOCH) / 1000) % tvTotal; if (pos < 0) pos += tvTotal;
+    let lo = 0, hi = TVLIST.length - 1;
+    while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (tvCum[mid] <= pos) lo = mid; else hi = mid - 1; }
+    return { i: lo, c: TVLIST[lo], offset: pos - tvCum[lo], left: TVLIST[lo].length - (pos - tvCum[lo]) };
+  }
+  function renderTV(rec, force) {
+    const tv = rec.tv, now = tvAt();
+    if (!now) { rec.el.hidden = true; return; }
+    if (tv.until > Date.now()) return;                       // waiting out a broken cartoon
+    if (document.hidden && !force) return;
+    const v = tv.v;
+    if (tv.src !== now.c.src) {
+      tv.src = now.c.src; tv.standby.hidden = false; tv.standby.textContent = WORDS.tvTuning;
+      v.src = now.c.src;
+      v.addEventListener("loadedmetadata", () => {
+        const fresh = tvAt();
+        if (fresh && fresh.c.src === tv.src) { try { v.currentTime = Math.min(fresh.offset, (v.duration || 1e9) - 1); } catch (e) {} }
+        v.play().catch(() => {});
+      }, { once: true });
+    } else if (!v.paused && Math.abs(v.currentTime - now.offset) > 8 && v.duration && now.offset < v.duration - 1) {
+      try { v.currentTime = now.offset; } catch (e) {}
+    } else if (v.paused && v.readyState >= 2 && now.offset < (v.duration || 0)) {
+      v.play().catch(() => {});
+    }
+  }
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) render(); });
+
   /* ---------- vintage ads (ads.js) ---------- */
   const AD_EPOCH = Date.parse("2026-11-01T00:00:00Z");
   function renderAd(rec) {
@@ -603,7 +652,9 @@
         const s = textFor(L);
         if (el.firstChild.textContent !== s) { el.firstChild.textContent = s; fitText(rec); }
         if (L.href) {
-          const st = state.station, href = L.href === "now.item" ? (st ? at(st).track.item || "" : "") : L.href;
+          const st = state.station;
+          const href = L.href === "now.item" ? (st ? at(st).track.item || "" : "")
+                     : L.href === "tv.item" ? ((tvAt() || { c: {} }).c.item || "") : L.href;
           if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
         }
       } else if (type === "needle") {
@@ -624,6 +675,8 @@
         renderGuide(rec);
       } else if (type === "ad") {
         renderAd(rec);
+      } else if (type === "tv") {
+        renderTV(rec);
       } else if (type === "ticker") {
         const s = tickerText(L);
         if (rec.tick.text == null) setTick(rec, s);

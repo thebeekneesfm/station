@@ -66,10 +66,15 @@ window.SKIN = {
       "x": 40, "y": 372, "w": 1120, "h": 566, "rowHeight": 38, "labelWidth": 290,
       "font": "Radio Hand", "size": 16, "color": "#e9dcc3", "dim": "#a99a83", "highlight": "#f0b44c" },
 
+    { "id": "tv", "type": "tv", "x": 1200, "y": 384, "w": 350, "h": 262, "font": "Radio Hand", "size": 20, "color": "#e9dcc3" },
+    { "id": "tv-set", "src": "art/tv-set.png", "x": 1180, "y": 366, "w": 390, "h": 300 },
+    { "id": "tv-title", "type": "text", "bind": "tv.title", "href": "tv.item",
+      "x": 1180, "y": 670, "w": 390, "h": 24, "font": "Radio Hand", "size": 15, "color": "#b9aa90", "align": "center" },
+
     { "id": "ads-heading", "type": "text", "text": "A word from our sponsors",
-      "x": 1190, "y": 372, "w": 370, "h": 30, "font": "Radio Hand", "size": 18, "color": "#b9aa90", "align": "center" },
+      "x": 1190, "y": 704, "w": 370, "h": 26, "font": "Radio Hand", "size": 16, "color": "#b9aa90", "align": "center" },
     { "id": "ad", "type": "ad", "every": 40,
-      "x": 1190, "y": 408, "w": 370, "h": 530, "font": "Radio Hand", "size": 16, "color": "#e9dcc3", "dim": "#a99a83" },
+      "x": 1190, "y": 734, "w": 370, "h": 204, "font": "Radio Hand", "size": 14, "color": "#e9dcc3", "dim": "#a99a83" },
 
     { "id": "ticker-strip", "src": "art/ticker-strip.png", "x": 0, "y": 950, "w": 1600, "h": 50 },
     { "id": "ticker", "type": "ticker", "show": ["listeners", "now"], "speed": 70,
@@ -80,9 +85,9 @@ window.SKIN = {
   ],
 
   "portrait": {
-    "stage": { "width": 600, "height": 1830, "color": "#211c18", "fit": "width" },
+    "stage": { "width": 600, "height": 2170, "color": "#211c18", "fit": "width" },
     "layers": [
-      { "id": "background", "type": "plate", "src": "art/phone/background.png", "x": 0, "y": 0, "w": 600, "h": 1830 },
+      { "id": "background", "type": "plate", "src": "art/phone/background.png", "x": 0, "y": 0, "w": 600, "h": 2170 },
       { "id": "logo", "src": "art/phone/logo.png", "x": 20, "y": 20, "w": 380, "h": 60 },
       { "id": "clock", "type": "text", "bind": "clock",
         "x": 400, "y": 26, "w": 180, "h": 44, "font": "Radio Hand", "size": 28, "color": "#e9dcc3", "align": "right" },
@@ -115,25 +120,30 @@ window.SKIN = {
       { "id": "channel-down", "type": "button", "action": "next", "src": "art/phone/channel-down.png",
         "x": 496, "y": 350, "w": 84, "h": 52 },
 
+      { "id": "tv", "type": "tv", "x": 110, "y": 456, "w": 380, "h": 285, "font": "Radio Hand", "size": 20, "color": "#e9dcc3" },
+      { "id": "tv-set", "src": "art/phone/tv-set.png", "x": 90, "y": 440, "w": 420, "h": 320 },
+      { "id": "tv-title", "type": "text", "bind": "tv.title", "href": "tv.item",
+        "x": 12, "y": 762, "w": 576, "h": 22, "font": "Radio Hand", "size": 14, "color": "#b9aa90", "align": "center" },
+
       { "id": "guide", "type": "guide", "mode": "list",
-        "x": 12, "y": 440, "w": 576, "h": 860, "rowHeight": 64, "labelWidth": 200,
+        "x": 12, "y": 780, "w": 576, "h": 860, "rowHeight": 64, "labelWidth": 200,
         "font": "Radio Hand", "size": 19, "color": "#e9dcc3", "dim": "#a99a83", "highlight": "#f0b44c" },
 
       { "id": "ads-heading", "type": "text", "text": "A word from our sponsors",
-        "x": 12, "y": 1316, "w": 576, "h": 30, "font": "Radio Hand", "size": 17, "color": "#b9aa90", "align": "center" },
+        "x": 12, "y": 1656, "w": 576, "h": 30, "font": "Radio Hand", "size": 17, "color": "#b9aa90", "align": "center" },
       { "id": "ad", "type": "ad", "every": 40,
-        "x": 60, "y": 1350, "w": 480, "h": 380, "font": "Radio Hand", "size": 15, "color": "#e9dcc3", "dim": "#a99a83" },
+        "x": 60, "y": 1690, "w": 480, "h": 380, "font": "Radio Hand", "size": 15, "color": "#e9dcc3", "dim": "#a99a83" },
 
       { "id": "about-link", "type": "text", "text": "About", "href": "about.html",
-        "x": 20, "y": 1745, "w": 90, "h": 30, "font": "Radio Hand", "size": 17, "color": "#e9dcc3", "align": "left" },
+        "x": 20, "y": 2085, "w": 90, "h": 30, "font": "Radio Hand", "size": 17, "color": "#e9dcc3", "align": "left" },
       { "id": "ads-link", "type": "text", "text": "Ads", "href": "ads.html",
-        "x": 110, "y": 1745, "w": 60, "h": 30, "font": "Radio Hand", "size": 17, "color": "#e9dcc3", "align": "left" },
+        "x": 110, "y": 2085, "w": 60, "h": 30, "font": "Radio Hand", "size": 17, "color": "#e9dcc3", "align": "left" },
       { "id": "donate-link", "type": "text", "text": "Donate to the Archive", "href": "https://archive.org/donate",
-        "x": 180, "y": 1745, "w": 260, "h": 30, "font": "Radio Hand", "size": 17, "color": "#e9dcc3", "align": "left" },
+        "x": 180, "y": 2085, "w": 260, "h": 30, "font": "Radio Hand", "size": 17, "color": "#e9dcc3", "align": "left" },
 
-      { "id": "ticker-strip", "src": "art/phone/ticker-strip.png", "x": 0, "y": 1786, "w": 600, "h": 44 },
+      { "id": "ticker-strip", "src": "art/phone/ticker-strip.png", "x": 0, "y": 2126, "w": 600, "h": 44 },
       { "id": "ticker", "type": "ticker", "show": ["listeners", "now"], "speed": 60,
-        "x": 12, "y": 1786, "w": 576, "h": 44, "font": "Radio Hand", "size": 18, "color": "#e9dcc3" }
+        "x": 12, "y": 2126, "w": 576, "h": 44, "font": "Radio Hand", "size": 18, "color": "#e9dcc3" }
     ]
   }
 };

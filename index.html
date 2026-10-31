@@ -68,6 +68,12 @@
   .g-now, .g-next { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .g-next { color: var(--g-dim); font-size: .82em; }
 
+  /* the little TV */
+  .t-tv { background: #0c0a08; overflow: hidden; }
+  .t-tv video { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(.15) contrast(1.05); }
+  .tv-standby { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--g-ink, #e9dcc3); font-size: var(--g-size, 20px); text-align: center; }
+  .tv-standby:empty { display: none; }
+
   /* vintage ad panel */
   .t-ad { display: flex; flex-direction: column; font-size: var(--g-size); color: var(--g-dim); }
   .ad-img { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
@@ -160,6 +166,7 @@
 <script src="stations.js"></script>
 <script src="config.js"></script>
 <script src="ads.js"></script>
+<script src="tv.js"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
 <script src="radio.js"></script>
 </body>

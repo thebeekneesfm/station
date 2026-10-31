@@ -32,6 +32,7 @@ The `art-templates` folder has a blank, correctly sized PNG for each piece if yo
 - **Knobs** spin around their center, so draw them centered in a square.
 - **Lights** have a "Shows when" setting. `light-on.png` only appears while the radio is on, and `light-off.png` only while it's off.
 - **The guide** is live text in rows, drawn over `guide-frame.png`. Draw the frame (a TV-listings page, a program card, whatever you like) and set the guide's colors and font in `skin.js`.
+- **The TV** shows the cartoon. Draw the set around it with the screen left transparent.
 - **The ad panel** shows the ads themselves. Draw anything around it, like a magazine page or a billboard frame, as its own piece behind it.
 - **Station cards** go in `art/cards/`, one per station, named after the station's id in `stations.js` (`chills.png`, `noir.png`, `swing.png`, …). The card swaps when you change stations.
 
@@ -66,6 +67,7 @@ Each piece in `skin.js` has `id`, `x`, `y`, `w`, `h`, and usually `src` (the art
 | `"type": "ticker"` | A scrolling strip. `"show"`, `"speed"` (pixels per second), `font`, `size`, `color`. |
 | `"type": "guide"` | The channel guide. `"mode": "timeline"` (a TV-listings grid) or `"list"` (now and next, for phones). `"hours"`, `"rowHeight"`, `"labelWidth"`, `font`, `size`, `color`, `dim`, `highlight`, `line`, `block`, `selected`. |
 | `"type": "ad"` | The vintage ad panel. `"every"` is how many seconds each ad stays up. |
+| `"type": "tv"` | The cartoon TV. Text pieces can show `"bind": "tv.title"` and link with `"href": "tv.item"`. |
 | `"type": "text", "bind": "…"` | Live text. Binds: `now.series`, `now.title`, `now.date`, `now.remaining`, `station.name`, `station.freq`, `station.blurb`, `station.listeners`, `clock`, `guide` (with `"count": 5`), `status`. Or fixed words with `"text": "…"`. Add `"href"` to make it a link: a web address, or `"now.item"` for the current show's Archive page. Style with `font`, `size`, `color`, `align`, `lineHeight`, `uppercase`, `spacing`. Long titles shrink to fit. |
 | `"when": "on"` | Only show at certain times: `on`, `off`, `playing`, `warming`, `between` (dial between stations), `lost` (a broken tape), `tuned`. Combine them with commas. |
 | `"station": "chills"` | Only show on that station, for example a different dial glow per station. |
@@ -78,25 +80,33 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 
 ## Stations
 
-`stations.js` has seven stations, spread across the dial from left to right:
+`stations.js` has twelve stations. The guide groups them under **Radio shows** and **Music**:
 
 | Station | What's on | Loops every |
 |---|---|---|
 | Chills | Horror: The Weird Circle, The Witch's Tale, Quiet Please, The Hermit's Cave, Lights Out, Inner Sanctum, Hall of Fantasy, The Mysterious Traveler | about 24 hours |
 | Noir | Philip Marlowe, Sam Spade, Pat Novak, Richard Diamond, Johnny Dollar, Box 13, Broadway Is My Beat | about 23 hours |
 | Suspense | Suspense, Escape, The Whistler, The Shadow | about 13 hours |
-| Tomorrow | Science fiction: X Minus One, Dimension X, 2000 Plus, Exploring Tomorrow | about 12 hours |
+| Sci-Fi | X Minus One, Dimension X, 2000 Plus, Exploring Tomorrow, Space Patrol, Tom Corbett, Space Cadet | about 18 hours |
 | Out West | Gunsmoke, Frontier Gentleman, Fort Laramie, The Six Shooter, Have Gun – Will Travel | about 15 hours |
 | Laughs | Jack Benny, Fibber McGee and Molly, Burns and Allen, The Great Gildersleeve, Our Miss Brooks | about 16 hours |
-| Early 78s | 97 jazz, blues and dance band sides from 1917–1925 | about 5 hours |
+| Ragtime | Rags, cakewalks and brass bands, 1898–1928 | about 5 hours |
+| Jazz Age | Hot jazz, blues and dance bands, 1917–1925 | about 5 hours |
+| Swing | Big bands of the 1930s and '40s | about 6 hours |
+| Crooners | Singers from the late 1920s to the '50s | about 6 hours |
+| After Hours | Late-night jazz and torch songs, 1936–1959 | about 6 hours |
+| Christmas | Holiday 78s from every era | about 5 hours |
 
 The shows take turns, so you don't get six Gunsmokes in a row. To add shows or build a new station, open `builder.html`, paste Archive links, tick what you want, and copy the result into `stations.js`.
 
 Each station has:
-- `dial`: where it sits on the dial, from 0 (left) to 1 (right). `art-templates/layout-guide.png` marks each station's spot under the dial, so you can letter your numbers in the right places. `freq` is the number shown for it.
+- `group`: the heading it sits under in the guide.
+- `music: true`: shows the station as one long block in the guide instead of separate programs, since records are only a few minutes long.
 - `epoch`: the moment the station "started broadcasting". The schedule counts forward from there.
 - `tracks`: the playlist. `length` is in seconds and has to be right for the clock to line up. The builder fills it in for you.
 - `sound`: cleanup settings for that station (see below).
+
+The order in `stations.js` is the order in the guide, and the channel numbers follow it.
 
 If the Archive takes a file down, that slot plays static with "Lost the signal" until the next show starts, so nobody falls out of sync. Every so often, press E and click **Check station links** to list any tracks that are gone.
 
@@ -111,6 +121,12 @@ Each station can have its own settings in `stations.js`, for example `"sound": {
 - `declick` runs from 0 (off) to 1 (strongest). The 78s use 0.8 and the shows use 0.4.
 - `tone` is where the hiss cut starts, in Hz. Lower is softer and warmer. 20000 turns it off.
 - `level: false` turns off the automatic leveling.
+
+## The little TV
+
+`tv.js` lists about 230 old cartoons (Betty Boop, Popeye, Superman, Felix, Flip the Frog and more) from the Archive's cartoon collections. They play with the sound off, on the same clock as the stations, so everyone sees the same frame. The cartoon's title under the TV links to its Archive page. Wartime shorts and cartoons with racist caricatures were left out by title; delete a line in `tv.js` to drop anything else.
+
+Draw a TV set as `art/tv-set.png`, with the screen cut out (transparent), and it sits over the picture. On phones it's `art/phone/tv-set.png`.
 
 ## About page and credits
 
