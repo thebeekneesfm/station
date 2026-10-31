@@ -48,8 +48,8 @@ window.SKIN = {
   "sounds": {
     "static": "art/sounds/static.mp3"
   },
-  "name": "Old Time Radio",
-  "tagline": "Always on · from the Internet Archive",
+  "name": "Beeknees.radio",
+  "tagline": "Old time radio · always on · from the Internet Archive",
   "layers": [
     {"id": "background", "type": "plate", "src": "art/background.png", "x": 0, "y": 0, "w": 1600, "h": 1000, "look": "walnut"},
     {"id": "logo", "src": "art/logo.png", "x": 40, "y": 22, "w": 460, "h": 80, "look": "logo"},

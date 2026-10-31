@@ -1,4 +1,4 @@
-# Your old-time radio station
+# Beeknees.radio
 
 A web radio that plays old-time radio shows and 78s straight from the Internet Archive, on a shared clock like Spelunkr. Everyone tuned to the same station hears the same moment, and there's no streaming server.
 
