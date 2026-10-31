@@ -3,7 +3,11 @@
 (function () {
   "use strict";
   const SKIN = window.SKIN, STATIONS = window.STATIONS;
-  const W = SKIN.stage.width, H = SKIN.stage.height;
+  // Two layouts: SKIN (wide screens) and SKIN.portrait (phones held upright), if you've made one.
+  const isPortrait = () => !!SKIN.portrait && window.innerHeight > window.innerWidth;
+  let SK = isPortrait() ? SKIN.portrait : SKIN;
+  let W = SK.stage.width, H = SK.stage.height;
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const WORDS = Object.assign({
     off: "Switch me on",
     warming: "Warming up…",
@@ -34,6 +38,10 @@
     st._cum = st.tracks.map(tr => { const s = t; t += Number(tr.length) || 0; return s; });
     st._total = t;
     st._epoch = Date.parse(st.epoch || "2026-11-01T00:00:00Z");
+  });
+  STATIONS.forEach((st, i) => {
+    if (st.dial == null) st.dial = STATIONS.length > 1 ? i / (STATIONS.length - 1) : 0.5;
+    if (!st.num) st.num = String(i + 1).padStart(2, "0");
   });
   function at(st, ms = Date.now()) {
     let pos = ((ms - st._epoch) / 1000) % st._total;
@@ -69,7 +77,8 @@
     showAll: false,
     selected: null
   };
-  const CAPTURE = 0.035;
+  const dials = STATIONS.map(s => s.dial).sort((a, b) => a - b);
+  const CAPTURE = Math.min(0.035, ...dials.slice(1).map((d, i) => (d - dials[i]) / 2.2));
   function stationAtDial(d) {
     let best = null, bd = 1;
     STATIONS.forEach(s => { const x = Math.abs(s.dial - d); if (x < bd) { bd = x; best = s; } });
@@ -242,11 +251,12 @@
     setPhase("gap");
     lostTimer = setTimeout(play, Math.max(500, now.left * 1000 + 300));
   }
-  audio.addEventListener("playing", () => { if (state.on && state.station) setPhase("playing"); });
+  audio.addEventListener("playing", () => { audio.dataset.retried = ""; if (state.on && state.station) setPhase("playing"); });
   audio.addEventListener("waiting", () => { if (state.phase === "playing") setPhase("warming"); });
   audio.addEventListener("ended", () => play());
   audio.addEventListener("error", () => {
     if (!state.on || !state.station || !audio.dataset.src) return;
+    if (!audio.dataset.retried) { audio.dataset.retried = "1"; audio.dataset.src = ""; setTimeout(play, 800); return; }   // one retry first
     const now = at(state.station);
     state.resumeAt = Date.now() + now.left * 1000;
     setPhase("lost");
@@ -275,6 +285,7 @@
     store.set("dial", state.dial);
     if (st === state.station && !force) { render(); return; }
     state.station = st;
+    if (st && location.hash !== "#" + st.id) { try { history.replaceState(null, "", "#" + st.id); } catch (e) {} }
     if (!state.on) { render(); return; }
     if (!st) { audio.pause(); clearTimeout(lostTimer); setPhase("between"); return; }
     play();
@@ -287,6 +298,8 @@
     state.dial = sorted[i].dial;
     if (!state.on) power(true); else retune();
   }
+  function tuneTo(st) { if (!st) return; state.dial = st.dial; if (!state.on) power(true); else retune(); }
+  window.addEventListener("hashchange", () => { const st = STATIONS.find(s => "#" + s.id === location.hash); if (st && st !== state.station) tuneTo(st); });
   function mediaSession(st, tr) {
     if (!("mediaSession" in navigator)) return;
     try {
@@ -325,8 +338,8 @@
     stage.innerHTML = "";
     els.clear();
     stage.style.width = W + "px"; stage.style.height = H + "px";
-    stage.style.background = SKIN.stage.color || "#000";
-    SKIN.layers.forEach(L => {
+    stage.style.background = SK.stage.color || "#000";
+    SK.layers.forEach(L => {
       const el = document.createElement("div");
       el.className = "layer t-" + (L.type || "image");
       el.dataset.id = L.id;
@@ -345,6 +358,22 @@
           t.target = "_blank"; t.rel = "noopener";
           t.addEventListener("click", e => { if (state.editing) e.preventDefault(); });
         }
+      } else if (type === "guide") {
+        const g = document.createElement("div"); g.className = "guide";
+        el.appendChild(g); el.classList.add("hot");
+        rec.guide = { el: g, key: "" };
+        g.addEventListener("click", e => {
+          if (state.editing) return;
+          const row = e.target.closest(".g-row"); if (!row) return;
+          tuneTo(STATIONS.find(s => s.id === row.dataset.id));
+        });
+      } else if (type === "ad") {
+        el.classList.add("hot");
+        el.innerHTML = '<div class="ad-img"><img alt=""></div><div class="ad-cap"><span class="ad-title"></span> <a class="ad-via" target="_blank" rel="noopener">via archive.org</a></div>';
+        const img = el.querySelector("img");
+        img.addEventListener("load", () => { img.style.opacity = 1; });
+        el.querySelector(".ad-via").addEventListener("click", e => { if (state.editing) e.preventDefault(); });
+        rec.ad = { img, title: el.querySelector(".ad-title"), via: el.querySelector(".ad-via"), cur: -1 };
       } else if (type === "ticker") {
         const run = document.createElement("div"); run.className = "tick";
         const span = document.createElement("span"); run.appendChild(span); el.appendChild(run);
@@ -382,7 +411,15 @@
     els.forEach(({ L, el }) => {
       el.style.left = L.x + "px"; el.style.top = L.y + "px";
       el.style.width = L.w + "px"; el.style.height = L.h + "px";
-      el.style.zIndex = SKIN.layers.indexOf(L) + 1;
+      el.style.zIndex = SK.layers.indexOf(L) + 1;
+      if (L.type === "guide" || L.type === "ad") {
+        const v = (k, val) => { if (val != null) el.style.setProperty(k, val); };
+        el.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
+        v("--g-size", (L.size || 18) + "px"); v("--g-ink", L.color || "#e9dcc3"); v("--g-dim", L.dim || "#a99a83");
+        v("--g-line", L.line || "rgba(233,220,195,.16)"); v("--g-hi", L.highlight || "#f0b44c");
+        v("--g-block", L.block || "rgba(233,220,195,.06)"); v("--g-sel", L.selected || "rgba(240,180,76,.14)");
+        v("--g-row", (L.rowHeight || 54) + "px"); v("--g-lab", (L.labelWidth || 300) + "px");
+      }
       if (L.type === "ticker") {
         const t = el.firstChild;
         t.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
@@ -403,12 +440,20 @@
     fitAllText();
   }
   function fit() {
-    const pad = 0, vw = window.innerWidth - pad, vh = window.innerHeight - pad;
-    const k = Math.min(vw / W, vh / H);
-    stage.style.transform = `translate(${(window.innerWidth - W * k) / 2}px, ${(window.innerHeight - H * k) / 2}px) scale(${k})`;
+    const vw = window.innerWidth, vh = window.innerHeight;
+    const byWidth = SK.stage.fit === "width";
+    const k = byWidth ? vw / W : Math.min(vw / W, vh / H);
+    stage.style.transform = `translate(${byWidth ? 0 : (vw - W * k) / 2}px, ${byWidth ? 0 : Math.max(0, (vh - H * k) / 2)}px) scale(${k})`;
+    document.documentElement.classList.toggle("scrolls", byWidth);
+    const frame = stage.parentElement;
+    frame.style.height = byWidth ? Math.ceil(H * k) + "px" : "";
     state.scale = k;
   }
-  window.addEventListener("resize", fit);
+  window.addEventListener("resize", () => {
+    const want = isPortrait() ? SKIN.portrait : SKIN;
+    if (want !== SK && !state.editing) { SK = want; W = SK.stage.width; H = SK.stage.height; build(); }
+    fit();
+  });
 
   /* ---------- per-second render ---------- */
   function visible(L) {
@@ -449,6 +494,73 @@
       default: return L.text || "";
     }
   }
+  /* ---------- channel guide ---------- */
+  function renderGuide(rec) {
+    const L = rec.L, g = rec.guide, now = Date.now();
+    const mode = L.mode || "timeline";
+    const step = 30 * 60e3, span = (L.hours || 2) * 3600e3;
+    const t0 = Math.floor(now / step) * step, t1 = t0 + span;
+    const key = [Math.floor(now / 10000), state.station && state.station.id, state.on, JSON.stringify(presence.counts), presence.live, mode].join("|");
+    if (g.key === key) return;
+    g.key = key;
+    const pct = t => ((t - t0) / span * 100).toFixed(3) + "%";
+    let h = "";
+    if (mode === "timeline") {
+      h += `<div class="g-head"><span class="g-lab">${esc(L.heading || "")}</span><span class="g-line">`;
+      for (let t = t0; t < t1; t += step) h += `<span class="g-tick" style="left:${pct(t)}">${hhmm(t)}</span>`;
+      h += `<span class="g-nowmark" style="left:${pct(now)}"></span></span></div>`;
+    }
+    let group = null;
+    STATIONS.forEach(st => {
+      if (st.group && st.group !== group) { group = st.group; h += `<div class="g-group">${esc(group)}</div>`; }
+      const sel = state.station === st;
+      const n = presence.live ? (presence.counts[st.id] || 0) : 0;
+      const cnt = n ? WORDS.listeningHere.replace("{n}", n) : "";
+      const cur = at(st, now), next = st.tracks[(cur.i + 1) % st.tracks.length];
+      h += `<button type="button" class="g-row${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}">`;
+      h += `<span class="g-lab"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span><span class="g-count">${esc(cnt)}</span></span>`;
+      if (mode === "timeline") {
+        h += `<span class="g-line">`;
+        if (st.music) {
+          h += `<span class="g-block now" style="left:0;width:100%"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}<i>then ${esc(next.series)}${st.blurb ? " · " + esc(st.blurb) : ""}</i></span>`;
+        } else {
+          let start = now - cur.offset * 1000, i = cur.i, guard = 0;
+          while (start < t1 && guard++ < 200) {
+            const tr = st.tracks[i], end = start + tr.length * 1000;
+            const a = Math.max(start, t0), b = Math.min(end, t1);
+            if (b > a) h += `<span class="g-block${start <= now && now < end ? " now" : ""}" style="left:${pct(a)};width:${((b - a) / span * 100).toFixed(3)}%"><b>${esc(tr.series)}</b> ${esc(tr.title)}</span>`;
+            start = end; i = (i + 1) % st.tracks.length;
+          }
+        }
+        h += `</span>`;
+      } else {
+        h += `<span class="g-list"><span class="g-now"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}</span>` +
+             `<span class="g-next">${st.music ? "then" : hhmm(now + cur.left * 1000)} ${esc(next.series)} — ${esc(next.title)}</span></span>`;
+      }
+      h += `</button>`;
+    });
+    const top = g.el.scrollTop;
+    g.el.innerHTML = h;
+    g.el.scrollTop = top;
+  }
+
+  /* ---------- vintage ads (ads.js) ---------- */
+  const AD_EPOCH = Date.parse("2026-11-01T00:00:00Z");
+  function renderAd(rec) {
+    const A = window.ADS || [], ad = rec.ad;
+    if (!A.length) { rec.el.hidden = true; return; }
+    const every = (rec.L.every || 40) * 1000;
+    const k = ((Math.floor((Date.now() - AD_EPOCH) / every) % A.length) + A.length) % A.length;
+    if (ad.cur === k) return;
+    ad.cur = k;
+    const a = A[k];
+    ad.img.style.opacity = 0;
+    ad.img.src = a.src;
+    ad.title.textContent = a.title + (a.date ? ", " + a.date : "");
+    ad.via.href = a.item || "https://archive.org";
+    new Image().src = A[(k + 1) % A.length].src;   // fetch the next one early
+  }
+
   function tickerText(L) {
     const parts = [], show = L.show || ["listeners", "now"], sep = L.separator || "   ·   ";
     if (show.includes("listeners") && presence.live) {
@@ -481,7 +593,7 @@
   function fitAllText() { els.forEach(rec => { if (rec.L.type === "text") fitText(rec); }); }
   let frameTick = 0;
   function render() {
-    const tuning = SKIN.layers.find(l => l.type === "knob" && l.bind === "tuning");
+    const tuning = SK.layers.find(l => l.type === "knob" && l.bind === "tuning");
     els.forEach(rec => {
       const { L, el } = rec;
       el.hidden = !visible(L);
@@ -508,6 +620,10 @@
         const [a, b] = L.turn || [-140, 140];
         const v = L.bind === "volume" ? state.vol : state.dial;
         (rec.img || el).style.transform = `rotate(${a + (b - a) * v}deg)`;
+      } else if (type === "guide") {
+        renderGuide(rec);
+      } else if (type === "ad") {
+        renderAd(rec);
       } else if (type === "ticker") {
         const s = tickerText(L);
         if (rec.tick.text == null) setTick(rec, s);
@@ -523,7 +639,7 @@
     });
     document.body.dataset.phase = state.on ? state.phase : "off";
   }
-  setInterval(() => { frameTick++; if (SKIN.layers.some(l => l.frames)) render(); }, 100);
+  setInterval(() => { frameTick++; if (SK.layers.some(l => l.frames)) render(); }, 100);
   setInterval(render, 1000);
 
   /* ---------- controls ---------- */
@@ -540,10 +656,10 @@
         else if (a === "prev") stepStation(-1);
         else if (a === "volup") setVol(state.vol + 0.1);
         else if (a === "voldown") setVol(state.vol - 0.1);
-        else if (a.startsWith("tune:")) { const s = STATIONS.find(x => x.id === a.slice(5)); if (s) { state.dial = s.dial; state.on ? retune() : power(true); } }
+        else if (a.startsWith("tune:")) tuneTo(STATIONS.find(x => x.id === a.slice(5)));
         else if (a === "dial") {
           const r = el.getBoundingClientRect();
-          const needle = SKIN.layers.find(l => l.type === "needle");
+          const needle = SK.layers.find(l => l.type === "needle");
           const tr = (needle && needle.track) || { from: L.x, to: L.x + L.w };
           const sx = L.x + (e.clientX - r.left) / state.scale;
           let d = (sx - tr.from) / (tr.to - tr.from);
@@ -592,10 +708,10 @@
     if (k === "e" || k === "E") { toggleEdit(); return; }
     if (state.editing) { editKeys(e); return; }
     if (k === " ") { e.preventDefault(); power(); }
-    else if (k === "ArrowRight") stepStation(1);
-    else if (k === "ArrowLeft") stepStation(-1);
-    else if (k === "ArrowUp") { e.preventDefault(); setVol(state.vol + 0.05); }
-    else if (k === "ArrowDown") { e.preventDefault(); setVol(state.vol - 0.05); }
+    else if (k === "ArrowDown") { e.preventDefault(); stepStation(1); }
+    else if (k === "ArrowUp") { e.preventDefault(); stepStation(-1); }
+    else if (k === "ArrowRight") setVol(state.vol + 0.05);
+    else if (k === "ArrowLeft") setVol(state.vol - 0.05);
   });
 
   /* ---------- layout mode (press E) ---------- */
@@ -604,7 +720,7 @@
     state.editing = force == null ? !state.editing : force;
     document.body.classList.toggle("editing", state.editing);
     panel.hidden = !state.editing;
-    if (state.editing) { if (!state.selected) select(SKIN.layers[1] ? SKIN.layers[1].id : SKIN.layers[0].id); panelFill(); }
+    if (state.editing) { if (!state.selected) select(SK.layers[1] ? SK.layers[1].id : SK.layers[0].id); panelFill(); }
     render();
   }
   function select(id) {
@@ -616,7 +732,7 @@
   function panelFill() {
     const r = sel(); if (!r) return;
     const L = r.L;
-    $("#p-layer").innerHTML = SKIN.layers.map(l => `<option value="${l.id}">${l.id}</option>`).join("");
+    $("#p-layer").innerHTML = SK.layers.map(l => `<option value="${l.id}">${l.id}</option>`).join("");
     $("#p-layer").value = L.id;
     ["id", "src", "x", "y", "w", "h", "when"].forEach(f => { $("#p-" + f).value = L[f] == null ? "" : L[f]; });
     $("#p-src").disabled = !!(L.type === "text" || L.type === "card");
@@ -652,7 +768,7 @@
   $("#p-down").addEventListener("click", () => moveLayer(-1));
   $("#p-add").addEventListener("click", () => {
     let n = 1; while (els.has("new-" + n)) n++;
-    SKIN.layers.push({ id: "new-" + n, src: "art/new-" + n + ".png", x: Math.round(W / 2 - 100), y: Math.round(H / 2 - 100), w: 200, h: 200 });
+    SK.layers.push({ id: "new-" + n, src: "art/new-" + n + ".png", x: Math.round(W / 2 - 100), y: Math.round(H / 2 - 100), w: 200, h: 200 });
     state.selected = "new-" + n; rebuildKeep();
   });
   $("#p-remove").addEventListener("click", () => {
@@ -660,7 +776,7 @@
     const btn = $("#p-remove");
     if (btn.dataset.armed !== "1") { btn.dataset.armed = "1"; btn.textContent = "Click again to remove"; setTimeout(() => { btn.dataset.armed = ""; btn.textContent = "Remove layer"; }, 2500); return; }
     btn.dataset.armed = ""; btn.textContent = "Remove layer";
-    SKIN.layers.splice(SKIN.layers.indexOf(r.L), 1); state.selected = SKIN.layers[0] && SKIN.layers[0].id; rebuildKeep();
+    SK.layers.splice(SK.layers.indexOf(r.L), 1); state.selected = SK.layers[0] && SK.layers[0].id; rebuildKeep();
   });
   $("#p-done").addEventListener("click", () => toggleEdit(false));
   $("#p-copy").addEventListener("click", () => {
@@ -674,10 +790,10 @@
   $("#p-check").addEventListener("click", checkLinks);
   function moveLayer(dir) {
     const r = sel(); if (!r) return;
-    const i = SKIN.layers.indexOf(r.L), j = i + dir;
-    if (j < 0 || j >= SKIN.layers.length) return;
-    SKIN.layers.splice(i, 1); SKIN.layers.splice(j, 0, r.L); place(); render();
-    $("#p-note").textContent = `${r.L.id} is now layer ${j + 1} of ${SKIN.layers.length}.`;
+    const i = SK.layers.indexOf(r.L), j = i + dir;
+    if (j < 0 || j >= SK.layers.length) return;
+    SK.layers.splice(i, 1); SK.layers.splice(j, 0, r.L); place(); render();
+    $("#p-note").textContent = `${r.L.id} is now layer ${j + 1} of ${SK.layers.length}.`;
   }
   function rebuildKeep() { const s = state.selected; build(); toggleEdit(true); select(s); }
   function editKeys(e) {
@@ -792,7 +908,10 @@
   build();
   fit();
   startPresence();
+  const fromHash = STATIONS.find(s => "#" + s.id === location.hash);
+  if (fromHash) state.dial = fromHash.dial;
   state.station = stationAtDial(state.dial);
+  if (!state.station) { state.dial = STATIONS[0].dial; state.station = STATIONS[0]; }
   render();
   if (/[?&#]edit\b/.test(location.href)) toggleEdit(true);
 })();

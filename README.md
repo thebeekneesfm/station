@@ -2,20 +2,22 @@
 
 A web radio that plays old-time radio shows and 78s straight from the Internet Archive, on a shared clock like Spelunkr. Everyone tuned to the same station hears the same moment, and there's no streaming server.
 
+The main screen is a channel guide: every station in a list, with what's on now and what's coming up. Click a station to tune in. There's also a vintage ad panel that changes on the same clock for everyone, and a gallery of all the ads at `ads.html`.
+
 Every piece you see is your own drawing. Until you add art, each piece shows as a dashed box with its name, file name and size.
 
 ## Try it
 
-Double-click `index.html`. Press **Space** (or click the power switch) to turn it on.
+Double-click `index.html`. Press **Space** (or click the power switch) to turn it on. Click any station in the guide to tune to it.
 
 | Key | Does |
 |---|---|
 | Space | Power on/off |
-| ← → | Previous / next station |
-| ↑ ↓ | Volume |
+| ↑ ↓ | Previous / next station |
+| ← → | Volume |
 | E | Layout mode |
 
-The knobs work too. Click the tuning knob to jump stations, or drag it to sweep the dial through the static. Drag or scroll the volume knob. Clicking anywhere on the dial tunes the needle there.
+Each station has its own link, like `…/otr-radio/#noir`. Opening that link starts on that station, so you can share a station directly.
 
 ## Drawing the radio
 
@@ -26,11 +28,14 @@ The knobs work too. Click the tuning knob to jump stations, or drag it to sweep 
 
 The `art-templates` folder has a blank, correctly sized PNG for each piece if you'd rather draw on those directly.
 
-**Pieces that move:**
+**Pieces that move or change:**
 - **Knobs** spin around their center, so draw them centered in a square.
-- **The needle** slides along the dial. Draw it as a thin upright piece. In layout mode, drag it to move its whole track.
-- **Lights and glows** have a "Shows when" setting. `light-on.png` and `grille-glow.png` only appear while the radio is on, and `light-off.png` only while it's off. Draw the glow on its own so it can fade in over the plain version.
-- **Station cards** go in `art/cards/`, one per station (`chills.png`, `noir.png`, `suspense.png`, `tomorrow.png`, `outwest.png`, `laughs.png`, `hotwax.png`). The card swaps when you change stations.
+- **Lights** have a "Shows when" setting. `light-on.png` only appears while the radio is on, and `light-off.png` only while it's off.
+- **The guide** is live text in rows, drawn over `guide-frame.png`. Draw the frame (a TV-listings page, a program card, whatever you like) and set the guide's colors and font in `skin.js`.
+- **The ad panel** shows the ads themselves. Draw anything around it, like a magazine page or a billboard frame, as its own piece behind it.
+- **Station cards** go in `art/cards/`, one per station, named after the station's id in `stations.js` (`chills.png`, `noir.png`, `swing.png`, …). The card swaps when you change stations.
+
+**Phones.** Phones held upright get their own layout (`"portrait"` in `skin.js`). It's taller and scrolls instead of shrinking. Its art goes in `art/phone/`, with its own templates in `art-templates/phone/`. If you'd rather use one layout everywhere, delete the `"portrait"` section.
 
 **Static pieces, the easy way:** `background` and `grain` are full-stage "plates". Draw them at 1600 × 1000 and they're already in position. You can do this for anything that doesn't move. Make a new piece with x 0, y 0, width 1600, height 1000, type `plate`, and draw it in place on the full canvas.
 
@@ -55,10 +60,12 @@ Each piece in `skin.js` has `id`, `x`, `y`, `w`, `h`, and usually `src` (the art
 |---|---|
 | `"type": "plate"` | Full-stage art. It disappears when the file is missing, instead of showing a box. |
 | `"type": "knob", "bind": "volume"` or `"tuning"` | Spins. `"turn": [-140, 140]` sets how far, in degrees. |
-| `"type": "needle", "track": {"from": 510, "to": 1090}` | Slides between those x positions. Add `"mode": "rotate", "pivot": [9, 130], "turn": [-60, 60]` for a swinging needle. |
+| `"type": "needle", "track": {"from": 510, "to": 1090}` | A dial needle, if you ever want a dial back. Slides between those x positions. |
 | `"type": "button", "action": "power"` | Clickable. Actions: `power`, `next`, `prev`, `volup`, `voldown`, `dial`, `tune:chills` (jump to a station). |
 | `"type": "card"` | Shows the current station's card art. |
 | `"type": "ticker"` | A scrolling strip. `"show"`, `"speed"` (pixels per second), `font`, `size`, `color`. |
+| `"type": "guide"` | The channel guide. `"mode": "timeline"` (a TV-listings grid) or `"list"` (now and next, for phones). `"hours"`, `"rowHeight"`, `"labelWidth"`, `font`, `size`, `color`, `dim`, `highlight`, `line`, `block`, `selected`. |
+| `"type": "ad"` | The vintage ad panel. `"every"` is how many seconds each ad stays up. |
 | `"type": "text", "bind": "…"` | Live text. Binds: `now.series`, `now.title`, `now.date`, `now.remaining`, `station.name`, `station.freq`, `station.blurb`, `station.listeners`, `clock`, `guide` (with `"count": 5`), `status`. Or fixed words with `"text": "…"`. Add `"href"` to make it a link: a web address, or `"now.item"` for the current show's Archive page. Style with `font`, `size`, `color`, `align`, `lineHeight`, `uppercase`, `spacing`. Long titles shrink to fit. |
 | `"when": "on"` | Only show at certain times: `on`, `off`, `playing`, `warming`, `between` (dial between stations), `lost` (a broken tape), `tuned`. Combine them with commas. |
 | `"station": "chills"` | Only show on that station, for example a different dial glow per station. |
@@ -67,7 +74,7 @@ Each piece in `skin.js` has `id`, `x`, `y`, `w`, `h`, and usually `src` (the art
 
 `"words"` at the top level changes the status messages, for example `"words": { "off": "Turn the knob, darling", "lost": "Lost the signal. Back at {time}" }`.
 
-To change the stage size, change `stage.width` and `stage.height`. A tall stage like 1000 × 1600 works for a phone-first layout.
+To change the stage size, change `stage.width` and `stage.height`. `"fit": "width"` makes a layout fill the screen's width and scroll, like the phone layout does.
 
 ## Stations
 

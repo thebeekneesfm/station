@@ -34,6 +34,48 @@
   a.txt { display: block; text-decoration: underline; text-underline-offset: 3px; color: inherit; }
   .txt { width: 100%; height: 100%; overflow: hidden; white-space: pre-line; overflow-wrap: anywhere; }
 
+
+  /* the stage is drawn at full size and scaled into this frame */
+  #frame { position: fixed; inset: 0; overflow: hidden; }
+  /* phone layout scrolls instead of shrinking */
+  html.scrolls, html.scrolls body { overflow-x: hidden; overflow-y: auto; height: auto; }
+  html.scrolls #frame { position: relative; inset: auto; width: 100%; }
+
+  /* channel guide */
+  .t-guide { font-size: var(--g-size); color: var(--g-ink); }
+  .guide { position: absolute; inset: 0; overflow-y: auto; overflow-x: hidden; touch-action: pan-y; scrollbar-width: thin; scrollbar-color: var(--g-line) transparent; }
+  .g-head, .g-row { display: flex; align-items: stretch; width: 100%; }
+  .g-head { position: sticky; top: 0; z-index: 2; height: 34px; background: var(--ground); border-bottom: 1px solid var(--g-line); color: var(--g-dim); font-size: .8em; }
+  .g-lab { flex: 0 0 var(--g-lab); display: flex; align-items: center; gap: .6em; padding: 0 .7em; box-sizing: border-box; min-width: 0; }
+  .g-line { position: relative; flex: 1; min-width: 0; }
+  .g-tick { position: absolute; top: 0; bottom: 0; display: flex; align-items: center; padding-left: .5em; border-left: 1px solid var(--g-line); white-space: nowrap; }
+  .g-nowmark { position: absolute; top: 0; bottom: -2px; width: 2px; background: var(--g-hi); }
+  .g-group { padding: .9em .7em .35em; color: var(--g-hi); font-size: .72em; letter-spacing: .12em; text-transform: uppercase; border-bottom: 1px solid var(--g-line); }
+  .g-row { font: inherit; color: inherit; text-align: left; background: none; border: 0; border-bottom: 1px solid var(--g-line); padding: 0; min-height: var(--g-row); cursor: pointer; }
+  .g-row:hover { background: var(--g-block); }
+  .g-row.sel { background: var(--g-sel); }
+  .g-row:focus-visible { outline: 2px solid var(--g-hi); outline-offset: -2px; }
+  .g-num { color: var(--g-dim); font-size: .85em; font-variant-numeric: tabular-nums; }
+  .g-row.on .g-num { color: var(--g-hi); }
+  .g-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .g-count { margin-left: auto; color: var(--g-dim); font-size: .75em; white-space: nowrap; }
+  .g-block { position: absolute; top: 5px; bottom: 5px; box-sizing: border-box; padding: 0 .6em; display: flex; align-items: center; gap: .45em;
+             overflow: hidden; white-space: nowrap; text-overflow: ellipsis; border-left: 1px solid var(--g-line); background: var(--g-block); font-size: .86em; }
+  .g-block b { font-weight: 600; flex-shrink: 0; }
+  .g-block i { font-style: normal; color: var(--g-dim); margin-left: .6em; overflow: hidden; text-overflow: ellipsis; }
+  .g-block.now { box-shadow: inset 3px 0 0 var(--g-hi); }
+  .g-list { flex: 1; min-width: 0; display: grid; align-content: center; gap: 2px; padding: .4em .7em .4em 0; }
+  .g-now, .g-next { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .g-next { color: var(--g-dim); font-size: .82em; }
+
+  /* vintage ad panel */
+  .t-ad { display: flex; flex-direction: column; font-size: var(--g-size); color: var(--g-dim); }
+  .ad-img { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; }
+  .ad-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; opacity: 0; transition: opacity .6s; box-shadow: 0 6px 24px rgba(0,0,0,.45); }
+  .ad-cap { padding-top: .5em; font-size: .8em; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center; }
+  .ad-via { color: var(--g-ink); text-underline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { .ad-img img { transition: none; } }
+
   /* dashed template boxes, shown until your art is in the art folder */
   .tpl { display: none; position: absolute; inset: 0; border: 2px dashed var(--line); padding: 10px 12px;
          color: var(--ink); font-size: 15px; line-height: 1.35; overflow: hidden; box-sizing: border-box; }
@@ -78,7 +120,7 @@
 </style>
 </head>
 <body>
-<div id="stage" aria-label="Radio"></div>
+<div id="frame"><div id="stage" aria-label="Radio"></div></div>
 
 <div id="panel" hidden>
   <h2>Layout</h2>
@@ -117,6 +159,7 @@
 <script src="skin.js"></script>
 <script src="stations.js"></script>
 <script src="config.js"></script>
+<script src="ads.js"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
 <script src="radio.js"></script>
 </body>

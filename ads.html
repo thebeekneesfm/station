@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A Word from Our Sponsors</title>
+<style>
+  :root { color-scheme: dark; --bg: #171310; --ink: #eadfca; --dim: #a99a83; --line: #3e342b; --hi: #f0b44c; --card: #211c18; }
+  html { background: var(--bg); }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 "Radio Hand", ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace; }
+  header, main { max-width: 1200px; margin: 0 auto;
+         padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  header { padding-block: 32px 8px; display: grid; gap: 10px; }
+  a { color: var(--ink); text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--hi); outline-offset: 2px; }
+  .back { color: var(--dim); }
+  h1 { margin: 0; font-size: 26px; text-wrap: balance; }
+  header p { margin: 0; color: var(--dim); max-width: 70ch; }
+  .decades { display: flex; flex-wrap: wrap; gap: 6px; padding-block: 12px 4px; }
+  .decades button { font: inherit; color: var(--ink); background: transparent; border: 1px solid var(--line); padding: 4px 12px; cursor: pointer; }
+  .decades button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  main { padding-block: 16px 60px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 18px; }
+  .ad { display: grid; gap: 6px; background: none; border: 0; padding: 0; color: inherit; font: inherit; text-align: left; cursor: zoom-in; min-width: 0; }
+  .ad .pic { aspect-ratio: 3 / 4; background: var(--card); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .ad img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+  .ad span { font-size: 13px; line-height: 1.35; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .ad i { font-style: normal; color: var(--dim); }
+  .count { color: var(--dim); font-size: 13px; }
+  dialog { border: 0; padding: 0; background: transparent; color: var(--ink); max-width: min(92vw, 900px); max-height: 94vh; }
+  dialog::backdrop { background: rgba(10, 8, 6, .88); }
+  .big { display: grid; gap: 10px; justify-items: center; }
+  .big img { max-width: 100%; max-height: 82vh; object-fit: contain; display: block; }
+  .big .row { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; font-size: 14px; }
+  .big button { font: inherit; background: var(--ink); color: var(--bg); border: 0; padding: 5px 12px; cursor: pointer; }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" href="index.html">← Back to the radio</a>
+  <h1>A word from our sponsors</h1>
+  <p>Print ads from the 1920s to the 1950s, from the Internet Archive's Magazine Rack and its collections of vintage Australian and British print ads. Each one links to its page at the Archive.</p>
+  <div class="decades" role="group" aria-label="Show decade" id="decades"></div>
+  <span class="count" id="count" aria-live="polite"></span>
+</header>
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+<dialog id="viewer" aria-label="Ad">
+  <div class="big">
+    <img id="v-img" alt="">
+    <div class="row"><span id="v-title"></span><a id="v-via" target="_blank" rel="noopener">via archive.org</a><button id="v-close" type="button">Close</button></div>
+  </div>
+</dialog>
+<script src="ads.js"></script>
+<script>
+  (function () {
+    var ADS = (window.ADS || []).slice().sort(function (a, b) { return (a.date || "").localeCompare(b.date || "") || a.title.localeCompare(b.title); });
+    var grid = document.getElementById("grid"), count = document.getElementById("count");
+    var decades = ["All"].concat(Array.from(new Set(ADS.map(function (a) { return a.date.slice(0, 3) + "0s"; }))).sort());
+    var current = "All";
+    var bar = document.getElementById("decades");
+    decades.forEach(function (d) {
+      var b = document.createElement("button"); b.type = "button"; b.textContent = d;
+      b.setAttribute("aria-pressed", d === current ? "true" : "false");
+      b.addEventListener("click", function () { current = d; bar.querySelectorAll("button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); draw(); });
+      bar.appendChild(b);
+    });
+    function thumb(a) { var id = (a.item || "").split("/").pop(); return id ? "https://archive.org/services/img/" + encodeURIComponent(id) : a.src; }
+    function draw() {
+      grid.innerHTML = "";
+      var list = ADS.filter(function (a) { return current === "All" || a.date.slice(0, 3) + "0s" === current; });
+      count.textContent = list.length + " ads";
+      list.forEach(function (a) {
+        var btn = document.createElement("button"); btn.type = "button"; btn.className = "ad";
+        var pic = document.createElement("div"); pic.className = "pic";
+        var img = document.createElement("img"); img.loading = "lazy"; img.alt = a.title; img.src = thumb(a);
+        pic.appendChild(img);
+        var cap = document.createElement("span"); cap.textContent = a.title + " ";
+        var yr = document.createElement("i"); yr.textContent = a.date; cap.appendChild(yr);
+        btn.appendChild(pic); btn.appendChild(cap);
+        btn.addEventListener("click", function () { open(a); });
+        grid.appendChild(btn);
+      });
+    }
+    var dlg = document.getElementById("viewer");
+    function open(a) {
+      document.getElementById("v-img").src = a.src;
+      document.getElementById("v-img").alt = a.title;
+      document.getElementById("v-title").textContent = a.title + ", " + a.date;
+      document.getElementById("v-via").href = a.item;
+      if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+    }
+    document.getElementById("v-close").addEventListener("click", function () { dlg.close(); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+    draw();
+  })();
+</script>
+</body>
+</html>
