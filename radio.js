@@ -882,11 +882,14 @@
   function fit() {
     const vw = window.innerWidth, vh = window.innerHeight;
     const byWidth = SK.stage.fit === "width";
-    const k = byWidth ? vw / W : Math.min(vw / W, vh / H);
-    stage.style.transform = `translate(${byWidth ? 0 : (vw - W * k) / 2}px, ${byWidth ? 0 : Math.max(0, (vh - H * k) / 2)}px) scale(${k})`;
-    document.documentElement.classList.toggle("scrolls", byWidth);
+    // computers: fit the whole radio on screen, but never shrink below the width-fit size (capped at full size),
+    // so text stays readable on short laptop screens; the page scrolls a little instead
+    const k = byWidth ? vw / W : Math.max(Math.min(vw / W, vh / H), Math.min(vw / W, 1));
+    const scrolls = byWidth || H * k > vh + 1;
+    stage.style.transform = `translate(${byWidth ? 0 : Math.max(0, (vw - W * k) / 2)}px, ${scrolls ? 0 : Math.max(0, (vh - H * k) / 2)}px) scale(${k})`;
+    document.documentElement.classList.toggle("scrolls", scrolls);
     const frame = stage.parentElement;
-    frame.style.height = byWidth ? Math.ceil(H * k) + "px" : "";
+    frame.style.height = scrolls ? Math.ceil(H * k) + "px" : "";
     state.scale = k;
   }
   window.addEventListener("resize", () => {
