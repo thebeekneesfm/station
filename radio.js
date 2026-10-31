@@ -32,6 +32,8 @@
     tipMember: "Welcome, {name}, our newest {tier} member",
     tipSaid: ": \u201c{message}\u201d",
     tipSomeone: "a kind listener",
+    guideNow: "Now playing",
+    guideNext: "Up next",
     sponsorLine: "Brought to you by {name}",
     sponsorTicker: "{station} is brought to you by {name}",
     memberRoll: "Thank you to our members: {names}",
@@ -956,6 +958,7 @@
     g.key = key;
     const pct = t => ((t - t0) / span * 100).toFixed(3) + "%";
     let h = "";
+    if (mode === "nownext") h += `<div class="g-head"><span class="g-lab"></span><span class="g-cols"><span>${esc(WORDS.guideNow)}</span><span>${esc(WORDS.guideNext)}</span></span></div>`;
     if (mode === "timeline") {
       h += `<div class="g-head"><span class="g-lab">${esc(L.heading || "")}</span><span class="g-line">`;
       for (let t = t0; t < t1; t += step) h += `<span class="g-tick" style="left:${pct(t)}">${hhmm(t)}</span>`;
@@ -984,6 +987,13 @@
           }
         }
         h += `</span>`;
+      } else if (mode === "nownext") {
+        // up next skips the vintage commercials, so it always names the next show or record
+        let ni = (cur.i + 1) % st.tracks.length, at2 = now + cur.left * 1000, guard = 0;
+        while (st.tracks[ni].ad && guard++ < 5) { at2 += st.tracks[ni].length * 1000; ni = (ni + 1) % st.tracks.length; }
+        const nx = st.tracks[ni];
+        h += `<span class="g-cols"><span class="g-now"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}</span>` +
+             `<span class="g-next"><em>${hhmm(at2)}</em> <b>${esc(nx.series)}</b> ${esc(nx.title)}</span></span>`;
       } else {
         h += `<span class="g-list"><span class="g-now"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}</span>` +
              `<span class="g-next">${st.music ? "then" : hhmm(now + cur.left * 1000)} ${esc(next.series)} — ${esc(next.title)}</span></span>`;

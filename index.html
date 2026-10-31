@@ -405,6 +405,15 @@
   .lc-name { font-size: min(42px, 19cqw); }
   .g-row { line-height: 1.15; }
   .g-group { font-size: 1.3em; padding: .35em .5em .15em; }
+  /* guide: now playing and up next, side by side */
+  .g-cols { flex: 1; min-width: 0; display: grid; grid-template-columns: 1.1fr 1fr; gap: 18px; align-items: center; padding-right: 10px; }
+  .g-cols > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .g-head .g-cols > span { font-weight: 700; color: var(--g-ink); }
+  .g-cols .g-now b { font-weight: 700; }
+  .g-cols .g-next { color: var(--g-dim); }
+  .g-cols .g-next em { font-style: normal; font-weight: 700; color: var(--g-hi); margin-right: 4px; }
+  .g-cols .g-next b { font-weight: 600; color: var(--g-ink); }
+  .g-row.sel .g-cols .g-now { color: var(--g-ink); }
 </style>
 </head>
 <body>
@@ -444,12 +453,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101x"></script>
-<script src="stations.js?v=20261101x"></script>
-<script src="config.js?v=20261101x"></script>
-<script src="ads.js?v=20261101x"></script>
-<script src="tv.js?v=20261101x"></script>
+<script src="skin.js?v=20261101y"></script>
+<script src="stations.js?v=20261101y"></script>
+<script src="config.js?v=20261101y"></script>
+<script src="ads.js?v=20261101y"></script>
+<script src="tv.js?v=20261101y"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101x"></script>
+<script src="radio.js?v=20261101y"></script>
 </body>
 </html>

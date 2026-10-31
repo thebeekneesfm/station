@@ -78,7 +78,7 @@ window.SKIN = {
     {"id": "now-status", "type": "text", "bind": "status", "x": 560, "y": 140, "w": 280, "h": 24, "font": "BK Serif", "size": 18, "color": "#c8321f", "align": "right", "italic": true},
     {"id": "reaction-air", "type": "reactfloat", "x": 300, "y": 116, "w": 560, "h": 236},
     {"id": "guide-frame", "src": "art/guide-frame.png", "x": 40, "y": 372, "w": 1120, "h": 576, "look": "listings"},
-    {"id": "guide", "type": "guide", "mode": "timeline", "hours": 2, "x": 48, "y": 386, "w": 1104, "h": 560, "rowHeight": 23, "labelWidth": 280, "font": "BK Serif", "size": 16, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "BK Serif", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
+    {"id": "guide", "type": "guide", "mode": "nownext", "x": 48, "y": 386, "w": 1104, "h": 560, "rowHeight": 23, "labelWidth": 280, "font": "BK Serif", "size": 16, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "BK Serif", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
     {"id": "tv", "type": "tv", "x": 880, "y": 124, "w": 280, "h": 210, "font": "BK Serif", "size": 18, "color": "#efe5cc"},
     {"id": "tv-set", "src": "art/tv-set.png", "x": 868, "y": 118, "w": 304, "h": 222, "look": "tvset"},
     {"id": "tv-title", "type": "text", "bind": "tv.title", "href": "tv.item", "x": 860, "y": 336, "w": 320, "h": 22, "font": "BK Serif", "size": 17, "color": "#f6eed8", "align": "center", "italic": true},
