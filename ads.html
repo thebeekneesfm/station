@@ -6,57 +6,72 @@
 <title>Vintage Gallery · The Bee's Knees.fm</title>
 <link rel="icon" href="art/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png">
-<link rel="stylesheet" href="art/fonts/fonts.css">
+<link rel="stylesheet" href="art/fonts/fonts.css?v=20261101o">
 <style>
-  :root { color-scheme: dark; --bg: #241710; --ink: #eadfca; --dim: #a99a83; --line: #3e342b; --hi: #e3a92f; --card: #211c18; }
-  html { background: var(--bg); }
-  body { margin: 0; background: var(--bg); color: var(--ink);
-         font: 15px/1.5 "BK Serif", "Arial Narrow", Arial, sans-serif; }
-  header, main { max-width: 1200px; margin: 0 auto;
-         padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-  header { padding-block: 32px 8px; display: grid; gap: 10px; }
-  a { color: var(--ink); text-underline-offset: 3px; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--hi); outline-offset: 2px; }
-  .back { color: var(--dim); }
-  h1 { margin: 0; font-size: 26px; text-wrap: balance; }
-  header p { margin: 0; color: var(--dim); max-width: 70ch; }
-  .decades { display: flex; flex-wrap: wrap; gap: 6px; padding-block: 12px 4px; }
-  .decades button { font: inherit; color: var(--ink); background: transparent; border: 1px solid var(--line); padding: 4px 12px; cursor: pointer; }
-  .decades button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-  main { padding-block: 16px 60px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 18px; }
-  .ad { display: grid; gap: 6px; background: none; border: 0; padding: 0; color: inherit; font: inherit; text-align: left; cursor: zoom-in; min-width: 0; }
-  .ad .pic { aspect-ratio: 3 / 4; background: var(--card); display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .ad img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
-  .ad span { font-size: 13px; line-height: 1.35; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
-  .ad i { font-style: normal; color: var(--dim); }
-  .count { color: var(--dim); font-size: 13px; }
-  dialog { border: 0; padding: 0; background: transparent; color: var(--ink); max-width: min(92vw, 900px); max-height: 94vh; }
-  dialog::backdrop { background: rgba(10, 8, 6, .88); }
-  .big { display: grid; gap: 10px; justify-items: center; }
-  .big img { max-width: 100%; max-height: 82vh; object-fit: contain; display: block; }
-  .big .row { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; font-size: 14px; }
-  .big button { font: inherit; background: var(--ink); color: var(--bg); border: 0; padding: 5px 12px; cursor: pointer; }
-
-  h1 { font-family: "BK Script", Georgia, serif; font-style: italic; font-weight: 900; font-size: 40px; line-height: 1.05; }
-  h2 { font-family: "BK Script", Georgia, serif; font-style: italic; font-weight: 800; font-size: 22px; letter-spacing: 0; text-transform: none; color: var(--hi); }
-  body { font-size: 17px; line-height: 1.6; }
-  h1, h2 { word-spacing: 0.18em; letter-spacing: 0.01em; font-weight: 400; font-style: normal; }
-  h1 { font-size: 46px; }
-  h2 { font-size: 28px; }
+  /* same room as the radio: 1953 wallpaper, paper cards, ink and station red */
+  :root { --paper: #e9e1c9; --ink: #1f1b17; --ink-2: #4a4036; --dim: #6b5f50; --red: #c8321f; --honey: #e3a92f; --cream: #f6eed8; }
+  html { background: #3f5a46; }
+  body { margin: 0; color: var(--ink); background: transparent; font: 17px/1.55 "BK Serif", Georgia, serif; }
+  body::before { content: ""; position: fixed; inset: 0; z-index: -1;
+    background: linear-gradient(rgba(20,15,10,.22), rgba(20,15,10,.22)), url("art/wallpaper.jpg") center / 700px repeat; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding-block: 18px 60px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 18px; }
+  .paper { background: var(--paper); box-shadow: 0 3px 0 rgba(0,0,0,.28), 0 12px 28px rgba(0,0,0,.25); }
+  .mast { padding: 16px 26px 14px; transform: rotate(-.2deg); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px; }
+  .logo { font: 400 clamp(30px, 6.5vw, 48px)/1 "BK Deco", Georgia, serif; color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .logo span { color: var(--red); font-size: .55em; }
+  .tag { margin: 4px 0 0; font-style: italic; color: var(--ink-2); font-size: 16px; }
+  .links { display: flex; gap: 20px; flex-wrap: wrap; }
+  .links a { color: var(--ink); font-size: 17px; text-underline-offset: 4px; text-decoration-thickness: 1px; white-space: nowrap; }
+  .intro { padding: 22px clamp(18px, 4vw, 36px) 20px; }
+  h1 { margin: 0; font: 400 clamp(40px, 7vw, 54px)/1.1 "BK Script", Georgia, serif; word-spacing: .18em; text-wrap: balance; }
+  .intro p { margin: 10px 0 0; max-width: 70ch; color: var(--ink-2); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--honey); outline-offset: 3px; }
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 16px; }
+  .decades { display: flex; flex-wrap: wrap; gap: 8px; }
+  .decades button { font: 600 16px "BK Serif", Georgia, serif; color: var(--ink); background: transparent; border: 1.5px solid var(--ink); padding: 4px 14px; cursor: pointer; }
+  .decades button:hover { background: rgba(31,27,23,.06); }
+  .decades button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+  .count { color: var(--dim); font-style: italic; font-size: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 26px 22px; padding: 6px 2px; }
+  @media (max-width: 560px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 14px; } .ad span { font-size: 14px; } .ad img { border-width: 4px; } }
+  .ad { display: grid; gap: 8px; background: none; border: 0; padding: 0; color: inherit; font: inherit; text-align: left; cursor: zoom-in; min-width: 0; }
+  .ad .pic { aspect-ratio: 3 / 4; display: flex; align-items: center; justify-content: center; }
+  /* each ad is a clipping: cream border, a little shadow, a slight tilt that straightens on hover */
+  .ad img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; border: 5px solid var(--cream); box-shadow: 2px 4px 0 rgba(0,0,0,.35), 0 8px 18px rgba(0,0,0,.3); transform: rotate(-1deg); transition: transform .15s ease; }
+  .ad:nth-child(3n+2) img { transform: rotate(.8deg); }
+  .ad:nth-child(3n) img { transform: rotate(-.4deg); }
+  .ad:hover img, .ad:focus-visible img { transform: rotate(0) scale(1.02); }
+  .ad span { font-size: 15px; line-height: 1.35; color: var(--cream); text-shadow: 0 1px 2px rgba(0,0,0,.9); overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .ad i { font-style: italic; color: #e8dcc0; }
+  @media (prefers-reduced-motion: reduce) { .ad img { transition: none; } }
+  dialog { border: 0; padding: 0; background: transparent; color: var(--cream); max-width: min(92vw, 900px); max-height: 94vh; }
+  dialog::backdrop { background: rgba(12, 9, 7, .9); }
+  .big { display: grid; gap: 12px; justify-items: center; }
+  .big img { max-width: 100%; max-height: 80vh; object-fit: contain; display: block; border: 6px solid var(--cream); }
+  .big .row { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; justify-content: center; font: italic 16px "BK Serif", Georgia, serif; }
+  .big a { color: var(--cream); text-underline-offset: 3px; }
+  .big button { font: 600 16px "BK Serif", Georgia, serif; background: var(--paper); color: var(--ink); border: 0; padding: 6px 16px; cursor: pointer; }
 </style>
 </head>
 <body>
-<header>
-  <a class="back" href="index.html">← Back to the radio</a>
-  <h1>The vintage gallery</h1>
-  <p>Print ads from the 1920s to the 1950s, from the Internet Archive's Magazine Rack and its collections of vintage Australian and British print ads. Each one links to its page at the Archive.</p>
-  <div class="decades" role="group" aria-label="Show decade" id="decades"></div>
-  <span class="count" id="count" aria-live="polite"></span>
-</header>
-<main>
-  <div class="grid" id="grid"></div>
-</main>
+<div class="wrap">
+  <header class="paper mast">
+    <div>
+      <a class="logo" href="index.html">The Bee's Knees<span>.fm</span></a>
+      <p class="tag">An online radio station of 1920s–1960s music and radio theatre</p>
+    </div>
+    <nav class="links" aria-label="Pages"><a href="index.html">Back to the radio</a><a href="about.html">About</a></nav>
+  </header>
+  <section class="paper intro">
+    <h1>The vintage gallery</h1>
+    <p>Print ads from the 1920s to the 1950s, from the Internet Archive's Magazine Rack and its collections of old Australian and British print ads. Click one to see it big; each links to its page at the Archive.</p>
+    <div class="bar"><div class="decades" role="group" aria-label="Show decade" id="decades"></div><span class="count" id="count" aria-live="polite"></span></div>
+  </section>
+  <main>
+    <div class="grid" id="grid"></div>
+  </main>
+</div>
 <dialog id="viewer" aria-label="Ad">
   <div class="big">
     <img id="v-img" alt="">
