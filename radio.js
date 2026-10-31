@@ -9,7 +9,7 @@
   let W = SK.stage.width, H = SK.stage.height;
   const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const WORDS = Object.assign({
-    off: "",
+    off: "Click a station to start listening",
     powerOn: "Start listening",
     powerOff: "Turn the radio off",
     warming: "Warming up…",
@@ -381,7 +381,7 @@
     store.set("fireVol", state.fireVol);
     if (state.fireVol > 0 && !state.on) power(true);
     setAmbience();
-    els.forEach(r => { if (r.fire && +r.fire.value !== Math.round(state.fireVol * 100)) r.fire.value = Math.round(state.fireVol * 100); });
+    els.forEach(r => { if (r.fire && +r.fire.value !== Math.round(state.fireVol * 100)) { r.fire.value = Math.round(state.fireVol * 100); r.fire.style.setProperty("--v", r.fire.value + "%"); } });
   }
   // songs fade out over their last few seconds and fade in when they start
   const FADE_OUT = 3, FADE_IN = 1.5;
@@ -747,12 +747,13 @@
       } else if (type === "slider") {
         // the fire's volume, next to the fireplace
         el.classList.add("hot");
-        el.innerHTML = '<label class="fire-vol"><span class="fv-label"></span><input type="range" min="0" max="100" step="1"></label>';
-        el.querySelector(".fv-label").textContent = L.label || "Fire";
+        el.innerHTML = '<label class="fire-vol"><span class="fv-label"></span><svg class="fv-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/></svg><input type="range" min="0" max="100" step="1"><svg class="fv-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></label>';
+        el.querySelector(".fv-label").textContent = L.label || "Fire volume";
         const r = el.querySelector("input");
-        r.value = Math.round(state.fireVol * 100);
+        const paint = () => r.style.setProperty("--v", r.value + "%");
+        r.value = Math.round(state.fireVol * 100); paint();
         r.setAttribute("aria-label", L.aria || "Fire sound volume");
-        r.addEventListener("input", () => { if (!state.editing) setFire(r.value / 100); });
+        r.addEventListener("input", () => { paint(); if (!state.editing) setFire(r.value / 100); });
         r.addEventListener("pointerdown", e => { if (!state.editing) e.stopPropagation(); });
         rec.fire = r;
       } else if (type === "reactbar") {

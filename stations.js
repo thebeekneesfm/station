@@ -2379,6 +2379,717 @@ window.STATIONS = [
   ]
  },
  {
+  "id": "variety",
+  "name": "Variety",
+  "group": "Radio shows",
+  "blurb": "Bing Crosby, Bob Hope, Jimmy Durante and the big Saturday-night variety hours: bands, singers, comedy and guest stars.",
+  "card": "art/cards/variety.png",
+  "epoch": "2026-11-01T00:00:00-07:00",
+  "sound": {
+   "level": true,
+   "declick": 0.7,
+   "decrackle": 0.7,
+   "tone": 7500
+  },
+  "tracks": [
+   {
+    "src": "https://archive.org/download/otr_crosby/1947-06-06-BingCrosbyShow-FredAllenConnieBoswelll.mp3",
+    "length": 1804.28,
+    "series": "The Bing Crosby Show",
+    "title": "Fred Allen, Connie Boswell",
+    "date": "June 6, 1947",
+    "item": "https://archive.org/details/otr_crosby"
+   },
+   {
+    "src": "https://archive.org/download/The_Bob_Hope_Program/380927_-_001_-_Constance_Bennett_1st_Pepsodent_Show.mp3",
+    "length": 1790.29,
+    "series": "The Bob Hope Show",
+    "title": "Constance Bennett (1st Pepsodent Show)",
+    "date": "September 27, 1938",
+    "item": "https://archive.org/details/The_Bob_Hope_Program"
+   },
+   {
+    "src": "https://archive.org/download/ChaseAndSanbornHour_201606/1931-12-13%20-%2014%29%20First%20Song%20-%20It%27s%20Wonderful%20Weather%20For%20Love.mp3",
+    "length": 3313.69,
+    "series": "The Chase and Sanborn Hour",
+    "title": "Its Wonderful Weather For Love",
+    "date": "December 13, 1931",
+    "item": "https://archive.org/details/ChaseAndSanbornHour_201606"
+   },
+   {
+    "src": "https://archive.org/download/CommandPerformance/CP_42-03-01_ep001-Eddie_Cantor.mp3",
+    "length": 1813.58,
+    "series": "Command Performance",
+    "title": "Eddie Cantor",
+    "date": "March 1, 1942",
+    "item": "https://archive.org/details/CommandPerformance"
+   },
+   {
+    "src": "https://archive.org/download/FredAllen--theFredAllenShow1945-1949/Fredallen-451021TheFredAllenShow-hillbillyMusicguestFrankSinatra.mp3",
+    "length": 1704.04,
+    "series": "The Fred Allen Show",
+    "title": "Hillbilly Music (Guest Frank Sinatra)",
+    "date": "October 21, 1945",
+    "item": "https://archive.org/details/FredAllen--theFredAllenShow1945-1949"
+   },
+   {
+    "src": "https://archive.org/download/TheJimmyDuranteShow/Jimmy_Durante_Show_-_441222_Christmas_Show.mp3",
+    "length": 1718.51,
+    "series": "The Jimmy Durante Show",
+    "title": "Christmas Show",
+    "date": "December 22, 1944",
+    "item": "https://archive.org/details/TheJimmyDuranteShow"
+   },
+   {
+    "src": "https://archive.org/download/SpikeJones/SJ_45-06-03_ep01-Guest_-_Charlie_Ruggles.mp3",
+    "length": 1684.94,
+    "series": "Spike Jones",
+    "title": "Guest: Charlie Ruggles",
+    "date": "June 3, 1945",
+    "item": "https://archive.org/details/SpikeJones"
+   },
+   {
+    "src": "https://archive.org/download/MartinAndLewis_OldTimeRadio/MartinLewisShow490403_001_LucilleBall.mp3",
+    "length": 1785.47,
+    "series": "The Martin and Lewis Show",
+    "title": "Lucille Ball",
+    "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-421009_001DukeEllington_EthelWaters.mp3",
+    "length": 1784.32,
+    "series": "Jubilee",
+    "title": "Duke Ellington, Ethel Waters",
+    "date": "October 9, 1942",
+    "item": "https://archive.org/details/JubileeOldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/The_Dinah_Shore_Show/DinahShoreShow-.1945.05.03_With_Jim_and_Marian_Jordan.mp3",
+    "length": 1804.86,
+    "series": "The Dinah Shore Show",
+    "title": "With Jim and Marian Jordan",
+    "date": "May 3, 1945",
+    "item": "https://archive.org/details/The_Dinah_Shore_Show"
+   },
+   {
+    "src": "https://archive.org/download/TheRailroadHour/RH_48-10-04_ep001-Good_News.mp3",
+    "length": 2643.95,
+    "series": "The Railroad Hour",
+    "title": "Good News",
+    "date": "October 4, 1948",
+    "item": "https://archive.org/details/TheRailroadHour"
+   },
+   {
+    "src": "https://archive.org/download/otr_crosby/1954-01-28-BingCrosbyShow-EstherWilliams.mp3",
+    "length": 1868.45,
+    "series": "The Bing Crosby Show",
+    "title": "Esther Williams",
+    "date": "January 28, 1954",
+    "item": "https://archive.org/details/otr_crosby"
+   },
+   {
+    "src": "https://archive.org/download/The_Bob_Hope_Program/430525_-_nnn_-_From_Stockton_Air_Field.mp3",
+    "length": 1812.93,
+    "series": "The Bob Hope Show",
+    "title": "From Stockton Air Field",
+    "date": "May 25, 1943",
+    "item": "https://archive.org/details/The_Bob_Hope_Program"
+   },
+   {
+    "src": "https://archive.org/download/ChaseAndSanbornHour_201606/1937-12-19%20-%20033%29%20Guest%20Jack%20Benny%20-%201st%20Half.mp3",
+    "length": 1228.61,
+    "series": "The Chase and Sanborn Hour",
+    "title": "Broadcast of December 19, 1937",
+    "date": "December 19, 1937",
+    "item": "https://archive.org/details/ChaseAndSanbornHour_201606"
+   },
+   {
+    "src": "https://archive.org/download/CommandPerformance/CP_42-09-22_ep032-Don_Ameche.mp3",
+    "length": 1780.75,
+    "series": "Command Performance",
+    "title": "Don Ameche",
+    "date": "September 22, 1942",
+    "item": "https://archive.org/details/CommandPerformance"
+   },
+   {
+    "src": "https://archive.org/download/FredAllen--theFredAllenShow1945-1949/Fredallen-451230TheFredAllenShow-radioShowsInRussia.mp3",
+    "length": 1726.45,
+    "series": "The Fred Allen Show",
+    "title": "Radio Shows in Russia",
+    "date": "December 30, 1945",
+    "item": "https://archive.org/details/FredAllen--theFredAllenShow1945-1949"
+   },
+   {
+    "src": "https://archive.org/download/TheJimmyDuranteShow/Jimmy_Durante_Show_-_471008_Jimmy_And_Eddie_Cantor_Remember_Their_Early_Years.mp3",
+    "length": 1746.25,
+    "series": "The Jimmy Durante Show",
+    "title": "Jimmy And Eddie Cantor Remember Their Early Years",
+    "date": "October 8, 1947",
+    "item": "https://archive.org/details/TheJimmyDuranteShow"
+   },
+   {
+    "src": "https://archive.org/download/SpikeJones/SJ_45-07-15_ep07-Guest_-_William_Frawley.mp3",
+    "length": 1722.66,
+    "series": "Spike Jones",
+    "title": "Guest: William Frawley",
+    "date": "July 15, 1945",
+    "item": "https://archive.org/details/SpikeJones"
+   },
+   {
+    "src": "https://archive.org/download/MartinAndLewis_OldTimeRadio/MartinLewisShow490621_012_TonyMartin.mp3",
+    "length": 1738.02,
+    "series": "The Martin and Lewis Show",
+    "title": "Tony Martin",
+    "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-431102_049DukeEllington-LouisArmstrong.mp3",
+    "length": 1742.32,
+    "series": "Jubilee",
+    "title": "Duke Ellington, Louis Armstrong",
+    "date": "November 2, 1943",
+    "item": "https://archive.org/details/JubileeOldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/The_Dinah_Shore_Show/DinahShoreShow-1944.03.09_They_Ask_About_You.mp3",
+    "length": 1739.65,
+    "series": "The Dinah Shore Show",
+    "title": "They Ask About You",
+    "date": "March 9, 1944",
+    "item": "https://archive.org/details/The_Dinah_Shore_Show"
+   },
+   {
+    "src": "https://archive.org/download/TheRailroadHour/RH_50-04-03_ep079-Song_of_Norway.mp3",
+    "length": 1827.84,
+    "series": "The Railroad Hour",
+    "title": "Song of Norway",
+    "date": "April 3, 1950",
+    "item": "https://archive.org/details/TheRailroadHour"
+   },
+   {
+    "src": "https://archive.org/download/otr_crosby/1954-04-26-0000--BingCrosbyShow-FlorenceAlba.mp3",
+    "length": 1796.77,
+    "series": "The Bing Crosby Show",
+    "title": "Florence Alba",
+    "date": "April 26, 1954",
+    "item": "https://archive.org/details/otr_crosby"
+   },
+   {
+    "src": "https://archive.org/download/The_Bob_Hope_Program/450515_-_265_-_Birmingham_Hospital_San_Fernando.mp3",
+    "length": 1785.02,
+    "series": "The Bob Hope Show",
+    "title": "Birmingham Hospital, San Fernando",
+    "date": "May 15, 1945",
+    "item": "https://archive.org/details/The_Bob_Hope_Program"
+   },
+   {
+    "src": "https://archive.org/download/ChaseAndSanbornHour_201606/1939-10-01%20-%20126%29%20Guest%20Constance%20Bennett.mp3",
+    "length": 3584.44,
+    "series": "The Chase and Sanborn Hour",
+    "title": "Broadcast of October 1, 1939",
+    "date": "October 1, 1939",
+    "item": "https://archive.org/details/ChaseAndSanbornHour_201606"
+   },
+   {
+    "src": "https://archive.org/download/CommandPerformance/CP_43-05-01_ep064-Kate_Smith__John_Charles_Thomas__Cass_Daley.mp3",
+    "length": 1790.29,
+    "series": "Command Performance",
+    "title": "Kate Smith, John Charles Thomas, Cass Daley",
+    "date": "May 1, 1943",
+    "item": "https://archive.org/details/CommandPerformance"
+   },
+   {
+    "src": "https://archive.org/download/FredAllen--theFredAllenShow1945-1949/Fredallen-460303TheFredAllenShow-lesMiserablesRepriseguestOrsonWelles.mp3",
+    "length": 1726.1,
+    "series": "The Fred Allen Show",
+    "title": "Les Miserables Reprise (Guest Orson Welles)",
+    "date": "March 3, 1946",
+    "item": "https://archive.org/details/FredAllen--theFredAllenShow1945-1949"
+   },
+   {
+    "src": "https://archive.org/download/TheJimmyDuranteShow/Jimmy_Durante_Show_-_471126_Preparing_A_Live_Turkey_For_Thanksgiving.mp3",
+    "length": 1796.57,
+    "series": "The Jimmy Durante Show",
+    "title": "Preparing A Live Turkey For Thanksgiving",
+    "date": "November 26, 1947",
+    "item": "https://archive.org/details/TheJimmyDuranteShow"
+   },
+   {
+    "src": "https://archive.org/download/SpikeJones/SJ_45-08-26_ep13-From_Catalina_Island.mp3",
+    "length": 1722.18,
+    "series": "Spike Jones",
+    "title": "From Catalina Island",
+    "date": "August 26, 1945",
+    "item": "https://archive.org/details/SpikeJones"
+   },
+   {
+    "src": "https://archive.org/download/MartinAndLewis_OldTimeRadio/MartinLewisShow491007_021_NewNightclub.MP3",
+    "length": 1800.34,
+    "series": "The Martin and Lewis Show",
+    "title": "New Nightclub",
+    "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-440529_082InternationalSweethearts ofRhythm.mp3",
+    "length": 1862.33,
+    "series": "Jubilee",
+    "title": "International Sweethearts of Rhythm",
+    "date": "May 29, 1944",
+    "item": "https://archive.org/details/JubileeOldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/The_Dinah_Shore_Show/DinahShoreShow-1944.05.25_John_Garfield.mp3",
+    "length": 1795.03,
+    "series": "The Dinah Shore Show",
+    "title": "John Garfield",
+    "date": "May 25, 1944",
+    "item": "https://archive.org/details/The_Dinah_Shore_Show"
+   },
+   {
+    "src": "https://archive.org/download/TheRailroadHour/RH_50-10-16_ep107-Countess_Maritza.mp3",
+    "length": 1799.17,
+    "series": "The Railroad Hour",
+    "title": "Countess Maritza",
+    "date": "October 16, 1950",
+    "item": "https://archive.org/details/TheRailroadHour"
+   },
+   {
+    "src": "https://archive.org/download/otr_crosby/1954-10-27-0000--BingCrosbyShow-PeggyLeeandWilliamPowell.mp3",
+    "length": 1856.85,
+    "series": "The Bing Crosby Show",
+    "title": "Peggy Lee and William Powell",
+    "date": "October 27, 1954",
+    "item": "https://archive.org/details/otr_crosby"
+   },
+   {
+    "src": "https://archive.org/download/The_Bob_Hope_Program/461112_-_Lucille_Ball_Miss_Lou_Ann.mp3",
+    "length": 1766.23,
+    "series": "The Bob Hope Show",
+    "title": "Guest: Lucille Ball, Miss Lou",
+    "date": "November 12, 1946",
+    "item": "https://archive.org/details/The_Bob_Hope_Program"
+   },
+   {
+    "src": "https://archive.org/download/ChaseAndSanbornHour_201606/1943-02-07%20-%20275%29%20Guests%20Bill%20Thompson%2C%20Teresa%20Wright.mp3",
+    "length": 1424.51,
+    "series": "The Chase and Sanborn Hour",
+    "title": "Teresa Wright",
+    "date": "February 7, 1943",
+    "item": "https://archive.org/details/ChaseAndSanbornHour_201606"
+   },
+   {
+    "src": "https://archive.org/download/CommandPerformance/CP_43-11-13_ep092-Bob_Hope__Betty_Hutton__Judy_Garland__Jimmy_Durante__Lana_Turner.mp3",
+    "length": 1805.01,
+    "series": "Command Performance",
+    "title": "Bob Hope, Betty Hutton, Judy Garland, Jimmy Durante, Lana Turner",
+    "date": "November 13, 1943",
+    "item": "https://archive.org/details/CommandPerformance"
+   },
+   {
+    "src": "https://archive.org/download/FredAllen--theFredAllenShow1945-1949/Fredallen-460526TheFredAllenShow-kingForADayguestJackBenny.mp3",
+    "length": 1734.48,
+    "series": "The Fred Allen Show",
+    "title": "King for a Day (Guest Jack Benny)",
+    "date": "May 26, 1946",
+    "item": "https://archive.org/details/FredAllen--theFredAllenShow1945-1949"
+   },
+   {
+    "src": "https://archive.org/download/TheJimmyDuranteShow/Jimmy_Durante_Show_-_471231_New_Years_Eve_With_Red_Skelton.mp3",
+    "length": 1698.45,
+    "series": "The Jimmy Durante Show",
+    "title": "New Years Eve With Red Skelton",
+    "date": "December 31, 1947",
+    "item": "https://archive.org/details/TheJimmyDuranteShow"
+   },
+   {
+    "src": "https://archive.org/download/SpikeJones/SJ_47-11-21_ep08-Guest_-_The_Dinning_Sisters.mp3",
+    "length": 1724.9,
+    "series": "Spike Jones",
+    "title": "Guest: The Dinning Sisters",
+    "date": "November 21, 1947",
+    "item": "https://archive.org/details/SpikeJones"
+   },
+   {
+    "src": "https://archive.org/download/MartinAndLewis_OldTimeRadio/MartinLewisShow511005_038_DinahShore.mp3",
+    "length": 1766.68,
+    "series": "The Martin and Lewis Show",
+    "title": "Dinah Shore",
+    "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-450122_116DukeEllington.mp3",
+    "length": 1772.18,
+    "series": "Jubilee",
+    "title": "Duke Ellington",
+    "date": "January 22, 1945",
+    "item": "https://archive.org/details/JubileeOldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/The_Dinah_Shore_Show/DinahShoreShow-1944.06.29_Charles_Laughton.mp3",
+    "length": 1792.63,
+    "series": "The Dinah Shore Show",
+    "title": "Charles Laughton",
+    "date": "June 29, 1944",
+    "item": "https://archive.org/details/The_Dinah_Shore_Show"
+   },
+   {
+    "src": "https://archive.org/download/TheRailroadHour/RH_51-08-13_ep150-A_Thousand_and_One_Nights.mp3",
+    "length": 1814.01,
+    "series": "The Railroad Hour",
+    "title": "A Thousand and One Nights",
+    "date": "August 13, 1951",
+    "item": "https://archive.org/details/TheRailroadHour"
+   },
+   {
+    "src": "https://archive.org/download/otr_crosby/44-02-17CassDaley.mp3",
+    "length": 1782.07,
+    "series": "The Bing Crosby Show",
+    "title": "Cass Daley",
+    "date": "February 17, 1944",
+    "item": "https://archive.org/details/otr_crosby"
+   },
+   {
+    "src": "https://archive.org/download/The_Bob_Hope_Program/490412__414__Guests_Dean_Martin_and_Jerry_Lewis.mp3",
+    "length": 1683.29,
+    "series": "The Bob Hope Show",
+    "title": "Dean Martin and Jerry Lewis",
+    "date": "April 12, 1949",
+    "item": "https://archive.org/details/The_Bob_Hope_Program"
+   },
+   {
+    "src": "https://archive.org/download/ChaseAndSanbornHour_201606/1944-03-05%20-%20318%29%20Guest%20Cecil%20B.%20Demille.mp3",
+    "length": 1307.56,
+    "series": "The Chase and Sanborn Hour",
+    "title": "Cecil B. DeMille",
+    "date": "March 5, 1944",
+    "item": "https://archive.org/details/ChaseAndSanbornHour_201606"
+   },
+   {
+    "src": "https://archive.org/download/CommandPerformance/CP_44-08-05_ep132-Ginger_Rogers__Virginia_OBrien__Jimmy_Durante.mp3",
+    "length": 1856.79,
+    "series": "Command Performance",
+    "title": "Ginger Rogers, Virginia O'Brien, Jimmy Durante",
+    "date": "August 5, 1944",
+    "item": "https://archive.org/details/CommandPerformance"
+   },
+   {
+    "src": "https://archive.org/download/FredAllen--theFredAllenShow1945-1949/Fredallen-470406TheFredAllenShow-theShoshlikShantyguestGregoryRatoff.mp3",
+    "length": 2764.04,
+    "series": "The Fred Allen Show",
+    "title": "The Shoshlik Shanty (Guest Gregory Ratoff)",
+    "date": "April 6, 1947",
+    "item": "https://archive.org/details/FredAllen--theFredAllenShow1945-1949"
+   },
+   {
+    "src": "https://archive.org/download/TheJimmyDuranteShow/Jimmy_Durante_Show_-_480204_Bear_Wrestling_At_The_County_Fair.mp3",
+    "length": 1765.32,
+    "series": "The Jimmy Durante Show",
+    "title": "Bear Wrestling At The County Fair",
+    "date": "February 4, 1948",
+    "item": "https://archive.org/details/TheJimmyDuranteShow"
+   },
+   {
+    "src": "https://archive.org/download/SpikeJones/SJ_48-01-23_ep17-Guest_-_Jack_Owens.mp3",
+    "length": 1738.54,
+    "series": "Spike Jones",
+    "title": "Guest: Jack Owens",
+    "date": "January 23, 1948",
+    "item": "https://archive.org/details/SpikeJones"
+   },
+   {
+    "src": "https://archive.org/download/MartinAndLewis_OldTimeRadio/MartinLewisShow511207_047_JoanDavis.MP3",
+    "length": 1789.2,
+    "series": "The Martin and Lewis Show",
+    "title": "Joan Davis",
+    "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-460624_189BoydRaeburn_GinnyPowell.mp3",
+    "length": 1945.11,
+    "series": "Jubilee",
+    "title": "Boyd Raeburn, Ginny Powell",
+    "date": "June 24, 1946",
+    "item": "https://archive.org/details/JubileeOldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/The_Dinah_Shore_Show/DinahShoreShow-1945.04.19_Ginny_Simms_Subs_for_Dinah_Shore.mp3",
+    "length": 1791.43,
+    "series": "The Dinah Shore Show",
+    "title": "Ginny Simms Subs for Dinah Shore",
+    "date": "April 19, 1945",
+    "item": "https://archive.org/details/The_Dinah_Shore_Show"
+   },
+   {
+    "src": "https://archive.org/download/TheRailroadHour/RH_52-02-11_ep176-Orange_Blossoms.mp3",
+    "length": 1770.74,
+    "series": "The Railroad Hour",
+    "title": "Orange Blossoms",
+    "date": "February 11, 1952",
+    "item": "https://archive.org/details/TheRailroadHour"
+   },
+   {
+    "src": "https://archive.org/download/otr_crosby/44-12-14HolidayInnChristmasProgram.mp3",
+    "length": 1779.2,
+    "series": "The Bing Crosby Show",
+    "title": "Holiday Inn Christmas Program",
+    "item": "https://archive.org/details/otr_crosby"
+   },
+   {
+    "src": "https://archive.org/download/The_Bob_Hope_Program/510306_-_Edwards_Air_Force_Base.mp3",
+    "length": 1770.56,
+    "series": "The Bob Hope Show",
+    "title": "Edwards Air Force Base",
+    "date": "March 6, 1951",
+    "item": "https://archive.org/details/The_Bob_Hope_Program"
+   },
+   {
+    "src": "https://archive.org/download/ChaseAndSanbornHour_201606/1945-03-18%20-%20359%29%20Guest%20Maria%20Montez.mp3",
+    "length": 1772.44,
+    "series": "The Chase and Sanborn Hour",
+    "title": "Guest: Maria Montez",
+    "date": "March 18, 1945",
+    "item": "https://archive.org/details/ChaseAndSanbornHour_201606"
+   },
+   {
+    "src": "https://archive.org/download/CommandPerformance/CP_45-02-15_ep162-Dick_Tracy_in_B_Flat.mp3",
+    "length": 3427.31,
+    "series": "Command Performance",
+    "title": "Dick Tracy in B Flat",
+    "date": "February 15, 1945",
+    "item": "https://archive.org/details/CommandPerformance"
+   },
+   {
+    "src": "https://archive.org/download/FredAllen--theFredAllenShow1945-1949/Fredallen-471026TheFredAllenShow-theHaleyAndAllenShowguestJackHaley.mp3",
+    "length": 1820.7,
+    "series": "The Fred Allen Show",
+    "title": "The Haley and Allen Show (Guest Jack Haley)",
+    "date": "October 26, 1947",
+    "item": "https://archive.org/details/FredAllen--theFredAllenShow1945-1949"
+   },
+   {
+    "src": "https://archive.org/download/TheJimmyDuranteShow/Jimmy_Durante_Show_-_480310_Jimmy_Runs_For_Vice_President_With_Van_Johnson.mp3",
+    "length": 1787.16,
+    "series": "The Jimmy Durante Show",
+    "title": "Jimmy Runs For Vice President With Van Johnson",
+    "date": "March 10, 1948",
+    "item": "https://archive.org/details/TheJimmyDuranteShow"
+   },
+   {
+    "src": "https://archive.org/download/SpikeJones/SJ_48-03-05_ep23-Guest_-_Francis_Craig.mp3",
+    "length": 1717.22,
+    "series": "Spike Jones",
+    "title": "Guest: Francis Craig",
+    "date": "March 5, 1948",
+    "item": "https://archive.org/details/SpikeJones"
+   },
+   {
+    "src": "https://archive.org/download/MartinAndLewis_OldTimeRadio/MartinLewisShow520208_056_RhondaFleming.mp3",
+    "length": 1791.89,
+    "series": "The Martin and Lewis Show",
+    "title": "Rhonda Fleming",
+    "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-470425_219BennyCarter_JoshWhite.mp3",
+    "length": 1776.13,
+    "series": "Jubilee",
+    "title": "Benny Carter, Josh White",
+    "date": "April 25, 1947",
+    "item": "https://archive.org/details/JubileeOldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/The_Dinah_Shore_Show/DinahShoreShow-1945.09.20_With_Joseph_Cotten.mp3",
+    "length": 1571.53,
+    "series": "The Dinah Shore Show",
+    "title": "With Joseph Cotten",
+    "date": "September 20, 1945",
+    "item": "https://archive.org/details/The_Dinah_Shore_Show"
+   },
+   {
+    "src": "https://archive.org/download/TheRailroadHour/RH_52-08-18_ep203-Miss_Cinderella.mp3",
+    "length": 1838.84,
+    "series": "The Railroad Hour",
+    "title": "Miss Cinderella",
+    "date": "August 18, 1952",
+    "item": "https://archive.org/details/TheRailroadHour"
+   },
+   {
+    "src": "https://archive.org/download/otr_crosby/47-10-29BorisKarloff.mp3",
+    "length": 1772.41,
+    "series": "The Bing Crosby Show",
+    "title": "Boris Karloff",
+    "date": "October 29, 1947",
+    "item": "https://archive.org/details/otr_crosby"
+   },
+   {
+    "src": "https://archive.org/download/The_Bob_Hope_Program/530114_-_Fort_Ord_Terry_Moore__Bing_Crosby.mp3",
+    "length": 1404.9,
+    "series": "The Bob Hope Show",
+    "title": "Fort Ord, with Terry Moore and Bing Crosby",
+    "date": "January 14, 1953",
+    "item": "https://archive.org/details/The_Bob_Hope_Program"
+   },
+   {
+    "src": "https://archive.org/download/ChaseAndSanbornHour_201606/1946-01-20%20%E2%80%93%20389%29%20Guest%20Rita%20Hayworth.mp3",
+    "length": 1818.31,
+    "series": "The Chase and Sanborn Hour",
+    "title": "Guest: Rita Hayworth",
+    "date": "January 20, 1946",
+    "item": "https://archive.org/details/ChaseAndSanbornHour_201606"
+   },
+   {
+    "src": "https://archive.org/download/CommandPerformance/CP_45-10-11_ep195-Ralph_Edwards__Connie_Haines__Bob_Hope.mp3",
+    "length": 1769.42,
+    "series": "Command Performance",
+    "title": "Ralph Edwards, Connie Haines, Bob Hope",
+    "date": "October 11, 1945",
+    "item": "https://archive.org/details/CommandPerformance"
+   },
+   {
+    "src": "https://archive.org/download/FredAllen--theFredAllenShow1945-1949/Fredallen-480425TheFredAllenShow-scalpingBaseballTicketsguestLeoDurocher.mp3",
+    "length": 1768.25,
+    "series": "The Fred Allen Show",
+    "title": "Scalping Baseball Tickets (Guest Leo Durocher)",
+    "date": "April 25, 1948",
+    "item": "https://archive.org/details/FredAllen--theFredAllenShow1945-1949"
+   },
+   {
+    "src": "https://archive.org/download/TheJimmyDuranteShow/Jimmy_Durante_Show_-_480421_Jimmy_Solicits_The_Show_Biz_Vote.mp3",
+    "length": 1729.12,
+    "series": "The Jimmy Durante Show",
+    "title": "Jimmy Solicits The Show Biz Vote",
+    "date": "April 21, 1948",
+    "item": "https://archive.org/details/TheJimmyDuranteShow"
+   },
+   {
+    "src": "https://archive.org/download/SpikeJones/SJ_48-04-30_ep31-Guest-_Page_Cavanaugh_Trio.mp3",
+    "length": 1711.95,
+    "series": "Spike Jones",
+    "title": "Guest: Page Cavanaugh Trio",
+    "date": "April 30, 1948",
+    "item": "https://archive.org/details/SpikeJones"
+   },
+   {
+    "src": "https://archive.org/download/MartinAndLewis_OldTimeRadio/MartinLewisShow520411_065_VirginiaMayo.mp3",
+    "length": 1784.94,
+    "series": "The Martin and Lewis Show",
+    "title": "Virginia Mayo",
+    "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-471024_245CountBasie_EllaMaeMorse.mp3",
+    "length": 1884.67,
+    "series": "Jubilee",
+    "title": "Count Basie, Ella Mae Morse",
+    "date": "October 24, 1947",
+    "item": "https://archive.org/details/JubileeOldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/The_Dinah_Shore_Show/DinahShoreShow-1945.10.18_With_Jack_Carson.mp3",
+    "length": 1794.56,
+    "series": "The Dinah Shore Show",
+    "title": "With Jack Carson",
+    "date": "October 18, 1945",
+    "item": "https://archive.org/details/The_Dinah_Shore_Show"
+   },
+   {
+    "src": "https://archive.org/download/TheRailroadHour/RH_53-01-19_ep225-Showboat.mp3",
+    "length": 1795.84,
+    "series": "The Railroad Hour",
+    "title": "Showboat",
+    "date": "January 19, 1953",
+    "item": "https://archive.org/details/TheRailroadHour"
+   },
+   {
+    "src": "https://archive.org/download/otr_crosby/BingCrosby-51-12-26RoadToLasVegas.mp3",
+    "length": 1774.73,
+    "series": "The Bing Crosby Show",
+    "title": "Road To Las Vegas",
+    "date": "December 26, 1951",
+    "item": "https://archive.org/details/otr_crosby"
+   },
+   {
+    "src": "https://archive.org/download/The_Bob_Hope_Program/531113_-_Burt_Lancaster_Gives_Bob_A_Job_At_The_Circus.mp3",
+    "length": 1777.32,
+    "series": "The Bob Hope Show",
+    "title": "Burt Lancaster Gives Bob A Job",
+    "date": "November 13, 1953",
+    "item": "https://archive.org/details/The_Bob_Hope_Program"
+   },
+   {
+    "src": "https://archive.org/download/ChaseAndSanbornHour_201606/1947-11-02%20-%20455%29%20Guest%20Fred%20Allen.mp3",
+    "length": 1798.03,
+    "series": "The Chase and Sanborn Hour",
+    "title": "Fred Allen",
+    "date": "November 2, 1947",
+    "item": "https://archive.org/details/ChaseAndSanbornHour_201606"
+   },
+   {
+    "src": "https://archive.org/download/CommandPerformance/CP_47-03-09_ep255-Dick_Haymes__Helen_Forrest.mp3",
+    "length": 1791.55,
+    "series": "Command Performance",
+    "title": "Dick Haymes, Helen Forrest",
+    "date": "March 9, 1947",
+    "item": "https://archive.org/details/CommandPerformance"
+   },
+   {
+    "src": "https://archive.org/download/FredAllen--theFredAllenShow1945-1949/Fredallen-481107TheFredAllenShow-samShovelPrivateEyeguestArthurTreacher.mp3",
+    "length": 1759.42,
+    "series": "The Fred Allen Show",
+    "title": "Sam Shovel, Private Eye (Guest Arthur Treacher)",
+    "date": "November 7, 1948",
+    "item": "https://archive.org/details/FredAllen--theFredAllenShow1945-1949"
+   },
+   {
+    "src": "https://archive.org/download/TheJimmyDuranteShow/Jimmy_Durante_Show_-_480526_Jimmy_Seeks_Endorsements_From_Sports_Heroes.mp3",
+    "length": 1749.96,
+    "series": "The Jimmy Durante Show",
+    "title": "Jimmy Seeks Endorsements From Sports Heroes",
+    "date": "May 26, 1948",
+    "item": "https://archive.org/details/TheJimmyDuranteShow"
+   },
+   {
+    "src": "https://archive.org/download/SpikeJones/SJ_48-06-11_ep37-Guest_-_Delta_Rythm_Boys.mp3",
+    "length": 1711.27,
+    "series": "Spike Jones",
+    "title": "Guest: Delta Rhythm Boys",
+    "date": "June 11, 1948",
+    "item": "https://archive.org/details/SpikeJones"
+   },
+   {
+    "src": "https://archive.org/download/MartinAndLewis_OldTimeRadio/MartinLewisShow530414_097_LindaDarnell.mp3",
+    "length": 1775.35,
+    "series": "The Martin and Lewis Show",
+    "title": "Linda Darnell",
+    "item": "https://archive.org/details/MartinAndLewis_OldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/JubileeOldTimeRadio/Jubilee-480220_262BennyGoodman_PeggyLee.mp3",
+    "length": 1932.21,
+    "series": "Jubilee",
+    "title": "Benny Goodman, Peggy Lee",
+    "date": "February 20, 1948",
+    "item": "https://archive.org/details/JubileeOldTimeRadio"
+   },
+   {
+    "src": "https://archive.org/download/The_Dinah_Shore_Show/DinahShoreShow-1945.11.08_Groucho_Marx.mp3",
+    "length": 1783.33,
+    "series": "The Dinah Shore Show",
+    "title": "Groucho Marx",
+    "date": "November 8, 1945",
+    "item": "https://archive.org/details/The_Dinah_Shore_Show"
+   },
+   {
+    "src": "https://archive.org/download/TheRailroadHour/RH_53-08-17_ep255-Roaring_Camp.mp3",
+    "length": 1775.36,
+    "series": "The Railroad Hour",
+    "title": "Roaring Camp",
+    "date": "August 17, 1953",
+    "item": "https://archive.org/details/TheRailroadHour"
+   }
+  ]
+ },
+ {
   "id": "ragtime",
   "name": "Ragtime",
   "group": "Music",

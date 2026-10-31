@@ -86,7 +86,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 
 ## Stations
 
-`stations.js` has seventeen stations. The guide groups them under **Radio shows** and **Music**:
+`stations.js` has eighteen stations. The guide groups them under **Radio shows** and **Music**:
 
 | Station | What's on | Loops every |
 |---|---|---|
@@ -97,6 +97,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Out West | Gunsmoke, Frontier Gentleman, Fort Laramie, The Six Shooter, Have Gun – Will Travel | about 15 hours |
 | Theater | Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Orson Welles' Mercury Theatre (including *The War of the Worlds*) and Campbell Playhouse, Columbia Workshop | about 32 hours |
 | Laughs | Jack Benny, Fibber McGee and Molly, Burns and Allen, The Great Gildersleeve, Our Miss Brooks | about 16 hours |
+| Variety | Bing Crosby, Bob Hope, The Chase and Sanborn Hour, Command Performance, Fred Allen, Jimmy Durante, Spike Jones, Martin and Lewis, Jubilee, Dinah Shore, The Railroad Hour | about 45 hours |
 | Ragtime | Rags, cakewalks and brass bands, 1898–1928 | about 5 hours |
 | Jazz Age | Hot jazz, blues and dance bands, 1917–1925 | about 5 hours |
 | Blues | Delta and country blues, 1920s to the '50s | about 3 hours |

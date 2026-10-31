@@ -372,17 +372,27 @@
     text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
   .t-reactbar { gap: 10px; }
   .react { flex: 0 0 auto; }
-  /* fire volume slider under the fireplace */
-  .t-slider { display: flex; align-items: center; }
-  .fire-vol { display: flex; align-items: center; gap: 10px; width: 100%; font: italic 600 14px/1 "BK Serif", sans-serif; color: #f6eed8; text-shadow: 0 1px 2px rgba(0,0,0,.85); cursor: pointer; }
-  .fire-vol input { flex: 1; min-width: 0; accent-color: #e3a92f; height: 18px; cursor: pointer; margin: 0; }
-  .fire-vol input:focus-visible { outline: 2px solid #e3a92f; outline-offset: 3px; }
   [data-id="power-text"] .txt { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
   /* FontSpace typefaces (art/fonts): no fake bold or slanted versions of the script and deco faces */
   body, body * { font-synthesis: none; }
   .lc-name, [data-id="station-name"] .txt, [data-id="ads-heading"] .txt, .g-group, .tc-kicker { word-spacing: 0.18em; }
   .lk-logo, .lk-tag { letter-spacing: 0.01em; }
   [data-id="now-title"] .txt { font-weight: 400; }
+  /* fire volume: a proper volume slider, with quiet and loud speaker icons and a filled track */
+  .t-slider { display: flex; align-items: center; }
+  .fire-vol { display: flex; align-items: center; gap: 8px; width: 100%; font: italic 600 16px/1 "BK Serif", serif; color: #f6eed8; text-shadow: 0 1px 2px rgba(0,0,0,.85); cursor: pointer; white-space: nowrap; }
+  .fv-ic { width: 20px; height: 20px; flex: 0 0 auto; fill: #f6eed8; color: #f6eed8; filter: drop-shadow(0 1px 1px rgba(0,0,0,.7)); }
+  .fire-vol input { -webkit-appearance: none; appearance: none; flex: 1; min-width: 0; height: 8px; margin: 0; border-radius: 4px; cursor: pointer;
+    background: linear-gradient(to right, #e3a92f 0 var(--v, 0%), rgba(246,238,216,.35) var(--v, 0%) 100%); box-shadow: inset 0 1px 2px rgba(0,0,0,.5); }
+  .fire-vol input::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: #efe5cc; border: 3px solid #c8321f; box-shadow: 0 1px 3px rgba(0,0,0,.6); }
+  .fire-vol input::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #efe5cc; border: 3px solid #c8321f; box-shadow: 0 1px 3px rgba(0,0,0,.6); }
+  .fire-vol input:focus-visible { outline: 2px solid #e3a92f; outline-offset: 4px; }
+  /* the line under the logo, in the easy-to-read serif */
+  .look-logo .lk-tag { font: italic 400 17px/1.25 "BK Serif", Georgia, serif; letter-spacing: 0; color: #4a4036; white-space: nowrap; font-size: min(17px, 3.1cqw); }
+  [data-id="sleep-clock"] { cursor: pointer; }
+  [data-id="sleep-clock"]:hover img { transform: rotate(-8deg); }
+  [data-id="sleep-timer"] .txt { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
+  [data-id="station-card"] { cursor: pointer; }
 </style>
 </head>
 <body>
@@ -422,12 +432,12 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101k"></script>
-<script src="stations.js?v=20261101k"></script>
-<script src="config.js?v=20261101k"></script>
-<script src="ads.js?v=20261101k"></script>
-<script src="tv.js?v=20261101k"></script>
+<script src="skin.js?v=20261101l"></script>
+<script src="stations.js?v=20261101l"></script>
+<script src="config.js?v=20261101l"></script>
+<script src="ads.js?v=20261101l"></script>
+<script src="tv.js?v=20261101l"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101k"></script>
+<script src="radio.js?v=20261101l"></script>
 </body>
 </html>
