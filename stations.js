@@ -9,7 +9,7 @@ window.STATIONS = [
   "name": "Chills",
   "group": "Radio shows",
   "blurb": "Horror stories: ghosts, curses and things in the dark.",
-  "card": "art/cards/chills.png",
+  "card": "art/cards/chills.webp",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
