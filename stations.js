@@ -62569,14 +62569,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/1935-USA-Archives-1935-12-23-Eddy-Duchin-Orch-Moonburn"
    },
    {
-    "src": "https://archive.org/download/ThatsAPlentyLawrenceWelk/That%27s%20A%20Plenty%20-%20Lawrence%20Welk.mp3",
-    "length": 150.0,
-    "series": "Lawrence Welk",
-    "title": "That's A Plenty - Lawrence Welk",
-    "date": "1938",
-    "item": "https://archive.org/details/ThatsAPlentyLawrenceWelk"
-   },
-   {
     "src": "https://archive.org/download/1933-USA-Archives-1933-03-09-Hal-Kemp-Orch-Lovey/1933%28USA%29Archives19330309HalKempOrch-Lovey.mp3",
     "length": 203.3,
     "series": "Hal Kemp Orchestra",
@@ -62609,30 +62601,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_tho-i-tried_jan-garber-and-his-orchestra-ernie-mathias-kitty-martin-and-the-fours_gbia0366439a"
    },
    {
-    "src": "https://archive.org/download/78_brighter-than-the-sun-_ray-noble-and-his-orchestra-noble--anona-winn_gbia0002501b/Brighter%20Than%20The%20Sun%20%20-%20Ray%20Noble%20and%20his%20Orchestra.mp3",
-    "length": 164.0,
-    "series": "Ray Noble and his Orchestra",
-    "title": "Brighter Than The Sun",
-    "date": "1933",
-    "item": "https://archive.org/details/78_brighter-than-the-sun-_ray-noble-and-his-orchestra-noble--anona-winn_gbia0002501b"
-   },
-   {
-    "src": "https://archive.org/download/78_turkish-delight_ray-noble-and-his-new-mayfair-orchestra-kester-noble_gbia0192511b/TURKISH%20DELIGHT%20-%20RAY%20NOBLE%20AND%20HIS%20NEW%20MAYFAIR%20ORCHESTRA.mp3",
-    "length": 183.0,
-    "series": "Ray Noble and His New Mayfair Orchestra",
-    "title": "Turkish Delight",
-    "date": "1933",
-    "item": "https://archive.org/details/78_turkish-delight_ray-noble-and-his-new-mayfair-orchestra-kester-noble_gbia0192511b"
-   },
-   {
-    "src": "https://archive.org/download/decca-24825-a-enjoy-yourself/Decca%2024825A%20-%20Enjoy%20Yourself%20-%203.0%20CT%20629N-12%20EQ.mp3",
-    "length": 198.69,
-    "series": "Guy Lombardo and His Royal Canadians",
-    "title": "Enjoy Yourself (It's Later Than You Think)",
-    "date": "1949",
-    "item": "https://archive.org/details/decca-24825-a-enjoy-yourself"
-   },
-   {
     "src": "https://archive.org/download/78_ive-got-you-on-my-mind_leo-reisman-and-his-orchestra-fred-astaire-cole-porter_gbia0304421b/I%27VE%20GOT%20YOU%20ON%20MY%20MIND%20-%20LEO%20REISMAN%20AND%20HIS%20ORCHESTRA.mp3",
     "length": 171.19,
     "series": "Leo Reisman and His Orchestra",
@@ -62655,22 +62623,6 @@ window.STATIONS = [
     "title": "Wayne King Orch The Waltz You Saved For Me",
     "date": "1930",
     "item": "https://archive.org/details/1930-USA-Archives-1930-11-07-Wayne-King-Orch-The-Waltz-You-Saved-For-Me"
-   },
-   {
-    "src": "https://archive.org/download/78_arent-you-glad-youre-you_shep-fields-and-his-orchestra-meredith-blake-johnny-burk_gbia0079892b/Aren%27t%20You%20Glad%20You%27re%20You%20-%20Shep%20Fields%20and%20His%20Orchestra.mp3",
-    "length": 181.0,
-    "series": "Shep Fields and His Orchestra",
-    "title": "Aren't You Glad You're You",
-    "date": "1946",
-    "item": "https://archive.org/details/78_arent-you-glad-youre-you_shep-fields-and-his-orchestra-meredith-blake-johnny-burk_gbia0079892b"
-   },
-   {
-    "src": "https://archive.org/download/78_theyre-either-too-young-or-too-old_jan-garber-and-his-orchestra-liz-tilton-loesser_gbia0061334b/They%27re%20Either%20Too%20Young%20or%20-%20Jan%20Garber%20and%20his%20Orchestra.mp3",
-    "length": 196.0,
-    "series": "Jan Garber and his Orchestra",
-    "title": "They're Either Too Young or Too Old",
-    "date": "1943",
-    "item": "https://archive.org/details/78_theyre-either-too-young-or-too-old_jan-garber-and-his-orchestra-liz-tilton-loesser_gbia0061334b"
    },
    {
     "src": "https://archive.org/download/78_oh-helen-oh-elena_swing-and-sway-with-sammy-kaye-and-his-orchestra-the-three-kay_gbia0062460a/Oh%20Helen%21%20%28Oh%20Elena%29%20-%20Swing%20and%20Sway%20with%20Sammy%20Kaye%20and%20his%20Orchestra.mp3",
@@ -62841,14 +62793,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_jeannine-i-dream-of-lilac-time_john-ryan-gilbert-and-shilkret_gbia0217552a"
    },
    {
-    "src": "https://archive.org/download/78_the-hen-and-the-cow-a-dream-of-the-past_billy-murray-geo-w-meyer_gbia0083375b/The%20Hen%20and%20The%20Cow%20%28A%20Dream%20Of%20The%20Past%29%20-%20Billy%20Murray.mp3",
-    "length": 231.0,
-    "series": "Billy Murray",
-    "title": "The Hen and The Cow (A Dream Of The Past)",
-    "date": "1920",
-    "item": "https://archive.org/details/78_the-hen-and-the-cow-a-dream-of-the-past_billy-murray-geo-w-meyer_gbia0083375b"
-   },
-   {
     "src": "https://archive.org/download/seipp-serenade/Seipp%20Serenade.mp3",
     "length": 210.76,
     "series": "Hilde SEIPP - Gesang",
@@ -62921,14 +62865,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_the-herd-girls-dream_longo-trio-august-labitzky_gbia0009374b"
    },
    {
-    "src": "https://archive.org/download/78_dream-maker-of-japan-suenodoro-de-japon_arthur-lange-and-his-orchestra-lewis-youn_gbia0118750b/Dream-Maker%20of%20Japan%20%28Sue%20-%20Arthur%20Lange%20and%20his%20Orchestra.mp3",
-    "length": 168.0,
-    "series": "Arthur Lange and his Orchestra",
-    "title": "Dream-Maker of Japan (Suenodoro de Japon)",
-    "date": "1924",
-    "item": "https://archive.org/details/78_dream-maker-of-japan-suenodoro-de-japon_arthur-lange-and-his-orchestra-lewis-youn_gbia0118750b"
-   },
-   {
     "src": "https://archive.org/download/78_jak-ty-moj-snie-as-you-my-dream_chor-dana-brodszky-szmaragd_gbia0002316a/Jak%20Ty%20Moj%20Snie%20%28As%20You%20My%20Dream%29%20-%20Chor%20Dana.mp3",
     "length": 178.0,
     "series": "Chor Dana",
@@ -62951,14 +62887,6 @@ window.STATIONS = [
     "title": "Nocturne Op. 9. No. 2",
     "date": "1939",
     "item": "https://archive.org/details/78_nocturne-op-9-no-2_h-robinson-cleaver-chopin_gbia0120918a"
-   },
-   {
-    "src": "https://archive.org/download/78_moonlight-tango_ricky-hale-remo-biondi-orch-sid-prosen-raymond-carrol_gbia0063699a/Moonlight%20Tango%20-%20Ricky%20Hale%20-%20Remo%20Biondi%20Orch..mp3",
-    "length": 150.0,
-    "series": "Ricky Hale",
-    "title": "Moonlight Tango",
-    "date": "1953",
-    "item": "https://archive.org/details/78_moonlight-tango_ricky-hale-remo-biondi-orch-sid-prosen-raymond-carrol_gbia0063699a"
    },
    {
     "src": "https://archive.org/download/78_1-wiegenlied-cradle-song-2-gavotte_hans-kindler-rosario-bourdon-1-schubert_gbia0478715a/%281%29%20Wiegenlied%20%28Cradle%20Song%29%20%282%29%20Gavotte%20-%20Hans%20Kindler.mp3",
@@ -62993,14 +62921,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_dreamy-georgiana-moon_tex-dean--the-carefree-cowboys-c.-mcmichen-h.-bryant_gbia0008790a"
    },
    {
-    "src": "https://archive.org/download/78_dream-daddy_the-ambassadors-herscher-keefer-ernest-hare_gbia0045654a/Dream%20Daddy%20-%20The%20Ambassadors%20-%20Herscher.mp3",
-    "length": 186.0,
-    "series": "The Ambassadors",
-    "title": "Dream Daddy",
-    "date": "1924",
-    "item": "https://archive.org/details/78_dream-daddy_the-ambassadors-herscher-keefer-ernest-hare_gbia0045654a"
-   },
-   {
     "src": "https://archive.org/download/78_dreamy-melody-melodia-del-sveno_joe-basile-and-his-velodrome-orchestra-koehler-ma_gbia0089828a/Dreamy%20Melody%20%28Me%20-%20Joe%20Basile%20and%20His%20Velodrome%20Orchestra.mp3",
     "length": 178.0,
     "series": "Joe Basile and His Velodrome Orchestra",
@@ -63015,14 +62935,6 @@ window.STATIONS = [
     "title": "Sunset Lullaby (Murmollo del Anochezer)",
     "date": "1939",
     "item": "https://archive.org/details/78_sunset-lullaby-murmollo-del-anochezer_toots-mondello-claude-thornhill-nick-fato_gbia0023119a"
-   },
-   {
-    "src": "https://archive.org/download/iulovhmorej1929/iulovhmorej1929.mp3",
-    "length": 193.0,
-    "series": "The Ipana Troubadours",
-    "title": "I Used To Love Her In The Moonlight - Reject",
-    "date": "1929",
-    "item": "https://archive.org/details/iulovhmorej1929"
    },
    {
     "src": "https://archive.org/download/serenadebraga/Serenade%20Braga.mp3",
@@ -63113,14 +63025,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/stardust-jean-sablon-with-lou-bring-ao-2022"
    },
    {
-    "src": "https://archive.org/download/78_donkey-serenade_leo-diamond-sparkling-gems-friml-stothart-wright-forrest_gbia0043156a/Donkey%20Serenade%20-%20Leo%20Diamond%20-%20Sparkling%20Gems.mp3",
-    "length": 155.0,
-    "series": "Leo Diamond",
-    "title": "Donkey Serenade",
-    "date": "1947",
-    "item": "https://archive.org/details/78_donkey-serenade_leo-diamond-sparkling-gems-friml-stothart-wright-forrest_gbia0043156a"
-   },
-   {
     "src": "https://archive.org/download/78_the-blue-skirt-waltz_tommy-clayton-and-string-band-mitchell-parish-vaclay-blaha_gbia0007254b/The%20Blue%20Skirt%20Waltz%20-%20Tommy%20Clayton%20and%20String%20Band.mp3",
     "length": 176.0,
     "series": "Tommy Clayton and String Band",
@@ -63201,14 +63105,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_love-is-just-a-dream-of-you_sam-ash-wright_gbia0011041b"
    },
    {
-    "src": "https://archive.org/download/tabby-the-cat/Tabby%20The%20Cat.mp3",
-    "length": 158.02,
-    "series": "The Pied Pipers - Paul Weston - Orchestra",
-    "title": "Tabby The Cat",
-    "date": "1944",
-    "item": "https://archive.org/details/tabby-the-cat"
-   },
-   {
     "src": "https://archive.org/download/78_dreamy-melody_mcnalpaks-dance-orchestra-koehler-magine-naset-egan-marshall-whiting_gbia0090825a/Dreamy%20Melody%20-%20McNalpak%27s%20Dance%20Orchestra.mp3",
     "length": 246.0,
     "series": "McNalpak's Dance Orchestra",
@@ -63265,14 +63161,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_this-love-of-mine_blue-barron-and-his-orchestra-clyde-burke-and-the-barron-quartet_gbia0011247a"
    },
    {
-    "src": "https://archive.org/download/78_goodnight-cincinnnati-good-morning-tennessee_shorty-long-louie-innis_gbia0113934b/Goodnight%20Cincinnnati%2C%20Good%20Morning%20Tennesse%20-%20Shorty%20Long.mp3",
-    "length": 165.0,
-    "series": "Shorty Long",
-    "title": "Goodnight Cincinnnati, Good Morning Tennessee",
-    "date": "1951",
-    "item": "https://archive.org/details/78_goodnight-cincinnnati-good-morning-tennessee_shorty-long-louie-innis_gbia0113934b"
-   },
-   {
     "src": "https://archive.org/download/78_serenade_barnabas-von-geozy-and-his-orchestra-toselli_gbia0046738b/Serenade%20-%20Barnabas%20Von%20Geozy%20and%20His%20Orchestra.mp3",
     "length": 186.0,
     "series": "Barnabas Von Geozy and His Orchestra",
@@ -63289,14 +63177,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_choristers-waltz_london-palladium-orchestra-phelps-richard-crean_gbia7017727a"
    },
    {
-    "src": "https://archive.org/download/78_circle-waltz-with-calls_the-barnstormers_gbia0090340b/Circle%20Waltz%20%28With%20Calls%29%20-%20The%20Barnstormers.mp3",
-    "length": 180.0,
-    "series": "The Barnstormers",
-    "title": "Circle Waltz (With Calls)",
-    "date": "1923",
-    "item": "https://archive.org/details/78_circle-waltz-with-calls_the-barnstormers_gbia0090340b"
-   },
-   {
     "src": "https://archive.org/download/78_black-hawk-waltz_symphonic-trio_gbia0016656b/Black%20Hawk%20Waltz%20-%20Symphonic%20Trio.mp3",
     "length": 185.0,
     "series": "Symphonic Trio",
@@ -63311,14 +63191,6 @@ window.STATIONS = [
     "title": "\"Sleepy Boy\"",
     "date": "1949",
     "item": "https://archive.org/details/78_sleepy-boy_kai-winding-and-his-sextet-kai-winding-jerry-mulligan-george-wallingto_gbia0059645b"
-   },
-   {
-    "src": "https://archive.org/download/78_farmers-serenade_the-good-fellows-harold-grant-and-his-orchestra-h-lenk-e-drake_gbia0060502a/Farmer%27s%20Serenade%20-%20The%20Good-Fellows%20-%20Harold%20Grant%20and%20his%20Orchestra.mp3",
-    "length": 179.0,
-    "series": "The Good-Fellows",
-    "title": "Farmer's Serenade",
-    "date": "1945",
-    "item": "https://archive.org/details/78_farmers-serenade_the-good-fellows-harold-grant-and-his-orchestra-h-lenk-e-drake_gbia0060502a"
    },
    {
     "src": "https://archive.org/download/78_that-naughty-waltz_paul-lavalle-and-his-string-orchestra-levy-stanley_gbia0011139b/That%20Naughty%20Waltz%20-%20Paul%20Lavalle%20and%20his%20String%20Orchestra.mp3",
@@ -63361,28 +63233,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_dreams-at-twilight_matilda-dibowski-american-symphony-orchestra_gbia0000083a"
    },
    {
-    "src": "https://archive.org/download/78_serenade-to-a-jitterbug_abbey-browns-cool-cats-bob-dukoff-benny-lagasse-hymie-fide_gbia0000197b/Serenade%20To%20A%20Jitterbug%20-%20Abbey%20Brown%27s%20Cool%20Cats.mp3",
-    "length": 170.0,
-    "series": "Abbey Brown's Cool Cats",
-    "title": "Serenade To A Jitterbug",
-    "date": "1945",
-    "item": "https://archive.org/details/78_serenade-to-a-jitterbug_abbey-browns-cool-cats-bob-dukoff-benny-lagasse-hymie-fide_gbia0000197b"
-   },
-   {
     "src": "https://archive.org/download/78_when-its-sleepy-time-down-south_the-roy-eldridge-quintet-roy-eldridge-oscar-peters_gbia0073845a/When%20It%27s%20Sleepy%20Time%20Down%20Sout%20-%20The%20Roy%20Eldridge%20Quintet.mp3",
     "length": 186.0,
     "series": "The Roy Eldridge Quintet",
     "title": "When It's Sleepy Time Down South",
     "date": "1954",
     "item": "https://archive.org/details/78_when-its-sleepy-time-down-south_the-roy-eldridge-quintet-roy-eldridge-oscar-peters_gbia0073845a"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-serenade_nick-paone-and-the-gang-n-paone-neal-hefti_gbia0469751b/CHRISTMAS%20SERENADE%20-%20NICK%20PAONE%20And%20The%20Gang.mp3",
-    "length": 167.11,
-    "series": "NICK PAONE And The Gang",
-    "title": "Christmas Serenade",
-    "date": "1950",
-    "item": "https://archive.org/details/78_christmas-serenade_nick-paone-and-the-gang-n-paone-neal-hefti_gbia0469751b"
    },
    {
     "src": "https://archive.org/download/78_dream_lee-castle-and-his-orchestra-tone-dexter-johnny-mercer_gbia0026349a/Dream%20-%20Lee%20Castle%20and%20his%20Orchestra%20-%20Tone%20Dexter.mp3",
@@ -63569,14 +63425,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_dream-of-the-tyrolienne_venetian-instrumental-quartet-aug.-labitsky_gbia0011529b"
    },
    {
-    "src": "https://archive.org/download/78_the-bread-and-butter-song_dick-taylor-and-his-taylor-made-music-vivien-garry-and-th_gbia0342811a/THE%20BREAD%20AND%20BUTTER%20SONG%20-%20DICK%20TAYLOR%20and%20his%20TAYLOR%20MADE%20MUSIC.mp3",
-    "length": 199.25,
-    "series": "DICK TAYLOR and his TAYLOR MADE MUSIC",
-    "title": "The Bread and Butter Song",
-    "date": "1950",
-    "item": "https://archive.org/details/78_the-bread-and-butter-song_dick-taylor-and-his-taylor-made-music-vivien-garry-and-th_gbia0342811a"
-   },
-   {
     "src": "https://archive.org/download/78_dreamy-hawaii_pladas-serenaders_gbia0106197b/Dreamy%20Hawaii%20-%20Plada%27s%20Serenaders.mp3",
     "length": 171.0,
     "series": "Plada's Serenaders",
@@ -63601,14 +63449,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_missouri-waltz_arvada-miller-the-vel-tones-rex-von-bob-eppel-logan-shannon_gbia0094884a"
    },
    {
-    "src": "https://archive.org/download/Columbia_40178/%5B1954%5D%20Frankie%20Laine%20-%20The%20Kid%27s%20Last%20Fight%3B%20Long%20Distance%20Love%20%5BColumbia%2040178%5D/%5BA1%5D%20Frankie%20Laine%20with%20Carl%20Fischer%20at%20the%20Upright%20and%20The%20Norman%20Luboff%20Choir%20-%20The%20Kid%27s%20Last%20Fight.mp3",
-    "length": 199.0,
-    "series": "Frankie Laine",
-    "title": "The Kid's Last Fight / Long Distance Love",
-    "date": "1954",
-    "item": "https://archive.org/details/Columbia_40178"
-   },
-   {
     "src": "https://archive.org/download/78_montana-waltz_jay-edwards-jack-barbour_gbia0006453a/Montana%20Waltz%20-%20Jay%20Edwards%20-%20Jack%20Barbour.mp3",
     "length": 189.0,
     "series": "Jay Edwards",
@@ -63631,14 +63471,6 @@ window.STATIONS = [
     "title": "WRAP YOUR TROUBLES IN DREAMS (And Dream Your Troubles Away)",
     "date": "1931",
     "item": "https://archive.org/details/78_wrap-your-troubles-in-dreams-and-dream-your-troubles-away_will-osborne-and-his-orch_gbia3019880a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-younger-generation_ray-noble-and-his-new-mayfair-orchestra-noel-coward_gbia0150886b/THE%20YOUNGER%20GENERATION%20-%20Ray%20Noble%20and%20his%20New%20Mayfair%20Orchestra.mp3",
-    "length": 198.0,
-    "series": "Ray Noble and his New Mayfair Orchestra",
-    "title": "The Younger Generation",
-    "date": "1932",
-    "item": "https://archive.org/details/78_the-younger-generation_ray-noble-and-his-new-mayfair-orchestra-noel-coward_gbia0150886b"
    },
    {
     "src": "https://archive.org/download/78_moonlight-on-the-river_len-fillis/moonlight%20on%20the%20river_len%20fillis_mono_2021.mp3",
@@ -63801,28 +63633,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_dream-of-youth-reve-de-jeunesse_fritz-kreisler-felix-winternitz_gbia0047382b"
    },
    {
-    "src": "https://archive.org/download/78_dreamy-melody_selvins-orchestra-koehler-magine-naset_gbia0104991a/Dreamy%20Melody%20-%20Selvin%27s%20Orchestra%20-%20Koehler.mp3",
-    "length": 186.0,
-    "series": "Selvin's Orchestra",
-    "title": "Dreamy Melody",
-    "date": "1923",
-    "item": "https://archive.org/details/78_dreamy-melody_selvins-orchestra-koehler-magine-naset_gbia0104991a"
-   },
-   {
     "src": "https://archive.org/download/78_the-very-thought-of-you_mark-warnow-and-his-orchestra-jerry-wayne-ray-noble_gbia0071949f/The%20Very%20Thought%20of%20You%20-%20Mark%20Warnow%20and%20his%20Orchestra.mp3",
     "length": 204.0,
     "series": "Mark Warnow and his Orchestra",
     "title": "The Very Thought of You",
     "date": "1945",
     "item": "https://archive.org/details/78_the-very-thought-of-you_mark-warnow-and-his-orchestra-jerry-wayne-ray-noble_gbia0071949f"
-   },
-   {
-    "src": "https://archive.org/download/78_sweet-little-you-88-in-the-books_orrin-tucker-and-his-orchestra-orrin-tucker-bibo_gbia0454133a/SWEET%20LITTLE%20YOU%3B%2088%20IN%20T%20-%20ORRIN%20TUCKER%20And%20His%20Orchestra.mp3",
-    "length": 260.26,
-    "series": "ORRIN TUCKER And His Orchestra",
-    "title": "Sweet Little You; 88 in the Books",
-    "date": "1949",
-    "item": "https://archive.org/details/78_sweet-little-you-88-in-the-books_orrin-tucker-and-his-orchestra-orrin-tucker-bibo_gbia0454133a"
    },
    {
     "src": "https://archive.org/download/EDIS-SRP-0164-01/EDIS-SRP-0164-01.mp3",
@@ -63897,14 +63713,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_athene-waltz_paramount-dance-orchestra-don-richardson_gbia0042531a"
    },
    {
-    "src": "https://archive.org/download/victor-25651-a-got-a-date-with-an-angel/Victor%2025651A%20-%20Got%20a%20Date%20with%20an%20Angel%20-%203.0%20CT%20250N-8%20EQ.mp3",
-    "length": 136.36,
-    "series": "Hal Kemp and his Orchestra",
-    "title": "Got a Date with an Angel",
-    "date": "1937",
-    "item": "https://archive.org/details/victor-25651-a-got-a-date-with-an-angel"
-   },
-   {
     "src": "https://archive.org/download/78_om-jeg-danser-vals-eller-tango-i-cant-tell-a-waltz-from-a-tango_raquel-rastenni_gbia0125805a/OM%20JEG%20DANSER%20VALS%20ELLER%20TANGO%20%28I%20can%27t%20%20-%20RAQUEL%20RASTENNI.mp3",
     "length": 140.0,
     "series": "Raquel Rastenni",
@@ -63967,14 +63775,6 @@ window.STATIONS = [
     "title": "Black Hawk Waltz",
     "date": "1954",
     "item": "https://archive.org/details/78_black-hawk-waltz_ernie-berger-mary-e-walsh_gbia0037085b"
-   },
-   {
-    "src": "https://archive.org/download/78_sleepy-time-gal_fletcher-henderson-his-band-alden-egan-lorenzo-whiting_gbia0015093b/Sleepy%20Time%20Gal%20-%20Fletcher%20Henderson%20%26%20His%20Band.mp3",
-    "length": 190.0,
-    "series": "Fletcher Henderson & His Band",
-    "title": "Sleepy Time Gal",
-    "date": "1925",
-    "item": "https://archive.org/details/78_sleepy-time-gal_fletcher-henderson-his-band-alden-egan-lorenzo-whiting_gbia0015093b"
    },
    {
     "src": "https://archive.org/download/78_la-serenade_sophie-sanina-fr-schubert_gbia0423759a/LA%20SERENADE%20-%20SOPHIE%20SANINA%20-%20Fr.%20Schubert.mp3",
@@ -64089,28 +63889,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_tennessee-twilight_eddie-condon-and-his-orch-alex-hill_gbia0387530a"
    },
    {
-    "src": "https://archive.org/download/1929-USA-Archives-1929-03-11-Leo-Reisman-Casino-Royal-Orch-The-Wedding-Of-The-Painted-Doll/1929%28USA%29Archives19290311LeoReismanCasinoRoyalOrch-TheWeddingOfThePaintedDoll.mp3",
-    "length": 182.34,
-    "series": "Leo Reisman Casino Royal Orchestra",
-    "title": "Leo Reisman Casino Royal Orch The Wedding Of The Painted Doll",
-    "date": "1929",
-    "item": "https://archive.org/details/1929-USA-Archives-1929-03-11-Leo-Reisman-Casino-Royal-Orch-The-Wedding-Of-The-Painted-Doll"
-   },
-   {
     "src": "https://archive.org/download/78_the-waltz-you-saved-for-me_bob-stanley-and-his-orchestra-joe-allen-kahn-king-flindt_gbia0084615b/The%20Waltz%20You%20Saved%20for%20Me%20-%20Bob%20Stanley%20and%20his%20Orchestra.mp3",
     "length": 181.0,
     "series": "Bob Stanley and his Orchestra",
     "title": "The Waltz You Saved for Me",
     "date": "1949",
     "item": "https://archive.org/details/78_the-waltz-you-saved-for-me_bob-stanley-and-his-orchestra-joe-allen-kahn-king-flindt_gbia0084615b"
-   },
-   {
-    "src": "https://archive.org/download/78_shadows-in-the-moonlight_pat-hyde-her-swing-music-leon-towers-arden_gbia0045759b/Shadows%20in%20the%20Moonlight%20-%20Pat%20Hyde%20%26%20Her%20Swing%20Music.mp3",
-    "length": 189.0,
-    "series": "Pat Hyde & Her Swing Music",
-    "title": "Shadows in the Moonlight",
-    "date": "1935",
-    "item": "https://archive.org/details/78_shadows-in-the-moonlight_pat-hyde-her-swing-music-leon-towers-arden_gbia0045759b"
    },
    {
     "src": "https://archive.org/download/78_apres-un-reve_maggie-teyte-gerald-moore-bussine-faure_gbia0011417a/Apres%20un%20Reve%20-%20Maggie%20Teyte%20-%20Gerald%20Moore.mp3",
@@ -64129,14 +63913,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_moonlight-on-melody-hill_larry-faith-and-his-orchestra-larry-rogers-lejcar-kramer_gbia0006309b"
    },
    {
-    "src": "https://archive.org/download/78_deep-night-tick-tally-roo-i-want-to-be-happy_dick-haymes-gordon-jenkins-and-his-orc_gbia0526168a/DEEP%20NIGHT%3B%20TICK-TALLY%20ROO%3B%20I%20WANT%20TO%20BE%20HAP.mp3",
-    "length": 361.0,
-    "series": "Dick Haymes",
-    "title": "Deep Night; Tick-tally Roo; I Want to Be Happy",
-    "date": "1947",
-    "item": "https://archive.org/details/78_deep-night-tick-tally-roo-i-want-to-be-happy_dick-haymes-gordon-jenkins-and-his-orc_gbia0526168a"
-   },
-   {
     "src": "https://archive.org/download/78_moonlight-cocktail_dolly-dawn-and-her-dawn-patrol-orchestra-dolly-dawn-gannon-rober_gbia0053375a/Moonlight%20Cocktail%20-%20Dolly%20Dawn%20and%20her%20Dawn%20Patrol%20Orchestra.mp3",
     "length": 168.0,
     "series": "Dolly Dawn and her Dawn Patrol Orchestra",
@@ -64153,36 +63929,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_alabama-lullaby_gladys-rice-and-marion-evelyn-cox-cal-de-voll_gbia0087977a"
    },
    {
-    "src": "https://archive.org/download/78_dickies-dream_count-basies-kansas-city-7-basie-young_gbia0059335a/Dickie%27s%20Dream%20-%20Count%20Basie%27s%20Kansas%20City%207.mp3",
-    "length": 195.0,
-    "series": "Count Basie's Kansas City 7",
-    "title": "Dickie's Dream",
-    "date": "1935",
-    "item": "https://archive.org/details/78_dickies-dream_count-basies-kansas-city-7-basie-young_gbia0059335a"
-   },
-   {
     "src": "https://archive.org/download/78_stardust_ted-martin_2022_wave/stardust_ted%20martin_2022.mp3",
     "length": 186.54,
     "series": "Ted Martin",
     "title": "Stardust",
     "date": "1946",
     "item": "https://archive.org/details/78_stardust_ted-martin_2022_wave"
-   },
-   {
-    "src": "https://archive.org/download/78_graveyard-dream-blues_ida-cox-lovie-austin-and-her-blues-serenaders-tommy-ladnier-j_gbia0385232a/GRAVEYARD%20DREAM%20BLUES%20-%20Ida%20Cox%20-%20Lovie%20Austin%20and%20her%20Blues%20Serenaders.mp3",
-    "length": 183.24,
-    "series": "Ida Cox",
-    "title": "Graveyard Dream Blues",
-    "date": "1923",
-    "item": "https://archive.org/details/78_graveyard-dream-blues_ida-cox-lovie-austin-and-her-blues-serenaders-tommy-ladnier-j_gbia0385232a"
-   },
-   {
-    "src": "https://archive.org/download/78_blue-skies_mary-lou-williams-trio-mary-lou-williams-bill-coleman-al-hall-irving-ber_gbia0072430/01%20-%20Russian%20Lullaby%20-%20Mary%20Lou%20Williams%20Trio.mp3",
-    "length": 176.0,
-    "series": "Mary Lou Williams Trio",
-    "title": "Russian Lullaby; Blue Skies; Persian Rug; Night and Day; You Know Baby; I Found a New BAby",
-    "date": "1944",
-    "item": "https://archive.org/details/78_blue-skies_mary-lou-williams-trio-mary-lou-williams-bill-coleman-al-hall-irving-ber_gbia0072430"
    },
    {
     "src": "https://archive.org/download/78_agnes-waltz_jimmy-shand-and-his-band-hannah_gbia0121244b/AGNES%20WALTZ%20-%20Jimmy%20Shand%20and%20his%20Band%20-%20Hannah.mp3",
@@ -64193,44 +63945,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_agnes-waltz_jimmy-shand-and-his-band-hannah_gbia0121244b"
    },
    {
-    "src": "https://archive.org/download/78_the-devils-dream-medley_joseph-samuels-larry-briers_gbia0083369b/The%20Devil%27s%20Dream%20Medley%20-%20Joseph%20Samuels.mp3",
-    "length": 241.0,
-    "series": "Joseph Samuels",
-    "title": "The Devil's Dream Medley",
-    "date": "1920",
-    "item": "https://archive.org/details/78_the-devils-dream-medley_joseph-samuels-larry-briers_gbia0083369b"
-   },
-   {
     "src": "https://archive.org/download/78_invitation-to-the-waltz-op-65-conclusion_leopold-stokowski-and-the-philadelphia-o_gbia7013478b/INVITAT%20-%20LEOPOLD%20STOKOWSKI%20and%20the%20PHILADELPHIA%20ORCHESTRA.mp3",
     "length": 267.91,
     "series": "LEOPOLD STOKOWSKI and the PHILADELPHIA ORCHESTRA",
     "title": "INVITATION TO THE WALTZ, OP. 65-Conclusion",
     "date": "1939",
     "item": "https://archive.org/details/78_invitation-to-the-waltz-op-65-conclusion_leopold-stokowski-and-the-philadelphia-o_gbia7013478b"
-   },
-   {
-    "src": "https://archive.org/download/78_dream-lucky-blues_julia-lee-baby-louett-ben-curtis-julia-lee--insrumental-trio_gbia0001542b/%22Dream%20Lucky%20Blues%22%20-%20Julia%20Lee%20-%20Baby%20Louett.mp3",
-    "length": 195.0,
-    "series": "Julia Lee",
-    "title": "\"Dream Lucky Blues\"",
-    "date": "1945",
-    "item": "https://archive.org/details/78_dream-lucky-blues_julia-lee-baby-louett-ben-curtis-julia-lee--insrumental-trio_gbia0001542b"
-   },
-   {
-    "src": "https://archive.org/download/ShowBoat-Selections1932/01.Overture.mp3",
-    "length": 261.15,
-    "series": "Victor Young and his Orchestra",
-    "title": "Overture",
-    "date": "1932",
-    "item": "https://archive.org/details/ShowBoat-Selections1932"
-   },
-   {
-    "src": "https://archive.org/download/PeerlessQuartetwithHenryBurrBillyMurray/PeerlessQuartetwithHenryBurrBillyMurray-MyDreamoftheBigParadeWorldWarISong.mp3",
-    "length": 207.0,
-    "series": "Peerless Quartet with Henry Burr & Billy Murray",
-    "title": "My Dream of the Big Parade (World War I Song)",
-    "date": "1926",
-    "item": "https://archive.org/details/PeerlessQuartetwithHenryBurrBillyMurray"
    },
    {
     "src": "https://archive.org/download/78_aubade-printaniere-spring-morning-serenade_conways-band-lacombe-captain-pat-conw_gbia0076296b/Aubade%20Printaniere%20%28Spring%20Morning%20Serenad%20-%20Conway%27s%20Band.mp3",
@@ -64263,14 +63983,6 @@ window.STATIONS = [
     "title": "Pop Corn Waltz",
     "date": "1947",
     "item": "https://archive.org/details/78_pop-corn-waltz_archie-jeffries-and-his-blue-sky-boys-archie-jeffries-pop-corn-death_gbia0133171b"
-   },
-   {
-    "src": "https://archive.org/download/78_dont-wake-me-up-let-me-dream_eddie-peabody-his-band-arthur-hall-gilbert-wayne-ba_gbia0015093a/Don%27t%20Wake%20Me%20Up%20Let%20Me%20Dream%20-%20Eddie%20Peabody%20%26%20His%20Band.mp3",
-    "length": 199.0,
-    "series": "Eddie Peabody & His Band",
-    "title": "Don't Wake Me Up Let Me Dream",
-    "date": "1925",
-    "item": "https://archive.org/details/78_dont-wake-me-up-let-me-dream_eddie-peabody-his-band-arthur-hall-gilbert-wayne-ba_gbia0015093a"
    },
    {
     "src": "https://archive.org/download/78_twelve-oclock-waltz_paul-howard-and-his-arkansas-cotton-pickers-rosella-howard-bil_gbia0002930a/Twelve%20O%27Clock%20Waltz%20-%20Paul%20Howard%20and%20His%20Arkansas%20Cotton%20Pickers.mp3",
@@ -64329,14 +64041,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_come-love-with-me-serenade_beniamino-gigli-i-c-falbo-vito-carnevali_gbia0451027b"
    },
    {
-    "src": "https://archive.org/download/lullabyofbroadway/Lullaby%20of%20Broadway.mp3",
-    "length": 183.0,
-    "series": "AMBROSE AND HIS ORCHESTRA, Sam BROWNE - Gesang",
-    "title": "Lullaby Of Broadway",
-    "date": "1935",
-    "item": "https://archive.org/details/lullabyofbroadway"
-   },
-   {
     "src": "https://archive.org/download/78_brahms-lullaby_airlane-trio-brahms_gbia0334246a/BRAHMS%20LULLABY%20-%20AIRLANE%20TRIO%20-%20BRAHMS.mp3",
     "length": 180.67,
     "series": "Airlane Trio",
@@ -64353,14 +64057,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_sleep-baby-sleep-lullaby_herman-bauers-jj-handley_gbia0334948a"
    },
    {
-    "src": "https://archive.org/download/78_tavern-melodies-1.-intro-beer-beer-glorious-beer-2.-yip-i-addy-i-ay-3.-down-w_gbia0002804a/Tavern%20Melodies%3B%201.%20Intro%20Beer%2C%20Beer%2C%20Glorious%20Beer%3B%202.%20Yip-i-Addy-i-Ay%3B%203.%20Down%20Where%20The%20Wurzburger%20Flows%3B%204.%20Budweiser%27s%20A%20Friend%20Of%20Mine%3B%205.%20Sweet%20Adeline%3B%206.%20Goodnight%20Ladies%20-%20Elmer%27s%20Orchestra.mp3",
-    "length": 203.0,
-    "series": "Elmer's Orchestra",
-    "title": "Tavern Melodies; 1. Intro: Beer, Beer, Glorious Beer; 2. Yip-i-Addy-i-Ay; 3. Down Where The Wurzburger Flows; 4. Budweiser's A Friend Of Mine; 5. Sweet Adeline; 6. Goodnight Ladies",
-    "date": "1942",
-    "item": "https://archive.org/details/78_tavern-melodies-1.-intro-beer-beer-glorious-beer-2.-yip-i-addy-i-ay-3.-down-w_gbia0002804a"
-   },
-   {
     "src": "https://archive.org/download/78_deep-in-a-dream_ronnie-deauville-ram-ramirez-quartet-van-husen-delange_gbia0114658a/Deep%20in%20a%20Dream%20-%20Ronnie%20Deauville%20-%20Ram%20Ramirez%20Quartet.mp3",
     "length": 197.0,
     "series": "Ronnie Deauville",
@@ -64375,30 +64071,6 @@ window.STATIONS = [
     "title": "Goodnight My Sweet",
     "date": "1946",
     "item": "https://archive.org/details/78_goodnight-my-sweet_del-courtney-and-his-orchestra-earl-randall-david-cravis_gbia0019219b"
-   },
-   {
-    "src": "https://archive.org/download/78_life-is-a-song-the-words-are-in-my-heart-lullaby-of-broadway_gracie-fields_gbia0059630a/Life%20Is%20a%20Song%3B%20The%20Words%20Are%20In%20My%20Heart%3B%20-%20Gracie%20Fields.mp3",
-    "length": 185.0,
-    "series": "Gracie Fields",
-    "title": "Life Is a Song; The Words Are In My Heart; Lullaby of Broadway",
-    "date": "1935",
-    "item": "https://archive.org/details/78_life-is-a-song-the-words-are-in-my-heart-lullaby-of-broadway_gracie-fields_gbia0059630a"
-   },
-   {
-    "src": "https://archive.org/download/78_a-see-amid-the-winters-snow-b-christmas-lullaby_choir-of-temple-church-londo_gbia0011369a/%28a%29%20See%20Amid%20the%20Winter%27s%20-%20Choir%20of%20Temple%20Church%2C%20London.mp3",
-    "length": 210.0,
-    "series": "Choir of Temple Church, London",
-    "title": "(a) See Amid the Winter's Snow; (b) Christmas Lullaby",
-    "date": "1931",
-    "item": "https://archive.org/details/78_a-see-amid-the-winters-snow-b-christmas-lullaby_choir-of-temple-church-londo_gbia0011369a"
-   },
-   {
-    "src": "https://archive.org/download/78_baby-dont-be-mad-at-me_shep-fields-and-his-rippling-rhythm-orchestra-toni-arden-da_gbia0129218b/BABY%20DON%27T%20BE%20MAD%20AT%20ME%20-%20Shep%20Fields%20and%20his%20Rippling%20Rhythm%20Orchestra.mp3",
-    "length": 193.0,
-    "series": "Shep Fields and his Rippling Rhythm Orchestra",
-    "title": "Baby Don't Be Mad at Me",
-    "date": "1948",
-    "item": "https://archive.org/details/78_baby-dont-be-mad-at-me_shep-fields-and-his-rippling-rhythm-orchestra-toni-arden-da_gbia0129218b"
    },
    {
     "src": "https://archive.org/download/78_goodnight-but-not-goodbye_alan-brown-armand--his-orchestra-f.-desantis_gbia0004823a/Goodnight%20But%20Not%20Goodbye%20-%20Alan%20Brown%20-%20Armand%20%26%20His%20Orchestra.mp3",
@@ -64441,14 +64113,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_lullaby_rosa-ponselle-christina-rossetti-cyril-scott_gbia0005361b"
    },
    {
-    "src": "https://archive.org/download/78_horse-and-buggy-serenade_henri-rene-musette-orchestra-leo-corday-a-de-feo_gbia0060620a/Horse%20and%20Buggy%20Serenade%20-%20Henri%20Rene%20Musette%20Orchestra.mp3",
-    "length": 159.0,
-    "series": "Henri Rene Musette Orchestra",
-    "title": "Horse and Buggy Serenade",
-    "date": "1923",
-    "item": "https://archive.org/details/78_horse-and-buggy-serenade_henri-rene-musette-orchestra-leo-corday-a-de-feo_gbia0060620a"
-   },
-   {
     "src": "https://archive.org/download/78_st-bernards-waltz_folkraft-international-orchestra_gbia0175404a/ST.%20BERNARD%27S%20WALTZ%20-%20FOLKRAFT%20INTERNATIONAL%20ORCHESTRA.mp3",
     "length": 190.0,
     "series": "Folkraft International Orchestra",
@@ -64471,14 +64135,6 @@ window.STATIONS = [
     "title": "I Can Dream, Can't I",
     "date": "1947",
     "item": "https://archive.org/details/78_i-can-dream-cant-i_jimmy-saunders-mandolin-orch-joe-sgro-fain-kahal_gbia0118500b"
-   },
-   {
-    "src": "https://archive.org/download/78_a-cottage-on-the-dream-land-shore_international-dance-orchestra_gbia0405420a/A%20Cottage%20On%20The%20Dream-lan%20-%20International%20Dance%20Orchestra.mp3",
-    "length": 164.02,
-    "series": "International Dance Orchestra",
-    "title": "A Cottage On The Dream-land Shore",
-    "date": "1928",
-    "item": "https://archive.org/details/78_a-cottage-on-the-dream-land-shore_international-dance-orchestra_gbia0405420a"
    },
    {
     "src": "https://archive.org/download/78_rain_dave-hamilton-the-pepperettes-with-horace-heidt-and-his-musical-knights-eugene_gbia0038962a/Rain%20-%20Dave%20Hamilton%20-%20The%20Pepperettes%20with%20Horace%20Heidt%20and%20His%20Musical%20Knights.mp3",
@@ -64511,22 +64167,6 @@ window.STATIONS = [
     "title": "O SOAVE FANCIULLA (Lovely maid in the moonlight)",
     "date": "1942",
     "item": "https://archive.org/details/78_o-soave-fanciulla-lovely-maid-in-the-moonlight_jussi-bjrling-hjrdis-schymberg-g_gbia7002896a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-missouri-waltz_sharkeys-dixieland-band-sharkey-bonano-harry-shields-julian-lai_gbia0175080b/THE%20MISSOURI%20WALTZ%20-%20SHARKEY%27S%20DIXIELAND%20BAND.mp3",
-    "length": 198.0,
-    "series": "Sharkey's Dixieland Band",
-    "title": "The Missouri Waltz",
-    "date": "1951",
-    "item": "https://archive.org/details/78_the-missouri-waltz_sharkeys-dixieland-band-sharkey-bonano-harry-shields-julian-lai_gbia0175080b"
-   },
-   {
-    "src": "https://archive.org/download/78_devils-dream_schroeders-playboys_gbia0004124a/Devils%20Dream%20-%20Schroeder%27s%20Playboys.mp3",
-    "length": 225.0,
-    "series": "Schroeder's Playboys",
-    "title": "Devils Dream",
-    "date": "1954",
-    "item": "https://archive.org/details/78_devils-dream_schroeders-playboys_gbia0004124a"
    },
    {
     "src": "https://archive.org/download/78_a-dream-of-your-smile_ernest-hare-charles-domberger-con-conrad_gbia0468674b/A%20DREAM%20OF%20YOUR%20SMILE%20-%20ERNEST%20HARE%20-%20CHARLES%20DOMBERGER.mp3",
@@ -64679,14 +64319,6 @@ window.STATIONS = [
     "title": "Dreamy Hawaii",
     "date": "1921",
     "item": "https://archive.org/details/78_dreamy-hawaii_ferera-franchini-f.-w.-vandersloot_gbia0004019b"
-   },
-   {
-    "src": "https://archive.org/download/78_i-didnt-know-the-gun-was-loaded_the-pepperettes-horace-heidt-and-his-musical-kingh_gbia0035265a/I%20Didn%27t%20Know%20the%20Gun%20was%20Loaded%20-%20The%20Pepperettes.mp3",
-    "length": 178.0,
-    "series": "The Pepperettes",
-    "title": "I Didn't Know the Gun was Loaded",
-    "date": "1949",
-    "item": "https://archive.org/details/78_i-didnt-know-the-gun-was-loaded_the-pepperettes-horace-heidt-and-his-musical-kingh_gbia0035265a"
    },
    {
     "src": "https://archive.org/download/78_as-in-a-dream_brunon-kryger-and-his-international-dance-orchestra_gbia0060895a/As%20In%20a%20Dream%20-%20Brunon%20Kryger%20and%20his%20International%20Dance%20Orchestra.mp3",
@@ -64857,14 +64489,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_dream-boat-nave-de-ensueno_arcadia-peacock-orchestra-of-st-louis-mildred-white-w_gbia0097374a"
    },
    {
-    "src": "https://archive.org/download/78_dream-blues_bill-martin-d-young-r-claxton-h-fort-b-douglas-p-king-g-dixon-r_gbia0064403b/Dream%20Blues%20-%20Bill%20Martin%20-%20D.%20Young%20-%20R.%20Claxton.mp3",
-    "length": 163.0,
-    "series": "Bill Martin",
-    "title": "Dream Blues",
-    "date": "1946",
-    "item": "https://archive.org/details/78_dream-blues_bill-martin-d-young-r-claxton-h-fort-b-douglas-p-king-g-dixon-r_gbia0064403b"
-   },
-   {
     "src": "https://archive.org/download/78_stardust_dickie-thompson-and-his-blue-five-john-hardee-carmichael-parish_gbia0154385b/STARDUST%20-%20Dickie%20Thompson%20and%20his%20Blue%20Five.mp3",
     "length": 192.0,
     "series": "Dickie Thompson and his Blue Five",
@@ -64879,14 +64503,6 @@ window.STATIONS = [
     "title": "Moonlight Madonna",
     "date": "1933",
     "item": "https://archive.org/details/78_moonlight-madonna_roy-smeck-and-his-hawaiian-orchestra-webster-scotty_gbia0057191b"
-   },
-   {
-    "src": "https://archive.org/download/78_moonlight-and-roses_the-californiacs-black-moret_gbia0038735a/Moonlight%20and%20Roses%20-%20The%20Californiacs%20-%20Black%20Moret.mp3",
-    "length": 182.0,
-    "series": "The Californiacs",
-    "title": "Moonlight and Roses",
-    "date": "1925",
-    "item": "https://archive.org/details/78_moonlight-and-roses_the-californiacs-black-moret_gbia0038735a"
    },
    {
     "src": "https://archive.org/download/78_charming-waltz_path-dance-orchestra-joybe_gbia0422853a/CHARMING%20WALTZ%20-%20Path%C3%A9%20Dance%20Orchestra%20-%20Joybe.mp3",
@@ -64919,14 +64535,6 @@ window.STATIONS = [
     "title": "A Waltz in the Moonlight and You",
     "date": "1925",
     "item": "https://archive.org/details/78_a-waltz-in-the-moonlight-and-you_nathan-glantz-and-his-orchestra-helen-clark-and-ch_gbia0083035a"
-   },
-   {
-    "src": "https://archive.org/download/78_rhumba-serenade_lazaro-quintero-and-his-orchestra-braga-s.-levitch_gbia0001915a/Rhumba%20Serenade%20-%20Lazaro%20Quintero%20and%20his%20Orchestra.mp3",
-    "length": 165.0,
-    "series": "Lazaro Quintero and his Orchestra",
-    "title": "Rhumba Serenade",
-    "date": "1945",
-    "item": "https://archive.org/details/78_rhumba-serenade_lazaro-quintero-and-his-orchestra-braga-s.-levitch_gbia0001915a"
    },
    {
     "src": "https://archive.org/download/78_waltz-of-the-bells_gene-hall-and-his-orchestra-gene-hall_gbia0009370b/Waltz%20Of%20The%20Bells%20-%20Gene%20Hall%20and%20his%20Orchestra.mp3",
@@ -64969,22 +64577,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_dream-flowers_imperial-marimba-band-s.-translateur_gbia0011543b"
    },
    {
-    "src": "https://archive.org/download/78_moonlight-polka_stanislaw-mroczek-bob-douglas-meadows-fryberg_gbia0061185/01%20-%20The%20Party%20Polka%20%28Ev%27rybody%20Laugh%29%20-%20Stanislaw%20Mroczek.mp3",
-    "length": 175.0,
-    "series": "Fryberg",
-    "title": "The Party Polka (Ev'rybody Laugh); Moonlight Polka",
-    "date": "1947",
-    "item": "https://archive.org/details/78_moonlight-polka_stanislaw-mroczek-bob-douglas-meadows-fryberg_gbia0061185"
-   },
-   {
-    "src": "https://archive.org/download/78_the-half-fast-waltz_bob-ruehle-and-his-orchestra-al-d-lee-levington_gbia0043041a/The%20Half%20Fast%20Waltz%20-%20Bob%20Ruehle%20and%20His%20Orchestra.mp3",
-    "length": 155.0,
-    "series": "Bob Ruehle and His Orchestra",
-    "title": "The Half Fast Waltz",
-    "date": "1951",
-    "item": "https://archive.org/details/78_the-half-fast-waltz_bob-ruehle-and-his-orchestra-al-d-lee-levington_gbia0043041a"
-   },
-   {
     "src": "https://archive.org/download/78_i-can-dream-cant-i_ray-dorey-with-orchestra-arthur-ballou_gbia0003589b/I%20Can%20Dream%2C%20Can%27t%20I%3F%20-%20Ray%20Dorey%20with%20Orchestra.mp3",
     "length": 184.0,
     "series": "Ray Dorey with Orchestra",
@@ -64999,14 +64591,6 @@ window.STATIONS = [
     "title": "Black Hawk Waltz",
     "date": "1953",
     "item": "https://archive.org/details/78_black-hawk-waltz_gaylord-carter_gbia0025374b"
-   },
-   {
-    "src": "https://archive.org/download/1935-USA-Archives-1935-05-23-Henry-King-Orch-Footloose-and-Fancyfree/1935%28USA%29Archives19350523HenryKingOrch-FootlooseandFancyfree.mp3",
-    "length": 179.5,
-    "series": "Henry King Orch",
-    "title": "Henry King Orch Footloose and Fancyfree",
-    "date": "1935",
-    "item": "https://archive.org/details/1935-USA-Archives-1935-05-23-Henry-King-Orch-Footloose-and-Fancyfree"
    },
    {
     "src": "https://archive.org/download/78_i-had-the-craziest-dream_johnny-jones-and-his-orchestra-gordon-warren_gbia0172200b/I%20HAD%20THE%20CRAZIEST%20DREAM%20-%20JOHNNY%20JONES%20and%20his%20ORCHESTRA.mp3",
@@ -65041,14 +64625,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_moon-nocturne-part-ii_charlie-ventura-and-his-orchestra-henri-woode-al-neiburg-st_gbia0072646"
    },
    {
-    "src": "https://archive.org/download/RCA_Victor_20-1608/%5B1945%5D%20Tommy%20Dorsey%20%26%20His%20Orchestra%20-%20I%20Dream%20of%20You%20%28More%20than%20You%20Dream%20I%20Do%29%3B%20Opus%20No.%201%20%5BRCA%20Victor%2020-1608%5D/%5BA1%5D%20Tommy%20Dorsey%20%26%20His%20Orchestra%20-%20I%20Dream%20of%20You%20%28More%20than%20You%20Dream%20I%20Do%29.mp3",
-    "length": 179.0,
-    "series": "Tommy Dorsey & His Orchestra",
-    "title": "I Dream of You (More than You Dream I Do) / Opus No. 1",
-    "date": "1945",
-    "item": "https://archive.org/details/RCA_Victor_20-1608"
-   },
-   {
     "src": "https://archive.org/download/78_a-dusk-lullaby_the-homestead-trio-hallett-gilberte_gbia0078055b/A%20Dusk%20Lullaby%20-%20The%20Homestead%20Trio%20-%20Hallett%20Gilberte.mp3",
     "length": 229.0,
     "series": "The Homestead Trio",
@@ -65063,14 +64639,6 @@ window.STATIONS = [
     "title": "Moonlight on the River",
     "date": "1932",
     "item": "https://archive.org/details/78_moonlight-on-the-river_len-fillis_2024_wave"
-   },
-   {
-    "src": "https://archive.org/download/egon-kaiser-donkey/Egon%20Kaiser%20Donkey.mp3",
-    "length": 176.88,
-    "series": "EGON KAISER TANZ-ORCHESTER, Paul DORN - Gesang",
-    "title": "Donkey Serenade",
-    "date": "1938",
-    "item": "https://archive.org/details/egon-kaiser-donkey"
    },
    {
     "src": "https://archive.org/download/78_beautiful-ohio-waltz_toots-paka-troupe-mary-earl_gbia0018340a/Beautiful%20Ohio%20Waltz%20-%20Toots%20Paka%20Troupe.mp3",
@@ -65201,14 +64769,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_goodnight-my-love_ames-brothers-gordon-revel_gbia0114007a"
    },
    {
-    "src": "https://archive.org/download/78_ill-see-you-in-my-dreams_ben-light-lloyd-sloop-bill-markas-jack-smith-isham-jones_gbia0157692b/I%27LL%20SEE%20YOU%20IN%20MY%20DREAMS%20-%20Ben%20Light%20-%20Lloyd%20Sloop.mp3",
-    "length": 179.0,
-    "series": "Ben Light",
-    "title": "I'll See You in My Dreams",
-    "date": "1949",
-    "item": "https://archive.org/details/78_ill-see-you-in-my-dreams_ben-light-lloyd-sloop-bill-markas-jack-smith-isham-jones_gbia0157692b"
-   },
-   {
     "src": "https://archive.org/download/78_i-like-the-way-you-say-goodnight_ralph-wilson-quintette-george-clark-crawford-grant_gbia0068798a/I%20Like%20the%20Way%20You%20Say%20Goodnight%20-%20Ralph%20Wilson%20Quintette.mp3",
     "length": 170.0,
     "series": "Ralph Wilson Quintette",
@@ -65279,14 +64839,6 @@ window.STATIONS = [
     "title": "Volga Waltz",
     "date": "1923",
     "item": "https://archive.org/details/78_volga-waltz_sandor-jozsi-and-his-orchestra-m-r-bakalanikow_gbia0077482a"
-   },
-   {
-    "src": "https://archive.org/download/78_mary-had-a-little-lamb-also-twinkle-twinkle-little-star-sing-a-song-of-sixpence-bra_gbia0534353/01%20-%20Old%20King%20Cole%3B%20Hey%20Did%20-%20JACK%20ARTHUR%20and%20the%20SONG%20SPINNERS.mp3",
-    "length": 102.0,
-    "series": "JACK ARTHUR and the SONG SPINNERS",
-    "title": "Mary Had A Little Lamb also TWINKLE, TWINKLE LITTLE STAR; SING A SONG OF SIXPENCE; BRAHM'S LULLABYE AND GOODNIGHT",
-    "date": "1949",
-    "item": "https://archive.org/details/78_mary-had-a-little-lamb-also-twinkle-twinkle-little-star-sing-a-song-of-sixpence-bra_gbia0534353"
    },
    {
     "src": "https://archive.org/download/78_on-a-moonlight-night_casino-dance-orchestra-l.-wolfe-gilbert_gbia0005862a/On%20A%20Moonlight%20Night%20-%20Casino%20Dance%20Orchestra.mp3",
@@ -65433,14 +64985,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_wailana-waltz-drowsy-waters_ferrera-franchini_gbia0003990b"
    },
    {
-    "src": "https://archive.org/download/78_i-want-you-back-old-pal_the-merry-sparklers-arthur-hall-leo-wood-gus-arnheim_gbia0082830b/I%20Want%20You%20Back%20Old%20Pal%20-%20The%20Merry%20Sparklers.mp3",
-    "length": 273.0,
-    "series": "The Merry Sparklers",
-    "title": "I Want You Back Old Pal",
-    "date": "1925",
-    "item": "https://archive.org/details/78_i-want-you-back-old-pal_the-merry-sparklers-arthur-hall-leo-wood-gus-arnheim_gbia0082830b"
-   },
-   {
     "src": "https://archive.org/download/PrairieDreamBoat/Prairie%20Dream-Boat.mp3",
     "length": 164.0,
     "series": "Texas Rangers",
@@ -65537,30 +65081,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_i-dont-stand-a-ghost-of-a-chance_ernie-andrews-wilbert-baranco-trio-bing-crosby-vi_gbia0063441b"
    },
    {
-    "src": "https://archive.org/download/78_mambo-in-the-moonlight_bonnemere-and-his-piano-kaye-touzet-loman_gbia0059824b/Mambo%20in%20the%20Moonlight%20-%20Bonnemere%20And%20His%20Piano.mp3",
-    "length": 147.0,
-    "series": "Bonnemere And His Piano",
-    "title": "Mambo in the Moonlight",
-    "date": "1954",
-    "item": "https://archive.org/details/78_mambo-in-the-moonlight_bonnemere-and-his-piano-kaye-touzet-loman_gbia0059824b"
-   },
-   {
-    "src": "https://archive.org/download/78_a-laughing-dream_billy-whitlock_gbia7006434b/A%20LAUGHING%20DREAM%20-%20Billy%20Whitlock.mp3",
-    "length": 187.44,
-    "series": "Billy Whitlock",
-    "title": "A Laughing Dream",
-    "date": "1915",
-    "item": "https://archive.org/details/78_a-laughing-dream_billy-whitlock_gbia7006434b"
-   },
-   {
-    "src": "https://archive.org/download/78_nutcracker-suite-the-little-girls-dream_spike-jones-his-city-slickers-foster-c_gbia7011732a/NUTCRACKER%20SUITE%20%28THE%20LI%20-%20SPIKE%20JONES%20%26%20HIS%20CITY%20SLICKERS.mp3",
-    "length": 216.19,
-    "series": "Spike Jones & His City Slickers",
-    "title": "Nutcracker Suite (the Little Girl's Dream)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_nutcracker-suite-the-little-girls-dream_spike-jones-his-city-slickers-foster-c_gbia7011732a"
-   },
-   {
     "src": "https://archive.org/download/78_dolores-waltz_santini-brothers-waldteufel_gbia0008452b/Dolores%20Waltz%20-%20Santini%20Brothers%20-%20Waldteufel.mp3",
     "length": 217.0,
     "series": "Santini Brothers",
@@ -65583,14 +65103,6 @@ window.STATIONS = [
     "title": "Dreamy Melody",
     "date": "1923",
     "item": "https://archive.org/details/78_dreamy-melody_art-landry-and-his-call-of-the-north-orch-magine-koehler-naset_gbia0486604a"
-   },
-   {
-    "src": "https://archive.org/download/78_serenade-to-a-pair-of-nylons_the-charlie-shavers-quintet-charlie-shavers-buddy-de-f_gbia0339916a/SERENADE%20TO%20A%20PAIR%20OF%20NYLONS%20-%20THE%20CHARLIE%20SHAVERS%20QUINTET.mp3",
-    "length": 209.4,
-    "series": "The Charlie Shavers Quintet",
-    "title": "Serenade to a Pair of Nylons",
-    "date": "1947",
-    "item": "https://archive.org/details/78_serenade-to-a-pair-of-nylons_the-charlie-shavers-quintet-charlie-shavers-buddy-de-f_gbia0339916a"
    },
    {
     "src": "https://archive.org/download/78_moonlight-and-roses-claro-de-luna-y-rosas_hollywood-dance-orchestra-black-moret_gbia0046624a/Moonlight%20and%20Roses%20%28Claro%20de%20%20-%20Hollywood%20Dance%20Orchestra.mp3",
@@ -65649,28 +65161,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_ill-see-you-in-my-dreams_borrah-minevitch-and-his-harmonica-rascals-gus-kahn-isham_gbia0345339b"
    },
    {
-    "src": "https://archive.org/download/78_when-the-circus-comes-to-new-york_dick-haymes-and-helen-forrest-gordon-jenkins-orch_gbia0567589b/WHEN%20THE%20CIRCUS%20COMES%20TO%20N%20-%20Dick%20Haymes%20and%20Helen%20Forrest.mp3",
-    "length": 343.0,
-    "series": "Dick Haymes and Helen Forrest",
-    "title": "When the Circus Comes to New York",
-    "date": "1946",
-    "item": "https://archive.org/details/78_when-the-circus-comes-to-new-york_dick-haymes-and-helen-forrest-gordon-jenkins-orch_gbia0567589b"
-   },
-   {
     "src": "https://archive.org/download/78_stardust_charley-shavers-quintet-earl-hines-charley-shavers-tab-smith-joe-jones-al_gbia0104500a/Stardust%20-%20Charley%20Shavers%20Quintet%20-%20Earl%20Hines.mp3",
     "length": 279.0,
     "series": "Charley Shavers Quintet",
     "title": "Stardust",
     "date": "1944",
     "item": "https://archive.org/details/78_stardust_charley-shavers-quintet-earl-hines-charley-shavers-tab-smith-joe-jones-al_gbia0104500a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-flower-girl-waltz_erv-arluck_gbia0024391/01%20-%20Dos-A-Dos%20%28Fig.%20I%29%3B%20Down%20Center%20%28Fig.%20II%29%20-%20Erv%20Arluck.mp3",
-    "length": 244.0,
-    "series": "Erv Arluck",
-    "title": "Dos-A-Dos (Fig. I); Down Center (Fig. II); The Flower Girl Waltz",
-    "date": "1952",
-    "item": "https://archive.org/details/78_the-flower-girl-waltz_erv-arluck_gbia0024391"
    },
    {
     "src": "https://archive.org/download/78_twilight-el-crepuscolo_carlton-orchestra-wally-g-gero_gbia0067735f/Twilight%20%28El%20Crepuscolo%29%20-%20Carlton%20Orchestra.mp3",
@@ -65713,14 +65209,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_sweet-irish-dream_the-cadets-mickey-tracy-and-his-orchestra-gorman-taylor_gbia0004892a"
    },
    {
-    "src": "https://archive.org/download/78_a-serenade-op-63_chicago-symphony-orchestra-sibelius-frederick-stock_gbia7012291/01%20-%20VALSE%20TRISTE-KUOLEMA%20-%20CHICAGO%20SYMPHONY%20ORCHESTRA.mp3",
-    "length": 244.32,
-    "series": "Rimsky-korsakov",
-    "title": "VALSE TRISTE-KUOLEMA; (a) SERENADE, OP. 63; (b) FLIGHT OF THE BUMBLE BEE",
-    "date": "1927",
-    "item": "https://archive.org/details/78_a-serenade-op-63_chicago-symphony-orchestra-sibelius-frederick-stock_gbia7012291"
-   },
-   {
     "src": "https://archive.org/download/78_hawaii-waltz-hawaiian-airs_louise-ferera_gbia0045716b/Hawaii%20Waltz%20%28Hawaiian%20Airs%29%20-%20Louise%20%26%20Ferera.mp3",
     "length": 257.0,
     "series": "Louise & Ferera",
@@ -65743,14 +65231,6 @@ window.STATIONS = [
     "title": "Dvorak Serenade for Strings (Boyd Neel, 1937-38)",
     "date": "1938",
     "item": "https://archive.org/details/x-214-7-boyd-neel-dvorak-serenade-iv"
-   },
-   {
-    "src": "https://archive.org/download/78_buh-huh_guy-lombardo-und-sein-orchester-heyman-lombardo-loeb_gbia3009695b/BUH-HUH%20-%20Guy%20Lombardo%20und%20sein%20Orchester.mp3",
-    "length": 193.0,
-    "series": "Guy Lombardo und sein Orchester",
-    "title": "Buh-huh",
-    "date": "1938",
-    "item": "https://archive.org/details/78_buh-huh_guy-lombardo-und-sein-orchester-heyman-lombardo-loeb_gbia3009695b"
    },
    {
     "src": "https://archive.org/download/TedLewisAndHisBandtheSweetheartOfSigmaChiAndgoodNight/01SweethearOfSigmaChi-Enhanced.mp3",
@@ -65833,36 +65313,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_wedding-waltz_jerry-w-koprivsek-and-his-orchestra-rupnik-sisters_gbia0061114b"
    },
    {
-    "src": "https://archive.org/download/78_siberian-sleigh-ride_hal-kemp-and-his-orchestra-raymond-scott_gbia7014944b/SIBERIAN%20SLEIGH%20RIDE%20-%20HAL%20KEMP%20AND%20HIS%20ORCHESTRA.mp3",
-    "length": 182.95,
-    "series": "Hal Kemp and His Orchestra",
-    "title": "Siberian Sleigh Ride",
-    "date": "1939",
-    "item": "https://archive.org/details/78_siberian-sleigh-ride_hal-kemp-and-his-orchestra-raymond-scott_gbia7014944b"
-   },
-   {
-    "src": "https://archive.org/download/78_1-dinah-2-today-is-monday-3-killy-killy-4-just-a-song-at-twilight_the-gene-l_gbia0210060b/1.%20Dinah%3B%202.%20Today%20is%20Monday%3B%203.%20%20-%20The%20Gene%20Lowell%20Chorus.mp3",
-    "length": 203.38,
-    "series": "The Gene Lowell Chorus",
-    "title": "1. Dinah; 2. Today is Monday; 3. Killy-Killy; 4. Just A Song at Twilight",
-    "date": "1950",
-    "item": "https://archive.org/details/78_1-dinah-2-today-is-monday-3-killy-killy-4-just-a-song-at-twilight_the-gene-l_gbia0210060b"
-   },
-   {
     "src": "https://archive.org/download/78_did-you-ever-see-a-dream-walking_leslie-hutchinson-mack-gordon-harry-revel_gbia0150306b/DID%20YOU%20EVER%20SEE%20A%20DREAM%20WALKING%20-%20Leslie%20Hutchinson.mp3",
     "length": 197.0,
     "series": "Leslie Hutchinson",
     "title": "Did You Ever See a Dream Walking",
     "date": "1934",
     "item": "https://archive.org/details/78_did-you-ever-see-a-dream-walking_leslie-hutchinson-mack-gordon-harry-revel_gbia0150306b"
-   },
-   {
-    "src": "https://archive.org/download/78_dream-train_jack-teter-trio-jack-teter-baskette-foster_gbia0088622b/Dream%20Train%20-%20Jack%20Teter%20Trio%20-%20Jack%20Teter.mp3",
-    "length": 141.0,
-    "series": "Jack Teter Trio",
-    "title": "Dream Train",
-    "date": "1951",
-    "item": "https://archive.org/details/78_dream-train_jack-teter-trio-jack-teter-baskette-foster_gbia0088622b"
    },
    {
     "src": "https://archive.org/download/78_lullaby-of-the-leaves_erroll-garner-petkere-young_gbia0030844a/Lullaby%20of%20the%20Leaves%20-%20Erroll%20Garner%20-%20Petkere.mp3",
@@ -65895,14 +65351,6 @@ window.STATIONS = [
     "title": "I'll See You in My Dreams",
     "date": "1945",
     "item": "https://archive.org/details/78_ill-see-you-in-my-dreams_george-paxton-and-his-orchestra-alan-dale-isham-jones-gus_gbia0060976a"
-   },
-   {
-    "src": "https://archive.org/download/1.-tchaikovsky-piano-concerto-no.-1/1.%20Tchaikovsky%20Piano%20Concerto%20No.%201.mp3",
-    "length": 193.61,
-    "series": "Freddy Martin",
-    "title": "Tchaikovsky Piano Concerto No. 1",
-    "date": "1947",
-    "item": "https://archive.org/details/1.-tchaikovsky-piano-concerto-no.-1"
    },
    {
     "src": "https://archive.org/download/78_reve-de-soldat-cowboy-serenade_lionel-parent-hall-parent-ed-sanborn-et-son-orch_gbia0286429b/REVE%20DE%20SOLDAT%20%28Cowboy%20Serenade%29%20-%20LIONEL%20PARENT.mp3",
@@ -65953,14 +65401,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_old-timers-waltz_selvins-novelty-orchestra-ben-selvin_gbia0025137b"
    },
    {
-    "src": "https://archive.org/download/78_san-fernando-valley_jan-garber-and-his-orchestra-liz-tilten-gordon-jenkins_gbia0376564a/SAN%20FERNANDO%20VALLEY%20-%20JAN%20GARBER%20and%20his%20ORCHESTRA.mp3",
-    "length": 164.66,
-    "series": "JAN GARBER and his ORCHESTRA",
-    "title": "San Fernando Valley",
-    "date": "1944",
-    "item": "https://archive.org/details/78_san-fernando-valley_jan-garber-and-his-orchestra-liz-tilten-gordon-jenkins_gbia0376564a"
-   },
-   {
     "src": "https://archive.org/download/78_american-students-waltz_harmony-band_gbia0363964a/AMERICAN%20STUDENT%27S%20WALTZ%20-%20Harmony%20Band.mp3",
     "length": 158.66,
     "series": "Harmony Band",
@@ -65975,14 +65415,6 @@ window.STATIONS = [
     "title": "Dream Lover",
     "date": "1929",
     "item": "https://archive.org/details/78_dream-lover_jack-stillman-and-his-orchestra-schertzinger-grey_gbia0448963b"
-   },
-   {
-    "src": "https://archive.org/download/MichiyakkoAnoNeGunshi/Michiyakko%20-%20Ano-ne%20Gunshi.mp3",
-    "length": 179.28,
-    "series": "",
-    "title": "1939 - Yume to Heitai & Ano-ne Gunshi(Dream and Soldier/Do you know that War Messenger...)",
-    "date": "1939",
-    "item": "https://archive.org/details/MichiyakkoAnoNeGunshi"
    },
    {
     "src": "https://archive.org/download/78_tammys-dream_charles-venturo-sextet-venturo-charles-venturo-buck-clayton-specs-pow_gbia0077370a/Tammy%27s%20Dream%20-%20Charles%20Venturo%20Sextet%20-%20Venturo.mp3",
@@ -66017,14 +65449,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_sleepy-time-down-south_bob-andersons-oshkosh-serenaders-joe-rushton-bob-anderson-w_gbia0092875b"
    },
    {
-    "src": "https://archive.org/download/78_moonlight-polka_stanislaw-mroczek-and-orchestra-h.-joskalski_gbia0002236b/Moonlight%20Polka%20-%20Stanislaw%20Mroczek%20and%20Orchestra.mp3",
-    "length": 177.0,
-    "series": "Stanislaw Mroczek and Orchestra",
-    "title": "Moonlight Polka",
-    "date": "1947",
-    "item": "https://archive.org/details/78_moonlight-polka_stanislaw-mroczek-and-orchestra-h.-joskalski_gbia0002236b"
-   },
-   {
     "src": "https://archive.org/download/78_stardust_artie-shaw-and-his-orchestra-parish-carmichael_gbia0011398a/Stardust%20-%20Artie%20Shaw%20and%20His%20Orchestra%20-%20Parish.mp3",
     "length": 218.0,
     "series": "Artie Shaw and His Orchestra",
@@ -66047,14 +65471,6 @@ window.STATIONS = [
     "title": "Shostakovich Golden Mountains Waltz (Kurtz, 1947)",
     "date": "1947",
     "item": "https://archive.org/details/12881-d-shostakovich-waltz"
-   },
-   {
-    "src": "https://archive.org/download/78_1-how-cold-hearted-can-you-get-2-a-mighty-pretty-waltz_preston-ward_gbia0393034b/1-%20HOW%20COLD%20HEARTED%20CAN%20YOU%20GET%3B%202-%20A%20MIGHT%20-%20PRESTON%20WARD.mp3",
-    "length": 129.79,
-    "series": "Preston Ward",
-    "title": "1- How Cold Hearted Can You Get; 2- a Mighty Pretty Waltz",
-    "date": "1952",
-    "item": "https://archive.org/details/78_1-how-cold-hearted-can-you-get-2-a-mighty-pretty-waltz_preston-ward_gbia0393034b"
    },
    {
     "src": "https://archive.org/download/78_serenade_raff-john-mccormack-fritz-kreisler-f-w-rosier-edwin-schneider_gbia0033102a/Serenade%20-%20Raff%20-%20John%20McCormack%20-%20Fritz%20Kreisler.mp3",
@@ -66145,14 +65561,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_invitation-to-the-waltz-first-record_philadelphia-symphony-orch-weber-leopold-st_gbia7003480a"
    },
    {
-    "src": "https://archive.org/download/78_a-fantasie-impromptu-in-c-sharp-minor-op-66-op-posth-conclusion-b-waltz-i_gbia7015423b/%28a%29%20FANTASIE-IMPROMPTU%20IN%20C%20SHARP%20MINOR%2C%20OP.%20-%20JOSE%20ITURBI.mp3",
-    "length": 218.16,
-    "series": "Jose Iturbi",
-    "title": "(a) FANTASIE-IMPROMPTU IN C SHARP MINOR, OP. 66 (OP. POSTH.)-CONCLUSION (b) WALTZ IN D FLAT, OP. 64, NO. 1",
-    "date": "1945",
-    "item": "https://archive.org/details/78_a-fantasie-impromptu-in-c-sharp-minor-op-66-op-posth-conclusion-b-waltz-i_gbia7015423b"
-   },
-   {
     "src": "https://archive.org/download/1932-USA-Archives-1932-12-00-Eddy-Duchin-Central-Park-Casino-Orch-One-Hour-With-You/1932%28USA%29Archives19321200EddyDuchinCentralParkCasinoOrch-OneHourWithYou.mp3",
     "length": 285.05,
     "series": "Eddy Duchin Central Park Casino Orch",
@@ -66193,14 +65601,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_wild-flower-waltz_diarlofs-orchestra-marten-earl_gbia0006065b"
    },
    {
-    "src": "https://archive.org/download/warsaw-concerto/Warsaw%20Concerto.mp3",
-    "length": 160.78,
-    "series": "Carmen  Cavallaro And His Orchestra",
-    "title": "Warsaw Concerto",
-    "date": "1945",
-    "item": "https://archive.org/details/warsaw-concerto"
-   },
-   {
     "src": "https://archive.org/download/78_all-i-do-is-dream-of-you_larry-vincent-freed-brown_gbia0089659b/All%20I%20Do%20Is%20Dream%20of%20You%20-%20Larry%20Vincent.mp3",
     "length": 177.0,
     "series": "Larry Vincent",
@@ -66233,14 +65633,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/KabaretowaOrkiestraRozmaitoscWalc1925"
    },
    {
-    "src": "https://archive.org/download/if-you-talk-in-your-sleep-dont-mention-my-name/If%20You%20Talk%20In%20Your%20Sleep%2C%20Don%60t%20Mention%20My%20Name%20%28Flat%20eq%29.mp3",
-    "length": 165.84,
-    "series": "Lawrence Welk - Parnell Grina",
-    "title": "If You Talk In Your Sleep, Don`t Mention My Name",
-    "date": "1940",
-    "item": "https://archive.org/details/if-you-talk-in-your-sleep-dont-mention-my-name"
-   },
-   {
     "src": "https://archive.org/download/78_it-had-to-be-you_georgie-auld-and-his-orchestra-lynne-stevens-isham-jones_gbia0210664b/IT%20HAD%20TO%20BE%20YOU%20-%20GEORGIE%20AULD%20And%20His%20Orchestra.mp3",
     "length": 176.45,
     "series": "GEORGIE AULD And His Orchestra",
@@ -66249,28 +65641,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_it-had-to-be-you_georgie-auld-and-his-orchestra-lynne-stevens-isham-jones_gbia0210664b"
    },
    {
-    "src": "https://archive.org/download/78_rumba-della-luna-moonlight-rhumba_enzo-di-mola-orchestra-di-nick-aversano-di-mola_gbia0021076b/Rumba%20Della%20Luna%20-%20Moonlight%20Rhumba%20-%20Enzo%20Di%20Mola.mp3",
-    "length": 181.0,
-    "series": "Enzo Di Mola",
-    "title": "Rumba Della Luna - Moonlight Rhumba",
-    "date": "1945",
-    "item": "https://archive.org/details/78_rumba-della-luna-moonlight-rhumba_enzo-di-mola-orchestra-di-nick-aversano-di-mola_gbia0021076b"
-   },
-   {
     "src": "https://archive.org/download/78_serenade-der-var-engang_aksel-schitz-det-kgl-kapel-dreachmann-lange-mller-j_gbia7013408a/SERENADE%20-%20%2C%2CDER%20VAR%20ENGANG%22%20-%20AKSEL%20SCHI%C3%98TZ.mp3",
     "length": 242.11,
     "series": "Aksel Schiøtz",
     "title": "Serenade - ,,der Var Engang\"",
     "date": "1949",
     "item": "https://archive.org/details/78_serenade-der-var-engang_aksel-schitz-det-kgl-kapel-dreachmann-lange-mller-j_gbia7013408a"
-   },
-   {
-    "src": "https://archive.org/download/1933-USA-Archives-1933-06-28-Hal-Kemp-Orch-Bolero/1933%28USA%29Archives19330628HalKempOrch-Bolero.mp3",
-    "length": 194.28,
-    "series": "Hal Kemp Orch",
-    "title": "Hal Kemp Orch Bolero",
-    "date": "1933",
-    "item": "https://archive.org/details/1933-USA-Archives-1933-06-28-Hal-Kemp-Orch-Bolero"
    },
    {
     "src": "https://archive.org/download/78_goodnight-sweetheart_teddy-walters-sonny-burke-and-his-orchestra-noble-campbell-con_gbia0102225b/Goodnight%20Sweetheart%20-%20Teddy%20Walters%20-%20Sonny%20Burke%20and%20his%20Orchestra.mp3",
@@ -66359,14 +65735,6 @@ window.STATIONS = [
     "title": "SERENADE IN D MAJOR (D DUR), K.239 (SERENATA NOTTURNA) 2nd Movement (Part 1) Menuetto & Trio",
     "date": "1938",
     "item": "https://archive.org/details/78_serenade-in-d-major-d-dur-k239-serenata-notturna-2nd-movement-part-1-menuet_gbia0291888b"
-   },
-   {
-    "src": "https://archive.org/download/78_jungle-twilight_lloyd-glenn-lloyd-glenn-at-the-88-earl-burton-bob-harvey-billy-ha_gbia0007760b/Jungle%20Twilight%20-%20Lloyd%20Glenn%20-%20Lloyd%20Glenn%20At%20The%20%2288%22.mp3",
-    "length": 163.0,
-    "series": "Lloyd Glenn",
-    "title": "Jungle Twilight",
-    "date": "1952",
-    "item": "https://archive.org/details/78_jungle-twilight_lloyd-glenn-lloyd-glenn-at-the-88-earl-burton-bob-harvey-billy-ha_gbia0007760b"
    },
    {
     "src": "https://archive.org/download/78_a-dream_vincent-c-buono-j-c-bartlett_gbia3018378a/A%20DREAM%20-%20VINCENT%20C.%20BUONO%20-%20J.%20C.%20Bartlett.mp3",
@@ -66473,14 +65841,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_the-last-waltz_corky-carpenter-the-texas-playboys-pierce-freeman_gbia0008687a"
    },
    {
-    "src": "https://archive.org/download/MOZARTSerenadeEineKleineNachtmusikK.525-NEWTRANSFER01.I.Allegro/01.I.Allegro.mp3",
-    "length": 248.03,
-    "series": "Bruno Walter, Vienna Philharmonic Orchestra",
-    "title": "I. Allegro",
-    "date": "1936",
-    "item": "https://archive.org/details/MOZARTSerenadeEineKleineNachtmusikK.525-NEWTRANSFER01.I.Allegro"
-   },
-   {
     "src": "https://archive.org/download/CarusoBartlettlyrCory/CarusoBartlettlyrCory-ADream.mp3",
     "length": 200.0,
     "series": "Caruso",
@@ -66527,14 +65887,6 @@ window.STATIONS = [
     "title": "In the Chapel in the Moonlight",
     "date": "1937",
     "item": "https://archive.org/details/78_in-the-chapel-in-the-moonlight_roy-fox-and-his-orchestra-denny-dennis-billy-hill_gbia7008855b"
-   },
-   {
-    "src": "https://archive.org/download/78_call-me-darling-call-me-sweetheart-call-me-dear-yah-ta-ta-yah-ta-ta_the-king-si_gbia0423236a/CALL%20ME%20D%20-%20The%20King%20Sisters%2C%20Buddy%20Cole%20and%20his%20Orchestra.mp3",
-    "length": 324.87,
-    "series": "The King Sisters, Buddy Cole and his Orchestra",
-    "title": "Call Me Darling, Call Me Sweetheart, Call Me Dear; Yah-ta-ta, Yah-ta-ta",
-    "date": "1945",
-    "item": "https://archive.org/details/78_call-me-darling-call-me-sweetheart-call-me-dear-yah-ta-ta-yah-ta-ta_the-king-si_gbia0423236a"
    },
    {
     "src": "https://archive.org/download/78_im-waiting-for-ships-that-never-come-in-esperando-en-vano_wayne-king-his-orche_gbia0196767a/I%27M%20WAITING%20FOR%20SHIPS%20THAT%20NE%20-%20Wayne%20King%20%26%20his%20Orchestra.mp3",
@@ -66593,14 +65945,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_save-the-last-waltz-for-me_max-terrs-orchestra-johnson-austin_gbia0003584a"
    },
    {
-    "src": "https://archive.org/download/78_family-waltz_michael-hermans-folk-orchestra_gbia0048084/05%20-%20Alexandrovsky%20-%20Michael%20Herman%27s%20Folk%20Orchestra.mp3",
-    "length": 175.0,
-    "series": "Michael Herman's Folk Orchestra",
-    "title": "Alexandrovsky; Family Waltz",
-    "date": "1950",
-    "item": "https://archive.org/details/78_family-waltz_michael-hermans-folk-orchestra_gbia0048084"
-   },
-   {
     "src": "https://archive.org/download/78_anniversary-waltz_herb-kern-lloyd-sloop_gbia0043087b/Anniversary%20Waltz%20-%20Herb%20Kern%20-%20Lloyd%20Sloop.mp3",
     "length": 178.0,
     "series": "Herb Kern",
@@ -66609,28 +65953,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_anniversary-waltz_herb-kern-lloyd-sloop_gbia0043087b"
    },
    {
-    "src": "https://archive.org/download/78_what-a-perfect-combination_ray-noble-and-his-orchestra-kalmar-ruby-caesar-akst_gbia0027673a/What%20a%20Perfect%20Combination%20-%20Ray%20Noble%20and%20His%20Orchestra.mp3",
-    "length": 156.0,
-    "series": "Ray Noble and His Orchestra",
-    "title": "What a Perfect Combination",
-    "date": "1933",
-    "item": "https://archive.org/details/78_what-a-perfect-combination_ray-noble-and-his-orchestra-kalmar-ruby-caesar-akst_gbia0027673a"
-   },
-   {
     "src": "https://archive.org/download/78_the-waltz-of-long-ago_lenox-dance-orchestra-berlin_gbia0009035a/The%20Waltz%20of%20Long%20Ago%20-%20Lenox%20Dance%20Orchestra.mp3",
     "length": 200.0,
     "series": "Lenox Dance Orchestra",
     "title": "The Waltz of Long Ago",
     "date": "1923",
     "item": "https://archive.org/details/78_the-waltz-of-long-ago_lenox-dance-orchestra-berlin_gbia0009035a"
-   },
-   {
-    "src": "https://archive.org/download/78_dreamy-day-blues_t-s-mims-combo-dorothy-washington-fenner-t-s-mims-john-reager_gbia0064397b/Dreamy%20Day%20Blues%20-%20T.%20S.%20Mims%20Combo%20-%20Dorothy%20Washington.mp3",
-    "length": 184.0,
-    "series": "T. S. Mims Combo",
-    "title": "Dreamy Day Blues",
-    "date": "1947",
-    "item": "https://archive.org/details/78_dreamy-day-blues_t-s-mims-combo-dorothy-washington-fenner-t-s-mims-john-reager_gbia0064397b"
    },
    {
     "src": "https://archive.org/download/78_einsam-in-trben-tagen-elsas-dream_maria-jeritza-wagner_gbia7003651a/EINSAM%20IN%20TR%C3%9CBEN%20TAGEN%20%28ELSA%27S%20DREAM%29%20-%20MARIA%20JERITZA.mp3",
@@ -66745,14 +66073,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_a-moszkowski-serenade-b-chopin-valse_paul-henneberg-moszkowski-chopin_gbia0438590a"
    },
    {
-    "src": "https://archive.org/download/78_piano-concerto-in-b-flat_freddy-martin-and-his-orch.-tschaikowsy-ray-austin_gbia0009473b/Piano%20Concerto%20In%20B%20Flat%20-%20Freddy%20Martin%20and%20his%20Orch..mp3",
-    "length": 200.0,
-    "series": "Freddy Martin and his Orchestra",
-    "title": "Piano Concerto In B Flat",
-    "date": "1941",
-    "item": "https://archive.org/details/78_piano-concerto-in-b-flat_freddy-martin-and-his-orch.-tschaikowsy-ray-austin_gbia0009473b"
-   },
-   {
     "src": "https://archive.org/download/78_waltz-of-the-wind_ruby-wright-eddie-smith-orchestra-ruby-wright-and-the-varsitones_gbia0198595b/WALTZ%20OF%20THE%20WIND%20-%20RUBY%20WRIGHT%20-%20Eddie%20Smith%20Orchestra.mp3",
     "length": 158.9,
     "series": "Ruby Wright",
@@ -66857,14 +66177,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_el-testament-damelia-the-will-of-amelia_victoria-de-los-angeles-renata-tarrago-c_gbia0067558"
    },
    {
-    "src": "https://archive.org/download/BlueSkies_201811/Blue%20Skies.mp3",
-    "length": 170.0,
-    "series": "Betty Hutton - Paul Weston and his Orchestra",
-    "title": "Blue Skies",
-    "date": "1945",
-    "item": "https://archive.org/details/BlueSkies_201811"
-   },
-   {
     "src": "https://archive.org/download/78_v-zapadu-solnce-tone-sunset-waltz/1025%2014.mp3",
     "length": 165.0,
     "series": "Kusar, Joe",
@@ -66953,14 +66265,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_it-took-a-dream-to-wake-me-up_jimmy-featherstone-and-his-orchestra-peggy-murdoch-ji_gbia0008477b"
    },
    {
-    "src": "https://archive.org/download/oh-why-oh-why-did-i-ever-leave-wyoming-remater/%28Oh%20Why%2C%20Oh%20Why%2C%20Did%20I%20Ever%20Leave%29%20Wyoming%20%20%28250%2C%20-16%29%20.mp3",
-    "length": 202.0,
-    "series": "Dick Jurgens - Jimmy Castle - Orchestra - Al Galante and Band",
-    "title": "(Oh Why, Oh Why, Did I Ever Leave) Wyoming",
-    "date": "1946",
-    "item": "https://archive.org/details/oh-why-oh-why-did-i-ever-leave-wyoming-remater"
-   },
-   {
     "src": "https://archive.org/download/78_sleepy-time-gal_the-three-harpers-alden-egan-lorenzo-whiting_gbia0128188a/SLEEPY%20TIME%20GAL%20-%20The%20Three%20Harpers%20-%20Alden.mp3",
     "length": 179.0,
     "series": "The Three Harpers",
@@ -67025,22 +66329,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_i-can-dream-cant-i_beryl-booker-her-piano-and-trio_gbia0061639b"
    },
    {
-    "src": "https://archive.org/download/78_its-in-the-book_johnny-standley-horace-heidt-and-his-musical-knights_gbia0214527a/IT%27S%20IN%20THE%20BOOK%20-%20JOHNNY%20STANDLEY%20-%20HORACE%20HEIDT%20and%20His%20Musical%20Knights.mp3",
-    "length": 216.38,
-    "series": "Johnny Standley",
-    "title": "It's in the Book",
-    "date": "1952",
-    "item": "https://archive.org/details/78_its-in-the-book_johnny-standley-horace-heidt-and-his-musical-knights_gbia0214527a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-twilight-of-the-gods-brnnhilde-kindles-the-funeral-pyre-part-3-concl_aust/D_706_Cc_2806-2.mp3",
-    "length": 279.0,
-    "series": "Austral, Florence",
-    "title": "The Twilight Of The Gods Brűnnhilde Kindles The Funeral Pyre - part 3 (concl.)",
-    "date": "1922",
-    "item": "https://archive.org/details/78_the-twilight-of-the-gods-brnnhilde-kindles-the-funeral-pyre-part-3-concl_aust"
-   },
-   {
     "src": "https://archive.org/download/78_i-dream-of-you_art-kassel-and-his-kassels-in-the-air-orchestra-jimmy-featherstone_gbia0064328a/I%20Dream%20of%20You%20-%20Art%20Kassel%20and%20%22His%20Kassels-in-the-Air%22%20Orchestra.mp3",
     "length": 194.0,
     "series": "Art Kassel and \"His Kassels-in-the-Air\" Orchestra",
@@ -67057,14 +66345,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_red-rose-waltz_gloria-hart-and-the-heartbeats-art-kassel-orch-art-kassel_gbia0041999b"
    },
    {
-    "src": "https://archive.org/download/78_sweet-georgia-brown_mike-lala-and-his-la-lune-orchestra-ben-bernie-maceo-pinkard-ke_gbia0059035b/Sweet%20Georgia%20Brown%20-%20Mike%20Lala%20and%20His%20La%20Lune%20Orchestra.mp3",
-    "length": 160.0,
-    "series": "Mike Lala and His La Lune Orchestra",
-    "title": "Sweet Georgia Brown",
-    "date": "1954",
-    "item": "https://archive.org/details/78_sweet-georgia-brown_mike-lala-and-his-la-lune-orchestra-ben-bernie-maceo-pinkard-ke_gbia0059035b"
-   },
-   {
     "src": "https://archive.org/download/78_a-larlesienne-adagietto-bizet-b-serenade-espagnole_albert-spalding-andre-re_gbia0023255a/%28a%29%20L%27Arlesienne%20-%20Adagietto%20Bizet%3B%20%28b%29%20%20-%20Albert%20Spalding.mp3",
     "length": 263.0,
     "series": "Albert Spalding",
@@ -67079,14 +66359,6 @@ window.STATIONS = [
     "title": "Moon Dream",
     "date": "1949",
     "item": "https://archive.org/details/78_moon-dream_tab-smith-his-fabulous-alto-sax-and-his-orchestra-t-smith-e-anderson_gbia0076640b"
-   },
-   {
-    "src": "https://archive.org/download/78_never-been-kissed_freddy-martin-and-his-orchestra-merv-griffin-and-the-martin-men-c_gbia7000676b/NEVER%20BEEN%20KISSED%20-%20FREDDY%20MARTIN%20AND%20HIS%20ORCHESTRA.mp3",
-    "length": 157.9,
-    "series": "Freddy Martin and His Orchestra",
-    "title": "Never Been Kissed",
-    "date": "1951",
-    "item": "https://archive.org/details/78_never-been-kissed_freddy-martin-and-his-orchestra-merv-griffin-and-the-martin-men-c_gbia7000676b"
    },
    {
     "src": "https://archive.org/download/78_count-of-luxembourg-waltz_marek-weber-and-his-orchestra-lehar_gbia7016230b/%22COUNT%20OF%20LUXEMBOURG%22%20WALTZ%20-%20MAREK%20WEBER%20AND%20HIS%20ORCHESTRA.mp3",
@@ -67177,14 +66449,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_lullaby-waltz-od-krzaczka-do-krzaczka_johnny-lenards-orchestra_gbia0025162a"
    },
    {
-    "src": "https://archive.org/download/78_grillito-the-little-cricket_henry-king-his-orchestra-harold-balter_gbia0168368a/GRILLITO%20%28The%20Little%20Cricket%29%20-%20HENRY%20KING%20%26%20HIS%20ORCHESTRA.mp3",
-    "length": 172.0,
-    "series": "Henry King & His Orchestra",
-    "title": "GRILLITO (The Little Cricket)",
-    "date": "1946",
-    "item": "https://archive.org/details/78_grillito-the-little-cricket_henry-king-his-orchestra-harold-balter_gbia0168368a"
-   },
-   {
     "src": "https://archive.org/download/ColemanHawkinsAndHisOrchestra-NetchasDream/Coleman_Hawkins_Orchestra-Netchas_Dream-1935.mp3",
     "length": 156.0,
     "series": "Coleman Hawkins and his Orchestra",
@@ -67201,14 +66465,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/ralph-kirbery-collection-1925-1935-the-dream-singer-aka-ralph-kirberry-vocal-recordings"
    },
    {
-    "src": "https://archive.org/download/78_from-one-till-two-i-always-dream-of-you_emil-coleman-his-club-trocadero-orches_gbia0079915a/From%20One%20%27Ti%20-%20Emil%20Coleman%20%26%20His%20club%20Trocadero%20Orchestra.mp3",
-    "length": 182.0,
-    "series": "Emil Coleman & His club Trocadero Orchestra",
-    "title": "From One 'Till Two (I Always Dream of You)",
-    "date": "1924",
-    "item": "https://archive.org/details/78_from-one-till-two-i-always-dream-of-you_emil-coleman-his-club-trocadero-orches_gbia0079915a"
-   },
-   {
     "src": "https://archive.org/download/78_1-wiegenlied-cradle-song-2-sapphische-ode-sapphic-ode_hulda-lashanska-brahms_gbia0105056b/1.%20Wiegenlied%20%28Cradle%20Song%29%202.%20Sapphisch%20-%20Hulda%20Lashanska.mp3",
     "length": 249.0,
     "series": "Hulda Lashanska",
@@ -67217,28 +66473,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_1-wiegenlied-cradle-song-2-sapphische-ode-sapphic-ode_hulda-lashanska-brahms_gbia0105056b"
    },
    {
-    "src": "https://archive.org/download/78_dont-stop-kissing-me-goodnight_bonnie-lou-bonnie-lou-sheb-wooley_gbia0378489a/DON%27T%20STOP%20KISSING%20ME%20GOODNIGHT%20-%20BONNIE%20LOU.mp3",
-    "length": 148.27,
-    "series": "Bonnie Lou",
-    "title": "Don't Stop Kissing Me Goodnight",
-    "date": "1954",
-    "item": "https://archive.org/details/78_dont-stop-kissing-me-goodnight_bonnie-lou-bonnie-lou-sheb-wooley_gbia0378489a"
-   },
-   {
     "src": "https://archive.org/download/1933-USA-Archives-1933-06-14-Freddy-Martin-Orch-Moonstruck/1933%28USA%29Archives19330614FreddyMartinOrch-Moonstruck.mp3",
     "length": 193.8,
     "series": "Freddy Martin Orch",
     "title": "Freddy Martin Orch Moonstruck",
     "date": "1933",
     "item": "https://archive.org/details/1933-USA-Archives-1933-06-14-Freddy-Martin-Orch-Moonstruck"
-   },
-   {
-    "src": "https://archive.org/download/78_the-story-of-midsummer-nights-dream-part-1_edna-bailey_gbia0083184/01%20-%20The%20Story%20of%20Midsummer%20Nights%20Dream%20Part%201%20-%20Edna%20Bailey-restored.mp3",
-    "length": 293.0,
-    "series": "Edna Bailey",
-    "title": "The Story of Midsummer Night's Dream Part 2; The Story of Midsummer Night's Dream Part 1",
-    "date": "1916",
-    "item": "https://archive.org/details/78_the-story-of-midsummer-nights-dream-part-1_edna-bailey_gbia0083184"
    },
    {
     "src": "https://archive.org/download/78_give-me-the-moonlight_alan-dale-and-alan-dale-ray-bloch-and-his-orchestra-brown-von_gbia0407037b/GIVE%20ME%20THE%20MOONLIGHT%20-%20ALAN%20DALE%20and%20ALAN%20DALE.mp3",
@@ -67255,14 +66495,6 @@ window.STATIONS = [
     "title": "The First Waltz (Belongs To Me)",
     "date": "1922",
     "item": "https://archive.org/details/78_the-first-waltz-belongs-to-me_langes-symphonic-dance-orchestra-russell-robinson_gbia0018009a"
-   },
-   {
-    "src": "https://archive.org/download/78_damnation-of-faust-mephistopheles-serenade-while-you-play-at-sleeping_berlioz-ma_gbia0000633a/Damnation%20of%20Faust-Mephistopheles%27%20Serenade%20%28Whi%20-%20Berlioz.mp3",
-    "length": 109.0,
-    "series": "Berlioz",
-    "title": "Damnation of Faust-Mephistopheles' Serenade (While You Play at Sleeping)",
-    "date": "1925",
-    "item": "https://archive.org/details/78_damnation-of-faust-mephistopheles-serenade-while-you-play-at-sleeping_berlioz-ma_gbia0000633a"
    },
    {
     "src": "https://archive.org/download/78_penthouse-serenade-when-were-alone_sarah-vaughan-teddy-wilson-octet-jason-burton_gbia0010711b/Penthouse%20Serenade%20%28When%20We%27re%20Alone%29%20-%20Sarah%20Vaughan.mp3",
@@ -67313,28 +66545,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_angels-dream-waltz_andrew-herman_gbia0179630b"
    },
    {
-    "src": "https://archive.org/download/78_batamu_henry-king-and-his-orchestra_gbia0168365b/BATAMU%20-%20HENRY%20KING%20AND%20HIS%20ORCHESTRA.mp3",
-    "length": 177.0,
-    "series": "Henry King and His Orchestra",
-    "title": "Batamu",
-    "date": "1946",
-    "item": "https://archive.org/details/78_batamu_henry-king-and-his-orchestra_gbia0168365b"
-   },
-   {
     "src": "https://archive.org/download/78_mystery-waltz_raymond-scott-and-his-orchestra-raymond-scott_gbia0072143b/Mystery%20Waltz%20-%20Raymond%20Scott%20and%20His%20Orchestra.mp3",
     "length": 178.0,
     "series": "Raymond Scott and His Orchestra",
     "title": "Mystery Waltz",
     "date": "1953",
     "item": "https://archive.org/details/78_mystery-waltz_raymond-scott-and-his-orchestra-raymond-scott_gbia0072143b"
-   },
-   {
-    "src": "https://archive.org/download/78_my-reverie-blow-gabriel-blow_bea-wain-vaughn-monroe-and-his-orchestra-debussy-por_gbia0346956b/MY%20REVERIE%20%3B%20BLOW%20GABRIEL%20BLOW%20-%20Bea%20Wain.mp3",
-    "length": 229.58,
-    "series": "Bea Wain",
-    "title": "My Reverie ; Blow Gabriel Blow",
-    "date": "1944",
-    "item": "https://archive.org/details/78_my-reverie-blow-gabriel-blow_bea-wain-vaughn-monroe-and-his-orchestra-debussy-por_gbia0346956b"
    },
    {
     "src": "https://archive.org/download/78_a-by-the-waters-b-lullaby_frieda-hempel-lieurance_gbia0172998a/%28a%29%20By%20The%20Waters%20%28b%29%20Lullaby%20-%20FRIEDA%20HEMPEL.mp3",
@@ -67391,14 +66607,6 @@ window.STATIONS = [
     "title": "Nocturne in B Flat Minor",
     "date": "1946",
     "item": "https://archive.org/details/78_nocturne-in-b-flat-minor_hazel-scott-chopin_gbia0427801b"
-   },
-   {
-    "src": "https://archive.org/download/78_revolutionary-etude-minute-waltz-fantaisie_stephen-kovacs-frederic-chopin_gbia0323143b/REVOLUTIONARY%20ETUDE%20MINUTE%20WALTZ%20FANTAISI%20-%20STEPHEN%20KOVACS.mp3",
-    "length": 156.05,
-    "series": "Stephen Kovacs",
-    "title": "Revolutionary Etude Minute Waltz Fantaisie",
-    "date": "1945",
-    "item": "https://archive.org/details/78_revolutionary-etude-minute-waltz-fantaisie_stephen-kovacs-frederic-chopin_gbia0323143b"
    },
    {
     "src": "https://archive.org/download/78_cradle-song_ernestine-schumann-heink-alexander-macfadyen_gbia0043572a/Cradle%20Song%20-%20Ernestine%20Schumann-Heink%20-%20Alexander%20MacFadyen.mp3",
@@ -67471,14 +66679,6 @@ window.STATIONS = [
     "title": "Waltz in B Minor",
     "date": "1923",
     "item": "https://archive.org/details/78_waltz-in-b-minor_sergei-rachmaninoff-chopin_gbia0189014b"
-   },
-   {
-    "src": "https://archive.org/download/78_old-aunt-jemima-dinahs-in-the-kitchen-i-told-her-that-i-loved-her-in-the-moonlig_gbia0061186/03%20-%20Down%20Mobile%3B%20Way%20down%20Yonder%20in%20th%20-%20The%20Singing%20Sentinels.mp3",
-    "length": 181.0,
-    "series": "The Singing Sentinels",
-    "title": "Down Mobile; Way down Yonder in the Cornfield; Old Aunt Jemima; Dinah's in the Kitchen; I Told Her That I Loved Her in the Moonlight",
-    "date": "1946",
-    "item": "https://archive.org/details/78_old-aunt-jemima-dinahs-in-the-kitchen-i-told-her-that-i-loved-her-in-the-moonlig_gbia0061186"
    },
    {
     "src": "https://archive.org/download/78_danube-waves-waltz_argentine-marimba-band-k-ivanovici_gbia0068884b/Danube%20Waves%20Waltz%20-%20Argentine%20Marimba%20Band.mp3",
@@ -67665,14 +66865,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_serenade_herman-chittison-trio-herman-chittison-franz-shubert-carlton-powell-james_gbia0001052a"
    },
    {
-    "src": "https://archive.org/download/78_chopinesque-minute-waltz_alberto-socarras-his-magic-flute--his-orch.-chopin-soca_gbia0008885b/Chopinesque%20%28Minute%20Waltz%29%20-%20Alberto%20Socarras%20his%20Magic%20Flute%20%26%20his%20Orch..mp3",
-    "length": 151.0,
-    "series": "Alberto Socarras his Magic Flute & his Orch.",
-    "title": "Chopinesque (Minute Waltz)",
-    "date": "1950",
-    "item": "https://archive.org/details/78_chopinesque-minute-waltz_alberto-socarras-his-magic-flute--his-orch.-chopin-soca_gbia0008885b"
-   },
-   {
     "src": "https://archive.org/download/78_the-birthday-serenade_zon-o-phone-orchestra_gbia0079547a/The%20Birthday%20Serenade%20-%20Zon-o-phone%20Orchestra.mp3",
     "length": 169.0,
     "series": "Zon-o-phone Orchestra",
@@ -67785,14 +66977,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_old-kentucky-moonlight_arthur-fields-cispie-van-alstyne_gbia0094499b"
    },
    {
-    "src": "https://archive.org/download/1935-USA-Archives-1935-02-28-Dick-jurgens-Orch-v-Winifred-Shaw-Lullaby-of-Broadway/1935%28USA%29Archives19350228DickjurgensOrchvWinifredShaw-LullabyofBroadway.mp3",
-    "length": 169.34,
-    "series": "Dick jurgens Orch",
-    "title": "Dick jurgens Orch v Winifred Shaw Lullaby of Broadway",
-    "date": "1935",
-    "item": "https://archive.org/details/1935-USA-Archives-1935-02-28-Dick-jurgens-Orch-v-Winifred-Shaw-Lullaby-of-Broadway"
-   },
-   {
     "src": "https://archive.org/download/78_marta_pagan-moon_les-allen_mantovani_2022_wave/marta_pagan%20moon_mantovani_les%20allen_2022.mp3",
     "length": 353.54,
     "series": "Mantovani and His String Orchestra",
@@ -67825,14 +67009,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_sernata-serenade_amelita-galli-curci-g-a-cesareo-f-paolo-tosti-homer-samuels_gbia0016552b"
    },
    {
-    "src": "https://archive.org/download/78_live-while-youre-young-dream-while-youre-old_willet-slim-willet-and-his-hired-h_gbia0000539b/Live%20While%20You%27re%20Young%20%28Dream%20While%20You%27re%20Old%29%20-%20Willet.mp3",
-    "length": 153.0,
-    "series": "Willet",
-    "title": "Live While You're Young (Dream While You're Old)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_live-while-youre-young-dream-while-youre-old_willet-slim-willet-and-his-hired-h_gbia0000539b"
-   },
-   {
     "src": "https://archive.org/download/78_niebieski-walc-blue-waltz_stas-jaworski-gene-wisniewski-i-jego-harmony-bells-ork_gbia0027840b/Niebieski%20Walc%20%28Blue%20Waltz%29%20-%20Stas%20Jaworski.mp3",
     "length": 184.0,
     "series": "Stas Jaworski",
@@ -67855,14 +67031,6 @@ window.STATIONS = [
     "title": "Eddy Duchin Orch Hold Me",
     "date": "1933",
     "item": "https://archive.org/details/1933-USA-Archives-1933-03-23-Eddy-Duchin-Orch-Hold-Me"
-   },
-   {
-    "src": "https://archive.org/download/EmalineLawrenceWelk/Emaline%20-%20Lawrence%20Welk.mp3",
-    "length": 143.0,
-    "series": "Lawrence Welk",
-    "title": "Emaline - Lawrence Welk",
-    "date": "1938",
-    "item": "https://archive.org/details/EmalineLawrenceWelk"
    },
    {
     "src": "https://archive.org/download/1933-USA-Archives-1933-09-07-Hal-Kemp-Orch-Its-Only-A-Paper-Moon/1933%28USA%29Archives19330907HalKempOrch-ItsOnlyAPaperMoon.mp3",
@@ -67905,14 +67073,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_love-is-the-sweetest-thing_ray-noble-and-his-new-mayfair-orchestra-ray-noble_gbia0107325b"
    },
    {
-    "src": "https://archive.org/download/78_with-a-smile-and-a-song_guy-lombardo-and-his-royal-canadians-churchill-morey_gbia7008808a/WITH%20A%20SMILE%20AND%20A%20SONG%20-%20GUY%20LOMBARDO%20AND%20HIS%20ROYAL%20CANADIANS.mp3",
-    "length": 183.14,
-    "series": "Guy Lombardo and His Royal Canadians",
-    "title": "With a Smile and a Song",
-    "date": "1938",
-    "item": "https://archive.org/details/78_with-a-smile-and-a-song_guy-lombardo-and-his-royal-canadians-churchill-morey_gbia7008808a"
-   },
-   {
     "src": "https://archive.org/download/78_shepherds-serenade_leo-reisman-and-his-orchestra-grey-stothart_gbia0208563a/SHEPHERD%27S%20SERENADE%20-%20LEO%20REISMAN%20AND%20HIS%20ORCHESTRA.mp3",
     "length": 191.42,
     "series": "Leo Reisman and His Orchestra",
@@ -67921,36 +67081,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_shepherds-serenade_leo-reisman-and-his-orchestra-grey-stothart_gbia0208563a"
    },
    {
-    "src": "https://archive.org/download/78_my-rancho-rio-grande_shep-fields-and-his-orchestra-bob-johnstone-cindy-walker_gbia0072482b/My%20Rancho%20Rio%20Grande%20-%20Shep%20Fields%20and%20his%20Orchestra.mp3",
-    "length": 173.0,
-    "series": "Shep Fields and his Orchestra",
-    "title": "My Rancho Rio Grande",
-    "date": "1948",
-    "item": "https://archive.org/details/78_my-rancho-rio-grande_shep-fields-and-his-orchestra-bob-johnstone-cindy-walker_gbia0072482b"
-   },
-   {
     "src": "https://archive.org/download/1931-USA-Archives-1931-02-18-Wayne-King-Orch-Dream-A-Little-Dream-Of-Me/1931%28USA%29Archives19310218WayneKingOrch-DreamALittleDreamOfMe.mp3",
     "length": 201.22,
     "series": "Wayne King Orchestra",
     "title": "Wayne King Orch Dream A Little Dream Of Me",
     "date": "1931",
     "item": "https://archive.org/details/1931-USA-Archives-1931-02-18-Wayne-King-Orch-Dream-A-Little-Dream-Of-Me"
-   },
-   {
-    "src": "https://archive.org/download/78_atlanta-ga_shep-fields-and-his-orchestra-jack-prince-skylar-and-shaftel_gbia0079892a/Atlanta%20G.A.%20-%20Shep%20Fields%20and%20His%20Orchestra.mp3",
-    "length": 179.0,
-    "series": "Shep Fields and His Orchestra",
-    "title": "Atlanta G.A.",
-    "date": "1946",
-    "item": "https://archive.org/details/78_atlanta-ga_shep-fields-and-his-orchestra-jack-prince-skylar-and-shaftel_gbia0079892a"
-   },
-   {
-    "src": "https://archive.org/download/78_no-love-no-nothin_jan-garber-and-his-orchestra-liz-tilton-robin-warren_gbia0061333b/No%20Love%2C%20No%20Nothin%27%20-%20Jan%20Garber%20and%20his%20Orchestra.mp3",
-    "length": 199.0,
-    "series": "Jan Garber and his Orchestra",
-    "title": "No Love, No Nothin'",
-    "date": "1943",
-    "item": "https://archive.org/details/78_no-love-no-nothin_jan-garber-and-his-orchestra-liz-tilton-robin-warren_gbia0061333b"
    },
    {
     "src": "https://archive.org/download/78_the-world-is-in-my-arms-el-mundo-en-mis-brazos_swing-and-sway-with-sammy-kaye-and_gbia0096971a/The%20Wor%20-%20Swing%20and%20Sway%20with%20Sammy%20Kaye%20and%20his%20Orchestra.mp3",
@@ -67977,22 +67113,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/1932-USA-Archives-1932-12-07-Eddy-Duchin-Orch-Night-And-Day"
    },
    {
-    "src": "https://archive.org/download/kentuckys-way-of-sayin-good-mornin/Kentucky%60s%20Way%20Of%20Sayin%60%20Good%20Mornin%60%20%28Flat%20eq%29.mp3",
-    "length": 170.33,
-    "series": "Lawrence Welk",
-    "title": "Kentucky`s Way Of Sayin` Good Mornin`",
-    "date": "1939",
-    "item": "https://archive.org/details/kentuckys-way-of-sayin-good-mornin"
-   },
-   {
-    "src": "https://archive.org/download/1931-USA-Archives-1931-05-15-Hal-Kemp-Orch-I-Found-A-Million-Dollar-Baby/1931%28USA%29Archives19310515HalKempOrch-IFoundAMillionDollarBaby.mp3",
-    "length": 177.88,
-    "series": "Hal Kemp Orchestra",
-    "title": "I Found A Million Dollar Baby",
-    "date": "1931",
-    "item": "https://archive.org/details/1931-USA-Archives-1931-05-15-Hal-Kemp-Orch-I-Found-A-Million-Dollar-Baby"
-   },
-   {
     "src": "https://archive.org/download/78_time-on-my-hands_carmen-cavallaro_wave/time%20on%20my%20hands_carmen%20cavallaro.mp3",
     "length": 200.0,
     "series": "Carmen Cavallaro",
@@ -68007,14 +67127,6 @@ window.STATIONS = [
     "title": "Russ Morgan Orch You Opened My Eyes",
     "date": "1935",
     "item": "https://archive.org/details/1935-USA-Archives-1935-03-14-Russ-Morgan-Orch-You-Opened-My-Eyes"
-   },
-   {
-    "src": "https://archive.org/download/1936-USA-Archives-1936-02-13-Eddy-Duchin-Orch-Love-Is-Like-A-Cigarette/1936%28USA%29Archives19360213EddyDuchinOrch-LoveIsLikeACigarette.mp3",
-    "length": 192.99,
-    "series": "Eddy Duchin Orchestra",
-    "title": "Eddy Duchin Orch Love Is Like A Cigarette",
-    "date": "1936",
-    "item": "https://archive.org/details/1936-USA-Archives-1936-02-13-Eddy-Duchin-Orch-Love-Is-Like-A-Cigarette"
    }
   ],
   "room": {
