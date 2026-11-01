@@ -1,6 +1,6 @@
 /* The Bee's Knees Drive-In: theme-night features (0 = Monday), coming-attraction trailers,
    snack-bar intermission reels and a serial that runs one chapter a night. All from the Internet Archive.
-   Delete a line to drop something; anything flagged by a viewer comes off here. */
+   The "season" block is Christmas at the Drive-In (Dec 1-26): it replaces the theme nights, with set double features on the nights listed. Delete a line to drop something; anything flagged by a viewer comes off here. */
 window.DRIVEIN = {
  "themes": {
   "0": {
@@ -1234,5 +1234,241 @@ window.DRIVEIN = {
    "length": 1018.08,
    "item": "https://archive.org/details/saigon_christ_hotmail_UK12"
   }
- ]
+ ],
+ "season": {
+  "from": "12-01",
+  "to": "12-26",
+  "name": "Christmas at the Drive-In",
+  "films": [
+   {
+    "title": "Beyond Tomorrow",
+    "year": 1940,
+    "src": "https://archive.org/download/BeyondTomorrow_750/BeyondTomorrow.mp4",
+    "length": 5035.67,
+    "item": "https://archive.org/details/BeyondTomorrow_750"
+   },
+   {
+    "title": "Scrooge",
+    "year": 1935,
+    "src": "https://archive.org/download/Scrooge_1935/Scrooge_1935_512kb.mp4",
+    "length": 4655.45,
+    "item": "https://archive.org/details/Scrooge_1935"
+   },
+   {
+    "title": "A Christmas Carol",
+    "year": 1951,
+    "src": "https://archive.org/download/a-christmas-carol-1951_202601/A%20Christmas%20Carol%201951.ia.mp4",
+    "length": 5165.18,
+    "item": "https://archive.org/details/a-christmas-carol-1951_202601"
+   },
+   {
+    "title": "March of the Wooden Soldiers",
+    "year": 1934,
+    "src": "https://archive.org/download/BabesInToylandBW/Babes%20In%20Toyland%20B%26W.mp4",
+    "length": 4669.12,
+    "item": "https://archive.org/details/BabesInToylandBW"
+   },
+   {
+    "title": "Christmas Eve",
+    "year": 1947,
+    "src": "https://archive.org/download/CHRISTMASEVE_201512/CHRISTMASEVE.mp4",
+    "length": 5383.38,
+    "item": "https://archive.org/details/CHRISTMASEVE_201512"
+   },
+   {
+    "title": "Meet John Doe",
+    "year": 1941,
+    "src": "https://archive.org/download/meet_john_doe/meet_john_doe_512kb.mp4",
+    "length": 7371.17,
+    "item": "https://archive.org/details/meet_john_doe"
+   },
+   {
+    "title": "The Great Rupert",
+    "year": 1950,
+    "src": "https://archive.org/download/great-rupert/y2mate.is%20-%20The%20Christmas%20Wish%20REMASTERED%20_%20Full%20Comedy%20FIlm%20_%20Jimmy%20Durante%20_%20Terry%20Moore%20_%20Irving%20Pichel-fMOSbkq6bVg-720p-1705006601%20-%20Trim.ia.mp4",
+    "length": 5258,
+    "item": "https://archive.org/details/great-rupert"
+   },
+   {
+    "title": "Santa Claus Conquers the Martians",
+    "year": 1964,
+    "src": "https://archive.org/download/SantaClausConquersTheMartians1964_201310/Santa%20Claus%20Conquers%20the%20Martians%20%281964%29.mp4",
+    "length": 4811.34,
+    "item": "https://archive.org/details/SantaClausConquersTheMartians1964_201310"
+   },
+   {
+    "title": "The Holly and the Ivy",
+    "year": 1952,
+    "src": "https://archive.org/download/TheHollyAndTheIvy1952/The%20Holly%20and%20the%20Ivy%20%281952%29.mp4",
+    "length": 4984.52,
+    "item": "https://archive.org/details/TheHollyAndTheIvy1952"
+   },
+   {
+    "title": "The Christmas That Almost Wasn't",
+    "year": 1966,
+    "src": "https://archive.org/download/TheChristmasThatAlmostWasnt1966/The%20Christmas%20That%20Almost%20Wasn%27t%20%281966%29.mp4",
+    "length": 5555.44,
+    "item": "https://archive.org/details/TheChristmasThatAlmostWasnt1966"
+   },
+   {
+    "title": "The Cheaters",
+    "year": 1945,
+    "src": "https://archive.org/download/chtr87744/chtr87744.mp4",
+    "length": 4987.74,
+    "item": "https://archive.org/details/chtr87744"
+   },
+   {
+    "title": "The Lemon Drop Kid",
+    "year": 1951,
+    "src": "https://archive.org/download/TheLemonDropKid1951BobHopeDVDRip/The%20Lemon%20Drop%20Kid%20%20%5B1951%5D%20-%20Bob%20Hope%20-%20DVDRip.mp4",
+    "length": 5484.61,
+    "item": "https://archive.org/details/TheLemonDropKid1951BobHopeDVDRip"
+   },
+   {
+    "title": "It Happened on Fifth Avenue",
+    "year": 1947,
+    "src": "https://archive.org/download/it-happened-on-fifth-avenue_202412/it%20happened%20on%20fifth%20avenue.mp4",
+    "length": 6891.91,
+    "item": "https://archive.org/details/it-happened-on-fifth-avenue_202412"
+   },
+   {
+    "title": "The Bells of St. Mary's",
+    "year": 1945,
+    "src": "https://archive.org/download/bells-of-st-marys_202203/Bells%20of%20St%20%20Marys.mp4",
+    "length": 7548.88,
+    "item": "https://archive.org/details/bells-of-st-marys_202203"
+   },
+   {
+    "title": "The Snow Queen",
+    "year": 1959,
+    "src": "https://archive.org/download/the_snow_queen_1959_animation/snow_queen_us_version_512kb.mp4",
+    "length": 4105.84,
+    "item": "https://archive.org/details/the_snow_queen_1959_animation"
+   }
+  ],
+  "cartoons": [
+   {
+    "series": "Cartoon",
+    "title": "Donald's Snow Fight (1942)",
+    "date": "1942",
+    "src": "https://archive.org/download/donaldduckshorts_031/031%20-%20Donald%27s%20Snow%20Fight%201942.mp4",
+    "length": 436.74,
+    "item": "https://archive.org/details/donaldduckshorts_031"
+   },
+   {
+    "series": "Cartoon",
+    "title": "A Christmas Tree (1959)",
+    "date": "1959",
+    "src": "https://archive.org/download/a_christmas_tree_1959_russian_animation/a_christmas_tree_1959_512kb.mp4",
+    "length": 635.32,
+    "item": "https://archive.org/details/a_christmas_tree_1959_russian_animation"
+   },
+   {
+    "series": "Cartoon",
+    "title": "A Christmas Dream (1946)",
+    "date": "1949",
+    "src": "https://archive.org/download/AChristmasDream1946VnonSen1945ZemanBrosStopMotion/A%20Christmas%20Dream%20%281946%29%20V%C3%A1no%C4%8Dn%C3%AD%20sen%20%281945%29%20Zeman%20Bros%20Stop-Motion.mp4",
+    "length": 523.19,
+    "item": "https://archive.org/details/AChristmasDream1946VnonSen1945ZemanBrosStopMotion"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Casper: Christmas (1952)",
+    "date": "1952",
+    "src": "https://archive.org/download/christmas-cartoon-casper-the-friendly-ghost-1952/Christmas%20Cartoon%20-%20%20Casper%20the%20Friendly%20Ghost%201952.ia.mp4",
+    "length": 378.35,
+    "item": "https://archive.org/details/christmas-cartoon-casper-the-friendly-ghost-1952"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Christmas Comes But Once a Year (1936)",
+    "date": "1936",
+    "src": "https://archive.org/download/ChristmasComesButOnceAYear/ClaCinOnl_an_ChristmasComesButOnceAYear.mp4",
+    "length": 501.1,
+    "item": "https://archive.org/details/ChristmasComesButOnceAYear"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Jack Frost (1934)",
+    "date": "1934",
+    "src": "https://archive.org/download/JackFrost_/JackFrost_512kb.mp4",
+    "length": 511.39,
+    "item": "https://archive.org/details/JackFrost_"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Rudolph the Red-Nosed Reindeer (1948)",
+    "date": "1948",
+    "src": "https://archive.org/download/RudolphTheRed-nosedReindeer1948/RudolphTheRed-nosedReindeer1948_512kb.mp4",
+    "length": 491.71,
+    "item": "https://archive.org/details/RudolphTheRed-nosedReindeer1948"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Snow Foolin' (1949)",
+    "date": "1949",
+    "src": "https://archive.org/download/SnowFoolin/ClaCinOnl_an_SnowFoolin_512kb.mp4",
+    "length": 355.2,
+    "item": "https://archive.org/details/SnowFoolin"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The Christmas Visitor (1959)",
+    "date": "1959",
+    "src": "https://archive.org/download/TheChristmasVisitor/ClaCinOnl_an_TheChristmasVisitor.mp4",
+    "length": 437.7,
+    "item": "https://archive.org/details/TheChristmasVisitor"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The First Christmas",
+    "date": "",
+    "src": "https://archive.org/download/TheFirstChristmasCastleFilmsPuppetoon/The%20First%20Christmas%20%20%28Castle%20Films%20Puppetoon%29.mp4",
+    "length": 489.98,
+    "item": "https://archive.org/details/TheFirstChristmasCastleFilmsPuppetoon"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The Little King: Christmas Night (1933)",
+    "date": "1933",
+    "src": "https://archive.org/download/TheLittleKing-ChristmasNight/ClaCinOnl_an_TheLittleKing-ChristmasNight.mp4",
+    "length": 453.91,
+    "item": "https://archive.org/details/TheLittleKing-ChristmasNight"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The Littlest Angel (1950)",
+    "date": "1950",
+    "src": "https://archive.org/download/TheLittlestAngel1950ClassicChristmasCartoonsForChildren/The%20Littlest%20Angel%201950%20Classic%20Christmas%20Cartoons%20For%20Children.mp4",
+    "length": 834.04,
+    "item": "https://archive.org/details/TheLittlestAngel1950ClassicChristmasCartoonsForChildren"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The Snow Man (1940)",
+    "date": "1940",
+    "src": "https://archive.org/download/TheSnowMan1940/TheSnowMan_512kb.mp4",
+    "length": 424.99,
+    "item": "https://archive.org/details/TheSnowMan1940"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Winter (1930)",
+    "date": "1930",
+    "src": "https://archive.org/download/Winter_915/SillySymphony-14-Winter1930.mp4",
+    "length": 413.43,
+    "item": "https://archive.org/details/Winter_915"
+   }
+  ],
+  "nights": {
+   "12-24": [
+    "March of the Wooden Soldiers",
+    "A Christmas Carol"
+   ],
+   "12-25": [
+    "The Bells of St. Mary's",
+    "Beyond Tomorrow"
+   ]
+  }
+ }
 };

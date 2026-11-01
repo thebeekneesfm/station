@@ -444,6 +444,14 @@ window.RACK = [
   "kind": "magazines",
   "issues": [
    {
+    "id": "UUgEAAAAMBAJ",
+    "title": "LIFE",
+    "issue": "",
+    "date": "October 2, 1964",
+    "publisher": "Time Inc.",
+    "pages": 158
+   },
+   {
     "id": "e1IEAAAAMBAJ",
     "title": "LIFE",
     "issue": "",

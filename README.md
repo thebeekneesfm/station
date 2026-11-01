@@ -199,6 +199,12 @@ The episode lists and the commercials are in `art/screen/tv-data.js`. Delete a l
 
 Draw a channel card as `art/tv/<channel>.png` (for example `art/tv/crime.png`) and it replaces the typed one. The TV set frame can go around `.scr` later.
 
+## Christmas on TV and at the Drive-In
+
+From November 15 to January 6 (the same stretch as the radio's Christmas station) the TV gets channel 3, Christmas: holiday episodes and specials (Burns and Allen, Ozzie and Harriet, Dragnet's "The Big Little Jesus", Mister Magoo's Christmas Carol, the Grinch, Lawrence Welk, Bing Crosby and more) with Christmas cartoons in between. While it's on, it's the first channel and where new viewers land. It's the channel with a `season` in `art/screen/tv-data.js`.
+
+From December 1 to 26 the Drive-In becomes Christmas at the Drive-In: a holiday double feature every night instead of the theme nights, with a Christmas cartoon first. Christmas Eve is March of the Wooden Soldiers and A Christmas Carol (1951); Christmas night is The Bells of St. Mary's and Beyond Tomorrow. It's the `season` block in `art/screen/drivein-data.js`; change the dates or the set nights there.
+
 ## The Drive-In
 
 `drive-in.html` runs a theme night every day: Monster Monday, Noir Tuesday, Sci-Fi Wednesday, Western Thursday, Comedy Friday, Creature Feature Saturday and the Sunday Mystery Matinee. In the daytime the screen loops matinee films from the night's theme. At dusk, by the viewer's own clock, the show starts: a welcome card, a cartoon, two coming-attraction trailers, a serial chapter (one a night), the first feature, the snack-bar intermission reels, the second feature, and goodnight. The double feature changes every week.

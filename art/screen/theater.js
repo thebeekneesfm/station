@@ -20,6 +20,15 @@
   // slates are little title cards drawn by the page itself (no video): station IDs, "we'll be right back", intermission
   function slate(kind, length, words) { return { slate: kind, length: length, words: words }; }
 
+  // seasons ("11-15" to "01-06"), by the viewer's own calendar; a season may wrap past New Year
+  function mmdd(ms) { var d = new Date(ms); return String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function inSeason(se, ms) { if (!se) return true; var t = mmdd(ms); return se.from <= se.to ? (t >= se.from && t <= se.to) : (t >= se.from || t <= se.to); }
+  function liveChannels(ms) {
+    var CH = (window.TVCH || []).filter(function (c) { return c.episodes && c.episodes.length && inSeason(c.season, ms); });
+    // a seasonal channel goes first while it's on, so it's where new viewers land
+    return CH.filter(function (c) { return c.season; }).concat(CH.filter(function (c) { return !c.season; }));
+  }
+
   /* ---------------- schedules ---------------- */
   var EPOCH = Date.parse("2026-11-01T00:00:00Z");
 
@@ -54,17 +63,24 @@
   var DUSK = [17.4, 18.0, 19.5, 20.0, 20.5, 20.8, 20.8, 20.3, 19.6, 18.8, 17.2, 17.0];   // about 25 minutes after sunset, mid-latitude US, by month
   function duskOf(day) { var d = new Date(day); var h = DUSK[d.getMonth()]; d.setHours(Math.floor(h), Math.round((h % 1) * 60), 0, 0); return d.getTime(); }
   function dayIndex(ms) { var d = new Date(ms); return Math.round((new Date(d.getFullYear(), d.getMonth(), d.getDate()) - new Date(2026, 0, 5)) / 864e5); }  // 2026-01-05 was a Monday
-  function themeOf(ms) { var DI = window.DRIVEIN, wd = (new Date(ms).getDay() + 6) % 7; return DI.themes[wd] || DI.themes[String(wd)]; }
-  function featuresFor(ms) {     // tonight's two features: rotates weekly through the theme's films
-    var th = themeOf(ms), f = th.films, wk = Math.floor(dayIndex(ms) / 7);
+  function seasonOf(ms) { var se = window.DRIVEIN.season; return se && se.films && se.films.length && inSeason(se, ms) ? se : null; }
+  function themeOf(ms) { var DI = window.DRIVEIN, se = seasonOf(ms), wd = (new Date(ms).getDay() + 6) % 7; return se ? { name: se.name, films: se.films } : (DI.themes[wd] || DI.themes[String(wd)]); }
+  function featuresFor(ms) {     // tonight's two features: rotates weekly through the theme's films (nightly in a season)
+    var th = themeOf(ms), f = th.films, se = seasonOf(ms), wk = Math.floor(dayIndex(ms) / 7);
     if (!f.length) return [];
+    if (se) {
+      var set = se.nights && se.nights[mmdd(ms)];
+      if (set) { var picked = set.map(function (t) { return f.find(function (x) { return x.title === t; }); }).filter(Boolean); if (picked.length) return picked; }
+      wk = dayIndex(ms);
+    }
     return [f[(wk * 2) % f.length], f[(wk * 2 + 1) % f.length]].filter(function (x, i, a) { return a.indexOf(x) === i; });
   }
   function pickFrom(list, seed, n) { return list.length ? shuffle(list, seed).slice(0, n) : []; }
   function nightProgram(dayMs) {
     var DI = window.DRIVEIN, th = themeOf(dayMs), feats = featuresFor(dayMs), seed = hash("night" + dayIndex(dayMs)), out = [];
     out.push(slate("welcome", 20, { theme: th, feats: feats }));
-    pickFrom(window.TV || [], seed, 1).forEach(function (c) { out.push(Object.assign({ kind: "cartoon" }, c)); });
+    var se = seasonOf(dayMs);
+    pickFrom(se && se.cartoons && se.cartoons.length ? se.cartoons : (window.TV || []), seed, 1).forEach(function (c) { out.push(Object.assign({ kind: "cartoon" }, c)); });
     pickFrom(DI.trailers || [], seed + 1, 2).forEach(function (t) { out.push(Object.assign({ kind: "trailer" }, t)); });
     if ((DI.serials || []).length) { var s = DI.serials[dayIndex(dayMs) % DI.serials.length]; out.push(Object.assign({ kind: "serial" }, s)); }
     if (feats[0]) out.push(Object.assign({ kind: "feature", n: 1 }, feats[0]));
@@ -107,7 +123,7 @@
   window.THEATER = {
     channels: function () {
       if (this._ch) return this._ch;
-      var CH = (window.TVCH || []).filter(function (c) { return c.episodes && c.episodes.length; }), ADS = window.TV_ADS || [];
+      var CH = liveChannels(Date.now()), ADS = window.TV_ADS || [];
       CH.forEach(function (c, k) { c.num = c.num || k + 2; });
       return (this._ch = CH.map(function (c) { return buildChannel(c, ADS); }));
     },
@@ -172,7 +188,7 @@
   /* ---------------- TV page ---------------- */
   var where, renderInfo;
   if (MODE === "tv") {
-    var CH = (window.TVCH || []).filter(function (c) { return c.episodes && c.episodes.length; });
+    var CH = liveChannels(Date.now());
     CH.forEach(function (c, k) { c.num = c.num || k + 2; });
     var ADS = window.TV_ADS || [];
     var S = {}; CH.forEach(function (c) { S[c.id] = buildChannel(c, ADS); });
