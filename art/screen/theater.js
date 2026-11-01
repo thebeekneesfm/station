@@ -38,9 +38,10 @@
     eps.forEach(function (e, k) {
       out.push(Object.assign({ kind: "show" }, e));
       out.push(slate("id", 6, { channel: ch }));
-      if (ads.length) {
+      if (ads.length || (ch.ads && ch.ads.length)) {
+        // a channel with its own commercials (the Christmas channel) opens every break with one of them
         var n = 1 + (k % 2), used = {};
-        for (var i = 0; i < n; i++) { var a = ads[Math.floor(r() * ads.length)]; if (used[a.src]) continue; used[a.src] = 1; out.push(Object.assign({ kind: "ad" }, a)); }
+        for (var i = 0; i < n; i++) { var pool = i === 0 && ch.ads && ch.ads.length ? ch.ads : (ads.length ? ads : ch.ads); var a = pool[Math.floor(r() * pool.length)]; if (used[a.src]) continue; used[a.src] = 1; out.push(Object.assign({ kind: "ad" }, a)); }
       } else out.push(slate("back", 8, { channel: ch }));
     });
     var t = 0; out.forEach(function (x) { x.start = t; t += Number(x.length) || 0; });
