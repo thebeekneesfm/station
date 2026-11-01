@@ -385,6 +385,9 @@
   #tipcard-top { position: fixed; inset: 0 0 auto 0; z-index: 25; background: none; padding: calc(env(safe-area-inset-top, 0px) + 12px) 14px 0; align-items: flex-start; }
   #tipcard-top .tc-wrap { width: min(440px, 100%); }
   #tipcard-top .tc-name { font-size: 36px; }
+  #tipcard-top .tc-wrap { position: relative; }
+  .tc-close { position: absolute; top: 6px; right: 8px; z-index: 2; width: 44px; height: 44px; padding: 0; border: 0; background: none; cursor: pointer;
+    font: 400 40px/1 "BK Serif", Georgia, serif; color: #1f1b17; }
   /* the card is a clipping of newsprint, cut with the same ragged edges as the rest of the site */
   .tc-inner { background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--news); color: var(--ink);
     -webkit-mask: var(--rough-top) top left / 180px 9px repeat-x, var(--rough-bottom) bottom left / 180px 9px repeat-x,
@@ -597,6 +600,6 @@
 <script src="tv.js?v=20261101z"></script>
 <script src="art/funnies/funnies.js?v=20261101a"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101K2"></script>
+<script src="radio.js?v=20261101K3"></script>
 </body>
 </html>

@@ -1554,8 +1554,9 @@
       if (!top) {
         top = document.createElement("div"); top.id = "tipcard-top"; top.className = "tipcard"; top.hidden = true;
         top.setAttribute("role", "status");
-        top.innerHTML = '<div class="tc-wrap"><div class="tc-inner"><div class="tc-kicker"></div><div class="tc-name"></div><div class="tc-msg"></div><div class="tc-thanks"></div><a class="tc-link" target="_blank" rel="noopener"></a></div></div>';
+        top.innerHTML = '<div class="tc-wrap"><button type="button" class="tc-close" aria-label="Close">\u00d7</button><div class="tc-inner"><div class="tc-kicker"></div><div class="tc-name"></div><div class="tc-msg"></div><div class="tc-thanks"></div><a class="tc-link" target="_blank" rel="noopener"></a></div></div>';
         top.addEventListener("click", e => { if (!e.target.closest("a")) top.hidden = true; });
+        top.querySelector(".tc-close").addEventListener("click", e => { e.stopPropagation(); top.hidden = true; });
         document.body.appendChild(top);
       }
       cards.push(top);
