@@ -435,6 +435,14 @@ window.STATIONS = [
     "title": "The Man That Knew Everything",
     "date": "October 9, 1951",
     "item": "https://archive.org/details/TheMysteriousTraveler"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-07-11%20-%2001%29%20Dracula.mp3",
+    "length": 3346.16,
+    "series": "The Mercury Theatre on the Air",
+    "title": "Dracula",
+    "date": "July 11, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
    }
   ]
  },
@@ -524,6 +532,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Whistler_Singles"
    },
    {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-11-18-546Oss.mp3",
+    "length": 3508.03,
+    "series": "Lux Radio Theatre",
+    "title": "OSS",
+    "date": "November 18, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Philip_Marlowe_Singles/Philip_Marlowe_49-01-29_018_The_Easy_Mark.mp3",
     "length": 1753.25,
     "series": "The Adventures of Philip Marlowe",
@@ -586,6 +602,14 @@ window.STATIONS = [
     "title": "How Love Came to Professor Guildea",
     "date": "February 22, 1948",
     "item": "https://archive.org/details/OTRR_Escape_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_50-01-20_052_Mr_Lucky.mp3",
+    "length": 1792.94,
+    "series": "Screen Directors Playhouse",
+    "title": "Mr Lucky",
+    "date": "January 20, 1950",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_Box_13_Singles/Box%2013%204x-xx-xx%20%2808%29%20Double%20Mothers.mp3",
@@ -659,6 +683,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Richard_Diamond_Private_Detective_Singles"
    },
    {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1949-09-05-666Saigon.mp3",
+    "length": 3371.43,
+    "series": "Lux Radio Theatre",
+    "title": "Saigon",
+    "date": "September 5, 1949",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
     "src": "https://archive.org/download/OTRR_YoursTrulyJohnnyDollar_Singles/YTJD%201953-06-09%20166%20The%20Oklahoma%20Red%20Matter%20%5BAFRTS%5D.mp3",
     "length": 1598.13,
     "series": "Yours Truly, Johnny Dollar",
@@ -720,6 +752,14 @@ window.STATIONS = [
     "title": "Critical Author Caper",
     "date": "August 15, 1948",
     "item": "https://archive.org/details/OTRR_Sam_Spade_Singles"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-09-05%20-%2009%29%20The%20Man%20Who%20Was%20Thursday.mp3",
+    "length": 3444.52,
+    "series": "The Mercury Theatre on the Air",
+    "title": "The Man Who Was Thursday",
+    "date": "September 5, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
    },
    {
     "src": "https://archive.org/download/PatNovakForHire/49-03-20-RoryMalone.mp3",
@@ -793,6 +833,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Philip_Marlowe_Singles"
    },
    {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1951-04-02-740WhereTheSidewalkEnds.mp3",
+    "length": 3358.97,
+    "series": "Lux Radio Theatre",
+    "title": "Where the Sidewalk Ends",
+    "date": "April 2, 1951",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
     "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201940-11-24%20%28203%29%20The%20Green%20Man.mp3",
     "length": 1443.64,
     "series": "The Shadow",
@@ -854,6 +902,14 @@ window.STATIONS = [
     "series": "Box 13",
     "title": "Hunt and Peck",
     "item": "https://archive.org/details/OTRR_Box_13_Singles"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460925_27_GuestInTheHouse.mp3",
+    "length": 1749.48,
+    "series": "Academy Award Theater",
+    "title": "Guest in the House",
+    "date": "September 25, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
    },
    {
     "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_49-08-07_ep375_The_Trigger_Man.mp3",
@@ -928,6 +984,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Escape_Singles"
    },
    {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-02-08_089_Lucky_Jordan.mp3",
+    "length": 3597.95,
+    "series": "Screen Directors Playhouse",
+    "title": "Lucky Jordan",
+    "date": "February 8, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_YoursTrulyJohnnyDollar_Singles/YTJD%201960-01-03%20670%20The%20Hapless%20Ham%20Matter.mp3",
     "length": 1468.36,
     "series": "Yours Truly, Johnny Dollar",
@@ -991,6 +1055,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Suspense_Singles"
    },
    {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_46-11-18_ep322_Blind_Alley.mp3",
+    "length": 2126.84,
+    "series": "Screen Guild Theater",
+    "title": "Blind Alley",
+    "date": "November 18, 1946",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
     "src": "https://archive.org/download/PatNovakForHire/49-05-22-GiveEnvelopetoJohnStJohn.mp3",
     "length": 1770,
     "series": "Pat Novak for Hire",
@@ -1052,6 +1124,14 @@ window.STATIONS = [
     "title": "Terrible Legend of Crownshield Castle",
     "date": "December 28, 1947",
     "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_461030_32_Suspicion.mp3",
+    "length": 1522.84,
+    "series": "Academy Award Theater",
+    "title": "Suspicion",
+    "date": "October 30, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
    }
   ]
  },
@@ -1404,15 +1484,23 @@ window.STATIONS = [
     "title": "Greatest Show in the Universe",
     "date": "May 20, 1952",
     "item": "https://archive.org/details/SpaceCadet2"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-10-30%20-%2017%29%20War%20Of%20The%20Worlds.mp3",
+    "length": 3084.55,
+    "series": "The Mercury Theatre on the Air",
+    "title": "War Of The Worlds",
+    "date": "October 30, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
    }
   ]
  },
  {
-  "id": "theater",
-  "name": "Theater",
+  "id": "romance",
+  "name": "Romance & Drama",
   "group": "Radio shows",
-  "blurb": "Hollywood stars in radio versions of the movies, and Orson Welles' Mercury Theatre.",
-  "card": "art/cards/theater.png",
+  "blurb": "Hollywood stars in hour-long radio versions of the great love stories and dramas: Casablanca, Now, Voyager, Jane Eyre and more.",
+  "card": "art/cards/romance.png",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
@@ -1422,68 +1510,12 @@ window.STATIONS = [
   },
   "tracks": [
    {
-    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-10-30%20-%2017%29%20War%20Of%20The%20Worlds.mp3",
-    "length": 3084.55,
-    "series": "The Mercury Theatre on the Air",
-    "title": "War Of The Worlds",
-    "date": "October 30, 1938",
-    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
-   },
-   {
-    "src": "https://archive.org/download/otr_campbellplayhouse/390917_AhWilderness.mp3",
-    "length": 2611.31,
-    "series": "The Campbell Playhouse",
-    "title": "Ah, Wilderness",
-    "date": "September 17, 1939",
-    "item": "https://archive.org/details/otr_campbellplayhouse"
-   },
-   {
-    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460330_01_Jezebel.mp3",
-    "length": 1733.43,
-    "series": "Academy Award Theater",
-    "title": "Jezebel",
-    "date": "March 30, 1946",
-    "item": "https://archive.org/details/otr_academyawardtheater"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-01-09_001_Stagecoach.mp3",
-    "length": 1795.19,
-    "series": "Screen Directors Playhouse",
-    "title": "Stagecoach",
-    "date": "January 9, 1949",
-    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
-   },
-   {
-    "src": "https://archive.org/download/ColumbiaWorkshop/360919_Hamlet_Part_1.mp3",
-    "length": 1326.16,
-    "series": "Columbia Workshop",
-    "title": "Hamlet Part 1",
-    "date": "September 19, 1936",
-    "item": "https://archive.org/details/ColumbiaWorkshop"
-   },
-   {
-    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-07-11%20-%2001%29%20Dracula.mp3",
-    "length": 3346.16,
-    "series": "The Mercury Theatre on the Air",
-    "title": "Dracula",
-    "date": "July 11, 1938",
-    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
-   },
-   {
     "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-01-07-509YouCameAlong.mp3",
     "length": 3572.82,
     "series": "Lux Radio Theatre",
     "title": "You Came Along",
     "date": "January 7, 1946",
     "item": "https://archive.org/details/LuxRadioTheatre_201606"
-   },
-   {
-    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_40-04-07_ep051_Vivacious_Lady.mp3",
-    "length": 1796.16,
-    "series": "Screen Guild Theater",
-    "title": "Vivacious Lady",
-    "date": "April 7, 1940",
-    "item": "https://archive.org/details/ScreenGuildTheater"
    },
    {
     "src": "https://archive.org/download/otr_campbellplayhouse/400121_TheCitadel.mp3",
@@ -1494,12 +1526,12 @@ window.STATIONS = [
     "item": "https://archive.org/details/otr_campbellplayhouse"
    },
    {
-    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460504_06_Stagecoach.mp3",
-    "length": 1703.66,
-    "series": "Academy Award Theater",
-    "title": "Stagecoach",
-    "date": "May 4, 1946",
-    "item": "https://archive.org/details/otr_academyawardtheater"
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1947-12-01-592TheGhostAndMrsMuir.mp3",
+    "length": 3589.71,
+    "series": "Lux Radio Theatre",
+    "title": "The Ghost and Mrs Muir",
+    "date": "December 1, 1947",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
    },
    {
     "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-05-08_018_Its_a_Wonderful_Life.mp3",
@@ -1510,137 +1542,11 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
    },
    {
-    "src": "https://archive.org/download/ColumbiaWorkshop/370928_Alice_in_Wonderland.mp3",
-    "length": 1349.57,
-    "series": "Columbia Workshop",
-    "title": "Alice in Wonderland Part 1",
-    "date": "September 28, 1937",
-    "item": "https://archive.org/details/ColumbiaWorkshop"
-   },
-   {
-    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-07-25%20-%2003%29%20A%20Tale%20Of%20Two%20Cities.mp3",
-    "length": 3572.63,
-    "series": "The Mercury Theatre on the Air",
-    "title": "A Tale Of Two Cities",
-    "date": "July 25, 1938",
-    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
-   },
-   {
-    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-11-18-546Oss.mp3",
-    "length": 3508.03,
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1953-02-23-817YoureMyEverything.mp3",
+    "length": 3408.51,
     "series": "Lux Radio Theatre",
-    "title": "OSS",
-    "date": "November 18, 1946",
-    "item": "https://archive.org/details/LuxRadioTheatre_201606"
-   },
-   {
-    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_42-04-12_ep112_Tight_Shoes.mp3",
-    "length": 1771.97,
-    "series": "Screen Guild Theater",
-    "title": "Tight Shoes",
-    "date": "April 12, 1942",
-    "item": "https://archive.org/details/ScreenGuildTheater"
-   },
-   {
-    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-02-10TheGreenGoddess.mp3",
-    "length": 3431.59,
-    "series": "The Campbell Playhouse",
-    "title": "Green Goddess",
-    "item": "https://archive.org/details/otr_campbellplayhouse"
-   },
-   {
-    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460608_11_RugglesOfRedGap.mp3",
-    "length": 1690.86,
-    "series": "Academy Award Theater",
-    "title": "Ruggles Of Red Gap",
-    "date": "June 8, 1946",
-    "item": "https://archive.org/details/otr_academyawardtheater"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-09-23_035_Dont_Trust_Your_Husband.mp3",
-    "length": 1791.92,
-    "series": "Screen Directors Playhouse",
-    "title": "Don't Trust Your Husband",
-    "date": "September 23, 1949",
-    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
-   },
-   {
-    "src": "https://archive.org/download/ColumbiaWorkshop/390810_Radio_Play_Saroyan.mp3",
-    "length": 1306.35,
-    "series": "Columbia Workshop",
-    "title": "Radio Play - Saroyan",
-    "date": "August 10, 1939",
-    "item": "https://archive.org/details/ColumbiaWorkshop"
-   },
-   {
-    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-08-08%20-%2005%29%20Three%20Short%20Stories%20I%27m%20A%20Fool%2C%20The%20Open%20Window%20And%20My%20Little%20Boy.mp3",
-    "length": 3486.32,
-    "series": "The Mercury Theatre on the Air",
-    "title": "Three Short Stories",
-    "date": "August 8, 1938",
-    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
-   },
-   {
-    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1947-12-01-592TheGhostAndMrsMuir.mp3",
-    "length": 3589.71,
-    "series": "Lux Radio Theatre",
-    "title": "The Ghost and Mrs Muir",
-    "date": "December 1, 1947",
-    "item": "https://archive.org/details/LuxRadioTheatre_201606"
-   },
-   {
-    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_43-10-18_ep166_My_Sister_Eileen.mp3",
-    "length": 1777.66,
-    "series": "Screen Guild Theater",
-    "title": "My Sister Eileen",
-    "date": "October 18, 1943",
-    "item": "https://archive.org/details/ScreenGuildTheater"
-   },
-   {
-    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-05-26.ThingsWeHave.mp3",
-    "length": 3415.56,
-    "series": "The Campbell Playhouse",
-    "title": "The Things We Have",
-    "item": "https://archive.org/details/otr_campbellplayhouse"
-   },
-   {
-    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460710_16_YoungMrLincoln.mp3",
-    "length": 1728.37,
-    "series": "Academy Award Theater",
-    "title": "Young Mr. Lincoln",
-    "date": "July 10, 1946",
-    "item": "https://archive.org/details/otr_academyawardtheater"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_50-01-20_052_Mr_Lucky.mp3",
-    "length": 1792.94,
-    "series": "Screen Directors Playhouse",
-    "title": "Mr Lucky",
-    "date": "January 20, 1950",
-    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
-   },
-   {
-    "src": "https://archive.org/download/ColumbiaWorkshop/440523_Tel_Aviv.mp3",
-    "length": 1342.46,
-    "series": "Columbia Workshop",
-    "title": "Tel Aviv",
-    "date": "May 23, 1944",
-    "item": "https://archive.org/details/ColumbiaWorkshop"
-   },
-   {
-    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-08-22%20-%2007%29%20The%20Affairs%20Of%20Anatole.mp3",
-    "length": 3626.03,
-    "series": "The Mercury Theatre on the Air",
-    "title": "The Affairs Of Anatole",
-    "date": "August 22, 1938",
-    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
-   },
-   {
-    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1949-09-05-666Saigon.mp3",
-    "length": 3371.43,
-    "series": "Lux Radio Theatre",
-    "title": "Saigon",
-    "date": "September 5, 1949",
+    "title": "You're My Everything",
+    "date": "February 23, 1953",
     "item": "https://archive.org/details/LuxRadioTheatre_201606"
    },
    {
@@ -1652,19 +1558,27 @@ window.STATIONS = [
     "item": "https://archive.org/details/ScreenGuildTheater"
    },
    {
-    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-11-05TheHurricane.mp3",
-    "length": 2680.55,
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-02-11-514NowVoyager.mp3",
+    "length": 3545.65,
+    "series": "Lux Radio Theatre",
+    "title": "Now, Voyager",
+    "date": "February 11, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-02-10TheGreenGoddess.mp3",
+    "length": 3431.59,
     "series": "The Campbell Playhouse",
-    "title": "Hurricane",
+    "title": "Green Goddess",
     "item": "https://archive.org/details/otr_campbellplayhouse"
    },
    {
-    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460821_22_KeysOfTheKingdom.mp3",
-    "length": 1614.89,
-    "series": "Academy Award Theater",
-    "title": "Keys of the Kingdom",
-    "date": "August 21, 1946",
-    "item": "https://archive.org/details/otr_academyawardtheater"
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-02-04-513ThisLoveOfOurs.mp3",
+    "length": 3589.73,
+    "series": "Lux Radio Theatre",
+    "title": "This Love of Ours",
+    "date": "February 4, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
    },
    {
     "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_50-05-26_070_Flamingo_Road.mp3",
@@ -1675,66 +1589,481 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
    },
    {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-04-22-524LoveLetters.mp3",
+    "length": 3341.75,
+    "series": "Lux Radio Theatre",
+    "title": "Love Letters",
+    "date": "April 22, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_41-01-05_ep068_Love_Affair.mp3",
+    "length": 1826.46,
+    "series": "Screen Guild Theater",
+    "title": "Love Affair",
+    "date": "January 5, 1941",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-05-06-526TomorrowIsForever.mp3",
+    "length": 3737.18,
+    "series": "Lux Radio Theatre",
+    "title": "Tomorrow Is Forever",
+    "date": "May 6, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-05-26.ThingsWeHave.mp3",
+    "length": 3415.56,
+    "series": "The Campbell Playhouse",
+    "title": "The Things We Have",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-06-03-530NoneButTheLonelyHeart.mp3",
+    "length": 3621.11,
+    "series": "Lux Radio Theatre",
+    "title": "None but the Lonely Heart",
+    "date": "June 3, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-02-13_006_Magnificent_Obsession.mp3",
+    "length": 1796.31,
+    "series": "Screen Directors Playhouse",
+    "title": "Magnificent Obsession",
+    "date": "February 13, 1949",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-09-09536TheBarrettsOfWimpoleStreet.mp3",
+    "length": 3562.6,
+    "series": "Lux Radio Theatre",
+    "title": "The Barretts Of Wimpole Street",
+    "date": "September 9, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_39-12-17_ep035_Smilin_Through.mp3",
+    "length": 1817.67,
+    "series": "Screen Guild Theater",
+    "title": "Smilin' Through",
+    "date": "December 17, 1939",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-09-16-537rMadameCurie.mp3",
+    "length": 3544.88,
+    "series": "Lux Radio Theatre",
+    "title": "Madame Curie",
+    "date": "September 16, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-11-05TheHurricane.mp3",
+    "length": 2680.55,
+    "series": "The Campbell Playhouse",
+    "title": "Hurricane",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-11-04-544IveAlwaysLovedYou.mp3",
+    "length": 3525.24,
+    "series": "Lux Radio Theatre",
+    "title": "I've Always Loved You",
+    "date": "November 4, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-05-15_019_Hold_Back_the_Dawn.mp3",
+    "length": 1798.11,
+    "series": "Screen Directors Playhouse",
+    "title": "Hold Back the Dawn",
+    "date": "May 15, 1949",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1947-01-20-555AnnaAndTheKingOfSiam.mp3",
+    "length": 3467.59,
+    "series": "Lux Radio Theatre",
+    "title": "Anna and the King of Siam",
+    "date": "January 20, 1947",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_41-11-16_ep091_Penny_Serenade.mp3",
+    "length": 1763.77,
+    "series": "Screen Guild Theater",
+    "title": "Penny Serenade",
+    "date": "November 16, 1941",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1947-02-10-558FrenchmensCreek.mp3",
+    "length": 3363.58,
+    "series": "Lux Radio Theatre",
+    "title": "Frenchmen's Creek",
+    "date": "February 10, 1947",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-09-10PeterIbbetson.mp3",
+    "length": 2572.56,
+    "series": "The Campbell Playhouse",
+    "title": "Peter Ibbetson",
+    "date": "September 10, 1939",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1948-04-19-612RandomHarvest.mp3",
+    "length": 3692.11,
+    "series": "Lux Radio Theatre",
+    "title": "Random Harvest",
+    "date": "April 19, 1948",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-12-30_049_One_Way_Passage.mp3",
+    "length": 1797.96,
+    "series": "Screen Directors Playhouse",
+    "title": "One Way Passage",
+    "date": "December 30, 1949",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1948-06-14-620JaneEyre.mp3",
+    "length": 3591.46,
+    "series": "Lux Radio Theatre",
+    "title": "Jane Eyre",
+    "date": "June 14, 1948",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_41-10-26_ep088_Goodbye_Mister_Chips.mp3",
+    "length": 1780.59,
+    "series": "Screen Guild Theater",
+    "title": "Goodbye Mister Chips",
+    "date": "October 26, 1941",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1948-11-29-634BriefEncounter.mp3",
+    "length": 2572.73,
+    "series": "Lux Radio Theatre",
+    "title": "Brief Encounter",
+    "date": "November 29, 1948",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460330_01_Jezebel.mp3",
+    "length": 1733.43,
+    "series": "Academy Award Theater",
+    "title": "Jezebel",
+    "date": "March 30, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1949-10-31-674PortraitOfJenny.mp3",
+    "length": 3574.19,
+    "series": "Lux Radio Theatre",
+    "title": "Portrait Of Jenny",
+    "date": "October 31, 1949",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/360919_Hamlet_Part_1.mp3",
+    "length": 1326.16,
+    "series": "Columbia Workshop",
+    "title": "Hamlet Part 1",
+    "date": "September 19, 1936",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1950-09-11-711TheHeiress.mp3",
+    "length": 3145.32,
+    "series": "Lux Radio Theatre",
+    "title": "The Heiress",
+    "date": "September 11, 1950",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-10-22Liliom.mp3",
+    "length": 3335.54,
+    "series": "The Campbell Playhouse",
+    "title": "Liliom",
+    "date": "October 22, 1939",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1950-11-06-719Rebecca.mp3",
+    "length": 3660.06,
+    "series": "Lux Radio Theatre",
+    "title": "Rebecca",
+    "date": "November 6, 1950",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-02-15_090_Dark_Victory.mp3",
+    "length": 3599.86,
+    "series": "Screen Directors Playhouse",
+    "title": "Dark Victory",
+    "date": "February 15, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1950-03-13-693LittleWomen.mp3",
+    "length": 3593.36,
+    "series": "Lux Radio Theatre",
+    "title": "Little Women",
+    "date": "March 13, 1950",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_43-04-26_ep141_Casablanca.mp3",
+    "length": 1778.68,
+    "series": "Screen Guild Theater",
+    "title": "Casablanca",
+    "date": "April 26, 1943",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1947-10-27-587StairwayToHeaven.mp3",
+    "length": 3464.54,
+    "series": "Lux Radio Theatre",
+    "title": "Stairway to Heaven",
+    "date": "October 27, 1947",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460710_16_YoungMrLincoln.mp3",
+    "length": 1728.37,
+    "series": "Academy Award Theater",
+    "title": "Young Mr. Lincoln",
+    "date": "July 10, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1954-09-14-888WutheringHeights.mp3",
+    "length": 2894.11,
+    "series": "Lux Radio Theatre",
+    "title": "Wuthering Heights",
+    "date": "September 14, 1954",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/370928_Alice_in_Wonderland.mp3",
+    "length": 1349.57,
+    "series": "Columbia Workshop",
+    "title": "Alice in Wonderland Part 1",
+    "date": "September 28, 1937",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1949-09-19-668GreenDolphinStreet.mp3",
+    "length": 3604.86,
+    "series": "Lux Radio Theatre",
+    "title": "Green Dolphin Street",
+    "date": "September 19, 1949",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-11-19IntheGardenofAllah.mp3",
+    "length": 3116.01,
+    "series": "The Campbell Playhouse",
+    "title": "The Garden of Allah",
+    "date": "November 19, 1939",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1954-03-08-871TheGlassMenagerie.mp3",
+    "length": 3304.37,
+    "series": "Lux Radio Theatre",
+    "title": "The Glass Menagerie",
+    "date": "March 8, 1954",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-05-24_104_Back_Street.mp3",
+    "length": 3593.46,
+    "series": "Screen Directors Playhouse",
+    "title": "Back Street",
+    "date": "May 24, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1953-01-26-813SeptemberAffair.mp3",
+    "length": 3322.22,
+    "series": "Lux Radio Theatre",
+    "title": "September Affair",
+    "date": "January 26, 1953",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_44-04-10_ep191_A_Farewell_to_Arms.mp3",
+    "length": 1738.09,
+    "series": "Screen Guild Theater",
+    "title": "A Farewell to Arms",
+    "date": "April 10, 1944",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1946-01-14-510ValleyOfDecision.mp3",
+    "length": 3573.95,
+    "series": "Lux Radio Theatre",
+    "title": "Valley of Decision",
+    "date": "January 14, 1946",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460821_22_KeysOfTheKingdom.mp3",
+    "length": 1614.89,
+    "series": "Academy Award Theater",
+    "title": "Keys of the Kingdom",
+    "date": "August 21, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1951-10-01-758rAllAboutEve.mp3",
+    "length": 3595.57,
+    "series": "Lux Radio Theatre",
+    "title": "All About Eve",
+    "date": "October 1, 1951",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/390810_Radio_Play_Saroyan.mp3",
+    "length": 1306.35,
+    "series": "Columbia Workshop",
+    "title": "Radio Play - Saroyan",
+    "date": "August 10, 1939",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1954-10-26-894SongOfBernadette.mp3",
+    "length": 3314.42,
+    "series": "Lux Radio Theatre",
+    "title": "Song of Bernadette",
+    "date": "October 26, 1954",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-07-25%20-%2003%29%20A%20Tale%20Of%20Two%20Cities.mp3",
+    "length": 3572.63,
+    "series": "The Mercury Theatre on the Air",
+    "title": "A Tale Of Two Cities",
+    "date": "July 25, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1951-03-26-739SeventhHeaven.mp3",
+    "length": 3146.25,
+    "series": "Lux Radio Theatre",
+    "title": "Seventh Heaven",
+    "date": "March 26, 1951",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-10-08Algiers.mp3",
+    "length": 3140.78,
+    "series": "The Campbell Playhouse",
+    "title": "Algiers",
+    "date": "October 8, 1939",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1952-12-22-808LesMiserables.mp3",
+    "length": 3083.47,
+    "series": "Lux Radio Theatre",
+    "title": "Les Miserables",
+    "date": "December 22, 1952",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-07-05_110_Only_Yesterday.mp3",
+    "length": 3593.95,
+    "series": "Screen Directors Playhouse",
+    "title": "Only Yesterday",
+    "date": "July 5, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_40-11-10_ep060_History_Is_Made_at_Night.mp3",
+    "length": 1634.73,
+    "series": "Screen Guild Theater",
+    "title": "History Is Made at Night",
+    "date": "November 10, 1940",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460406_02_KittyFoyle.mp3",
+    "length": 1804.33,
+    "series": "Academy Award Theater",
+    "title": "Kitty Foyle",
+    "date": "April 6, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
+    "src": "https://archive.org/download/ColumbiaWorkshop/440523_Tel_Aviv.mp3",
+    "length": 1342.46,
+    "series": "Columbia Workshop",
+    "title": "Tel Aviv",
+    "date": "May 23, 1944",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-08-08%20-%2005%29%20Three%20Short%20Stories%20I%27m%20A%20Fool%2C%20The%20Open%20Window%20And%20My%20Little%20Boy.mp3",
+    "length": 3486.32,
+    "series": "The Mercury Theatre on the Air",
+    "title": "Three Short Stories",
+    "date": "August 8, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1954-10-12-892GreatExpectations.mp3",
+    "length": 3338.9,
+    "series": "Lux Radio Theatre",
+    "title": "Great Expectations",
+    "date": "October 12, 1954",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse39-05-12OurTown.mp3",
+    "length": 3465.14,
+    "series": "The Campbell Playhouse",
+    "title": "Our Town",
+    "date": "May 12, 1939",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-09-28_122_Waterloo_Bridge.mp3",
+    "length": 3575.77,
+    "series": "Screen Directors Playhouse",
+    "title": "Waterloo Bridge",
+    "date": "September 28, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_40-09-29_ep054_Shop_Around_the_Corner.mp3",
+    "length": 1787.11,
+    "series": "Screen Guild Theater",
+    "title": "Shop Around the Corner",
+    "date": "September 29, 1940",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460918_26_TheWhiteCliffsOfDover.mp3",
+    "length": 1675.66,
+    "series": "Academy Award Theater",
+    "title": "The White Cliffs of Dover",
+    "date": "September 18, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
     "src": "https://archive.org/download/ColumbiaWorkshop/460302_Slim.mp3",
     "length": 1325.06,
     "series": "Columbia Workshop",
     "title": "Slim",
     "date": "March 2, 1946",
-    "item": "https://archive.org/details/ColumbiaWorkshop"
-   },
-   {
-    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-09-05%20-%2009%29%20The%20Man%20Who%20Was%20Thursday.mp3",
-    "length": 3444.52,
-    "series": "The Mercury Theatre on the Air",
-    "title": "The Man Who Was Thursday",
-    "date": "September 5, 1938",
-    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
-   },
-   {
-    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1951-04-02-740WhereTheSidewalkEnds.mp3",
-    "length": 3358.97,
-    "series": "Lux Radio Theatre",
-    "title": "Where the Sidewalk Ends",
-    "date": "April 2, 1951",
-    "item": "https://archive.org/details/LuxRadioTheatre_201606"
-   },
-   {
-    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_45-11-26_ep273_Biography_of_a_Bachelor_Girl.mp3",
-    "length": 1785.22,
-    "series": "Screen Guild Theater",
-    "title": "Biography of a Bachelor Girl",
-    "date": "November 26, 1945",
-    "item": "https://archive.org/details/ScreenGuildTheater"
-   },
-   {
-    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse40-01-14TheodoraGoesWild.mp3",
-    "length": 3398.67,
-    "series": "The Campbell Playhouse",
-    "title": "Theodora Goes Wild",
-    "item": "https://archive.org/details/otr_campbellplayhouse"
-   },
-   {
-    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460925_27_GuestInTheHouse.mp3",
-    "length": 1749.48,
-    "series": "Academy Award Theater",
-    "title": "Guest in the House",
-    "date": "September 25, 1946",
-    "item": "https://archive.org/details/otr_academyawardtheater"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-02-08_089_Lucky_Jordan.mp3",
-    "length": 3597.95,
-    "series": "Screen Directors Playhouse",
-    "title": "Lucky Jordan",
-    "date": "February 8, 1951",
-    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
-   },
-   {
-    "src": "https://archive.org/download/ColumbiaWorkshop/460728_Legend_in_Brocade.mp3",
-    "length": 1335.06,
-    "series": "Columbia Workshop",
-    "title": "Legend in Brocade",
-    "date": "July 28, 1946",
     "item": "https://archive.org/details/ColumbiaWorkshop"
    },
    {
@@ -1746,43 +2075,100 @@ window.STATIONS = [
     "item": "https://archive.org/details/TheMercuryTheatreontheAir"
    },
    {
-    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1953-02-23-817YoureMyEverything.mp3",
-    "length": 3408.51,
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1953-09-07-845MyCousinRachel.mp3",
+    "length": 3165.78,
     "series": "Lux Radio Theatre",
-    "title": "You're My Everything",
-    "date": "February 23, 1953",
+    "title": "My Cousin Rachel",
+    "date": "September 7, 1953",
     "item": "https://archive.org/details/LuxRadioTheatre_201606"
    },
    {
-    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_46-11-18_ep322_Blind_Alley.mp3",
-    "length": 2126.84,
-    "series": "Screen Guild Theater",
-    "title": "Blind Alley",
-    "date": "November 18, 1946",
-    "item": "https://archive.org/details/ScreenGuildTheater"
-   },
-   {
-    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse40-03-24JuneMoon.mp3",
-    "length": 3543.44,
+    "src": "https://archive.org/download/otr_campbellplayhouse/390924_WhatEveryWomanKnows.mp3",
+    "length": 3104.43,
     "series": "The Campbell Playhouse",
-    "title": "June Moon",
+    "title": "What Every Woman Knows",
+    "date": "September 24, 1939",
     "item": "https://archive.org/details/otr_campbellplayhouse"
    },
    {
-    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_461030_32_Suspicion.mp3",
-    "length": 1522.84,
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-04-19_099_Humoresque.mp3",
+    "length": 3596.96,
+    "series": "Screen Directors Playhouse",
+    "title": "Humoresque",
+    "date": "April 19, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_44-03-20_ep188_Constant_Nymph.mp3",
+    "length": 1756.8,
+    "series": "Screen Guild Theater",
+    "title": "Constant Nymph",
+    "date": "March 20, 1944",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_461211_38_EnchantedCottage.mp3",
+    "length": 1794.51,
     "series": "Academy Award Theater",
-    "title": "Suspicion",
-    "date": "October 30, 1946",
+    "title": "Enchanted Cottage",
+    "date": "December 11, 1946",
     "item": "https://archive.org/details/otr_academyawardtheater"
    },
    {
-    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-06-07_106_The_Gunfighter.mp3",
-    "length": 3587.47,
+    "src": "https://archive.org/download/ColumbiaWorkshop/460728_Legend_in_Brocade.mp3",
+    "length": 1335.06,
+    "series": "Columbia Workshop",
+    "title": "Legend in Brocade",
+    "date": "July 28, 1946",
+    "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-11-06%20-%2018%29%20Heart%20Of%20Darkness%20%26%20Life%20With%20Father.mp3",
+    "length": 3509.36,
+    "series": "The Mercury Theatre on the Air",
+    "title": "Heart of Darkness",
+    "date": "November 6, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
+    "src": "https://archive.org/download/LuxRadioTheatre_201606/LuxRadioTheatre1950-06-12-706TheCornIsGreen.mp3",
+    "length": 3590.33,
+    "series": "Lux Radio Theatre",
+    "title": "The Corn Is Green",
+    "date": "June 12, 1950",
+    "item": "https://archive.org/details/LuxRadioTheatre_201606"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/391126_Dodsworth.mp3",
+    "length": 2463.44,
+    "series": "The Campbell Playhouse",
+    "title": "Dodsworth",
+    "date": "November 26, 1939",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-03-29_096_Next_Time_We_Love.mp3",
+    "length": 3598.63,
     "series": "Screen Directors Playhouse",
-    "title": "Gunfighter",
-    "date": "June 7, 1951",
+    "title": "Next Time We Love",
+    "date": "March 29, 1951",
     "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_44-12-18_ep224_Age_of_Innocence.mp3",
+    "length": 1775.36,
+    "series": "Screen Guild Theater",
+    "title": "Age of Innocence",
+    "date": "December 18, 1944",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460601_10_AriseMyLove.mp3",
+    "length": 1788.61,
+    "series": "Academy Award Theater",
+    "title": "Arise, My Love",
+    "date": "June 1, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
    },
    {
     "src": "https://archive.org/download/ColumbiaWorkshop/460928_The_Day_Baseball_Die.mp3",
@@ -1791,6 +2177,14 @@ window.STATIONS = [
     "title": "Day Baseball Died",
     "date": "September 28, 1946",
     "item": "https://archive.org/details/ColumbiaWorkshop"
+   },
+   {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-08-15%20-%2006%29%20Abraham%20Lincoln.mp3",
+    "length": 3590.92,
+    "series": "The Mercury Theatre on the Air",
+    "title": "Abraham Lincoln",
+    "date": "August 15, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
    }
   ]
  },
@@ -1881,6 +2275,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/HaveGunWillTravel_543"
    },
    {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-01-09_001_Stagecoach.mp3",
+    "length": 1795.19,
+    "series": "Screen Directors Playhouse",
+    "title": "Stagecoach",
+    "date": "January 9, 1949",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Gunsmoke_Singles/Gunsmoke%2055-01-01%20%28142%29%20The%20Bottle%20Man.mp3",
     "length": 1789.9,
     "series": "Gunsmoke",
@@ -1943,6 +2345,14 @@ window.STATIONS = [
     "title": "War Correspondent",
     "date": "May 13, 1956",
     "item": "https://archive.org/details/OTRR_Fort_Laramie_Singles"
+   },
+   {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460504_06_Stagecoach.mp3",
+    "length": 1703.66,
+    "series": "Academy Award Theater",
+    "title": "Stagecoach",
+    "date": "May 4, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
    },
    {
     "src": "https://archive.org/download/OTRR_The_Six_Shooter_Singles/1954-01-03%20Ep%2016%20A%20Friend%20In%20Need.mp3",
@@ -2009,6 +2419,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Gunsmoke_Singles"
    },
    {
+    "src": "https://archive.org/download/otr_academyawardtheater/AcademyAwardTheater_460608_11_RugglesOfRedGap.mp3",
+    "length": 1690.86,
+    "series": "Academy Award Theater",
+    "title": "Ruggles Of Red Gap",
+    "date": "June 8, 1946",
+    "item": "https://archive.org/details/otr_academyawardtheater"
+   },
+   {
     "src": "https://archive.org/download/FrontierGentleman-All41Episodes/FrontierGentleman58-08-31_episode30_belleSiddonStrikesBack.mp3",
     "length": 1492.81,
     "series": "Frontier Gentleman",
@@ -2071,6 +2489,14 @@ window.STATIONS = [
     "title": "Bounty Hunter",
     "date": "August 21, 1960",
     "item": "https://archive.org/details/HaveGunWillTravel_543"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_51-06-07_106_The_Gunfighter.mp3",
+    "length": 3587.47,
+    "series": "Screen Directors Playhouse",
+    "title": "Gunfighter",
+    "date": "June 7, 1951",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
    }
   ]
  },
@@ -2121,6 +2547,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/Otrr_The_Great_Gildersleeve_Singles"
    },
    {
+    "src": "https://archive.org/download/otr_campbellplayhouse/390917_AhWilderness.mp3",
+    "length": 2611.31,
+    "series": "The Campbell Playhouse",
+    "title": "Ah, Wilderness",
+    "date": "September 17, 1939",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
     "src": "https://archive.org/download/JackBenny1/Jb1934-07-20WhoKilledMrStooge5.mp3",
     "length": 1666.46,
     "series": "The Jack Benny Program",
@@ -2151,6 +2585,14 @@ window.STATIONS = [
     "title": "Old School Pal To Visit",
     "date": "October 10, 1943",
     "item": "https://archive.org/details/Otrr_The_Great_Gildersleeve_Singles"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_40-04-07_ep051_Vivacious_Lady.mp3",
+    "length": 1796.16,
+    "series": "Screen Guild Theater",
+    "title": "Vivacious Lady",
+    "date": "April 7, 1940",
+    "item": "https://archive.org/details/ScreenGuildTheater"
    },
    {
     "src": "https://archive.org/download/Our_Miss_Brooks_190_Episodes/Our_Miss_Brooks_490410_036_Mr_Conklin_s_Wake_Up_Plan.mp3",
@@ -2185,6 +2627,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/the-burns-and-allen-show-1934-09-26-2-leaving-for-america"
    },
    {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_42-04-12_ep112_Tight_Shoes.mp3",
+    "length": 1771.97,
+    "series": "Screen Guild Theater",
+    "title": "Tight Shoes",
+    "date": "April 12, 1942",
+    "item": "https://archive.org/details/ScreenGuildTheater"
+   },
+   {
     "src": "https://archive.org/download/Otrr_The_Great_Gildersleeve_Singles/The%20Great%20Gildersleeve%2045-11-25%20%28188%29%20Big%20Football%20Game.mp3",
     "length": 1790.07,
     "series": "The Great Gildersleeve",
@@ -2217,6 +2667,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/fibber-mc-gee-and-molly"
    },
    {
+    "src": "https://archive.org/download/OTRR_Screen_Directors_Playhouse_Singles/Screen_Directors_Playhouse_49-09-23_035_Dont_Trust_Your_Husband.mp3",
+    "length": 1791.92,
+    "series": "Screen Directors Playhouse",
+    "title": "Don't Trust Your Husband",
+    "date": "September 23, 1949",
+    "item": "https://archive.org/details/OTRR_Screen_Directors_Playhouse_Singles"
+   },
+   {
     "src": "https://archive.org/download/the-burns-and-allen-show-1934-09-26-2-leaving-for-america/The%20Burns%20and%20Allen%20Show%201944-01-18%20%2820%29%20Guest%20-%20William%20Bendix.mp3",
     "length": 1766.09,
     "series": "Burns and Allen",
@@ -2239,6 +2697,14 @@ window.STATIONS = [
     "title": "Rare Black Orchid",
     "date": "May 21, 1950",
     "item": "https://archive.org/details/Our_Miss_Brooks_190_Episodes"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_43-10-18_ep166_My_Sister_Eileen.mp3",
+    "length": 1777.66,
+    "series": "Screen Guild Theater",
+    "title": "My Sister Eileen",
+    "date": "October 18, 1943",
+    "item": "https://archive.org/details/ScreenGuildTheater"
    },
    {
     "src": "https://archive.org/download/JackBenny1/Jb1941-10-19TrainToL.a..mp3",
@@ -2273,6 +2739,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/Otrr_The_Great_Gildersleeve_Singles"
    },
    {
+    "src": "https://archive.org/download/TheMercuryTheatreontheAir/Mercury%20Theater%201938-08-22%20-%2007%29%20The%20Affairs%20Of%20Anatole.mp3",
+    "length": 3626.03,
+    "series": "The Mercury Theatre on the Air",
+    "title": "The Affairs Of Anatole",
+    "date": "August 22, 1938",
+    "item": "https://archive.org/details/TheMercuryTheatreontheAir"
+   },
+   {
     "src": "https://archive.org/download/Our_Miss_Brooks_190_Episodes/Our_Miss_Brooks_510422_128_New_School_TV_Set.mp3",
     "length": 1777.4,
     "series": "Our Miss Brooks",
@@ -2303,6 +2777,14 @@ window.STATIONS = [
     "title": "Housewife's Guild",
     "date": "January 2, 1947",
     "item": "https://archive.org/details/the-burns-and-allen-show-1934-09-26-2-leaving-for-america"
+   },
+   {
+    "src": "https://archive.org/download/ScreenGuildTheater/Sgt_45-11-26_ep273_Biography_of_a_Bachelor_Girl.mp3",
+    "length": 1785.22,
+    "series": "Screen Guild Theater",
+    "title": "Biography of a Bachelor Girl",
+    "date": "November 26, 1945",
+    "item": "https://archive.org/details/ScreenGuildTheater"
    },
    {
     "src": "https://archive.org/download/Otrr_The_Great_Gildersleeve_Singles/The%20Great%20Gildersleeve%2051-05-09%20%28407%29%20Marjorie%20and%20Bronco%27s%20First%20Anniversary.mp3",
@@ -2337,6 +2819,13 @@ window.STATIONS = [
     "item": "https://archive.org/details/fibber-mc-gee-and-molly"
    },
    {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse40-01-14TheodoraGoesWild.mp3",
+    "length": 3398.67,
+    "series": "The Campbell Playhouse",
+    "title": "Theodora Goes Wild",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
+   },
+   {
     "src": "https://archive.org/download/the-burns-and-allen-show-1934-09-26-2-leaving-for-america/The%20Burns%20and%20Allen%20Show%201948-05-06%20%2836%29%20Judson%27s%20Sister%20and%20The%20Oil%20Well.mp3",
     "length": 1430.44,
     "series": "Burns and Allen",
@@ -2359,6 +2848,13 @@ window.STATIONS = [
     "title": "Marriage By Proxy",
     "date": "June 26, 1955",
     "item": "https://archive.org/details/Our_Miss_Brooks_190_Episodes"
+   },
+   {
+    "src": "https://archive.org/download/otr_campbellplayhouse/CampbellPlayhouse40-03-24JuneMoon.mp3",
+    "length": 3543.44,
+    "series": "The Campbell Playhouse",
+    "title": "June Moon",
+    "item": "https://archive.org/details/otr_campbellplayhouse"
    }
   ]
  },

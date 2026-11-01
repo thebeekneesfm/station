@@ -95,7 +95,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Noir | Philip Marlowe, Sam Spade, Pat Novak, Richard Diamond, Johnny Dollar, Box 13, Broadway Is My Beat, Suspense, Escape, The Whistler, The Shadow | about 36 hours |
 | Sci-Fi | X Minus One, Dimension X, 2000 Plus, Exploring Tomorrow, Space Patrol, Tom Corbett, Space Cadet | about 18 hours |
 | Out West | Gunsmoke, Frontier Gentleman, Fort Laramie, The Six Shooter, Have Gun – Will Travel | about 15 hours |
-| Theater | Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Orson Welles' Mercury Theatre (including *The War of the Worlds*) and Campbell Playhouse, Columbia Workshop | about 32 hours |
+| Romance & Drama | Great love stories and dramas from Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Campbell Playhouse, Mercury Theatre and Columbia Workshop | about 65 hours |
 | Laughs | Jack Benny, Fibber McGee and Molly, Burns and Allen, The Great Gildersleeve, Our Miss Brooks | about 16 hours |
 | Variety | Bing Crosby, Bob Hope, The Chase and Sanborn Hour, Command Performance, Fred Allen, Jimmy Durante, Spike Jones, Martin and Lewis, Jubilee, Dinah Shore, The Railroad Hour | about 45 hours |
 | Jazz Age | Ragtime, hot jazz and dance bands, from the 1910s through the '20s | about 58 hours |
