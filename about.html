@@ -34,6 +34,7 @@
   .logo { font: 700 clamp(30px, 7.5vw, 48px)/1 "BK Script", "BK Serif", Georgia, serif; color: var(--ink); text-decoration: none; white-space: nowrap; }
   .logo span { color: var(--red); font-size: .55em; }
   .tag { margin: 4px 0 0; font-style: italic; color: var(--ink-2); font-size: 19px; }
+  .links { display: flex; gap: 8px 20px; flex-wrap: wrap; }
   .back { color: var(--ink); font-size: 19px; text-underline-offset: 4px; text-decoration-thickness: 1px; white-space: nowrap; }
   main.paper { padding: 26px clamp(18px, 5vw, 44px) 34px; }
   h1, h2 { font-family: "BK Script", "BK Serif", Georgia, serif; font-weight: 700; word-spacing: .18em; line-height: 1.1; margin: 0; text-wrap: balance; }
@@ -44,11 +45,6 @@
   a:focus-visible { outline: 2px solid var(--honey); outline-offset: 3px; }
   .lede { font-size: 21px; margin-top: 14px; }
   .motto { margin: 6px 0 18px; font: italic 400 clamp(20px, 3vw, 24px)/1.35 "BK Serif", Georgia, serif; color: var(--red, #c8321f); }
-  .sign { margin: 18px auto 0; max-width: 420px; padding: 18px 22px 20px; background: #f6eed8; border: 3px solid var(--ink); box-shadow: 4px 5px 0 rgba(0,0,0,.3); text-align: center; transform: rotate(-.6deg); }
-  .sign .sign-head { margin: 0 0 8px; font: 700 26px/1.1 "BK Script", "BK Serif", Georgia, serif; word-spacing: .15em; }
-  .sign ul { list-style: none; margin: 0; padding: 0; }
-  .sign li { margin: 0; padding: 6px 0; border-top: 1.5px solid rgba(31,27,23,.25); font: 600 21px/1.3 "BK Serif", Georgia, serif; }
-  .sign li:nth-child(odd) { color: var(--red); }
   .noai { font-weight: 700; }
   .banner { display: block; margin-top: 16px; box-shadow: 0 2px 0 rgba(0,0,0,.25); }
   .banner img { display: block; width: 100%; height: auto; }
@@ -77,7 +73,7 @@
       <a class="logo" href="index.html">The Bee's Knees<span>.fm</span></a>
       <p class="tag">Carefully contrived to relieve you from the four walls of today</p>
     </div>
-    <a class="back" href="index.html">Back to the radio</a>
+    <nav class="links" aria-label="Pages"><a class="back" href="index.html">Back to the radio</a> <a class="back" href="comics.html">Comics</a> <a class="back" href="magazines.html">Magazines</a></nav>
   </header>
 
   <main class="paper">
@@ -96,6 +92,7 @@
       <li><b>Sleep timer:</b> tap the alarm clock to have the radio fade out and turn itself off after a while.</li>
       <li><b>The little TV</b> plays old cartoons with the sound off, on the same clock for everyone.</li>
       <li><b>The Sunday Funnies:</b> a new full-page Sunday comic every Sunday. Tap it to read it big, pinch to zoom, and flip back through past weeks.</li>
+      <li><b>The comic and magazine racks:</b> Golden Age comic books and old magazines to read page by page, on shelves by kind. Open the <a href="comics.html">comic rack</a> or the <a href="magazines.html">magazine rack</a>. Each one remembers your page.</li>
       <li><b>A word from our sponsors:</b> vintage print ads rotate in the corner. Tap one to see it up close, or browse them all in the <a href="ads.html">vintage gallery</a>.</li>
     </ul>
 
@@ -121,17 +118,7 @@
 
     <h2>A note about the shows</h2>
     <p>I'm doing my best to remove overly problematic content, but please remember this is a time capsule. Some of these programs are frightening, and some carry the attitudes of their time, including stereotypes that were wrong then too. I'm here for the vintage vibes, not the values.</p>
-    <div class="sign" role="note" aria-label="What this station believes">
-      <p class="sign-head">In this station we believe</p>
-      <ul>
-        <li>Black lives matter</li>
-        <li>No human is illegal</li>
-        <li>Love is love</li>
-        <li>Women's rights are human rights</li>
-        <li>Science is real</li>
-        <li>Kindness is everything</li>
-      </ul>
-    </div>
+    <p>In this station we believe Black lives matter, no human is illegal, love is love, women's rights are human rights, science is real, and kindness is everything.</p>
 
     <h2>Station art</h2>
     <p>All art, textures and fonts are created by human artists and are credited here. The hand-drawn station cards, buttons and animations are by HeyLadyK; find more of her work on <a href="https://linktr.ee/heyladykdesigns" target="_blank" rel="noopener">her Linktree</a>.</p>
