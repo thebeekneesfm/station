@@ -1320,7 +1320,14 @@
       document.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) closeAbout(); });
     }
     const body = box.querySelector(".ab-body");
-    const fill = html => { body.innerHTML = html; body.scrollTop = 0; };
+    // Cloudflare hides email addresses in pages it serves and decodes them with a script, which doesn't run
+    // in this pop-up, so decode them here (the first byte is the key; every byte after is XORed with it)
+    const unhide = hex => { const k = parseInt(hex.slice(0, 2), 16); let t = ""; for (let i = 2; i < hex.length; i += 2) t += String.fromCharCode(parseInt(hex.slice(i, i + 2), 16) ^ k); return t; };
+    const fill = html => {
+      body.innerHTML = html; body.scrollTop = 0;
+      body.querySelectorAll("[data-cfemail]").forEach(e => e.replaceWith(document.createTextNode(unhide(e.dataset.cfemail))));
+      body.querySelectorAll('a[href*="/cdn-cgi/l/email-protection#"]').forEach(a => { a.href = "mailto:" + unhide(a.getAttribute("href").split("#")[1]); });
+    };
     if (aboutHTML) fill(aboutHTML);
     else fetch("about.html").then(r => r.text()).then(t => {
       const doc = new DOMParser().parseFromString(t, "text/html"), main = doc.querySelector("main");
