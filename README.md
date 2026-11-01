@@ -191,6 +191,30 @@ Any piece can still be a looping video, with `"type": "video", "video": "art/you
 
 Draw a TV set as `art/tv-set.png`, with the screen cut out (transparent), and it sits over the picture. On phones it's `art/phone/tv-set.png`.
 
+## The Bee's Knees TV
+
+`tv.html` has six channels on one shared clock, like the radio: everyone tuned to channel 4 sees the same frame. The channels are 2 Crime & Detective, 4 Sitcoms, 5 Suspense & the Unknown, 7 Game & Panel Shows, 9 Space & Saturday Morning (with the cartoons from `tv.js` between the serials), and 11 Westerns. Every episode plays straight from the Internet Archive. Between episodes there's a station-ID card and a vintage commercial.
+
+The episode lists and the commercials are in `art/screen/tv-data.js`. Delete a line to take an episode or an ad off. Whole shows were left out for racist characters (Jack Benny's Rochester, Howdy Doody's Chief Thunderthud, Kit Carson's El Toro), and episodes were filtered by title and description. Commercials were checked frame by frame. Tobacco, alcohol, diet pills and caricature brand mascots (Aunt Jemima and the like) were left out.
+
+Draw a channel card as `art/tv/<channel>.png` (for example `art/tv/crime.png`) and it replaces the typed one. The TV set frame can go around `.scr` later.
+
+## The Drive-In
+
+`drive-in.html` runs a theme night every day: Monster Monday, Noir Tuesday, Sci-Fi Wednesday, Western Thursday, Comedy Friday, Creature Feature Saturday and the Sunday Mystery Matinee. In the daytime the screen loops matinee films from the night's theme. At dusk, by the viewer's own clock, the show starts: a welcome card, a cartoon, two coming-attraction trailers, a serial chapter (one a night), the first feature, the snack-bar intermission reels, the second feature, and goodnight. The double feature changes every week.
+
+The films, trailers, intermission reels and serial are in `art/screen/drivein-data.js`. The playback engine for both pages is `art/screen/theater.js`.
+
+Video can't be screened as thoroughly as comics, since nobody can watch 500 hours. Both pages carry a line inviting viewers to email anything that shouldn't be there, and it comes off the list.
+
+## The comic and magazine racks
+
+`comics.html` and `magazines.html` show shelves of issues from the Archive, read page by page in the site's own reader (`art/rack/reader.js`). The shelves are in `art/rack/rack.js`. Every issue was checked page by page for racist caricature, slurs and dialect before it went on a shelf.
+
+## Visitor counter
+
+The "You are visitor No." line counts each browser once a day, through a `count_visit` function in the same Supabase project as the listener count.
+
 ## About page and credits
 
 `about.html` explains the station: everything plays from the Internet Archive, it isn't affiliated with them, what's kept (nothing), and how a rights holder can ask for a show to come off. It lists the stations and shows automatically from `stations.js`. Edit the wording however you like.
