@@ -35,6 +35,8 @@
     amb_fire: "A fire going (click to turn off)",
     amb_off: "Add rain or a fire",
     tip: "Support the station",
+    aired: "Originally aired",
+    released: "Originally released",
     tipThanks: "Thank you, {name}, for buying the station a coffee",
     tipMember: "Welcome, {name}, our newest {tier} member",
     tipSaid: ": \u201c{message}\u201d",
@@ -1093,7 +1095,11 @@
       }
       case "now.series": return now ? now.track.series || "" : "";
       case "now.title": return now ? now.track.title || "" : "";
-      case "now.date": return now ? now.track.date || "" : "";
+      case "now.date": {
+        if (!now || !now.track.date) return "";
+        const music = st && /music|record/i.test(st.group || "");
+        return (music ? WORDS.released : WORDS.aired) + " " + now.track.date;
+      }
       case "now.remaining": return now ? mmss(now.left) + " left" : "";
       case "guide": {
         if (!st) return "";
@@ -1636,6 +1642,17 @@
       if (type === "text") {
         const s = textFor(L);
         if (el.firstChild.textContent !== s) { el.firstChild.textContent = s; fitText(rec); }
+        // "below": sit just under another text piece's actual words (e.g. the air date under a one- or two-line title)
+        if (L.below && !state.editing) {
+          const a = els.get(L.below);
+          if (a && a.el.firstChild) {
+            const t = a.el.firstChild, r = document.createRange(); r.selectNodeContents(t);
+            const box = r.getBoundingClientRect(), top = a.el.getBoundingClientRect().top;
+            const h = Math.min(a.L.h, box.height ? (box.bottom - top) / (state.scale || 1) : a.L.h);
+            const y = Math.round(a.L.y + h + (L.gap || 4));
+            if (el.style.top !== y + "px") el.style.top = y + "px";
+          }
+        }
         if (L.href) {
           const st = state.station;
           const href = L.href === "now.item" ? (st ? at(st).track.item || "" : "")
