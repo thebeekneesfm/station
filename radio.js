@@ -27,7 +27,6 @@
     guideNow: "Now",
     listeners: "{n} people listening",
     listenersOne: "1 person listening",
-    listenersOne: "Just you right now",
     listenersStation: "{station} {n}",
     listeningHere: "{n} listening",
     listeningAlone: "",
@@ -1040,7 +1039,7 @@
       }
       case "listeners.total": {   // everyone listening, across all stations
         const n = presence.live ? presence.counts._total || 0 : 0;
-        return !n ? "" : n === 1 ? WORDS.listenersOne : WORDS.listeners.replace("{n}", n);
+        return n > 1 ? WORDS.listeners.replace("{n}", n) : "";   // blank when it's only you
       }
       case "now.series": return now ? now.track.series || "" : "";
       case "now.title": return now ? now.track.title || "" : "";
