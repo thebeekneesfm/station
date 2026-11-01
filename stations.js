@@ -1060,7 +1060,7 @@ window.STATIONS = [
   "name": "Sci-Fi",
   "group": "Radio shows",
   "blurb": "Science fiction: rockets, robots and the atomic age.",
-  "card": "art/cards/scifi.png",
+  "card": "art/cards/scifi.webp",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
