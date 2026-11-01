@@ -22,6 +22,30 @@ window.RACK = [
     "date": "September 1952",
     "publisher": "Fawcett Publications",
     "pages": 36
+   },
+   {
+    "id": "fawcett_This_Magazine_Is_Haunted_004_1952-04",
+    "title": "This Magazine Is Haunted",
+    "issue": "No. 4",
+    "date": "April 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_This_Magazine_Is_Haunted_005_1952-06",
+    "title": "This Magazine Is Haunted",
+    "issue": "No. 5",
+    "date": "June 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 34
+   },
+   {
+    "id": "fawcett_This_Magazine_is_Haunted_006",
+    "title": "This Magazine Is Haunted",
+    "issue": "No. 6",
+    "date": "August 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
    }
   ]
  },
@@ -70,6 +94,28 @@ window.RACK = [
   ]
  },
  {
+  "shelf": "Westerns",
+  "kind": "comics",
+  "issues": [
+   {
+    "id": "fawcett_Hopalong_Cassidy_080_1953-06",
+    "title": "Hopalong Cassidy",
+    "issue": "No. 80",
+    "date": "June 1953",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Hopalong_Cassidy_085_1953-11",
+    "title": "Hopalong Cassidy",
+    "issue": "No. 85",
+    "date": "November 1953",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   }
+  ]
+ },
+ {
   "shelf": "Romance",
   "kind": "comics",
   "issues": [
@@ -102,6 +148,30 @@ window.RACK = [
     "date": "1953",
     "publisher": "Triangle Publications",
     "pages": 73
+   },
+   {
+    "id": "tvguide-chicago-1954-04-30",
+    "title": "TV Guide",
+    "issue": "Chicago edition, Apr. 30–May 6",
+    "date": "1954",
+    "publisher": "Triangle Publications",
+    "pages": 69
+   },
+   {
+    "id": "tvguide-chicago-1955-12-31",
+    "title": "TV Guide",
+    "issue": "Chicago edition, Dec. 31–Jan. 6",
+    "date": "1955",
+    "publisher": "Triangle Publications",
+    "pages": 89
+   },
+   {
+    "id": "tvguide-philadelphia-1955-11-19",
+    "title": "TV Guide",
+    "issue": "Philadelphia edition, Nov. 19–25",
+    "date": "1955",
+    "publisher": "Triangle Publications",
+    "pages": 77
    },
    {
     "id": "tvguide-pittsburgh-1955-11-05",
