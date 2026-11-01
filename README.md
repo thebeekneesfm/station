@@ -187,7 +187,7 @@ Any piece can still be a looping video, with `"type": "video", "video": "art/you
 
 ## The little TV
 
-`tv.js` lists about 230 old cartoons (Betty Boop, Popeye, Superman, Felix, Flip the Frog and more) from the Archive's cartoon collections. They play with the sound off, on the same clock as the stations, so everyone sees the same frame. The cartoon's title under the TV links to its Archive page. Wartime shorts and cartoons with racist caricatures were left out by title; delete a line in `tv.js` to drop anything else.
+The little TV on the radio is a "What's on" preview. Every 30 seconds it switches between the six TV channels and the Drive-In, showing (muted) whatever is playing there right now, on the same clock as those pages. A tag on the screen names the channel, the line under it says what's on, and clicking either opens that page in a new tab so the radio keeps playing. If the TV and drive-in data are missing, it falls back to the cartoons in `tv.js` (about 230, which also play on channel 9 and before the drive-in features).
 
 Draw a TV set as `art/tv-set.png`, with the screen cut out (transparent), and it sits over the picture. On phones it's `art/phone/tv-set.png`.
 

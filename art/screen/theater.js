@@ -103,6 +103,18 @@
     return null;
   }
 
+  // the radio's front page borrows the schedules for its "What's on" preview
+  window.THEATER = {
+    channels: function () {
+      if (this._ch) return this._ch;
+      var CH = (window.TVCH || []).filter(function (c) { return c.episodes && c.episodes.length; }), ADS = window.TV_ADS || [];
+      CH.forEach(function (c, k) { c.num = c.num || k + 2; });
+      return (this._ch = CH.map(function (c) { return buildChannel(c, ADS); }));
+    },
+    tvAt: tvAt, tvNext: tvNext, driveAt: driveAt, themeOf: themeOf, featuresFor: featuresFor, duskOf: duskOf
+  };
+  if (MODE !== "tv" && MODE !== "drivein") return;
+
   /* ---------------- the screen ---------------- */
   var screen = $(".scr"), vid = $(".scr video"), card = $(".scr-slate"), standby = $(".scr-standby");
   var soundBtn = $(".scr-sound"), vol = $(".scr-vol input");

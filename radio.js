@@ -895,14 +895,15 @@
           tuneTo(STATIONS.find(s => s.id === row.dataset.id));
         });
       } else if (type === "tv") {
-        el.innerHTML = '<video muted playsinline preload="auto" disablepictureinpicture></video><div class="tv-standby"></div>';
+        el.innerHTML = '<video muted playsinline preload="auto" disablepictureinpicture></video><div class="tv-standby"></div><div class="tv-tag" hidden></div>';
         const v = el.querySelector("video");
         v.muted = true; v.defaultMuted = true;
-        rec.tv = { v, standby: el.querySelector(".tv-standby"), src: "", until: 0 };
+        rec.tv = { v, standby: el.querySelector(".tv-standby"), tag: el.querySelector(".tv-tag"), src: "", until: 0, key: "" };
+        el.addEventListener("click", () => { if (!state.editing && rec.tv.href && !/^https?:/.test(rec.tv.href)) window.open(rec.tv.href, "_blank", "noopener"); });
         v.addEventListener("ended", () => { rec.tv.src = ""; renderTV(rec, true); });
         v.addEventListener("playing", () => { rec.tv.standby.hidden = true; });
         v.addEventListener("error", () => {
-          const now = tvAt();
+          const now = whatsOn();
           rec.tv.standby.hidden = false; rec.tv.standby.textContent = WORDS.tvStandby;
           rec.tv.until = Date.now() + (now ? now.left * 1000 + 500 : 30000);
         });
@@ -1085,7 +1086,7 @@
       case "tip": return CONFIG.tip ? WORDS.tip : "";
       case "ambience": return WORDS["amb_" + state.ambience] || "";
       case "sleep": return state.sleepEnd ? WORDS.sleepOn.replace("{min}", Math.max(1, Math.ceil((state.sleepEnd - Date.now()) / 60000))) : WORDS.sleepOff;
-      case "tv.title": { const n = tvAt(); return n ? n.c.title + (n.c.date ? ", " + n.c.date : "") : ""; }
+      case "tv.title": { const n = whatsOn(); return n ? n.title : ""; }
       case "station.listeners": {
         if (!st) return "";
         const sp = (CONFIG.sponsors || {})[st.id];
@@ -1450,18 +1451,57 @@
     while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (tvCum[mid] <= pos) lo = mid; else hi = mid - 1; }
     return { i: lo, c: TVLIST[lo], offset: pos - tvCum[lo], left: TVLIST[lo].length - (pos - tvCum[lo]) };
   }
+  /* "What's on": the little TV cycles through what's playing right now on each TV channel and at the drive-in,
+     muted, on the same clocks as those pages. Without the TV and drive-in data it falls back to the cartoons. */
+  const PREVIEW_EVERY = 30 * 1000;
+  function previewSlots() {
+    const T = window.THEATER; if (!T || !window.TVCH) return null;
+    const slots = T.channels().map(sc => ({ kind: "tv", sc }));
+    if (window.DRIVEIN) { slots.splice(Math.ceil(slots.length / 2), 0, { kind: "drivein" }); slots.unshift({ kind: "drivein" }); }
+    return slots;
+  }
+  let PREVIEW;
+  function whatsOn(ms = Date.now()) {
+    if (PREVIEW === undefined) PREVIEW = previewSlots();
+    if (!PREVIEW || !PREVIEW.length) {
+      const n = tvAt(ms); if (!n) return null;
+      return { src: n.c.src, offset: n.offset, left: n.left, title: n.c.title + (n.c.date ? ", " + n.c.date : ""), href: n.c.item, key: n.c.src };
+    }
+    const T = window.THEATER, slot = PREVIEW[Math.floor(ms / PREVIEW_EVERY) % PREVIEW.length];
+    const turn = PREVIEW_EVERY - (ms % PREVIEW_EVERY);
+    if (slot.kind === "tv") {
+      const sc = slot.sc, c = sc.ch, n = T.tvAt(sc, ms), it = n.item;
+      const tag = "Channel " + c.num + " \u00b7 " + c.name;
+      let what = it.kind === "show" ? it.series : it.kind === "ad" ? "A word from our sponsors" : "Station break";
+      return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: "On TV now: " + what, href: "tv.html#" + c.id, key: c.id + (it.src || it.slate) };
+    }
+    const n = T.driveAt(ms); if (!n) return null;
+    const it = n.item, th = T.themeOf(ms), dusk = T.duskOf(ms);
+    const label = it.slate ? ({ welcome: "Welcome", intermission: "Intermission", goodnight: "Good night" }[it.slate] || "")
+      : it.matinee ? "Matinee: " + it.title : it.kind === "feature" ? it.title : ({ cartoon: "A cartoon", trailer: "Coming attractions", serial: "Tonight\u2019s serial", intermission: "Intermission" }[it.kind] || it.title || "");
+    const tag = "The Drive-In \u00b7 " + th.name;
+    const when = ms < dusk ? " \u00b7 show at " + new Date(dusk).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "";
+    return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: "At the Drive-In: " + label + when, href: "drive-in.html", key: "di" + (it.src || it.slate) };
+  }
   function renderTV(rec, force) {
-    const tv = rec.tv, now = tvAt();
+    const tv = rec.tv, now = whatsOn();
     if (!now) { rec.el.hidden = true; return; }
-    if (tv.until > Date.now()) return;                       // waiting out a broken cartoon
+    if (tv.tag) { tv.tag.textContent = now.tag || ""; tv.tag.hidden = !now.tag; }
+    tv.href = now.href || "";
+    rec.el.classList.toggle("tv-link", !!(now.href && !/^https?:/.test(now.href)));
+    if (tv.until > Date.now() && tv.key === now.key) return;  // waiting out a broken video
     if (document.hidden && !force) return;
     const v = tv.v;
-    if (tv.src !== now.c.src) {
-      tv.src = now.c.src; tv.standby.hidden = false; tv.standby.textContent = WORDS.tvTuning;
-      v.src = now.c.src;
+    if (!now.src) {                                           // a station break or intermission card: no picture
+      if (tv.src) { v.pause(); v.removeAttribute("src"); v.load(); tv.src = ""; }
+      tv.key = now.key; tv.standby.hidden = false; tv.standby.textContent = WORDS.tvStandby; return;
+    }
+    if (tv.src !== now.src) {
+      tv.src = now.src; tv.key = now.key; tv.until = 0; tv.standby.hidden = false; tv.standby.textContent = WORDS.tvTuning;
+      v.src = now.src;
       v.addEventListener("loadedmetadata", () => {
-        const fresh = tvAt();
-        if (fresh && fresh.c.src === tv.src) { try { v.currentTime = Math.min(fresh.offset, (v.duration || 1e9) - 1); } catch (e) {} }
+        const fresh = whatsOn();
+        if (fresh && fresh.src === tv.src) { try { v.currentTime = Math.min(fresh.offset, (v.duration || 1e9) - 1); } catch (e) {} }
         v.play().catch(() => {});
       }, { once: true });
     } else if (!v.paused && Math.abs(v.currentTime - now.offset) > 8 && v.duration && now.offset < v.duration - 1) {
@@ -1670,7 +1710,7 @@
         if (L.href) {
           const st = state.station;
           const href = L.href === "now.item" ? (st ? at(st).track.item || "" : "")
-                     : L.href === "tv.item" ? ((tvAt() || { c: {} }).c.item || "")
+                     : L.href === "tv.item" ? ((whatsOn() || {}).href || "")
                      : L.href === "card.link" ? (st && st.cardLink || "")
                      : L.href === "config.tip" ? (CONFIG.tip || "") : L.href;
           if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
