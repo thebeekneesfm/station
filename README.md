@@ -215,7 +215,9 @@ Video can't be screened as thoroughly as comics, since nobody can watch 500 hour
 
 ## The comic and magazine racks
 
-`comics.html` and `magazines.html` show shelves of issues from the Archive, read page by page in the site's own reader (`art/rack/reader.js`). The shelves are in `art/rack/rack.js`. Every issue was checked page by page for racist caricature, slurs and dialect before it went on a shelf.
+`comics.html` and `magazines.html` show shelves of issues from the Archive, read page by page in the site's own reader (`art/rack/reader.js`). The shelves are in `art/rack/rack.js`.
+
+Every comic was checked page by page for racist caricature, slurs and dialect before it went on a shelf. Magazines (LIFE, National Geographic, Cosmopolitan, MAD, the Saturday Evening Post, TV Guide) go up whole, with a note at the top of the page asking readers to email any page that should come down. To take a page down, add its number to that issue's `"hide"` list in `rack.js`, e.g. `"hide": [18, 77]`. Use the page number from archive.org's page address (`.../page/n18`), which counts from 0. The reader shows a plain "This page isn't shown here" card in its place. To take a whole issue down, delete its entry.
 
 ## Visit counter
 

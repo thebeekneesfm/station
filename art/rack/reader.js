@@ -7,6 +7,9 @@
   var ALL = [];
   SHELVES.forEach(function (s) { s.issues.forEach(function (i) { ALL.push(i); }); });
   var page = function (id, n, w) { return "https://archive.org/download/" + encodeURIComponent(id) + "/page/n" + n + "_w" + w + ".jpg"; };
+  // pages listed in an issue's "hide" (page numbers counted from 0, as on archive.org) are left out with a note
+  var HIDDEN = "data:image/svg+xml," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="660" height="990" viewBox="0 0 660 990"><rect width="660" height="990" fill="#efe6d0"/><rect x="24" y="24" width="612" height="942" fill="none" stroke="#b9a882" stroke-width="3"/><text x="330" y="470" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#4a3f33">This page isn\u2019t shown here.</text><text x="330" y="525" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="24" fill="#6b5e4c">It had racist or adult content.</text></svg>');
+  var hidden = function (it, n) { return !!(it.hide && it.hide.indexOf(n) >= 0); };
   var store = {
     get: function (k) { try { return JSON.parse(localStorage.getItem("otr.rack." + k)); } catch (e) { return null; } },
     set: function (k, v) { try { localStorage.setItem("otr.rack." + k, JSON.stringify(v)); } catch (e) {} }
@@ -23,8 +26,8 @@
       var b = document.createElement("button"); b.type = "button"; b.className = "issue";
       var left = store.get(it.id);
       b.innerHTML = '<img loading="lazy" alt="" src="' + page(it.id, 0, 400) + '"><span class="cap"><b>' + esc(it.title) + "</b>" +
-        esc(it.issue) + ", <i>" + esc(it.date) + "</i>" + (left > 0 ? '<br><span class="cont">Page ' + (left + 1) + "</span>" : "") + "</span>";
-      b.setAttribute("aria-label", it.title + ", " + it.issue + ", " + it.date + ". Open to read.");
+        (it.issue ? esc(it.issue) + ", " : "") + "<i>" + esc(it.date) + "</i>" + (left > 0 ? '<br><span class="cont">Page ' + (left + 1) + "</span>" : "") + "</span>";
+      b.setAttribute("aria-label", [it.title, it.issue, it.date].filter(Boolean).join(", ") + ". Open to read.");
       // the Archive is sometimes slow to answer; try a cover again before giving up on it
       var cov = b.querySelector("img"), tries = 0;
       cov.addEventListener("error", function () { if (tries++ < 3) setTimeout(function () { cov.src = page(it.id, 0, 400) + "#r" + tries; }, 1500 * tries); });
@@ -63,7 +66,7 @@
     var W = px <= 600 ? 600 : px <= 900 ? 900 : px <= 1200 ? 1200 : 1600;
     spread.innerHTML = "";
     var imgs = p.map(function (n) {
-      var im = new Image(); im.alt = cur.title + ", page " + (n + 1); im.src = page(cur.id, n, W);
+      var im = new Image(); im.alt = hidden(cur, n) ? "Page not shown" : cur.title + ", page " + (n + 1); im.src = hidden(cur, n) ? HIDDEN : page(cur.id, n, W);
       im.draggable = false; spread.appendChild(im); return im;
     });
     // pages are about 2:3; size the spread to fit, then correct once the real shape is known
@@ -76,7 +79,7 @@
     };
     fit(); imgs.forEach(function (im) { im.addEventListener("load", fit, { once: true }); });
     // fetch the next pages ahead of time
-    [p[p.length - 1] + 1, p[p.length - 1] + 2].forEach(function (n) { if (n < cur.pages) { var x = new Image(); x.src = page(cur.id, n, W); } });
+    [p[p.length - 1] + 1, p[p.length - 1] + 2].forEach(function (n) { if (n < cur.pages && !hidden(cur, n)) { var x = new Image(); x.src = page(cur.id, n, W); } });
     var last = p[p.length - 1];
     rd.querySelector(".rd-count").textContent = (p.length > 1 ? (p[0] + 1) + "–" + (last + 1) : (at + 1)) + " of " + cur.pages;
     rd.querySelector(".rd-prev").disabled = at === 0;
@@ -96,7 +99,7 @@
   function open(it) {
     opener = document.activeElement;
     cur = it; rd.hidden = false; document.documentElement.style.overflow = "hidden";
-    rd.querySelector(".rd-title").innerHTML = "<b>" + esc(it.title) + "</b> " + esc(it.issue) + ", " + esc(it.date) + " &middot; " + esc(it.publisher);
+    rd.querySelector(".rd-title").innerHTML = "<b>" + esc(it.title) + "</b> " + (it.issue ? esc(it.issue) + ", " : "") + esc(it.date) + " &middot; " + esc(it.publisher);
     rd.querySelector(".src").href = "https://archive.org/details/" + encodeURIComponent(it.id);
     var saved = store.get(it.id);
     show(saved > 0 && saved < it.pages ? saved : 0);
