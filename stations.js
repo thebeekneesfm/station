@@ -443,7 +443,7 @@ window.STATIONS = [
   "name": "Noir",
   "group": "Radio shows",
   "blurb": "Private eyes, rain-slick streets and bad decisions.",
-  "card": "art/cards/noir.png",
+  "card": "art/cards/noir.webp",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
