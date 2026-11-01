@@ -10,6 +10,8 @@ window.STATIONS = [
   "group": "Radio shows",
   "blurb": "Horror stories: ghosts, curses and things in the dark.",
   "card": "art/cards/chills.webp",
+  "cardBy": "HeyLadyK",
+  "cardLink": "https://linktr.ee/heyladykdesigns",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
@@ -452,6 +454,8 @@ window.STATIONS = [
   "group": "Radio shows",
   "blurb": "Private eyes, killers and twist endings.",
   "card": "art/cards/noir.webp",
+  "cardBy": "HeyLadyK",
+  "cardLink": "https://linktr.ee/heyladykdesigns",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
@@ -1141,6 +1145,8 @@ window.STATIONS = [
   "group": "Radio shows",
   "blurb": "Science fiction: rockets, robots and the atomic age.",
   "card": "art/cards/scifi.webp",
+  "cardBy": "HeyLadyK",
+  "cardLink": "https://linktr.ee/heyladykdesigns",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,

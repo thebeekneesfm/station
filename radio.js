@@ -839,7 +839,10 @@
         if (L.href) {
           el.classList.add("hot");
           t.target = "_blank"; t.rel = "noopener";
-          t.addEventListener("click", e => { if (state.editing) e.preventDefault(); });
+          t.addEventListener("click", e => {
+            if (state.editing) { e.preventDefault(); return; }
+            if (L.href === "about.html" && !e.metaKey && !e.ctrlKey && !e.shiftKey) { e.preventDefault(); openAbout(); }
+          });
         }
         // drawn button: "img" is the still picture, "hoverImg" the animation that plays while you point at it
         // (or press it, on a phone). The typed text stays underneath for screen readers and until the art loads.
@@ -1042,6 +1045,7 @@
     const scrolls = byWidth || H * k > vh + 1;
     stage.style.transform = `translate(${byWidth ? 0 : Math.max(0, (vw - W * k) / 2)}px, ${scrolls ? 0 : Math.max(0, (vh - H * k) / 2)}px) scale(${k})`;
     document.documentElement.classList.toggle("scrolls", scrolls);
+    document.documentElement.classList.toggle("phone", SK === SKIN.portrait);
     const frame = stage.parentElement;
     frame.style.height = scrolls ? Math.ceil(H * k) + "px" : "";
     state.scale = k;
@@ -1072,6 +1076,7 @@
       case "station.name": return st ? st.name : "";
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
+      case "card.credit": return st && st.cardBy ? "Card art by " + st.cardBy : "";
       case "clean": return state.clean === false ? WORDS.cleanOff : WORDS.cleanOn;
       case "tip": return CONFIG.tip ? WORDS.tip : "";
       case "ambience": return WORDS["amb_" + state.ambience] || "";
@@ -1300,6 +1305,39 @@
     return { reset, zoomBy: f => { const r = box.getBoundingClientRect(); zoomAt(s * f, r.left + r.width / 2, r.top + r.height / 2); } };
   }
   function overlayOpen(on) { document.body.classList.toggle("ov-open", on); }
+
+  /* ---------- About, as a pop-up over the radio (the text comes from about.html, so there's one copy) ---------- */
+  let aboutHTML = null;
+  function openAbout(push = true) {
+    let box = document.getElementById("about-ov");
+    if (!box) {
+      box = document.createElement("div"); box.id = "about-ov"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true");
+      box.setAttribute("aria-label", "About The Bee's Knees.fm"); box.hidden = true;
+      box.innerHTML = '<div class="ab-card"><button type="button" class="ab-close">Close</button><div class="ab-body">Loading\u2026</div></div>';
+      document.body.appendChild(box);
+      box.addEventListener("click", e => { if (e.target === box) closeAbout(); });
+      box.querySelector(".ab-close").addEventListener("click", () => closeAbout());
+      document.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) closeAbout(); });
+    }
+    const body = box.querySelector(".ab-body");
+    const fill = html => { body.innerHTML = html; body.scrollTop = 0; };
+    if (aboutHTML) fill(aboutHTML);
+    else fetch("about.html").then(r => r.text()).then(t => {
+      const doc = new DOMParser().parseFromString(t, "text/html"), main = doc.querySelector("main");
+      if (!main) throw 0;
+      aboutHTML = main.innerHTML; fill(aboutHTML);
+    }).catch(() => { location.href = "about.html"; });
+    box.hidden = false; overlayOpen(true);
+    if (push && location.hash !== "#about") history.pushState({ about: 1 }, "", "#about");
+    box.querySelector(".ab-close").focus();
+  }
+  function closeAbout(fromHistory) {
+    const box = document.getElementById("about-ov"); if (!box || box.hidden) return;
+    box.hidden = true; overlayOpen(false);
+    if (!fromHistory && location.hash === "#about") history.back();
+  }
+  window.addEventListener("popstate", () => { if (location.hash === "#about") openAbout(false); else closeAbout(true); });
+  if (location.hash === "#about") setTimeout(() => openAbout(false), 0);
 
   /* ---------- the Sunday Funnies (art/funnies/funnies.js) ----------
      One strip a week, from the same week in 1930. It changes on Sunday by the listener's own calendar,
@@ -1582,6 +1620,7 @@
           const st = state.station;
           const href = L.href === "now.item" ? (st ? at(st).track.item || "" : "")
                      : L.href === "tv.item" ? ((tvAt() || { c: {} }).c.item || "")
+                     : L.href === "card.link" ? (st && st.cardLink || "")
                      : L.href === "config.tip" ? (CONFIG.tip || "") : L.href;
           if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
         }
