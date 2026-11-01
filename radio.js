@@ -26,6 +26,7 @@
     gap: "",
     guideNow: "Now",
     listeners: "{n} people listening",
+    listenersOne: "1 person listening",
     listenersOne: "Just you right now",
     listenersStation: "{station} {n}",
     listeningHere: "{n} listening",
@@ -1035,9 +1036,11 @@
       case "station.listeners": {
         if (!st) return "";
         const sp = (CONFIG.sponsors || {})[st.id];
-        const n = presence.live ? presence.counts[st.id] || 0 : 0;
-        const count = !presence.live ? "" : n <= 1 ? (WORDS.listeningAlone || "") : WORDS.listeningHere.replace("{n}", n);
-        return [sp ? WORDS.sponsorLine.replace("{name}", sp) : "", count].filter(Boolean).join(" \u00b7 ");
+        return sp ? WORDS.sponsorLine.replace("{name}", sp) : "";
+      }
+      case "listeners.total": {   // everyone listening, across all stations
+        const n = presence.live ? presence.counts._total || 0 : 0;
+        return !n ? "" : n === 1 ? WORDS.listenersOne : WORDS.listeners.replace("{n}", n);
       }
       case "now.series": return now ? now.track.series || "" : "";
       case "now.title": return now ? now.track.title || "" : "";
@@ -1076,7 +1079,7 @@
       if (st.group && st.group !== group) { group = st.group; h += `<div class="g-group">${esc(group)}</div>`; }
       const sel = state.station === st;
       const n = presence.live ? (presence.counts[st.id] || 0) : 0;
-      const cnt = n ? WORDS.listeningHere.replace("{n}", n) : "";
+      const cnt = "";   // per-station counts are off; the total sits in the masthead
       const cur = at(st, now), next = st.tracks[(cur.i + 1) % st.tracks.length];
       h += `<button type="button" class="g-row${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}">`;
       h += `<span class="g-lab"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span><span class="g-count">${esc(cnt)}</span></span>`;

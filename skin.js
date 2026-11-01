@@ -63,6 +63,7 @@ window.SKIN = {
     {"id": "tip-link", "type": "text", "bind": "tip", "href": "config.tip", "x": 1060, "y": 24, "w": 180, "h": 30, "font": "BK Serif", "size": 19, "color": "#c8321f", "align": "left", "weight": 600},
     {"id": "recent-link", "type": "text", "text": "Recently played", "action": "recent", "x": 740, "y": 24, "w": 150, "h": 30, "font": "BK Serif", "size": 19, "color": "#1f1b17", "align": "left", "weight": 500},
     {"id": "clock", "type": "text", "bind": "clock", "x": 1370, "y": 28, "w": 190, "h": 50, "font": "BK Serif", "size": 42, "color": "#1f1b17", "align": "right", "weight": 700},
+    {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 1250, "y": 80, "w": 310, "h": 24, "font": "BK Serif", "size": 17, "color": "#5d5244", "align": "right", "italic": true},
     {"id": "weather", "type": "weather", "x": 1252, "y": 30, "w": 112, "h": 46, "font": "BK Serif", "size": 30, "color": "#1f1b17", "weight": 700},
     {"id": "player", "src": "art/player.png", "x": 40, "y": 116, "w": 1520, "h": 300, "look": "wall"},
     {"id": "now-card", "look": "paper", "x": 362, "y": 128, "w": 494, "h": 280},
@@ -84,7 +85,7 @@ window.SKIN = {
     {"id": "ads-heading", "type": "text", "text": "A word from our sponsors", "x": 1190, "y": 432, "w": 370, "h": 30, "font": "BK Script", "size": 28, "color": "#e3a92f", "align": "center", "uppercase": false, "spacing": 0, "italic": true, "weight": 700},
     {"id": "ad", "type": "ad", "every": 40, "x": 1190, "y": 468, "w": 370, "h": 470, "font": "BK Serif", "size": 16, "color": "#cdbf9f", "dim": "#cdbf9f"},
     {"id": "ticker-strip", "src": "art/ticker-strip.png", "x": 0, "y": 950, "w": 1600, "h": 50, "look": "strip"},
-    {"id": "ticker", "type": "ticker", "show": ["listeners", "members", "tips", "announcements"], "speed": 70, "x": 20, "y": 950, "w": 1560, "h": 50, "font": "BK Serif", "size": 24, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
+    {"id": "ticker", "type": "ticker", "show": ["members", "tips", "announcements"], "speed": 70, "x": 20, "y": 950, "w": 1560, "h": 50, "font": "BK Serif", "size": 24, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
   ],
   "portrait": {
     "stage": {"width": 600, "height": 2824, "color": "transparent", "fit": "width"},
@@ -95,6 +96,7 @@ window.SKIN = {
       {"id": "tip-link", "type": "text", "bind": "tip", "href": "config.tip", "x": 20, "y": 100, "w": 250, "h": 28, "font": "BK Serif", "size": 16, "color": "#c8321f", "align": "left", "weight": 600},
       {"id": "recent-link", "type": "text", "text": "Recently played", "action": "recent", "x": 330, "y": 100, "w": 255, "h": 28, "font": "BK Serif", "size": 16, "color": "#1f1b17", "align": "right", "weight": 500},
       {"id": "clock", "type": "text", "bind": "clock", "x": 420, "y": 24, "w": 160, "h": 40, "font": "BK Serif", "size": 30, "color": "#1f1b17", "align": "right", "weight": 700},
+      {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 190, "y": 102, "w": 220, "h": 26, "font": "BK Serif", "size": 15, "color": "#5d5244", "align": "center", "italic": true},
       {"id": "weather", "type": "weather", "x": 470, "y": 66, "w": 110, "h": 30, "font": "BK Serif", "size": 20, "color": "#1f1b17", "weight": 700, "align": "right"},
       {"id": "player", "src": "art/phone/player.png", "x": 12, "y": 204, "w": 576, "h": 318, "look": "paper"},
       {"id": "station-card", "type": "card", "action": "power", "x": 22, "y": 216, "w": 236, "h": 236},
@@ -118,7 +120,7 @@ window.SKIN = {
       {"id": "ads-link", "type": "text", "text": "Vintage gallery", "href": "ads.html", "x": 110, "y": 2779, "w": 150, "h": 30, "font": "BK Serif", "size": 15, "color": "#efe5cc", "align": "left", "weight": 500},
       {"id": "donate-link", "type": "text", "text": "Donate to the Archive", "href": "https://archive.org/donate", "x": 270, "y": 2779, "w": 260, "h": 30, "font": "BK Serif", "size": 15, "color": "#efe5cc", "align": "left", "weight": 500},
       {"id": "ticker-strip", "src": "art/phone/ticker-strip.png", "x": 0, "y": 150, "w": 600, "h": 44, "look": "strip"},
-      {"id": "ticker", "type": "ticker", "show": ["listeners", "members", "tips", "announcements"], "speed": 60, "x": 12, "y": 150, "w": 576, "h": 44, "font": "BK Serif", "size": 17, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
+      {"id": "ticker", "type": "ticker", "show": ["members", "tips", "announcements"], "speed": 60, "x": 12, "y": 150, "w": 576, "h": 44, "font": "BK Serif", "size": 17, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
     ]
   }
 };
