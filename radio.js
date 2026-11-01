@@ -125,11 +125,16 @@
   const SOUND = Object.assign({ level: true, declick: 0.5, tone: 9000 }, SKIN.sound || {});
   function initAudio() {
     if (ctx) return;
+    // tell the phone this is a music player, not page sound: it keeps playing with the screen off,
+    // when you switch apps, and with the ringer switch on silent (Safari 16.4+)
+    try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (e) {}
     try {
       ctx = new (window.AudioContext || window.webkitAudioContext)();
       buildChain();
       tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
       ["tuning", "fire"].forEach(loadSound);
+      // a phone call or another app can interrupt the sound: pick it back up afterwards
+      ctx.onstatechange = () => { if (state.on && ctx.state !== "running" && ctx.state !== "closed") ctx.resume().catch(() => {}); };
     } catch (e) { ctx = null; }
   }
 
@@ -503,11 +508,13 @@
       audio.src = src;
       audio.addEventListener("loadedmetadata", seek, { once: true });
       audio.load();
+      if (document.hidden) audio.play().catch(() => {});
     }
     mediaSession(st, now.track);
     applySound();
   }
   function waitForNext(now) {
+    if (document.hidden) return play("early");
     audio.pause();
     setPhase("gap");
     lostTimer = setTimeout(play, Math.max(500, now.left * 1000 + 300));
@@ -563,7 +570,7 @@
   const gate = {
     waiting: false, start: 0, floor: 0, peak: -100, quiet: 0, loud: 0, done: false, next: null,
     arm(fromTop) {
-      this.waiting = !!fromTop && !!fx.ready; this.start = Date.now(); this.floor = 0; this.peak = -100; this.quiet = 0; this.loud = 0; this.done = false;
+      this.waiting = !!fromTop && !!fx.ready && !document.hidden; this.start = Date.now(); this.floor = 0; this.peak = -100; this.quiet = 0; this.loud = 0; this.done = false;
       if (this.waiting) { fx.fade.gain.cancelScheduledValues(ctx.currentTime); fx.fade.gain.setValueAtTime(0.0001, ctx.currentTime); }
     }
   };
@@ -607,13 +614,19 @@
     warmed = nx; const a = new Audio(); a.preload = "auto"; a.crossOrigin = "anonymous"; a.muted = true; a.src = nx;
   }, 2000);
 
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden || !state.on) return;
+    if (ctx && ctx.state !== "running") ctx.resume().catch(() => {});
+    if (state.station && audio.paused && (state.phase === "playing" || state.phase === "next")) play();
+  });
+
   function setPhase(p) { state.phase = p; applyVolume(); render(); presenceUpdate(); }
 
   function power(on) {
     initAudio();
     if (ctx && ctx.state === "suspended") ctx.resume();
     state.on = on == null ? !state.on : on;
-    if (!state.on) { audio.pause(); clearTimeout(lostTimer); state.phase = "off"; routeRoom(); applyVolume(); render(); presenceUpdate(); return; }
+    if (!state.on) { audio.pause(); clearTimeout(lostTimer); try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} state.phase = "off"; routeRoom(); applyVolume(); render(); presenceUpdate(); return; }
     retune(true);
   }
   function retune(force) {
@@ -640,9 +653,13 @@
   function mediaSession(st, tr) {
     if (!("mediaSession" in navigator)) return;
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.title, artist: tr.series, album: st.name });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.title, artist: tr.series, album: "The Bee's Knees.fm · " + st.name, artwork: [{ src: new URL("art/apple-touch-icon.png", location.href).href, sizes: "180x180", type: "image/png" }] });
       navigator.mediaSession.setActionHandler("nexttrack", () => stepStation(1));
       navigator.mediaSession.setActionHandler("previoustrack", () => stepStation(-1));
+      navigator.mediaSession.setActionHandler("play", () => power(true));
+      navigator.mediaSession.setActionHandler("pause", () => power(false));
+      navigator.mediaSession.setActionHandler("stop", () => power(false));
+      navigator.mediaSession.playbackState = "playing";
     } catch (e) {}
   }
 
