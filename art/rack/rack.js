@@ -438,5 +438,27 @@ window.RACK = [
     "pages": 65
    }
   ]
+ },
+ {
+  "shelf": "LIFE",
+  "kind": "magazines",
+  "issues": [
+   {
+    "id": "e1IEAAAAMBAJ",
+    "title": "LIFE",
+    "issue": "",
+    "date": "September 20, 1963",
+    "publisher": "Time Inc.",
+    "pages": 142
+   },
+   {
+    "id": "v0QEAAAAMBAJ",
+    "title": "LIFE",
+    "issue": "",
+    "date": "October 17, 1960",
+    "publisher": "Time Inc.",
+    "pages": 144
+   }
+  ]
  }
 ];

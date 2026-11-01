@@ -59,7 +59,8 @@
     cleanOn: "Hiss filter on",
     cleanOff: "Hiss filter off",
     tvTuning: "",
-    tvStandby: "Please stand by"
+    tvStandby: "Please stand by",
+    tvGuide: "TV Guide \u00b7 Click to watch now"
   }, SKIN.words || {});
   const CONFIG = window.RADIO_CONFIG || {};
 
@@ -1471,17 +1472,16 @@
     const turn = PREVIEW_EVERY - (ms % PREVIEW_EVERY);
     if (slot.kind === "tv") {
       const sc = slot.sc, c = sc.ch, n = T.tvAt(sc, ms), it = n.item;
-      const tag = "Channel " + c.num + " \u00b7 " + c.name;
       let what = it.kind === "show" ? it.series : it.kind === "ad" ? "A word from our sponsors" : "Station break";
-      return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: "On TV now: " + what, href: "tv.html#" + c.id, key: c.id + (it.src || it.slate) };
+      const tag = "Ch. " + c.num + " \u00b7 " + what;
+      return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: WORDS.tvGuide, href: "tv.html#" + c.id, key: c.id + (it.src || it.slate) };
     }
     const n = T.driveAt(ms); if (!n) return null;
     const it = n.item, th = T.themeOf(ms), dusk = T.duskOf(ms);
     const label = it.slate ? ({ welcome: "Welcome", intermission: "Intermission", goodnight: "Good night" }[it.slate] || "")
       : it.matinee ? "Matinee: " + it.title : it.kind === "feature" ? it.title : ({ cartoon: "A cartoon", trailer: "Coming attractions", serial: "Tonight\u2019s serial", intermission: "Intermission" }[it.kind] || it.title || "");
-    const tag = "The Drive-In \u00b7 " + th.name;
-    const when = ms < dusk ? " \u00b7 show at " + new Date(dusk).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }) : "";
-    return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: "At the Drive-In: " + label + when, href: "drive-in.html", key: "di" + (it.src || it.slate) };
+    const tag = "The Drive-In \u00b7 " + (label || th.name);
+    return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: WORDS.tvGuide, href: "drive-in.html", key: "di" + (it.src || it.slate) };
   }
   function renderTV(rec, force) {
     const tv = rec.tv, now = whatsOn();
