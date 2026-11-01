@@ -1235,6 +1235,72 @@
     box.querySelector("#ov-close").focus();
   }
 
+  /* Pinch, drag and double-tap zoom for a picture in a box, done here rather than by the browser:
+     pinch-zooming the whole page on a phone means redrawing the entire radio at a huge size, which can crash the tab. */
+  function zoomable(box, img) {
+    let s = 1, tx = 0, ty = 0, bw = 0, bh = 0;
+    const pts = new Map();
+    let last = null, lastTap = 0;
+    const size = () => {
+      const W = box.clientWidth, H = box.clientHeight;
+      if (!img.naturalWidth || !W) return false;
+      bw = W; bh = W * img.naturalHeight / img.naturalWidth;
+      if (bh > H * 1.0 && box.dataset.fit === "contain") { bh = H; bw = H * img.naturalWidth / img.naturalHeight; }
+      img.style.width = bw + "px"; img.style.height = bh + "px";
+      return true;
+    };
+    const clamp = () => {
+      const W = box.clientWidth, H = box.clientHeight, w = bw * s, h = bh * s;
+      tx = w <= W ? (W - w) / 2 : Math.min(0, Math.max(W - w, tx));
+      ty = h <= H ? (H - h) / 2 : Math.min(0, Math.max(H - h, ty));
+    };
+    const draw = () => { clamp(); img.style.transform = `translate(${tx}px, ${ty}px) scale(${s})`; box.classList.toggle("zoomed", s > 1.01); };
+    const zoomAt = (ns, cx, cy) => {
+      ns = Math.max(1, Math.min(5, ns));
+      const r = box.getBoundingClientRect(), px = cx - r.left, py = cy - r.top;
+      tx = px - (px - tx) * ns / s; ty = py - (py - ty) * ns / s; s = ns; draw();
+    };
+    const reset = () => { s = 1; tx = 0; ty = 0; if (size()) draw(); };
+    img.addEventListener("load", reset);
+    window.addEventListener("resize", () => { if (!box.offsetParent) return; const f = s; size(); s = f; draw(); });
+    box.addEventListener("pointerdown", e => {
+      box.setPointerCapture(e.pointerId);
+      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      last = null;
+    });
+    box.addEventListener("pointermove", e => {
+      if (!pts.has(e.pointerId)) return;
+      const prev = pts.get(e.pointerId);
+      pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+      if (pts.size === 1) { tx += e.clientX - prev.x; ty += e.clientY - prev.y; draw(); }
+      else if (pts.size === 2) {
+        const [a, b] = [...pts.values()];
+        const d = Math.hypot(a.x - b.x, a.y - b.y), mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+        if (last) { tx += mx - last.mx; ty += my - last.my; zoomAt(s * d / last.d, mx, my); }
+        last = { d, mx, my };
+      }
+    });
+    const up = e => {
+      if (!pts.has(e.pointerId)) return;
+      const start = pts.size === 1;
+      pts.delete(e.pointerId); last = null;
+      if (start && e.type === "pointerup") {
+        const now = Date.now();
+        if (now - lastTap < 320) { zoomAt(s > 1.01 ? 1 : 2.5, e.clientX, e.clientY); lastTap = 0; }
+        else lastTap = now;
+      }
+    };
+    box.addEventListener("pointerup", up); box.addEventListener("pointercancel", up);
+    box.addEventListener("wheel", e => {
+      e.preventDefault();
+      if (e.ctrlKey) zoomAt(s * Math.exp(-e.deltaY / 200), e.clientX, e.clientY);
+      else { tx -= e.deltaX; ty -= e.deltaY; draw(); }
+    }, { passive: false });
+    box.addEventListener("dblclick", e => e.preventDefault());
+    return { reset, zoomBy: f => { const r = box.getBoundingClientRect(); zoomAt(s * f, r.left + r.width / 2, r.top + r.height / 2); } };
+  }
+  function overlayOpen(on) { document.body.classList.toggle("ov-open", on); }
+
   /* ---------- the Sunday Funnies (art/funnies/funnies.js) ----------
      One strip a week, from the same week in 1930. It changes on Sunday by the listener's own calendar,
      and every week since the feature started stays readable in the back issues. */
@@ -1283,16 +1349,21 @@
       box = document.createElement("div"); box.id = "funnies-ov"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.hidden = true;
       box.innerHTML = '<div class="fo-card"><div class="fo-head"><h2>The Sunday Funnies</h2><button type="button" class="fo-close">Close</button></div>' +
         '<div class="fo-nav"><button type="button" class="fo-prev">\u2190 Older</button><span class="fo-when"></span><button type="button" class="fo-next">Newer \u2192</button></div>' +
-        '<div class="fo-page"><img alt=""></div><p class="fo-credit"></p></div>';
+        '<div class="fo-page"><img alt="" draggable="false"><div class="fo-zoom"><button type="button" class="fo-out" aria-label="Zoom out">\u2212</button><button type="button" class="fo-in" aria-label="Zoom in">+</button></div></div><p class="fo-credit"></p></div>';
       document.body.appendChild(box);
-      box.addEventListener("click", e => { if (e.target === box) box.hidden = true; });
-      box.querySelector(".fo-close").addEventListener("click", () => { box.hidden = true; });
+      const close = () => { box.hidden = true; overlayOpen(false); };
+      box.addEventListener("click", e => { if (e.target === box) close(); });
+      box.querySelector(".fo-close").addEventListener("click", close);
+      const pg = box.querySelector(".fo-page");
+      box._zoom = zoomable(pg, pg.querySelector("img"));
+      box.querySelector(".fo-in").addEventListener("click", e => { e.stopPropagation(); box._zoom.zoomBy(1.6); });
+      box.querySelector(".fo-out").addEventListener("click", e => { e.stopPropagation(); box._zoom.zoomBy(1 / 1.6); });
+      box.querySelectorAll(".fo-zoom button").forEach(b => b.addEventListener("pointerdown", e => e.stopPropagation()));
       box.querySelector(".fo-prev").addEventListener("click", () => openFunnies(+box.dataset.k + 1));
       box.querySelector(".fo-next").addEventListener("click", () => openFunnies(+box.dataset.k - 1));
-      box.querySelector(".fo-page").addEventListener("click", e => e.currentTarget.classList.toggle("zoom"));
       document.addEventListener("keydown", e => {
         if (box.hidden) return;
-        if (e.key === "Escape") box.hidden = true;
+        if (e.key === "Escape") { box.hidden = true; overlayOpen(false); }
         else if (e.key === "ArrowLeft") openFunnies(+box.dataset.k + 1);
         else if (e.key === "ArrowRight") openFunnies(+box.dataset.k - 1);
       });
@@ -1301,7 +1372,7 @@
     box.dataset.k = k;
     const img = box.querySelector(".fo-page img");
     img.src = f.img; img.alt = f.strip + " by " + f.artist + ", from " + f.paper + ", " + fnDate(f.date);
-    box.querySelector(".fo-page").classList.remove("zoom"); box.querySelector(".fo-page").scrollTop = 0;
+
     box.querySelector(".fo-when").textContent = k === 0 ? "This Sunday" : "Sunday, " + sun.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
     box.querySelector(".fo-prev").disabled = k >= issues.length - 1;
     box.querySelector(".fo-next").disabled = k === 0;
@@ -1309,7 +1380,8 @@
     const b = document.createElement("b"); b.textContent = f.strip; cr.appendChild(b);
     cr.appendChild(document.createTextNode(" by " + f.artist + " (" + f.syndicate + "). From " + f.paper + ", " + fnDate(f.date) + ". "));
     const a = document.createElement("a"); a.href = f.source; a.target = "_blank"; a.rel = "noopener"; a.textContent = "See the original page at the Library of Congress"; cr.appendChild(a);
-    box.hidden = false;
+    box.hidden = false; overlayOpen(true);
+    if (img.complete) box._zoom.reset();
     box.querySelector(".fo-close").focus();
   }
 
@@ -1355,14 +1427,14 @@
       box = document.createElement("div"); box.id = "ad-zoom"; box.setAttribute("role", "dialog"); box.setAttribute("aria-label", "Ad");
       box.innerHTML = '<img alt=""><div class="zcap"><span></span><a target="_blank" rel="noopener">via archive.org</a><button type="button">Close</button></div>';
       document.body.appendChild(box);
-      const close = () => { box.hidden = true; };
+      const close = () => { box.hidden = true; overlayOpen(false); };
       box.addEventListener("click", e => { if (e.target === box || e.target.tagName === "BUTTON") close(); });
       window.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) close(); });
     }
     box.querySelector("img").src = a.src; box.querySelector("img").alt = a.title;
     box.querySelector("span").textContent = a.title + (a.date ? ", " + a.date : "");
     box.querySelector("a").href = a.item || "https://archive.org";
-    box.hidden = false; box.querySelector("button").focus();
+    box.hidden = false; overlayOpen(true); box.querySelector("button").focus();
   }
   const AD_EPOCH = Date.parse("2026-11-01T00:00:00Z");
   function renderAd(rec) {
