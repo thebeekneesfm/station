@@ -69,7 +69,8 @@ window.SKIN = {
     {"id": "visits", "type": "text", "bind": "visits", "x": 980, "y": 76, "w": 260, "h": 30, "font": "BK Serif", "size": 18, "color": "#5d5244", "align": "left", "italic": true},
     {"id": "clock", "type": "text", "bind": "clock", "x": 1330, "y": 18, "w": 230, "h": 50, "font": "BK Serif", "size": 42, "color": "#1f1b17", "align": "right", "weight": 700},
     {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 1080, "y": 78, "w": 310, "h": 30, "font": "BK Serif", "size": 20, "color": "#5d5244", "align": "right", "italic": true},
-    {"id": "weather", "type": "weather", "x": 1400, "y": 70, "w": 160, "h": 40, "font": "BK Serif", "size": 26, "color": "#1f1b17", "weight": 700, "align": "right"},
+    // weather is off for now; delete the two slashes to bring it back
+    // {"id": "weather", "type": "weather", "x": 1400, "y": 70, "w": 160, "h": 40, "font": "BK Serif", "size": 26, "color": "#1f1b17", "weight": 700, "align": "right"},
     {"id": "player", "src": "art/player.png", "x": 40, "y": 128, "w": 1520, "h": 300, "look": "wall"},
     {"id": "now-card", "look": "paper", "x": 362, "y": 140, "w": 494, "h": 280},
     {"id": "station-card", "type": "card", "action": "power", "x": 57, "y": 138, "w": 270, "h": 270},
@@ -103,7 +104,7 @@ window.SKIN = {
       {"id": "logo", "src": "art/phone/logo.png", "x": 20, "y": 14, "w": 560, "h": 118, "look": "logo"},
       {"id": "clock", "type": "text", "bind": "clock", "x": 420, "y": 24, "w": 160, "h": 40, "font": "BK Serif", "size": 30, "color": "#1f1b17", "align": "right", "weight": 700},
       {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 20, "y": 140, "w": 330, "h": 30, "font": "BK Serif", "size": 22, "color": "#5d5244", "align": "left", "italic": true},
-      {"id": "weather", "type": "weather", "x": 440, "y": 136, "w": 140, "h": 36, "font": "BK Serif", "size": 24, "color": "#1f1b17", "weight": 700, "align": "right"},
+      // {"id": "weather", "type": "weather", "x": 440, "y": 136, "w": 140, "h": 36, "font": "BK Serif", "size": 24, "color": "#1f1b17", "weight": 700, "align": "right"},
       {"id": "player", "src": "art/phone/player.png", "x": 12, "y": 292, "w": 576, "h": 372, "look": "paper"},
       {"id": "station-card", "type": "card", "action": "power", "x": 22, "y": 304, "w": 236, "h": 236},
       {"id": "card-credit", "type": "text", "bind": "card.credit", "href": "card.link", "x": 16, "y": 544, "w": 248, "h": 28, "font": "BK Serif", "size": 18, "color": "#5d5244", "align": "center", "italic": true},
