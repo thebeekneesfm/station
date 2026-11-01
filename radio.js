@@ -956,7 +956,7 @@
         el.querySelector(".ad-via").addEventListener("click", e => { if (state.editing) e.preventDefault(); });
         rec.ad = { img, title: el.querySelector(".ad-title"), via: el.querySelector(".ad-via"), cur: -1 };
         const card = document.createElement("div"); card.className = "tipcard"; card.hidden = true; card.setAttribute("role", "status");
-        card.innerHTML = '<div class="tc-inner"><div class="tc-kicker"></div><div class="tc-name"></div><div class="tc-msg"></div><div class="tc-thanks"></div><a class="tc-link" target="_blank" rel="noopener"></a></div>';
+        card.innerHTML = '<div class="tc-wrap"><div class="tc-inner"><div class="tc-kicker"></div><div class="tc-name"></div><div class="tc-msg"></div><div class="tc-thanks"></div><a class="tc-link" target="_blank" rel="noopener"></a></div></div>';
         card.addEventListener("click", e => { if (!e.target.closest("a")) { e.stopPropagation(); card.hidden = true; } });
         el.appendChild(card); rec.ad.card = card;
         el.querySelector(".ad-img").addEventListener("click", () => { if (!state.editing && rec.ad.cur >= 0) openAd((window.ADS || [])[rec.ad.cur]); });
