@@ -1559,13 +1559,15 @@
 
   // recent Ko-fi tips (only names and messages the supporter made public are ever stored)
   const tips = { list: [] };
+  // Ko-fi's "send a test" button always comes from "Jo Example"; never show those
+  const realTip = t => !(t && /^jo example$/i.test((t.from_name || "").trim()));
   function loadTips() {
     const L = CONFIG.listeners || {};
     if (!L.url || !L.key || !window.fetch) return;
     const since = new Date(Date.now() - 14 * 864e5).toISOString();
     fetch(L.url + "/rest/v1/tips?select=created_at,kind,from_name,message,tier_name&order=created_at.desc&limit=5&created_at=gte." + encodeURIComponent(since),
       { headers: { apikey: L.key, Authorization: "Bearer " + L.key } })
-      .then(r => r.ok ? r.json() : []).then(list => { if (Array.isArray(list)) { const had = JSON.stringify(tips.list); tips.list = list; if (had !== JSON.stringify(list)) freshTicker(); } }).catch(() => {});
+      .then(r => r.ok ? r.json() : []).then(list => { if (Array.isArray(list)) { list = list.filter(realTip); const had = JSON.stringify(tips.list); tips.list = list; if (had !== JSON.stringify(list)) freshTicker(); } }).catch(() => {});
   }
   // show new ticker news straight away instead of waiting for the current loop to finish
   function freshTicker() { els.forEach(r => { if (r.tick) r.tick.text = null; }); }
@@ -1581,7 +1583,7 @@
         if (!Array.isArray(list)) return;
         const seen = new Set(); members.list = [];
         const had = JSON.stringify(members.list); members.list = [];
-        list.forEach(m => { const k = m.from_name.toLowerCase(); if (!seen.has(k)) { seen.add(k); members.list.push(m); } });
+        list.filter(realTip).forEach(m => { const k = m.from_name.toLowerCase(); if (!seen.has(k)) { seen.add(k); members.list.push(m); } });
         if (had !== JSON.stringify(members.list)) freshTicker();
       }).catch(() => {});
   }
@@ -1598,10 +1600,10 @@
       { headers: { apikey: L.key, Authorization: "Bearer " + L.key } })
       .then(r => r.ok ? r.json() : []).then(list => {
         if (!Array.isArray(list) || !list.length) return;
-        tips.list = list.filter(t => Date.parse(t.created_at) > Date.now() - 14 * 864e5);
+        tips.list = list.filter(realTip).filter(t => Date.parse(t.created_at) > Date.now() - 14 * 864e5);
         freshTicker(); loadMembers();
         const t = list[0], when = Date.parse(t.created_at);
-        if (when > lastCard) { lastCard = when; showTipCard(t); }
+        if (when > lastCard && (realTip(t) || /[?&]kofitest\b/.test(location.search))) { lastCard = when; showTipCard(t); }
       }).catch(() => {}), 800);
   }
   function showTipCard(t) {
