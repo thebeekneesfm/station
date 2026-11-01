@@ -39,7 +39,9 @@
   html, body { height: 100%; margin: 0; overflow: hidden; background: var(--ground); }
   body { font: 13px/1.4 ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace; color: var(--panel-ink); }
 
-  #stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; overflow: hidden; user-select: none; -webkit-user-select: none; touch-action: none; }
+  #stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; overflow: hidden; user-select: none; -webkit-user-select: none; touch-action: pan-y pinch-zoom; }
+  /* knobs turn by dragging, and the layout editor drags pieces around: those keep the finger to themselves */
+  .t-knob, .t-needle, body.editing #stage { touch-action: none; }
   .layer { position: absolute; box-sizing: border-box; pointer-events: none; }
   .layer.hot { pointer-events: auto; cursor: pointer; }
   .t-knob.hot { cursor: grab; }
@@ -541,6 +543,6 @@
 <script src="tv.js?v=20261101z"></script>
 <script src="art/funnies/funnies.js?v=20261101a"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101F1"></script>
+<script src="radio.js?v=20261101F2"></script>
 </body>
 </html>
