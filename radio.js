@@ -889,7 +889,7 @@
       } else if (type === "weather") {
         el.innerHTML = '<div class="wx" role="img"><span class="wx-icon"></span><span class="wx-temp"></span></div>';
         const box = el.firstChild;
-        if (L.font) box.style.fontFamily = `"${L.font}", Georgia, serif`;
+        if (L.font) box.style.fontFamily = `"${L.font}", "BK Serif", Georgia, serif`;
         if (L.size) box.style.fontSize = L.size + "px";
         if (L.color) box.style.color = L.color;
         if (L.weight) box.style.fontWeight = L.weight;
@@ -959,7 +959,7 @@
       if (L.type === "reactbar") el.style.setProperty("--r-size", (L.size || 26) + "px");
       if (L.type === "guide" || L.type === "ad" || L.type === "tv") {
         const v = (k, val) => { if (val != null) el.style.setProperty(k, val); };
-        el.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
+        el.style.fontFamily = `"${L.font || ""}", "BK Serif", Georgia, serif`;
         v("--g-size", (L.size || 18) + "px"); v("--g-ink", L.color || "#e9dcc3"); v("--g-dim", L.dim || "#a99a83");
         v("--g-line", L.line || "rgba(233,220,195,.16)"); v("--g-hi", L.highlight || "#f0b44c");
         v("--g-block", L.block || "rgba(233,220,195,.06)"); v("--g-sel", L.selected || "rgba(240,180,76,.14)");
@@ -968,14 +968,14 @@
       }
       if (L.type === "ticker") {
         const t = el.firstChild;
-        t.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
+        t.style.fontFamily = `"${L.font || ""}", "BK Serif", Georgia, serif`;
         t.style.color = L.color || "#e9dcc3";
         t.style.fontSize = (L.size || 22) + "px";
         t.style.lineHeight = L.h + "px";
       }
       if (L.type === "text") {
         const t = el.firstChild;
-        t.style.fontFamily = `"${L.font || ""}", "Courier New", Courier, monospace`;
+        t.style.fontFamily = `"${L.font || ""}", "BK Serif", Georgia, serif`;
         t.style.color = L.color || "#e9dcc3";
         t.style.textAlign = L.align || "left";
         t.style.lineHeight = L.lineHeight || 1.2;
