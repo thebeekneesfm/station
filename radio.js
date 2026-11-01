@@ -35,6 +35,7 @@
     amb_fire: "A fire going (click to turn off)",
     amb_off: "Add rain or a fire",
     tip: "Support the station",
+    visits: "You are visitor No. {n}",
     aired: "Originally aired",
     released: "Originally released",
     tipThanks: "Thank you, {name}, for buying the station a coffee",
@@ -1078,6 +1079,7 @@
       case "station.name": return st ? st.name : "";
       case "station.freq": return st ? st.freq || "" : "";
       case "station.blurb": return st ? st.blurb || "" : "";
+      case "visits": return visits.n ? WORDS.visits.replace("{n}", String(visits.n).padStart(6, "0").replace(/\B(?=(\d{3})+(?!\d))/g, ",")) : "";
       case "card.credit": return st && st.cardBy ? "Card art by " + st.cardBy : "";
       case "clean": return state.clean === false ? WORDS.cleanOff : WORDS.cleanOn;
       case "tip": return CONFIG.tip ? WORDS.tip : "";
@@ -1502,6 +1504,18 @@
     ad.via.href = a.item || "https://archive.org";
     new Image().src = A[(k + 1) % A.length].src;   // fetch the next one early
   }
+
+  // the visitor counter: each browser counts once a day; it only ever stores a running total
+  const visits = { n: 0 };
+  function countVisit() {
+    const L = CONFIG.listeners || {};
+    if (!L.url || !L.key || !window.fetch) return;
+    const today = new Date().toDateString(), isNew = store.get("visitDay", "") !== today;
+    fetch(L.url + "/rest/v1/rpc/count_visit", { method: "POST",
+      headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" }, body: JSON.stringify({ is_new: isNew }) })
+      .then(r => r.ok ? r.json() : 0).then(n => { if (n > 0) { visits.n = n; if (isNew) store.set("visitDay", today); render(); } }).catch(() => {});
+  }
+  setTimeout(countVisit, 1500);
 
   // recent Ko-fi tips (only names and messages the supporter made public are ever stored)
   const tips = { list: [] };
