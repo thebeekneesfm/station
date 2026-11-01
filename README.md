@@ -78,6 +78,7 @@ Each piece in `skin.js` has `id`, `x`, `y`, `w`, `h`, and usually `src` (the art
 | `"when": "on"` | Only show at certain times: `on`, `off`, `playing`, `warming`, `between` (dial between stations), `lost` (a broken tape), `tuned`. Combine them with commas. |
 | `"station": "chills"` | Only show on that station, for example a different dial glow per station. |
 | `"frames": ["art/tube-1.png", "art/tube-2.png"], "fps": 6` | A looping animation, like flickering tubes or a turning record. |
+| `"img": "art/buttons/about.png", "hoverImg": "art/buttons/about-hover.webp"` | On a text piece: shows your drawing instead of the typed words, and plays the animation while someone points at it (or for a moment after a tap on a phone). Same canvas size for both. `"hoverMs": 1500` sets how long it plays after a tap. |
 | `"blend": "multiply"`, `"opacity": 0.35` | Overlay effects for grain, scratches and vignettes. |
 
 `"words"` at the top level changes the status messages, for example `"words": { "off": "Turn the knob, darling", "lost": "Lost the signal. Back at {time}" }`.

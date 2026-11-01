@@ -759,6 +759,30 @@
           t.target = "_blank"; t.rel = "noopener";
           t.addEventListener("click", e => { if (state.editing) e.preventDefault(); });
         }
+        // drawn button: "img" is the still picture, "hoverImg" the animation that plays while you point at it
+        // (or press it, on a phone). The typed text stays underneath for screen readers and until the art loads.
+        if (L.img) {
+          el.classList.add("drawn");
+          const still = makeImg(L.img, ok => el.classList.toggle("art-ok", ok)); still.className = "btn-still";
+          el.appendChild(still);
+          if (L.hoverImg) {
+            const anim = new Image(); anim.alt = ""; anim.draggable = false; anim.className = "btn-anim"; anim.hidden = true;
+            el.appendChild(anim);
+            new Image().src = L.hoverImg;                                   // fetch it early so the first hover is instant
+            const calm = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+            let n = 0;
+            const on = () => {
+              if (calm || state.editing || !el.classList.contains("art-ok")) return;
+              // a fresh address makes the animation start from its first frame every time
+              anim.src = L.hoverImg + (L.hoverImg.includes("?") ? "&" : "?") + "p=" + (++n % 2);
+              anim.hidden = false; still.style.visibility = "hidden";
+            };
+            const off = () => { anim.hidden = true; still.style.visibility = ""; };
+            el.addEventListener("pointerenter", on); el.addEventListener("pointerleave", off);
+            el.addEventListener("focusin", on); el.addEventListener("focusout", off);
+            el.addEventListener("pointerup", e => { if (e.pointerType !== "mouse") setTimeout(off, L.hoverMs || 1200); });
+          }
+        }
       } else if (type === "video") {
         const v = document.createElement("video");
         v.muted = true; v.defaultMuted = true; v.loop = true; v.autoplay = true; v.playsInline = true; v.preload = "auto";

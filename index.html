@@ -118,6 +118,10 @@
   .g-name { font-family: var(--g-label-font, inherit); }
   .g-head { background: var(--g-paper, var(--ground)); }
   .t-text.hot .txt { cursor: pointer; }
+  /* drawn buttons: the picture sits on top, the typed words stay underneath (hidden once the art loads) */
+  .drawn > .btn-still, .drawn > .btn-anim { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+  .drawn:not(.art-ok) > .btn-still { display: none; }
+  .drawn.art-ok > .txt { color: transparent !important; text-decoration: none !important; text-shadow: none !important; }
   .t-text.hot:hover .txt { text-decoration: underline; text-underline-offset: 3px; }
 
   /* the stage is drawn at full size and scaled into this frame */
@@ -463,6 +467,6 @@
 <script src="ads.js?v=20261101z"></script>
 <script src="tv.js?v=20261101z"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101b1"></script>
+<script src="radio.js?v=20261101h1"></script>
 </body>
 </html>
