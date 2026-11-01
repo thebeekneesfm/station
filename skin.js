@@ -47,10 +47,12 @@ window.SKIN = {
   },
   "sounds": {
     "tuning": "art/sounds/tuning.mp3?v=2",
-    "fire": "art/sounds/fire.mp3"
+    "rain": "art/sounds/rain.mp3",
+    "fire": "art/sounds/fire.mp3",
+    "storm": "art/sounds/storm.mp3"
   },
   "name": "The Bee's Knees",
-  "tagline": "An online radio station of 1920s–1960s music and radio theatre",
+  "tagline": "Carefully contrived to relieve you from the four walls of today",
   "badge": ".fm",
   "ambienceLevel": 0.3,
   "layers": [
@@ -80,17 +82,17 @@ window.SKIN = {
     {"id": "guide", "type": "guide", "mode": "nownext", "x": 48, "y": 458, "w": 1104, "h": 484, "rowHeight": 23, "labelWidth": 280, "font": "BK Serif", "size": 16, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "BK Serif", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
     {"id": "tv", "type": "tv", "x": 880, "y": 136, "w": 280, "h": 210, "font": "BK Serif", "size": 18, "color": "#efe5cc"},
     {"id": "tv-title", "type": "text", "bind": "tv.title", "href": "tv.item", "x": 860, "y": 348, "w": 320, "h": 22, "font": "BK Serif", "size": 17, "color": "#f6eed8", "align": "center", "italic": true},
-    {"id": "fireplace", "type": "video", "video": "art/fireplace.mp4", "x": 1214, "y": 142, "w": 318, "h": 198},
-    {"id": "fire-volume", "type": "slider", "label": "Fire volume", "x": 1206, "y": 350, "w": 334, "h": 30},
+    {"id": "funnies", "type": "funnies", "x": 1200, "y": 134, "w": 346, "h": 210},
+    {"id": "ambience", "type": "mixer", "x": 1206, "y": 350, "w": 334, "h": 76},
     {"id": "ads-heading", "type": "text", "text": "A word from our sponsors", "x": 1190, "y": 444, "w": 370, "h": 30, "font": "BK Script", "size": 28, "color": "#e3a92f", "align": "center", "uppercase": false, "spacing": 0, "italic": true, "weight": 700},
     {"id": "ad", "type": "ad", "every": 40, "x": 1190, "y": 480, "w": 370, "h": 458, "font": "BK Serif", "size": 16, "color": "#cdbf9f", "dim": "#cdbf9f"},
-    {"id": "ticker-strip", "src": "art/ticker-strip.png", "x": 0, "y": 950, "w": 1600, "h": 50, "look": "strip"},
-    {"id": "ticker", "type": "ticker", "show": ["members", "tips", "announcements"], "speed": 70, "x": 20, "y": 950, "w": 1560, "h": 50, "font": "BK Serif", "size": 24, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
+    {"id": "ticker-strip", "src": "art/ticker-strip.png", "x": 0, "y": 1050, "w": 1600, "h": 50, "look": "strip"},
+    {"id": "ticker", "type": "ticker", "show": ["members", "tips", "announcements"], "speed": 70, "x": 20, "y": 1050, "w": 1560, "h": 50, "font": "BK Serif", "size": 24, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
   ],
   "portrait": {
-    "stage": {"width": 600, "height": 2824, "color": "transparent", "fit": "width"},
+    "stage": {"width": 600, "height": 2924, "color": "transparent", "fit": "width"},
     "layers": [
-      {"id": "background", "type": "plate", "src": "art/phone/background.png", "x": 0, "y": 0, "w": 600, "h": 2824, "look": "wall"},
+      {"id": "background", "type": "plate", "src": "art/phone/background.png", "x": 0, "y": 0, "w": 600, "h": 2924, "look": "wall"},
       {"id": "masthead", "look": "paper", "x": 8, "y": 8, "w": 584, "h": 134},
       {"id": "logo", "src": "art/phone/logo.png", "x": 20, "y": 14, "w": 440, "h": 74, "look": "logo"},
       {"id": "clock", "type": "text", "bind": "clock", "x": 420, "y": 24, "w": 160, "h": 40, "font": "BK Serif", "size": 30, "color": "#1f1b17", "align": "right", "weight": 700},
@@ -110,15 +112,15 @@ window.SKIN = {
       {"id": "now-status", "type": "text", "bind": "status", "x": 272, "y": 410, "w": 306, "h": 20, "font": "BK Serif", "size": 14, "color": "#c8321f", "align": "left", "italic": true},
       {"id": "tv", "type": "tv", "x": 20, "y": 548, "w": 322, "h": 246, "font": "BK Serif", "size": 18, "color": "#efe5cc"},
       {"id": "tv-title", "type": "text", "bind": "tv.title", "href": "tv.item", "x": 8, "y": 812, "w": 346, "h": 24, "font": "BK Serif", "size": 15, "color": "#f6eed8", "align": "center", "italic": true},
-      {"id": "fireplace", "type": "video", "video": "art/fireplace.mp4", "x": 372, "y": 548, "w": 208, "h": 246},
-      {"id": "fire-volume", "type": "slider", "label": "Fire", "x": 366, "y": 812, "w": 220, "h": 30},
-      {"id": "guide-frame", "look": "listings", "x": 12, "y": 876, "w": 576, "h": 1278},
-      {"id": "guide", "type": "guide", "mode": "list", "x": 18, "y": 888, "w": 564, "h": 1262, "rowHeight": 64, "labelWidth": 200, "font": "BK Serif", "size": 17, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "BK Serif", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
-      {"id": "ads-heading", "type": "text", "text": "A word from our sponsors", "x": 12, "y": 2170, "w": 576, "h": 30, "font": "BK Script", "size": 26, "color": "#e3a92f", "align": "center", "uppercase": false, "spacing": 0, "italic": true, "weight": 700},
-      {"id": "ad", "type": "ad", "every": 40, "x": 20, "y": 2204, "w": 560, "h": 560, "font": "BK Serif", "size": 14, "color": "#cdbf9f", "dim": "#cdbf9f"},
-      {"id": "about-link", "type": "text", "text": "About", "href": "about.html", "x": 20, "y": 2779, "w": 90, "h": 30, "font": "BK Serif", "size": 15, "color": "#efe5cc", "align": "left", "uppercase": false, "spacing": 0, "italic": false, "weight": 500},
-      {"id": "ads-link", "type": "text", "text": "Vintage gallery", "href": "ads.html", "x": 110, "y": 2779, "w": 150, "h": 30, "font": "BK Serif", "size": 15, "color": "#efe5cc", "align": "left", "weight": 500},
-      {"id": "donate-link", "type": "text", "text": "Donate to the Archive", "href": "https://archive.org/donate", "x": 270, "y": 2779, "w": 260, "h": 30, "font": "BK Serif", "size": 15, "color": "#efe5cc", "align": "left", "weight": 500},
+      {"id": "funnies", "type": "funnies", "x": 360, "y": 544, "w": 228, "h": 292},
+      {"id": "ambience", "type": "mixer", "x": 24, "y": 852, "w": 552, "h": 90},
+      {"id": "guide-frame", "look": "listings", "x": 12, "y": 976, "w": 576, "h": 1278},
+      {"id": "guide", "type": "guide", "mode": "list", "x": 18, "y": 988, "w": 564, "h": 1262, "rowHeight": 64, "labelWidth": 200, "font": "BK Serif", "size": 17, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "BK Serif", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
+      {"id": "ads-heading", "type": "text", "text": "A word from our sponsors", "x": 12, "y": 2270, "w": 576, "h": 30, "font": "BK Script", "size": 26, "color": "#e3a92f", "align": "center", "uppercase": false, "spacing": 0, "italic": true, "weight": 700},
+      {"id": "ad", "type": "ad", "every": 40, "x": 20, "y": 2304, "w": 560, "h": 560, "font": "BK Serif", "size": 14, "color": "#cdbf9f", "dim": "#cdbf9f"},
+      {"id": "about-link", "type": "text", "text": "About", "href": "about.html", "x": 20, "y": 2879, "w": 90, "h": 30, "font": "BK Serif", "size": 15, "color": "#efe5cc", "align": "left", "uppercase": false, "spacing": 0, "italic": false, "weight": 500},
+      {"id": "ads-link", "type": "text", "text": "Vintage gallery", "href": "ads.html", "x": 110, "y": 2879, "w": 150, "h": 30, "font": "BK Serif", "size": 15, "color": "#efe5cc", "align": "left", "weight": 500},
+      {"id": "donate-link", "type": "text", "text": "Donate to the Archive", "href": "https://archive.org/donate", "x": 270, "y": 2879, "w": 260, "h": 30, "font": "BK Serif", "size": 15, "color": "#efe5cc", "align": "left", "weight": 500},
       {"id": "ticker-strip", "src": "art/phone/ticker-strip.png", "x": 0, "y": 150, "w": 600, "h": 44, "look": "strip"},
       {"id": "ticker", "type": "ticker", "show": ["members", "tips", "announcements"], "speed": 60, "x": 12, "y": 150, "w": 576, "h": 44, "font": "BK Serif", "size": 17, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
     ]

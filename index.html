@@ -417,6 +417,48 @@
   .fire-vol input::-webkit-slider-thumb { -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%; background: #efe5cc; border: 3px solid #c8321f; box-shadow: 0 1px 3px rgba(0,0,0,.6); }
   .fire-vol input::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #efe5cc; border: 3px solid #c8321f; box-shadow: 0 1px 3px rgba(0,0,0,.6); }
   .fire-vol input:focus-visible { outline: 2px solid #e3a92f; outline-offset: 4px; }
+  /* the ambient mixer: rain, fire and a thunderstorm, one slider each */
+  .t-mixer { display: flex; flex-direction: column; justify-content: space-between; }
+  .t-mixer .fire-vol { font-size: 16px; gap: 7px; }
+  .t-mixer .fv-label { flex: 0 0 3.3em; }
+  .t-mixer .fv-ic { width: 17px; height: 17px; }
+  /* the Sunday Funnies: this week's strip as a clipping from the comics section */
+  .t-funnies { container-type: size; }
+  .fn-clip { all: unset; box-sizing: border-box; display: flex; flex-direction: column; width: 100%; height: 100%; padding: 12px 14px 10px; cursor: pointer;
+    background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--news); color: var(--ink); transform: rotate(.8deg);
+    -webkit-mask: var(--rough-top) top left / 180px 9px repeat-x, var(--rough-bottom) bottom left / 180px 9px repeat-x,
+      var(--rough-left) top left / 9px 180px repeat-y, var(--rough-right) top right / 9px 180px repeat-y,
+      linear-gradient(#000, #000) center / calc(100% - 16px) calc(100% - 16px) no-repeat;
+    mask: var(--rough-top) top left / 180px 9px repeat-x, var(--rough-bottom) bottom left / 180px 9px repeat-x,
+      var(--rough-left) top left / 9px 180px repeat-y, var(--rough-right) top right / 9px 180px repeat-y,
+      linear-gradient(#000, #000) center / calc(100% - 16px) calc(100% - 16px) no-repeat; }
+  .t-funnies { filter: drop-shadow(2px 3px 0 rgba(0,0,0,.3)); }
+  .fn-head { font: 700 26px/1 "BK Head", "BK Serif", Georgia, serif; color: var(--red); text-transform: uppercase; letter-spacing: .03em; text-align: center;
+    padding-bottom: 6px; border-bottom: 2px solid var(--ink); }
+  .fn-pic { flex: 1; min-height: 0; margin-top: 7px; overflow: hidden; border: 1px solid rgba(31,27,23,.55); }
+  .fn-pic img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; mix-blend-mode: multiply; filter: sepia(.25) contrast(1.08); }
+  .fn-cap { font: italic 400 15px/1.2 "BK Serif", Georgia, serif; color: var(--ink-2); margin-top: 6px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fn-clip:hover .fn-head, .fn-clip:focus-visible .fn-head { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  .fn-clip:focus-visible { outline: 3px solid var(--honey); outline-offset: -3px; }
+  #funnies-ov { position: fixed; inset: 0; z-index: 21; background: rgba(10, 8, 6, .88); display: flex; align-items: center; justify-content: center;
+    padding: max(12px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); }
+  #funnies-ov[hidden] { display: none; }
+  .fo-card { background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--news); color: var(--ink); width: min(960px, 100%); max-height: 100%; display: flex; flex-direction: column;
+    padding: 14px 16px 12px; box-sizing: border-box; box-shadow: 6px 8px 0 rgba(0,0,0,.45); font-family: "BK Serif", Georgia, serif; }
+  .fo-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 6px; }
+  .fo-head h2 { margin: 0; font: 700 30px/1 "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; color: var(--red); letter-spacing: .03em; }
+  .fo-card button { font: 600 15px/1 "BK Serif", Georgia, serif; background: var(--ink); color: var(--news); border: 0; padding: 7px 12px; cursor: pointer; }
+  .fo-card button:disabled { opacity: .3; cursor: default; }
+  .fo-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 8px 0; }
+  .fo-when { font: italic 400 17px/1.2 "BK Serif", Georgia, serif; text-align: center; }
+  .fo-page { flex: 1; min-height: 0; overflow: auto; background: #f3ecd8; border: 1px solid rgba(31,27,23,.4); cursor: zoom-in; -webkit-overflow-scrolling: touch; }
+  .fo-page img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; filter: sepia(.2) contrast(1.06); }
+  .fo-page.zoom { cursor: zoom-out; }
+  .fo-page.zoom img { width: 190%; max-width: none; }
+  .fo-credit { margin: 8px 0 0; font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+  .fo-credit b { color: var(--ink); }
+  .fo-credit a { color: var(--ink); text-underline-offset: 3px; }
+  @media (max-width: 520px) { .fo-head h2 { font-size: 22px; } .fo-card button { padding: 7px 9px; font-size: 14px; } .fo-when { font-size: 14px; } }
   /* the line under the logo, in the easy-to-read serif */
   .look-logo .lk-tag { font: italic 400 17px/1.25 "BK Serif", Georgia, serif; letter-spacing: 0; color: #4a4036; white-space: nowrap; font-size: min(17px, 3.1cqw); }
   [data-id="sleep-clock"] { cursor: pointer; }
@@ -492,12 +534,13 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101H2H1N2N1L1"></script>
+<script src="skin.js?v=20261101F1"></script>
 <script src="stations.js?v=20261101r1"></script>
 <script src="config.js?v=20261101z"></script>
 <script src="ads.js?v=20261101z"></script>
 <script src="tv.js?v=20261101z"></script>
+<script src="art/funnies/funnies.js?v=20261101a"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101b2L1"></script>
+<script src="radio.js?v=20261101F1"></script>
 </body>
 </html>

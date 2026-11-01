@@ -145,7 +145,7 @@ A station can sound like it's playing in another room. Give it a `"room"` settin
 - `muffle`: how much treble gets through the wall, in Hz. Lower is more muffled.
 - `echo`: how much room echo, from 0 to 1.
 
-A slight tape wobble is added too. A crackling fire can play under any station: the **Fire** slider under the fireplace sets its volume (all the way left is off), and each listener's setting sticks as they change stations. `"fireMax"` in `skin.js` sets how loud the slider's top end is (1.9 if not set, which makes the fire about as loud as the music). The fire is a real recording cut into a seamless two-minute loop, `art/sounds/fire.mp3` (a fireplace, inchadney, CC0). Replace it with your own recording to change it.
+A slight tape wobble is added too. Under any station, listeners can mix in rain, a fire and a thunderstorm, each with its own slider (all the way left is off). Every listener's mix sticks as they change stations. `"ambienceMax"` in `skin.js` sets how loud each slider's top end is (1.9 if not set, which puts each sound at about the level of the music). The sounds are real recordings in `art/sounds/`: `rain.mp3` (rain in a wood, Rory Smith, public domain), `fire.mp3` (a fireplace, inchadney, CC0) and `storm.mp3` (rain and thunder at Campo do Gerês, Carlos Santos, public domain). The player crossfades each file's end into its start, so it loops without a seam. Swap in your own recordings to change them.
 
 ## Between songs
 
@@ -179,9 +179,11 @@ The logo, links and clock are printed on a newsprint masthead pinned across the 
 
 **Tip link:** put your Ko-fi (or other tip page) address in `config.js` under `"tip"`, and "Tip TheBeesKnees" appears in the masthead.
 
-## The fireplace
+## The Sunday Funnies
 
-Next to the TV, a silent fireplace loops: real footage of a fire in Glen Lake, Michigan (public domain), cut into a seamless one-minute loop (`art/fireplace.mp4`). Any piece can be a looping video with `"type": "video", "video": "art/your-clip.mp4"`.
+Next to the TV is a clipping with this week's Sunday comic. Click it to read the full page, and step back through every earlier week since the feature began. It changes on Sunday by the listener's own calendar, and each week shows the 1930 Sunday closest to the same date. The list is in `art/funnies/funnies.js`: 51 full-page strips from the Washington *Sunday Star*'s comics section, scanned by the Library of Congress. Each one was checked for racist caricature before it went in. Every entry credits the strip, the artist, the syndicate and the paper, and links to the original page. Delete a line to drop a strip. To add one, add a line and its image (1400 px wide `.webp`, plus a 520 px `-th.webp` thumbnail).
+
+Any piece can still be a looping video, with `"type": "video", "video": "art/your-clip.mp4"`.
 
 ## The little TV
 

@@ -113,8 +113,13 @@
     selected: null,
     clean: store.get("clean2", true),     // false = Original: no sound cleanup at all
     sleepEnd: 0,                         // when the sleep timer turns the radio off
-    fireVol: Math.max(0, Math.min(1, +store.get("fireVol", 0) || 0))   // the fire's crackle, 0 (off) to 1, on any station
+    // the ambient mixer: rain, a fire and a thunderstorm, each 0 (off) to 1, on any station
+    amb: (() => {
+      const clamp = v => Math.max(0, Math.min(1, +v || 0)), saved = store.get("amb", null) || {};
+      return { rain: clamp(saved.rain), fire: clamp(saved.fire != null ? saved.fire : store.get("fireVol", 0)), storm: clamp(saved.storm) };
+    })()
   };
+  const AMB = ["rain", "fire", "storm"];
   const dials = STATIONS.map(s => s.dial).sort((a, b) => a - b);
   const CAPTURE = Math.min(0.035, ...dials.slice(1).map((d, i) => (d - dials[i]) / 2.2));
   function stationAtDial(d) {
@@ -139,7 +144,7 @@
       ctx = new (window.AudioContext || window.webkitAudioContext)();
       buildChain();
       tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
-      ["tuning", "fire"].forEach(loadSound);
+      loadSound("tuning"); AMB.forEach(n => { if (state.amb[n] > 0) loadSound(n); });
       // a phone call or another app can interrupt the sound: pick it back up afterwards
       ctx.onstatechange = () => { if (state.on && ctx.state !== "running" && ctx.state !== "closed") ctx.resume().catch(() => {}); };
     } catch (e) { ctx = null; }
@@ -339,12 +344,14 @@
       wow.delayTime.value = 0.012; lfo.frequency.value = 0.35; depth.gain.value = 0.0016; lfo.connect(depth); depth.connect(wow.delayTime); lfo.start();
       inp.connect(muffle); muffle.connect(muffle2); muffle2.connect(dry); muffle2.connect(verb); verb.connect(wet);
       dry.connect(wow); wet.connect(wow); wow.connect(out); out.gain.value = 0.9;
-      const amb = ctx.createGain(); amb.gain.value = 0;
-      // the fire gets its own limiter so its loudest crackles can't distort
+      const amb = ctx.createGain();
+      // the ambience gets its own limiter so the loudest crackles and thunderclaps can't distort
       const ambLim = ctx.createDynamicsCompressor();
       ambLim.threshold.value = -6; ambLim.knee.value = 0; ambLim.ratio.value = 20; ambLim.attack.value = 0.002; ambLim.release.value = 0.1;
       amb.connect(ambLim); ambLim.connect(fx.master);
-      fx.room = { inp, out, muffle, wet, dry, amb, on: false, kind: null, src: null };
+      amb.gain.value = 1;
+      const g = {}; AMB.forEach(n => { g[n] = ctx.createGain(); g[n].gain.value = 0; g[n].connect(amb); });
+      fx.room = { inp, out, muffle, wet, dry, amb, g, src: {}, on: false };
     } catch (e) { fx.room = null; }
   }
   function roomFor(st) { return st && st.room ? Object.assign({ muffle: 1100, echo: 0.55, ambience: 0.35 }, st.room) : null; }
@@ -374,35 +381,56 @@
     sounds[name] = null;
     fetch(file).then(r => { if (!r.ok) throw 0; return r.arrayBuffer(); })
       .then(b => new Promise((ok, no) => ctx.decodeAudioData(b, ok, no)))
-      .then(buf => { sounds[name] = buf; (soundWaiters[name] || []).forEach(f => f()); })
+      .then(buf => { sounds[name] = AMB.includes(name) ? seamless(buf) : buf; (soundWaiters[name] || []).forEach(f => f()); })
       .catch(() => { sounds[name] = false; });
+  }
+  // turn a recording into a loop with no seam: skip the file's encoder padding at both ends, then
+  // fade the last few seconds into the first few (equal-power, since rain and fire are noise-like)
+  function seamless(buf) {
+    const sr = buf.sampleRate, pad = Math.round(0.1 * sr);
+    const usable = buf.length - 2 * pad, X = Math.min(Math.round(4 * sr), Math.floor(usable / 4));
+    if (usable < sr * 4) return buf;
+    const n = usable - X, out = ctx.createBuffer(buf.numberOfChannels, n, sr);
+    for (let c = 0; c < buf.numberOfChannels; c++) {
+      const a = buf.getChannelData(c), o = out.getChannelData(c);
+      // the loop plays a[pad+X .. pad+usable); its last X samples blend into a[pad .. pad+X), which leads back to the start
+      o.set(a.subarray(pad + X, pad + usable));
+      for (let i = 0; i < X; i++) {
+        const t = (i + 0.5) / X;
+        o[n - X + i] = a[pad + usable - X + i] * Math.cos(t * Math.PI / 2) + a[pad + i] * Math.sin(t * Math.PI / 2);
+      }
+    }
+    return out;
   }
   function setAmbience() {
     if (!fx.room) return;
-    const R = fx.room, want = state.on && state.fireVol > 0 ? "fire" : "off";
-    if (R.kind !== want) {
-      if (R.src) { try { R.src.stop(); } catch (e) {} R.src = null; }
-      R.kind = want;
-      if (want !== "off") {
+    const R = fx.room, top = SKIN.ambienceMax || SKIN.fireMax || 1.9;
+    AMB.forEach(name => {
+      const v = state.on ? state.amb[name] : 0;
+      if (v > 0 && !R.src[name]) {
+        R.src[name] = "loading";
         const start = () => {
-          const buf = sounds[want]; if (!buf || R.kind !== want || R.src) return;
+          const buf = sounds[name];
+          if (!buf || R.src[name] !== "loading") return;
           const src = ctx.createBufferSource(); src.buffer = buf; src.loop = true;
-          src.loopStart = 0.06; src.loopEnd = buf.duration - 0.06;      // skip the file's encoder padding so the loop is seamless
-          src.connect(R.amb); src.start(0, 0.06); R.src = src;
+          src.connect(R.g[name]); src.start(0, Math.random() * buf.duration * 0.8); R.src[name] = src;
         };
-        if (sounds[want]) start(); else { loadSound(want); (soundWaiters[want] = soundWaiters[want] || []).push(start); }
+        if (sounds[name]) start(); else { loadSound(name); (soundWaiters[name] = soundWaiters[name] || []).push(start); }
+      } else if (v === 0 && R.src[name]) {
+        const src = R.src[name]; R.src[name] = null;
+        if (src !== "loading") { try { src.stop(ctx.currentTime + 1.6); } catch (e) {} }
       }
-    }
-    // all the way up, the fire is about as loud as the music (the main volume knob turns both)
-    const top = SKIN.fireMax || 1.9;
-    R.amb.gain.setTargetAtTime(want !== "off" ? Math.pow(state.fireVol, 1.5) * top : 0, ctx.currentTime, 0.25);
+      // all the way up, each one is about as loud as the music (the main volume knob turns them too)
+      R.g[name].gain.setTargetAtTime(Math.pow(v, 1.5) * top, ctx.currentTime, 0.25);
+    });
   }
-  function setFire(v) {
-    state.fireVol = Math.max(0, Math.min(1, v));
-    store.set("fireVol", state.fireVol);
-    if (state.fireVol > 0 && !state.on) power(true);
+  function setAmb(name, v) {
+    state.amb[name] = Math.max(0, Math.min(1, v));
+    store.set("amb", state.amb);
+    if (state.amb[name] > 0 && !state.on) power(true);
     setAmbience();
-    els.forEach(r => { if (r.fire && +r.fire.value !== Math.round(state.fireVol * 100)) { r.fire.value = Math.round(state.fireVol * 100); r.fire.style.setProperty("--v", r.fire.value + "%"); } });
+    const pct = Math.round(state.amb[name] * 100);
+    els.forEach(r => (r.amb || []).forEach(inp => { if (inp.dataset.sound === name && +inp.value !== pct) { inp.value = pct; inp.style.setProperty("--v", pct + "%"); } }));
   }
   // songs fade out over their last few seconds and fade in when they start
   const FADE_OUT = 3, FADE_IN = 1.5;
@@ -844,6 +872,13 @@
         v.src = L.video; el.appendChild(v);
         v.play().catch(() => {});
         document.addEventListener("visibilitychange", () => { if (!document.hidden) v.play().catch(() => {}); });
+      } else if (type === "funnies") {
+        // the Sunday Funnies: this week's strip as a clipping; click to read it full size
+        el.classList.add("hot");
+        el.innerHTML = '<button type="button" class="fn-clip"><span class="fn-head"></span><span class="fn-pic"><img alt=""></span><span class="fn-cap"></span></button>';
+        rec.funnies = { key: "" };
+        el.querySelector(".fn-head").textContent = L.title || "The Sunday Funnies";
+        el.querySelector("button").addEventListener("click", e => { if (state.editing) return; e.stopPropagation(); openFunnies(); });
       } else if (type === "guide") {
         const g = document.createElement("div"); g.className = "guide";
         el.appendChild(g); el.classList.add("hot");
@@ -865,18 +900,28 @@
           rec.tv.standby.hidden = false; rec.tv.standby.textContent = WORDS.tvStandby;
           rec.tv.until = Date.now() + (now ? now.left * 1000 + 500 : 30000);
         });
-      } else if (type === "slider") {
-        // the fire's volume, next to the fireplace
-        el.classList.add("hot");
-        el.innerHTML = '<label class="fire-vol"><span class="fv-label"></span><svg class="fv-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/></svg><input type="range" min="0" max="100" step="1"><svg class="fv-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></label>';
-        el.querySelector(".fv-label").textContent = L.label || "Fire volume";
-        const r = el.querySelector("input");
-        const paint = () => r.style.setProperty("--v", r.value + "%");
-        r.value = Math.round(state.fireVol * 100); paint();
-        r.setAttribute("aria-label", L.aria || "Fire sound volume");
-        r.addEventListener("input", () => { paint(); if (!state.editing) setFire(r.value / 100); });
-        r.addEventListener("pointerdown", e => { if (!state.editing) e.stopPropagation(); });
-        rec.fire = r;
+      } else if (type === "slider" || type === "mixer") {
+        // the ambient mixer: one volume slider per sound (rain, fire, thunderstorm), all can play at once
+        el.classList.add("hot", "t-mixer");
+        const rows = L.sounds || (L.sound ? [{ id: L.sound, label: L.label }] : AMB.map(id => ({ id })));
+        const NAMES = { rain: "Rain", fire: "Fire", storm: "Storm" };
+        const QUIET = '<svg class="fv-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/></svg>';
+        const LOUD = '<svg class="fv-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>';
+        el.innerHTML = (L.title ? '<div class="mix-title"></div>' : "") + rows.map(() => '<label class="fire-vol"><span class="fv-label"></span>' + QUIET + '<input type="range" min="0" max="100" step="1">' + LOUD + '</label>').join("");
+        if (L.title) el.querySelector(".mix-title").textContent = L.title;
+        rec.amb = [];
+        el.querySelectorAll(".fire-vol").forEach((lab, k) => {
+          const row = rows[k], name = NAMES[row.id] || row.id;
+          lab.querySelector(".fv-label").textContent = row.label || name;
+          const r = lab.querySelector("input");
+          r.dataset.sound = row.id;
+          const paint = () => r.style.setProperty("--v", r.value + "%");
+          r.value = Math.round((state.amb[row.id] || 0) * 100); paint();
+          r.setAttribute("aria-label", name + " sound volume");
+          r.addEventListener("input", () => { paint(); if (!state.editing) setAmb(row.id, r.value / 100); });
+          r.addEventListener("pointerdown", e => { if (!state.editing) e.stopPropagation(); });
+          rec.amb.push(r);
+        });
       } else if (type === "reactbar") {
         el.classList.add("hot");
         (SKIN.reactions || []).forEach(r => {
@@ -1190,6 +1235,84 @@
     box.querySelector("#ov-close").focus();
   }
 
+  /* ---------- the Sunday Funnies (art/funnies/funnies.js) ----------
+     One strip a week, from the same week in 1930. It changes on Sunday by the listener's own calendar,
+     and every week since the feature started stays readable in the back issues. */
+  const FUNNIES = window.FUNNIES || [];
+  const FN_START = new Date(2026, 10, 1);                  // the first Sunday of the feature
+  function sundayOf(d) { const x = new Date(d.getFullYear(), d.getMonth(), d.getDate()); x.setDate(x.getDate() - x.getDay()); return x; }
+  function funnyFor(sun) {
+    // the 1930 Sunday nearest the same day of the year
+    if (!FUNNIES.length) return null;
+    const doy = dt => (Date.UTC(2001, dt.getMonth(), dt.getDate()) - Date.UTC(2001, 0, 1)) / 864e5;
+    const want = doy(sun);
+    let best = null, bd = 1e9;
+    FUNNIES.forEach(f => {
+      const [y, m, d] = f.date.split("-").map(Number), x = doy(new Date(y, m - 1, d));
+      const dist = Math.min(Math.abs(x - want), 365 - Math.abs(x - want));
+      if (dist < bd) { bd = dist; best = f; }
+    });
+    return best;
+  }
+  function funniesIssues() {
+    // every Sunday from the start through this one, newest first
+    const out = [], last = sundayOf(new Date());
+    for (let d = new Date(last); d >= FN_START; d.setDate(d.getDate() - 7)) {
+      const f = funnyFor(d); if (f) out.push({ sun: new Date(d), f });
+      if (out.length > 520) break;
+    }
+    if (!out.length) { const f = funnyFor(last); if (f) out.push({ sun: last, f }); }
+    return out;
+  }
+  const fnDate = iso => { const [y, m, d] = iso.split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" }); };
+  function renderFunnies(rec) {
+    const cur = funniesIssues()[0];
+    if (!cur) { rec.el.hidden = true; return; }
+    if (rec.funnies.key === cur.f.date) return;
+    rec.funnies.key = cur.f.date;
+    const img = rec.el.querySelector("img");
+    img.src = cur.f.thumb; img.alt = cur.f.strip + ", " + fnDate(cur.f.date);
+    rec.el.querySelector(".fn-cap").textContent = cur.f.strip + " \u00b7 " + (() => { const [y, m, d] = cur.f.date.split("-").map(Number); return new Date(y, m - 1, d).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" }); })();
+    rec.el.querySelector("button").setAttribute("aria-label", "Read this week's Sunday Funnies: " + cur.f.strip + ", " + fnDate(cur.f.date));
+  }
+  function openFunnies(k = 0) {
+    const issues = funniesIssues(); if (!issues.length) return;
+    k = Math.max(0, Math.min(issues.length - 1, k));
+    let box = document.getElementById("funnies-ov");
+    if (!box) {
+      box = document.createElement("div"); box.id = "funnies-ov"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.hidden = true;
+      box.innerHTML = '<div class="fo-card"><div class="fo-head"><h2>The Sunday Funnies</h2><button type="button" class="fo-close">Close</button></div>' +
+        '<div class="fo-nav"><button type="button" class="fo-prev">\u2190 Older</button><span class="fo-when"></span><button type="button" class="fo-next">Newer \u2192</button></div>' +
+        '<div class="fo-page"><img alt=""></div><p class="fo-credit"></p></div>';
+      document.body.appendChild(box);
+      box.addEventListener("click", e => { if (e.target === box) box.hidden = true; });
+      box.querySelector(".fo-close").addEventListener("click", () => { box.hidden = true; });
+      box.querySelector(".fo-prev").addEventListener("click", () => openFunnies(+box.dataset.k + 1));
+      box.querySelector(".fo-next").addEventListener("click", () => openFunnies(+box.dataset.k - 1));
+      box.querySelector(".fo-page").addEventListener("click", e => e.currentTarget.classList.toggle("zoom"));
+      document.addEventListener("keydown", e => {
+        if (box.hidden) return;
+        if (e.key === "Escape") box.hidden = true;
+        else if (e.key === "ArrowLeft") openFunnies(+box.dataset.k + 1);
+        else if (e.key === "ArrowRight") openFunnies(+box.dataset.k - 1);
+      });
+    }
+    const { sun, f } = issues[k];
+    box.dataset.k = k;
+    const img = box.querySelector(".fo-page img");
+    img.src = f.img; img.alt = f.strip + " by " + f.artist + ", from " + f.paper + ", " + fnDate(f.date);
+    box.querySelector(".fo-page").classList.remove("zoom"); box.querySelector(".fo-page").scrollTop = 0;
+    box.querySelector(".fo-when").textContent = k === 0 ? "This Sunday" : "Sunday, " + sun.toLocaleDateString(undefined, { month: "long", day: "numeric", year: "numeric" });
+    box.querySelector(".fo-prev").disabled = k >= issues.length - 1;
+    box.querySelector(".fo-next").disabled = k === 0;
+    const cr = box.querySelector(".fo-credit"); cr.textContent = "";
+    const b = document.createElement("b"); b.textContent = f.strip; cr.appendChild(b);
+    cr.appendChild(document.createTextNode(" by " + f.artist + " (" + f.syndicate + "). From " + f.paper + ", " + fnDate(f.date) + ". "));
+    const a = document.createElement("a"); a.href = f.source; a.target = "_blank"; a.rel = "noopener"; a.textContent = "See the original page at the Library of Congress"; cr.appendChild(a);
+    box.hidden = false;
+    box.querySelector(".fo-close").focus();
+  }
+
   /* ---------- the little TV (tv.js): cartoons with the sound off ---------- */
   const TVLIST = window.TV || [];
   const TV_EPOCH = Date.parse("2026-11-01T00:00:00Z");
@@ -1409,6 +1532,8 @@
         renderGuide(rec);
       } else if (type === "ad") {
         renderAd(rec);
+      } else if (type === "funnies") {
+        renderFunnies(rec);
       } else if (type === "tv") {
         renderTV(rec);
       } else if (type === "ticker") {
@@ -1441,7 +1566,7 @@
         if (a === "power") power();
         else if (a === "clean") toggleClean();
         else if (a === "sleep") cycleSleep();
-        else if (a === "ambience") setFire(state.fireVol > 0 ? 0 : 0.5);
+        else if (a === "ambience") { const any = AMB.some(n => state.amb[n] > 0); AMB.forEach(n => setAmb(n, any ? 0 : n === "fire" ? 0.5 : 0)); }
         else if (a === "recent") openRecent();
         else if (a === "next") stepStation(1);
         else if (a === "prev") stepStation(-1);
