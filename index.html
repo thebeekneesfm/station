@@ -449,6 +449,9 @@
   .g-cols .g-next em { font-weight: 700; letter-spacing: 0; }
   .g-name { font-family: "BK Head", "BK Serif", Georgia, serif; font-weight: 700; font-size: 1.12em; letter-spacing: .03em; }
   .g-head { font-family: "BK Serif", Georgia, serif; font-style: italic; }
+  /* the episode title opens the recording's page at the Internet Archive */
+  [data-id="now-title"] a.txt { text-decoration-line: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(31,27,23,.35); text-underline-offset: .12em; }
+  [data-id="now-title"] a.txt:hover, [data-id="now-title"] a.txt:focus-visible { text-decoration-color: currentColor; }
 </style>
 </head>
 <body>
@@ -488,7 +491,7 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261101p2"></script>
+<script src="skin.js?v=20261101v1"></script>
 <script src="stations.js?v=20261101r1"></script>
 <script src="config.js?v=20261101z"></script>
 <script src="ads.js?v=20261101z"></script>
