@@ -673,6 +673,50 @@
     } catch (e) {}
   }
 
+  /* ---------- weather: a little icon and the temperature where the listener is ----------
+     The station's Cloudflare helper (worker/weather.js, on /api/weather) works out the listener's city
+     from their connection and returns the current weather. Nothing is stored. Draw your own icons as
+     art/weather/<kind>.webp (sunny, night, partly, partly-night, cloudy, fog, rain, storm, snow);
+     until a drawing exists, a simple built-in one shows. If the helper isn't there, the piece stays hidden. */
+  const WX_INK = "#1f1b17", WX_SUN = "#e3a92f";
+  const WX_CLOUD = `<path d="M18 44h28a10 10 0 0 0 0-20 14 14 0 0 0-27-3 11 11 0 0 0-1 23z" fill="#efe5cc" stroke="${WX_INK}" stroke-width="3" stroke-linejoin="round"/>`;
+  const WX_SVG = {
+    sunny: `<circle cx="32" cy="32" r="11" fill="${WX_SUN}" stroke="${WX_INK}" stroke-width="3"/><g stroke="${WX_INK}" stroke-width="3" stroke-linecap="round">${[0,45,90,135,180,225,270,315].map(a => `<line x1="32" y1="9" x2="32" y2="15" transform="rotate(${a} 32 32)"/>`).join("")}</g>`,
+    night: `<path d="M40 12a20 20 0 1 0 12 30A16 16 0 0 1 40 12z" fill="${WX_SUN}" stroke="${WX_INK}" stroke-width="3" stroke-linejoin="round"/><path d="M50 14l1.5 3 3 1.5-3 1.5-1.5 3-1.5-3-3-1.5 3-1.5z" fill="${WX_INK}"/>`,
+    partly: `<circle cx="24" cy="22" r="9" fill="${WX_SUN}" stroke="${WX_INK}" stroke-width="3"/><g stroke="${WX_INK}" stroke-width="3" stroke-linecap="round"><line x1="24" y1="5" x2="24" y2="8"/><line x1="7" y1="22" x2="10" y2="22"/><line x1="12" y1="10" x2="14" y2="12"/><line x1="36" y1="10" x2="34" y2="12"/></g>` + WX_CLOUD,
+    "partly-night": `<path d="M26 8a13 13 0 1 0 9 22A11 11 0 0 1 26 8z" fill="${WX_SUN}" stroke="${WX_INK}" stroke-width="3" stroke-linejoin="round"/>` + WX_CLOUD,
+    cloudy: `<path d="M38 22a12 12 0 0 0-22-1" fill="none" stroke="${WX_INK}" stroke-width="3" stroke-linecap="round"/>` + WX_CLOUD,
+    fog: WX_CLOUD + `<g stroke="${WX_INK}" stroke-width="3" stroke-linecap="round"><line x1="12" y1="51" x2="44" y2="51"/><line x1="20" y1="57" x2="52" y2="57"/></g>`,
+    rain: WX_CLOUD + `<g stroke="${WX_INK}" stroke-width="3" stroke-linecap="round"><line x1="22" y1="50" x2="19" y2="57"/><line x1="32" y1="50" x2="29" y2="57"/><line x1="42" y1="50" x2="39" y2="57"/></g>`,
+    storm: WX_CLOUD + `<path d="M33 46l-6 9h6l-4 8" fill="none" stroke="${WX_SUN}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+    snow: WX_CLOUD + `<g fill="${WX_INK}"><circle cx="22" cy="53" r="2.5"/><circle cx="32" cy="57" r="2.5"/><circle cx="42" cy="53" r="2.5"/></g>`
+  };
+  const wxName = d => d.kind === "clear" ? (d.day ? "sunny" : "night") : d.kind === "partly" && !d.day ? "partly-night" : d.kind;
+  const wxRecs = [];
+  let wxData = null;
+  function paintWeather(rec) {
+    const d = wxData, L = rec.L;
+    rec.box.hidden = !(d && d.ok);   // the layer itself is shown and hidden by render(), so hide what's inside
+    if (!d || !d.ok) return;
+    const name = wxName(d), dir = L.icons || "art/weather/";
+    if (rec.name !== name) {
+      rec.name = name;
+      rec.icon.innerHTML = `<svg viewBox="0 0 64 64" aria-hidden="true">${WX_SVG[name] || WX_SVG.cloudy}</svg>`;
+      const im = new Image(); im.alt = "";
+      im.onload = () => { if (rec.name === name) { rec.icon.innerHTML = ""; rec.icon.appendChild(im); } };
+      im.src = dir + name + ".webp";
+    }
+    rec.temp.textContent = `${d.temp}°${L.unit === false ? "" : d.unit}`;
+    const words = d.words + (d.city ? ` in ${d.city}` : "");
+    rec.box.title = words; rec.box.setAttribute("aria-label", `${words}, ${d.temp} degrees ${d.unit === "F" ? "Fahrenheit" : "Celsius"}`);
+  }
+  function loadWeather() {
+    fetch("/api/weather", { cache: "no-store" }).then(r => r.ok ? r.json() : null).catch(() => null)
+      .then(d => { wxData = d && d.ok ? d : null; wxRecs.forEach(paintWeather); });
+  }
+  setInterval(() => { if (!document.hidden) loadWeather(); }, 20 * 60 * 1000);
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && wxRecs.length) loadWeather(); });
+
   /* ---------- fonts ---------- */
   (SKIN.fonts || []).forEach(f => {
     try { new FontFace(f.family, `url("${f.src}")`).load().then(ff => { document.fonts.add(ff); fitAllText(); }).catch(() => {}); } catch (e) {}
@@ -842,6 +886,18 @@
           b.addEventListener("click", () => { if (!state.editing) react(r.id); });
           el.appendChild(b);
         });
+      } else if (type === "weather") {
+        el.innerHTML = '<div class="wx" role="img"><span class="wx-icon"></span><span class="wx-temp"></span></div>';
+        const box = el.firstChild;
+        if (L.font) box.style.fontFamily = `"${L.font}", Georgia, serif`;
+        if (L.size) box.style.fontSize = L.size + "px";
+        if (L.color) box.style.color = L.color;
+        if (L.weight) box.style.fontWeight = L.weight;
+        if (L.stretch) box.style.fontStretch = L.stretch + "%";
+        if (L.align === "right") box.style.justifyContent = "flex-end";
+        Object.assign(rec, { box, name: "", icon: el.querySelector(".wx-icon"), temp: el.querySelector(".wx-temp") });
+        box.hidden = true; wxRecs.push(rec);
+        if (wxData) paintWeather(rec); else if (wxRecs.length === 1) loadWeather();
       } else if (type === "reactfloat") {
         reactArea = rec;
       } else if (type === "ad") {
