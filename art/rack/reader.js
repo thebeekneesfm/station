@@ -25,6 +25,9 @@
       b.innerHTML = '<img loading="lazy" alt="" src="' + page(it.id, 0, 400) + '"><span class="cap"><b>' + esc(it.title) + "</b>" +
         esc(it.issue) + ", <i>" + esc(it.date) + "</i>" + (left > 0 ? '<br><span class="cont">Page ' + (left + 1) + "</span>" : "") + "</span>";
       b.setAttribute("aria-label", it.title + ", " + it.issue + ", " + it.date + ". Open to read.");
+      // the Archive is sometimes slow to answer; try a cover again before giving up on it
+      var cov = b.querySelector("img"), tries = 0;
+      cov.addEventListener("error", function () { if (tries++ < 3) setTimeout(function () { cov.src = page(it.id, 0, 400) + "#r" + tries; }, 1500 * tries); });
       b.addEventListener("click", function () { open(it); });
       row.appendChild(b);
     });

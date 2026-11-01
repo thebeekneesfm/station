@@ -381,6 +381,10 @@
   /* a tip just came in: a thank-you card drops over the sponsors' ad for 20 seconds */
   .tipcard { position: absolute; inset: 0; z-index: 5; display: flex; align-items: center; justify-content: center; padding: 6%; box-sizing: border-box; background: rgba(20, 15, 10, .55); cursor: pointer; }
   .tipcard[hidden] { display: none; }
+  /* phones: the thank-you card comes down from the top of the screen, wherever the listener has scrolled to */
+  #tipcard-top { position: fixed; inset: 0 0 auto 0; z-index: 25; background: none; padding: calc(env(safe-area-inset-top, 0px) + 12px) 14px 0; align-items: flex-start; }
+  #tipcard-top .tc-wrap { width: min(440px, 100%); }
+  #tipcard-top .tc-name { font-size: 36px; }
   /* the card is a clipping of newsprint, cut with the same ragged edges as the rest of the site */
   .tc-inner { background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--news); color: var(--ink);
     -webkit-mask: var(--rough-top) top left / 180px 9px repeat-x, var(--rough-bottom) bottom left / 180px 9px repeat-x,
@@ -593,6 +597,6 @@
 <script src="tv.js?v=20261101z"></script>
 <script src="art/funnies/funnies.js?v=20261101a"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261101K1"></script>
+<script src="radio.js?v=20261101K2"></script>
 </body>
 </html>

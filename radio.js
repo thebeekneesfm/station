@@ -1547,8 +1547,20 @@
   function showTipCard(t) {
     const member = t.kind === "New member" || t.kind === "Member";
     const name = String(t.from_name || WORDS.tipSomeone).slice(0, 60);
-    els.forEach(r => {
-      const card = r.ad && r.ad.card; if (!card) return;
+    // on phones the sponsors' ad is far down the page, so the card drops in at the top of the screen instead
+    const cards = [];
+    if (SK === SKIN.portrait) {
+      let top = document.getElementById("tipcard-top");
+      if (!top) {
+        top = document.createElement("div"); top.id = "tipcard-top"; top.className = "tipcard"; top.hidden = true;
+        top.setAttribute("role", "status");
+        top.innerHTML = '<div class="tc-wrap"><div class="tc-inner"><div class="tc-kicker"></div><div class="tc-name"></div><div class="tc-msg"></div><div class="tc-thanks"></div><a class="tc-link" target="_blank" rel="noopener"></a></div></div>';
+        top.addEventListener("click", e => { if (!e.target.closest("a")) top.hidden = true; });
+        document.body.appendChild(top);
+      }
+      cards.push(top);
+    } else els.forEach(r => { if (r.ad && r.ad.card) cards.push(r.ad.card); });
+    cards.forEach(card => {
       card.querySelector(".tc-kicker").textContent = member ? WORDS.cardMemberKicker : WORDS.cardKicker;
       card.querySelector(".tc-name").textContent = name;
       const msg = card.querySelector(".tc-msg"); msg.textContent = t.message ? "\u201c" + String(t.message).slice(0, 200) + "\u201d" : ""; msg.hidden = !t.message;
