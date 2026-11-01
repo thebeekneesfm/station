@@ -18,6 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="art/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png">
+<script src="art/backgrounds/backgrounds.js?v=20261101g2"></script>
 <link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
 <style>
   /* same room as the radio: 1953 wallpaper, paper cards, ink and station red */
@@ -25,7 +26,7 @@
   html { background: #3f5a46; }
   body { margin: 0; color: var(--ink); background: transparent; font: 18px/1.6 "BK Serif", Georgia, serif; }
   body::before { content: ""; position: fixed; inset: 0; z-index: -1;
-    background: linear-gradient(rgba(20,15,10,.22), rgba(20,15,10,.22)), url("art/wallpaper.jpg") center / 700px repeat; }
+    background: linear-gradient(var(--wall-shade, rgba(20,15,10,.22)), var(--wall-shade, rgba(20,15,10,.22))), var(--wall-img, url("art/wallpaper.jpg")) 0 0 / var(--wall-size, 700px) repeat; }
   .wrap { max-width: 760px; margin: 0 auto; padding-block: 18px 60px;
     padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 18px; }
   .paper { background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); box-shadow: 0 3px 0 rgba(0,0,0,.28), 0 12px 28px rgba(0,0,0,.25); }
@@ -105,7 +106,7 @@
 
     <div class="small">
       <h2>Credits</h2>
-      <p>Cartoons, radio commercials and the <a href="ads.html">vintage gallery</a> come from the Internet Archive's collections. The wallpaper is a 1953 sample from that year's <a href="https://archive.org/details/Sears1953WallpaperBook" target="_blank" rel="noopener">Sears wallpaper book</a>, and the fireplace is <a href="https://archive.org/details/fireplace" target="_blank" rel="noopener">footage of a real fire</a> in Glen Lake, Michigan, both public domain.</p>
+      <p>Cartoons, radio commercials and the <a href="ads.html">vintage gallery</a> come from the Internet Archive's collections. The patterns behind the radio change with the seasons and come from old trade catalogs: Westinghouse Micarta laminates (1956), Bradford Christmas ornaments (1960), Garrison-Wagner Christmas foils (1941), and Dennison&rsquo;s <i>Bogie Book</i> (1920) and <i>Gala Book</i> (1922). The fireplace is <a href="https://archive.org/details/fireplace" target="_blank" rel="noopener">footage of a real fire</a> in Glen Lake, Michigan, in the public domain.</p>
       <p>Fire sound by <a href="https://freesound.org/people/inchadney/" target="_blank" rel="noopener">inchadney</a> (CC0). Radio-tuning sound by patolenin (Pixabay). Lettering: Serial Publication by <a href="https://www.fontspace.com/kc-fonts" target="_blank" rel="noopener">KC Fonts</a>, used with permission, and Old Standard TT (SIL Open Font License) from <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a>.</p>
     </div>
   </main>

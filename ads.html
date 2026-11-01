@@ -18,6 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="art/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png">
+<script src="art/backgrounds/backgrounds.js?v=20261101g2"></script>
 <link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
 <style>
   /* same room as the radio: 1953 wallpaper, paper cards, ink and station red */
@@ -25,7 +26,7 @@
   html { background: #3f5a46; }
   body { margin: 0; color: var(--ink); background: transparent; font: 17px/1.55 "BK Serif", Georgia, serif; }
   body::before { content: ""; position: fixed; inset: 0; z-index: -1;
-    background: linear-gradient(rgba(20,15,10,.22), rgba(20,15,10,.22)), url("art/wallpaper.jpg") center / 700px repeat; }
+    background: linear-gradient(var(--wall-shade, rgba(20,15,10,.22)), var(--wall-shade, rgba(20,15,10,.22))), var(--wall-img, url("art/wallpaper.jpg")) 0 0 / var(--wall-size, 700px) repeat; }
   .wrap { max-width: 1200px; margin: 0 auto; padding-block: 18px 60px;
     padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 18px; }
   .paper { background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); box-shadow: 0 3px 0 rgba(0,0,0,.28), 0 12px 28px rgba(0,0,0,.25); }

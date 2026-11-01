@@ -22,6 +22,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="art/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png">
+<script src="art/backgrounds/backgrounds.js?v=20261101g2"></script>
 <link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
 <style>
   :root {
@@ -346,7 +347,7 @@
 
   /* ===== the wall: 1953 Sears wallpaper, the masthead pinned to it, and the On Air sign ===== */
   body::before { content: ""; position: fixed; inset: 0; z-index: -1;
-      background: linear-gradient(rgba(18,12,8,.22), rgba(18,12,8,.22)), url("art/wallpaper.jpg") center / cover no-repeat, #3f5a46; }
+      background: linear-gradient(var(--wall-shade, rgba(18,12,8,.22)), var(--wall-shade, rgba(18,12,8,.22))), var(--wall-img, url("art/wallpaper.jpg")) 0 0 / var(--wall-size, 700px) repeat, #3f5a46; }
   html { background: #3f5a46; }
   body { background: transparent !important; }
   #frame { background: transparent; }
