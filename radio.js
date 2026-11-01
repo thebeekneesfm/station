@@ -208,7 +208,7 @@
       this.win = new Float32Array(N); for (let i = 0; i < N; i++) this.win[i] = Math.sqrt(0.5 - 0.5 * Math.cos(2 * Math.PI * i / N));
       this.rev = new Uint32Array(N); for (let i = 0, b = Math.log2(N); i < N; i++) { let r = 0; for (let k = 0; k < b; k++) r |= ((i >> k) & 1) << (b - 1 - k); this.rev[i] = r; }
       this.cs = new Float32Array(N / 2); this.sn = new Float32Array(N / 2); for (let i = 0; i < N / 2; i++) { this.cs[i] = Math.cos(2 * Math.PI * i / N); this.sn[i] = -Math.sin(2 * Math.PI * i / N); }
-      this.port.onmessage = e => { if (e.data.amt != null) this.amt = e.data.amt; if (e.data.reset) this.st.forEach(x => { x.fresh = 12; x.age = 0; }); };
+      this.port.onmessage = e => { if (e.data.amt != null) this.amt = e.data.amt; if (e.data.reset) this.st.forEach(x => { if (x.learned) { x.ref = Float32Array.from(x.Nn); x.fresh = 0; } else x.fresh = 12; x.age = 0; }); };
     }
     fft(re, im, inv) {
       const N = this.N, rev = this.rev;
@@ -232,14 +232,17 @@
       for (let k = 0; k < B; k++) {
         const p = re[k] * re[k] + im[k] * im[k];
         s.P[k] = s.fresh === 12 ? p : s.P[k] * 0.7 + p * 0.3;
-        // hiss floor: starts from the first moment of a record, falls quickly to quiet moments, creeps back up slowly
-        s.Nn[k] = s.fresh > 0 ? (s.fresh === 12 ? s.P[k] : Math.min(s.Nn[k], s.P[k])) : s.P[k] < s.Nn[k] ? s.Nn[k] * 0.8 + s.P[k] * 0.2 : s.Nn[k] * (s.age < 350 ? 1.02 : 1.004) + 1e-14;
+        // hiss floor: falls quickly to quiet moments, creeps back up slowly. The first record learns it fast;
+        // each record after that starts from the last one's floor, so the cleanup is at full strength from the first note
+        s.Nn[k] = s.fresh > 0 ? (s.fresh === 12 ? s.P[k] : Math.min(s.Nn[k], s.P[k])) : s.P[k] < s.Nn[k] ? s.Nn[k] * 0.8 + s.P[k] * 0.2 : s.Nn[k] * (s.age < 350 ? (s.learned ? 1.02 : 1.06) : 1.004) + 1e-14;
+        if (s.ref && s.age < 700 && s.Nn[k] < s.ref[k] * 0.25) s.Nn[k] = s.ref[k] * 0.25;
         let g = k < lo ? 1 : Math.max(floor, 1 - over * s.Nn[k] / (s.P[k] + 1e-12));
         g = g > s.G[k] ? g : s.G[k] * 0.6 + g * 0.4;     // let go gently, so it doesn't warble
         s.G[k] = g;
       }
       if (s.fresh > 0 && s.energy > 1e-4) s.fresh--;
       if (s.fresh === 0 && s.age < 1e9) s.age++;   // learn from the first dozen moments that actually have sound in them
+      if (s.age === 350) s.learned = true;
       for (let k = 0; k < B; k++) {
         const g = k > 0 && k < B - 1 ? 0.25 * s.G[k - 1] + 0.5 * s.G[k] + 0.25 * s.G[k + 1] : s.G[k];
         re[k] *= g; im[k] *= g; if (k > 0 && k < N / 2) { re[N - k] = re[k]; im[N - k] = -im[k]; }
