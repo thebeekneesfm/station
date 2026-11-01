@@ -211,9 +211,9 @@ Video can't be screened as thoroughly as comics, since nobody can watch 500 hour
 
 `comics.html` and `magazines.html` show shelves of issues from the Archive, read page by page in the site's own reader (`art/rack/reader.js`). The shelves are in `art/rack/rack.js`. Every issue was checked page by page for racist caricature, slurs and dialect before it went on a shelf.
 
-## Visitor counter
+## Visit counter
 
-The "You are visitor No." line counts each browser once a day, through a `count_visit` function in the same Supabase project as the listener count.
+"Site visits" counts every visit to the radio, through a `count_visit` function in the same Supabase project as the listener count. A visit is one browser tab session, so reloading or clicking around doesn't add more, but coming back later does. To keep your own visits out, open `thebeesknees.fm/?dontcountme` once on each of your devices and browsers; `?countme` undoes it. Visits from a local test copy of the site are never counted.
 
 ## About page and credits
 

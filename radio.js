@@ -35,7 +35,7 @@
     amb_fire: "A fire going (click to turn off)",
     amb_off: "Add rain or a fire",
     tip: "Support the station",
-    visits: "You are visitor No. {n}",
+    visits: "Site visits: {n}",
     aired: "Originally aired",
     released: "Originally released",
     tipThanks: "Thank you, {name}, for buying the station a coffee",
@@ -1545,15 +1545,22 @@
     new Image().src = A[(k + 1) % A.length].src;   // fetch the next one early
   }
 
-  // the visitor counter: each browser counts once a day; it only ever stores a running total
+  // the visit counter: every visit counts (a visit = one browser tab session, so reloading or clicking
+  // around doesn't add more). Open the site once with ?dontcountme on a device and that device is never
+  // counted again; ?countme undoes it. It only ever stores a running total.
   const visits = { n: 0 };
   function countVisit() {
     const L = CONFIG.listeners || {};
     if (!L.url || !L.key || !window.fetch) return;
-    const today = new Date().toDateString(), isNew = store.get("visitDay", "") !== today;
+    const q = location.search;
+    if (/[?&]dontcountme\b/.test(q)) store.set("dontCount", true);
+    if (/[?&]countme\b/.test(q)) store.set("dontCount", false);
+    let counted = false; try { counted = sessionStorage.getItem("otr.visitCounted") === "1"; } catch (e) {}
+    const local = /^(localhost|127\.|0\.0\.0\.0|\[?::1)/.test(location.hostname) || location.protocol === "file:";
+    const isNew = !counted && !store.get("dontCount", false) && !local;
     fetch(L.url + "/rest/v1/rpc/count_visit", { method: "POST",
       headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" }, body: JSON.stringify({ is_new: isNew }) })
-      .then(r => r.ok ? r.json() : 0).then(n => { if (n > 0) { visits.n = n; if (isNew) store.set("visitDay", today); render(); } }).catch(() => {});
+      .then(r => r.ok ? r.json() : 0).then(n => { if (n > 0) { visits.n = n; if (isNew) { try { sessionStorage.setItem("otr.visitCounted", "1"); } catch (e) {} } render(); } }).catch(() => {});
   }
   setTimeout(countVisit, 1500);
 
