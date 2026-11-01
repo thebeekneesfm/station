@@ -87,13 +87,12 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 
 ## Stations
 
-`stations.js` has sixteen stations; Christmas is only on the dial from November 15 to January 6. The guide groups them under **Radio shows** and **Music**:
+`stations.js` has fifteen stations; Christmas is only on the dial from November 15 to January 6. The guide groups them under **Radio shows** and **Music**:
 
 | Station | What's on | Loops every |
 |---|---|---|
 | Chills | Horror: The Weird Circle, The Witch's Tale, Quiet Please, The Hermit's Cave, Lights Out, Inner Sanctum, Hall of Fantasy, The Mysterious Traveler | about 24 hours |
-| Noir | Philip Marlowe, Sam Spade, Pat Novak, Richard Diamond, Johnny Dollar, Box 13, Broadway Is My Beat | about 23 hours |
-| Suspense | Suspense, Escape, The Whistler, The Shadow | about 13 hours |
+| Noir | Philip Marlowe, Sam Spade, Pat Novak, Richard Diamond, Johnny Dollar, Box 13, Broadway Is My Beat, Suspense, Escape, The Whistler, The Shadow | about 36 hours |
 | Sci-Fi | X Minus One, Dimension X, 2000 Plus, Exploring Tomorrow, Space Patrol, Tom Corbett, Space Cadet | about 18 hours |
 | Out West | Gunsmoke, Frontier Gentleman, Fort Laramie, The Six Shooter, Have Gun – Will Travel | about 15 hours |
 | Theater | Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Orson Welles' Mercury Theatre (including *The War of the Worlds*) and Campbell Playhouse, Columbia Workshop | about 32 hours |

@@ -442,7 +442,7 @@ window.STATIONS = [
   "id": "noir",
   "name": "Noir",
   "group": "Radio shows",
-  "blurb": "Private eyes, rain-slick streets and bad decisions.",
+  "blurb": "Private eyes, killers and twist endings.",
   "card": "art/cards/noir.webp",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
@@ -469,6 +469,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/PatNovakForHire"
    },
    {
+    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20420617%20001%20The%20Burning%20Court%20%28128-44%29%2028455%2030m00s.mp3",
+    "length": 1800.44,
+    "series": "Suspense",
+    "title": "The Burning Court",
+    "date": "June 17, 1942",
+    "item": "https://archive.org/details/OTRR_Suspense_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Richard_Diamond_Private_Detective_Singles/Richard%20Diamond%2049-05-01%20%28002%29%20Diamond%20In%20the%20Rough%20%28AFRS%29.mp3",
     "length": 1775.89,
     "series": "Richard Diamond, Private Detective",
@@ -483,6 +491,14 @@ window.STATIONS = [
     "title": "The Parakoff Policy",
     "date": "February 18, 1949",
     "item": "https://archive.org/details/OTRR_YoursTrulyJohnnyDollar_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_47-07-07_-001-_The_Man_Who_Would_Be_King_-Raymond_Lawrence-.mp3",
+    "length": 1774.8,
+    "series": "Escape",
+    "title": "Man Who Would Be King",
+    "date": "July 7, 1947",
+    "item": "https://archive.org/details/OTRR_Escape_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_Box_13_Singles/Box%2013%204x-xx-xx%20%2801%29%20The%20First%20Letter.mp3",
@@ -500,12 +516,28 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Broadway_Is_My_Beat_Singles"
    },
    {
+    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_42-05-16_ep001_Retribution.mp3",
+    "length": 1772.22,
+    "series": "The Whistler",
+    "title": "Retribution",
+    "date": "May 16, 1942",
+    "item": "https://archive.org/details/OTRR_Whistler_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Philip_Marlowe_Singles/Philip_Marlowe_49-01-29_018_The_Easy_Mark.mp3",
     "length": 1753.25,
     "series": "The Adventures of Philip Marlowe",
     "title": "Easy Mark",
     "date": "January 29, 1949",
     "item": "https://archive.org/details/OTRR_Philip_Marlowe_Singles"
+   },
+   {
+    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201937-09-26%20%2887%29%20The%20Death%20House%20Rescue.mp3",
+    "length": 1753.23,
+    "series": "The Shadow",
+    "title": "The Death House Rescue",
+    "date": "September 26, 1937",
+    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
    },
    {
     "src": "https://archive.org/download/OTRR_Sam_Spade_Singles/AcademyAwardTheater1946-07-03TheMalteseFalcon.mp3",
@@ -524,6 +556,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/PatNovakForHire"
    },
    {
+    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20450517%20141%20Two%20Birds%20with%20One%20Stone%20%28128-44%29%2028368%2029m55s.mp3",
+    "length": 1794.88,
+    "series": "Suspense",
+    "title": "Two Birds with One Stone",
+    "date": "May 17, 1945",
+    "item": "https://archive.org/details/OTRR_Suspense_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Richard_Diamond_Private_Detective_Singles/Richard%20Diamond%2049-09-17%20%28022%29%20The%20Jerome%20J%20Jerome%20Case.mp3",
     "length": 1772.13,
     "series": "Richard Diamond, Private Detective",
@@ -540,11 +580,27 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_YoursTrulyJohnnyDollar_Singles"
    },
    {
+    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_48-02-22_-029-_How_Love_Came_to_Professor_Guildea_-national_broadcast-.mp3",
+    "length": 1770.73,
+    "series": "Escape",
+    "title": "How Love Came to Professor Guildea",
+    "date": "February 22, 1948",
+    "item": "https://archive.org/details/OTRR_Escape_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Box_13_Singles/Box%2013%204x-xx-xx%20%2808%29%20Double%20Mothers.mp3",
     "length": 1611.89,
     "series": "Box 13",
     "title": "Double Mothers",
     "item": "https://archive.org/details/OTRR_Box_13_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_45-03-05_ep145_Danger_Is_a_Beautiful_Blond.mp3",
+    "length": 1793.14,
+    "series": "The Whistler",
+    "title": "Danger Is a Beautiful Blond",
+    "date": "March 5, 1945",
+    "item": "https://archive.org/details/OTRR_Whistler_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_Broadway_Is_My_Beat_Singles/BIMB%2050-01-21%20%28018%29%20The%20Joan%20Gale%20Murder%20Case.mp3",
@@ -563,6 +619,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Philip_Marlowe_Singles"
    },
    {
+    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201938-07-24%20%28130%29%20The%20Mark%20of%20the%20Bat.mp3",
+    "length": 1766.03,
+    "series": "The Shadow",
+    "title": "The Mark of the Bat",
+    "date": "July 24, 1938",
+    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Sam_Spade_Singles/Sam%20Spade%201947-10-05%20Adam%20Figg%20Caper.mp3",
     "length": 1469.57,
     "series": "The Adventures of Sam Spade",
@@ -577,6 +641,14 @@ window.STATIONS = [
     "title": "Marcia Halpern",
     "date": "February 27, 1949",
     "item": "https://archive.org/details/PatNovakForHire"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20471128%20273%20The%20Pit%20and%20the%20Pendulum%20%2864-44%29%2014324%2029m52s.mp3",
+    "length": 1792.16,
+    "series": "Suspense",
+    "title": "The Pit and the Pendulum",
+    "date": "November 28, 1947",
+    "item": "https://archive.org/details/OTRR_Suspense_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_Richard_Diamond_Private_Detective_Singles/Richard%20Diamond%2049-12-31%20%28036%29%20Thomas%20Jason%20Case.mp3",
@@ -595,11 +667,27 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_YoursTrulyJohnnyDollar_Singles"
    },
    {
+    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_49-03-19_-061-_Finger_of_Doom.mp3",
+    "length": 1770.71,
+    "series": "Escape",
+    "title": "Finger of Doom",
+    "date": "March 19, 1949",
+    "item": "https://archive.org/details/OTRR_Escape_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Box_13_Singles/Box%2013%204x-xx-xx%20%2815%29%20Double%20Right%20Cross.mp3",
     "length": 1605.76,
     "series": "Box 13",
     "title": "Double Right Cross",
     "item": "https://archive.org/details/OTRR_Box_13_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_46-09-09_ep224_Witness_at_the_Fountain.mp3",
+    "length": 1770.87,
+    "series": "The Whistler",
+    "title": "Witness at the Fountain",
+    "date": "September 9, 1946",
+    "item": "https://archive.org/details/OTRR_Whistler_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_Broadway_Is_My_Beat_Singles/BIMB%2050-06-16%20%28039%29%20The%20Morris%20Bernstein%20Murder%20Case.mp3",
@@ -618,6 +706,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Philip_Marlowe_Singles"
    },
    {
+    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201939-03-19%20%28164%29%20Can%20the%20Dead%20Talk%20%28Blue%20Coal%29.mp3",
+    "length": 1709.56,
+    "series": "The Shadow",
+    "title": "Can the Dead Talk",
+    "date": "March 19, 1939",
+    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Sam_Spade_Singles/Sam%20Spade%201948-08-15%20Critical%20Author%20Caper.mp3",
     "length": 1789.05,
     "series": "The Adventures of Sam Spade",
@@ -634,12 +730,28 @@ window.STATIONS = [
     "item": "https://archive.org/details/PatNovakForHire"
    },
    {
+    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20510329%20422%20Death%20Pitch%20%2864-44%29%2013758%2028m40s.mp3",
+    "length": 1719.66,
+    "series": "Suspense",
+    "title": "Death Pitch",
+    "date": "March 29, 1951",
+    "item": "https://archive.org/details/OTRR_Suspense_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Richard_Diamond_Private_Detective_Singles/Richard%20Diamond%2050-04-26%20%28051%29%20The%20Ralph%20Baxter%20Case.mp3",
     "length": 1770.77,
     "series": "Richard Diamond, Private Detective",
     "title": "Ralph Baxter Case",
     "date": "April 26, 1950",
     "item": "https://archive.org/details/OTRR_Richard_Diamond_Private_Detective_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_50-01-17_-094-_The_Sure_Thing_-Anthony_Ross-_-2-.mp3",
+    "length": 1770.34,
+    "series": "Escape",
+    "title": "Sure Thing",
+    "date": "January 17, 1950",
+    "item": "https://archive.org/details/OTRR_Escape_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_YoursTrulyJohnnyDollar_Singles/YTJD%201957-01-20%20520%20The%20Blooming%20Blossom%20Matter%20%5BAFRTS%5D.mp3",
@@ -655,6 +767,14 @@ window.STATIONS = [
     "series": "Box 13",
     "title": "Dowager and Dan Holiday",
     "item": "https://archive.org/details/OTRR_Box_13_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_48-03-31_ep305_Bird_of_Prey.mp3",
+    "length": 1770.81,
+    "series": "The Whistler",
+    "title": "Bird of Prey",
+    "date": "March 31, 1948",
+    "item": "https://archive.org/details/OTRR_Whistler_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_Broadway_Is_My_Beat_Singles/BIMB%2051-04-28%20%28061%29%20The%20Georgia%20Gray%20Murder%20Case.mp3",
@@ -673,6 +793,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Philip_Marlowe_Singles"
    },
    {
+    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201940-11-24%20%28203%29%20The%20Green%20Man.mp3",
+    "length": 1443.64,
+    "series": "The Shadow",
+    "title": "The Green Man",
+    "date": "November 24, 1940",
+    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Sam_Spade_Singles/SamSpade1948-12-12BouncingBettyCaperAfrs.mp3",
     "length": 1494.05,
     "series": "The Adventures of Sam Spade",
@@ -689,12 +817,28 @@ window.STATIONS = [
     "item": "https://archive.org/details/PatNovakForHire"
    },
    {
+    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20540607%20555%20A%20Terribly%20Strange%20Bed%20%28128-44%29%2028690%2030m16s.mp3",
+    "length": 1815.52,
+    "series": "Suspense",
+    "title": "A Terribly Strange Bed",
+    "date": "June 7, 1954",
+    "item": "https://archive.org/details/OTRR_Suspense_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Richard_Diamond_Private_Detective_Singles/Richard%20Diamond%2050-09-27%20%28066%29%20The%20Oklahoma%20Cowboy%20Murder%20Case.mp3",
     "length": 1770.25,
     "series": "Richard Diamond, Private Detective",
     "title": "Oklahoma Cowboy Murder Case",
     "date": "September 27, 1950",
     "item": "https://archive.org/details/OTRR_Richard_Diamond_Private_Detective_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_50-10-08_-127-_Roulette.mp3",
+    "length": 1770.03,
+    "series": "Escape",
+    "title": "Roulette",
+    "date": "October 8, 1950",
+    "item": "https://archive.org/details/OTRR_Escape_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_YoursTrulyJohnnyDollar_Singles/YTJD%201958-06-15%20591%20The%20Delectable%20Damsel%20Matter.mp3",
@@ -710,6 +854,14 @@ window.STATIONS = [
     "series": "Box 13",
     "title": "Hunt and Peck",
     "item": "https://archive.org/details/OTRR_Box_13_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_49-08-07_ep375_The_Trigger_Man.mp3",
+    "length": 1768.89,
+    "series": "The Whistler",
+    "title": "Trigger Man",
+    "date": "August 7, 1949",
+    "item": "https://archive.org/details/OTRR_Whistler_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_Broadway_Is_My_Beat_Singles/BIMB%2051-11-10%20%28086%29%20The%20Joey%20Macklin%20-%20John%20Howard%20Murder%20Case.mp3",
@@ -728,12 +880,28 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Philip_Marlowe_Singles"
    },
    {
+    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201942-02-15%20%28245%29%20Death%20Speaks%20Twice.mp3",
+    "length": 1757.36,
+    "series": "The Shadow",
+    "title": "Death Speaks Twice",
+    "date": "February 15, 1942",
+    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Sam_Spade_Singles/SamSpade1949-09-25IndianCaper.mp3",
     "length": 1646.39,
     "series": "The Adventures of Sam Spade",
     "title": "Indian Caper",
     "date": "September 25, 1949",
     "item": "https://archive.org/details/OTRR_Sam_Spade_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20570217%20686%20Murder%20and%20Aunt%20Delia%20%2864-44%29%2014254%20%2029m02s%20AFRS.mp3",
+    "length": 1783.17,
+    "series": "Suspense",
+    "title": "Murder and Aunt Delia",
+    "date": "February 17, 1957",
+    "item": "https://archive.org/details/OTRR_Suspense_Singles"
    },
    {
     "src": "https://archive.org/download/PatNovakForHire/49-05-01-RitaMalloy.mp3",
@@ -752,6 +920,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Richard_Diamond_Private_Detective_Singles"
    },
    {
+    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_52-11-09_-156-_The_Return_-3-.mp3",
+    "length": 1724.98,
+    "series": "Escape",
+    "title": "Return",
+    "date": "November 9, 1952",
+    "item": "https://archive.org/details/OTRR_Escape_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_YoursTrulyJohnnyDollar_Singles/YTJD%201960-01-03%20670%20The%20Hapless%20Ham%20Matter.mp3",
     "length": 1468.36,
     "series": "Yours Truly, Johnny Dollar",
@@ -765,6 +941,14 @@ window.STATIONS = [
     "series": "Box 13",
     "title": "Find Me, Find Death",
     "item": "https://archive.org/details/OTRR_Box_13_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_50-12-03_ep444_The_Lady_With_the_Knife.mp3",
+    "length": 1770.54,
+    "series": "The Whistler",
+    "title": "Lady With the Knife",
+    "date": "December 3, 1950",
+    "item": "https://archive.org/details/OTRR_Whistler_Singles"
    },
    {
     "src": "https://archive.org/download/OTRR_Broadway_Is_My_Beat_Singles/BIMB%2052-06-23%20%28118%29%20The%20Joey%20Croft%20Murder%20Case.mp3",
@@ -783,12 +967,28 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Philip_Marlowe_Singles"
    },
    {
+    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201946-05-05%20%28370%29%20The%20White%20Witchman%20of%20Lawaiki.mp3",
+    "length": 1753.21,
+    "series": "The Shadow",
+    "title": "The White Witchman of Lawaiki",
+    "date": "May 5, 1946",
+    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
+   },
+   {
     "src": "https://archive.org/download/OTRR_Sam_Spade_Singles/SamSpade1951-01-19CloakAndDaggerCaper.mp3",
     "length": 1731.76,
     "series": "The Adventures of Sam Spade",
     "title": "Cloak and Dagger Caper",
     "date": "January 19, 1951",
     "item": "https://archive.org/details/OTRR_Sam_Spade_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20590809%20814%20Everything%20Will%20Be%20Different%20%28128-44%29%2019586%2020m33s.mp3",
+    "length": 1212.34,
+    "series": "Suspense",
+    "title": "Everything Will Be Different",
+    "date": "August 9, 1959",
+    "item": "https://archive.org/details/OTRR_Suspense_Singles"
    },
    {
     "src": "https://archive.org/download/PatNovakForHire/49-05-22-GiveEnvelopetoJohnStJohn.mp3",
@@ -807,6 +1007,14 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Richard_Diamond_Private_Detective_Singles"
    },
    {
+    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_53-07-26_-193-_The_Notebook.mp3",
+    "length": 1770.57,
+    "series": "Escape",
+    "title": "Notebook",
+    "date": "July 26, 1953",
+    "item": "https://archive.org/details/OTRR_Escape_Singles"
+   },
+   {
     "src": "https://archive.org/download/OTRR_YoursTrulyJohnnyDollar_Singles/YTJD%201961-06-04%20741%20The%20Stock-In-Trade%20Matter.mp3",
     "length": 1474.89,
     "series": "Yours Truly, Johnny Dollar",
@@ -822,244 +1030,20 @@ window.STATIONS = [
     "item": "https://archive.org/details/OTRR_Box_13_Singles"
    },
    {
-    "src": "https://archive.org/download/OTRR_Broadway_Is_My_Beat_Singles/BIMB%2053-02-21%20%28153%29%20The%20Joe%20Turner%20Murder%20Case.mp3",
-    "length": 1776.19,
-    "series": "Broadway Is My Beat",
-    "title": "Joe Turner Murder Case",
-    "date": "February 21, 1953",
-    "item": "https://archive.org/details/OTRR_Broadway_Is_My_Beat_Singles"
-   }
-  ]
- },
- {
-  "id": "suspense",
-  "name": "Suspense",
-  "group": "Radio shows",
-  "blurb": "Thrillers and twist endings.",
-  "card": "art/cards/suspense.png",
-  "epoch": "2026-11-01T00:00:00-07:00",
-  "sound": {
-   "level": true,
-   "declick": 0.7,
-   "decrackle": 0.7,
-   "tone": 7500
-  },
-  "tracks": [
-   {
-    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20420617%20001%20The%20Burning%20Court%20%28128-44%29%2028455%2030m00s.mp3",
-    "length": 1800.44,
-    "series": "Suspense",
-    "title": "The Burning Court",
-    "date": "June 17, 1942",
-    "item": "https://archive.org/details/OTRR_Suspense_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_47-07-07_-001-_The_Man_Who_Would_Be_King_-Raymond_Lawrence-.mp3",
-    "length": 1774.8,
-    "series": "Escape",
-    "title": "Man Who Would Be King",
-    "date": "July 7, 1947",
-    "item": "https://archive.org/details/OTRR_Escape_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_42-05-16_ep001_Retribution.mp3",
-    "length": 1772.22,
-    "series": "The Whistler",
-    "title": "Retribution",
-    "date": "May 16, 1942",
-    "item": "https://archive.org/details/OTRR_Whistler_Singles"
-   },
-   {
-    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201937-09-26%20%2887%29%20The%20Death%20House%20Rescue.mp3",
-    "length": 1753.23,
-    "series": "The Shadow",
-    "title": "The Death House Rescue",
-    "date": "September 26, 1937",
-    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20450517%20141%20Two%20Birds%20with%20One%20Stone%20%28128-44%29%2028368%2029m55s.mp3",
-    "length": 1794.88,
-    "series": "Suspense",
-    "title": "Two Birds with One Stone",
-    "date": "May 17, 1945",
-    "item": "https://archive.org/details/OTRR_Suspense_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_48-02-22_-029-_How_Love_Came_to_Professor_Guildea_-national_broadcast-.mp3",
-    "length": 1770.73,
-    "series": "Escape",
-    "title": "How Love Came to Professor Guildea",
-    "date": "February 22, 1948",
-    "item": "https://archive.org/details/OTRR_Escape_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_45-03-05_ep145_Danger_Is_a_Beautiful_Blond.mp3",
-    "length": 1793.14,
-    "series": "The Whistler",
-    "title": "Danger Is a Beautiful Blond",
-    "date": "March 5, 1945",
-    "item": "https://archive.org/details/OTRR_Whistler_Singles"
-   },
-   {
-    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201938-07-24%20%28130%29%20The%20Mark%20of%20the%20Bat.mp3",
-    "length": 1766.03,
-    "series": "The Shadow",
-    "title": "The Mark of the Bat",
-    "date": "July 24, 1938",
-    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20471128%20273%20The%20Pit%20and%20the%20Pendulum%20%2864-44%29%2014324%2029m52s.mp3",
-    "length": 1792.16,
-    "series": "Suspense",
-    "title": "The Pit and the Pendulum",
-    "date": "November 28, 1947",
-    "item": "https://archive.org/details/OTRR_Suspense_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_49-03-19_-061-_Finger_of_Doom.mp3",
-    "length": 1770.71,
-    "series": "Escape",
-    "title": "Finger of Doom",
-    "date": "March 19, 1949",
-    "item": "https://archive.org/details/OTRR_Escape_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_46-09-09_ep224_Witness_at_the_Fountain.mp3",
-    "length": 1770.87,
-    "series": "The Whistler",
-    "title": "Witness at the Fountain",
-    "date": "September 9, 1946",
-    "item": "https://archive.org/details/OTRR_Whistler_Singles"
-   },
-   {
-    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201939-03-19%20%28164%29%20Can%20the%20Dead%20Talk%20%28Blue%20Coal%29.mp3",
-    "length": 1709.56,
-    "series": "The Shadow",
-    "title": "Can the Dead Talk",
-    "date": "March 19, 1939",
-    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20510329%20422%20Death%20Pitch%20%2864-44%29%2013758%2028m40s.mp3",
-    "length": 1719.66,
-    "series": "Suspense",
-    "title": "Death Pitch",
-    "date": "March 29, 1951",
-    "item": "https://archive.org/details/OTRR_Suspense_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_50-01-17_-094-_The_Sure_Thing_-Anthony_Ross-_-2-.mp3",
-    "length": 1770.34,
-    "series": "Escape",
-    "title": "Sure Thing",
-    "date": "January 17, 1950",
-    "item": "https://archive.org/details/OTRR_Escape_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_48-03-31_ep305_Bird_of_Prey.mp3",
-    "length": 1770.81,
-    "series": "The Whistler",
-    "title": "Bird of Prey",
-    "date": "March 31, 1948",
-    "item": "https://archive.org/details/OTRR_Whistler_Singles"
-   },
-   {
-    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201940-11-24%20%28203%29%20The%20Green%20Man.mp3",
-    "length": 1443.64,
-    "series": "The Shadow",
-    "title": "The Green Man",
-    "date": "November 24, 1940",
-    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20540607%20555%20A%20Terribly%20Strange%20Bed%20%28128-44%29%2028690%2030m16s.mp3",
-    "length": 1815.52,
-    "series": "Suspense",
-    "title": "A Terribly Strange Bed",
-    "date": "June 7, 1954",
-    "item": "https://archive.org/details/OTRR_Suspense_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_50-10-08_-127-_Roulette.mp3",
-    "length": 1770.03,
-    "series": "Escape",
-    "title": "Roulette",
-    "date": "October 8, 1950",
-    "item": "https://archive.org/details/OTRR_Escape_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_49-08-07_ep375_The_Trigger_Man.mp3",
-    "length": 1768.89,
-    "series": "The Whistler",
-    "title": "Trigger Man",
-    "date": "August 7, 1949",
-    "item": "https://archive.org/details/OTRR_Whistler_Singles"
-   },
-   {
-    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201942-02-15%20%28245%29%20Death%20Speaks%20Twice.mp3",
-    "length": 1757.36,
-    "series": "The Shadow",
-    "title": "Death Speaks Twice",
-    "date": "February 15, 1942",
-    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20570217%20686%20Murder%20and%20Aunt%20Delia%20%2864-44%29%2014254%20%2029m02s%20AFRS.mp3",
-    "length": 1783.17,
-    "series": "Suspense",
-    "title": "Murder and Aunt Delia",
-    "date": "February 17, 1957",
-    "item": "https://archive.org/details/OTRR_Suspense_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_52-11-09_-156-_The_Return_-3-.mp3",
-    "length": 1724.98,
-    "series": "Escape",
-    "title": "Return",
-    "date": "November 9, 1952",
-    "item": "https://archive.org/details/OTRR_Escape_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_50-12-03_ep444_The_Lady_With_the_Knife.mp3",
-    "length": 1770.54,
-    "series": "The Whistler",
-    "title": "Lady With the Knife",
-    "date": "December 3, 1950",
-    "item": "https://archive.org/details/OTRR_Whistler_Singles"
-   },
-   {
-    "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201946-05-05%20%28370%29%20The%20White%20Witchman%20of%20Lawaiki.mp3",
-    "length": 1753.21,
-    "series": "The Shadow",
-    "title": "The White Witchman of Lawaiki",
-    "date": "May 5, 1946",
-    "item": "https://archive.org/details/the-shadow-1938-10-09-141-death-stalks-the-shadow"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Suspense_Singles/Suspense%20590809%20814%20Everything%20Will%20Be%20Different%20%28128-44%29%2019586%2020m33s.mp3",
-    "length": 1212.34,
-    "series": "Suspense",
-    "title": "Everything Will Be Different",
-    "date": "August 9, 1959",
-    "item": "https://archive.org/details/OTRR_Suspense_Singles"
-   },
-   {
-    "src": "https://archive.org/download/OTRR_Escape_Singles/Escape_53-07-26_-193-_The_Notebook.mp3",
-    "length": 1770.57,
-    "series": "Escape",
-    "title": "Notebook",
-    "date": "July 26, 1953",
-    "item": "https://archive.org/details/OTRR_Escape_Singles"
-   },
-   {
     "src": "https://archive.org/download/OTRR_Whistler_Singles/Whistler_52-05-25_ep521_Charming_Hostess.mp3",
     "length": 1594.85,
     "series": "The Whistler",
     "title": "Charming Hostess",
     "date": "May 25, 1952",
     "item": "https://archive.org/details/OTRR_Whistler_Singles"
+   },
+   {
+    "src": "https://archive.org/download/OTRR_Broadway_Is_My_Beat_Singles/BIMB%2053-02-21%20%28153%29%20The%20Joe%20Turner%20Murder%20Case.mp3",
+    "length": 1776.19,
+    "series": "Broadway Is My Beat",
+    "title": "Joe Turner Murder Case",
+    "date": "February 21, 1953",
+    "item": "https://archive.org/details/OTRR_Broadway_Is_My_Beat_Singles"
    },
    {
     "src": "https://archive.org/download/the-shadow-1938-10-09-141-death-stalks-the-shadow/The%20Shadow%201947-12-28%20%28428%29%20Terrible%20Legend%20of%20Crownshield%20Castle.mp3",
