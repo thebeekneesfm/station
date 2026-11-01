@@ -277,6 +277,8 @@
   .look-card { border-radius: 3px; background: var(--c); transform: rotate(1.6deg);
       background-image: radial-gradient(rgba(0,0,0,.16) 1px, transparent 1.4px); background-size: 5px 5px;
       box-shadow: 2px 3px 0 rgba(0,0,0,.35); color: var(--ink); }
+  /* hand-drawn station cards sit on the radio the same way: a slight tilt and a hard shadow */
+  .card:not(.missing) > img { border-radius: 3px; transform: rotate(1.6deg); box-shadow: 2px 3px 0 rgba(0,0,0,.35); }
   .look-card[data-ink="light"] { color: var(--ivory); }
   .missing > .look-card { align-items: flex-start; justify-content: flex-end; text-align: left; padding: 9% 9% 11%; gap: 6px; }
   .lc-num { position: absolute; top: 9%; left: 9%; font: 800 22px/1 "BK Serif", sans-serif; font-stretch: 75%; letter-spacing: 0; color: var(--ivory); background: var(--ink); padding: 5px 7px 4px; }
