@@ -14,8 +14,8 @@ window.RADIO_CONFIG = {
   /* Announcements scroll along the bottom ticker, between Ko-fi thank-yous.
      Add, change or delete lines here; each one is a line in quotes, followed by a comma. */
   "announcements": [
-    "Welcome to The Bee's Knees.fm: old radio shows and 78s, playing around the clock",
-    "Keep the station on the air: tip us on Ko-fi at ko-fi.com/thebeeskneesfm",
+    "Welcome to The Bee's Knees, carefully contrived to relieve you from the four walls of today",
+    "Enjoying the vibes? Consider becoming a member or making a donation at ko-fi.com/thebeeskneesfm",
   ],
   /* Sponsor-tier members: which station each one sponsors this month.
      Use the station's id (chills, noir, scifi, romance, outwest, laughs, jazzage,
