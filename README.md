@@ -87,7 +87,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 
 ## Stations
 
-`stations.js` has eighteen stations. The guide groups them under **Radio shows** and **Music**:
+`stations.js` has sixteen stations; Christmas is only on the dial from November 15 to January 6. The guide groups them under **Radio shows** and **Music**:
 
 | Station | What's on | Loops every |
 |---|---|---|
@@ -99,16 +99,14 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Theater | Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Orson Welles' Mercury Theatre (including *The War of the Worlds*) and Campbell Playhouse, Columbia Workshop | about 32 hours |
 | Laughs | Jack Benny, Fibber McGee and Molly, Burns and Allen, The Great Gildersleeve, Our Miss Brooks | about 16 hours |
 | Variety | Bing Crosby, Bob Hope, The Chase and Sanborn Hour, Command Performance, Fred Allen, Jimmy Durante, Spike Jones, Martin and Lewis, Jubilee, Dinah Shore, The Railroad Hour | about 45 hours |
-| Ragtime | Rags, cakewalks and brass bands, 1898–1928 | about 5 hours |
-| Jazz Age | Hot jazz, blues and dance bands, 1917–1925 | about 5 hours |
+| Jazz Age | Ragtime, hot jazz and dance bands, from the 1910s through the '20s | about 58 hours |
 | Blues | Delta and country blues, 1920s to the '50s | about 3 hours |
 | Swing | Big bands of the 1930s and '40s | about 6 hours |
-| Crooners | Singers from the late 1920s to the '50s | about 6 hours |
-| After Hours | Late-night jazz and torch songs, 1936–1959 | about 6 hours |
+| After Hours | Crooners, torch songs and late-night jazz, late '20s to the '50s | about 79 hours |
 | Classical | Opera singers, violinists, pianists and orchestras on 78s, 1900s–1950s. Only complete short pieces, never "part 2" of something | about 6 hours |
 | Hawaiian & Exotica | Steel guitars, island songs and exotica | about 4 hours |
 | Sleepy Time | Slow waltzes and sweet bands, muffled and echoey as if playing in another room No commercials. | about 4 hours |
-| Christmas | Holiday 78s from the 1930s to 1959 | about 6 hours |
+| Christmas | Holiday 78s from the 1930s to 1959. Only on the dial from November 15 to January 6 (set by `"season"` in stations.js) | about 20 hours |
 
 The shows take turns, so you don't get six Gunsmokes in a row. To add shows or build a new station, open `builder.html`, paste Archive links, tick what you want, and copy the result into `stations.js`.
 
@@ -128,7 +126,7 @@ If the Archive takes a file down, that slot plays static with "Lost the signal" 
 The browser cleans up the sound as it plays:
 - **Pops and crackle.** One detector compares every sample with its neighbors. A sample that sticks out far more than usual (a pop, or one tick of crackle) is replaced with the median of the samples around it. It also checks how busy the last few milliseconds were, so drums, brushes and "s" sounds aren't mistaken for crackle. On a test record full of crackle and pops it removed about half of both while barely touching the music (about 0.1% change). It softens a worn 78, but it can't make one sound new.
 - **Level.** It gently turns quiet recordings up and loud ones down, with a compressor and limiter for sudden peaks.
-- **Tone.** It cuts low rumble and rounds off high hiss. The early records (Ragtime, Jazz Age) get the softest top end, since that's where most of their surface noise lives.
+- **Tone.** It cuts low rumble and rounds off high hiss. The early records (Jazz Age) get the softest top end, since that's where most of their surface noise lives.
 
 **Clean / Original switch.** "Sound: cleaned up" in the player panel switches between the cleaned sound and the untouched recording. Click it, or press **C**. Use it to compare, and tune the settings below by ear. Each listener's choice is remembered in their own browser.
 

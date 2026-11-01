@@ -2,7 +2,14 @@
    the look lives in skin.js and the programming lives in stations.js. */
 (function () {
   "use strict";
-  const SKIN = window.SKIN, STATIONS = window.STATIONS;
+  // a station with "season": {"from": "11-15", "to": "01-06"} is only on the dial between those dates (month-day, your own calendar)
+  function inSeason(st, d = new Date()) {
+    if (!st.season) return true;
+    const md = (d.getMonth() + 1) * 100 + d.getDate(), num = x => +x.replace("-", "");
+    const from = num(st.season.from), to = num(st.season.to);
+    return from <= to ? md >= from && md <= to : md >= from || md <= to;
+  }
+  const SKIN = window.SKIN, STATIONS = window.STATIONS.filter(st => inSeason(st));
   // Two layouts: SKIN (wide screens) and SKIN.portrait (phones held upright), if you've made one.
   const isPortrait = () => !!SKIN.portrait && window.innerHeight > window.innerWidth;
   let SK = isPortrait() ? SKIN.portrait : SKIN;
