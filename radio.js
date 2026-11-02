@@ -857,9 +857,12 @@
         t.className = "txt";
         if (L.href) {
           el.classList.add("hot");
-          t.target = "_blank"; t.rel = "noopener";
+          // the station's own pages (tv.html, drive-in.html ...) open in place; anything off-site opens in a new tab
+          if (!/^[\w-]+\.html(#.*)?$/.test(L.href)) { t.target = "_blank"; t.rel = "noopener"; }
           t.addEventListener("click", e => {
             if (state.editing) { e.preventDefault(); return; }
+            // a link filled in later (like the TV Guide's tv.html#channel) is checked as it's clicked
+            if (/^[\w-]+\.html(#.*)?$/.test(t.getAttribute("href") || "")) t.removeAttribute("target");
             if (L.href === "about.html" && !e.metaKey && !e.ctrlKey && !e.shiftKey) { e.preventDefault(); openAbout(); }
           });
         }
@@ -915,7 +918,7 @@
         const v = el.querySelector("video");
         v.muted = true; v.defaultMuted = true;
         rec.tv = { v, standby: el.querySelector(".tv-standby"), tag: el.querySelector(".tv-tag"), src: "", until: 0, key: "" };
-        el.addEventListener("click", () => { if (!state.editing && rec.tv.href && !/^https?:/.test(rec.tv.href)) window.open(rec.tv.href, "_blank", "noopener"); });
+        el.addEventListener("click", () => { if (!state.editing && rec.tv.href && !/^https?:/.test(rec.tv.href)) location.href = rec.tv.href; });
         v.addEventListener("ended", () => { rec.tv.src = ""; renderTV(rec, true); });
         v.addEventListener("playing", () => { rec.tv.standby.hidden = true; });
         v.addEventListener("error", () => {
