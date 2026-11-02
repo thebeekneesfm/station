@@ -52,7 +52,7 @@ window.SKIN = {
     "storm": "art/sounds/storm.mp3"
   },
   "name": "The Bee's Knees",
-  "tagline": "Carefully contrived to relieve you from the four walls of today",
+  "tagline": "Carefully curated to relieve you from our current timeline",
   "badge": ".fm",
   "ambienceLevel": 0.3,
   "layers": [
