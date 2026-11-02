@@ -60,7 +60,7 @@
     cleanOff: "Hiss filter off",
     tvTuning: "",
     tvStandby: "Please stand by",
-    tvGuide: "TV Guide \u00b7 Click to watch now"
+    tvGuide: "Click to watch now"
   }, SKIN.words || {});
   const CONFIG = window.RADIO_CONFIG || {};
 
