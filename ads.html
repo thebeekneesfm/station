@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vintage Ads · The Bee's Knees.fm</title>
@@ -78,6 +79,10 @@
       linear-gradient(#000, #000) center / calc(100% - 16px) calc(100% - 16px) no-repeat; }
   .wrap { filter: drop-shadow(0 3px 0 rgba(0,0,0,.22)) drop-shadow(0 10px 18px rgba(0,0,0,.2)); }
   .logo span { font: 600 .42em/1 "BK Head", "BK Serif", Georgia, serif; letter-spacing: .02em; margin-left: 2px; }
+  /* opened over the radio (?embed=1): no site header, the close button sits top right */
+  .embed .mast { display: none; }
+  .embed .wrap { padding-top: 12px; }
+  .embed .intro h1 { padding-right: 110px; }
 </style>
 </head>
 <body>

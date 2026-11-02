@@ -1383,7 +1383,8 @@
   /* ---------- the comic and magazine racks, opened over the radio ----------
      The rack page itself runs in a frame (comics.html?embed=1), so collections and the reader work just as on the page,
      and the radio keeps playing underneath. */
-  const RACKS = { "comics.html": "comics", "magazines.html": "magazines" };
+  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads" };
+  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads" }, isRack = k => !!RACK_TITLES[k];
   function openRack(kind, push = true) {
     let box = document.getElementById("rack-ov");
     if (!box) {
@@ -1399,7 +1400,7 @@
       // a fresh frame for each rack: changing a frame's address would add a step to the browser's Back history
       box.dataset.kind = kind;
       const nf = document.createElement("iframe"); nf.setAttribute("allow", "fullscreen");
-      nf.title = kind === "comics" ? "The comic rack" : "The magazine rack"; nf.src = kind + ".html?embed=1";
+      nf.title = RACK_TITLES[kind]; nf.src = kind + ".html?embed=1";
       fr.replaceWith(nf); fr = nf;
     }
     box.setAttribute("aria-label", fr.title);
@@ -1410,10 +1411,10 @@
   function closeRack(fromHistory) {
     const box = document.getElementById("rack-ov"); if (!box || box.hidden) return;
     box.hidden = true; overlayOpen(false);
-    if (!fromHistory && (location.hash === "#comics" || location.hash === "#magazines")) history.back();
+    if (!fromHistory && isRack(location.hash.slice(1))) history.back();
   }
-  window.addEventListener("popstate", () => { const k = location.hash.slice(1); if (k === "comics" || k === "magazines") openRack(k, false); else closeRack(true); });
-  if (location.hash === "#comics" || location.hash === "#magazines") setTimeout(() => openRack(location.hash.slice(1), false), 0);
+  window.addEventListener("popstate", () => { const k = location.hash.slice(1); if (isRack(k)) openRack(k, false); else closeRack(true); });
+  if (isRack(location.hash.slice(1))) setTimeout(() => openRack(location.hash.slice(1), false), 0);
 
   /* ---------- the Sunday Funnies (art/funnies/funnies.js) ----------
      One strip a week, from the same week in 1930. It changes on Sunday by the listener's own calendar,
