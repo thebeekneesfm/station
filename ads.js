@@ -455,12 +455,6 @@ window.ADS = [
   "item": "https://archive.org/details/1950-advertisement-for-lucas-childrens-clothes"
  },
  {
-  "src": "art/ads/CreamofWheat1922D.jpg",
-  "title": "Cream of Wheat",
-  "date": "1922",
-  "item": "https://archive.org/details/CreamofWheat1922D"
- },
- {
   "src": "art/ads/1936-advertisement-for-stc-model-623-radio-set.jpg",
   "title": "STC Model 623 radio set",
   "date": "1936",
@@ -1779,12 +1773,6 @@ window.ADS = [
   "title": "Frigidaire refrigerators",
   "date": "1951",
   "item": "https://archive.org/details/1951-advertisement-for-frigidaire-refrigerators"
- },
- {
-  "src": "art/ads/JungleLove1927A.jpg",
-  "title": "Jungle Love",
-  "date": "1927",
-  "item": "https://archive.org/details/JungleLove1927A"
  },
  {
   "src": "art/ads/1958-advertisement-for-beldray-mk-viii-ironing-table-ekco-bins-tek-toothbrushes-.jpg",
