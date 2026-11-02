@@ -69,7 +69,7 @@ window.SKIN = {
     {"id": "clock", "type": "text", "bind": "clock", "x": 1330, "y": 18, "w": 230, "h": 50, "font": "BK Serif", "size": 42, "color": "#1f1b17", "align": "right", "weight": 700},
     {"id": "tip-link", "type": "text", "bind": "tip", "href": "config.tip", "x": 1186, "y": 74, "w": 260, "h": 32, "font": "BK Serif", "size": 21, "color": "#c8321f", "align": "right", "weight": 600},
     {"id": "about-link", "type": "text", "text": "About", "href": "about.html", "x": 1462, "y": 74, "w": 98, "h": 32, "font": "BK Serif", "size": 21, "color": "#c8321f", "align": "right", "weight": 600},
-    {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 1080, "y": 78, "w": 310, "h": 30, "font": "BK Serif", "size": 20, "color": "#5d5244", "align": "right", "italic": true},
+    {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 600, "y": 386, "w": 244, "h": 30, "font": "BK Serif", "size": 19, "color": "#5d5244", "align": "right", "italic": true},
     // weather is off for now; delete the two slashes to bring it back
     // {"id": "weather", "type": "weather", "x": 1400, "y": 70, "w": 160, "h": 40, "font": "BK Serif", "size": 26, "color": "#1f1b17", "weight": 700, "align": "right"},
     {"id": "player", "src": "art/player.png", "x": 40, "y": 128, "w": 1520, "h": 300, "look": "wall"},
@@ -105,7 +105,7 @@ window.SKIN = {
       {"id": "clock", "type": "text", "bind": "clock", "x": 420, "y": 24, "w": 160, "h": 40, "font": "BK Serif", "size": 30, "color": "#1f1b17", "align": "right", "weight": 700},
       {"id": "nav-about", "type": "text", "text": "About", "href": "about.html", "x": 460, "y": 64, "w": 120, "h": 30, "font": "BK Serif", "size": 22, "color": "#c8321f", "align": "right", "weight": 700},
       {"id": "tip-link", "type": "text", "bind": "tip", "href": "config.tip", "x": 300, "y": 140, "w": 280, "h": 30, "font": "BK Serif", "size": 21, "color": "#c8321f", "align": "right", "weight": 700},
-      {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 20, "y": 140, "w": 270, "h": 30, "font": "BK Serif", "size": 22, "color": "#5d5244", "align": "left", "italic": true},
+      {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 372, "y": 622, "w": 206, "h": 30, "font": "BK Serif", "size": 19, "color": "#5d5244", "align": "right", "italic": true},
       // {"id": "weather", "type": "weather", "x": 440, "y": 136, "w": 140, "h": 36, "font": "BK Serif", "size": 24, "color": "#1f1b17", "weight": 700, "align": "right"},
       {"id": "player", "src": "art/phone/player.png", "x": 12, "y": 292, "w": 576, "h": 372, "look": "paper"},
       {"id": "station-card", "type": "card", "action": "power", "x": 22, "y": 304, "w": 236, "h": 236},

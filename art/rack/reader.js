@@ -28,10 +28,15 @@
   };
   SHELVES.forEach(function (s) { s.slug = slug(s.shelf); });
   function cover(it, img) {
-    // the Archive is sometimes slow to answer; try a cover again before giving up on it
-    var tries = 0;
-    img.addEventListener("error", function () { if (tries++ < 3) setTimeout(function () { img.src = page(it.id, 0, 400) + "#r" + tries; }, 1500 * tries); });
-    img.src = page(it.id, 0, 400);
+    // covers are kept on the site (art/rack/covers/<id>.webp) so the racks load fast;
+    // a cover that isn't there yet falls back to the Archive, which is sometimes slow, so try it again before giving up
+    var tries = 0, local = true;
+    img.addEventListener("error", function () {
+      if (local) { local = false; img.src = page(it.id, 0, 400); return; }
+      if (tries++ < 3) setTimeout(function () { img.src = page(it.id, 0, 400) + "#r" + tries; }, 1500 * tries);
+    });
+    img.decoding = "async";
+    img.src = "art/rack/covers/" + encodeURIComponent(it.id) + ".webp";
   }
   function issueButton(it) {
     var b = document.createElement("button"); b.type = "button"; b.className = "issue"; b.dataset.id = it.id;

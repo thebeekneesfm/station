@@ -1,7 +1,8 @@
 /* The comic and magazine racks. Every issue is read straight from its page images at the Internet Archive.
    Each one was looked through page by page (and its text searched) for racist caricature before it went on a shelf.
    To add an issue: copy a line, change the Archive id, title, issue, date, publisher and page count.
-   To take one down: delete its line. */
+   To take one down: delete its line.
+   Covers load from art/rack/covers/<id>.webp (300px wide) so the racks are quick; a new issue without one there uses its Archive cover until one is added. */
 window.RACK = [
  {
   "shelf": "Horror & Suspense",
