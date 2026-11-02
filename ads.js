@@ -1726,12 +1726,7 @@ window.ADS = [
   "date": "1947",
   "item": "https://archive.org/details/ChesterfieldCigarettes1947A"
  },
- {
-  "src": "art/ads/1950-advertisement-for-delrosa-rose-hip-syrup-milk-of-magnesia-radium-leather-dy.jpg",
-  "title": "Delrosa Rose Hip Syrup, Milk of Magnesia, Radium Leather Dyes, Luxan and Luxol sanitary towels",
-  "date": "1950",
-  "item": "https://archive.org/details/1950-advertisement-for-delrosa-rose-hip-syrup-milk-of-magnesia-radium-leather-dy"
- },
+ 
  {
   "src": "art/ads/1950-advertisement-for-swift-canned-foods_202102.jpg",
   "title": "Swift canned foods",
