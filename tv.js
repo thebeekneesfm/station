@@ -60,13 +60,6 @@ window.TV = [
   "item": "https://archive.org/details/bb_she_wronged_him_right"
  },
  {
-  "src": "https://archive.org/download/superman_the_man_of_steele/superman1.mp4",
-  "length": 613.58,
-  "title": "Superman - Son of Krypton",
-  "date": "1941",
-  "item": "https://archive.org/details/superman_the_man_of_steele"
- },
- {
   "src": "https://archive.org/download/MoonlightForTwo1932HughHarmanRudolfIsing/Moonlight%20for%20Two%201932%20Hugh%20Harman%2C%20Rudolf%20Ising.mp4",
   "length": 412.01,
   "title": "Moonlight For Two",
@@ -312,13 +305,6 @@ window.TV = [
   "item": "https://archive.org/details/Felix_FindsOut_NoAudio"
  },
  {
-  "src": "https://archive.org/download/BettyBoopPoorCinderella1934HD/Betty%20Boop%20-%20Poor%20Cinderella%20%281934%29%20-%20HD.mp4",
-  "length": 634.98,
-  "title": "Betty Boop in \"Poor Cinderella\" (HD)",
-  "date": "1934",
-  "item": "https://archive.org/details/BettyBoopPoorCinderella1934HD"
- },
- {
   "src": "https://archive.org/download/Toonerville_Trolley_Trolley_Ahoy_1936/ToonervileTrolley_Trolley_Ahoy_512kb.mp4",
   "length": 451.72,
   "title": "Toonerville Trolley: Trolley Ahoy",
@@ -452,13 +438,6 @@ window.TV = [
   "item": "https://archive.org/details/bb_parade_of_the_wooden_soldiers"
  },
  {
-  "src": "https://archive.org/download/superman_billion_dollar_limited/billion_dollar_limited.mp4",
-  "length": 505.3,
-  "title": "Superman - Billion Dollar Limited",
-  "date": "1942",
-  "item": "https://archive.org/details/superman_billion_dollar_limited"
- },
- {
   "src": "https://archive.org/download/little_lulu_bargain_counter_attack/little_lulu_bargain_counter_attack_512kb.mp4",
   "length": 454.35,
   "title": "Little Lulu: Bargain Counter Attack",
@@ -541,13 +520,6 @@ window.TV = [
   "title": "Little Swee' Pea",
   "date": "1936",
   "item": "https://archive.org/details/little_sweepea"
- },
- {
-  "src": "https://archive.org/download/superman-terror-on-the-midway/terror_on_the_midway.mp4",
-  "length": 487.85,
-  "title": "Terror on the Midway",
-  "date": "1942",
-  "item": "https://archive.org/details/superman-terror-on-the-midway"
  },
  {
   "src": "https://archive.org/download/LittleDutchMill1934/Color_Classics-Little_Dutch_Mill-256K_512kb.mp4",
@@ -663,7 +635,7 @@ window.TV = [
  },
  {
   "src": "https://archive.org/download/Felix_the_cat-all_balled_up/Felix_the_Cat-All_balled_up_512kb.mp4",
-  "length": 226.0,
+  "length": 226,
   "title": "Collectie Filmcollectief - Felix the Cat - All balled up",
   "date": "1924",
   "item": "https://archive.org/details/Felix_the_cat-all_balled_up"
@@ -873,7 +845,7 @@ window.TV = [
  },
  {
   "src": "https://archive.org/download/popeye_taxi-turvey/popeye_taxi-turvey_512kb.mp4",
-  "length": 363.0,
+  "length": 363,
   "title": "Popeye: Taxi-Turvy",
   "date": "1954",
   "item": "https://archive.org/details/popeye_taxi-turvey"
@@ -905,13 +877,6 @@ window.TV = [
   "title": "Secret Agent",
   "date": "1943",
   "item": "https://archive.org/details/secret_agent"
- },
- {
-  "src": "https://archive.org/download/working_dollars/WorkingD1957.mp4",
-  "length": 644.47,
-  "title": "Working Dollars",
-  "date": "1957",
-  "item": "https://archive.org/details/working_dollars"
  },
  {
   "src": "https://archive.org/download/Felix_TwoLipTime_NoAudio/Felix_TwoLipTime_NoAudio_512kb.mp4",
@@ -1005,13 +970,6 @@ window.TV = [
   "item": "https://archive.org/details/Betty_Boop_and_Little_Jimmy_1936"
  },
  {
-  "src": "https://archive.org/download/TheFreshVegetableMystery/Fleischer%20cartoon%20Color%20Classic%20The%20Fresh%20Vegetable%20Mystery%201939%29%20%28old%20cartoon%20public%20domain%29.mp4",
-  "length": 416.98,
-  "title": "The Fresh Vegetable Mystery",
-  "date": "1939",
-  "item": "https://archive.org/details/TheFreshVegetableMystery"
- },
- {
   "src": "https://archive.org/download/taxi-turvy/taxi-turvy_512kb.mp4",
   "length": 363.16,
   "title": "Taxi-Turvy",
@@ -1045,13 +1003,6 @@ window.TV = [
   "title": "Molly Moo-Cow and the Butterflies",
   "date": "1935",
   "item": "https://archive.org/details/Molly_MooCow_and_the_Butterflies_1935"
- },
- {
-  "src": "https://archive.org/download/superman_arctic_giant/arctic_giant.mp4",
-  "length": 512.64,
-  "title": "Superman - Arctic Giant",
-  "date": "1942",
-  "item": "https://archive.org/details/superman_arctic_giant"
  },
  {
   "src": "https://archive.org/download/TheCandleMaker/ClaCinOnl_an_TheCandleMaker.mp4",
@@ -1215,13 +1166,6 @@ window.TV = [
   "item": "https://archive.org/details/what_makes_us_tick"
  },
  {
-  "src": "https://archive.org/download/superman_bulleteers/bulleteers.mp4",
-  "length": 477.37,
-  "title": "Superman - Bulleteers, The",
-  "date": "1942",
-  "item": "https://archive.org/details/superman_bulleteers"
- },
- {
   "src": "https://archive.org/download/haul_in_one/haul_in_one_512kb.mp4",
   "length": 367.74,
   "title": "Haul in One, A",
@@ -1334,13 +1278,6 @@ window.TV = [
   "item": "https://archive.org/details/TheBarnDance"
  },
  {
-  "src": "https://archive.org/download/superman-electronic-earthquake/electronic_earthquake.mp4",
-  "length": 514.71,
-  "title": "Superman - Electronic Earthquake",
-  "date": "1942",
-  "item": "https://archive.org/details/superman-electronic-earthquake"
- },
- {
   "src": "https://archive.org/download/customers_wanted/customers_wanted_512kb.mp4",
   "length": 434.27,
   "title": "Customers Wanted",
@@ -1437,13 +1374,6 @@ window.TV = [
   "title": "The Big Bad Wolf",
   "date": "",
   "item": "https://archive.org/details/the_big_bad_wolf"
- },
- {
-  "src": "https://archive.org/download/superman_the_volcano/volcano.mp4",
-  "length": 469.86,
-  "title": "Superman - Volcano",
-  "date": "1942",
-  "item": "https://archive.org/details/superman_the_volcano"
  },
  {
   "src": "https://archive.org/download/bb_and_grampy/bb_and_grampy_512kb.mp4",

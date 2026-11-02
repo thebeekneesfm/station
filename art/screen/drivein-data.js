@@ -685,9 +685,9 @@ window.DRIVEIN = {
     {
      "title": "Zontar the Thing from Venus",
      "year": 1966,
-     "src": "https://archive.org/download/ZontarTheThingFromVenusrestored/Zontarrestored.mp4",
-     "length": 4783.19,
-     "item": "https://archive.org/details/ZontarTheThingFromVenusrestored"
+     "src": "https://archive.org/download/Zontar_Thing_From_Venus/Zontar_the_Thing_From_Venus_512kb.mp4",
+     "length": 4818,
+     "item": "https://archive.org/details/Zontar_Thing_From_Venus"
     },
     {
      "title": "The Giant Gila Monster",
@@ -704,18 +704,11 @@ window.DRIVEIN = {
      "item": "https://archive.org/details/BeastFromHauntedCave"
     },
     {
-     "title": "Dracula",
-     "year": 1931,
-     "src": "https://archive.org/download/dra-cula.-eng.-mp-4./DR%C3%81CULA.%20ENG.%20MP4..ia.mp4",
-     "length": 4466.46,
-     "item": "https://archive.org/details/dra-cula.-eng.-mp-4."
-    },
-    {
      "title": "Destroy All Monsters",
      "year": 1969,
-     "src": "https://archive.org/download/DestroyAllMonstersRedMenace/Destroy%20All%20Monsters%20%28AIP%20Version%29%20-%20Red%20Menace%20Reconstruction%20v2.0.mp4",
-     "length": 5439.02,
-     "item": "https://archive.org/details/DestroyAllMonstersRedMenace"
+     "src": "https://archive.org/download/destroyallmonstersaipenglishdub4kreconstruction/1969%20-%20Destroy%20All%20Monsters%20%28Titan%20Dub%29%204K.ia.mp4",
+     "length": 5303,
+     "item": "https://archive.org/details/destroyallmonstersaipenglishdub4kreconstruction"
     },
     {
      "title": "Night of the Blood Beast",
@@ -1153,9 +1146,9 @@ window.DRIVEIN = {
   {
    "title": "Undersea Kingdom, Chapter 1",
    "year": 1936,
-   "src": "https://archive.org/download/UnderseaKingdom1/UK1.mp4",
-   "length": 1855.35,
-   "item": "https://archive.org/details/UnderseaKingdom1"
+   "src": "https://archive.org/download/undersea-kingdom-1936-19360530-ch.-1-beneath-the-ocean-floor/Undersea%20Kingdom%281936%29_19360530%20-%20Ch.%201-Beneath%20the%20Ocean%20Floor.mp4",
+   "length": 1852,
+   "item": "https://archive.org/details/undersea-kingdom-1936-19360530-ch.-1-beneath-the-ocean-floor"
   },
   {
    "title": "Undersea Kingdom, Chapter 2",
@@ -1257,9 +1250,9 @@ window.DRIVEIN = {
    {
     "title": "A Christmas Carol",
     "year": 1951,
-    "src": "https://archive.org/download/a-christmas-carol-1951_202601/A%20Christmas%20Carol%201951.ia.mp4",
-    "length": 5165.18,
-    "item": "https://archive.org/details/a-christmas-carol-1951_202601"
+    "src": "https://archive.org/download/acfrma-A_Christmas_Carol_1951/A_Christmas_Carol_1951.mp4",
+    "length": 5281,
+    "item": "https://archive.org/details/acfrma-A_Christmas_Carol_1951"
    },
    {
     "title": "March of the Wooden Soldiers",
@@ -1285,9 +1278,9 @@ window.DRIVEIN = {
    {
     "title": "The Great Rupert",
     "year": 1950,
-    "src": "https://archive.org/download/great-rupert/y2mate.is%20-%20The%20Christmas%20Wish%20REMASTERED%20_%20Full%20Comedy%20FIlm%20_%20Jimmy%20Durante%20_%20Terry%20Moore%20_%20Irving%20Pichel-fMOSbkq6bVg-720p-1705006601%20-%20Trim.ia.mp4",
-    "length": 5258,
-    "item": "https://archive.org/details/great-rupert"
+    "src": "https://archive.org/download/CCMRK/The%20Great%20Rupert%20%281950%29.mp4",
+    "length": 5267,
+    "item": "https://archive.org/details/CCMRK"
    },
    {
     "title": "Santa Claus Conquers the Martians",
@@ -1354,14 +1347,6 @@ window.DRIVEIN = {
     "src": "https://archive.org/download/donaldduckshorts_031/031%20-%20Donald%27s%20Snow%20Fight%201942.mp4",
     "length": 436.74,
     "item": "https://archive.org/details/donaldduckshorts_031"
-   },
-   {
-    "series": "Cartoon",
-    "title": "A Christmas Tree (1959)",
-    "date": "1959",
-    "src": "https://archive.org/download/a_christmas_tree_1959_russian_animation/a_christmas_tree_1959_512kb.mp4",
-    "length": 635.32,
-    "item": "https://archive.org/details/a_christmas_tree_1959_russian_animation"
    },
    {
     "series": "Cartoon",

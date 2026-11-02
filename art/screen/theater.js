@@ -188,17 +188,43 @@
     if (!nx || !nx.item.src || nx.item.src === state.src || pre.dataset.src === nx.item.src) return;
     pre.dataset.src = nx.item.src; pre.src = nx.item.src; pre.load();
   }
+  /* The Internet Archive sometimes refuses a file for a minute or two. When a video errors or
+     hasn't started after a few seconds, try it once more; if it still won't play, fill the time
+     with short commercials and cartoons until the next scheduled item, instead of a blank screen. */
+  var failed = {}, FILL_AFTER = 12000;
+  var fillPool = [].concat(window.TV_ADS || [], window.TV || [], (window.DRIVEIN && window.DRIVEIN.trailers) || [])
+    .filter(function (x) { return x && x.src && Number(x.length) > 0 && Number(x.length) < 480; });
+  function isFailed(src) { return failed[src] && Date.now() - failed[src] < 120000; }
+  function loadSrc(src, offsetFn) {
+    state.src = src; state.started = false; state.loadAt = Date.now(); standby.hidden = false;
+    vid.src = src;
+    vid.addEventListener("loadedmetadata", function seek() {
+      vid.removeEventListener("loadedmetadata", seek);
+      var off = offsetFn ? offsetFn() : 0;
+      if (off > 0) { try { vid.currentTime = Math.min(off, (vid.duration || 1e9) - 1); } catch (e) {} }
+      vid.play().catch(function () {});
+    });
+  }
+  function playFiller() {
+    if (state.filler && state.src === state.filler.src && !vid.ended && !isFailed(state.src)) { if (vid.paused) vid.play().catch(function () {}); return; }
+    var pool = fillPool.filter(function (x) { return !isFailed(x.src); });
+    if (!pool.length) return;
+    state.filler = pool[Math.floor(Math.random() * pool.length)];
+    card.hidden = true; loadSrc(state.filler.src, null);
+  }
+  function giveUp() {   // the current file won't load: mark it and move on
+    if (!state.src) return;
+    if (!state.retried && !state.filler) { state.retried = true; var s = state.src; loadSrc(s, function () { var n = where(); return n && n.item.src === s ? n.offset : 0; }); return; }
+    failed[state.src] = Date.now(); state.retried = false; tick(true);
+  }
   function playItem(it, offset) {
     card.hidden = true;
+    if (isFailed(it.src)) return playFiller();
+    state.filler = null;
     if (state.src !== it.src) {
-      if (pre.dataset.src === it.src && pre.readyState >= 1) return swapIn(it, offset);
-      state.src = it.src; standby.hidden = false;
-      vid.src = it.src;
-      vid.addEventListener("loadedmetadata", function seek() {
-        vid.removeEventListener("loadedmetadata", seek);
-        var n = where(); if (n && n.item.src === it.src) { try { vid.currentTime = Math.min(n.offset, (vid.duration || 1e9) - 1); } catch (e) {} }
-        vid.play().catch(function () {});
-      });
+      state.retried = false;
+      if (pre.dataset.src === it.src && pre.readyState >= 1) { swapIn(it, offset); state.started = vid.readyState >= 3; state.loadAt = Date.now(); return; }
+      loadSrc(it.src, function () { var n = where(); return n && n.item.src === it.src ? n.offset : 0; });
     } else {
       // only jump to catch up when the picture is playing smoothly and has drifted a long way;
       // jumping while it is still buffering starts the buffering over and it never catches up
@@ -206,9 +232,12 @@
       if (vid.paused) vid.play().catch(function () {});
     }
   }
-  onVid("playing", function () { standby.hidden = true; });
+  function watchdog() {   // called every second: a video that never got going counts as a failure
+    if (state.src && !state.started && Date.now() - state.loadAt > FILL_AFTER) giveUp();
+  }
+  onVid("playing", function () { standby.hidden = true; state.started = true; });
   onVid("waiting", function () { standby.hidden = false; });
-  onVid("error", function () { if (state.src) { standby.hidden = false; standby.textContent = "Please stand by"; } });
+  onVid("error", function () { if (state.src) { standby.hidden = false; standby.textContent = "Please stand by"; giveUp(); } });
 
   /* ---------------- TV page ---------------- */
   var where, renderInfo;
@@ -295,6 +324,7 @@
     else if (force || key !== lastKey || !document.hidden) playItem(n.item, n.offset);
     lastKey = key;
     preloadNext(n);
+    if (!n.item.slate) watchdog();
     renderInfo(n);
   }
   onVid("ended", function () { tick(true); });
