@@ -1,0 +1,30 @@
+/* The rack's front room: one card per collection, each a little fanned stack of covers. */
+.collections { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 34px 26px; padding: 6px 4px 10px; }
+@media (max-width: 560px) { .collections { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 14px; } }
+.col-card { display: grid; gap: 6px; justify-items: center; text-align: center; color: var(--cream); text-decoration: none; min-width: 0; }
+.col-card .stack { position: relative; width: 100%; aspect-ratio: 5 / 4; display: block; }
+.col-card .stack img { position: absolute; top: 4%; left: 50%; width: 52%; aspect-ratio: 2 / 3; object-fit: cover; background: #2a2018;
+  box-shadow: 3px 5px 0 rgba(0,0,0,.4), 0 10px 20px rgba(0,0,0,.35); transition: transform .2s ease; }
+.col-card .stack img:nth-child(1) { transform: translateX(-82%) rotate(-9deg); }
+.col-card .stack img:nth-child(2) { transform: translateX(-18%) rotate(8deg); }
+.col-card .stack img:nth-child(3) { transform: translateX(-50%) rotate(-1deg); z-index: 1; }
+.col-card .stack img:only-child { transform: translateX(-50%) rotate(-1deg); }
+.col-card .stack img:first-child:nth-last-child(2) { transform: translateX(-70%) rotate(-6deg); }
+.col-card .stack img:last-child:nth-child(2) { transform: translateX(-30%) rotate(5deg); }
+.col-card:hover .stack img:nth-child(1), .col-card:focus-visible .stack img:nth-child(1) { transform: translateX(-95%) rotate(-13deg); }
+.col-card:hover .stack img:nth-child(2), .col-card:focus-visible .stack img:nth-child(2) { transform: translateX(-5%) rotate(12deg); }
+.col-card:hover .stack img:nth-child(3), .col-card:focus-visible .stack img:nth-child(3) { transform: translateX(-50%) translateY(-6px) rotate(0); }
+.col-card .col-name { font: 700 clamp(26px, 4vw, 32px)/1.1 "BK Script", "BK Serif", Georgia, serif; text-shadow: 0 2px 3px rgba(0,0,0,.85); word-spacing: .12em; text-wrap: balance; }
+.col-card .col-meta { font-size: 17px; color: #e8dcc0; text-shadow: 0 1px 2px rgba(0,0,0,.95); }
+.col-card:focus-visible { outline: 3px solid var(--honey); outline-offset: 6px; }
+@media (prefers-reduced-motion: reduce) { .col-card .stack img { transition: none; } }
+
+/* inside a collection */
+.shelf-top { display: flex; }
+.to-all { font: 600 19px/1 "BK Serif", Georgia, serif; background: var(--paper); color: var(--ink); padding: 11px 16px; text-decoration: none; box-shadow: 2px 3px 0 rgba(0,0,0,.35); }
+.to-all:hover, .to-all:focus-visible { background: var(--honey); }
+.shelf-meta { margin: -6px 0 0; font-size: 18px; color: #e8dcc0; text-shadow: 0 1px 2px rgba(0,0,0,.95); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button { font: 600 18px/1 "BK Serif", Georgia, serif; background: rgba(36,26,18,.85); color: var(--cream); border: 2px solid var(--cream); padding: 9px 14px; cursor: pointer; min-height: 44px; }
+.chips button[aria-pressed="true"] { background: var(--cream); color: var(--ink); }
+.chips button:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
