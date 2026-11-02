@@ -139,7 +139,7 @@
   vid.muted = true; vid.playsInline = true; vid.setAttribute("playsinline", "");
   vid.volume = state.vol;
   function applySound() {
-    vid.muted = !state.sound; vid.volume = state.vol;
+    vid.muted = !state.sound; vid.volume = state.vol; if (typeof pre !== "undefined" && pre) pre.muted = true;
     soundBtn.textContent = state.sound ? "Sound on" : "Turn on the sound";
     soundBtn.setAttribute("aria-pressed", state.sound ? "true" : "false");
     screen.classList.toggle("muted", !state.sound);
@@ -167,9 +167,31 @@
     else if (it.slate === "goodnight") html = '<p class="sl-big">Good night!</p><p class="sl-m">Drive safely, and please hang the speaker back on its post.</p>';
     card.innerHTML = html;
   }
+  /* Two video players take turns: while one plays, the other quietly loads whatever comes next,
+     so a new show, commercial or feature starts right away instead of loading from scratch. */
+  var pre = vid.cloneNode(false);
+  pre.removeAttribute("src"); pre.muted = true; pre.preload = "auto"; pre.style.visibility = "hidden";
+  vid.parentNode.insertBefore(pre, vid.nextSibling);
+  function onVid(ev, fn) { [vid, pre].forEach(function (v) { v.addEventListener(ev, function (e) { if (e.target === vid) fn(e); }); }); }
+  function swapIn(it, offset) {
+    var old = vid; vid = pre; pre = old;
+    vid.style.visibility = "visible"; old.style.visibility = "hidden";
+    old.pause(); old.muted = true; old.removeAttribute("src"); old.load(); delete old.dataset.src;
+    state.src = it.src; applySound();
+    if (Math.abs(vid.currentTime - offset) > 3) { try { vid.currentTime = offset; } catch (e) {} }
+    standby.hidden = vid.readyState >= 3;
+    vid.play().catch(function () {});
+  }
+  function preloadNext(n) {
+    if (!n || n.left > 45) return;
+    var nx = where(Date.now() + (n.left + 1) * 1000);
+    if (!nx || !nx.item.src || nx.item.src === state.src || pre.dataset.src === nx.item.src) return;
+    pre.dataset.src = nx.item.src; pre.src = nx.item.src; pre.load();
+  }
   function playItem(it, offset) {
     card.hidden = true;
     if (state.src !== it.src) {
+      if (pre.dataset.src === it.src && pre.readyState >= 1) return swapIn(it, offset);
       state.src = it.src; standby.hidden = false;
       vid.src = it.src;
       vid.addEventListener("loadedmetadata", function seek() {
@@ -178,13 +200,15 @@
         vid.play().catch(function () {});
       });
     } else {
-      if (Math.abs(vid.currentTime - offset) > 6 && vid.readyState > 0) { try { vid.currentTime = offset; } catch (e) {} }
+      // only jump to catch up when the picture is playing smoothly and has drifted a long way;
+      // jumping while it is still buffering starts the buffering over and it never catches up
+      if (Math.abs(vid.currentTime - offset) > 30 && vid.readyState >= 3 && !vid.seeking) { try { vid.currentTime = offset; } catch (e) {} }
       if (vid.paused) vid.play().catch(function () {});
     }
   }
-  vid.addEventListener("playing", function () { standby.hidden = true; });
-  vid.addEventListener("waiting", function () { standby.hidden = false; });
-  vid.addEventListener("error", function () { if (state.src) { standby.hidden = false; standby.textContent = "Please stand by"; } });
+  onVid("playing", function () { standby.hidden = true; });
+  onVid("waiting", function () { standby.hidden = false; });
+  onVid("error", function () { if (state.src) { standby.hidden = false; standby.textContent = "Please stand by"; } });
 
   /* ---------------- TV page ---------------- */
   var where, renderInfo;
@@ -195,7 +219,7 @@
     var S = {}; CH.forEach(function (c) { S[c.id] = buildChannel(c, ADS); });
     var pickCh = function () { var h = location.hash.slice(1); return CH.find(function (c) { return c.id === h; }) || CH.find(function (c) { return c.id === store.get("tv.ch", ""); }) || CH[0]; };
     var cur = pickCh();
-    where = function () { return tvAt(S[cur.id], Date.now()); };
+    where = function (ms) { return tvAt(S[cur.id], ms || Date.now()); };
     // the channel dial
     var dial = $(".dial");
     CH.forEach(function (c) {
@@ -237,7 +261,7 @@
 
   /* ---------------- Drive-in page ---------------- */
   if (MODE === "drivein") {
-    where = function () { return driveAt(Date.now()); };
+    where = function (ms) { return driveAt(ms || Date.now()); };
     var LABEL = { cartoon: "A cartoon to start", trailer: "Coming attractions", serial: "Tonight\u2019s serial chapter", intermission: "Intermission", feature: "Feature presentation" };
     renderInfo = function (n) {
       var it = n.item, now = Date.now(), dusk = duskOf(now), night = !it.matinee && !(it.slate === "intermission" && it.words && it.words.short);
@@ -270,9 +294,10 @@
     if (n.item.slate) { if (force || key !== lastKey || n.item.slate === "intermission") showSlate(n.item, n); }
     else if (force || key !== lastKey || !document.hidden) playItem(n.item, n.offset);
     lastKey = key;
+    preloadNext(n);
     renderInfo(n);
   }
-  vid.addEventListener("ended", function () { tick(true); });
+  onVid("ended", function () { tick(true); });
   setInterval(function () { tick(false); }, 1000);
   document.addEventListener("visibilitychange", function () { if (!document.hidden) tick(true); });
   tick(true);
