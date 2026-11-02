@@ -138,13 +138,28 @@
   var state = { cur: null, src: "", sound: store.get(MODE + ".sound", false), vol: store.get(MODE + ".vol", 0.8) };
   vid.muted = true; vid.playsInline = true; vid.setAttribute("playsinline", "");
   vid.volume = state.vol;
-  function applySound() {
-    vid.muted = !state.sound; vid.volume = state.vol; if (typeof pre !== "undefined" && pre) pre.muted = true;
-    soundBtn.textContent = state.sound ? "Sound on" : "Turn on the sound";
-    soundBtn.setAttribute("aria-pressed", state.sound ? "true" : "false");
-    screen.classList.toggle("muted", !state.sound);
+  /* Browsers refuse to start a video with sound until the visitor has tapped the page. If that
+     happens, play it muted for now and turn the sound back on at the first tap anywhere. */
+  function go() {
+    var p = vid.play();
+    if (p && p.catch) p.catch(function (err) {
+      if (err && err.name === "NotAllowedError" && !vid.muted) { state.blocked = true; vid.muted = true; showSoundState(); vid.play().catch(function () {}); }
+    });
   }
-  soundBtn.addEventListener("click", function () { state.sound = !state.sound; store.set(MODE + ".sound", state.sound); applySound(); vid.play().catch(function () {}); });
+  function showSoundState() {
+    var on = state.sound && !state.blocked;
+    soundBtn.textContent = on ? "Sound on" : "Turn on the sound";
+    soundBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    screen.classList.toggle("muted", !on);
+  }
+  ["pointerdown", "keydown", "touchend"].forEach(function (ev) {
+    document.addEventListener(ev, function (e) { if (state.blocked && !soundBtn.contains(e.target)) { state.blocked = false; applySound(); go(); } }, true);
+  });
+  function applySound() {
+    vid.muted = !state.sound || !!state.blocked; vid.volume = state.vol; if (typeof pre !== "undefined" && pre) pre.muted = true;
+    showSoundState();
+  }
+  soundBtn.addEventListener("click", function () { if (state.blocked) { state.blocked = false; state.sound = true; } else state.sound = !state.sound; store.set(MODE + ".sound", state.sound); applySound(); go(); });
   if (vol) { vol.value = Math.round(state.vol * 100); vol.addEventListener("input", function () { state.vol = vol.value / 100; store.set(MODE + ".vol", state.vol); if (state.vol > 0 && !state.sound) { state.sound = true; store.set(MODE + ".sound", true); } applySound(); }); }
   var fsBtn = $(".scr-full");
   if (fsBtn) fsBtn.addEventListener("click", function () {
@@ -180,7 +195,7 @@
     state.src = it.src; applySound();
     if (Math.abs(vid.currentTime - offset) > 3) { try { vid.currentTime = offset; } catch (e) {} }
     standby.hidden = vid.readyState >= 3;
-    vid.play().catch(function () {});
+    go();
   }
   function preloadNext(n) {
     if (!n || n.left > 45) return;
@@ -202,11 +217,11 @@
       vid.removeEventListener("loadedmetadata", seek);
       var off = offsetFn ? offsetFn() : 0;
       if (off > 0) { try { vid.currentTime = Math.min(off, (vid.duration || 1e9) - 1); } catch (e) {} }
-      vid.play().catch(function () {});
+      go();
     });
   }
   function playFiller() {
-    if (state.filler && state.src === state.filler.src && !vid.ended && !isFailed(state.src)) { if (vid.paused) vid.play().catch(function () {}); return; }
+    if (state.filler && state.src === state.filler.src && !vid.ended && !isFailed(state.src)) { if (vid.paused) go(); return; }
     var pool = fillPool.filter(function (x) { return !isFailed(x.src); });
     if (!pool.length) return;
     state.filler = pool[Math.floor(Math.random() * pool.length)];
@@ -229,13 +244,16 @@
       // only jump to catch up when the picture is playing smoothly and has drifted a long way;
       // jumping while it is still buffering starts the buffering over and it never catches up
       if (Math.abs(vid.currentTime - offset) > 30 && vid.readyState >= 3 && !vid.seeking) { try { vid.currentTime = offset; } catch (e) {} }
-      if (vid.paused) vid.play().catch(function () {});
+      if (vid.paused) go();
     }
   }
   function watchdog() {   // called every second: a video that never got going counts as a failure
     if (state.src && !state.started && Date.now() - state.loadAt > FILL_AFTER) giveUp();
   }
   onVid("playing", function () { standby.hidden = true; state.started = true; });
+  // if the browser pauses the picture on its own (another tab, the phone locked, a call), pick the
+  // schedule back up as soon as the page is in view again
+  onVid("pause", function () { if (state.src && !vid.ended) setTimeout(function () { if (!document.hidden && vid.paused && state.src) { tick(true); go(); } }, 400); });
   onVid("waiting", function () { standby.hidden = false; });
   onVid("error", function () { if (state.src) { standby.hidden = false; standby.textContent = "Please stand by"; giveUp(); } });
 
@@ -329,7 +347,8 @@
   }
   onVid("ended", function () { tick(true); });
   setInterval(function () { tick(false); }, 1000);
-  document.addEventListener("visibilitychange", function () { if (!document.hidden) tick(true); });
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) { tick(true); go(); } });
+  window.addEventListener("pageshow", function () { tick(true); go(); });
   tick(true);
-  $(".scr-start") && $(".scr-start").addEventListener("click", function () { state.sound = true; store.set(MODE + ".sound", true); applySound(); vid.play().catch(function () {}); });
+  $(".scr-start") && $(".scr-start").addEventListener("click", function () { state.sound = true; store.set(MODE + ".sound", true); applySound(); go(); });
 })();
