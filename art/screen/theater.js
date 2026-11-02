@@ -26,6 +26,10 @@
   function liveChannels(ms) {
     var CH = (window.TVCH || []).filter(function (c) { return c.episodes && c.episodes.length && inSeason(c.season, ms); });
     // a seasonal channel goes first while it's on, so it's where new viewers land
+    // a seasonal channel's own commercials (the Christmas ones) join the Commercial Break channel while it's on
+    var extra = [];
+    CH.forEach(function (c) { if (c.season && c.ads) c.ads.forEach(function (a) { extra.push(Object.assign({ series: "Commercial" }, a)); }); });
+    if (extra.length) CH = CH.map(function (c) { return c.allAds ? Object.assign({}, c, { episodes: c.episodes.concat(extra) }) : c; });
     return CH.filter(function (c) { return c.season; }).concat(CH.filter(function (c) { return !c.season; }));
   }
 
@@ -41,14 +45,10 @@
       var t0 = 0; out.forEach(function (x) { x.start = t0; t0 += Number(x.length) || 0; });
       return { ch: ch, list: out, total: t0 };
     }
-    eps.forEach(function (e, k) {
+    // commercials only play on the Commercial Break channel; everywhere else a short station ID sits between shows
+    eps.forEach(function (e) {
       out.push(Object.assign({ kind: "show" }, e));
       out.push(slate("id", 6, { channel: ch }));
-      if (ads.length || (ch.ads && ch.ads.length)) {
-        // a channel with its own commercials (the Christmas channel) opens every break with one of them
-        var n = 1 + (k % 2), used = {};
-        for (var i = 0; i < n; i++) { var pool = i === 0 && ch.ads && ch.ads.length ? ch.ads : (ads.length ? ads : ch.ads); var a = pool[Math.floor(r() * pool.length)]; if (used[a.src]) continue; used[a.src] = 1; out.push(Object.assign({ kind: "ad" }, a)); }
-      } else out.push(slate("back", 8, { channel: ch }));
     });
     var t = 0; out.forEach(function (x) { x.start = t; t += Number(x.length) || 0; });
     return { ch: ch, list: out, total: t };
