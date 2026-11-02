@@ -35,6 +35,12 @@
   // TV: each channel is its shuffled episodes with a break between them (a station ID and up to two commercials)
   function buildChannel(ch, ads) {
     var eps = shuffle(ch.episodes, hash(ch.id)), out = [], r = rng(hash(ch.id + "ads"));
+    if (ch.allAds) {   // the Commercial Break channel: nothing but commercials, with a station ID every ten or so
+      eps.forEach(function (e, k) { out.push(Object.assign({ kind: "show" }, e)); if (k % 10 === 9) out.push(slate("id", 6, { channel: ch })); });
+      out.push(slate("id", 6, { channel: ch }));
+      var t0 = 0; out.forEach(function (x) { x.start = t0; t0 += Number(x.length) || 0; });
+      return { ch: ch, list: out, total: t0 };
+    }
     eps.forEach(function (e, k) {
       out.push(Object.assign({ kind: "show" }, e));
       out.push(slate("id", 6, { channel: ch }));
@@ -303,7 +309,7 @@
       $(".np-date").textContent = isShow && it.date ? "Originally aired " + it.date : "";
       $(".np-left").textContent = mmss(n.left) + " left";
       var nx = tvNext(S[cur.id], n.i, "show");
-      $(".np-next").textContent = nx ? (isShow ? "Coming up: " + nx.series : "") : "";
+      $(".np-next").textContent = nx ? (isShow ? "Coming up: " + (nx.series === "Commercial" || nx.series === "Cartoon" ? nx.title : nx.series) : "") : "";
       document.querySelectorAll(".ch").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.id === cur.id ? "true" : "false"); });
       var ca = $(".chcard"); if (ca.dataset.id !== cur.id) { ca.dataset.id = cur.id; ca.innerHTML = '<span class="cc-n">' + cur.num + '</span><span class="cc-name">' + esc(cur.name) + '</span><span class="cc-blurb">' + esc(cur.blurb || "") + "</span>"; var img = new Image(); img.alt = ""; img.onload = function () { ca.classList.add("art"); ca.innerHTML = ""; ca.appendChild(img); }; img.src = "art/tv/" + cur.id + ".png"; }
       renderGuide();
