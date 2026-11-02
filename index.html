@@ -452,6 +452,13 @@
   #about-ov { position: fixed; inset: 0; z-index: 22; background: rgba(10, 8, 6, .85); display: flex; align-items: center; justify-content: center;
     padding: max(12px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); }
   #about-ov[hidden] { display: none; }
+  /* the comic and magazine racks, opened over the radio in a frame */
+  #rack-ov { position: fixed; inset: 0; z-index: 22; background: rgba(10, 8, 6, .85); display: flex; align-items: center; justify-content: center;
+    padding: max(10px, env(safe-area-inset-top, 0px)) max(10px, env(safe-area-inset-right, 0px)) max(10px, env(safe-area-inset-bottom, 0px)) max(10px, env(safe-area-inset-left, 0px)); }
+  #rack-ov[hidden] { display: none; }
+  .rk-card { position: relative; width: min(1240px, 100%); height: 100%; box-shadow: 6px 8px 0 rgba(0,0,0,.45); background: #2a2018; }
+  .rk-card iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .rk-close { box-shadow: 0 2px 6px rgba(0,0,0,.4); }
   .ab-card { position: relative; width: min(780px, 100%); max-height: 100%; display: flex; flex-direction: column; box-sizing: border-box;
     background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--news); color: var(--ink); box-shadow: 6px 8px 0 rgba(0,0,0,.45); }
   .ab-close { position: absolute; top: 12px; right: 12px; z-index: 1; font: 600 17px/1 "BK Serif", Georgia, serif; background: var(--ink); color: var(--news); border: 0; padding: 9px 14px; cursor: pointer; }
@@ -612,6 +619,6 @@
 <script src="art/screen/drivein-data.js?v=3"></script>
 <script src="art/screen/theater.js?v=12"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261102u"></script>
+<script src="radio.js?v=20261102w"></script>
 </body>
 </html>

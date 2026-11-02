@@ -3,6 +3,9 @@
 (function () {
   "use strict";
   var KIND = document.body.dataset.kind || "comics";
+  // opened over the radio (in a frame): move about quietly, so the browser's Back still closes the whole rack
+  var EMBED = document.documentElement.classList.contains("embed");
+  var pushState = function (st, u) { if (EMBED) history.replaceState(st, "", u); else history.pushState(st, "", u); };
   var SHELVES = (window.RACK || []).filter(function (s) { return s.kind === KIND; });
   var ALL = [];
   SHELVES.forEach(function (s) { s.issues.forEach(function (i) { ALL.push(i); }); });
@@ -117,7 +120,7 @@
   }
   function go(h, replace) {
     var url = h ? "#" + h : location.pathname + location.search;
-    if (replace) history.replaceState(null, "", url); else history.pushState(null, "", url);
+    if (replace) history.replaceState(null, "", url); else pushState(null, url);
     route();
     var top = document.querySelector(".intro"); if (top && !replace) window.scrollTo(0, top.offsetTop + top.offsetHeight - 10);
   }
@@ -193,7 +196,7 @@
     var saved = store.get(it.id);
     show(saved > 0 && saved < it.pages ? saved : 0);
     pushed = false;
-    if (location.hash !== "#" + it.id) { history.pushState({ rd: it.id }, "", "#" + it.id); pushed = true; }
+    if (location.hash !== "#" + it.id) { pushState({ rd: it.id }, "#" + it.id); pushed = !EMBED; }
     hint.textContent = "Swipe or use the arrows to turn the page"; hint.style.opacity = 1;
     setTimeout(function () { hint.style.opacity = 0; }, 2600);
     rd.querySelector(".rd-close").focus();

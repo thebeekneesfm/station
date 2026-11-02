@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -91,6 +92,10 @@
   .rd-count { min-width: 9ch; text-align: center; font-variant-numeric: tabular-nums; }
   .rd-hint { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); background: rgba(0,0,0,.7); padding: 6px 12px; font-size: 16px; pointer-events: none; transition: opacity .6s; }
   @media (max-width: 560px) { .rd-bar { padding: 8px 10px; } .rd-title { font-size: 17px; flex-basis: 100%; order: 2; } .rd-foot { gap: 8px; } .rd-foot .src { display: none; } }
+  /* opened over the radio (?embed=1): no site header, the close button sits top right */
+  .embed .mast { display: none; }
+  .embed .wrap { padding-top: 12px; }
+  .embed .intro h1 { padding-right: 110px; }
 </style>
 <link rel="stylesheet" href="art/rack/collections.css?v=1">
 </head>
@@ -115,6 +120,6 @@
   <div class="rd-foot"><button type="button" class="rd-prev">&larr; Back</button><span class="rd-count"></span><button type="button" class="rd-next">Next &rarr;</button><a class="src" target="_blank" rel="noopener">See it at the Archive</a></div>
 </div>
 <script src="art/rack/rack.js?v=5"></script>
-<script src="art/rack/reader.js?v=8"></script>
+<script src="art/rack/reader.js?v=9"></script>
 </body>
 </html>

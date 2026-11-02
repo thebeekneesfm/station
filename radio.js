@@ -866,6 +866,7 @@
             // a link filled in later (like the TV Guide's tv.html#channel) is checked as it's clicked
             if (/^[\w-]+\.html(#.*)?$/.test(t.getAttribute("href") || "")) t.removeAttribute("target");
             if (L.href === "about.html" && !e.metaKey && !e.ctrlKey && !e.shiftKey) { e.preventDefault(); openAbout(); }
+            else if (RACKS[L.href] && !e.metaKey && !e.ctrlKey && !e.shiftKey) { e.preventDefault(); openRack(RACKS[L.href]); }
           });
         }
         // drawn button: "img" is the still picture, "hoverImg" the animation that plays while you point at it
@@ -1375,6 +1376,41 @@
   }
   window.addEventListener("popstate", () => { if (location.hash === "#about") openAbout(false); else closeAbout(true); });
   if (location.hash === "#about") setTimeout(() => openAbout(false), 0);
+
+  /* ---------- the comic and magazine racks, opened over the radio ----------
+     The rack page itself runs in a frame (comics.html?embed=1), so collections and the reader work just as on the page,
+     and the radio keeps playing underneath. */
+  const RACKS = { "comics.html": "comics", "magazines.html": "magazines" };
+  function openRack(kind, push = true) {
+    let box = document.getElementById("rack-ov");
+    if (!box) {
+      box = document.createElement("div"); box.id = "rack-ov"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.hidden = true;
+      box.innerHTML = '<div class="rk-card"><button type="button" class="ab-close rk-close">Close</button><iframe title="" allow="fullscreen"></iframe></div>';
+      document.body.appendChild(box);
+      box.addEventListener("click", e => { if (e.target === box) closeRack(); });
+      box.querySelector(".rk-close").addEventListener("click", () => closeRack());
+      document.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) closeRack(); });
+    }
+    let fr = box.querySelector("iframe");
+    if (box.dataset.kind !== kind) {
+      // a fresh frame for each rack: changing a frame's address would add a step to the browser's Back history
+      box.dataset.kind = kind;
+      const nf = document.createElement("iframe"); nf.setAttribute("allow", "fullscreen");
+      nf.title = kind === "comics" ? "The comic rack" : "The magazine rack"; nf.src = kind + ".html?embed=1";
+      fr.replaceWith(nf); fr = nf;
+    }
+    box.setAttribute("aria-label", fr.title);
+    box.hidden = false; overlayOpen(true);
+    if (push && location.hash !== "#" + kind) history.pushState({ rack: kind }, "", "#" + kind);
+    box.querySelector(".rk-close").focus();
+  }
+  function closeRack(fromHistory) {
+    const box = document.getElementById("rack-ov"); if (!box || box.hidden) return;
+    box.hidden = true; overlayOpen(false);
+    if (!fromHistory && (location.hash === "#comics" || location.hash === "#magazines")) history.back();
+  }
+  window.addEventListener("popstate", () => { const k = location.hash.slice(1); if (k === "comics" || k === "magazines") openRack(k, false); else closeRack(true); });
+  if (location.hash === "#comics" || location.hash === "#magazines") setTimeout(() => openRack(location.hash.slice(1), false), 0);
 
   /* ---------- the Sunday Funnies (art/funnies/funnies.js) ----------
      One strip a week, from the same week in 1930. It changes on Sunday by the listener's own calendar,
