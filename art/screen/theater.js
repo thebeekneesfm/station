@@ -169,7 +169,7 @@
      (1 = full volume, smaller = turned down). Loud commercials and hot transfers get turned down to
      match the rest, so changing channels or going into a break doesn't jump in volume. Browsers
      can't turn a video up past full, so the quietest ones simply play at full. */
-  var GAIN = {}, GAIN_DEFAULT = 1;
+  var GAIN = {}, GAIN_DEFAULT = 0.75;
   (function () {
     function walk(o) { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === "object") { if (o.src && o.gain != null) GAIN[o.src] = Number(o.gain); for (var k in o) if (o[k] && typeof o[k] === "object") walk(o[k]); } }
     walk(window.TVCH); walk(window.TV_ADS); walk(window.DRIVEIN); walk(window.TV);
@@ -432,7 +432,7 @@
     if (bedSt && bedSt.id === id) return bedSt;
     var st = (window.STATIONS || []).find(function (x) { return x.id === id; });
     if (!st) {
-      if (!bedLoading && !window.STATIONS) { bedLoading = true; var sc = document.createElement("script"); sc.src = "stations.js?v=20261102c"; sc.onload = function () { tick(true); }; document.head.appendChild(sc); }
+      if (!bedLoading && !window.STATIONS) { bedLoading = true; var sc = document.createElement("script"); sc.src = "stations.js?v=20261102d"; sc.onload = function () { tick(true); }; document.head.appendChild(sc); }
       return null;
     }
     var t = 0; st._cumB = st.tracks.map(function (tr) { var a = t; t += Number(tr.length) || 0; return a; }); st._totB = t; st._epB = Date.parse(st.epoch || "2026-11-01T00:00:00Z");
