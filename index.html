@@ -541,7 +541,8 @@
   [data-id="sleep-timer"] .txt { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; white-space: nowrap; }
   [data-id="station-card"] { cursor: pointer; }
   /* the TV's "Please stand by" card, shown while a cartoon loads or if one won't play */
-  .tv-standby, .tv-standby:empty { display: block; background: #111 url("art/please-stand-by.gif") center / cover no-repeat; color: transparent; font-size: 0; image-rendering: auto; }
+  .tv-standby, .tv-standby:empty { display: block; background: #111; color: transparent; font-size: 0; }
+  .tv-standby .static { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .tv-standby[hidden] { display: none; }
   /* a little larger on computers, so it reads well on laptop screens */
   .fire-vol { font-size: 18px; }
@@ -617,8 +618,8 @@
 <script src="art/funnies/funnies.js?v=20261101a"></script>
 <script src="art/screen/tv-data.js?v=5"></script>
 <script src="art/screen/drivein-data.js?v=3"></script>
-<script src="art/screen/theater.js?v=12"></script>
+<script src="art/screen/theater.js?v=13"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261102w"></script>
+<script src="radio.js?v=20261102x"></script>
 </body>
 </html>

@@ -67,6 +67,8 @@
   .scr-standby, .scr-slate { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; padding: 6%; color: var(--cream); background: #0c0907; }
   .scr-standby { font: italic 400 clamp(20px, 3vw, 30px)/1.3 "BK Serif", Georgia, serif; }
   .scr-standby[hidden], .scr-slate[hidden] { display: none; }
+  .scr-standby { padding: 0; }
+  .scr-standby .static { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .scr-slate p { margin: 0; }
   .scr-slate .sl-k { font: italic 400 clamp(18px, 2.4vw, 26px)/1.2 "BK Serif", Georgia, serif; color: #cdbf9f; }
   .scr-slate .sl-big { font: 400 clamp(36px, 6vw, 72px)/1 "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; color: var(--honey); margin: 10px 0 !important; }
@@ -126,7 +128,7 @@
     <nav class="links" aria-label="Pages"><a href="index.html">The radio</a><a href="tv.html" aria-current="page">TV</a><a href="drive-in.html">Drive-In</a><a href="comics.html">Comics</a><a href="magazines.html">Magazines</a><a href="ads.html">Vintage ads</a><a href="about.html">About</a><a href="guestbook.html">Guest Book</a></nav>
   </header>
   <div class="stage">
-    <div><div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby">Please stand by</div><div class="scr-slate" hidden></div></div><div class="scr-ctrl"><button type="button" class="scr-sound" aria-pressed="false">Turn on the sound</button><label class="scr-vol">Volume <input type="range" min="0" max="100" aria-label="Volume"></label><button type="button" class="scr-full">Full screen</button></div></div>
+    <div><div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby" role="status" aria-label="Please stand by"><video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video></div><div class="scr-slate" hidden></div></div><div class="scr-ctrl"><button type="button" class="scr-sound" aria-pressed="false">Turn on the sound</button><label class="scr-vol">Volume <input type="range" min="0" max="100" aria-label="Volume"></label><button type="button" class="scr-full">Full screen</button></div></div>
     <div class="side"><div class="chcard" aria-hidden="true"></div><section class="paper np" aria-live="polite"><div class="np-ch"></div><div class="np-series"></div><a class="np-title" target="_blank" rel="noopener" href="#"></a><div class="np-date"></div><div class="np-left"></div><div class="np-next"></div><p class="report">Something here that shouldn’t be? Email <span class="email">thebeeskneesfm@gmail.com</span> and it comes off the schedule.</p></section></div>
   </div>
   <nav class="dial" aria-label="Channels"></nav>
@@ -134,6 +136,6 @@
   <section class="paper guide" aria-label="What's on every channel"></section>
 </div>
 <script src="art/screen/tv-data.js?v=5"></script>
-<script src="art/screen/theater.js?v=12"></script>
+<script src="art/screen/theater.js?v=13"></script>
 </body>
 </html>

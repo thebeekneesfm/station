@@ -921,12 +921,15 @@
         const v = el.querySelector("video");
         v.muted = true; v.defaultMuted = true;
         rec.tv = { v, standby: el.querySelector(".tv-standby"), tag: el.querySelector(".tv-tag"), src: "", until: 0, key: "" };
+        // while the set tunes in (or between shows) it shows a loop of old TV static, kept on the site so it's instant
+        rec.tv.standby.innerHTML = '<video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video>';
+        rec.tv.standby.setAttribute("role", "status"); rec.tv.standby.setAttribute("aria-label", WORDS.tvStandby);
         el.addEventListener("click", () => { if (!state.editing && rec.tv.href && !/^https?:/.test(rec.tv.href)) location.href = rec.tv.href; });
         v.addEventListener("ended", () => { rec.tv.src = ""; renderTV(rec, true); });
         v.addEventListener("playing", () => { rec.tv.standby.hidden = true; });
         v.addEventListener("error", () => {
           const now = whatsOn();
-          rec.tv.standby.hidden = false; rec.tv.standby.textContent = WORDS.tvStandby;
+          rec.tv.standby.hidden = false;
           rec.tv.until = Date.now() + (now ? now.left * 1000 + 500 : 30000);
         });
       } else if (type === "slider" || type === "mixer") {
@@ -1565,10 +1568,10 @@
     const v = tv.v;
     if (!now.src) {                                           // a station break or intermission card: no picture
       if (tv.src) { v.pause(); v.removeAttribute("src"); v.load(); tv.src = ""; }
-      tv.key = now.key; tv.standby.hidden = false; tv.standby.textContent = WORDS.tvStandby; return;
+      tv.key = now.key; tv.standby.hidden = false; return;
     }
     if (tv.src !== now.src) {
-      tv.src = now.src; tv.key = now.key; tv.until = 0; tv.standby.hidden = false; tv.standby.textContent = WORDS.tvTuning;
+      tv.src = now.src; tv.key = now.key; tv.until = 0; tv.standby.hidden = false;
       v.src = now.src;
       v.addEventListener("loadedmetadata", () => {
         const fresh = whatsOn();

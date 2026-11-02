@@ -274,7 +274,7 @@
   // schedule back up as soon as the page is in view again
   onVid("pause", function () { if (state.src && !vid.ended) setTimeout(function () { if (!document.hidden && vid.paused && state.src) { tick(true); go(); } }, 400); });
   onVid("waiting", function () { standby.hidden = false; });
-  onVid("error", function () { if (state.src) { standby.hidden = false; standby.textContent = "Please stand by"; giveUp(); } });
+  onVid("error", function () { if (state.src) { standby.hidden = false; giveUp(); } });
 
   /* ---------------- TV page ---------------- */
   var where, renderInfo;
