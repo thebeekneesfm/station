@@ -811,6 +811,21 @@
     t.querySelector("i").textContent = `${Math.round(L.w)} × ${Math.round(L.h)}`;
     return t;
   }
+  // a station card can be a short looping video (.mp4): it plays silently on repeat, and people who
+  // ask their device for less motion see its still first frame (the .webp of the same name) instead
+  function makeCardMedia(src, onState) {
+    if (!/\.mp4(\?|$)/i.test(src)) return makeImg(src, onState);
+    const still = src.replace(/\.mp4(\?|$)/i, ".webp$1");
+    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return makeImg(still, onState);
+    const v = document.createElement("video");
+    v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
+    v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("aria-hidden", "true");
+    v.poster = still; v.preload = "auto";
+    v.addEventListener("loadeddata", () => { onState(true); v.play().catch(() => {}); });
+    v.addEventListener("error", () => onState(false));
+    v.src = src;
+    return v;
+  }
   function makeImg(src, onState) {
     const img = new Image();
     img.draggable = false;
@@ -974,7 +989,7 @@
         rec.cards = {};
         STATIONS.forEach(s => {
           const holder = document.createElement("div"); holder.className = "card"; holder.dataset.station = s.id;
-          const img = makeImg(s.card || "", ok => { holder.classList.toggle("missing", !ok); });
+          const img = makeCardMedia(s.card || "", ok => { holder.classList.toggle("missing", !ok); });
           holder.appendChild(img);
           holder.appendChild(stationCardLook(s, STATIONS.indexOf(s))); holder.classList.add("has-look");
           holder.appendChild(templateLabel({ id: s.name + " card", w: L.w, h: L.h }, s.card));

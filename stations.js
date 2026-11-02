@@ -1506,7 +1506,9 @@ window.STATIONS = [
   "name": "Romance & Drama",
   "group": "Radio shows",
   "blurb": "Hollywood stars in hour-long radio versions of the great love stories and dramas: Casablanca, Now, Voyager, Jane Eyre and more.",
-  "card": "art/cards/romance.png",
+  "card": "art/cards/romance.mp4",
+  "cardBy": "HeyLadyK",
+  "cardLink": "https://linktr.ee/heyladykdesigns",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
