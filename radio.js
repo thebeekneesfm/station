@@ -60,8 +60,9 @@
     cleanOff: "Hiss filter off",
     tvTuning: "",
     tvStandby: "Please stand by",
-    tvGuide: "Click to watch",
-    tvOnNow: "What\u2019s on now"
+    tvGuide: "Click to watch now",
+    tvNowOn: "Now on",
+    tvNowAt: "Now at the Drive-In: "
   }, SKIN.words || {});
   const CONFIG = window.RADIO_CONFIG || {};
 
@@ -1106,7 +1107,7 @@
       case "tip": return CONFIG.tip ? WORDS.tip : "";
       case "ambience": return WORDS["amb_" + state.ambience] || "";
       case "sleep": return state.sleepEnd ? WORDS.sleepOn.replace("{min}", Math.max(1, Math.ceil((state.sleepEnd - Date.now()) / 60000))) : WORDS.sleepOff;
-      case "tv.title": { if (L.marquee) return whatsOnAll(); const n = whatsOn(); return n ? n.title : ""; }
+      case "tv.title": { const n = whatsOn(); return n ? n.title : ""; }
       case "station.listeners": {
         if (!st) return "";
         const sp = (CONFIG.sponsors || {})[st.id];
@@ -1502,20 +1503,20 @@
     const tag = "The Drive-In \u00b7 " + (label || th.name);
     return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: WORDS.tvGuide, href: "drive-in.html", key: "di" + (it.src || it.slate) };
   }
-  // one line naming what's on every channel and at the drive-in right now, for the scrolling line under the little TV
-  function whatsOnAll(ms = Date.now()) {
-    const T = window.THEATER; if (!T || !window.TVCH) { const n = whatsOn(ms); return n ? n.title : ""; }
-    const parts = T.channels().map(sc => {
+  // what's on every channel and at the drive-in right now, one line each, for the fading lines under the little TV
+  function whatsOnList(ms = Date.now()) {
+    const T = window.THEATER; if (!T || !window.TVCH) { const n = whatsOn(ms); return n ? [{ t: n.title, href: n.href || "" }] : []; }
+    const out = T.channels().map(sc => {
       const n = T.tvAt(sc, ms); let show = n.item;
       for (let k = n.i; show && show.kind !== "show" && k < sc.list.length - 1; ) show = sc.list[++k];
       const what = show && show.kind === "show" ? (show.series === "Commercial" || show.series === "Cartoon" ? show.title : show.series) : "";
-      return "Ch. " + sc.ch.num + " " + sc.ch.name + (what ? ": " + what : "");
+      return { t: WORDS.tvNowOn + " Ch. " + sc.ch.num + " " + sc.ch.name + (what ? ": " + what : ""), href: "tv.html#" + sc.ch.id };
     });
     if (window.DRIVEIN) {
       const n = T.driveAt(ms);
-      if (n) { const it = n.item, feat = it.kind === "feature" ? it.title : T.themeOf(ms).name; parts.push("The Drive-In: " + feat); }
+      if (n) { const it = n.item; out.push({ t: WORDS.tvNowAt + (it.kind === "feature" ? it.title : T.themeOf(ms).name), href: "drive-in.html" }); }
     }
-    return WORDS.tvOnNow + "  \u273b  " + parts.join("  \u273b  ") + "  \u273b  " + WORDS.tvGuide;
+    return out;
   }
   function renderTV(rec, force) {
     const tv = rec.tv, now = whatsOn();
@@ -1739,13 +1740,16 @@
       if (type === "text") {
         const s = textFor(L);
         if (L.marquee) {
-          // a slow scrolling line: two copies side by side so it loops without a gap; only the words change, so the scroll never jumps
-          const t = el.firstChild;
-          if (!t.querySelector(".mq-run")) { t.classList.add("marquee"); t.innerHTML = '<span class="mq-run"><span class="mq-a"></span><span class="mq-b" aria-hidden="true"></span></span>'; }
-          if (t.dataset.s !== s) {
-            t.dataset.s = s; t.querySelector(".mq-a").textContent = s + "  \u273b  "; t.querySelector(".mq-b").textContent = s + "  \u273b  ";
-            t.setAttribute("aria-label", s);
-            t.querySelector(".mq-run").style.animationDuration = Math.max(20, s.length * 0.22) + "s";
+          // one line at a time: each channel's show fades in, stays a few seconds, then fades out for the next
+          const t = el.firstChild, list = whatsOnList(), every = 4500;
+          if (list.length) {
+            const i = Math.floor(Date.now() / every) % list.length, item = list[i];
+            if (rec.mqKey !== i + "|" + item.t) {
+              const first = rec.mqKey == null; rec.mqKey = i + "|" + item.t;
+              const put = () => { t.textContent = item.t; t.setAttribute("href", item.href); fitText(rec); t.classList.remove("fading"); };
+              t.classList.add("fade-line");
+              if (first) put(); else { t.classList.add("fading"); clearTimeout(rec.mqTimer); rec.mqTimer = setTimeout(put, 450); }
+            }
           }
         }
         else if (el.firstChild.textContent !== s) { el.firstChild.textContent = s; fitText(rec); }
@@ -1766,7 +1770,7 @@
                      : L.href === "tv.item" ? ((whatsOn() || {}).href || "")
                      : L.href === "card.link" ? (st && st.cardLink || "")
                      : L.href === "config.tip" ? (CONFIG.tip || "") : L.href;
-          if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
+          if (!L.marquee && el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
         }
       } else if (type === "needle") {
         const tr = L.track || { from: L.x, to: L.x };
