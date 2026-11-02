@@ -299,7 +299,7 @@
     var tune = function (c) {
       cur = c; store.set("tv.ch", c.id);
       if (location.hash !== "#" + c.id) history.replaceState(null, "", "#" + c.id);
-      state.src = ""; tick(true);
+      state.src = ""; guideKey = ""; tick(true);
     };
     window.addEventListener("hashchange", function () { var c = pickCh(); if (c !== cur) tune(c); });
     renderInfo = function (n) {
@@ -317,14 +317,46 @@
       var ca = $(".chcard"); if (ca.dataset.id !== cur.id) { ca.dataset.id = cur.id; ca.innerHTML = '<span class="cc-n">' + cur.num + '</span><span class="cc-name">' + esc(cur.name) + '</span><span class="cc-blurb">' + esc(cur.blurb || "") + "</span>"; var img = new Image(); img.alt = ""; img.onload = function () { ca.classList.add("art"); ca.innerHTML = ""; ca.appendChild(img); }; img.src = "art/tv/" + cur.id + ".png"; }
       renderGuide();
     };
+    /* The guide: a TV-listings grid, like the one in the Sunday paper. Each channel is a row; the
+       columns are half hours, starting at the current half hour and running three hours ahead.
+       Station IDs fold into the show before them, and the Commercial Break channel shows as one long block. */
+    var guideKey = "", PPM = 7, SPAN = 180;
+    var clock = function (ms) { return new Date(ms).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); };
+    var generic = { Commercial: 1, Cartoon: 1, "Home Movie": 1 };
     var renderGuide = function () {
-      var g = $(".guide"), now = Date.now(), rows = "";
+      var now = Date.now(), w = new Date(now); w.setMinutes(w.getMinutes() < 30 ? 0 : 30, 0, 0);
+      var t0 = w.getTime(), t1 = t0 + SPAN * 60000, key = Math.floor(now / 60000) + "|" + cur.id;
+      if (key === guideKey) return; guideKey = key;
+      var g = $(".guide"), head = "", rows = "";
+      for (var m = 0; m < SPAN; m += 30) head += '<span class="tg-t" style="left:' + m * PPM + 'px">' + esc(clock(t0 + m * 60000)) + "</span>";
       CH.forEach(function (c) {
-        var n = tvAt(S[c.id], now), it = n.item, show = it.kind === "show" ? it : tvNext(S[c.id], n.i, "show");
-        var nx = tvNext(S[c.id], it.kind === "show" ? n.i : S[c.id].list.indexOf(show), "show");
-        rows += '<button type="button" class="g-row' + (c === cur ? " on" : "") + '" data-id="' + c.id + '"><span class="g-num">' + c.num + '</span><span class="g-name">' + esc(c.name) + '</span><span class="g-now"><b>' + esc(show ? show.series : "") + "</b> " + esc(show ? show.title.replace(show.series, "").replace(/^\s*[-:\u2013\u2014]\s*/, "") : "") + '</span><span class="g-next">then ' + esc(nx ? nx.series : "") + "</span></button>";
+        var sc = S[c.id], n = tvAt(sc, t0), i = n.i, st = n.startMs, blocks = [], guard = 0;
+        while (st < t1 && guard++ < 600) {
+          var it = sc.list[i], en = st + it.length * 1000, last = blocks[blocks.length - 1];
+          if (it.kind === "show") { if (c.allAds && last) last.e = en; else blocks.push({ s: st, e: en, it: it }); }
+          else if (last) last.e = en;
+          st = en; i = (i + 1) % sc.list.length;
+        }
+        var cells = blocks.map(function (bk) {
+          var a = Math.max(bk.s, t0), z = Math.min(bk.e, t1), wpx = (z - a) / 60000 * PPM;
+          if (wpx < 3) return "";
+          var it = bk.it, name = c.allAds ? "Commercials, back to back" : (generic[it.series] ? it.title : it.series);
+          var ep = c.allAds || generic[it.series] ? "" : it.title.replace(it.series, "").replace(/^\s*[-:\u2013\u2014]\s*/, "");
+          var on = bk.s <= now && now < bk.e, when = (bk.s < t0 ? "\u25c2 " : "") + clock(bk.s);
+          return '<button type="button" class="tg-b' + (on ? " on" : "") + '" data-id="' + c.id + '" style="left:' + ((a - t0) / 60000 * PPM).toFixed(1) + "px;width:" + (wpx - 2).toFixed(1) + 'px" title="' + esc(clock(bk.s) + "  " + name + (ep ? ": " + ep : "")) + '" aria-label="' + esc("Channel " + c.num + ", " + clock(bk.s) + ", " + name + (ep ? ", " + ep : "") + (on ? ", on now" : "")) + '"><i>' + esc(when) + "</i><b>" + esc(name) + "</b>" + (ep ? "<span>" + esc(ep) + "</span>" : "") + "</button>";
+        }).join("");
+        rows += '<div class="tg-row' + (c === cur ? " cur" : "") + '"><button type="button" class="tg-name" data-id="' + c.id + '"><span class="g-num">' + c.num + '</span><span class="g-name">' + esc(c.name) + '</span></button><div class="tg-track">' + cells + "</div></div>";
       });
-      if (g.dataset.html !== rows) { g.dataset.html = rows; g.innerHTML = rows; g.querySelectorAll(".g-row").forEach(function (b) { b.addEventListener("click", function () { tune(CH.find(function (c) { return c.id === b.dataset.id; })); window.scrollTo({ top: 0, behavior: "smooth" }); }); }); }
+      var nowX = ((now - t0) / 60000 * PPM).toFixed(1);
+      var oldTg = g.querySelector(".tg"), keep = oldTg && oldTg.dataset.moved ? oldTg.scrollLeft : null;
+      g.innerHTML = '<div class="tg" tabindex="0" aria-label="TV listings, the next three hours"><div class="tg-in" style="--span:' + SPAN * PPM + 'px"><div class="tg-row tg-head"><span class="tg-name tg-corner">Channel</span><div class="tg-track">' + head + '</div></div>' + rows + '<span class="tg-now" style="--x:' + nowX + 'px" aria-hidden="true"></span></div></div>';
+      // start the grid scrolled to right now (narrow screens can't show the whole three hours); once the
+      // visitor scrolls it themselves, leave it where they put it
+      var tg = g.querySelector(".tg");
+      tg.scrollLeft = keep != null ? keep : Math.max(0, nowX - 40);
+      if (keep != null) tg.dataset.moved = "1";
+      ["pointerdown", "wheel", "keydown", "touchstart"].forEach(function (ev) { tg.addEventListener(ev, function () { tg.dataset.moved = "1"; }, { passive: true }); });
+      g.querySelectorAll("[data-id]").forEach(function (b) { b.addEventListener("click", function () { tune(CH.find(function (c) { return c.id === b.dataset.id; })); window.scrollTo({ top: 0, behavior: "smooth" }); }); });
     };
   }
 
