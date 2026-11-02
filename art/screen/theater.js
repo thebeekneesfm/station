@@ -363,7 +363,8 @@
       // start the grid scrolled to right now (narrow screens can't show the whole three hours); once the
       // visitor scrolls it themselves, leave it where they put it
       var tg = g.querySelector(".tg");
-      tg.scrollLeft = keep != null ? keep : Math.max(0, nowX - 40);
+      var seen = tg.clientWidth - (g.querySelector(".tg-name") || {}).offsetWidth;
+      tg.scrollLeft = keep != null ? keep : (nowX > seen * 0.5 ? Math.max(0, nowX - 40) : 0);
       if (keep != null) tg.dataset.moved = "1";
       ["pointerdown", "wheel", "keydown", "touchstart"].forEach(function (ev) { tg.addEventListener(ev, function () { tg.dataset.moved = "1"; }, { passive: true }); });
       g.querySelectorAll("[data-id]").forEach(function (b) { b.addEventListener("click", function () { tune(CH.find(function (c) { return c.id === b.dataset.id; })); window.scrollTo({ top: 0, behavior: "smooth" }); }); });

@@ -129,6 +129,22 @@
   .g-num { font: 700 24px/1 "BK Serif", Georgia, serif; color: var(--red); min-width: 1.2em; }
   .g-name { font: 400 18px/1.05 "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; }
   @media (max-width: 640px) { .guide { --nw: 128px; } .tg-name { padding-left: 12px; gap: 6px; } .g-num { font-size: 19px; } .g-name { font-size: 14px; } }
+  /* one big screen across the page, with what's on and the controls in a strip underneath and the guide below */
+  .stage { display: grid; gap: 0; grid-template-columns: minmax(0, 1fr) !important; }
+  .scr { aspect-ratio: 4 / 3; width: min(100%, calc((100vh - 150px) * 4 / 3)); justify-self: center; }
+  .chcard[hidden], .dial[hidden] { display: none !important; }
+  .np { padding: 16px 22px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; align-items: center; margin-top: 14px; }
+  .np-what { min-width: 0; display: grid; gap: 2px; }
+  .np-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+  .np-series { font-size: clamp(24px, 3vw, 32px); }
+  .np-title { font-size: clamp(22px, 2.6vw, 30px); }
+  .np-date, .np-left, .np-next { font-size: 18px; }
+  .np-when { text-align: right; display: grid; gap: 2px; }
+  .np .scr-ctrl { grid-column: 1 / -1; padding-top: 10px; border-top: 1.5px solid rgba(31,27,23,.22); }
+  .np .scr-vol { color: var(--ink); text-shadow: none; }
+  .report { margin: -6px 4px 0; color: var(--cream); text-shadow: 0 1px 2px rgba(0,0,0,.8); }
+  .report .email { user-select: all; }
+  @media (max-width: 640px) { .np { grid-template-columns: 1fr; padding: 14px 16px; } .np-when { text-align: left; } }
 </style>
 </head>
 <body data-mode="tv">
@@ -140,14 +156,20 @@
     <nav class="links" aria-label="Pages"><a href="index.html">The radio</a><a href="tv.html" aria-current="page">TV</a><a href="drive-in.html">Drive-In</a><a href="comics.html">Comics</a><a href="magazines.html">Magazines</a><a href="ads.html">Vintage ads</a><a href="about.html">About</a><a href="guestbook.html">Guest Book</a></nav>
   </header>
   <div class="stage">
-    <div><div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby" role="status" aria-label="Please stand by"><video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video></div><div class="scr-slate" hidden></div></div><div class="scr-ctrl"><button type="button" class="scr-sound" aria-pressed="false">Turn on the sound</button><label class="scr-vol">Volume <input type="range" min="0" max="100" aria-label="Volume"></label><button type="button" class="scr-full">Full screen</button></div></div>
-    <div class="side"><div class="chcard" aria-hidden="true"></div><section class="paper np" aria-live="polite"><div class="np-ch"></div><div class="np-series"></div><a class="np-title" target="_blank" rel="noopener" href="#"></a><div class="np-date"></div><div class="np-left"></div><div class="np-next"></div><p class="report">Something here that shouldn’t be? Email <span class="email">thebeeskneesfm@gmail.com</span> and it comes off the schedule.</p></section></div>
+    <div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby" role="status" aria-label="Please stand by"><video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video></div><div class="scr-slate" hidden></div></div>
+    <section class="paper np" aria-live="polite">
+      <div class="np-what"><div class="np-ch"></div><div class="np-line"><span class="np-series"></span> <a class="np-title" target="_blank" rel="noopener" href="#"></a></div><div class="np-date"></div></div>
+      <div class="np-when"><div class="np-left"></div><div class="np-next"></div></div>
+      <div class="scr-ctrl"><button type="button" class="scr-sound" aria-pressed="false">Turn on the sound</button><label class="scr-vol">Volume <input type="range" min="0" max="100" aria-label="Volume"></label><button type="button" class="scr-full">Full screen</button></div>
+    </section>
+    <div class="chcard" hidden></div>
   </div>
-  <nav class="dial" aria-label="Channels"></nav>
+  <nav class="dial" aria-label="Channels" hidden></nav>
   <h2 class="sec">What’s on</h2>
   <section class="paper guide" aria-label="What's on every channel"></section>
+  <p class="report">Something here that shouldn’t be? Email <span class="email">thebeeskneesfm@gmail.com</span> and it comes off the schedule.</p>
 </div>
 <script src="art/screen/tv-data.js?v=9"></script>
-<script src="art/screen/theater.js?v=17"></script>
+<script src="art/screen/theater.js?v=18"></script>
 </body>
 </html>
