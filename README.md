@@ -193,7 +193,7 @@ Draw a TV set as `art/tv-set.png`, with the screen cut out (transparent), and it
 
 ## The Bee's Knees TV
 
-`tv.html` has eight channels on one shared clock, like the radio: everyone tuned to channel 4 sees the same frame. The channels are 2 Crime & Detective, 4 Sitcoms, 5 Suspense & the Unknown, 6 Cartoons, 7 Game & Panel Shows, 9 Space Cadets, 11 Westerns and 13 Commercial Break (every screened commercial, back to back, with a station ID every ten or so). Channel 3 is Christmas, in season. Every episode plays straight from the Internet Archive. Between episodes there's a station-ID card and a vintage commercial.
+`tv.html` has ten channels on one shared clock, like the radio: everyone tuned to channel 4 sees the same frame. The channels are 2 Crime & Detective, 4 Sitcoms, 5 Suspense & the Unknown, 6 Cartoons, 7 Game & Panel Shows, 8 Strange Tales, 9 Space Cadets, 10 Newsreels & Oddities, 11 Westerns and 13 Commercial Break (every screened commercial, back to back, with a station ID every ten or so). Channel 3 is Christmas, in season. Every episode plays straight from the Internet Archive. Between episodes there's a station-ID card and a vintage commercial.
 
 The episode lists and the commercials are in `art/screen/tv-data.js`. Delete a line to take an episode or an ad off. Whole shows were left out for racist characters (Jack Benny's Rochester, Howdy Doody's Chief Thunderthud, Kit Carson's El Toro), and episodes were filtered by title and description. Commercials were checked frame by frame. Tobacco, alcohol, diet pills and caricature brand mascots (Aunt Jemima and the like) were left out.
 
