@@ -990,10 +990,10 @@
         el.appendChild(card); rec.ad.card = card;
         el.querySelector(".ad-img").addEventListener("click", () => { if (!state.editing && rec.ad.cur >= 0) openAd((window.ADS || [])[rec.ad.cur]); });
       } else if (type === "ticker") {
+        // one message at a time: each fades in, stays long enough to read, then fades out (no scrolling)
         const run = document.createElement("div"); run.className = "tick";
         const span = document.createElement("span"); run.appendChild(span); el.appendChild(run);
-        rec.tick = { span, run, text: null, pending: null };
-        span.addEventListener("animationiteration", () => { if (rec.tick.pending != null) { setTick(rec, rec.tick.pending); } });
+        rec.tick = { span, run, text: null, pending: null, items: [], i: -1, timer: 0 };
       } else if (type === "card") {
         rec.cards = {};
         STATIONS.forEach(s => {
@@ -1747,16 +1747,55 @@
       const t = at(st).track;
       parts.push(WORDS.nowOn.replace("{station}", st.name).replace("{series}", t.series || "").replace("{title}", t.title || ""));
     });
-    return parts.join(sep);
+    return parts.join("\n");
+  }
+  // fit one ticker message: shrink a little on one line, then allow two lines; too long even then → null
+  function fitTick(rec, msg) {
+    const t = rec.tick, L = rec.L, sp = t.span, base = L.size || 22;
+    sp.textContent = msg;
+    for (const lines of [1, 2]) {
+      sp.style.whiteSpace = lines === 1 ? "nowrap" : "normal";
+      sp.style.lineHeight = lines === 1 ? L.h + "px" : (L.h / 2) + "px";
+      const top = lines === 1 ? base : Math.min(base, Math.floor(L.h / 2 / 1.1)), min = lines === 1 ? base * 0.8 : 18;
+      for (let size = top; size >= min; size--) {
+        sp.style.fontSize = size + "px";
+        if (sp.scrollWidth <= L.w + 1 && sp.offsetHeight <= L.h + 1) return true;
+      }
+    }
+    return false;
+  }
+  // break a message that won't fit into pieces at natural pauses (": ", ", and ", ", ")
+  function tickPieces(rec, msg) {
+    if (fitTick(rec, msg)) return [msg];
+    for (const cut of [": ", ", and ", ", "]) {
+      const at = [], re = new RegExp(cut.replace(/[,]/g, ","), "g"); let m;
+      while ((m = re.exec(msg))) at.push(m.index);
+      if (!at.length) continue;
+      const mid = msg.length / 2, k = at.reduce((a, b) => Math.abs(b - mid) < Math.abs(a - mid) ? b : a);
+      const a = msg.slice(0, k + cut.length - 1).trim().replace(/,$/, "") + (cut === ": " ? "" : "…"), b = (cut === ": " ? "" : "…") + msg.slice(k + cut.length).trim();
+      return tickPieces(rec, a).concat(tickPieces(rec, b));
+    }
+    return [msg];
   }
   function setTick(rec, s) {
     const t = rec.tick; t.text = s; t.pending = null;
-    t.span.textContent = s;
-    const speed = rec.L.speed || 70;              // stage pixels per second
-    const dist = rec.L.w + t.span.offsetWidth;
-    t.span.style.setProperty("--from", rec.L.w + "px");
-    t.span.style.setProperty("--to", -t.span.offsetWidth + "px");
-    t.span.style.animationDuration = Math.max(8, dist / speed) + "s";
+    t.items = [];
+    s.split("\n").filter(Boolean).forEach(msg => { t.items = t.items.concat(tickPieces(rec, msg)); });
+    // carry on from the same message when the list changes (a new member, say); start at the top otherwise
+    t.i = (t.i >= 0 && t.i < t.items.length ? t.i : 0) - 1;
+    nextTick(rec, true);
+  }
+  function nextTick(rec, now) {
+    const t = rec.tick; if (!t.items.length) return;
+    clearTimeout(t.timer);
+    const show = () => {
+      t.i = (t.i + 1) % t.items.length;
+      const msg = t.items[t.i];
+      fitTick(rec, msg);
+      t.span.classList.remove("fading");
+      t.timer = setTimeout(() => nextTick(rec), 3500 + msg.length * 45);
+    };
+    if (now) show(); else { t.span.classList.add("fading"); t.timer = setTimeout(show, 500); }
   }
   function fitText(rec) {
     const t = rec.el.firstChild, L = rec.L;
@@ -1779,16 +1818,20 @@
       if (type === "text") {
         const s = textFor(L);
         if (L.marquee) {
-          // one line at a time: each channel's show fades in, stays a few seconds, then fades out for the next
-          const t = el.firstChild, list = whatsOnList(), every = 4500;
-          if (list.length) {
-            const i = Math.floor(Date.now() / every) % list.length, item = list[i];
-            if (rec.mqKey !== i + "|" + item.t) {
-              const first = rec.mqKey == null; rec.mqKey = i + "|" + item.t;
-              const put = () => { t.textContent = item.t; t.setAttribute("href", item.href); fitText(rec); t.classList.remove("fading"); };
-              t.classList.add("fade-line");
-              if (first) put(); else { t.classList.add("fading"); clearTimeout(rec.mqTimer); rec.mqTimer = setTimeout(put, 450); }
-            }
+          // a slow scrolling line of what's on every channel: two copies side by side so it loops without a gap;
+          // only the words change, so the scroll never jumps. Each show links to its own channel.
+          const t = el.firstChild, list = whatsOnList();
+          if (!t.querySelector(".mq-run")) {
+            t.classList.add("marquee"); t.innerHTML = '<span class="mq-run"><span class="mq-a"></span><span class="mq-b" aria-hidden="true"></span></span>';
+            t.addEventListener("click", e => { const h = e.target.closest("[data-href]"); if (h && !state.editing) { e.preventDefault(); location.href = h.dataset.href; } });
+          }
+          const key = list.map(x => x.t).join("|");
+          if (list.length && t.dataset.s !== key) {
+            t.dataset.s = key;
+            const fill = box => { box.textContent = ""; list.forEach(x => { const sp = document.createElement("span"); sp.dataset.href = x.href; sp.textContent = x.t; box.appendChild(sp); box.appendChild(document.createTextNode("  \u273b  ")); }); };
+            fill(t.querySelector(".mq-a")); fill(t.querySelector(".mq-b"));
+            t.setAttribute("aria-label", list.map(x => x.t).join(". "));
+            t.querySelector(".mq-run").style.animationDuration = Math.max(20, key.length * 0.22) + "s";
           }
         }
         else if (el.firstChild.textContent !== s) { el.firstChild.textContent = s; fitText(rec); }
@@ -1809,7 +1852,7 @@
                      : L.href === "tv.item" ? ((whatsOn() || {}).href || "")
                      : L.href === "card.link" ? (st && st.cardLink || "")
                      : L.href === "config.tip" ? (CONFIG.tip || "") : L.href;
-          if (!L.marquee && el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
+          if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
         }
       } else if (type === "needle") {
         const tr = L.track || { from: L.x, to: L.x };
@@ -1836,8 +1879,7 @@
         renderTV(rec);
       } else if (type === "ticker") {
         const s = tickerText(L);
-        if (rec.tick.text == null) setTick(rec, s);
-        else if (s !== rec.tick.text) rec.tick.pending = s;
+        if (s !== rec.tick.text) setTick(rec, s);
       } else if (type === "card") {
         Object.entries(rec.cards).forEach(([id, h]) => { h.hidden = !(state.station && state.station.id === id); });
       }

@@ -50,12 +50,15 @@
   .t-needle { transition: left .35s cubic-bezier(.3,.7,.2,1); }
   .card { position: absolute; inset: 0; }
   .t-ticker { overflow: hidden; }
-  .tick { height: 100%; white-space: nowrap; }
-  .tick span { display: inline-block; will-change: transform; animation: tick 30s linear infinite; }
-  /* the "what's on" lines under the little TV: each one fades in and out, no scrolling */
-  .txt.fade-line { transition: opacity .45s ease; }
-  .txt.fade-line.fading { opacity: 0; }
-  @media (prefers-reduced-motion: reduce) { .txt.fade-line { transition: none; } }
+  .tick { height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; }
+  .tick span { display: block; max-width: 100%; transition: opacity .5s ease; }
+  .tick span.fading { opacity: 0; }
+  /* the scrolling "what's on" line under the little TV */
+  .txt.marquee { display: block; overflow: hidden; white-space: nowrap; }
+  .txt.marquee .mq-run { display: inline-flex; white-space: pre; animation: tvmq linear infinite; will-change: transform; }
+  .txt.marquee:hover .mq-run { animation-play-state: paused; }
+  @keyframes tvmq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .txt.marquee .mq-run { animation: none; } .txt.marquee { text-overflow: ellipsis; } }
   @keyframes tick { from { transform: translateX(var(--from, 100%)); } to { transform: translateX(var(--to, -100%)); } }
   a.txt { display: block; text-decoration: underline; text-underline-offset: 3px; color: inherit; }
   .txt { width: 100%; height: 100%; overflow: hidden; white-space: pre-line; overflow-wrap: anywhere; }
@@ -262,7 +265,7 @@
   #panel :focus-visible, .layer:focus-visible { outline: 2px solid var(--sel); outline-offset: 2px; }
   #p-extra { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; }
   #p-extra:empty { display: none; }
-  @media (prefers-reduced-motion: reduce) { .t-needle, .t-knob > img { transition: none; } .tick span { animation: none; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .t-needle, .t-knob > img { transition: none; } .tick span { transition: none; } }
 
   /* ===== printed-matter pass: one black ink, honey and red spot colors, on newsprint ===== */
   :root { --news: #e9e1c9; --ink: #1f1b17; --ink-2: #5d5244; --red: #c8321f; --honey: #e3a92f; --cabinet: #3a2416; --ivory: #efe5cc; }
@@ -616,10 +619,10 @@
 <script src="ads.js?v=20261102a"></script>
 <script src="tv.js?v=20261102a"></script>
 <script src="art/funnies/funnies.js?v=20261101a"></script>
-<script src="art/screen/tv-data.js?v=6"></script>
+<script src="art/screen/tv-data.js?v=7"></script>
 <script src="art/screen/drivein-data.js?v=3"></script>
 <script src="art/screen/theater.js?v=13"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261102x"></script>
+<script src="radio.js?v=20261102y"></script>
 </body>
 </html>
