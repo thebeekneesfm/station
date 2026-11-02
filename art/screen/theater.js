@@ -197,7 +197,16 @@
     standby.hidden = vid.readyState >= 3;
     go();
   }
+  // iPhone full screen is Apple's own player and only follows one video element, so while it is
+  // up the next item loads into that same element instead of swapping players
+  function inNativeFull() { return !!(vid.webkitDisplayingFullscreen); }
+  [vid, pre].forEach(function (v) {
+    v.addEventListener("webkitendfullscreen", function () { setTimeout(function () { tick(true); go(); }, 300); });
+  });
+  document.addEventListener("fullscreenchange", function () { setTimeout(function () { tick(true); go(); }, 300); });
+  document.addEventListener("webkitfullscreenchange", function () { setTimeout(function () { tick(true); go(); }, 300); });
   function preloadNext(n) {
+    if (inNativeFull()) return;
     if (!n || n.left > 45) return;
     var nx = where(Date.now() + (n.left + 1) * 1000);
     if (!nx || !nx.item.src || nx.item.src === state.src || pre.dataset.src === nx.item.src) return;
@@ -238,7 +247,7 @@
     state.filler = null;
     if (state.src !== it.src) {
       state.retried = false;
-      if (pre.dataset.src === it.src && pre.readyState >= 1) { swapIn(it, offset); state.started = vid.readyState >= 3; state.loadAt = Date.now(); return; }
+      if (pre.dataset.src === it.src && pre.readyState >= 1 && !inNativeFull()) { swapIn(it, offset); state.started = vid.readyState >= 3; state.loadAt = Date.now(); return; }
       loadSrc(it.src, function () { var n = where(); return n && n.item.src === it.src ? n.offset : 0; });
     } else {
       // only jump to catch up when the picture is playing smoothly and has drifted a long way;
