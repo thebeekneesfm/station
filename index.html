@@ -52,6 +52,12 @@
   .t-ticker { overflow: hidden; }
   .tick { height: 100%; white-space: nowrap; }
   .tick span { display: inline-block; will-change: transform; animation: tick 30s linear infinite; }
+  /* the scrolling "what's on" line under the little TV */
+  .txt.marquee { display: block; overflow: hidden; white-space: nowrap; }
+  .txt.marquee .mq-run { display: inline-flex; white-space: pre; animation: tvmq linear infinite; will-change: transform; }
+  .txt.marquee:hover .mq-run { animation-play-state: paused; }
+  @keyframes tvmq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .txt.marquee .mq-run { animation: none; } .txt.marquee { text-overflow: ellipsis; } }
   @keyframes tick { from { transform: translateX(var(--from, 100%)); } to { transform: translateX(var(--to, -100%)); } }
   a.txt { display: block; text-decoration: underline; text-underline-offset: 3px; color: inherit; }
   .txt { width: 100%; height: 100%; overflow: hidden; white-space: pre-line; overflow-wrap: anywhere; }
@@ -598,7 +604,7 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261102p"></script>
+<script src="skin.js?v=20261102q"></script>
 <script src="stations.js?v=20261102c"></script>
 <script src="config.js?v=20261102t3"></script>
 <script src="ads.js?v=20261102a"></script>
@@ -608,6 +614,6 @@
 <script src="art/screen/drivein-data.js?v=3"></script>
 <script src="art/screen/theater.js?v=12"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261102s"></script>
+<script src="radio.js?v=20261102t"></script>
 </body>
 </html>
