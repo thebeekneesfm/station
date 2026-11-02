@@ -166,7 +166,9 @@
     document.addEventListener(ev, function (e) { if (state.blocked && !soundBtn.contains(e.target)) { state.blocked = false; applySound(); go(); } }, true);
   });
   function applySound() {
-    vid.muted = !state.sound || !!state.blocked; vid.volume = state.vol; if (typeof pre !== "undefined" && pre) pre.muted = true;
+    // on a channel with radio underneath, the reels themselves stay silent and the radio carries the sound
+    vid.muted = !state.sound || !!state.blocked || !!state.bedOn; vid.volume = state.vol; if (typeof pre !== "undefined" && pre) pre.muted = true;
+    if (typeof bedEl !== "undefined" && bedEl) { bedEl.muted = !state.sound || !!state.blocked; bedEl.volume = state.vol; }
     showSoundState();
   }
   soundBtn.addEventListener("click", function () { if (state.blocked) { state.blocked = false; state.sound = true; } else state.sound = !state.sound; store.set(MODE + ".sound", state.sound); applySound(); go(); });
@@ -306,7 +308,8 @@
       $(".np-series").textContent = isShow ? it.series : (it.kind === "ad" ? "A word from our sponsors" : "Station break");
       var t = $(".np-title"); t.textContent = isShow ? it.title.replace(new RegExp("^" + it.series.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\s*[-:\u2013\u2014]?\\s*", "i"), "") : (it.kind === "ad" ? it.title : "Up next: " + (show ? show.series : ""));
       t.href = it.item || "#"; t.toggleAttribute("aria-disabled", !it.item);
-      $(".np-date").textContent = isShow && it.date ? "Originally aired " + it.date : "";
+      var music = isShow && cur.radio && state.bedTrack ? "Music on the radio: \u201c" + state.bedTrack.title + "\u201d, " + state.bedTrack.series : "";
+      $(".np-date").textContent = isShow && it.date ? (cur.radio ? "Filmed " : "Originally aired ") + it.date + (music ? ". " + music : "") : music;
       $(".np-left").textContent = mmss(n.left) + " left";
       var nx = tvNext(S[cur.id], n.i, "show");
       $(".np-next").textContent = nx ? (isShow ? "Coming up: " + (nx.series === "Commercial" || nx.series === "Cartoon" ? nx.title : nx.series) : "") : "";
@@ -377,8 +380,50 @@
 
   /* ---------------- the clock ---------------- */
   var lastKey = "";
+  /* Radio under the picture: a TV channel can name one of the radio's stations ("radio" in tv-data.js).
+     While its shows are on, that station plays underneath on the radio's own shared clock, so it's the
+     same song the radio is playing right now, and the shows' own sound is muted. Commercials and
+     station breaks keep their own sound. The radio's track list is only fetched when it's needed. */
+  var bedEl = null, bedSt = null, bedLoading = false;
+  function bedStation(id) {
+    if (bedSt && bedSt.id === id) return bedSt;
+    var st = (window.STATIONS || []).find(function (x) { return x.id === id; });
+    if (!st) {
+      if (!bedLoading && !window.STATIONS) { bedLoading = true; var sc = document.createElement("script"); sc.src = "stations.js?v=20261102c"; sc.onload = function () { tick(true); }; document.head.appendChild(sc); }
+      return null;
+    }
+    var t = 0; st._cumB = st.tracks.map(function (tr) { var a = t; t += Number(tr.length) || 0; return a; }); st._totB = t; st._epB = Date.parse(st.epoch || "2026-11-01T00:00:00Z");
+    return (bedSt = st);
+  }
+  function bedAt(st, ms) {
+    var pos = ((ms - st._epB) / 1000) % st._totB; if (pos < 0) pos += st._totB;
+    var lo = 0, hi = st.tracks.length - 1;
+    while (lo < hi) { var mid = (lo + hi + 1) >> 1; if (st._cumB[mid] <= pos) lo = mid; else hi = mid - 1; }
+    return { track: st.tracks[lo], offset: pos - st._cumB[lo] };
+  }
+  function radioUnder(n) {
+    var id = MODE === "tv" && typeof cur !== "undefined" && cur && cur.radio;
+    var want = !!(id && n.item.kind === "show");
+    var st = want ? bedStation(id) : null;
+    var was = state.bedOn; state.bedOn = want;
+    if (was !== want) applySound();
+    if (!want || !st) { if (bedEl && !bedEl.paused) bedEl.pause(); state.bedTrack = null; return; }
+    if (!bedEl) {
+      bedEl = new Audio(); bedEl.preload = "auto";
+      bedEl.addEventListener("ended", function () { tick(true); });
+      bedEl.addEventListener("error", function () { setTimeout(function () { if (bedEl) delete bedEl.dataset.src; }, 15000); });
+      applySound();
+    }
+    var b = bedAt(st, Date.now()); state.bedTrack = b.track;
+    if (bedEl.dataset.src !== b.track.src) {
+      bedEl.dataset.src = b.track.src; bedEl.src = b.track.src;
+      bedEl.addEventListener("loadedmetadata", function seek() { bedEl.removeEventListener("loadedmetadata", seek); var c = bedAt(st, Date.now()); try { bedEl.currentTime = c.offset; } catch (e) {} }, { once: true });
+    } else if (bedEl.readyState >= 3 && !bedEl.seeking && Math.abs(bedEl.currentTime - b.offset) > 6) { try { bedEl.currentTime = b.offset; } catch (e) {} }
+    if (bedEl.paused) { var p = bedEl.play(); if (p && p.catch) p.catch(function (err) { if (err && err.name === "NotAllowedError" && !bedEl.muted) { state.blocked = true; applySound(); } }); }
+  }
   function tick(force) {
     var n = where(); if (!n) return;
+    radioUnder(n);
     var key = (n.item.src || n.item.slate) + "@" + (n.item.start != null ? n.item.start : n.item.startMs);
     if (n.item.slate) { if (force || key !== lastKey || n.item.slate === "intermission") showSlate(n.item, n); }
     else if (force || key !== lastKey || !document.hidden) playItem(n.item, n.offset);
