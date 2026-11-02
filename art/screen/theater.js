@@ -165,10 +165,20 @@
   ["pointerdown", "keydown", "touchend"].forEach(function (ev) {
     document.addEventListener(ev, function (e) { if (state.blocked && !soundBtn.contains(e.target)) { state.blocked = false; applySound(); go(); } }, true);
   });
+  /* Even volume: every video's loudness was measured ahead of time and stored with it as "gain"
+     (1 = full volume, smaller = turned down). Loud commercials and hot transfers get turned down to
+     match the rest, so changing channels or going into a break doesn't jump in volume. Browsers
+     can't turn a video up past full, so the quietest ones simply play at full. */
+  var GAIN = {}, GAIN_DEFAULT = 1;
+  (function () {
+    function walk(o) { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === "object") { if (o.src && o.gain != null) GAIN[o.src] = Number(o.gain); for (var k in o) if (o[k] && typeof o[k] === "object") walk(o[k]); } }
+    walk(window.TVCH); walk(window.TV_ADS); walk(window.DRIVEIN); walk(window.TV);
+  })();
+  function gainOf(src) { if (!src) return 1; var g = GAIN[src]; return g > 0 ? Math.min(1, g) : GAIN_DEFAULT; }
   function applySound() {
     // on a channel with radio underneath, the reels themselves stay silent and the radio carries the sound
-    vid.muted = !state.sound || !!state.blocked || !!state.bedOn; vid.volume = state.vol; if (typeof pre !== "undefined" && pre) pre.muted = true;
-    if (typeof bedEl !== "undefined" && bedEl) { bedEl.muted = !state.sound || !!state.blocked; bedEl.volume = state.vol; }
+    vid.muted = !state.sound || !!state.blocked || !!state.bedOn; vid.volume = state.vol * gainOf(state.src); if (typeof pre !== "undefined" && pre) pre.muted = true;
+    if (typeof bedEl !== "undefined" && bedEl) { bedEl.muted = !state.sound || !!state.blocked; bedEl.volume = state.vol * gainOf(bedEl.dataset.src); }
     showSoundState();
   }
   soundBtn.addEventListener("click", function () { if (state.blocked) { state.blocked = false; state.sound = true; } else state.sound = !state.sound; store.set(MODE + ".sound", state.sound); applySound(); go(); });
@@ -233,7 +243,7 @@
   function isFailed(src) { return failed[src] && Date.now() - failed[src] < 120000; }
   function loadSrc(src, offsetFn) {
     state.src = src; state.started = false; state.loadAt = Date.now(); standby.hidden = false;
-    vid.src = src;
+    vid.src = src; applySound();
     vid.addEventListener("loadedmetadata", function seek() {
       vid.removeEventListener("loadedmetadata", seek);
       var off = offsetFn ? offsetFn() : 0;
@@ -448,7 +458,7 @@
     }
     var b = bedAt(st, Date.now()); state.bedTrack = b.track;
     if (bedEl.dataset.src !== b.track.src) {
-      bedEl.dataset.src = b.track.src; bedEl.src = b.track.src;
+      bedEl.dataset.src = b.track.src; bedEl.src = b.track.src; if (b.track.gain != null) GAIN[b.track.src] = Number(b.track.gain); applySound();
       bedEl.addEventListener("loadedmetadata", function seek() { bedEl.removeEventListener("loadedmetadata", seek); var c = bedAt(st, Date.now()); try { bedEl.currentTime = c.offset; } catch (e) {} }, { once: true });
     } else if (bedEl.readyState >= 3 && !bedEl.seeking && Math.abs(bedEl.currentTime - b.offset) > 6) { try { bedEl.currentTime = b.offset; } catch (e) {} }
     if (bedEl.paused) { var p = bedEl.play(); if (p && p.catch) p.catch(function (err) { if (err && err.name === "NotAllowedError" && !bedEl.muted) { state.blocked = true; applySound(); } }); }
