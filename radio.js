@@ -34,7 +34,7 @@
     amb_rain: "Rain on the window (click for a fire)",
     amb_fire: "A fire going (click to turn off)",
     amb_off: "Add rain or a fire",
-    tip: "Support the station",
+    tip: "Support The Bee's Knees",
     visits: "Site visits: {n}",
     aired: "Originally aired",
     released: "Originally released",
