@@ -286,3 +286,10 @@ The hiss remover splits the sound into 512 frequency bands, learns the steady hi
 ## Fonts
 
 The lettering comes from FontSpace and lives in `art/fonts` (no Google Fonts): **Odalisque NF** for the masthead (Nick Curtis, freeware), **Mervale Script** for headings and station names (Astigmatic, SIL Open Font License, licence in `art/fonts`), and **TeX Gyre Pagella** for everything else (GUST e-foundry, GUST Font License). `art/fonts/fonts.css` names them "BK Deco", "BK Script" and "BK Serif"; use those names in `skin.js`.
+
+## Guest book
+
+`guestbook.html` is the public guest book (name, town, message). New entries are saved as "waiting" and only show once approved.
+Approve, hide or delete entries at `guestbook-admin.html` (not linked anywhere, hidden from search engines) with your passcode.
+The passcode lives in Supabase as the Edge Function secret `GUESTBOOK_ADMIN_PASS` (Project settings → Edge Functions → Secrets); change it there any time.
+Entries are stored in the Supabase table `guestbook`; the `guestbook` edge function handles signing (with a spam trap and a limit of 3 entries an hour per visitor) and your approvals.
