@@ -108,7 +108,11 @@
     var tDusk = duskOf(today), t = Math.max(lastNight.end, today);
     while (t < tDusk) { var m = lay(matinee(today), t, tDusk); if (!m.items.length) break; segs = segs.concat(m.items); t = m.end; }
     var tonight = lay(nightProgram(today), tDusk); segs = segs.concat(tonight.items);
-    var after = tonight.end; while (after < today + 2 * 864e5) { var mm = lay(matinee(today + 864e5), after); if (!mm.items.length) break; segs = segs.concat(mm.items); after = mm.end; }
+    // after the late show, more films from tonight's theme run until midnight (the late show); then the next day's matinee begins
+    var after = tonight.end, midnight = today + 864e5;
+    while (after < midnight) { var en = lay(matinee(today), after, midnight); if (!en.items.length) break; en.items.forEach(function (x) { x.encore = true; }); segs = segs.concat(en.items); after = en.end; }
+    after = Math.max(after, midnight);
+    while (after < today + 2 * 864e5) { var mm = lay(matinee(today + 864e5), after); if (!mm.items.length) break; segs = segs.concat(mm.items); after = mm.end; }
     return segs;
   }
   function driveAt(ms) {
@@ -324,13 +328,36 @@
       var th = themeOf(now), feats = featuresFor(now);
       $(".mq-theme").textContent = th.name;
       $(".mq-feats").textContent = feats.map(function (f) { return f.title; }).join("  \u00b7  ");
-      $(".mq-when").textContent = now < dusk ? "Gates open at dusk, " + hhmm(dusk) + " tonight. Now showing: the afternoon matinee" : "Now showing: tonight\u2019s double feature";
-      $(".np-series").textContent = it.slate ? ({ welcome: "Welcome", intermission: "Intermission", goodnight: "Good night" }[it.slate] || "") : (it.matinee ? "Afternoon matinee" : (it.kind === "feature" ? (it.n === 2 ? "Second feature" : "First feature") : LABEL[it.kind] || ""));
+      var offShow = it.matinee || it.encore || (it.slate === "intermission" && it.words && it.words.short);
+      $(".mq-when").textContent = now < dusk ? "Matinee: more " + th.name.replace(/^the /i, "") + " films until the full show starts at dusk, " + hhmm(dusk) + "."
+        : offShow ? "The show\u2019s over for tonight. The late show runs more " + th.name.replace(/^the /i, "") + " films until midnight."
+        : "Tonight\u2019s show is on. It started at dusk, " + hhmm(dusk) + ".";
+      $(".np-series").textContent = it.slate ? ({ welcome: "Welcome", intermission: "Intermission", goodnight: "Good night" }[it.slate] || "") : (it.encore ? "Late show" : it.matinee ? "Matinee" : (it.kind === "feature" ? (it.n === 2 ? "Second feature" : "First feature") : LABEL[it.kind] || ""));
       var t = $(".np-title"); t.textContent = it.slate ? (it.slate === "welcome" ? th.name : "") : it.title; t.href = it.item || "#";
       $(".np-date").textContent = it.year ? String(it.year) : "";
       $(".np-left").textContent = mmss(n.left) + " left";
-      var nx = n.segs[n.i + 1]; $(".np-next").textContent = nx ? "Then: " + (nx.slate ? ({ intermission: "Intermission", goodnight: "Good night", welcome: "Welcome" }[nx.slate]) : (nx.title || "")) + " at " + hhmm(nx.startMs) : "";
-      renderWeek();
+      var nx = n.segs[n.i + 1]; $(".np-next").textContent = nx ? "Then: " + (nx.slate ? ({ intermission: "Intermission", goodnight: "Good night", welcome: "Welcome" }[nx.slate]) : nx.kind === "intermission" ? "Intermission" : nx.kind === "trailer" ? "Coming attractions" : (nx.title || "")) + " at " + hhmm(nx.startMs) : "";
+      renderWeek(); renderProgram(n);
+    };
+    // tonight's lineup, with times, so the shape of a night at the drive-in is plain to see
+    var PART = { welcome: "Welcome", cartoon: "A cartoon", trailer: "Coming attractions", serial: "The serial chapter", intermission: "Intermission", goodnight: "Good night" };
+    var renderProgram = function (n) {
+      var ul = $(".program"); if (!ul) return;
+      var now = Date.now(), d = new Date(now), today = new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime(), dusk = duskOf(today);
+      var night = n.segs.filter(function (x) { return !x.matinee && !x.encore && x.startMs >= dusk - 1000 && x.startMs < today + 864e5 && !(x.slate === "intermission" && x.words && x.words.short); });
+      var rows = [], last = null;
+      night.forEach(function (x) {
+        var kind = x.slate || x.kind, label = kind === "feature" ? (x.n === 2 ? "Second feature: " : "First feature: ") + x.title + (x.year ? " (" + x.year + ")" : "") : PART[kind] || kind;
+        var end = x.cutMs || x.startMs + x.length * 1000;
+        if (last && last.kind === kind) { last.end = end; return; }   // two trailers or two intermission reels read as one line
+        last = { kind: kind, label: label, start: x.startMs, end: end }; rows.push(last);
+      });
+      var html = rows.map(function (r) {
+        var st = now >= r.end ? "done" : now >= r.start ? "now" : "";
+        return '<li' + (st ? ' class="' + st + '"' : "") + '><span class="pg-t">' + hhmm(r.start) + '</span><span class="pg-w">' + esc(r.label) + (st === "now" ? ' <b class="pg-on">Now playing</b>' : "") + "</span></li>";
+      }).join("");
+      if (ul.dataset.html !== html) { ul.dataset.html = html; ul.innerHTML = html; }
+      var dz = $(".how-dusk"); if (dz) dz.textContent = hhmm(dusk);
     };
     var renderWeek = function () {
       var w = $(".week"), now = Date.now(), d0 = new Date(now); d0.setHours(12, 0, 0, 0); var rows = "";
