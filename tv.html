@@ -131,8 +131,23 @@
   @media (max-width: 640px) { .guide { --nw: 128px; } .tg-name { padding-left: 12px; gap: 6px; } .g-num { font-size: 19px; } .g-name { font-size: 14px; } }
   /* one big screen across the page, with what's on and the controls in a strip underneath and the guide below */
   .stage { display: grid; gap: 0; grid-template-columns: minmax(0, 1fr) !important; }
-  .scr { aspect-ratio: 4 / 3; width: min(100%, calc((100vh - 150px) * 4 / 3)); justify-self: center; }
+  .scr { aspect-ratio: 4 / 3; width: min(100%, calc((100vh - 220px) * 4 / 3)); justify-self: center; }
   .chcard[hidden], .dial[hidden] { display: none !important; }
+  /* the tuner: every channel in one row right under the screen, with up/down buttons at the ends */
+  .tuner { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: stretch; margin-top: 14px; padding: 8px; gap: 8px; }
+  .tuner .dial { position: relative; display: flex; gap: 8px; overflow-x: auto; scroll-behavior: smooth; scrollbar-width: thin; padding: 2px 2px 6px; }
+  .tuner .ch { flex: none; padding: 8px 12px; gap: 8px; box-shadow: none; border: 1.5px solid rgba(31,27,23,.28); background: transparent; }
+  .tuner .ch[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); }
+  .tuner .ch-n { font-size: 24px; min-width: 0; }
+  .tuner .ch-name { font-size: 17px; white-space: nowrap; }
+  .ch-step { border: 0; background: var(--red); color: var(--paper); font-size: 20px; width: 48px; cursor: pointer; }
+  .ch-step:hover, .tuner .ch:hover { filter: brightness(1.12); }
+  .tuner .ch:focus-visible, .ch-step:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
+  .np { margin-top: 10px !important; }
+  /* the channel number flashes up in the corner when you change, like an old set */
+  .scr-osd { position: absolute; top: 5%; right: 5%; z-index: 3; text-align: right; color: #9dff8a; font: 700 clamp(30px, 5vw, 60px)/1 "BK Serif", Georgia, serif; text-shadow: 0 0 6px rgba(80,255,80,.6), 0 2px 3px #000; pointer-events: none; transition: opacity .4s; }
+  .scr-osd small { display: block; font: 400 clamp(16px, 2.2vw, 26px)/1.2 "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; letter-spacing: .04em; }
+  .scr-osd.fade { opacity: 0; }
   .np { padding: 16px 22px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; align-items: center; margin-top: 14px; }
   .np-what { min-width: 0; display: grid; gap: 2px; }
   .np-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
@@ -156,7 +171,8 @@
     <nav class="links" aria-label="Pages"><a href="index.html">The radio</a><a href="tv.html" aria-current="page">TV</a><a href="drive-in.html">Drive-In</a><a href="comics.html">Comics</a><a href="magazines.html">Magazines</a><a href="ads.html">Vintage ads</a><a href="about.html">About</a><a href="guestbook.html">Guest Book</a></nav>
   </header>
   <div class="stage">
-    <div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby" role="status" aria-label="Please stand by"><video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video></div><div class="scr-slate" hidden></div></div>
+    <div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby" role="status" aria-label="Please stand by"><video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video></div><div class="scr-slate" hidden></div><div class="scr-osd" aria-hidden="true" hidden></div></div>
+    <div class="paper tuner"><button type="button" class="ch-step" data-step="-1" aria-label="Channel down">&#9664;</button><nav class="dial" aria-label="Channels"></nav><button type="button" class="ch-step" data-step="1" aria-label="Channel up">&#9654;</button></div>
     <section class="paper np" aria-live="polite">
       <div class="np-what"><div class="np-ch"></div><div class="np-line"><span class="np-series"></span> <a class="np-title" target="_blank" rel="noopener" href="#"></a></div><div class="np-date"></div></div>
       <div class="np-when"><div class="np-left"></div><div class="np-next"></div></div>
@@ -164,12 +180,11 @@
     </section>
     <div class="chcard" hidden></div>
   </div>
-  <nav class="dial" aria-label="Channels" hidden></nav>
   <h2 class="sec">What’s on</h2>
   <section class="paper guide" aria-label="What's on every channel"></section>
   <p class="report">Something here that shouldn’t be? Email <span class="email">thebeeskneesfm@gmail.com</span> and it comes off the schedule.</p>
 </div>
 <script src="art/screen/tv-data.js?v=10"></script>
-<script src="art/screen/theater.js?v=20"></script>
+<script src="art/screen/theater.js?v=21"></script>
 </body>
 </html>

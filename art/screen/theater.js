@@ -322,11 +322,41 @@
       b.addEventListener("click", function () { tune(c); });
       dial.appendChild(b);
     });
+    var osd = $(".scr-osd"), osdT = 0;
     var tune = function (c) {
       cur = c; store.set("tv.ch", c.id);
       if (location.hash !== "#" + c.id) history.replaceState(null, "", "#" + c.id);
       state.src = ""; guideKey = ""; tick(true);
+      if (osd) {
+        osd.innerHTML = c.num + "<small>" + esc(c.name) + "</small>"; osd.hidden = false; osd.classList.remove("fade");
+        clearTimeout(osdT); osdT = setTimeout(function () { osd.classList.add("fade"); osdT = setTimeout(function () { osd.hidden = true; }, 450); }, 2200);
+      }
+      // keep the lit-up channel in view in the tuner row (sideways only, so the page doesn't jump)
+      centerDial(c);
     };
+    var centerDial = function (c) { var b = dial.querySelector('[data-id="' + c.id + '"]'); if (b) dial.scrollLeft = b.offsetLeft - (dial.clientWidth - b.offsetWidth) / 2; };
+    setTimeout(function () { dial.style.scrollBehavior = "auto"; centerDial(cur); dial.style.scrollBehavior = ""; }, 0);
+    var step = function (d) { var k = CH.indexOf(cur); tune(CH[(k + d + CH.length) % CH.length]); };
+    document.querySelectorAll(".ch-step").forEach(function (b) { b.addEventListener("click", function () { step(+b.dataset.step); }); });
+    // keyboard: left/right (or up/down when nothing else wants them) change the channel, number keys go straight there
+    var numBuf = "", numT = 0;
+    document.addEventListener("keydown", function (e) {
+      if (e.altKey || e.ctrlKey || e.metaKey) return;
+      var t = e.target; if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable || (t.closest && t.closest(".guide")))) return;
+      if (e.key === "ArrowRight" || e.key === "PageUp" || e.key === "+") { e.preventDefault(); step(1); }
+      else if (e.key === "ArrowLeft" || e.key === "PageDown" || e.key === "-") { e.preventDefault(); step(-1); }
+      else if (/^[0-9]$/.test(e.key)) {
+        numBuf += e.key; clearTimeout(numT);
+        numT = setTimeout(function () { var c = CH.find(function (x) { return String(x.num) === numBuf; }); numBuf = ""; if (c && c !== cur) tune(c); }, 900);
+      }
+    });
+    // swipe sideways on the screen to change channel on a phone
+    var sx = null, sy = 0, scrEl = $(".scr");
+    scrEl.addEventListener("touchstart", function (e) { if (e.touches.length === 1) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; } }, { passive: true });
+    scrEl.addEventListener("touchend", function (e) {
+      if (sx == null) return; var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; sx = null;
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
+    }, { passive: true });
     window.addEventListener("hashchange", function () { var c = pickCh(); if (c !== cur) tune(c); });
     renderInfo = function (n) {
       var it = n.item, show = it.kind === "show" ? it : tvNext(S[cur.id], n.i, "show"), isShow = it.kind === "show";
