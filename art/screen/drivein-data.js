@@ -567,7 +567,6 @@ window.DRIVEIN = {
    },
    {
     "title": "Something to Sing About",
-     "hold": true,
     "year": 1937,
     "gain": 1.0,
     "src": "https://archive.org/download/SomethingtoSingAbout/SomethingtoSingAbout_512kb.mp4",
