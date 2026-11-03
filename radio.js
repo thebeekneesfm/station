@@ -1750,10 +1750,24 @@
     });
     return parts.join("\n");
   }
+  // ticker messages: web addresses and the station's social handles become links (opening in a new tab)
+  const TICK_LINKS = [
+    [/ko-fi\.com\/thebeeskneesfm/g, "https://ko-fi.com/thebeeskneesfm"],
+    [/thebeeskneesfm\.bsky\.social/g, "https://bsky.app/profile/thebeeskneesfm.bsky.social"],
+    [/\bInstagram\b/g, "https://www.instagram.com/thebeeskneesfm/"],
+    [/\bTikTok\b/g, "https://www.tiktok.com/@thebeeskneesfm"],
+    [/\bBluesky\b/g, "https://bsky.app/profile/thebeeskneesfm.bsky.social"]
+  ];
+  function tickLinks(msg) {
+    let h = String(msg).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const marks = [];
+    TICK_LINKS.forEach(([re, url]) => { h = h.replace(re, m => { marks.push('<a href="' + url + '" target="_blank" rel="noopener">' + m + "</a>"); return "\u0000" + (marks.length - 1) + "\u0000"; }); });
+    return h.replace(/\u0000(\d+)\u0000/g, (_, i) => marks[i]);
+  }
   // fit one ticker message: shrink a little on one line, then allow two lines; too long even then → null
   function fitTick(rec, msg) {
     const t = rec.tick, L = rec.L, sp = t.span, base = L.size || 22;
-    sp.textContent = msg;
+    sp.innerHTML = tickLinks(msg);
     for (const lines of [1, 2]) {
       sp.style.whiteSpace = lines === 1 ? "nowrap" : "normal";
       sp.style.lineHeight = lines === 1 ? L.h + "px" : (L.h / 2) + "px";

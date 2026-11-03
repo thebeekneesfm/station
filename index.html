@@ -53,6 +53,8 @@
   .tick { height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; }
   .tick span { display: block; max-width: 100%; transition: opacity .5s ease; }
   .tick span.fading { opacity: 0; }
+  .tick a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; pointer-events: auto; cursor: pointer; }
+  .tick a:hover { color: #8a1f12; }
   /* the scrolling "what's on" line under the little TV */
   .txt.marquee { display: block; overflow: hidden; white-space: nowrap; }
   .txt.marquee .mq-run { display: inline-flex; white-space: pre; animation: tvmq linear infinite; will-change: transform; }
@@ -623,6 +625,6 @@
 <script src="art/screen/drivein-data.js?v=4"></script>
 <script src="art/screen/theater.js?v=19"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261102z"></script>
+<script src="radio.js?v=20261103a"></script>
 </body>
 </html>
