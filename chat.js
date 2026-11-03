@@ -44,6 +44,7 @@
     ".bkc-peek b{color:#a3291a}.bkc-peek.off{opacity:0;transform:translateY(8px);pointer-events:none}.bkc-peek[hidden]{display:none}",
     /* docked: on the TV and Drive-In pages on a wide screen, the chat is a column down the right and the page moves over */
     "html.bkc-docked body{margin-right:400px}",
+    ".bkc-btn.bkc-tab{top:50%;bottom:auto;right:0;transform:translateY(-50%);writing-mode:vertical-rl;padding:18px 12px;box-shadow:-3px 3px 0 rgba(0,0,0,.35)}",
     "html.bkc-docked .bkc{top:0;bottom:0;right:0;width:400px;height:auto;box-shadow:-2px 0 0 #1f1b17,-10px 0 30px rgba(0,0,0,.4);padding-top:env(safe-area-inset-top,0px)}",
     "@media (prefers-reduced-motion:reduce){.bkc-peek{transition:none}}",
     "@media (max-width:520px){.bkc{right:0;left:0;bottom:0;width:auto;height:min(70dvh,560px)}}",
@@ -158,8 +159,12 @@
   }
   // dock beside the page (TV and Drive-In only; the front page keeps its own fixed layout) when the window is wide enough
   var canDock = !!document.querySelector(".stage .scr");
-  function dock() { document.documentElement.classList.toggle("bkc-docked", canDock && !box.hidden && innerWidth >= 1180); }
-  window.addEventListener("resize", dock);
+  function dock() {
+    document.documentElement.classList.toggle("bkc-docked", canDock && !box.hidden && innerWidth >= 1180);
+    // on a wide TV/Drive-In page the button becomes a tab on the right edge, so it never covers the channel buttons under the screen
+    btn.classList.toggle("bkc-tab", canDock && innerWidth >= 1180);
+  }
+  window.addEventListener("resize", dock); dock();
   function open(auto) {
     box.hidden = false; btn.hidden = true; btn.setAttribute("aria-expanded", "true"); hidePeek(); dock();
     if (!started) { started = true; load(true); live(); }

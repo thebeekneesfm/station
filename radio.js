@@ -1540,7 +1540,7 @@
     if (slot.kind === "tv") {
       const sc = slot.sc, c = sc.ch, n = T.tvAt(sc, ms), it = n.item;
       let what = it.kind === "show" ? it.series : it.kind === "ad" ? "A word from our sponsors" : "Station break";
-      const tag = "Ch. " + c.num + " \u00b7 " + what;
+      const tag = c.name + " \u00b7 " + what;
       return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: WORDS.tvGuide, href: "tv.html#" + c.id, key: c.id + (it.src || it.slate) };
     }
     const n = T.driveAt(ms); if (!n) return null;
@@ -1557,7 +1557,7 @@
       const n = T.tvAt(sc, ms); let show = n.item;
       for (let k = n.i; show && show.kind !== "show" && k < sc.list.length - 1; ) show = sc.list[++k];
       const what = show && show.kind === "show" ? (show.series === "Commercial" || show.series === "Cartoon" ? show.title : show.series) : "";
-      return { t: WORDS.tvNowOn + " Ch. " + sc.ch.num + " " + sc.ch.name + (what ? ": " + what : ""), href: "tv.html#" + sc.ch.id };
+      return { t: WORDS.tvNowOn + " " + sc.ch.name + (what ? ": " + what : ""), href: "tv.html#" + sc.ch.id };
     });
     if (window.DRIVEIN) {
       const n = T.driveAt(ms);

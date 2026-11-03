@@ -213,7 +213,7 @@
     vid.pause(); vid.removeAttribute("src"); vid.load(); state.src = "";
     standby.hidden = true; card.hidden = false;
     var w = it.words || {}, html = "";
-    if (it.slate === "id") html = '<p class="sl-k">You are watching</p><p class="sl-big">The Bee\u2019s Knees TV</p><p class="sl-m">Channel ' + esc(w.channel.num) + " \u00b7 " + esc(w.channel.name) + "</p>";
+    if (it.slate === "id") html = '<p class="sl-k">You are watching</p><p class="sl-big">The Bee\u2019s Knees TV</p><p class="sl-m">' + esc(w.channel.name) + "</p>";
     else if (it.slate === "back") html = '<p class="sl-big">We\u2019ll be right back</p><p class="sl-m">' + esc(w.channel.name) + "</p>";
     else if (it.slate === "welcome") html = '<p class="sl-k">Welcome to</p><p class="sl-big">The Bee\u2019s Knees Drive-In</p><p class="sl-m">Tonight is ' + esc(w.theme.name) + "</p>" + (w.feats && w.feats.length ? '<p class="sl-s">' + w.feats.map(function (f) { return esc(f.title); }).join(" &amp; ") + "</p>" : "");
     else if (it.slate === "intermission") html = '<p class="sl-big">Intermission</p><p class="sl-m">' + (w.short ? "The next feature starts in" : "Visit the snack bar! The second feature starts in") + '</p><p class="sl-count">' + mmss(now ? now.left : it.length) + "</p>";
@@ -311,14 +311,14 @@
     CH.forEach(function (c, k) { c.num = c.num || k + 2; });
     var ADS = window.TV_ADS || [];
     var S = {}; CH.forEach(function (c) { S[c.id] = buildChannel(c, ADS); });
-    var pickCh = function () { var h = location.hash.slice(1); return CH.find(function (c) { return c.id === h; }) || CH.find(function (c) { return c.id === store.get("tv.ch", ""); }) || CH[0]; };
+    var pickCh = function () { var h = ({ strange: "unknown" })[location.hash.slice(1)] || location.hash.slice(1); return CH.find(function (c) { return c.id === h; }) || CH.find(function (c) { return c.id === store.get("tv.ch", ""); }) || CH[0]; };
     var cur = pickCh();
     where = function (ms) { return tvAt(S[cur.id], ms || Date.now()); };
     // the channel dial
     var dial = $(".dial");
     CH.forEach(function (c) {
       var b = document.createElement("button"); b.type = "button"; b.className = "ch"; b.dataset.id = c.id;
-      b.innerHTML = '<span class="ch-n">' + c.num + '</span><span class="ch-name">' + esc(c.name) + "</span>";
+      b.innerHTML = '<span class="ch-name">' + esc(c.name) + "</span>";
       b.addEventListener("click", function () { tune(c); });
       dial.appendChild(b);
     });
@@ -329,7 +329,7 @@
       if (location.hash !== "#" + c.id) history.replaceState(null, "", "#" + c.id);
       state.src = ""; guideKey = ""; tick(true);
       if (osd) {
-        osd.innerHTML = c.num + "<small>" + esc(c.name) + "</small>"; osd.hidden = false; osd.classList.remove("fade");
+        osd.innerHTML = "<small>" + esc(c.name) + "</small>"; osd.hidden = false; osd.classList.remove("fade");
         clearTimeout(osdT); osdT = setTimeout(function () { osd.classList.add("fade"); osdT = setTimeout(function () { osd.hidden = true; }, 450); }, 2200);
       }
       // keep the lit-up channel in view in the tuner row (sideways only, so the page doesn't jump)
@@ -339,17 +339,12 @@
     setTimeout(function () { dial.style.scrollBehavior = "auto"; centerDial(cur); dial.style.scrollBehavior = ""; }, 0);
     var step = function (d) { var k = CH.indexOf(cur); tune(CH[(k + d + CH.length) % CH.length]); };
     document.querySelectorAll(".ch-step").forEach(function (b) { b.addEventListener("click", function () { step(+b.dataset.step); }); });
-    // keyboard: left/right (or up/down when nothing else wants them) change the channel, number keys go straight there
-    var numBuf = "", numT = 0;
+    // keyboard: left/right change the channel
     document.addEventListener("keydown", function (e) {
       if (e.altKey || e.ctrlKey || e.metaKey) return;
       var t = e.target; if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA" || t.isContentEditable || (t.closest && t.closest(".guide")))) return;
       if (e.key === "ArrowRight" || e.key === "PageUp" || e.key === "+") { e.preventDefault(); step(1); }
       else if (e.key === "ArrowLeft" || e.key === "PageDown" || e.key === "-") { e.preventDefault(); step(-1); }
-      else if (/^[0-9]$/.test(e.key)) {
-        numBuf += e.key; clearTimeout(numT);
-        numT = setTimeout(function () { var c = CH.find(function (x) { return String(x.num) === numBuf; }); numBuf = ""; if (c && c !== cur) tune(c); }, 900);
-      }
     });
     // swipe sideways on the screen to change channel on a phone
     var sx = null, sy = 0, scrEl = $(".scr");
@@ -361,7 +356,7 @@
     window.addEventListener("hashchange", function () { var c = pickCh(); if (c !== cur) tune(c); });
     renderInfo = function (n) {
       var it = n.item, show = it.kind === "show" ? it : tvNext(S[cur.id], n.i, "show"), isShow = it.kind === "show";
-      $(".np-ch").textContent = "Channel " + cur.num + " \u00b7 " + cur.name;
+      $(".np-ch").textContent = cur.name;
       $(".np-series").textContent = isShow ? it.series : (it.kind === "ad" ? "A word from our sponsors" : "Station break");
       var t = $(".np-title"); t.textContent = isShow ? it.title.replace(new RegExp("^" + it.series.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\s*[-:\u2013\u2014]?\\s*", "i"), "") : (it.kind === "ad" ? it.title : "Up next: " + (show ? show.series : ""));
       t.href = it.item || "#"; t.toggleAttribute("aria-disabled", !it.item);
@@ -400,9 +395,9 @@
           var it = bk.it, name = c.allAds ? "Commercials, back to back" : (generic[it.series] ? it.title : it.series);
           var ep = c.allAds || generic[it.series] ? "" : it.title.replace(it.series, "").replace(/^\s*[-:\u2013\u2014]\s*/, "");
           var on = bk.s <= now && now < bk.e, when = (bk.s < t0 ? "\u25c2 " : "") + clock(bk.s);
-          return '<button type="button" class="tg-b' + (on ? " on" : "") + '" data-id="' + c.id + '" style="left:' + ((a - t0) / 60000 * PPM).toFixed(1) + "px;width:" + (wpx - 2).toFixed(1) + 'px" title="' + esc(clock(bk.s) + "  " + name + (ep ? ": " + ep : "")) + '" aria-label="' + esc("Channel " + c.num + ", " + clock(bk.s) + ", " + name + (ep ? ", " + ep : "") + (on ? ", on now" : "")) + '"><i>' + esc(when) + "</i><b>" + esc(name) + "</b>" + (ep ? "<span>" + esc(ep) + "</span>" : "") + "</button>";
+          return '<button type="button" class="tg-b' + (on ? " on" : "") + '" data-id="' + c.id + '" style="left:' + ((a - t0) / 60000 * PPM).toFixed(1) + "px;width:" + (wpx - 2).toFixed(1) + 'px" title="' + esc(clock(bk.s) + "  " + name + (ep ? ": " + ep : "")) + '" aria-label="' + esc(c.name + ", " + clock(bk.s) + ", " + name + (ep ? ", " + ep : "") + (on ? ", on now" : "")) + '"><i>' + esc(when) + "</i><b>" + esc(name) + "</b>" + (ep ? "<span>" + esc(ep) + "</span>" : "") + "</button>";
         }).join("");
-        rows += '<div class="tg-row' + (c === cur ? " cur" : "") + '"><button type="button" class="tg-name" data-id="' + c.id + '"><span class="g-num">' + c.num + '</span><span class="g-name">' + esc(c.name) + '</span></button><div class="tg-track">' + cells + "</div></div>";
+        rows += '<div class="tg-row' + (c === cur ? " cur" : "") + '"><button type="button" class="tg-name" data-id="' + c.id + '"><span class="g-name">' + esc(c.name) + '</span></button><div class="tg-track">' + cells + "</div></div>";
       });
       var nowX = ((now - t0) / 60000 * PPM).toFixed(1);
       var oldTg = g.querySelector(".tg"), keep = oldTg && oldTg.dataset.moved ? oldTg.scrollLeft : null;
