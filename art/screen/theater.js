@@ -179,7 +179,7 @@
     screen.classList.toggle("muted", !on);
   }
   ["pointerdown", "keydown", "touchend"].forEach(function (ev) {
-    document.addEventListener(ev, function (e) { if (state.blocked && !soundBtn.contains(e.target)) { state.blocked = false; applySound(); go(); } }, true);
+    document.addEventListener(ev, function (e) { if (state.sound) earUnlock(); if (state.blocked && !soundBtn.contains(e.target)) { state.blocked = false; applySound(); go(); } }, true);
   });
   /* Even volume: every video's loudness was measured ahead of time and stored with it as "gain"
      (1 = full volume, smaller = turned down). Loud commercials and hot transfers get turned down to
@@ -190,15 +190,52 @@
     function walk(o) { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === "object") { if (o.src && o.gain != null) GAIN[o.src] = Number(o.gain); for (var k in o) if (o[k] && typeof o[k] === "object") walk(o[k]); } }
     walk(window.TVCH); walk(window.TV_ADS); walk(window.DRIVEIN); walk(window.TV);
   })();
+  /* Sleep timer, like the radio's: each tap steps Off → 15 → 30 → 60 → 90 minutes. The sound fades
+     out over the last 45 seconds, then turns off (the picture keeps going, silently). */
+  var SLEEP_STEPS = [0, 15, 30, 60, 90], sleepBtn = $(".scr-sleep");
+  state.sleepEnd = 0;
+  function sleepFade() { return state.sleepEnd ? Math.max(0, Math.min(1, (state.sleepEnd - Date.now()) / 45000)) : 1; }
+  function showSleep() {
+    if (!sleepBtn) return;
+    sleepBtn.textContent = state.sleepEnd ? "Off in " + Math.max(1, Math.ceil((state.sleepEnd - Date.now()) / 60000)) + " min" : "Sleep timer";
+    sleepBtn.setAttribute("aria-pressed", state.sleepEnd ? "true" : "false");
+  }
+  /* Listening with the screen off: phones stop a video when the screen locks or you switch apps, but
+     they let audio keep playing. So when the page goes out of view with the sound on, the same
+     programme carries on through a plain audio player at the same spot, and the picture picks back
+     up on schedule when you come back. */
+  var ear = null;
+  function earUnlock() {   // phones only let a player make sound later if it was started by a tap once
+    if (!ear) { ear = new Audio(); ear.preload = "auto"; ear.addEventListener("ended", function () { if (state.earOn) tick(true); }); }
+    if (ear.dataset.unlocked) return;
+    ear.dataset.unlocked = "1";
+    ear.muted = true; ear.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=";
+    var p = ear.play(); if (p && p.then) p.then(function () { ear.pause(); }).catch(function () {});
+  }
   function gainOf(src) { if (!src) return 1; var g = GAIN[src]; return g > 0 ? Math.min(1, g) : GAIN_DEFAULT; }
   function applySound() {
     // on a channel with radio underneath, the reels themselves stay silent and the radio carries the sound
-    vid.muted = !state.sound || !!state.blocked || !!state.bedOn; vid.volume = state.vol * gainOf(state.src); if (typeof pre !== "undefined" && pre) pre.muted = true;
-    if (typeof bedEl !== "undefined" && bedEl) { bedEl.muted = !state.sound || !!state.blocked; bedEl.volume = state.vol * gainOf(bedEl.dataset.src); }
+    var fade = sleepFade();
+    vid.muted = !state.sound || !!state.blocked || !!state.bedOn || !!state.earOn; vid.volume = state.vol * fade * gainOf(state.src); if (typeof pre !== "undefined" && pre) pre.muted = true;
+    if (typeof bedEl !== "undefined" && bedEl) { bedEl.muted = !state.sound || !!state.blocked; bedEl.volume = state.vol * fade * gainOf(bedEl.dataset.src); }
+    if (ear) { ear.muted = !state.sound; ear.volume = state.vol * fade * gainOf(ear.dataset.src); }
+    showSleep();
     showSoundState();
   }
-  soundBtn.addEventListener("click", function () { if (state.blocked) { state.blocked = false; state.sound = true; } else state.sound = !state.sound; store.set(MODE + ".sound", state.sound); applySound(); go(); });
+  soundBtn.addEventListener("click", function () { earUnlock(); if (state.blocked) { state.blocked = false; state.sound = true; } else state.sound = !state.sound; store.set(MODE + ".sound", state.sound); applySound(); go(); });
   if (vol) { vol.value = Math.round(state.vol * 100); vol.addEventListener("input", function () { state.vol = vol.value / 100; store.set(MODE + ".vol", state.vol); if (state.vol > 0 && !state.sound) { state.sound = true; store.set(MODE + ".sound", true); } applySound(); }); }
+  if (sleepBtn) sleepBtn.addEventListener("click", function () {
+    var left = state.sleepEnd ? (state.sleepEnd - Date.now()) / 60000 : 0;
+    var next = SLEEP_STEPS.find(function (m) { return m > left + 0.5; }) || 0;
+    state.sleepEnd = next ? Date.now() + next * 60000 : 0;
+    if (next && !state.sound) { state.sound = true; store.set(MODE + ".sound", true); }
+    earUnlock(); applySound(); go();
+  });
+  setInterval(function () {
+    if (!state.sleepEnd) return;
+    if (Date.now() >= state.sleepEnd) { state.sleepEnd = 0; state.sound = false; store.set(MODE + ".sound", false); if (ear) ear.pause(); applySound(); return; }
+    if (state.sleepEnd - Date.now() < 46000) applySound(); else showSleep();
+  }, 1000);
   var fsBtn = $(".scr-full");
   if (fsBtn) fsBtn.addEventListener("click", function () {
     var el = screen;
@@ -372,7 +409,7 @@
     /* The guide: a TV-listings grid, like the one in the Sunday paper. Each channel is a row; the
        columns are half hours, starting at the current half hour and running three hours ahead.
        Station IDs fold into the show before them, and the Commercial Break channel shows as one long block. */
-    var guideKey = "", PPM = 7, SPAN = 180;
+    var guideKey = "", guideShape = "", PPM = 7, SPAN = 180;
     var clock = function (ms) { return new Date(ms).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); };
     var generic = { Commercial: 1, Cartoon: 1, "Home Movie": 1 };
     var renderGuide = function () {
@@ -400,6 +437,11 @@
         rows += '<div class="tg-row' + (c === cur ? " cur" : "") + '"><button type="button" class="tg-name" data-id="' + c.id + '"><span class="g-name">' + esc(c.name) + '</span></button><div class="tg-track">' + cells + "</div></div>";
       });
       var nowX = ((now - t0) / 60000 * PPM).toFixed(1);
+      // nothing changed but the time: just slide the red "now" line instead of rebuilding the grid,
+      // which would interrupt anyone scrolling past it on a phone
+      var shape = t0 + "|" + cur.id + "|" + head + rows;
+      if (guideShape === shape && g.querySelector(".tg-now")) { g.querySelector(".tg-now").style.setProperty("--x", nowX + "px"); return; }
+      guideShape = shape;
       var oldTg = g.querySelector(".tg"), keep = oldTg && oldTg.dataset.moved ? oldTg.scrollLeft : null;
       g.innerHTML = '<div class="tg" tabindex="0" aria-label="TV listings, the next three hours"><div class="tg-in" style="--span:' + SPAN * PPM + 'px"><div class="tg-row tg-head"><span class="tg-name tg-corner">Channel</span><div class="tg-track">' + head + '</div></div>' + rows + '<span class="tg-now" style="--x:' + nowX + 'px" aria-hidden="true"></span></div></div>';
       // start the grid scrolled to right now (narrow screens can't show the whole three hours); once the
@@ -508,11 +550,32 @@
     } else if (bedEl.readyState >= 3 && !bedEl.seeking && Math.abs(bedEl.currentTime - b.offset) > 6) { try { bedEl.currentTime = b.offset; } catch (e) {} }
     if (bedEl.paused) { var p = bedEl.play(); if (p && p.catch) p.catch(function (err) { if (err && err.name === "NotAllowedError" && !bedEl.muted) { state.blocked = true; applySound(); } }); }
   }
+  function earPlay(n) {
+    var it = n.item;
+    if (!it.src || isFailed(it.src)) { if (!ear.paused) ear.pause(); return; }   // a title card: a moment of quiet
+    if (ear.dataset.src !== it.src) {
+      ear.dataset.src = it.src; ear.src = it.src; applySound();
+      ear.addEventListener("loadedmetadata", function seek() { ear.removeEventListener("loadedmetadata", seek); var c = where(); if (c && c.item.src === it.src) { try { ear.currentTime = c.offset; } catch (e) {} } });
+    } else if (ear.readyState >= 3 && !ear.seeking && Math.abs(ear.currentTime - n.offset) > 20) { try { ear.currentTime = n.offset; } catch (e) {} }
+    if (ear.paused) { var p = ear.play(); if (p && p.catch) p.catch(function () {}); }
+    if ("mediaSession" in navigator && window.MediaMetadata) {
+      try { navigator.mediaSession.metadata = new MediaMetadata({ title: it.title || it.series || "", artist: MODE === "tv" ? "The Bee\u2019s Knees TV" : "The Bee\u2019s Knees Drive-In", album: it.series || "", artwork: [{ src: "favicon.ico", sizes: "48x48" }] }); } catch (e) {}
+    }
+  }
+  if ("mediaSession" in navigator) {
+    try {
+      navigator.mediaSession.setActionHandler("pause", function () { state.sound = false; store.set(MODE + ".sound", false); if (ear) ear.pause(); applySound(); });
+      navigator.mediaSession.setActionHandler("play", function () { state.sound = true; store.set(MODE + ".sound", true); applySound(); tick(true); });
+    } catch (e) {}
+  }
   function tick(force) {
     var n = where(); if (!n) return;
     radioUnder(n);
     var key = (n.item.src || n.item.slate) + "@" + (n.item.start != null ? n.item.start : n.item.startMs);
-    if (n.item.slate) { if (force || key !== lastKey || n.item.slate === "intermission") showSlate(n.item, n); }
+    var wantEar = document.hidden && state.sound && !state.bedOn && !!ear && !!ear.dataset.unlocked;
+    if (wantEar !== !!state.earOn) { state.earOn = wantEar; if (wantEar) { vid.pause(); } else if (ear) { ear.pause(); } applySound(); }
+    if (state.earOn) { earPlay(n); }
+    else if (n.item.slate) { if (force || key !== lastKey || n.item.slate === "intermission") showSlate(n.item, n); }
     else if (force || key !== lastKey || !document.hidden) playItem(n.item, n.offset);
     lastKey = key;
     preloadNext(n);
@@ -521,7 +584,7 @@
   }
   onVid("ended", function () { tick(true); });
   setInterval(function () { tick(false); }, 1000);
-  document.addEventListener("visibilitychange", function () { if (!document.hidden) { tick(true); go(); } });
+  document.addEventListener("visibilitychange", function () { tick(true); if (!document.hidden) go(); });
   window.addEventListener("pageshow", function () { tick(true); go(); });
   tick(true);
   $(".scr-start") && $(".scr-start").addEventListener("click", function () { state.sound = true; store.set(MODE + ".sound", true); applySound(); go(); });
