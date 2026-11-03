@@ -451,155 +451,139 @@ window.DRIVEIN = {
    ]
   },
   "3": {
-   "name": "Western Thursday",
-   "films": [
-    {
-     "title": "Angel and the Badman",
-     "year": 1947,
-     "gain": 1.0,
-     "src": "https://archive.org/download/angel_and_the_badman/angel_and_the_badman_512kb.mp4",
-     "length": 5971.23,
-     "item": "https://archive.org/details/angel_and_the_badman"
-    },
-    {
-     "title": "Winds of the Wasteland",
-     "year": 1936,
-     "gain": 0.52,
-     "src": "https://archive.org/download/Winds_of_the_Wasteland/Winds_of_the_Wasteland_512kb.mp4",
-     "length": 3341.72,
-     "item": "https://archive.org/details/Winds_of_the_Wasteland"
-    },
-    {
-     "title": "Abilene Town",
-     "year": 1946,
-     "gain": 0.76,
-     "src": "https://archive.org/download/AbileneTown/AbileneTown_512kb.mp4",
-     "length": 5361.22,
-     "item": "https://archive.org/details/AbileneTown"
-    },
-    {
-     "title": "Hell Town",
-     "year": 1937,
-     "gain": 0.59,
-     "src": "https://archive.org/download/Hell_Town/Hell_Town_512kb.mp4",
-     "length": 3324.6,
-     "item": "https://archive.org/details/Hell_Town"
-    },
-    {
-     "title": "Border Patrolman",
-     "year": 1936,
-     "gain": 1.0,
-     "src": "https://archive.org/download/border_patrolman/border_patrolman_512kb.mp4",
-     "length": 3538.9,
-     "item": "https://archive.org/details/border_patrolman"
-    },
-    {
-     "title": "Rocky Mountain Mystery",
-     "year": 1935,
-     "gain": 0.88,
-     "src": "https://archive.org/download/Rocky_Mountain_Mystery_1935/Rocky_Mountain_Mystery_1935.mp4",
-     "length": 3928.07,
-     "item": "https://archive.org/details/Rocky_Mountain_Mystery_1935"
-    },
-    {
-     "title": "Vengeance Valley",
-     "year": 1951,
-     "gain": 0.81,
-     "src": "https://archive.org/download/VengeanceValley/VengeanceValley_512kb.mp4",
-     "length": 4919.81,
-     "item": "https://archive.org/details/VengeanceValley"
-    },
-    {
-     "title": "Six Gun Trail",
-     "year": 1938,
-     "gain": 0.54,
-     "src": "https://archive.org/download/six_gun_trail/six_gun_trail_512kb.mp4",
-     "length": 3418.95,
-     "item": "https://archive.org/details/six_gun_trail"
-    },
-    {
-     "title": "The Mysterious Rider",
-     "year": 1938,
-     "gain": 1.0,
-     "src": "https://archive.org/download/mark_of_the_avenger_1938/mark_of_the_avenger_512kb.mp4",
-     "length": 4043.01,
-     "item": "https://archive.org/details/mark_of_the_avenger_1938"
-    },
-    {
-     "title": "Arizona Stage Coach",
-     "year": 1942,
-     "gain": 1.0,
-     "src": "https://archive.org/download/arizona_stage_coach/arizona_stage_coach_512kb.mp4",
-     "length": 3396.39,
-     "item": "https://archive.org/details/arizona_stage_coach"
-    },
-    {
-     "title": "The Arizona Raiders",
-     "year": 1936,
-     "gain": 1.0,
-     "src": "https://archive.org/download/TheArizonaRaiders/TheArizonaRaiders.mp4",
-     "length": 3439.5,
-     "item": "https://archive.org/details/TheArizonaRaiders"
-    },
-    {
-     "title": "The Young Land",
-     "year": 1959,
-     "gain": 0.51,
-     "src": "https://archive.org/download/YoungLand/YoungLand.mp4",
-     "length": 5183.65,
-     "item": "https://archive.org/details/YoungLand"
-    },
-    {
-     "title": "Billy the Kid Wanted",
-     "year": 1941,
-     "gain": 0.83,
-     "src": "https://archive.org/download/Billy_the_Kid_Wanted_1941/Billy_the_Kid_Wanted_1941.mp4",
-     "length": 3609.29,
-     "item": "https://archive.org/details/Billy_the_Kid_Wanted_1941"
-    },
-    {
-     "title": "Outlaws of Boulder Pass",
-     "year": 1942,
-     "gain": 1.0,
-     "src": "https://archive.org/download/outlaws_of_boulder_pass/outlaws_of_boulder_pass_512kb.mp4",
-     "length": 3595.19,
-     "item": "https://archive.org/details/outlaws_of_boulder_pass"
-    },
-    {
-     "title": "Two Fisted Law",
-     "year": 1932,
-     "gain": 0.59,
-     "src": "https://archive.org/download/TwoFistedLawWithTimMccoyAndJohnWayne1932/TimMccoyAndJohnWayne-Two-fistedLaw-1932_512kb.mp4",
-     "length": 3413.3,
-     "item": "https://archive.org/details/TwoFistedLawWithTimMccoyAndJohnWayne1932"
-    },
-    {
-     "title": "Rogue Of The Range",
-     "year": 1936,
-     "gain": 0.67,
-     "src": "https://archive.org/download/rogue_on_the_range/rogue_on_the_range_512kb.mp4",
-     "length": 3509.97,
-     "item": "https://archive.org/details/rogue_on_the_range"
-    },
-    {
-     "title": "Randy Rides Alone",
-     "year": 1934,
-     "gain": 0.83,
-     "src": "https://archive.org/download/RandyRidesAlone/RandyRideAlone_512kb.mp4",
-     "length": 3139.75,
-     "item": "https://archive.org/details/RandyRidesAlone"
-    },
-    {
-     "title": "Cavalcade of the West",
-     "year": 1936,
-     "gain": 0.35,
-     "src": "https://archive.org/download/cavalcade_of_the_west/cavalcade_of_the_west_512kb.mp4",
-     "length": 3616.35,
-     "item": "https://archive.org/details/cavalcade_of_the_west"
-    }
-   ]
-  },
-  "4": {
+  "name": "Musical Romance Thursday",
+  "films": [
+   {
+    "title": "Second Chorus",
+    "year": 1940,
+    "gain": 0.32,
+    "src": "https://archive.org/download/second_chorus_1940/second_chorus_512kb.mp4",
+    "length": 5017.58,
+    "item": "https://archive.org/details/second_chorus_1940"
+   },
+   {
+    "title": "Pygmalion",
+    "year": 1938,
+    "gain": 1.0,
+    "src": "https://archive.org/download/Pygmalion/Pygmalion_512kb.mp4",
+    "length": 5703.63,
+    "item": "https://archive.org/details/Pygmalion"
+   },
+   {
+    "title": "Penny Serenade",
+    "year": 1941,
+    "gain": 0.87,
+    "src": "https://archive.org/download/penny_serenade/penny_serenade_512kb.mp4",
+    "length": 7147.21,
+    "item": "https://archive.org/details/penny_serenade"
+   },
+   {
+    "title": "That Uncertain Feeling",
+    "year": 1941,
+    "gain": 0.95,
+    "src": "https://archive.org/download/ThatUncertainFeeling/ThatUncertainFeeling_512kb.mp4",
+    "length": 4998.09,
+    "item": "https://archive.org/details/ThatUncertainFeeling"
+   },
+   {
+    "title": "Rhythm in the Clouds",
+    "year": 1937,
+    "gain": 0.74,
+    "src": "https://archive.org/download/Rhythm_in_the_Clouds/RhythmintheClouds_512kb.mp4",
+    "length": 3166.99,
+    "item": "https://archive.org/details/Rhythm_in_the_Clouds"
+   },
+   {
+    "title": "A Star Is Born",
+    "year": 1937,
+    "gain": 0.67,
+    "src": "https://archive.org/download/AStarIsBorn1937FullHDMovie/A%20Star%20Is%20Born%20%281937%29%20Full%20HD%20Movie.mp4",
+    "length": 6658.02,
+    "item": "https://archive.org/details/AStarIsBorn1937FullHDMovie"
+   },
+   {
+    "title": "Royal Wedding",
+    "year": 1951,
+    "gain": 0.73,
+    "src": "https://archive.org/download/royal_wedding/royal_wedding_512kb.mp4",
+    "length": 5497.39,
+    "item": "https://archive.org/details/royal_wedding"
+   },
+   {
+    "title": "Love Affair",
+    "year": 1939,
+    "gain": 1.0,
+    "src": "https://archive.org/download/love-affair-1939-irene-dunne-eng/Love%20Affair%20%281939%29%20Irene%20Dunne%20Eng.mp4",
+    "length": 5190.24,
+    "item": "https://archive.org/details/love-affair-1939-irene-dunne-eng"
+   },
+   {
+    "title": "My Man Godfrey",
+    "year": 1936,
+    "gain": 0.68,
+    "src": "https://archive.org/download/MyManGodfrey1936/MyManGodfrey1936_512kb.mp4",
+    "length": 5687.07,
+    "item": "https://archive.org/details/MyManGodfrey1936"
+   },
+   {
+    "title": "Pot o' Gold",
+    "year": 1941,
+    "gain": 1.0,
+    "src": "https://archive.org/download/pot_o_gold/pot_o_gold_512kb.mp4",
+    "length": 5130.89,
+    "item": "https://archive.org/details/pot_o_gold"
+   },
+   {
+    "title": "The Animal Kingdom",
+    "year": 1932,
+    "gain": 0.39,
+    "src": "https://archive.org/download/Animal_Kingdom/Animal_Kingdom_512kb.mp4",
+    "length": 5074.37,
+    "item": "https://archive.org/details/Animal_Kingdom"
+   },
+   {
+    "title": "Something to Sing About",
+    "year": 1937,
+    "gain": 1.0,
+    "src": "https://archive.org/download/SomethingtoSingAbout/SomethingtoSingAbout_512kb.mp4",
+    "length": 5208.44,
+    "item": "https://archive.org/details/SomethingtoSingAbout"
+   },
+   {
+    "title": "Lucky Partners",
+    "year": 1940,
+    "gain": 0.31,
+    "src": "https://archive.org/download/lucky-partners/Lucky_Partners.mp4",
+    "length": 5922.48,
+    "item": "https://archive.org/details/lucky-partners"
+   },
+   {
+    "title": "Hi Diddle Diddle",
+    "year": 1943,
+    "gain": 0.68,
+    "src": "https://archive.org/download/HiDiddleDiddle/HiDiddleDiddle1943_512kb.mp4",
+    "length": 4378.52,
+    "item": "https://archive.org/details/HiDiddleDiddle"
+   },
+   {
+    "title": "Holiday",
+    "year": 1930,
+    "gain": 0.83,
+    "src": "https://archive.org/download/Holiday1930AnnHardingMaryAstorEdwardEverettHortonRobertAmesHeddaHopper/Holiday.1930.edwardHGriffith.mp4",
+    "length": 5441.68,
+    "item": "https://archive.org/details/Holiday1930AnnHardingMaryAstorEdwardEverettHortonRobertAmesHeddaHopper"
+   },
+   {
+    "title": "Make a Wish",
+    "year": 1937,
+    "gain": 1.0,
+    "src": "https://archive.org/download/Make_A_Wish_1937/Make-A-Wish-1937_1.mp4",
+    "length": 4555.66,
+    "item": "https://archive.org/details/Make_A_Wish_1937"
+   }
+  ]
+ },
+ "4": {
    "name": "Comedy Friday",
    "films": [
     {

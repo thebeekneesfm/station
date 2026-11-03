@@ -207,7 +207,7 @@ From December 1 to 26 the Drive-In becomes Christmas at the Drive-In: a holiday 
 
 ## The Drive-In
 
-`drive-in.html` runs a theme night every day: Monster Monday, Noir Tuesday, Sci-Fi Wednesday, Western Thursday, Comedy Friday, Creature Feature Saturday and the Sunday Mystery Matinee. In the daytime the screen loops matinee films from the night's theme. At 7:30 PM Pacific the show starts, at the same moment for everyone (the time is `SHOW_AT` in `art/screen/theater.js`): a welcome card, a cartoon, two coming-attraction trailers, a serial chapter (one a night), the first feature, the snack-bar intermission reels, the second feature, and goodnight. The double feature changes every week.
+`drive-in.html` runs a theme night every day: Monster Monday, Noir Tuesday, Sci-Fi Wednesday, Musical Romance Thursday, Comedy Friday, Creature Feature Saturday and the Sunday Mystery Matinee. In the daytime the screen loops matinee films from the night's theme. At 7:30 PM Pacific the show starts, at the same moment for everyone (the time is `SHOW_AT` in `art/screen/theater.js`): a welcome card, a cartoon, two coming-attraction trailers, a serial chapter (one a night), the first feature, the snack-bar intermission reels, the second feature, and goodnight. The double feature changes every week.
 
 The films, trailers, intermission reels and serial are in `art/screen/drivein-data.js`. The playback engine for both pages is `art/screen/theater.js`.
 
