@@ -1768,7 +1768,7 @@
   function fitTick(rec, msg) {
     const t = rec.tick, L = rec.L, sp = t.span, base = L.size || 22;
     sp.innerHTML = tickLinks(msg);
-    for (const lines of [1, 2]) {
+    for (const lines of [1]) {   // one line only: a message too long for the strip is split into pieces instead
       sp.style.whiteSpace = lines === 1 ? "nowrap" : "normal";
       sp.style.lineHeight = lines === 1 ? L.h + "px" : (L.h / 2) + "px";
       const top = lines === 1 ? base : Math.min(base, Math.floor(L.h / 2 / 1.1)), min = lines === 1 ? base * 0.8 : 18;
@@ -1789,6 +1789,13 @@
       const mid = msg.length / 2, k = at.reduce((a, b) => Math.abs(b - mid) < Math.abs(a - mid) ? b : a);
       const a = msg.slice(0, k + cut.length - 1).trim().replace(/,$/, "") + (cut === ": " ? "" : "…"), b = (cut === ": " ? "" : "…") + msg.slice(k + cut.length).trim();
       return tickPieces(rec, a).concat(tickPieces(rec, b));
+    }
+    // no natural pause: break at the space nearest the middle
+    const words = msg.split(" ");
+    if (words.length > 1) {
+      let best = 1, mid = msg.length / 2, pos = 0;
+      for (let i = 1; i < words.length; i++) { pos += words[i - 1].length + 1; if (Math.abs(pos - mid) < Math.abs(best - mid)) best = pos; }
+      return tickPieces(rec, msg.slice(0, best).trim() + "…").concat(tickPieces(rec, "…" + msg.slice(best).trim()));
     }
     return [msg];
   }
