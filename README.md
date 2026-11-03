@@ -293,3 +293,7 @@ The lettering comes from FontSpace and lives in `art/fonts` (no Google Fonts): *
 Approve, hide or delete entries at `guestbook-admin.html` (not linked anywhere, hidden from search engines) with your passcode.
 The passcode lives in Supabase as the Edge Function secret `GUESTBOOK_ADMIN_PASS` (Project settings → Edge Functions → Secrets); change it there any time.
 Entries are stored in the Supabase table `guestbook`; the `guestbook` edge function handles signing (with a spam trap and a limit of 3 entries an hour per visitor) and your approvals.
+
+## Chat
+
+`chat.js` adds a Chat button to the radio, TV and Drive-In pages. It's one shared room; each message shows where the person was ("on TV ch 4", "at the Drive-In"). The panel only connects when someone opens it. Messages go through the `chat` Supabase edge function (slur filter, no links, rate limits) into the `chat` table, and arrive live over Supabase Realtime. Messages older than a week are cleared out. Hide or delete messages on the Chat tab of `guestbook-admin.html` (same passcode as the guest book). `.github/workflows/keep-awake.yml` pings Supabase twice a week so the free project never pauses.

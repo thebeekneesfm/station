@@ -322,6 +322,7 @@
       b.addEventListener("click", function () { tune(c); });
       dial.appendChild(b);
     });
+    window.BK_CHAT_PLACE = function () { return "on TV ch " + cur.num; };
     var osd = $(".scr-osd"), osdT = 0;
     var tune = function (c) {
       cur = c; store.set("tv.ch", c.id);
@@ -419,6 +420,7 @@
 
   /* ---------------- Drive-in page ---------------- */
   if (MODE === "drivein") {
+    window.BK_CHAT_PLACE = "at the Drive-In";
     where = function (ms) { return driveAt(ms || Date.now()); };
     var LABEL = { cartoon: "A cartoon to start", trailer: "Coming attractions", serial: "Tonight\u2019s serial chapter", intermission: "Intermission", feature: "Feature presentation" };
     renderInfo = function (n) {

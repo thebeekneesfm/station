@@ -1,0 +1,18 @@
+# Free Supabase projects pause after a week with no activity. This pings the database once a week
+# (Mondays and Thursdays, to be safe) so the guest book, chat and listener counts never go to sleep.
+# It only reads one row with the public key that's already in config.js. Free on GitHub.
+name: Keep Supabase awake
+on:
+  schedule:
+    - cron: "17 15 * * 1,4"
+  workflow_dispatch:
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ping the database
+        run: |
+          KEY=$(grep -o '"key": *"[^"]*"' config.js | head -1 | sed 's/.*"key": *"\([^"]*\)"/\1/')
+          URL=$(grep -o '"url": *"https://[^"]*supabase.co"' config.js | head -1 | sed 's/.*"\(https[^"]*\)"/\1/')
+          curl -fsS "$URL/rest/v1/guestbook?select=id&limit=1" -H "apikey: $KEY" -H "Authorization: Bearer $KEY" > /dev/null && echo "Supabase is awake"

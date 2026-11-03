@@ -94,7 +94,7 @@
 <body>
 <div class="wrap">
   <header class="paper mast">
-    <div><a class="logo" href="index.html">The Bee's Knees<span>.fm</span></a><p class="tag">Guest book approvals</p></div>
+    <div><a class="logo" href="index.html">The Bee's Knees<span>.fm</span></a><p class="tag">Guest book and chat</p></div>
     <nav class="links" aria-label="Pages"><a class="back" href="guestbook.html">Open the guest book</a></nav>
   </header>
   <main class="paper">
@@ -105,7 +105,7 @@
     </form>
     <p class="note" id="note" role="status" aria-live="polite"></p>
     <div id="panel" hidden>
-      <div class="tabs" role="group" aria-label="Show"><button type="button" data-show="approved" aria-pressed="true">On the page</button><button type="button" data-show="waiting" aria-pressed="false">Hidden</button></div>
+      <div class="tabs" role="group" aria-label="Show"><button type="button" data-show="approved" aria-pressed="true">On the page</button><button type="button" data-show="waiting" aria-pressed="false">Hidden</button><button type="button" data-show="chat" aria-pressed="false">Chat</button></div>
       <ul class="register" id="list"></ul>
     </div>
   </main>
@@ -113,16 +113,29 @@
 <script src="config.js?v=20261102t3"></script>
 <script>
 (function () {
-  var C = (window.RADIO_CONFIG || {}).listeners || {}, FN = C.url + "/functions/v1/guestbook";
+  var C = (window.RADIO_CONFIG || {}).listeners || {}, FN = C.url + "/functions/v1/guestbook", CHAT = C.url + "/functions/v1/chat", chat = null;
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; };
   var pass = "", show = "approved", entries = [];
   try { pass = sessionStorage.getItem("gbpass") || ""; } catch (e) {}
-  function call(action, extra) {
-    return fetch(FN, { method: "POST", headers: { "Content-Type": "application/json", "x-admin-pass": pass }, body: JSON.stringify(Object.assign({ action: action }, extra || {})) })
+  function call(action, extra, url) {
+    return fetch(url || FN, { method: "POST", headers: { "Content-Type": "application/json", "x-admin-pass": pass }, body: JSON.stringify(Object.assign({ action: action }, extra || {})) })
       .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || "Something went wrong."); return j; }); });
   }
+  // the chat tab: everything said in the last week, newest first; hide anything that shouldn't be there
+  function renderChat() {
+    if (!chat) { $("list").innerHTML = '<li class="empty">Loading the chat…</li>'; call("list", {}, CHAT).then(function (j) { chat = j.messages || []; renderChat(); }).catch(function (e) { $("list").innerHTML = '<li class="empty">' + esc(e.message) + "</li>"; }); return; }
+    $("list").innerHTML = chat.length ? chat.map(function (m) {
+      return '<li data-id="' + m.id + '" data-chat="1"' + (m.hidden ? ' style="opacity:.55"' : "") + '><span class="when">' + esc(new Date(m.created_at).toLocaleString()) + '</span><span class="who">' + esc(m.name) + '</span>' +
+        (m.place ? ' <span class="from">' + esc(m.place) + '</span>' : "") + (m.hidden ? ' <span class="from">(hidden)</span>' : "") +
+        ' <span class="from" title="Messages with the same code came from the same connection">#' + esc(m.who) + '</span>' +
+        '<p class="msg">' + esc(m.body) + '</p><div class="acts">' +
+        (m.hidden ? '<button type="button" class="ok" data-act="show">Show it</button>' : '<button type="button" data-act="hide">Hide it</button>') +
+        '<button type="button" class="del" data-act="delete">Delete</button></div></li>';
+    }).join("") : '<li class="empty">Nobody has chatted this week yet.</li>';
+  }
   function render() {
+    if (show === "chat") { chat = null; return renderChat(); }
     var rows = entries.filter(function (e) { return show === "waiting" ? !e.approved : e.approved; });
     var waiting = entries.filter(function (e) { return !e.approved; }).length;
     document.querySelector('[data-show="waiting"]').textContent = "Hidden (" + waiting + ")";
@@ -147,6 +160,13 @@
     var li = b.closest("li"), id = Number(li.dataset.id), act = b.dataset.act;
     if (act === "delete" && b.dataset.sure !== "1") { b.dataset.sure = "1"; b.textContent = "Tap again to delete for good"; return; }
     b.disabled = true;
+    if (li.dataset.chat) {
+      return call(act, { id: id }, CHAT).then(function () {
+        if (act === "delete") chat = chat.filter(function (m) { return m.id !== id; });
+        else chat.forEach(function (m) { if (m.id === id) m.hidden = act === "hide"; });
+        renderChat();
+      }).catch(function (e) { $("note").className = "note err"; $("note").textContent = e.message; b.disabled = false; });
+    }
     call(act, { id: id }).then(function () {
       if (act === "delete") entries = entries.filter(function (e) { return e.id !== id; });
       else entries.forEach(function (e) { if (e.id === id) e.approved = act === "approve"; });

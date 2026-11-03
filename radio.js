@@ -107,6 +107,8 @@
     return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0"); };
 
   /* ---------- state ---------- */
+  // tell the chat where this person is listening
+  window.BK_CHAT_PLACE = () => (state.on && state.station ? "on " + state.station.name : "on the radio");
   const state = {
     on: false,
     dial: store.get("dial", STATIONS[0].dial),
