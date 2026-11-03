@@ -65,15 +65,21 @@
   var peek = document.createElement("div"); peek.className = "bkc-peek off"; peek.hidden = true; peek.setAttribute("aria-hidden", "true");
   function mount() { document.body.appendChild(btn); document.body.appendChild(box); document.body.appendChild(peek); dodge(); poll(true); }
   // the front page has a ticker along the bottom: sit just above it whenever it's on screen
+  var lastLift = -1, dodgeQ = false;
   function dodge() {
+    dodgeQ = false;
     var ticks = document.querySelectorAll(".tick"), lift = 16;
+    if (!ticks.length) { if (lastLift !== 16) { lastLift = 16; document.documentElement.style.setProperty("--bkc-bottom", "16px"); } return; }
     ticks.forEach(function (t) {
       var r = t.getBoundingClientRect();
       if (r.height && r.bottom > innerHeight - 4 && r.top < innerHeight) lift = Math.max(lift, innerHeight - r.top + 10);
     });
-    document.documentElement.style.setProperty("--bkc-bottom", Math.round(lift) + "px");
+    lift = Math.round(lift);
+    if (lift !== lastLift) { lastLift = lift; document.documentElement.style.setProperty("--bkc-bottom", lift + "px"); }  // only touch the page when it actually moves
   }
-  ["resize", "scroll"].forEach(function (ev) { window.addEventListener(ev, function () { requestAnimationFrame(dodge); }, { passive: true }); });
+  // the ticker only matters on the front page; elsewhere don't listen to scrolling at all
+  var hasTick = !!document.querySelector("#frame");
+  ["resize", "scroll"].forEach(function (ev) { if (ev === "scroll" && !hasTick) return; window.addEventListener(ev, function () { if (!dodgeQ) { dodgeQ = true; requestAnimationFrame(dodge); } }, { passive: true }); });
   setTimeout(dodge, 1500); setTimeout(dodge, 4000);
   if (document.body) mount(); else document.addEventListener("DOMContentLoaded", mount);
 

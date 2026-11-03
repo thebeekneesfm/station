@@ -1081,7 +1081,12 @@
     frame.style.height = scrolls ? Math.ceil(H * k) + "px" : "";
     state.scale = k;
   }
+  // phones fire "resize" every time the address bar slides in or out while scrolling; on the phone layout only
+  // the width matters, so ignore height-only changes there instead of re-laying out the whole page mid-scroll
+  let lastW = window.innerWidth;
   window.addEventListener("resize", () => {
+    const wNow = window.innerWidth, sameW = wNow === lastW; lastW = wNow;
+    if (sameW && SK.stage.fit === "width" && isPortrait() === (SK === SKIN.portrait)) return;
     const want = isPortrait() ? SKIN.portrait : SKIN;
     if (want !== SK && !state.editing) { SK = want; W = SK.stage.width; H = SK.stage.height; build(); }
     fit();
@@ -1823,12 +1828,16 @@
   }
   function fitText(rec) {
     const t = rec.el.firstChild, L = rec.L;
+    // a countdown like "6:01 left" changes every second but keeps its length: no need to measure again
+    const tx = t.textContent || "", key = tx.length < 14 ? tx.replace(/\d/g, "0") : tx;   // short ticking text: digits don't matter
+    if (rec.fitLen === key && rec.fitFont === document.fonts?.status && !state.editing) return;
+    rec.fitLen = key; rec.fitFont = document.fonts?.status;
     let size = L.size || 20;
     t.style.fontSize = size + "px";
     const min = size * 0.5;
     while ((t.scrollHeight > L.h + 1 || t.scrollWidth > L.w + 1) && size > min) { size -= 1; t.style.fontSize = size + "px"; }
   }
-  function fitAllText() { els.forEach(rec => { if (rec.L.type === "text") fitText(rec); }); }
+  function fitAllText() { els.forEach(rec => { if (rec.L.type === "text") { rec.fitLen = -1; fitText(rec); } }); }
   // web fonts arrive after the first layout and change how wide text is, so fit everything again then
   if (document.fonts) { document.fonts.ready.then(fitAllText); document.fonts.addEventListener && document.fonts.addEventListener("loadingdone", fitAllText); }
   let frameTick = 0;
@@ -1862,7 +1871,9 @@
         // "below": sit just under another text piece's actual words (e.g. the air date under a one- or two-line title)
         if (L.below && !state.editing) {
           const a = els.get(L.below);
-          if (a && a.el.firstChild) {
+          const bkey = a && a.el.firstChild ? a.el.firstChild.textContent + "|" + state.scale + "|" + a.el.firstChild.style.fontSize : "";
+          if (a && a.el.firstChild && rec.belowKey !== bkey) {
+            rec.belowKey = bkey;
             const t = a.el.firstChild, r = document.createRange(); r.selectNodeContents(t);
             const box = r.getBoundingClientRect(), top = a.el.getBoundingClientRect().top;
             const h = Math.min(a.L.h, box.height ? (box.bottom - top) / (state.scale || 1) : a.L.h);
@@ -1913,7 +1924,8 @@
         rec.frames.forEach((f, i) => { f.hidden = i !== k; });
       }
     });
-    document.body.dataset.phase = state.on ? state.phase : "off";
+    const ph = state.on ? state.phase : "off";
+    if (document.body.dataset.phase !== ph) document.body.dataset.phase = ph;
   }
   setInterval(() => { frameTick++; if (SK.layers.some(l => l.frames)) render(); }, 100);
   setInterval(render, 1000);
