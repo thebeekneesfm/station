@@ -1200,9 +1200,13 @@
       }
       h += `</button>`;
     });
+    // only touch the page when something in the guide actually changed: rewriting it while someone is
+    // flicking past it on a phone stops the scroll dead (that was the "glitch every so often")
+    if (g.html === h) return;
+    g.html = h;
     const top = g.el.scrollTop;
     g.el.innerHTML = h;
-    g.el.scrollTop = top;
+    if (g.el.scrollTop !== top) g.el.scrollTop = top;
   }
 
   /* ---------- reactions: emoji that float up for everyone on the same station ---------- */
