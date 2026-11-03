@@ -58,7 +58,8 @@
     var lo = 0, hi = sched.list.length - 1;
     while (lo < hi) { var mid = (lo + hi + 1) >> 1; if (sched.list[mid].start <= pos) lo = mid; else hi = mid - 1; }
     var it = sched.list[lo];
-    return { i: lo, item: it, offset: pos - it.start, left: it.length - (pos - it.start), startMs: ms - (pos - it.start) * 1000 };
+    // clipStart: an ad cut out of a longer reel of commercials starts that far into the file
+    return { i: lo, item: it, offset: pos - it.start + (it.clipStart || 0), left: it.length - (pos - it.start), startMs: ms - (pos - it.start) * 1000 };
   }
   function tvNext(sched, i, kind) {  // the next item of a kind after position i
     for (var k = 1; k < sched.list.length; k++) { var x = sched.list[(i + k) % sched.list.length]; if (!kind || x.kind === kind) return x; }
@@ -187,7 +188,7 @@
      can't turn a video up past full, so the quietest ones simply play at full. */
   var GAIN = {}, GAIN_DEFAULT = 0.75;
   (function () {
-    function walk(o) { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === "object") { if (o.src && o.gain != null) GAIN[o.src] = Number(o.gain); for (var k in o) if (o[k] && typeof o[k] === "object") walk(o[k]); } }
+    function walk(o) { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === "object") { if (o.src && o.gain != null) GAIN[o.src + (o.clipStart != null ? "#" + o.clipStart : "")] = Number(o.gain); for (var k in o) if (o[k] && typeof o[k] === "object") walk(o[k]); } }
     walk(window.TVCH); walk(window.TV_ADS); walk(window.DRIVEIN); walk(window.TV);
   })();
   /* Sleep timer, like the radio's: each tap steps Off → 15 → 30 → 60 → 90 minutes. The sound fades
@@ -216,7 +217,7 @@
   function applySound() {
     // on a channel with radio underneath, the reels themselves stay silent and the radio carries the sound
     var fade = sleepFade();
-    vid.muted = !state.sound || !!state.blocked || !!state.bedOn || !!state.earOn; vid.volume = state.vol * fade * gainOf(state.src); if (typeof pre !== "undefined" && pre) pre.muted = true;
+    vid.muted = !state.sound || !!state.blocked || !!state.bedOn || !!state.earOn; vid.volume = state.vol * fade * gainOf(state.src + (state.clipKey != null ? "#" + state.clipKey : "")); if (typeof pre !== "undefined" && pre) pre.muted = true;
     if (typeof bedEl !== "undefined" && bedEl) { bedEl.muted = !state.sound || !!state.blocked; bedEl.volume = state.vol * fade * gainOf(bedEl.dataset.src); }
     if (ear) { ear.muted = !state.sound; ear.volume = state.vol * fade * gainOf(ear.dataset.src); }
     showSleep();
@@ -322,12 +323,16 @@
     state.filler = null;
     if (state.src !== it.src) {
       state.retried = false;
-      if (pre.dataset.src === it.src && pre.readyState >= 1 && !inNativeFull()) { swapIn(it, offset); state.started = vid.readyState >= 3; state.loadAt = Date.now(); return; }
+      if (pre.dataset.src === it.src && pre.readyState >= 1 && !inNativeFull()) { state.clipKey = it.clipStart; swapIn(it, offset); state.started = vid.readyState >= 3; state.loadAt = Date.now(); return; }
+      state.clipKey = it.clipStart;
       loadSrc(it.src, function () { var n = where(); return n && n.item.src === it.src ? n.offset : 0; });
     } else {
       // only jump to catch up when the picture is playing smoothly and has drifted a long way;
       // jumping while it is still buffering starts the buffering over and it never catches up
-      if (Math.abs(vid.currentTime - offset) > 30 && vid.readyState >= 3 && !vid.seeking) { try { vid.currentTime = offset; } catch (e) {} }
+      // a new clip from the same reel of commercials: jump to it; otherwise only catch up after a long drift
+      var newClip = it.clipStart != null && state.clipKey !== it.clipStart;
+      if (newClip) { state.clipKey = it.clipStart; applySound(); }
+      if ((newClip || Math.abs(vid.currentTime - offset) > 30) && vid.readyState >= 1 && !vid.seeking) { try { vid.currentTime = offset; } catch (e) {} }
       if (vid.paused) go();
     }
   }
