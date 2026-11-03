@@ -429,6 +429,7 @@
       $(".mq-theme").textContent = th.name;
       $(".mq-feats").textContent = feats.map(function (f) { return f.title; }).join("  \u00b7  ");
       var offShow = it.matinee || it.encore || (it.slate === "intermission" && it.words && it.words.short);
+      window.BK_SHOW_ON = !offShow && now >= dusk;   // the chat opens itself beside the screen during the shared show
       $(".mq-when").textContent = now < dusk ? "Matinee: more " + th.name.replace(/^the /i, "") + " films until the full show starts at " + hhmm(dusk) + "."
         : offShow ? "The show\u2019s over for tonight. The late show runs more " + th.name.replace(/^the /i, "") + " films until midnight."
         : "Tonight\u2019s show is on. It started at " + hhmm(dusk) + ".";

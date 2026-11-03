@@ -35,6 +35,14 @@
     ".bkc-me{font-size:14px;color:#5b5148}.bkc-me button{font:inherit;background:none;border:0;padding:0;color:#a3291a;text-decoration:underline;cursor:pointer}",
     ".bkc-err{font-size:14px;color:#a3291a;min-height:0}.bkc-err:empty{display:none}",
     ".bkc-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}",
+    ".bkc-peek{position:fixed;z-index:30;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(var(--bkc-bottom,16px) + env(safe-area-inset-bottom,0px) + 58px);",
+    "max-width:min(300px,calc(100vw - 32px));padding:10px 14px;background:#efe4c8 url('art/newsprint.jpg') 0 0/640px 640px;color:#1f1b17;cursor:pointer;",
+    "font:400 16px/1.3 'BK Serif',Georgia,serif;box-shadow:0 0 0 2px #1f1b17,0 8px 20px rgba(0,0,0,.4);transition:opacity .5s,transform .5s;overflow-wrap:anywhere}",
+    ".bkc-peek b{color:#a3291a}.bkc-peek.off{opacity:0;transform:translateY(8px);pointer-events:none}.bkc-peek[hidden]{display:none}",
+    /* docked: on the TV and Drive-In pages on a wide screen, the chat is a column down the right and the page moves over */
+    "html.bkc-docked body{margin-right:400px}",
+    "html.bkc-docked .bkc{top:0;bottom:0;right:0;width:400px;height:auto;box-shadow:-2px 0 0 #1f1b17,-10px 0 30px rgba(0,0,0,.4);padding-top:env(safe-area-inset-top,0px)}",
+    "@media (prefers-reduced-motion:reduce){.bkc-peek{transition:none}}",
     "@media (max-width:520px){.bkc{right:0;left:0;bottom:0;width:auto;height:min(70dvh,560px)}}",
     "@media (prefers-color-scheme:dark){.bkc input{background:#fbf6e8;color:#1f1b17}}"
   ].join("");
@@ -51,7 +59,8 @@
     '<input class="bkc-hp" name="website" tabindex="-1" aria-hidden="true">' +
     '<div class="bkc-row"><input class="bkc-body" maxlength="300" placeholder="Say something nice" aria-label="Message"><button class="bkc-send" type="submit">Send</button></div>' +
     '<div class="bkc-err" role="alert"></div></form>';
-  function mount() { document.body.appendChild(btn); document.body.appendChild(box); dodge(); }
+  var peek = document.createElement("div"); peek.className = "bkc-peek off"; peek.hidden = true; peek.setAttribute("aria-hidden", "true");
+  function mount() { document.body.appendChild(btn); document.body.appendChild(box); document.body.appendChild(peek); dodge(); poll(true); }
   // the front page has a ticker along the bottom: sit just above it whenever it's on screen
   function dodge() {
     var ticks = document.querySelectorAll(".tick"), lift = 16;
@@ -81,6 +90,8 @@
   function nearBottom() { return log.scrollHeight - log.scrollTop - log.clientHeight < 60; }
   function add(m, force) {
     if (!m || seen[m.id]) return; seen[m.id] = true;
+    if (m.id > newest) newest = m.id;
+    if (!box.hidden) store.set("bk.chatSeen", String(Math.max(m.id, seenId())));
     var note = log.querySelector(".bkc-note"); if (note) note.remove();
     var stick = force || nearBottom();
     var p = document.createElement("p"); p.className = "bkc-m"; p.style.margin = "0"; p.dataset.id = m.id;
@@ -121,15 +132,67 @@
     if (!sc) { sc = document.createElement("script"); sc.dataset.supabase = "1"; sc.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"; document.head.appendChild(sc); }
     sc.addEventListener("load", go);
   }
-  function open() {
-    box.hidden = false; btn.hidden = true; btn.setAttribute("aria-expanded", "true");
+  // dock beside the page (TV and Drive-In only; the front page keeps its own fixed layout) when the window is wide enough
+  var canDock = !!document.querySelector(".stage .scr");
+  function dock() { document.documentElement.classList.toggle("bkc-docked", canDock && !box.hidden && innerWidth >= 1180); }
+  window.addEventListener("resize", dock);
+  function open(auto) {
+    box.hidden = false; btn.hidden = true; btn.setAttribute("aria-expanded", "true"); hidePeek(); dock();
     if (!started) { started = true; load(true); live(); }
     else load(false);
+    markSeen();
     clearInterval(refreshT); refreshT = setInterval(function () { load(false); }, 60000);
-    (store.get("bk.chatName", "") ? bodyIn : nameIn).focus();
+    if (auto !== true) (store.get("bk.chatName", "") ? bodyIn : nameIn).focus();
   }
-  function close() { box.hidden = true; btn.hidden = false; btn.setAttribute("aria-expanded", "false"); clearInterval(refreshT); btn.focus(); }
-  btn.addEventListener("click", open);
+  function close() {
+    box.hidden = true; btn.hidden = false; btn.setAttribute("aria-expanded", "false"); clearInterval(refreshT); dock(); setBadge();
+    if (window.BK_SHOW_ON) store.set("bk.chatShowClosed", showKey());   // closed during the show: don't pop it open again tonight
+    btn.focus();
+  }
+
+  /* While the chat is closed: check once a minute for new messages with one small request (no live connection),
+     put a count on the button, and let the newest one peek out for a few seconds. */
+  var newest = 0, unseen = 0, peekT = 0;
+  function seenId() { return +store.get("bk.chatSeen", "0") || 0; }
+  function markSeen() { if (newest) store.set("bk.chatSeen", String(newest)); unseen = 0; setBadge(); }
+  function setBadge() { btn.textContent = unseen > 0 ? "Chat \u00b7 " + (unseen > 9 ? "9+" : unseen) + " new" : "Chat"; }
+  function hidePeek() { clearTimeout(peekT); peek.classList.add("off"); peekT = setTimeout(function () { peek.hidden = true; }, 500); }
+  function showPeek(m) {
+    peek.innerHTML = ""; var b = document.createElement("b"); b.textContent = m.name + ": "; peek.appendChild(b);
+    peek.appendChild(document.createTextNode(m.body.length > 90 ? m.body.slice(0, 88) + "\u2026" : m.body));
+    clearTimeout(peekT); peek.hidden = false; requestAnimationFrame(function () { peek.classList.remove("off"); });
+    peekT = setTimeout(hidePeek, 7000);
+  }
+  peek.addEventListener("click", function () { open(); });
+  function poll(first) {
+    if (document.hidden) return;
+    var since = new Date(Date.now() - 864e5).toISOString(), after = Math.max(seenId(), first ? 0 : newest);
+    fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&id=gt." + after + "&order=id.desc&limit=20", { headers: HDR })
+      .then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (list) {
+        if (!Array.isArray(list) || !list.length) return;
+        var top = list[0], wasNewest = newest;
+        newest = Math.max(newest, top.id);
+        if (!box.hidden) { markSeen(); return; }
+        unseen = list.filter(function (m) { return m.id > seenId(); }).length; setBadge();
+        // peek at a brand-new message, or on arrival at one from the last 15 minutes
+        var fresh = first ? Date.now() - new Date(top.created_at).getTime() < 15 * 6e4 : top.id > wasNewest;
+        if (fresh && top.id > seenId()) showPeek(top);
+      }).catch(function () {});
+    autoOpen();
+  }
+  setInterval(function () { poll(false); }, 60000);
+  document.addEventListener("visibilitychange", function () { if (!document.hidden) poll(false); });
+
+  // the Drive-In's shared show: open the chat beside the screen on a computer, once a night
+  function showKey() { return new Date().toISOString().slice(0, 10); }
+  function autoOpen() {
+    if (!window.BK_SHOW_ON || !box.hidden || innerWidth < 1180) return;
+    if (store.get("bk.chatShowClosed", "") === showKey()) return;
+    open(true);
+  }
+  setInterval(autoOpen, 15000); setTimeout(autoOpen, 3000);
+  btn.addEventListener("click", function () { open(); });
   $(".bkc-x").addEventListener("click", close);
   box.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); e.stopPropagation(); });  // keep page shortcuts (TV channel keys) out of the chat
   // close and reconnect politely when the tab is hidden for a long time
