@@ -322,7 +322,7 @@
       b.addEventListener("click", function () { tune(c); });
       dial.appendChild(b);
     });
-    window.BK_CHAT_PLACE = function () { return "on TV ch " + cur.num; };
+    window.BK_CHAT_PLACE = function () { return "watching " + cur.name; };
     var osd = $(".scr-osd"), osdT = 0;
     var tune = function (c) {
       cur = c; store.set("tv.ch", c.id);
