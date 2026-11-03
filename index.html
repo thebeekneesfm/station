@@ -369,6 +369,18 @@
      every time the address bar slides in or out (that was the flicker while scrolling) */
   html.scrolls body { position: relative; padding-bottom: 80px; }   /* room so the Chat button never covers the last links */
   html.scrolls body::before { position: absolute; inset: 0; height: auto; }
+  /* On phones, Safari was running out of memory and reloading the page ("A problem repeatedly occurred").
+     The culprits are effects that make it paint big hidden copies of the page: drop-shadow filters on the
+     tall newspaper pieces, colour filters on the playing videos and the blend mode on the funnies thumbnail.
+     On the phone layout they're swapped for plain shadows or left off; it looks nearly the same. */
+  html.phone .layer:has(> .look-paper), html.phone .layer:has(> .look-listings), html.phone .t-funnies { filter: none; }
+  html.phone .look-paper, html.phone .look-listings, html.phone .t-funnies > * { box-shadow: 2px 3px 0 rgba(0,0,0,.22); }
+  html.phone .t-tv video, html.phone .t-video video { filter: none; }
+  html.phone .fn-pic img { mix-blend-mode: normal; filter: none; }
+  /* playing videos and the scrolling line get their own GPU layers; anything drawn on top of them then
+     needs extra full-size copies too. Keep those few pieces on top of everything else so nothing does. */
+  .layer.t-tv { z-index: 900 !important; }
+  #stage { overflow: clip; }
   body { background: transparent !important; }
   #frame { background: transparent; }
   .look-wall { background: transparent; }
@@ -629,7 +641,7 @@
 <script src="art/screen/drivein-data.js?v=9"></script>
 <script src="art/screen/theater.js?v=27"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261103g"></script>
+<script src="radio.js?v=20261103h"></script>
 <script src="chat.js?v=5"></script>
 </body>
 </html>
