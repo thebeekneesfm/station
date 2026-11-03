@@ -17,7 +17,7 @@ window.RADIO_CONFIG = {
     "Welcome to The Bee's Knees!",
     "No generative AI here, ever: every picture is real vintage ephemera or drawn by a real artist, and every song and show is a real old recording from the Internet Archive",
     "Become a member at ko-fi.com/thebeeskneesfm: members are thanked by name right here on the ticker, and Sponsor members put their name on a station of their choice for the month",
-    "Follow The Bee's Knees: @thebeeskneesfm on Instagram and TikTok, and thebeeskneesfm.bsky.social on Bluesky",
+    "Follow The Bee's Knees: @thebeeskneesfm on Instagram, TikTok and YouTube, and thebeeskneesfm.bsky.social on Bluesky",
     "Enjoying the vibes? Consider becoming a member or making a donation at ko-fi.com/thebeeskneesfm",
   ],
   /* Sponsor-tier members: which station each one sponsors this month.

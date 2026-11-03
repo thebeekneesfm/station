@@ -265,6 +265,8 @@ The audio streams from the Internet Archive, so it costs you nothing to host. Sp
 - **The 78s** here are all 1925 or earlier. US sound recordings from 1925 and earlier are public domain, and 1926 joins them on January 1, 2027.
 - **The radio shows** are in a grayer zone. The recordings are widely treated as public domain, but some scripts and the music inside them can still be under copyright. Public stations air this material all the time, but if you ever restream it on YouTube or Twitch, expect automated copyright claims.
 
+The inside pages (TV, Drive-In, comics, magazines, ads, About and Guest Book) show the same news in a strip under the masthead, from `ticker.js`: member thank-yous, recent tips and the `announcements` in `config.js`. Long messages are shown in pieces so the strip never changes height.
+
 ## Ko-fi thank-yous in the ticker
 
 When someone tips or joins a membership on Ko-fi, Ko-fi sends the details to a small Supabase function (`kofi-webhook`), which saves it in the `tips` table. The ticker shows the five most recent from the last two weeks. Names and messages are only saved when the supporter made the tip public on Ko-fi; emails are never saved, and the website can't read the amounts.

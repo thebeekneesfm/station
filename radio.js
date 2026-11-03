@@ -1767,6 +1767,7 @@
     [/thebeeskneesfm\.bsky\.social/g, "https://bsky.app/profile/thebeeskneesfm.bsky.social"],
     [/\bInstagram\b/g, "https://www.instagram.com/thebeeskneesfm/"],
     [/\bTikTok\b/g, "https://www.tiktok.com/@thebeeskneesfm"],
+    [/\bYouTube\b/g, "https://www.youtube.com/@thebeeskneesfm"],
     [/\bBluesky\b/g, "https://bsky.app/profile/thebeeskneesfm.bsky.social"]
   ];
   function tickLinks(msg) {
