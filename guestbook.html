@@ -114,7 +114,7 @@
       <button class="send" id="gb-send" type="submit">Sign the guest book</button>
       <p class="note" id="gb-note" role="status" aria-live="polite"></p>
     </form>
-    <p class="small">Entries show up here once I've read them, usually within a day. Please don't share anything private: whatever you write, everyone can see.</p>
+    <p class="small">Your entry shows up here right away. Please don't share anything private: whatever you write, everyone can see.</p>
 
     <h2>Who's been by</h2>
     <ul class="register" id="register"><li class="empty">Opening the register&hellip;</li></ul>
@@ -151,7 +151,7 @@
       .then(function (res) {
         if (!res.ok) throw new Error(res.j && res.j.error || "");
         $("sign").reset(); $("gb-count").textContent = "600 left";
-        note.className = "note ok"; note.textContent = "Thank you for signing! Your entry will appear once it's been read.";
+        note.className = "note ok"; note.textContent = "Thank you for signing! You're in the guest book."; load();
       })
       .catch(function (e) { note.className = "note err"; note.textContent = (e && e.message) || "That didn't go through. Please try again in a minute."; })
       .then(function () { btn.disabled = false; });

@@ -98,14 +98,14 @@
     <nav class="links" aria-label="Pages"><a class="back" href="guestbook.html">Open the guest book</a></nav>
   </header>
   <main class="paper">
-    <h1>Approve entries</h1>
+    <h1>Guest book entries</h1>
     <form class="bar" id="login">
       <label for="pass">Passcode<input id="pass" type="password" autocomplete="current-password"></label>
       <button class="send" type="submit">Open</button>
     </form>
     <p class="note" id="note" role="status" aria-live="polite"></p>
     <div id="panel" hidden>
-      <div class="tabs" role="group" aria-label="Show"><button type="button" data-show="waiting" aria-pressed="true">Waiting</button><button type="button" data-show="approved" aria-pressed="false">Approved</button></div>
+      <div class="tabs" role="group" aria-label="Show"><button type="button" data-show="approved" aria-pressed="true">On the page</button><button type="button" data-show="waiting" aria-pressed="false">Hidden</button></div>
       <ul class="register" id="list"></ul>
     </div>
   </main>
@@ -116,7 +116,7 @@
   var C = (window.RADIO_CONFIG || {}).listeners || {}, FN = C.url + "/functions/v1/guestbook";
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; };
-  var pass = "", show = "waiting", entries = [];
+  var pass = "", show = "approved", entries = [];
   try { pass = sessionStorage.getItem("gbpass") || ""; } catch (e) {}
   function call(action, extra) {
     return fetch(FN, { method: "POST", headers: { "Content-Type": "application/json", "x-admin-pass": pass }, body: JSON.stringify(Object.assign({ action: action }, extra || {})) })
@@ -125,13 +125,13 @@
   function render() {
     var rows = entries.filter(function (e) { return show === "waiting" ? !e.approved : e.approved; });
     var waiting = entries.filter(function (e) { return !e.approved; }).length;
-    document.querySelector('[data-show="waiting"]').textContent = "Waiting (" + waiting + ")";
+    document.querySelector('[data-show="waiting"]').textContent = "Hidden (" + waiting + ")";
     $("list").innerHTML = rows.length ? rows.map(function (e) {
       return '<li data-id="' + e.id + '"><span class="when">' + esc(new Date(e.created_at).toLocaleString()) + '</span><span class="who">' + esc(e.name) + '</span>' + (e.town ? ' <span class="from">of ' + esc(e.town) + '</span>' : "") +
         '<p class="msg">' + esc(e.message) + '</p><div class="acts">' +
-        (e.approved ? '<button type="button" data-act="unapprove">Hide it again</button>' : '<button type="button" class="ok" data-act="approve">Approve</button>') +
+        (e.approved ? '<button type="button" data-act="unapprove">Hide it</button>' : '<button type="button" class="ok" data-act="approve">Show it</button>') +
         '<button type="button" class="del" data-act="delete">Delete</button></div></li>';
-    }).join("") : '<li class="empty">' + (show === "waiting" ? "Nothing waiting. All caught up!" : "No approved entries yet.") + "</li>";
+    }).join("") : '<li class="empty">' + (show === "waiting" ? "Nothing hidden." : "No entries yet.") + "</li>";
   }
   function open() {
     $("note").className = "note"; $("note").textContent = "Opening…";
