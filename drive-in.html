@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Bee's Knees Drive-In · The Bee's Knees.fm</title>
-<meta name="description" content="A double feature every night at dusk, with cartoons, trailers, serials and the snack-bar intermission, and an afternoon matinee in the daytime. A different theme each night.">
+<meta name="description" content="A double feature every night at 7:30 Pacific, with cartoons, trailers, serials and the snack-bar intermission, and an afternoon matinee in the daytime. A different theme each night.">
 <link rel="preconnect" href="https://archive.org">
 <link rel="canonical" href="https://thebeesknees.fm/drive-in.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Bee's Knees.fm">
 <meta property="og:title" content="The Bee's Knees Drive-In · The Bee's Knees.fm">
-<meta property="og:description" content="A double feature every night at dusk, with cartoons, trailers, serials and the snack-bar intermission, and an afternoon matinee in the daytime. A different theme each night.">
+<meta property="og:description" content="A double feature every night at 7:30 Pacific, with cartoons, trailers, serials and the snack-bar intermission, and an afternoon matinee in the daytime. A different theme each night.">
 <meta property="og:url" content="https://thebeesknees.fm/drive-in.html">
 <meta property="og:image" content="https://thebeesknees.fm/art/share.jpg?v=2">
 <meta property="og:image:width" content="1200">
@@ -91,7 +91,22 @@
   .report { font-size: 16px; color: var(--ink-2); margin-top: 8px; }
   .report a { color: var(--ink-2); }
   h2.sec { margin: 0; font: 700 clamp(30px, 5vw, 38px)/1.1 "BK Script", "BK Serif", Georgia, serif; color: var(--cream); text-shadow: 0 2px 3px rgba(0,0,0,.8); word-spacing: .15em; }
-  @media (min-width: 980px) { .stage { grid-template-columns: minmax(0, 1.55fr) minmax(320px, 1fr); align-items: start; } }
+  /* one big screen, now-playing strip underneath */
+  .stage { gap: 0; }
+  .scr { width: min(100%, calc((100vh - 150px) * 4 / 3)); justify-self: center; }
+  .np { padding: 16px 22px; grid-template-columns: minmax(0, 1fr) auto; gap: 8px 24px; align-items: center; margin-top: 14px; }
+  .np-what { min-width: 0; display: grid; gap: 2px; }
+  .np-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+  .np-series { font-size: clamp(24px, 3vw, 32px); }
+  .np-title { font-size: clamp(22px, 2.6vw, 30px); }
+  .np-date, .np-left, .np-next { font-size: 18px; }
+  .np-when { text-align: right; display: grid; gap: 2px; }
+  .np .scr-ctrl { grid-column: 1 / -1; padding-top: 10px; border-top: 1.5px solid rgba(31,27,23,.22); }
+  .np .scr-vol { color: var(--ink); text-shadow: none; }
+  .report { margin: -6px 4px 0; color: var(--cream); text-shadow: 0 1px 2px rgba(0,0,0,.8); }
+  .report a { color: var(--cream); }
+  .report .email { user-select: all; }
+  @media (max-width: 640px) { .np { grid-template-columns: 1fr; padding: 14px 16px; } .np-when { text-align: left; } }
 
   .marquee { padding: 18px 24px; text-align: center; display: grid; gap: 4px; }
   .mq-theme { font: 400 clamp(34px, 5.5vw, 56px)/1 "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; color: var(--red); }
@@ -136,15 +151,20 @@
   </header>
   <section class="paper marquee"><div class="mq-theme"></div><div class="mq-feats"></div><div class="mq-when"></div></section>
   <div class="stage">
-    <div><div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby" role="status" aria-label="Please stand by"><video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video></div><div class="scr-slate" hidden></div></div><div class="scr-ctrl"><button type="button" class="scr-sound" aria-pressed="false">Turn on the sound</button><label class="scr-vol">Volume <input type="range" min="0" max="100" aria-label="Volume"></label><button type="button" class="scr-full">Full screen</button></div></div>
-    <section class="paper np" aria-live="polite"><div class="np-ch"></div><div class="np-series"></div><a class="np-title" target="_blank" rel="noopener" href="#"></a><div class="np-date"></div><div class="np-left"></div><div class="np-next"></div><p class="report">Something here that shouldn’t be? Email <span class="email">thebeeskneesfm@gmail.com</span> and it comes off the schedule.</p></section>
+    <div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby" role="status" aria-label="Please stand by"><video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video></div><div class="scr-slate" hidden></div></div>
+    <section class="paper np" aria-live="polite">
+      <div class="np-what"><div class="np-ch"></div><div class="np-line"><span class="np-series"></span> <a class="np-title" target="_blank" rel="noopener" href="#"></a></div><div class="np-date"></div></div>
+      <div class="np-when"><div class="np-left"></div><div class="np-next"></div></div>
+      <div class="scr-ctrl"><button type="button" class="scr-sound" aria-pressed="false">Turn on the sound</button><label class="scr-vol">Volume <input type="range" min="0" max="100" aria-label="Volume"></label><button type="button" class="scr-full">Full screen</button></div>
+    </section>
   </div>
+  <p class="report">Something here that shouldn’t be? Email <span class="email">thebeeskneesfm@gmail.com</span> and it comes off the schedule.</p>
   <h2 class="sec">How the drive-in works</h2>
   <section class="paper how">
     <div class="how-text">
       <p>It runs on a clock, like a real drive-in. Everyone watching sees the same moment, so you join the show wherever it&rsquo;s at.</p>
-      <p>Every night has a theme and a new double feature, listed below. The full show starts at dusk, <b class="how-dusk"></b> where you are this time of year, and runs like tonight&rsquo;s program here.</p>
-      <p>Before dusk there&rsquo;s a matinee, and after the show there&rsquo;s a late show until midnight. Both play more films from that night&rsquo;s theme back to back, so there&rsquo;s always something on the screen.</p>
+      <p>Every night has a theme and a new double feature, listed below. The full show starts at the same moment for everyone: 7:30 PM Pacific, which is <b class="how-dusk"></b> where you are. It runs like tonight&rsquo;s program here.</p>
+      <p>Before the show there&rsquo;s a matinee, and after the show there&rsquo;s a late show until midnight. Both play more films from that night&rsquo;s theme back to back, so there&rsquo;s always something on the screen.</p>
     </div>
     <div class="how-prog">
       <h3>Tonight&rsquo;s program</h3>
@@ -156,6 +176,6 @@
 </div>
 <script src="tv.js?v=20261102b"></script>
 <script src="art/screen/drivein-data.js?v=4"></script>
-<script src="art/screen/theater.js?v=19"></script>
+<script src="art/screen/theater.js?v=20"></script>
 </body>
 </html>
