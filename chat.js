@@ -34,6 +34,9 @@
     ".bkc-send{font:700 17px/1 'BK Serif',Georgia,serif;background:#1f1b17;color:#f4ead2;border:0;padding:0 16px;cursor:pointer}",
     ".bkc-me{font-size:14px;color:#5b5148}.bkc-me button{font:inherit;background:none;border:0;padding:0;color:#a3291a;text-decoration:underline;cursor:pointer}",
     ".bkc-err{font-size:14px;color:#a3291a;min-height:0}.bkc-err:empty{display:none}",
+    ".bkc-name-row{display:grid;gap:6px}.bkc-name-row[hidden]{display:none}.bkc-cols{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px;color:#5b5148}",
+    ".bkc-col{width:24px;height:24px;border-radius:50%;border:2px solid #fbf6e8;box-shadow:0 0 0 1.5px rgba(31,27,23,.35);cursor:pointer;padding:0}",
+    ".bkc-col[aria-checked=true]{box-shadow:0 0 0 2.5px #1f1b17}",
     ".bkc-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}",
     ".bkc-peek{position:fixed;z-index:30;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(var(--bkc-bottom,16px) + env(safe-area-inset-bottom,0px) + 58px);",
     "max-width:min(300px,calc(100vw - 32px));padding:10px 14px;background:#efe4c8 url('art/newsprint.jpg') 0 0/640px 640px;color:#1f1b17;cursor:pointer;",
@@ -54,7 +57,7 @@
   box.className = "bkc"; box.hidden = true; box.setAttribute("aria-label", "Chat");
   box.innerHTML = '<div class="bkc-head"><span class="bkc-title">The Bee’s Knees chat</span><button type="button" class="bkc-x" aria-label="Close chat">×</button></div>' +
     '<div class="bkc-log" role="log" aria-live="polite"><p class="bkc-note">Tuning in…</p></div>' +
-    '<form class="bkc-form" autocomplete="off"><div class="bkc-name-row bkc-row"><input class="bkc-name" maxlength="30" placeholder="Your name" aria-label="Your name"></div>' +
+    '<form class="bkc-form" autocomplete="off"><div class="bkc-name-row"><input class="bkc-name" maxlength="30" placeholder="Username" aria-label="Username"><div class="bkc-cols" role="radiogroup" aria-label="Username color"></div></div>' +
     '<div class="bkc-me" hidden>Chatting as <b></b> · <button type="button">change</button></div>' +
     '<input class="bkc-hp" name="website" tabindex="-1" aria-hidden="true">' +
     '<div class="bkc-row"><input class="bkc-body" maxlength="300" placeholder="Say something nice" aria-label="Message"><button class="bkc-send" type="submit">Send</button></div>' +
@@ -78,13 +81,28 @@
   var log = $(".bkc-log"), nameIn = $(".bkc-name"), bodyIn = $(".bkc-body"), err = $(".bkc-err"), me = $(".bkc-me"), nameRow = $(".bkc-name-row");
   var seen = {}, started = false, client = null, chan = null, refreshT = 0;
 
+  // username colors: one is picked at random the first time, and people can change it
+  var COLS = { red: "#a3291a", blue: "#1f4e8c", green: "#2f6b2f", purple: "#6b3a8a", teal: "#1d6b6b", orange: "#b5561b", brown: "#7a4a1f", pink: "#a8326b" }, KEYS = Object.keys(COLS);
+  var myCol = store.get("bk.chatColor", "");
+  if (!COLS[myCol]) { myCol = KEYS[Math.floor(Math.random() * KEYS.length)]; store.set("bk.chatColor", myCol); }
+  var cols = $(".bkc-cols"); cols.appendChild(document.createTextNode("Color:"));
+  KEYS.forEach(function (k) {
+    var b = document.createElement("button"); b.type = "button"; b.className = "bkc-col"; b.dataset.col = k;
+    b.setAttribute("role", "radio"); b.setAttribute("aria-label", k); b.style.background = COLS[k];
+    b.addEventListener("click", function () { myCol = k; store.set("bk.chatColor", k); paintCols(); });
+    cols.appendChild(b);
+  });
+  function paintCols() {
+    cols.querySelectorAll(".bkc-col").forEach(function (b) { b.setAttribute("aria-checked", b.dataset.col === myCol ? "true" : "false"); });
+    nameIn.style.color = COLS[myCol]; me.querySelector("b").style.color = COLS[myCol];
+  }
   function showName() {
     var n = store.get("bk.chatName", "");
     nameIn.value = n;
     nameRow.hidden = !!n; me.hidden = !n; me.querySelector("b").textContent = n;
   }
   me.querySelector("button").addEventListener("click", function () { nameRow.hidden = false; me.hidden = true; nameIn.focus(); nameIn.select(); });
-  showName();
+  showName(); paintCols();
 
   function hhmm(iso) { var d = new Date(iso); return d.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); }
   function nearBottom() { return log.scrollHeight - log.scrollTop - log.clientHeight < 60; }
@@ -95,7 +113,7 @@
     var note = log.querySelector(".bkc-note"); if (note) note.remove();
     var stick = force || nearBottom();
     var p = document.createElement("p"); p.className = "bkc-m"; p.style.margin = "0"; p.dataset.id = m.id;
-    var n = document.createElement("span"); n.className = "bkc-n"; n.textContent = m.name;
+    var n = document.createElement("span"); n.className = "bkc-n"; n.textContent = m.name; if (COLS[m.color]) n.style.color = COLS[m.color];
     var t = document.createElement("span"); t.className = "bkc-t"; t.textContent = hhmm(m.created_at);
     p.appendChild(n);
     if (m.place) { var w = document.createElement("span"); w.className = "bkc-w"; w.textContent = " " + m.place; p.appendChild(w); }
@@ -108,7 +126,7 @@
   }
   function load(first) {
     var since = new Date(Date.now() - 2 * 864e5).toISOString();
-    return fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body,place&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&order=id.desc&limit=80", { headers: HDR })
+    return fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body,place,color&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&order=id.desc&limit=80", { headers: HDR })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (list) {
         if (!Array.isArray(list)) return;
@@ -158,7 +176,7 @@
   function setBadge() { btn.textContent = unseen > 0 ? "Chat \u00b7 " + (unseen > 9 ? "9+" : unseen) + " new" : "Chat"; }
   function hidePeek() { clearTimeout(peekT); peek.classList.add("off"); peekT = setTimeout(function () { peek.hidden = true; }, 500); }
   function showPeek(m) {
-    peek.innerHTML = ""; var b = document.createElement("b"); b.textContent = m.name + ": "; peek.appendChild(b);
+    peek.innerHTML = ""; var b = document.createElement("b"); b.textContent = m.name + ": "; if (COLS[m.color]) b.style.color = COLS[m.color]; peek.appendChild(b);
     peek.appendChild(document.createTextNode(m.body.length > 90 ? m.body.slice(0, 88) + "\u2026" : m.body));
     clearTimeout(peekT); peek.hidden = false; requestAnimationFrame(function () { peek.classList.remove("off"); });
     peekT = setTimeout(hidePeek, 7000);
@@ -167,7 +185,7 @@
   function poll(first) {
     if (document.hidden) return;
     var since = new Date(Date.now() - 864e5).toISOString(), after = Math.max(seenId(), first ? 0 : newest);
-    fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&id=gt." + after + "&order=id.desc&limit=20", { headers: HDR })
+    fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body,color&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&id=gt." + after + "&order=id.desc&limit=20", { headers: HDR })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (list) {
         if (!Array.isArray(list) || !list.length) return;
@@ -202,11 +220,11 @@
   $(".bkc-form").addEventListener("submit", function (e) {
     e.preventDefault(); if (sending) return;
     var name = nameIn.value.trim(), body = bodyIn.value.trim();
-    if (!name) { err.textContent = "Pick a name to chat with."; nameRow.hidden = false; me.hidden = true; nameIn.focus(); return; }
+    if (!name) { err.textContent = "Pick a username to chat with."; nameRow.hidden = false; me.hidden = true; nameIn.focus(); return; }
     if (!body) { bodyIn.focus(); return; }
     var place = ""; try { place = typeof window.BK_CHAT_PLACE === "function" ? window.BK_CHAT_PLACE() : (window.BK_CHAT_PLACE || ""); } catch (x) {}
     sending = true; err.textContent = "";
-    fetch(FN, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: name, body: body, place: place, website: $(".bkc-hp").value }) })
+    fetch(FN, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: name, color: myCol, body: body, place: place, website: $(".bkc-hp").value }) })
       .then(function (r) { return r.json().catch(function () { return {}; }); })
       .then(function (res) {
         if (res && res.ok) { store.set("bk.chatName", name); showName(); bodyIn.value = ""; if (res.message) add(res.message, true); }

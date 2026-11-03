@@ -123,10 +123,11 @@
       .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.error || "Something went wrong."); return j; }); });
   }
   // the chat tab: everything said in the last week, newest first; hide anything that shouldn't be there
+  var CC = { red: "#a3291a", blue: "#1f4e8c", green: "#2f6b2f", purple: "#6b3a8a", teal: "#1d6b6b", orange: "#b5561b", brown: "#7a4a1f", pink: "#a8326b" };
   function renderChat() {
     if (!chat) { $("list").innerHTML = '<li class="empty">Loading the chat…</li>'; call("list", {}, CHAT).then(function (j) { chat = j.messages || []; renderChat(); }).catch(function (e) { $("list").innerHTML = '<li class="empty">' + esc(e.message) + "</li>"; }); return; }
     $("list").innerHTML = chat.length ? chat.map(function (m) {
-      return '<li data-id="' + m.id + '" data-chat="1"' + (m.hidden ? ' style="opacity:.55"' : "") + '><span class="when">' + esc(new Date(m.created_at).toLocaleString()) + '</span><span class="who">' + esc(m.name) + '</span>' +
+      return '<li data-id="' + m.id + '" data-chat="1"' + (m.hidden ? ' style="opacity:.55"' : "") + '><span class="when">' + esc(new Date(m.created_at).toLocaleString()) + '</span><span class="who"' + (CC[m.color] ? ' style="color:' + CC[m.color] + '"' : "") + '>' + esc(m.name) + '</span>' +
         (m.place ? ' <span class="from">' + esc(m.place) + '</span>' : "") + (m.hidden ? ' <span class="from">(hidden)</span>' : "") +
         ' <span class="from" title="Messages with the same code came from the same connection">#' + esc(m.who) + '</span>' +
         '<p class="msg">' + esc(m.body) + '</p><div class="acts">' +
