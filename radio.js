@@ -2217,4 +2217,34 @@
   if (!state.station) { state.dial = STATIONS[0].dial; state.station = STATIONS[0]; }
   render();
   if (/[?&#]edit\b/.test(location.href)) toggleEdit(true);
+
+  /* Start playing as soon as the page opens. Browsers only allow sound once the visitor has tapped,
+     clicked or pressed a key on the page, so if the browser says no, the radio waits quietly and the
+     first tap or key press anywhere on the page starts it (on the station from the link, or Ch. 01). */
+  let autoArmed = false;
+  function armAutoStart() {
+    if (autoArmed) return;
+    autoArmed = true;
+    WORDS.off = "Tap anywhere to start the radio";
+    render();
+    const go = e => {
+      if (!autoArmed) return;
+      autoArmed = false;
+      ["pointerdown", "keydown", "touchend"].forEach(ev => document.removeEventListener(ev, go, true));
+      if (state.on || state.editing) return;
+      if (e && e.target && e.target.closest && e.target.closest("a[href], .bkc, .bkc-btn, .bkc-peek")) {   // a link or the chat: let it do its own thing
+        autoArmed = true; ["pointerdown", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true)); return;
+      }
+      power(true);
+    };
+    ["pointerdown", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true));
+  }
+  if (!state.editing && !/[?&]noautoplay\b/.test(location.search)) {
+    power(true);
+    setTimeout(() => {
+      // the browser refused: the sound engine is still "suspended" (it starts "running" when sound is allowed)
+      const blocked = state.on && (ctx ? ctx.state !== "running" : (navigator.userActivation ? !navigator.userActivation.hasBeenActive && audio.paused : audio.paused));
+      if (blocked && !autoArmed) { power(false); armAutoStart(); }
+    }, 1500);
+  }
 })();
