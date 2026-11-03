@@ -115,7 +115,7 @@
     return out;
   }
   function matinee(dayMs) {
-    var th = themeOf(dayMs), out = [], films = shuffle(th.films, hash("mat" + dayIndex(dayMs)));
+    var th = themeOf(dayMs), out = [], films = shuffle(th.films.filter(function (f) { return !f.hold; }), hash("mat" + dayIndex(dayMs)));   // "hold": still being screened, kept out of matinees and late shows
     films.forEach(function (f, k) {
       out.push(Object.assign({ kind: "feature", matinee: true }, f));
       out.push(slate("intermission", 120, { short: true }));

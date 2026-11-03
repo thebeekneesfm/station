@@ -471,6 +471,7 @@ window.DRIVEIN = {
    },
    {
     "title": "Penny Serenade",
+     "hold": true,
     "year": 1941,
     "gain": 0.87,
     "src": "https://archive.org/download/penny_serenade/penny_serenade_512kb.mp4",
@@ -567,6 +568,7 @@ window.DRIVEIN = {
    },
    {
     "title": "Something to Sing About",
+     "hold": true,
     "year": 1937,
     "gain": 1.0,
     "src": "https://archive.org/download/SomethingtoSingAbout/SomethingtoSingAbout_512kb.mp4",
@@ -575,6 +577,7 @@ window.DRIVEIN = {
    },
    {
     "title": "Hi Diddle Diddle",
+     "hold": true,
     "year": 1943,
     "gain": 0.68,
     "src": "https://archive.org/download/HiDiddleDiddle/HiDiddleDiddle1943_512kb.mp4",
