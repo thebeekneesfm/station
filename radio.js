@@ -84,9 +84,15 @@
     if (st.dial == null) st.dial = STATIONS.length > 1 ? i / (STATIONS.length - 1) : 0.5;
     if (!st.num) st.num = String(i + 1).padStart(2, "0");
   });
+  // Each time a station comes round to the start of its list, the next pass begins somewhere new
+  // (a golden-ratio step through the list), so the same clock time lands on different shows from night
+  // to night. It's worked out from the clock alone, so everyone still hears the same moment.
+  const PHI = 0.6180339887498949;
+  function loopShift(n, starts) { let f = (n * PHI) % 1; if (f < 0) f += 1; return starts[Math.floor(f * starts.length)] || 0; }
   function at(st, ms = Date.now()) {
-    let pos = ((ms - st._epoch) / 1000) % st._total;
-    if (pos < 0) pos += st._total;
+    const T = (ms - st._epoch) / 1000, n = Math.floor(T / st._total);
+    let pos = T - n * st._total + loopShift(n, st._cum);
+    if (pos >= st._total) pos -= st._total;
     let lo = 0, hi = st.tracks.length - 1;
     while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (st._cum[mid] <= pos) lo = mid; else hi = mid - 1; }
     const tr = st.tracks[lo];

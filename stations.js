@@ -1,5 +1,6 @@
 /* STATIONS
-   Each station loops its track list forever, on a shared clock.
+   Each station loops its track list forever, on a shared clock; each pass starts at a different
+   point in the list, so the same time of night lands on different shows from day to day.
    Everyone tuned to the same station hears the same moment.
    Add tracks with builder.html (open it in your browser), then paste the result here.
    length = seconds. group = the heading it sits under in the guide. music: true shows it as one long block in the guide. */

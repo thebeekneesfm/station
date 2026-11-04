@@ -53,8 +53,14 @@
     var t = 0; out.forEach(function (x) { x.start = t; t += Number(x.length) || 0; });
     return { ch: ch, list: out, total: t };
   }
+  // each pass through a channel's list starts somewhere new (a golden-ratio step), so the same clock
+  // time shows something different from night to night; worked out from the clock, so everyone stays in sync
+  var PHI = 0.6180339887498949;
+  function loopShift(n, starts) { var f = (n * PHI) % 1; if (f < 0) f += 1; return starts[Math.floor(f * starts.length)] || 0; }
   function tvAt(sched, ms) {
-    var pos = ((ms - EPOCH) / 1000) % sched.total; if (pos < 0) pos += sched.total;
+    if (!sched.starts) sched.starts = sched.list.map(function (x) { return x.start; });
+    var T = (ms - EPOCH) / 1000, n = Math.floor(T / sched.total);
+    var pos = T - n * sched.total + loopShift(n, sched.starts); if (pos >= sched.total) pos -= sched.total;
     var lo = 0, hi = sched.list.length - 1;
     while (lo < hi) { var mid = (lo + hi + 1) >> 1; if (sched.list[mid].start <= pos) lo = mid; else hi = mid - 1; }
     var it = sched.list[lo];
@@ -529,8 +535,9 @@
     var t = 0; st._cumB = st.tracks.map(function (tr) { var a = t; t += Number(tr.length) || 0; return a; }); st._totB = t; st._epB = Date.parse(st.epoch || "2026-11-01T00:00:00Z");
     return (bedSt = st);
   }
-  function bedAt(st, ms) {
-    var pos = ((ms - st._epB) / 1000) % st._totB; if (pos < 0) pos += st._totB;
+  function bedAt(st, ms) {   // the same clock as radio.js, including where each pass starts
+    var T = (ms - st._epB) / 1000, n = Math.floor(T / st._totB);
+    var pos = T - n * st._totB + loopShift(n, st._cumB); if (pos >= st._totB) pos -= st._totB;
     var lo = 0, hi = st.tracks.length - 1;
     while (lo < hi) { var mid = (lo + hi + 1) >> 1; if (st._cumB[mid] <= pos) lo = mid; else hi = mid - 1; }
     return { track: st.tracks[lo], offset: pos - st._cumB[lo] };
