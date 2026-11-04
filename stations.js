@@ -41461,14 +41461,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_1.-too-young-2.-come-on-to-my-house_lanny-ross-bob-chesters-orchestra-toby-deane_gbia0002570a"
    },
    {
-    "src": "https://archive.org/download/78_when-its-sleepy-time-down-south_the-roy-eldridge-quintet-roy-eldridge-oscar-peters_gbia0073845a/When%20It%27s%20Sleepy%20Time%20Down%20Sout%20-%20The%20Roy%20Eldridge%20Quintet.mp3",
-    "length": 186,
-    "series": "The Roy Eldridge Quintet",
-    "title": "When It's Sleepy Time Down South",
-    "date": "1954",
-    "item": "https://archive.org/details/78_when-its-sleepy-time-down-south_the-roy-eldridge-quintet-roy-eldridge-oscar-peters_gbia0073845a"
-   },
-   {
     "src": "https://archive.org/download/78_sincerely-yours_martha-tilton-jason-robio_gbia0350721a/SINCERELY%20YOURS%20-%20MARTHA%20TILTON%20-%20Jason%20-%20Robio.mp3",
     "length": 174.24,
     "series": "Martha Tilton",
