@@ -35,6 +35,10 @@
     amb_fire: "A fire going (click to turn off)",
     amb_off: "Add rain or a fire",
     tip: "Support The Bee's Knees",
+    patronsTitle: "Patrons of the Station",
+    patronsSub: "Thank you for keeping us on the air",
+    patronsJoin: "Become a patron",
+    patronsEmpty: "Your name could be the first one here.",
     visits: "Site visits: {n}",
     aired: "Originally aired",
     released: "Originally released",
@@ -915,6 +919,18 @@
         rec.funnies = { key: "" };
         el.querySelector(".fn-head").textContent = L.title || "The Sunday Funnies";
         el.querySelector("button").addEventListener("click", e => { if (state.editing) return; e.stopPropagation(); openFunnies(); });
+      } else if (type === "patrons") {
+        // Patrons of the Station: names only, members first, then the biggest supporters of the last 90 days
+        el.classList.add("hot", "t-patrons");
+        el.innerHTML = '<div class="pt-card"><div class="pt-head"></div><div class="pt-sub"></div><ol class="pt-list"></ol><a class="pt-link" target="_blank" rel="noopener"></a></div>';
+        el.querySelector(".pt-head").textContent = L.title || WORDS.patronsTitle;
+        el.querySelector(".pt-sub").textContent = WORDS.patronsSub;
+        const a = el.querySelector(".pt-link");
+        if (CONFIG.tip) { a.href = CONFIG.tip; a.textContent = WORDS.patronsJoin; } else a.hidden = true;
+        a.addEventListener("click", e => { if (state.editing) e.preventDefault(); e.stopPropagation(); });
+        rec.patrons = { list: el.querySelector(".pt-list"), key: null };
+        patronRecs.push(rec); paintPatrons(rec);
+        if (patronRecs.length === 1) { loadPatrons(); setInterval(loadPatrons, 10 * 60 * 1000); }
       } else if (type === "guide") {
         const g = document.createElement("div"); g.className = "guide";
         el.appendChild(g); el.classList.add("hot");
@@ -943,6 +959,7 @@
       } else if (type === "slider" || type === "mixer") {
         // the ambient mixer: one volume slider per sound (rain, fire, thunderstorm), all can play at once
         el.classList.add("hot", "t-mixer");
+        if (L.row) el.classList.add("row");
         const rows = L.sounds || (L.sound ? [{ id: L.sound, label: L.label }] : AMB.map(id => ({ id })));
         const NAMES = { rain: "Rain", fire: "Fire", storm: "Storm" };
         const QUIET = '<svg class="fv-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/></svg>';
@@ -1685,6 +1702,30 @@
         list.filter(realTip).forEach(m => { const k = m.from_name.toLowerCase(); if (!seen.has(k)) { seen.add(k); members.list.push(m); } });
         if (had !== JSON.stringify(members.list)) freshTicker();
       }).catch(() => {});
+  }
+  // Patrons of the Station: the patrons() database function returns names in order, never amounts
+  const patrons = { list: null };
+  const patronRecs = [];
+  function loadPatrons() {
+    const L = CONFIG.listeners || {};
+    if (!L.url || !L.key || !window.fetch) { patrons.list = []; patronRecs.forEach(paintPatrons); return; }
+    fetch(L.url + "/rest/v1/rpc/patrons", { method: "POST",
+      headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" }, body: JSON.stringify({ days: 90, max_rows: 8 }) })
+      .then(r => r.ok ? r.json() : []).then(list => { patrons.list = Array.isArray(list) ? list : []; patronRecs.forEach(paintPatrons); })
+      .catch(() => { patrons.list = patrons.list || []; patronRecs.forEach(paintPatrons); });
+  }
+  function paintPatrons(rec) {
+    const P = rec.patrons, list = patrons.list;
+    if (!list) return;
+    const key = JSON.stringify(list); if (key === P.key) return; P.key = key;
+    P.list.textContent = "";
+    if (!list.length) { const li = document.createElement("li"); li.className = "pt-empty"; li.textContent = WORDS.patronsEmpty; P.list.appendChild(li); return; }
+    list.forEach(p => {
+      const li = document.createElement("li");
+      const n = document.createElement("span"); n.className = "pt-name"; n.textContent = String(p.name).slice(0, 40); li.appendChild(n);
+      if (p.member) { const t = document.createElement("span"); t.className = "pt-tier"; t.textContent = p.tier_name ? p.tier_name + " member" : "Member"; li.appendChild(t); }
+      P.list.appendChild(li);
+    });
   }
   loadTips(); setInterval(loadTips, 3 * 60 * 1000);
   loadMembers(); setInterval(loadMembers, 10 * 60 * 1000);
