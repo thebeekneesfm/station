@@ -441,12 +441,12 @@ window.DRIVEIN = {
      "item": "https://archive.org/details/The_Wasp_Women"
     },
     {
-     "title": "Rocketship X-M",
-     "year": 1950,
-     "gain": 1,
-     "src": "https://archive.org/download/rocketship.-x-m.-1950/Rocketship%20X-M%20%281950%29/mp4/Rocketship.X-M.1950.ia.mp4",
-     "length": 4765.06,
-     "item": "https://archive.org/details/rocketship.-x-m.-1950"
+     "title": "Attack of the Monsters",
+     "year": 1969,
+     "gain": 0.93,
+     "src": "https://archive.org/download/Attack_of_the_Monsters/Attack_of_the_Monsters_512kb.mp4",
+     "length": 4796.29,
+     "item": "https://archive.org/details/Attack_of_the_Monsters"
     }
    ]
   },
@@ -712,20 +712,20 @@ window.DRIVEIN = {
    "name": "Creature Feature Saturday",
    "films": [
     {
-     "title": "Gorgo",
-     "year": 1961,
-     "gain": 0.55,
-     "src": "https://archive.org/download/gorgo-1961/Gorgo%20%281961%29.mp4",
-     "length": 4671.55,
-     "item": "https://archive.org/details/gorgo-1961"
+     "title": "Monster From A Prehistoric Planet",
+     "year": "",
+     "gain": 0.58,
+     "src": "https://archive.org/download/MonsterFromAPrehistoricPlanet/Monster%20from%20a%20Prehistoric%20Planet.mp4",
+     "length": 5399.9,
+     "item": "https://archive.org/details/MonsterFromAPrehistoricPlanet"
     },
     {
-     "title": "The Hideous Sun Demon",
-     "year": 1958,
+     "title": "It's Alive",
+     "year": 1969,
      "gain": 1,
-     "src": "https://archive.org/download/the.-hideous.-sun.-demon.-1958/The%20Hideous%20Sun%20Demon%20%281958%29/mp4/The.Hideous.Sun.Demon.1958.ia.mp4",
-     "length": 4350.11,
-     "item": "https://archive.org/details/the.-hideous.-sun.-demon.-1958"
+     "src": "https://archive.org/download/ItsAlive/ItsAlive_512kb.mp4",
+     "length": 4815.81,
+     "item": "https://archive.org/details/ItsAlive"
     },
     {
      "title": "Teenagers From Outer Space",
@@ -736,12 +736,12 @@ window.DRIVEIN = {
      "item": "https://archive.org/details/TeenagersFromOuterSpace1959"
     },
     {
-     "title": "The Creeping Terror",
-     "year": 1964,
-     "gain": 0.46,
-     "src": "https://archive.org/download/the.-creeping.-terror.-1964.1080p.-blu-ray.-h-264.-aac-rarbg/The.Creeping.Terror.1964.1080p.BluRay.H264.AAC-RARBG.ia.mp4",
-     "length": 4613.25,
-     "item": "https://archive.org/details/the.-creeping.-terror.-1964.1080p.-blu-ray.-h-264.-aac-rarbg"
+     "title": "Yongary, Monster from the Deep",
+     "year": "",
+     "gain": 1,
+     "src": "https://archive.org/download/Yongary-MonsterFromTheDeep/Yongara_512kb.mp4",
+     "length": 4659.23,
+     "item": "https://archive.org/details/Yongary-MonsterFromTheDeep"
     },
     {
      "title": "The Brain That Wouldn't Die",
@@ -760,12 +760,12 @@ window.DRIVEIN = {
      "item": "https://archive.org/details/TheMonolithMonsters1957"
     },
     {
-     "title": "Robot Monster",
-     "year": 1953,
-     "gain": 1,
-     "src": "https://archive.org/download/robot-monster-1953/Robot%20Monster%20%281953%29.mp4",
-     "length": 3755.57,
-     "item": "https://archive.org/details/robot-monster-1953"
+     "title": "Zontar the Thing from Venus",
+     "year": 1966,
+     "gain": 0.86,
+     "src": "https://archive.org/download/Zontar_Thing_From_Venus/Zontar_the_Thing_From_Venus_512kb.mp4",
+     "length": 4818,
+     "item": "https://archive.org/details/Zontar_Thing_From_Venus"
     },
     {
      "title": "The Giant Gila Monster",
@@ -784,12 +784,12 @@ window.DRIVEIN = {
      "item": "https://archive.org/details/BeastFromHauntedCave"
     },
     {
-     "title": "The Monster of Piedras Blancas",
-     "year": 1959,
-     "gain": 1,
-     "src": "https://archive.org/download/the.monster.of.piedras.blancas.1959/The%20Monster%20of%20Piedras%20Blancas%20%281959%29/mp4/the.monster.of.piedras.blancas.1959.ia.mp4",
-     "length": 4260.33,
-     "item": "https://archive.org/details/the.monster.of.piedras.blancas.1959"
+     "title": "Destroy All Monsters",
+     "year": 1969,
+     "gain": 0.64,
+     "src": "https://archive.org/download/destroyallmonstersaipenglishdub4kreconstruction/1969%20-%20Destroy%20All%20Monsters%20%28Titan%20Dub%29%204K.ia.mp4",
+     "length": 5303,
+     "item": "https://archive.org/details/destroyallmonstersaipenglishdub4kreconstruction"
     },
     {
      "title": "Night of the Blood Beast",
@@ -800,12 +800,12 @@ window.DRIVEIN = {
      "item": "https://archive.org/details/NightOfTheBloodBeast1958"
     },
     {
-     "title": "Bride of the Monster",
-     "year": 1955,
-     "gain": 1,
-     "src": "https://archive.org/download/bride-of-the-monster-1955/Bride%20Of%20The%20Monster%201955.mp4",
-     "length": 4120.78,
-     "item": "https://archive.org/details/bride-of-the-monster-1955"
+     "title": "War of the Monsters",
+     "year": 1966,
+     "gain": 0.61,
+     "src": "https://archive.org/download/WarOfTheMonsters1966_106/warofthemonsters.mpeg_512kb.mp4",
+     "length": 5309.81,
+     "item": "https://archive.org/details/WarOfTheMonsters1966_106"
     },
     {
      "title": "Sound Of Horror",
@@ -992,6 +992,14 @@ window.DRIVEIN = {
   }
  },
  "trailers": [
+  {
+   "title": "Night of the living dead Trailer",
+   "year": "",
+   "gain": 0.63,
+   "src": "https://archive.org/download/NightOfTheLivingDeadTrailer/NightLivingDeadTrailer_512kb.mp4",
+   "length": 95,
+   "item": "https://archive.org/details/NightOfTheLivingDeadTrailer"
+  },
   {
    "title": "REVENGE OF THE CREATURE trailer",
    "year": "",
@@ -1451,12 +1459,12 @@ window.DRIVEIN = {
     "item": "https://archive.org/details/TheHollyAndTheIvy1952"
    },
    {
-    "title": "The Magic Christmas Tree",
-    "year": 1964,
-    "gain": 0.42,
-    "src": "https://archive.org/download/MagicChristmasTree1964/Magic%20Christmas%20Tree%20%281964%29.mp4",
-    "length": 3573.14,
-    "item": "https://archive.org/details/MagicChristmasTree1964"
+    "title": "The Christmas That Almost Wasn't",
+    "year": 1966,
+    "gain": 1,
+    "src": "https://archive.org/download/TheChristmasThatAlmostWasnt1966/The%20Christmas%20That%20Almost%20Wasn%27t%20%281966%29.mp4",
+    "length": 5555.44,
+    "item": "https://archive.org/details/TheChristmasThatAlmostWasnt1966"
    },
    {
     "title": "The Cheaters",
