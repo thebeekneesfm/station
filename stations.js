@@ -60865,14 +60865,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_daddys-yodel-lullaby_don-weston-with-orchestra-weston_gbia0008219b"
    },
    {
-    "src": "https://archive.org/download/when-its-sleepy-time-down-south_louis-armstrong-and-gordon-jenkins-aho_wave/when%20its%20sleepy%20time%20down%20south_louis%20armstrong%20and%20gordon%20jenkins%20aho.mp3",
-    "length": 200,
-    "series": "Louis Armstrong",
-    "title": "When it’s Sleepy Time Down South",
-    "date": "1952",
-    "item": "https://archive.org/details/when-its-sleepy-time-down-south_louis-armstrong-and-gordon-jenkins-aho_wave"
-   },
-   {
     "gain": 0.54,
     "src": "https://archive.org/download/78_the-twilight-song_the-dartmouth-glee-club-d.-e.-cobleigh--23-pattee-88-gillette_gbia0004285a/The%20Twilight%20Song%20-%20The%20Dartmouth%20Glee%20Club.mp3",
     "length": 157,
@@ -61535,15 +61527,6 @@ window.STATIONS = [
     "title": "Dreaming Alone in the Twilight",
     "date": "1920",
     "item": "https://archive.org/details/78_dreaming-alone-in-the-twilight_reinald-werrenrath-carl-clemson-hartley-moore_gbia0396403b"
-   },
-   {
-    "gain": 0.37,
-    "src": "https://archive.org/download/78_when-its-sleepy-time-down-south_the-roy-eldridge-quintet-roy-eldridge-oscar-peters_gbia0073845a/When%20It%27s%20Sleepy%20Time%20Down%20Sout%20-%20The%20Roy%20Eldridge%20Quintet.mp3",
-    "length": 186,
-    "series": "The Roy Eldridge Quintet",
-    "title": "When It's Sleepy Time Down South",
-    "date": "1954",
-    "item": "https://archive.org/details/78_when-its-sleepy-time-down-south_the-roy-eldridge-quintet-roy-eldridge-oscar-peters_gbia0073845a"
    },
    {
     "gain": 0.32,
@@ -66071,15 +66054,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_nocturne-no-19-in-e-minor-op-72-no-1_victor-schiler-chopin_gbia7003709b"
    },
    {
-    "gain": 0.48,
-    "src": "https://archive.org/download/78_sleepy-time-down-south_bob-andersons-oshkosh-serenaders-joe-rushton-bob-anderson-w_gbia0092875b/Sleepy%20Time%20Down%20South%20-%20Bob%20Anderson%27s%20Oshkosh%20Serenaders.mp3",
-    "length": 182,
-    "series": "Bob Anderson's Oshkosh Serenaders",
-    "title": "Sleepy Time Down South",
-    "date": "1946",
-    "item": "https://archive.org/details/78_sleepy-time-down-south_bob-andersons-oshkosh-serenaders-joe-rushton-bob-anderson-w_gbia0092875b"
-   },
-   {
     "gain": 0.38,
     "src": "https://archive.org/download/vienna-city-of-my-dreams-remaster/Vienna%2C%20City%20Of%20My%20Dreams%20-%20%28Remaster%29%20.mp3",
     "length": 195,
@@ -66532,24 +66506,6 @@ window.STATIONS = [
     "title": "The Midnight Waltz",
     "date": "1925",
     "item": "https://archive.org/details/78_the-midnight-waltz_puritan-salon-orchestra-walter-donaldson_gbia0006910a"
-   },
-   {
-    "gain": 1,
-    "src": "https://archive.org/download/78_old-kentucky-moonlight_lee-knight-haven-gillespie-egbert-van-alstyne_gbia0170527a/OLD%20KENTUCKY%20MOONLIGHT%20-%20Lee%20Knight%20-%20Haven%20Gillespie.mp3",
-    "length": 200,
-    "series": "Lee Knight",
-    "title": "Old Kentucky Moonlight",
-    "date": "1922",
-    "item": "https://archive.org/details/78_old-kentucky-moonlight_lee-knight-haven-gillespie-egbert-van-alstyne_gbia0170527a"
-   },
-   {
-    "gain": 1,
-    "src": "https://archive.org/download/78_a-sleepy-little-village-where-the-dixie-cotton-grows_charles-hart-and-lewis-james_gbia0054604a/A%20Sleepy%20Little%20Village%20%28Wh%20-%20Charles%20Hart%20and%20Lewis%20James.mp3",
-    "length": 203,
-    "series": "Charles Hart and Lewis James",
-    "title": "A Sleepy Little Village (Where the Dixie Cotton Grows)",
-    "date": "1922",
-    "item": "https://archive.org/details/78_a-sleepy-little-village-where-the-dixie-cotton-grows_charles-hart-and-lewis-james_gbia0054604a"
    },
    {
     "gain": 0.66,
@@ -68717,15 +68673,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_refugees-lullaby_mary-small-david-mann-and-his-orchestra-jack-yellen-sammy-fain_gbia0396321a"
    },
    {
-    "gain": 0.47,
-    "src": "https://archive.org/download/78_kentucky-waltz_del-gillman-and-his-bar-x-boys-william-monroe_gbia0005257a/Kentucky%20Waltz%20-%20Del%20Gillman%20and%20his%20Bar%20X%20Boys.mp3",
-    "length": 165,
-    "series": "Del Gillman and his Bar X Boys",
-    "title": "Kentucky Waltz",
-    "date": "1951",
-    "item": "https://archive.org/details/78_kentucky-waltz_del-gillman-and-his-bar-x-boys-william-monroe_gbia0005257a"
-   },
-   {
     "gain": 0.32,
     "src": "https://archive.org/download/78_friare-valsen-couting-waltz_jarl--franzen_gbia0005711a/Friare%20Valsen%20%28Couting%20Waltz%29%20-%20Jarl%20%26%20Franzen.mp3",
     "length": 177,
@@ -69210,15 +69157,6 @@ window.STATIONS = [
     "item": "https://archive.org/details/1926-USA-Archives-1926-12-15-Jack-Denny-Orch-I-Love-The-Moonlight"
    },
    {
-    "gain": 1,
-    "src": "https://archive.org/download/78_old-kentucky-moonlight_arthur-fields-cispie-van-alstyne_gbia0094499b/Old%20Kentucky%20Moonlight%20-%20Arthur%20Fields%20-%20Cispie.mp3",
-    "length": 201,
-    "series": "Arthur Fields",
-    "title": "Old Kentucky Moonlight",
-    "date": "1922",
-    "item": "https://archive.org/details/78_old-kentucky-moonlight_arthur-fields-cispie-van-alstyne_gbia0094499b"
-   },
-   {
     "gain": 0.38,
     "src": "https://archive.org/download/1927-USA-Archives-1927-06-13-Guy-Lombardo-Royal-Canadians-Sweet-Dreams/1927%28USA%29Archives19270613GuyLombardoRoyalCanadians-SweetDreams.mp3",
     "length": 190.39,
@@ -69388,15 +69326,6 @@ window.STATIONS = [
     "title": "One Morning In May (Fox Trot)",
     "date": "1933",
     "item": "https://archive.org/details/wayne-king-and-his-orchestra-one-morning-in-may-fox-trot-brunswick-663-6735-november-16-1933"
-   },
-   {
-    "gain": 0.9,
-    "src": "https://archive.org/download/78_the-gypsy_jan-garber-and-his-orchestra-tommy-traynor-billy-reid_gbia0017406b/The%20Gypsy%20-%20Jan%20Garber%20and%20His%20Orchestra.mp3",
-    "length": 192,
-    "series": "Jan Garber and His Orchestra",
-    "title": "The Gypsy",
-    "date": "1946",
-    "item": "https://archive.org/details/78_the-gypsy_jan-garber-and-his-orchestra-tommy-traynor-billy-reid_gbia0017406b"
    },
    {
     "gain": 0.38,
