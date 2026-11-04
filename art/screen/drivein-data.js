@@ -800,12 +800,12 @@ window.DRIVEIN = {
      "item": "https://archive.org/details/NightOfTheBloodBeast1958"
     },
     {
-     "title": "The Beast of Yucca Flats",
-     "year": 1961,
-     "gain": 0.65,
-     "src": "https://archive.org/download/Beast_of_Yucca_Flats_movie/Beast_of_Yucca_Flats.mp4",
-     "length": 3232.82,
-     "item": "https://archive.org/details/Beast_of_Yucca_Flats_movie"
+     "title": "Bride of the Monster",
+     "year": 1955,
+     "gain": 1,
+     "src": "https://archive.org/download/bride-of-the-monster-1955/Bride%20Of%20The%20Monster%201955.mp4",
+     "length": 4120.78,
+     "item": "https://archive.org/details/bride-of-the-monster-1955"
     },
     {
      "title": "Sound Of Horror",
