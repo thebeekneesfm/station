@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Puzzle Page · The Bee's Knees.fm</title>
+<meta name="description" content="A new vintage jigsaw puzzle every day at The Bee's Knees.fm.">
+<link rel="canonical" href="https://thebeesknees.fm/puzzles.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Bee's Knees.fm">
+<meta property="og:title" content="The Puzzle Page · The Bee's Knees.fm">
+<meta property="og:description" content="A new vintage jigsaw puzzle every day at The Bee's Knees.fm.">
+<meta property="og:url" content="https://thebeesknees.fm/puzzles.html">
+<meta property="og:image" content="https://thebeesknees.fm/art/share.jpg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Bee's Knees.fm with station cards and a Sunday Funnies page">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="art/favicon.png?v=2" type="image/png">
+<link rel="apple-touch-icon" href="art/apple-touch-icon.png?v=2">
+<script src="art/backgrounds/backgrounds.js?v=20261101g3"></script>
+<link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
+<style>
+  /* same room as the radio: 1953 wallpaper, paper cards, ink and station red */
+  :root { --paper: #e9e1c9; --ink: #1f1b17; --ink-2: #4a4036; --dim: #6b5f50; --red: #c8321f; --honey: #e3a92f; --line: rgba(31,27,23,.22); }
+  html { background: #3f5a46; }
+  body { margin: 0; color: var(--ink); background: transparent; font: 20px/1.6 "BK Serif", Georgia, serif; }
+  body::before { content: ""; position: fixed; inset: 0; z-index: -1;
+    background: linear-gradient(var(--wall-shade, rgba(20,15,10,.22)), var(--wall-shade, rgba(20,15,10,.22))), var(--wall-img, url("art/wallpaper.jpg")) 0 0 / var(--wall-size, 700px) repeat; }
+  .wrap { max-width: 760px; margin: 0 auto; padding-block: 18px 60px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 18px; }
+  .paper { background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); box-shadow: 0 3px 0 rgba(0,0,0,.28), 0 12px 28px rgba(0,0,0,.25); }
+  .mast { padding: 16px 26px 14px; transform: rotate(-.25deg); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px; }
+  .logo { font: 700 clamp(30px, 7.5vw, 48px)/1 "BK Script", "BK Serif", Georgia, serif; color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .logo span { color: var(--red); font-size: .55em; }
+  .tag { margin: 4px 0 0; font-style: italic; color: var(--ink-2); font-size: 19px; }
+  .links { display: flex; gap: 8px 20px; flex-wrap: wrap; }
+  .back { color: var(--ink); font-size: 19px; text-underline-offset: 4px; text-decoration-thickness: 1px; white-space: nowrap; }
+  main.paper { padding: 26px clamp(18px, 5vw, 44px) 34px; }
+  h1, h2 { font-family: "BK Script", "BK Serif", Georgia, serif; font-weight: 700; word-spacing: .18em; line-height: 1.1; margin: 0; text-wrap: balance; }
+  h1 { font-size: clamp(40px, 8vw, 54px); }
+  h2 { font-size: 32px; margin-top: 34px; padding-bottom: 6px; border-bottom: 2px solid var(--ink); }
+  p { margin: 12px 0 0; }
+  a { color: var(--ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  a:focus-visible { outline: 2px solid var(--honey); outline-offset: 3px; }
+  .lede { font-size: 21px; margin-top: 14px; }
+  .motto { margin: 6px 0 18px; font: italic 400 clamp(20px, 3vw, 24px)/1.35 "BK Serif", Georgia, serif; color: var(--red, #c8321f); }
+  .noai { font-weight: 700; }
+  .banner { display: block; margin-top: 16px; box-shadow: 0 2px 0 rgba(0,0,0,.25); }
+  .banner img { display: block; width: 100%; height: auto; }
+  .tip { color: var(--red); font-weight: 600; }
+  .email { font-weight: 600; user-select: all; }
+  ul { margin: 12px 0 0; padding-left: 1.2em; }
+  li { margin-top: 6px; }
+  .small { font-size: 17px; color: var(--ink-2); line-height: 1.55; }
+  .small p { margin-top: 10px; }
+  /* newsprint panels: ragged, hand-cut edges instead of ruler-straight ones */
+  :root { --rough-top: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='9' viewBox='0 0 180 9' preserveAspectRatio='none'%3E%3Cpath d='M0.0 9.0 L0.0 1.9 L3.3 2.2 L4.9 2.7 L7.1 3.0 L11.1 1.8 L13.0 2.2 L16.1 2.4 L17.8 2.5 L20.2 0.7 L23.1 2.4 L26.7 2.9 L30.6 1.7 L34.8 0.9 L36.9 3.0 L40.3 1.4 L43.0 1.5 L46.2 2.8 L50.5 2.7 L54.0 1.0 L58.4 2.8 L62.1 1.2 L65.3 1.3 L69.3 3.0 L73.2 1.6 L75.6 2.5 L77.3 6.3 L79.7 2.8 L82.8 3.1 L84.5 4.7 L87.2 2.1 L88.8 2.7 L93.2 2.8 L96.1 1.9 L99.4 2.0 L103.7 1.9 L107.4 1.2 L111.8 1.9 L113.3 1.7 L114.9 2.1 L116.6 2.2 L120.1 1.5 L123.8 0.7 L127.4 3.0 L130.2 2.1 L132.8 1.4 L136.1 1.4 L139.9 0.7 L143.6 1.4 L147.5 1.2 L150.4 2.3 L152.8 1.5 L155.6 2.7 L158.1 2.2 L161.0 1.2 L164.1 1.1 L168.1 1.1 L172.0 2.2 L174.6 1.0 L178.4 1.3 L180.0 1.9 L180.0 9.0Z'/%3E%3C/svg%3E"); --rough-bottom: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='9' viewBox='0 0 180 9' preserveAspectRatio='none'%3E%3Cpath d='M0.0 0.0 L0.0 7.1 L2.0 8.2 L6.2 6.4 L8.4 7.1 L10.4 8.1 L14.7 6.4 L18.6 7.9 L22.0 6.6 L26.1 8.1 L29.6 7.1 L32.5 8.1 L36.6 7.0 L40.9 7.0 L44.9 7.1 L48.2 7.3 L50.6 4.3 L54.0 7.7 L56.9 7.5 L59.0 7.4 L62.4 7.7 L66.1 7.6 L70.4 8.1 L72.5 6.5 L74.8 7.6 L77.6 8.2 L81.8 6.1 L86.2 8.3 L90.6 6.5 L94.9 6.9 L97.3 7.9 L99.2 7.4 L101.7 5.8 L105.6 7.5 L107.4 6.0 L109.5 5.7 L113.0 4.5 L115.3 6.0 L118.3 6.5 L122.8 7.2 L125.5 8.3 L127.8 6.2 L130.8 8.3 L133.0 7.8 L137.1 3.2 L140.3 6.0 L144.5 6.8 L148.2 7.2 L150.4 6.2 L154.7 7.5 L158.6 6.8 L161.6 6.8 L163.9 6.1 L165.7 6.0 L169.2 8.2 L171.1 6.0 L172.7 7.9 L175.9 6.6 L178.1 8.3 L179.6 6.2 L180.0 7.1 L180.0 0.0Z'/%3E%3C/svg%3E"); --rough-left: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='180' viewBox='0 0 9 180' preserveAspectRatio='none'%3E%3Cpath d='M9.0 0.0 L2.4 0.0 L3.0 4.3 L2.4 5.9 L3.4 9.4 L1.8 12.3 L1.3 15.5 L3.4 17.8 L3.1 19.8 L6.2 23.2 L1.8 25.3 L1.9 29.4 L2.9 32.5 L2.9 36.8 L2.0 41.0 L1.6 43.0 L6.7 45.4 L2.0 47.9 L2.0 50.9 L1.4 54.5 L3.0 56.1 L3.1 57.6 L3.8 60.9 L1.7 65.2 L3.5 69.5 L2.5 72.1 L3.0 73.9 L1.3 78.0 L2.1 79.8 L2.1 84.0 L2.0 87.1 L1.4 89.2 L3.6 92.7 L3.6 94.4 L1.8 97.1 L2.3 101.1 L6.9 102.8 L1.5 106.8 L2.7 111.1 L2.3 112.9 L1.9 117.0 L3.3 121.5 L2.4 124.3 L1.9 127.3 L2.1 129.2 L2.7 133.6 L1.4 136.1 L3.3 139.9 L3.1 143.8 L3.1 147.3 L1.9 150.9 L2.9 154.7 L2.8 159.1 L2.5 160.6 L2.3 164.1 L3.1 167.5 L3.0 171.0 L3.3 173.5 L3.6 177.1 L2.4 180.0 L9.0 180.0Z'/%3E%3C/svg%3E"); --rough-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='180' viewBox='0 0 9 180' preserveAspectRatio='none'%3E%3Cpath d='M0.0 0.0 L6.3 0.0 L7.5 2.3 L5.7 5.2 L6.9 9.0 L6.5 12.7 L7.0 16.2 L6.9 20.2 L5.5 23.7 L5.6 25.5 L7.3 28.3 L6.8 31.7 L7.0 35.0 L5.3 37.6 L6.0 40.6 L2.1 44.5 L6.8 47.8 L5.4 49.6 L5.9 51.5 L6.3 53.6 L5.4 55.7 L2.6 57.2 L6.0 61.4 L6.6 64.1 L7.4 68.6 L6.6 72.3 L5.2 74.5 L5.4 78.1 L5.6 82.0 L5.8 85.0 L5.7 86.7 L5.6 89.7 L7.2 91.2 L6.9 93.8 L6.9 98.1 L6.0 102.2 L6.4 105.2 L6.8 107.8 L5.9 110.3 L6.6 114.5 L6.6 117.0 L5.3 120.9 L4.3 122.4 L7.2 126.2 L5.3 128.8 L7.0 130.5 L6.5 133.8 L6.3 137.8 L6.6 139.6 L6.1 143.0 L7.3 146.3 L6.4 149.8 L5.8 153.2 L7.3 157.2 L5.3 161.4 L5.8 164.3 L5.2 166.2 L5.6 169.0 L5.8 171.3 L5.2 175.2 L7.3 179.5 L6.3 180.0 L0.0 180.0Z'/%3E%3C/svg%3E"); }
+  /* straight-cut paper: the ragged edges are switched off; delete this line to bring them back */
+  :root { --rough-top: linear-gradient(#000, #000); --rough-bottom: linear-gradient(#000, #000); --rough-left: linear-gradient(#000, #000); --rough-right: linear-gradient(#000, #000); }
+    .paper { -webkit-mask: var(--rough-top) top left / 180px 9px repeat-x, var(--rough-bottom) bottom left / 180px 9px repeat-x,
+      var(--rough-left) top left / 9px 180px repeat-y, var(--rough-right) top right / 9px 180px repeat-y,
+      linear-gradient(#000, #000) center / calc(100% - 16px) calc(100% - 16px) no-repeat;
+    mask: var(--rough-top) top left / 180px 9px repeat-x, var(--rough-bottom) bottom left / 180px 9px repeat-x,
+      var(--rough-left) top left / 9px 180px repeat-y, var(--rough-right) top right / 9px 180px repeat-y,
+      linear-gradient(#000, #000) center / calc(100% - 16px) calc(100% - 16px) no-repeat; }
+  .wrap { filter: drop-shadow(0 3px 0 rgba(0,0,0,.22)) drop-shadow(0 10px 18px rgba(0,0,0,.2)); }
+  .logo span { font: 600 .42em/1 "BK Head", "BK Serif", Georgia, serif; letter-spacing: .02em; margin-left: 2px; }
+
+  /* the puzzle table */
+  main.paper { padding-bottom: 24px; }
+  .wrap { max-width: 1100px; }
+  .bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 14px; }
+  .bar .lbl { font-style: italic; color: var(--ink-2); font-size: 17px; }
+  .size { font: 700 17px/1 "BK Serif", Georgia, serif; background: transparent; color: var(--ink); border: 1.5px solid var(--ink); padding: 10px 14px; cursor: pointer; }
+  .size[aria-pressed="true"] { background: var(--ink); color: #f3ead6; }
+  .size:focus-visible, .tool:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
+  .tool { font: 700 17px/1 "BK Serif", Georgia, serif; background: var(--red); color: #f3ead6; border: 0; padding: 11px 14px; cursor: pointer; }
+  .tool.ghost { background: transparent; color: var(--ink); border: 1.5px solid rgba(31,27,23,.45); }
+  .status { margin-left: auto; font-size: 17px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .table { position: relative; margin-top: 14px; background: #34503f; box-shadow: inset 0 2px 10px rgba(0,0,0,.45); overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; }
+  .board { position: absolute; background: rgba(239,229,204,.9); box-shadow: 0 0 0 4px #1a120c, 0 8px 22px rgba(0,0,0,.5); z-index: 1; }
+  .board img { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .3s; }
+  .table.ghost .board img { opacity: .22; }
+  .table.done .board img { opacity: 1; }
+  .pc { position: absolute; z-index: 3; cursor: grab; filter: drop-shadow(0 2px 2px rgba(0,0,0,.55)); touch-action: none; }
+  .pc.drag { cursor: grabbing; filter: drop-shadow(0 8px 10px rgba(0,0,0,.6)); }
+  .pc.set { z-index: 2; cursor: default; filter: none; pointer-events: none; }
+  .table.done .pc { display: none; }
+  .won { cursor: pointer; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9; background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); padding: 20px 26px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.55); max-width: 90%; }
+  .won h2 { margin: 0; border: 0; padding: 0; font-size: 38px; }
+  .won p { margin: 8px 0 0; }
+  .credit { font-size: 16px; color: var(--ink-2); margin-top: 10px; }
+  .soon { margin-top: 26px; padding-top: 14px; border-top: 2px solid var(--ink); font-size: 18px; }
+  [hidden] { display: none !important; }
+  /* opened over the radio (?embed=1): no site header, the close button sits top right */
+  .embed .mast { display: none; }
+  .embed .wrap { padding-top: 12px; }
+  .embed main h1 { padding-right: 110px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="paper mast">
+    <div>
+      <a class="logo" href="index.html">The Bee's Knees<span>.fm</span></a>
+    </div>
+    <nav class="links" aria-label="Pages"><a class="back" href="index.html">Back to the radio</a> <a class="back" href="tv.html">TV</a> <a class="back" href="drive-in.html">Drive-In</a> <a class="back" href="comics.html">Comics</a> <a class="back" href="magazines.html">Magazines</a> <a class="back" href="guestbook.html">Guest Book</a></nav>
+  </header>
+
+  <main class="paper">
+    <h1>The Puzzle Page</h1>
+    <p class="lede">A new jigsaw every day, cut from a real vintage ad or postcard. Everyone gets the same picture, so put the radio on and take your time. Your puzzle is saved as you go.</p>
+    <div class="bar">
+      <span class="lbl">Pieces:</span>
+      <button type="button" class="size" data-n="24">Easy &middot; 24</button>
+      <button type="button" class="size" data-n="48">Medium &middot; 48</button>
+      <button type="button" class="size" data-n="96">Hard &middot; 96</button>
+      <button type="button" class="tool ghost" id="peek" aria-pressed="false">Peek at the picture</button>
+      <button type="button" class="tool ghost" id="mix">Start over</button>
+      <span class="status" id="status" aria-live="polite"></span>
+    </div>
+    <div class="table" id="table"><div class="board" id="board"><img id="ghost" alt=""></div></div>
+    <p class="credit" id="credit"></p>
+    <p class="soon"><b>Coming soon:</b> a daily crossword from 1924, the year America went crossword-crazy.</p>
+  </main>
+</div>
+<script src="config.js?v=20261105a"></script>
+<script src="ads.js?v=1"></script>
+<script src="art/postcards/postcards.js?v=1"></script>
+<script src="ticker.js?v=4"></script>
+<script src="socials.js?v=2"></script>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var store = { get: function (k, d) { try { var v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+                set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+  // today's picture: the same for everyone, from the site's own vintage ads and postcards
+  // only the colorful ads make good jigsaws (picked out ahead of time); plus every postcard
+  var JIG = ["art/ads/1948-advertisement-for-pacific-super-tex-chenille.jpg", "art/ads/1949-advertisement-for-super-shelltox-insecticide.jpg", "art/ads/ArrowCollarsandShirts1928A.jpg", "art/ads/1949-advertisement-for-johnsons-baby-powder_202005.jpg", "art/ads/Vogue1922A.jpg", "art/ads/1950-advertisement-for-heinz-baked-beans.jpg", "art/ads/MohawkRugsandCarpets1920sA.jpg", "art/ads/1940-advertisement-for-protex-soap_202112.jpg", "art/ads/1944-advertisement-for-metro-goldwyn-mayer-mgm.jpg", "art/ads/PlymouthCars1936A.jpg", "art/ads/JellO1922A.jpg", "art/ads/1950-advertisement-for-lustre-creme-shampoo.jpg", "art/ads/1949-advertisement-for-his-masters-voice-little-nipper-radio.jpg", "art/ads/1949-advertisement-for-max-factor-hollywood-lipstick.jpg", "art/ads/1958-advertisement-for-gibbs-sr-toothpaste.jpg", "art/ads/StandardPlumbingFixtures1925B.jpg", "art/ads/ChesterfieldCigarettes1920sA.jpg", "art/ads/PackardAutomobiles1927A.jpg", "art/ads/AandPAngelFoodCake1949A.jpg", "art/ads/1946-advertisement-for-modess-sanitary-napkins.jpg", "art/ads/1949-advertisement-for-gillette-razor-blades.jpg", "art/ads/1947-advertisement-for-palmolive-soap.jpg", "art/ads/1958-advertisement-for-silvikrin-shampoo-addis-shoe-brushes.jpg", "art/ads/Conflict1933Summer.jpg", "art/ads/StandardPlumbingFixtures1920sA.jpg", "art/ads/1940-advertisement-for-grafton-rayon-fabrics.jpg", "art/ads/CamelCigarettes1931C.jpg", "art/ads/QueenQualityShoes1921A.jpg", "art/ads/1950-advertisement-for-bushells-coffee.jpg", "art/ads/1949-advertisement-for-stc-waffle-iron.jpg", "art/ads/1937-advertisement-for-kraft-old-english-cheese.jpg", "art/ads/1949-advertisement-for-lipton-tea.jpg", "art/ads/DjerKissTalc1920A.jpg", "art/ads/InectoHairColoring1925A.jpg", "art/ads/1948-advertisement-for-johnsons-baby-powder.jpg", "art/ads/GWashingtonsInstantCoffee1930A.jpg", "art/ads/CampbellsVegetableSoup1925A.jpg", "art/ads/1948-advertisement-for-halo-shampoo.jpg", "art/ads/JellO1925B.jpg", "art/ads/PierceArrowCars1926A.jpg", "art/ads/1949-advertisement-for-super-shelltox-fly-spray.jpg", "art/ads/LocomobileCars1921A.jpg", "art/ads/ChevroletCars1938A.jpg", "art/ads/DjerKissEaudeToilette1921A.jpg", "art/ads/LuckyStrikeCigarettes1932A.jpg", "art/ads/1949-advertisement-for-bayers-aspirin.jpg", "art/ads/PalmoliveSoap1925A.jpg", "art/ads/1946-advertisement-for-kelloggs-corn-flakes_20200625.jpg", "art/ads/1949-advertisement-for-casben-clothes.jpg", "art/ads/TenBLowIceCream1949A.jpg", "art/ads/1958-advertisement-for-new-zealand-cheddar-libbys-evaporated-milk.jpg", "art/ads/1939-advertisement-for-peek-freans-biscuits.jpg", "art/ads/PallMallCigarettes1925A.jpg", "art/ads/LuckyStrikeCigarettes1930F.jpg", "art/ads/ArrowCollars1920B.jpg", "art/ads/MavisPerfumes1920A.jpg", "art/ads/1949-advertisement-for-johnsons-baby-powder_20200518.jpg", "art/ads/1948-advertisement-for-british-general-electric-vacuum-cleaner.jpg", "art/ads/LuckyStrikeCigarettes1932C.jpg", "art/ads/1951-advertisement-for-gillette.jpg", "art/ads/LuckyStrikeCigarettes1932B.jpg", "art/ads/MaybellineEyeMakeup1928A.jpg", "art/ads/LeJadePerfume1926A.jpg", "art/ads/1948-advertisement-for-mortein-fly-spray.jpg", "art/ads/MuradCigarettes1923A.jpg", "art/ads/CocaCola1920A.jpg", "art/ads/1949-advertisement-for-holden-48-215-car.jpg", "art/ads/MazolaOil1920C.jpg", "art/ads/1946-advertisement-for-kodak-film.jpg", "art/ads/RiodeJaneiro1944.jpg", "art/ads/1958-advertisement-for-maggi-mushroom-soup.jpg", "art/ads/1939-advertisement-for-lifebuoy-soap.jpg", "art/ads/1940-advertisement-for-kelloggs-corn-flakes_20211211.jpg", "art/ads/1949-advertisement-for-lipton-tea_202005.jpg", "art/ads/StandardPlumbingFixtures1925A.jpg", "art/ads/KuppenheimerMensClothing1921A.jpg", "art/ads/LuckyStrikeCigarettes1935B.jpg", "art/ads/1949-advertisement-for-bendix-washing-machine.jpg", "art/ads/1950-advertisement-for-swift-canned-foods_202102.jpg", "art/ads/1948-advertisement-for-lux-soap-linda-darnell.jpg", "art/ads/1947-advertisement-for-johnsons-baby-powder.jpg", "art/ads/1948-advertisement-for-lipton-tea.jpg", "art/ads/1958-advertisement-for-daz-laundry-detergent.jpg", "art/ads/1941-advertisement-for-cadbury-dairy-milk-chocolate.jpg", "art/ads/1948-advertisement-for-palmolive-soap.jpg", "art/ads/ArrowCollarsandShirts1927A.jpg", "art/ads/1946-advertisement-for-masonite_20200711.jpg", "art/ads/BudweiserBeer1935A.jpg", "art/ads/1948-advertisement-for-ipana-toothpaste_20201109.jpg", "art/ads/1946-advertisement-for-lincoln-socks.jpg", "art/ads/KissproofMakeup1927A.jpg", "art/ads/1954-advertisement-for-band-aid-adhesive-bandages.jpg", "art/ads/WoodburysFacialSoap1920sA.jpg", "art/ads/MuradCigarettes1920B.jpg", "art/ads/1950-advertisement-for-kelloggs-corn-flakes.jpg", "art/ads/1949-advertisement-for-nescafe-coffee.jpg", "art/ads/1949-advertisement-for-ford.jpg", "art/ads/WhiteHouseEvaporatedMilk1948A.jpg", "art/ads/RoyalBakingPowder1920A.jpg", "art/ads/1950-advertisement-for-buckleys-triple-strength-canadiol-cough-mixture.jpg", "art/ads/1938-advertisement-for-the-daily-telegraph.jpg", "art/ads/PallMallCigarettes1947A.jpg", "art/ads/ColumbiaGrafonola1920A.jpg", "art/ads/PallMallCigarettes1940sA.jpg", "art/ads/1949-advertisement-for-mortein-plus-insecticide.jpg", "art/ads/CampbellsTomatoSoup1934A.jpg", "art/ads/WrigleysSpearmintGum1929A.jpg", "art/ads/MaidorTalc1920A.jpg"];
+  var pool = (window.ADS || []).filter(function (a) { return JIG.indexOf(a.src) >= 0; }).map(function (a) { return { src: a.src, title: a.title + (a.date ? ", " + a.date : ""), item: a.item }; })
+    .concat((window.POSTCARDS || []).map(function (p) { return { src: "art/postcards/" + p.f, title: "Postcard: " + p.title + (p.year ? ", " + p.year : ""), item: p.item }; }));
+  var d = new Date(), day = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  var hash = function (s) { var h = 2166136261; for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
+  var rng = function (seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; };
+  var pick = pool[hash("jigsaw" + day) % pool.length];
+  var table = $("table"), board = $("board"), ghost = $("ghost"), img = new Image();
+  var N = store.get("jig.size", 48), K = "jig." + day + "." + N, state, pieces = [], t0 = 0, timer = 0;
+  var cols, rows, W, H, cw, ch, pad, bx, by, tabs;
+
+  $("credit").innerHTML = ""; var a = document.createElement("a"); a.href = pick.item; a.target = "_blank"; a.rel = "noopener";
+  a.textContent = "Today's picture: " + pick.title + " (Internet Archive)"; $("credit").appendChild(a);
+  ghost.src = img.src = pick.src; ghost.alt = pick.title;
+  img.onload = function () { build(); };
+
+  document.querySelectorAll(".size").forEach(function (b) {
+    b.setAttribute("aria-pressed", +b.dataset.n === N ? "true" : "false");
+    b.addEventListener("click", function () { N = +b.dataset.n; store.set("jig.size", N); K = "jig." + day + "." + N;
+      document.querySelectorAll(".size").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); }); build(); });
+  });
+  $("peek").addEventListener("click", function () { var on = table.classList.toggle("ghost"); this.setAttribute("aria-pressed", on ? "true" : "false"); });
+  $("mix").addEventListener("click", function () { store.set(K, null); build(); });
+
+  // grid: as close to square pieces as the picture allows
+  function grid() {
+    var ar = img.naturalWidth / img.naturalHeight, best = null;
+    for (var c = 2; c <= 16; c++) { var r = Math.max(2, Math.round(N / c)); var err = Math.abs(c * r - N) * 3 + Math.abs(Math.log((ar / c) / (1 / r))); if (!best || err < best.e) best = { c: c, r: r, e: err }; }
+    cols = best.c; rows = best.r;
+  }
+  // which way each inside edge bulges, the same for everyone today
+  function cutTabs() {
+    var R = rng(hash("tabs" + day + N)); tabs = { h: [], v: [] };
+    for (var r = 0; r < rows; r++) { tabs.h[r] = []; tabs.v[r] = []; for (var c = 0; c < cols; c++) { tabs.h[r][c] = R() < .5 ? 1 : -1; tabs.v[r][c] = R() < .5 ? 1 : -1; } }
+  }
+  function layout() {
+    var tw = table.clientWidth, ar = img.naturalWidth / img.naturalHeight;
+    W = Math.min(tw * 0.62, 640); H = W / ar;
+    if (H > 520) { H = 520; W = H * ar; }
+    if (tw < 640) { W = tw * 0.86; H = W / ar; }
+    var th = H + Math.max(260, H * 0.8); table.style.height = th + "px";
+    bx = (tw - W) / 2; by = (th - H) / 2;
+    board.style.left = bx + "px"; board.style.top = by + "px"; board.style.width = W + "px"; board.style.height = H + "px";
+    cw = W / cols; ch = H / rows; pad = Math.ceil(Math.min(cw, ch) * 0.34);
+  }
+  // one edge of a piece, with a knob when it's an inside edge
+  function edge(g, x0, y0, x1, y1, s) {
+    var dx = x1 - x0, dy = y1 - y0, nx = -dy, ny = dx, P = function (u, v) { return [x0 + dx * u + nx * v, y0 + dy * u + ny * v]; };
+    if (!s) { g.lineTo(x1, y1); return; }
+    var p;
+    p = P(0.34, 0); g.lineTo(p[0], p[1]);
+    var c1 = P(0.40, 0), c2 = P(0.30, s * 0.18), e = P(0.38, s * 0.22); g.bezierCurveTo(c1[0], c1[1], c2[0], c2[1], e[0], e[1]);
+    c1 = P(0.44, s * 0.30); c2 = P(0.56, s * 0.30); e = P(0.62, s * 0.22); g.bezierCurveTo(c1[0], c1[1], c2[0], c2[1], e[0], e[1]);
+    c1 = P(0.70, s * 0.18); c2 = P(0.60, 0); e = P(0.66, 0); g.bezierCurveTo(c1[0], c1[1], c2[0], c2[1], e[0], e[1]);
+    g.lineTo(x1, y1);
+  }
+  function drawPiece(cv, r, c) {
+    var dpr = Math.min(2, window.devicePixelRatio || 1), w = cw + pad * 2, h = ch + pad * 2;
+    cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); cv.style.width = w + "px"; cv.style.height = h + "px";
+    var g = cv.getContext("2d"); g.scale(dpr, dpr);
+    var top = r === 0 ? 0 : -tabs.v[r - 1][c], right = c === cols - 1 ? 0 : tabs.h[r][c], bottom = r === rows - 1 ? 0 : tabs.v[r][c], left = c === 0 ? 0 : -tabs.h[r][c - 1];
+    g.beginPath(); g.moveTo(pad, pad);
+    edge(g, pad, pad, pad + cw, pad, -top * Math.min(cw, ch) / cw);
+    edge(g, pad + cw, pad, pad + cw, pad + ch, -right * Math.min(cw, ch) / ch);
+    edge(g, pad + cw, pad + ch, pad, pad + ch, -bottom * Math.min(cw, ch) / cw);
+    edge(g, pad, pad + ch, pad, pad, -left * Math.min(cw, ch) / ch);
+    g.closePath(); g.save(); g.clip();
+    var sx = img.naturalWidth / W, sy = img.naturalHeight / H;
+    g.drawImage(img, (c * cw - pad) * sx, (r * ch - pad) * sy, w * sx, h * sy, 0, 0, w, h);
+    g.restore(); g.lineWidth = 1; g.strokeStyle = "rgba(255,250,235,.55)"; g.stroke();
+  }
+  function build() {
+    grid(); cutTabs(); layout();
+    pieces.forEach(function (p) { p.el.remove(); }); pieces = [];
+    table.classList.remove("done"); var old = table.querySelector(".won"); if (old) old.remove();
+    state = store.get(K, null);
+    var R = rng(hash("deal" + day + N)), tw = table.clientWidth, th = table.clientHeight;
+    if (!state) {
+      state = { set: [], pos: {}, t: 0 };
+      for (var i = 0; i < rows * cols; i++) {
+        // deal the pieces around the edge of the table, off the board
+        var x, y, tries = 0;
+        do { x = R() * (tw - cw - pad * 2); y = R() * (th - ch - pad * 2); tries++; }
+        while (tries < 40 && x + cw + pad * 2 > bx - 6 && x < bx + W + 6 && y + ch + pad * 2 > by - 6 && y < by + H + 6);
+        state.pos[i] = [(x - bx) / W, (y - by) / W];
+      }
+    }
+    for (var r = 0; r < rows; r++) for (var c = 0; c < cols; c++) {
+      var k = r * cols + c, cv = document.createElement("canvas"); cv.className = "pc"; drawPiece(cv, r, c);
+      var p = { el: cv, r: r, c: c, k: k };
+      pieces.push(p); table.appendChild(cv);
+      if (state.set.indexOf(k) >= 0) lock(p, true); else place(p, bx + state.pos[k][0] * W, by + state.pos[k][1] * W);
+      drag(p);
+    }
+    t0 = Date.now() - (state.t || 0) * 1000; clearInterval(timer); timer = setInterval(tick, 1000); tick();
+    if (state.set.length === rows * cols) win(true);
+  }
+  var z = 10;
+  function place(p, x, y) { p.el.style.left = x + "px"; p.el.style.top = y + "px"; }
+  function lock(p, quiet) { p.set = true; p.el.classList.add("set"); place(p, bx + p.c * cw - pad, by + p.r * ch - pad); if (!quiet && state.set.indexOf(p.k) < 0) state.set.push(p.k); }
+  function drag(p) {
+    var ox, oy, id = null;
+    p.el.addEventListener("pointerdown", function (e) {
+      if (p.set) return; id = e.pointerId; p.el.setPointerCapture(id); p.el.classList.add("drag"); p.el.style.zIndex = ++z;
+      var rc = p.el.getBoundingClientRect(); ox = e.clientX - rc.left; oy = e.clientY - rc.top; e.preventDefault();
+    });
+    p.el.addEventListener("pointermove", function (e) {
+      if (id !== e.pointerId) return; var tr = table.getBoundingClientRect();
+      var x = Math.max(-pad, Math.min(tr.width - cw - pad, e.clientX - tr.left - ox)), y = Math.max(-pad, Math.min(tr.height - ch - pad, e.clientY - tr.top - oy));
+      place(p, x, y);
+    });
+    var up = function (e) {
+      if (id !== e.pointerId) return; id = null; p.el.classList.remove("drag");
+      var x = parseFloat(p.el.style.left), y = parseFloat(p.el.style.top), tx = bx + p.c * cw - pad, ty = by + p.r * ch - pad;
+      if (Math.hypot(x - tx, y - ty) < Math.max(14, Math.min(cw, ch) * 0.28)) { lock(p); } else state.pos[p.k] = [(x - bx) / W, (y - by) / W];
+      save(); if (state.set.length === rows * cols) win(false);
+    };
+    p.el.addEventListener("pointerup", up); p.el.addEventListener("pointercancel", up);
+  }
+  function save() { state.t = Math.round((Date.now() - t0) / 1000); store.set(K, state); }
+  function fmt(s) { var m = Math.floor(s / 60); return m + ":" + String(s % 60).padStart(2, "0"); }
+  function tick() {
+    var done = state && state.set.length === rows * cols, s = done ? state.t : Math.round((Date.now() - t0) / 1000);
+    $("status").textContent = (state ? state.set.length : 0) + " of " + (rows * cols) + " pieces · " + fmt(s);
+  }
+  function win(quiet) {
+    clearInterval(timer); state.t = state.t || Math.round((Date.now() - t0) / 1000); store.set(K, state); tick();
+    table.classList.add("done");
+    var w = document.createElement("div"); w.className = "won";
+    w.innerHTML = "<h2>The bee's knees!</h2><p>You finished today's " + (rows * cols) + "-piece puzzle in " + fmt(state.t) + ".</p><p>A new one goes up tomorrow.</p>";
+    w.innerHTML += '<p style="font-size:15px;color:var(--ink-2)">(Tap to see the picture)</p>';
+    w.addEventListener("click", function () { w.remove(); });
+    table.appendChild(w);
+  }
+  var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { if (img.complete) build(); }, 250); });
+  window.addEventListener("pagehide", function () { if (state) save(); });
+})();
+</script>
+</body>
+</html>

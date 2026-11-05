@@ -1417,8 +1417,8 @@
   /* ---------- the comic and magazine racks, opened over the radio ----------
      The rack page itself runs in a frame (comics.html?embed=1), so collections and the reader work just as on the page,
      and the radio keeps playing underneath. */
-  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads", "guestbook.html": "guestbook", "youtube.html": "youtube" };
-  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads", guestbook: "The guest book", youtube: "The Bee's Knees on YouTube" }, isRack = k => !!RACK_TITLES[k];
+  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads", "guestbook.html": "guestbook", "youtube.html": "youtube", "postcard.html": "postcard", "puzzles.html": "puzzles" };
+  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads", guestbook: "The guest book", youtube: "The Bee's Knees on YouTube", postcard: "Send a postcard", puzzles: "The Puzzle Page" }, isRack = k => !!RACK_TITLES[k];
   function openRack(kind, push = true) {
     let box = document.getElementById("rack-ov");
     if (!box) {
