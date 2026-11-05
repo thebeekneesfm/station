@@ -102,6 +102,32 @@
   .bigview img { max-width: min(92vw, 900px); max-height: 82vh; width: auto; height: auto; box-shadow: 0 0 0 8px #f3ead6, 0 14px 40px rgba(0,0,0,.6); }
   .bigview p { margin: 14px 0 0; color: #f3ead6; font-size: 17px; text-align: center; }
   @media (max-width: 560px) { .lid img { height: 72px; } }
+  /* the 1924 crossword */
+  .xw { margin-top: 30px; padding-top: 6px; }
+  .xw .who { font-style: italic; color: var(--ink-2); font-size: 17px; margin-top: 6px; }
+  .xw-play { display: grid; grid-template-columns: minmax(0, 500px) minmax(0, 1fr); gap: 22px; margin-top: 16px; align-items: start; }
+  .xw-left { min-width: 0; }
+  .xw-bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: var(--ink); color: #f3ead6; padding: 9px 12px; font-size: 18px; line-height: 1.35; min-height: 1.35em; margin-bottom: 8px; }
+  .xw-bar b { color: var(--honey); margin-right: 8px; }
+  .xw-grid { display: grid; grid-template-columns: repeat(var(--c), var(--sz)); background: var(--ink); border: 2px solid var(--ink); gap: 1px; width: max-content; max-width: 100%; touch-action: manipulation; --sz: 34px; }
+  .xw-cell { position: relative; width: var(--sz); height: var(--sz); background: #fbf6e8; }
+  .xw-cell.blk { background: var(--ink); }
+  .xw-cell input { all: unset; box-sizing: border-box; width: 100%; height: 100%; text-align: center; padding-top: calc(var(--sz) * .2); font: 700 calc(var(--sz) * .55)/1 "BK Serif", Georgia, serif; color: #23314f; text-transform: uppercase; caret-color: transparent; cursor: pointer; }
+  .xw-cell .num { position: absolute; left: 2px; top: 1px; font-size: calc(var(--sz) * .3); line-height: 1; color: var(--ink-2); pointer-events: none; }
+  .xw-cell.word { background: #f2dfa6; }
+  .xw-cell.cur { background: var(--honey); }
+  .xw-cell.bad input { color: var(--red); text-decoration: line-through; }
+  .xw-cell.shown input { color: #6b5f50; }
+  .xw-tools { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .xw-clues { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; font-size: 16px; line-height: 1.4; max-height: 560px; overflow: auto; }
+  .xw-clues h3 { font: 700 20px/1.2 "BK Serif", Georgia, serif; margin: 0 0 6px; border-bottom: 1.5px solid var(--ink); }
+  .xw-clues ol { list-style: none; margin: 0; padding: 0; }
+  .xw-clues li { margin: 0; padding: 3px 6px; cursor: pointer; display: grid; grid-template-columns: 2.2em 1fr; }
+  .xw-clues li.on { background: #f2dfa6; }
+  .xw-clues li.done { color: var(--dim); }
+  .xw-msg { margin-top: 10px; font-size: 17px; color: var(--ink-2); }
+  @media (max-width: 900px) { .xw-play { grid-template-columns: 1fr; } .xw-clues { max-height: none; } }
+  @media (max-width: 500px) { .xw-clues { grid-template-columns: 1fr; } }
   [hidden] { display: none !important; }
   /* opened over the radio (?embed=1): no site header, the close button sits top right */
   .embed .mast { display: none; }
@@ -133,13 +159,33 @@
     </div>
     <div class="table" id="table"><div class="board" id="board"><img id="ghost" alt=""></div></div>
     <p class="credit" id="credit"></p>
-    <p class="soon"><b>Coming soon:</b> a daily crossword from 1924, the year America went crossword-crazy.</p>
+    <section class="xw" id="xw" aria-labelledby="xw-h">
+      <h2 id="xw-h">The 1924 Crossword</h2>
+      <p>In 1924 America went crossword-crazy, and the very first crossword books flew off the shelves. Every day we set out one of their puzzles, clues and all, exactly as readers saw them a hundred years ago. Some of the words are old-fashioned, so think like your great-grandmother.</p>
+      <p class="who" id="xw-who"></p>
+      <div class="xw-play">
+        <div class="xw-left">
+          <div class="xw-bar" id="xw-bar" aria-live="polite"></div>
+          <div class="xw-grid" id="xw-grid" role="grid" aria-label="Crossword grid"></div>
+          <div class="xw-tools" id="xw-tools">
+            <button type="button" class="tool ghost" id="xw-check">Check my letters</button>
+            <button type="button" class="tool ghost" id="xw-word">Show this word</button>
+            <button type="button" class="tool ghost" id="xw-all">Show the answers</button>
+            <button type="button" class="tool ghost" id="xw-clear">Clear</button>
+          </div>
+          <p class="xw-msg" id="xw-msg" aria-live="polite"></p>
+        </div>
+        <div class="xw-clues"><div><h3>Across</h3><ol id="xw-a"></ol></div><div><h3>Down</h3><ol id="xw-d"></ol></div></div>
+      </div>
+      <p class="small">The 1924 books didn't print the answers; readers mailed away for them. So the answers here are our own solve, worked out letter by letter from the clues.</p>
+    </section>
   </main>
 </div>
 <div class="bigview" id="bigview" hidden role="dialog" aria-label="The finished picture"><div><img id="bigimg" alt=""><p>Tap anywhere to go back to your puzzle</p></div></div>
 <script src="config.js?v=20261105a"></script>
 <script src="ads.js?v=1"></script>
 <script src="art/postcards/postcards.js?v=2"></script>
+<script src="art/crossword/xwords.js?v=1"></script>
 <script src="ticker.js?v=4"></script>
 <script src="socials.js?v=2"></script>
 <script>
@@ -289,6 +335,104 @@
   }
   var rt; window.addEventListener("resize", function () { clearTimeout(rt); rt = setTimeout(function () { if (img.complete) build(); }, 250); });
   window.addEventListener("pagehide", function () { if (state) save(); });
+})();
+</script>
+<script>
+/* the daily 1924 crossword */
+(function () {
+  "use strict";
+  var P = window.XWORDS || []; if (!P.length) return;
+  var $ = function (id) { return document.getElementById(id); };
+  var d = new Date(), day = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  var start = Date.UTC(2026, 10, 5), today = Date.UTC(d.getFullYear(), d.getMonth(), d.getDate());
+  var p = P[(((Math.round((today - start) / 864e5)) % P.length) + P.length) % P.length];
+  var R = p.rows, C = p.cols, G = p.grid, K = "xw." + p.id;
+  var saved = {}; try { saved = JSON.parse(localStorage.getItem(K) || "{}"); } catch (e) {}
+  var fill = saved.f || [], shown = saved.s || [];
+  var who = $("xw-who"), a = document.createElement("a");
+  who.textContent = "Today: “" + p.title + "”" + (p.author ? " by " + p.author : "") + ". From the "; a.href = p.item; a.target = "_blank"; a.rel = "noopener";
+  a.textContent = p.source.replace(/, puzzle.*/, "") + " (Internet Archive)"; who.appendChild(a); who.appendChild(document.createTextNode("."));
+  var blk = function (r, c) { return r < 0 || c < 0 || r >= R || c >= C || G[r][c] === "#"; };
+  var nums = {}, words = { a: {}, d: {} }, cellWord = {}, n = 0;
+  for (var r = 0; r < R; r++) for (var c = 0; c < C; c++) {
+    if (blk(r, c)) continue;
+    var sa = blk(r, c - 1) && !blk(r, c + 1), sd = blk(r - 1, c) && !blk(r + 1, c);
+    if (sa || sd) { n++; nums[r * C + c] = n; }
+    [["a", sa, 0, 1], ["d", sd, 1, 0]].forEach(function (o) {
+      if (!o[1]) return; var cells = [], rr = r, cc = c;
+      while (!blk(rr, cc)) { cells.push(rr * C + cc); rr += o[2]; cc += o[3]; }
+      words[o[0]][n] = cells; cells.forEach(function (k) { (cellWord[k] = cellWord[k] || {})[o[0]] = n; });
+    });
+  }
+  var grid = $("xw-grid"), inputs = {}, dir = "a", cur = null;
+  var size = function () { var w = Math.min(grid.parentNode.clientWidth, 500); grid.style.setProperty("--sz", Math.max(20, Math.min(44, Math.floor((w - 4) / C) - 1)) + "px"); $("xw-bar").style.maxWidth = grid.offsetWidth + "px"; $("xw-tools").style.maxWidth = Math.max(grid.offsetWidth, 300) + "px"; };
+  grid.style.setProperty("--c", C);
+  for (var k = 0; k < R * C; k++) {
+    var el = document.createElement("div"), rr2 = Math.floor(k / C), cc2 = k % C; el.className = "xw-cell";
+    if (blk(rr2, cc2)) { el.className += " blk"; grid.appendChild(el); continue; }
+    if (nums[k]) { var sp = document.createElement("span"); sp.className = "num"; sp.textContent = nums[k]; el.appendChild(sp); }
+    var inp = document.createElement("input"); inp.maxLength = 2; inp.autocomplete = "off"; inp.setAttribute("autocapitalize", "characters"); inp.spellcheck = false;
+    inp.setAttribute("aria-label", "Row " + (rr2 + 1) + ", column " + (cc2 + 1)); inp.value = fill[k] || ""; inp.dataset.k = k;
+    if (shown[k]) el.classList.add("shown");
+    el.appendChild(inp); grid.appendChild(el); inputs[k] = inp;
+  }
+  size(); window.addEventListener("resize", size);
+  var lists = { a: $("xw-a"), d: $("xw-d") }, lis = { a: {}, d: {} };
+  [["a", p.across], ["d", p.down]].forEach(function (o) {
+    o[1].forEach(function (x) {
+      var li = document.createElement("li"), b = document.createElement("b"), t = document.createElement("span");
+      b.textContent = x.n; t.textContent = x.clue; li.appendChild(b); li.appendChild(t); li.dataset.n = x.n;
+      li.addEventListener("click", function () { if (words[o[0]][x.n]) { dir = o[0]; go(words[o[0]][x.n][0]); } });
+      lists[o[0]].appendChild(li); lis[o[0]][x.n] = li;
+    });
+  });
+  var clueOf = function (dd, nn) { var L = dd === "a" ? p.across : p.down; for (var i = 0; i < L.length; i++) if (L[i].n === nn) return L[i].clue; return ""; };
+  function paint() {
+    document.querySelectorAll(".xw-cell.word, .xw-cell.cur").forEach(function (e) { e.classList.remove("word", "cur"); });
+    document.querySelectorAll(".xw-clues li.on").forEach(function (e) { e.classList.remove("on"); });
+    if (cur == null) return;
+    if (!cellWord[cur][dir]) dir = dir === "a" ? "d" : "a";
+    var wn = cellWord[cur][dir]; words[dir][wn].forEach(function (k) { inputs[k].parentNode.classList.add("word"); });
+    inputs[cur].parentNode.classList.add("cur");
+    var li = lis[dir][wn]; if (li) { li.classList.add("on"); var box = li.closest(".xw-clues"); if (box.scrollHeight > box.clientHeight) { var t = li.offsetTop - box.offsetTop; if (t < box.scrollTop || t > box.scrollTop + box.clientHeight - 40) box.scrollTop = t - 60; } }
+    $("xw-bar").innerHTML = ""; var b = document.createElement("b"); b.textContent = wn + (dir === "a" ? " Across" : " Down"); $("xw-bar").appendChild(b); $("xw-bar").appendChild(document.createTextNode(" " + clueOf(dir, wn)));
+    Object.keys(words).forEach(function (dd) { Object.keys(words[dd]).forEach(function (wn2) { var l = lis[dd][wn2]; if (l) l.classList.toggle("done", words[dd][wn2].every(function (k) { return inputs[k].value; })); }); });
+  }
+  function go(k) { cur = k; inputs[k].focus({ preventScroll: true }); paint(); }
+  function save() { var f = []; for (var k in inputs) f[k] = inputs[k].value; try { localStorage.setItem(K, JSON.stringify({ f: f, s: shown })); } catch (e) {} }
+  function step(delta) { var w = words[dir][cellWord[cur][dir]], i = w.indexOf(cur) + delta; if (i >= 0 && i < w.length) go(w[i]); }
+  function solved() { for (var k in inputs) if (inputs[k].value !== G[Math.floor(k / C)][k % C]) return false; return true; }
+  function done() { if (solved()) { $("xw-msg").textContent = shown.some(Boolean) ? "All filled in. A new puzzle goes up tomorrow." : "The bee's knees! You solved today's 1924 crossword. A new one goes up tomorrow."; } }
+  grid.addEventListener("pointerdown", function (e) {
+    var i = e.target.closest("input"); if (!i) return; var k = +i.dataset.k;
+    if (k === cur) { dir = dir === "a" ? "d" : "a"; e.preventDefault(); go(k); }
+  });
+  grid.addEventListener("focusin", function (e) { var i = e.target.closest("input"); if (i && +i.dataset.k !== cur) { cur = +i.dataset.k; paint(); } });
+  grid.addEventListener("input", function (e) {
+    var i = e.target, v = (i.value || "").replace(/[^a-z]/gi, "").toUpperCase(); i.value = v.slice(-1);
+    i.parentNode.classList.remove("bad"); save(); if (i.value) step(1); paint(); done();
+  });
+  grid.addEventListener("keydown", function (e) {
+    if (cur == null) return; var r = Math.floor(cur / C), c = cur % C, mv = { ArrowLeft: [0, -1, "a"], ArrowRight: [0, 1, "a"], ArrowUp: [-1, 0, "d"], ArrowDown: [1, 0, "d"] }[e.key];
+    if (mv) { e.preventDefault(); if (dir !== mv[2]) { dir = mv[2]; paint(); return; } var rr = r + mv[0], cc = c + mv[1]; while (!(rr < 0 || cc < 0 || rr >= R || cc >= C) && blk(rr, cc)) { rr += mv[0]; cc += mv[1]; } if (!blk(rr, cc)) go(rr * C + cc); return; }
+    if (e.key === "Backspace") { e.preventDefault(); if (inputs[cur].value) { inputs[cur].value = ""; } else { step(-1); inputs[cur].value = ""; } inputs[cur].parentNode.classList.remove("bad"); save(); paint(); return; }
+    if (e.key === " ") { e.preventDefault(); dir = dir === "a" ? "d" : "a"; paint(); return; }
+    if (e.key === "Tab") { e.preventDefault(); var L = Object.keys(words[dir]).map(Number), j = L.indexOf(cellWord[cur][dir]) + (e.shiftKey ? -1 : 1); if (j >= L.length) { dir = dir === "a" ? "d" : "a"; j = 0; } if (j < 0) j = 0; go(words[dir][Object.keys(words[dir]).map(Number)[j]][0]); return; }
+    if (/^[a-z]$/i.test(e.key) && !e.ctrlKey && !e.metaKey) { e.preventDefault(); inputs[cur].value = e.key.toUpperCase(); inputs[cur].parentNode.classList.remove("bad"); save(); step(1); paint(); done(); }
+  });
+  $("xw-check").addEventListener("click", function () {
+    var bad = 0, empty = 0; for (var k in inputs) { var v = inputs[k].value, ok = v === G[Math.floor(k / C)][k % C]; if (!v) empty++; inputs[k].parentNode.classList.toggle("bad", !!v && !ok); if (v && !ok) bad++; }
+    $("xw-msg").textContent = bad ? bad + (bad === 1 ? " letter isn't" : " letters aren't") + " right yet. They're crossed out." : empty ? "Everything so far is right. Keep going!" : ""; done();
+  });
+  function reveal(list) { list.forEach(function (k) { if (inputs[k].value !== G[Math.floor(k / C)][k % C]) { inputs[k].value = G[Math.floor(k / C)][k % C]; shown[k] = 1; inputs[k].parentNode.classList.add("shown"); } inputs[k].parentNode.classList.remove("bad"); }); save(); paint(); done(); }
+  $("xw-word").addEventListener("click", function () { if (cur == null) { $("xw-msg").textContent = "Tap a square first, then show its word."; return; } reveal(words[dir][cellWord[cur][dir]]); });
+  var sure = false;
+  $("xw-all").addEventListener("click", function () {
+    if (!sure) { sure = true; this.textContent = "Tap again to show them all"; var b = this; setTimeout(function () { sure = false; b.textContent = "Show the answers"; }, 4000); return; }
+    sure = false; this.textContent = "Show the answers"; reveal(Object.keys(inputs).map(Number));
+  });
+  $("xw-clear").addEventListener("click", function () { for (var k in inputs) { inputs[k].value = ""; inputs[k].parentNode.classList.remove("bad", "shown"); } shown = []; $("xw-msg").textContent = ""; save(); paint(); });
+  paint(); done();
 })();
 </script>
 </body>
