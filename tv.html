@@ -170,8 +170,13 @@
     .np-series { font-size: 26px; } .np-title { font-size: 24px; }
     .np .scr-ctrl { gap: 8px; } .np .scr-ctrl button { flex: 1 1 auto; padding: 10px 12px; font-size: 17px; min-height: 42px; }
     .np .scr-vol { flex: 1 1 100%; display: flex; align-items: center; gap: 10px; } .np .scr-vol input { flex: 1; }
-    .tuner { grid-area: tuner; margin-top: 14px !important; grid-template-columns: 1fr !important; grid-template-rows: minmax(0, 1fr); min-height: 0; padding: 8px; }
-    .tuner .ch-step { display: none; }
+    .tuner { grid-area: tuner; margin-top: 14px !important; grid-template-columns: 1fr !important; grid-template-rows: auto minmax(0, 1fr) auto; min-height: 0; padding: 8px; }
+    /* channel changer: up and down bars above and below the list, like the knob on a set */
+    .tuner .ch-step { width: 100%; height: 40px; font-size: 0; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .tuner .ch-step::before { content: "\25B2"; font-size: 16px; }
+    .tuner .ch-step[data-step="1"]::before { content: "\25BC"; }
+    .tuner .ch-step::after { content: "Previous channel"; font: 700 17px/1 "BK Serif", Georgia, serif; }
+    .tuner .ch-step[data-step="1"]::after { content: "Next channel"; }
     .tuner .dial { flex-direction: column; overflow-x: hidden; overflow-y: auto; height: 100%; padding: 2px; gap: 6px; }
     .tuner .ch { padding: 7px 12px; }
     .tuner .ch-name { font-size: 18px; }
