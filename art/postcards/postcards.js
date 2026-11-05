@@ -33,8 +33,8 @@ window.POSTCARDS = [
 "f": "pc-1923-christmas-greeting-shepherd-peace-on-earth.jpg",
 "title": "Christmas greeting shepherd peace on earth",
 "year": "1923",
-"w": 947,
-"h": 1400,
+"w": 836,
+"h": 1304,
 "item": "https://archive.org/details/1923-12-21-obverse-raymond-mc-cormick"
 },
 {
@@ -42,8 +42,8 @@ window.POSTCARDS = [
 "f": "pc-1923-christmas-greeting-snowy-cottage.jpg",
 "title": "Christmas greeting snowy cottage",
 "year": "1923",
-"w": 927,
-"h": 1400,
+"w": 843,
+"h": 1306,
 "item": "https://archive.org/details/1923-12-20-obverse-balzora-scofield"
 },
 {
@@ -51,8 +51,8 @@ window.POSTCARDS = [
 "f": "pc-1923-christmas-greetings-candelabra-poinsettias.jpg",
 "title": "Christmas greetings candelabra poinsettias",
 "year": "1923",
-"w": 900,
-"h": 1400,
+"w": 851,
+"h": 1338,
 "item": "https://archive.org/details/1923-12-04-reverse"
 },
 {
@@ -69,8 +69,8 @@ window.POSTCARDS = [
 "f": "pc-1923-christmas-nativity-stable.jpg",
 "title": "Christmas nativity stable",
 "year": "1923",
-"w": 951,
-"h": 1400,
+"w": 843,
+"h": 1308,
 "item": "https://archive.org/details/1923-12-20-obverse-ida-estella"
 },
 {
@@ -78,8 +78,8 @@ window.POSTCARDS = [
 "f": "pc-1924-christmas-snowy-bridge-holly.jpg",
 "title": "Christmas snowy bridge holly",
 "year": "1924",
-"w": 929,
-"h": 1400,
+"w": 836,
+"h": 1306,
 "item": "https://archive.org/details/1924-12-24-obverse"
 },
 {
@@ -105,8 +105,8 @@ window.POSTCARDS = [
 "f": "pc-1929-christmastide-carolers-with-lantern.jpg",
 "title": "Christmastide carolers with lantern",
 "year": "1929",
-"w": 944,
-"h": 1400,
+"w": 816,
+"h": 1290,
 "item": "https://archive.org/details/1929-12-21-obverse"
 },
 {
@@ -169,7 +169,7 @@ window.POSTCARDS = [
 "title": "1941 buon natale nativity manger",
 "year": "1941",
 "w": 897,
-"h": 1400,
+"h": 1283,
 "item": "https://archive.org/details/corr.fam-036-mscr-1941-m-r"
 },
 {
@@ -276,8 +276,8 @@ window.POSTCARDS = [
 "f": "pc-1910-merry-christmas-pine-cones-snowy-cottage.jpg",
 "title": "Merry christmas pine cones snowy cottage",
 "year": "1910",
-"w": 1400,
-"h": 920,
+"w": 1299,
+"h": 826,
 "item": "https://archive.org/details/1910-12-20-obverse"
 },
 {
@@ -285,8 +285,8 @@ window.POSTCARDS = [
 "f": "pc-1910s-joyous-christmas-snowy-church-village.jpg",
 "title": "Joyous christmas snowy church village",
 "year": "1910s",
-"w": 935,
-"h": 1400,
+"w": 815,
+"h": 1301,
 "item": "https://archive.org/details/undated-beulah-kerschner-obverse"
 },
 {
@@ -294,8 +294,8 @@ window.POSTCARDS = [
 "f": "pc-1912-christmas-greetings-snowy-village-holly.jpg",
 "title": "Christmas greetings snowy village holly",
 "year": "1912",
-"w": 926,
-"h": 1400,
+"w": 864,
+"h": 1353,
 "item": "https://archive.org/details/1912-12-21-obverse"
 },
 {
@@ -303,8 +303,8 @@ window.POSTCARDS = [
 "f": "pc-1912-happy-new-year-snowy-lane.jpg",
 "title": "Happy new year snowy lane",
 "year": "1912",
-"w": 902,
-"h": 1400,
+"w": 861,
+"h": 1345,
 "item": "https://archive.org/details/1912-12-27-obverse"
 },
 {
@@ -312,8 +312,8 @@ window.POSTCARDS = [
 "f": "pc-1915-merry-christmas-snowy-village-millpond.jpg",
 "title": "Merry christmas snowy village millpond",
 "year": "1915",
-"w": 1400,
-"h": 947,
+"w": 1307,
+"h": 860,
 "item": "https://archive.org/details/1915-12-23-obverse"
 },
 {
@@ -321,7 +321,7 @@ window.POSTCARDS = [
 "f": "pc-1915-still-growing-winter-sunset.jpg",
 "title": "Still growing winter sunset",
 "year": "1915",
-"w": 1400,
+"w": 1336,
 "h": 884,
 "item": "https://archive.org/details/1915-12-23-obverse-louise-wiles"
 },

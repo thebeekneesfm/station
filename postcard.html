@@ -71,16 +71,17 @@
   /* the postcard rack and the card itself */
   .rack { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
   .rack li { margin: 0; }
-  .rack button { all: unset; cursor: pointer; display: block; width: 100%; aspect-ratio: 1; background: rgba(31,27,23,.06); }
+  .rack button { all: unset; cursor: pointer; display: block; width: 100%; aspect-ratio: 1; }
   .rack img { width: 100%; height: 100%; object-fit: contain; display: block; filter: drop-shadow(0 2px 2px rgba(0,0,0,.35)); transition: transform .15s ease; }
   .rack button:hover img, .rack button:focus-visible img { transform: rotate(-1.5deg) scale(1.04); }
   .rack button:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
-  .card { margin: 18px auto 0; max-width: 680px; perspective: 1600px; }
+  /* the card is exactly the shape of the picture, tall or wide, so there's no empty frame around it */
+  .card { margin: 18px auto 0; width: 100%; max-width: min(680px, calc(70vh * var(--ar, 1.5))); perspective: 1600px; }
   .card-in { position: relative; display: grid; transition: transform .8s ease; transform-style: preserve-3d; }
   .card.flipped .card-in { transform: rotateY(180deg); }
   .face { grid-area: 1 / 1; backface-visibility: hidden; -webkit-backface-visibility: hidden; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
-  .front { background: #f4ecd8; display: flex; align-items: center; justify-content: center; min-height: 280px; }
-  .front img { display: block; max-width: 100%; max-height: 70vh; }
+  .front { background: #f4ecd8; display: block; }
+  .front img { display: block; width: 100%; height: auto; }
   .pc-back { transform: rotateY(180deg); }
   .pc-back, .compose-back { background: #f6efdc url("art/newsprint.jpg") 0 0 / 640px 640px; position: relative; display: grid; grid-template-columns: 1.25fr 1fr; gap: 0; padding: 22px 22px 20px; min-height: 340px; color: #2b2520; }
   .pc-back::before, .compose-back::before { content: ""; position: absolute; top: 22px; bottom: 22px; left: 55.5%; border-left: 1.5px solid rgba(43,37,32,.45); }
@@ -198,7 +199,7 @@
   </main>
 </div>
 <script src="config.js?v=20261105a"></script>
-<script src="art/postcards/postcards.js?v=1"></script>
+<script src="art/postcards/postcards.js?v=2"></script>
 <script src="ticker.js?v=4"></script>
 <script src="socials.js?v=2"></script>
 <script>
@@ -226,7 +227,7 @@
     b.addEventListener("click", function () { write(p); });
   });
   function write(p) {
-    cur = p; $("w-img").src = IMG + p.f; $("w-img").alt = p.title;
+    cur = p; $("w-img").src = IMG + p.f; $("w-img").alt = p.title; $("w-img").closest(".card").style.setProperty("--ar", p.w / p.h);
     document.querySelectorAll(".pm-date").forEach(function (e) { if (e.id !== "g-date") e.textContent = stamp(); });
     $("w-note").textContent = ""; show("v-write"); $("w-msg").focus();
   }
@@ -259,7 +260,7 @@
   // opening a postcard someone sent
   function receive(o) {
     var p = byId[o.c]; if (!p || BAD.test((o.m || "") + " " + (o.t || "") + " " + (o.f || ""))) return false;
-    $("g-img").src = IMG + p.f; $("g-img").alt = p.title;
+    $("g-img").src = IMG + p.f; $("g-img").alt = p.title; $("g-card").style.setProperty("--ar", p.w / p.h);
     $("g-msg").textContent = String(o.m || "").slice(0, 280);
     $("g-to").textContent = String(o.t || "").slice(0, 40); $("g-from").textContent = String(o.f || "").slice(0, 40);
     $("g-date").textContent = stamp(/^\d{4}-\d\d-\d\d$/.test(o.d || "") ? o.d : "");
