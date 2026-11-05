@@ -359,7 +359,8 @@
     CH.forEach(function (c, k) { c.num = c.num || k + 2; });
     var ADS = window.TV_ADS || [];
     var S = {}; CH.forEach(function (c) { S[c.id] = buildChannel(c, ADS); });
-    var pickCh = function () { var h = ({ strange: "unknown" })[location.hash.slice(1)] || location.hash.slice(1); return CH.find(function (c) { return c.id === h; }) || CH.find(function (c) { return c.id === store.get("tv.ch", ""); }) || CH[0]; };
+    var OLD = { strange: "unknown", cartoons: "kids", space: "kids" }, alias = function (k) { return OLD[k] || k; };   // channels that were renamed or merged
+    var pickCh = function () { var h = alias(location.hash.slice(1)); return CH.find(function (c) { return c.id === h; }) || CH.find(function (c) { return c.id === alias(store.get("tv.ch", "")); }) || CH[0]; };
     var cur = pickCh();
     where = function (ms) { return tvAt(S[cur.id], ms || Date.now()); };
     // the channel dial
