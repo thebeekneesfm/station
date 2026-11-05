@@ -17,7 +17,7 @@
   var LINKS = [
     [/ko-fi\.com\/thebeeskneesfm/g, "https://ko-fi.com/thebeeskneesfm"],
     [/thebeeskneesfm\.bsky\.social/g, "https://bsky.app/profile/thebeeskneesfm.bsky.social"],
-    [/\bInstagram\b/g, "https://www.instagram.com/thebeeskneesfm/"],
+    [/\bInstagram\b/g, "https://www.instagram.com/thebeesknees.fm/"],
     [/\bTikTok\b/g, "https://www.tiktok.com/@thebeeskneesfm"],
     [/\bYouTube\b/g, "https://www.youtube.com/@thebeeskneesfm"],
     [/\bBluesky\b/g, "https://bsky.app/profile/thebeeskneesfm.bsky.social"]

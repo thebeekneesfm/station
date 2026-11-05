@@ -3,7 +3,7 @@
 (function () {
   "use strict";
   var LINKS = [
-    ["Instagram", "https://www.instagram.com/thebeeskneesfm/"],
+    ["Instagram", "https://www.instagram.com/thebeesknees.fm/"],
     ["TikTok", "https://www.tiktok.com/@thebeeskneesfm"],
     ["YouTube", "https://www.youtube.com/@thebeeskneesfm"],
     ["Bluesky", "https://bsky.app/profile/thebeeskneesfm.bsky.social"]
