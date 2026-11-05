@@ -12,10 +12,10 @@
 <meta property="og:title" content="Send a Postcard · The Bee's Knees.fm">
 <meta property="og:description" content="Send a real antique postcard with your own note, from The Bee's Knees.fm.">
 <meta property="og:url" content="https://thebeesknees.fm/postcard.html">
-<meta property="og:image" content="https://thebeesknees.fm/art/share.jpg?v=2">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The Bee's Knees.fm with station cards and a Sunday Funnies page">
+<meta property="og:image" content="https://thebeesknees.fm/art/postcards/pc-1922-christmas-joy-holly-snowy-cabin.jpg">
+<meta property="og:image:width" content="1400">
+<meta property="og:image:height" content="910">
+<meta property="og:image:alt" content="An antique 1922 Christmas postcard of a snowy cabin with holly">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="art/favicon.png?v=2" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png?v=2">
@@ -237,7 +237,7 @@
     if (em && !/^[^\s@,;]+@[^\s@,;]+\.[^\s@,;]+$/.test(em)) { n.className = "note err"; n.textContent = "That email address doesn't look quite right. Check it, or leave it blank."; $("w-email").focus(); return; }
     if (!m) { n.className = "note err"; n.textContent = "Write a little something on the back first."; $("w-msg").focus(); return; }
     if (BAD.test(m + " " + t + " " + f)) { n.className = "note err"; n.textContent = "That card can't go out from The Bee's Knees. Please change the wording."; return; }
-    var url = location.origin + location.pathname.replace(/[^/]*$/, "") + "postcard.html#p=" + pack({ c: cur.id, m: m, t: t, f: f, d: today() });
+    var url = location.origin + location.pathname.replace(/[^/]*$/, "") + "c/" + cur.id + ".html#p=" + pack({ c: cur.id, m: m, t: t, f: f, d: today() });
     $("s-link").value = url;
     var subj = "A postcard for you", body = (t ? "Dear " + t + ",\n\n" : "") + (f ? f + " sent you" : "You've got") + " a vintage postcard from The Bee's Knees! Open it here and turn it over to read the back:\n\n" + url;
     // the address only goes into the email the sender's own mail app opens; it is never put in the card's link or saved
