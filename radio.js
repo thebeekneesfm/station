@@ -1417,8 +1417,8 @@
   /* ---------- the comic and magazine racks, opened over the radio ----------
      The rack page itself runs in a frame (comics.html?embed=1), so collections and the reader work just as on the page,
      and the radio keeps playing underneath. */
-  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads", "guestbook.html": "guestbook" };
-  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads", guestbook: "The guest book" }, isRack = k => !!RACK_TITLES[k];
+  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads", "guestbook.html": "guestbook", "youtube.html": "youtube" };
+  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads", guestbook: "The guest book", youtube: "The Bee's Knees on YouTube" }, isRack = k => !!RACK_TITLES[k];
   function openRack(kind, push = true) {
     let box = document.getElementById("rack-ov");
     if (!box) {
@@ -1445,8 +1445,16 @@
   function closeRack(fromHistory) {
     const box = document.getElementById("rack-ov"); if (!box || box.hidden) return;
     box.hidden = true; overlayOpen(false);
+    // a YouTube video switched the radio off: switch it back on now the video is closed
+    if (rackPausedRadio) { rackPausedRadio = false; if (!state.on) power(true); }
     if (!fromHistory && isRack(location.hash.slice(1))) history.back();
   }
+  // the YouTube page, opened over the radio, says when a video starts: switch the radio off so they don't play over each other
+  let rackPausedRadio = false;
+  window.addEventListener("message", e => {
+    if (e.origin !== location.origin || !e.data || e.data.bk !== "video-playing") return;
+    if (state.on) { rackPausedRadio = true; power(false); }
+  });
   window.addEventListener("popstate", () => { const k = location.hash.slice(1); if (isRack(k)) openRack(k, false); else closeRack(true); });
   if (isRack(location.hash.slice(1))) setTimeout(() => openRack(location.hash.slice(1), false), 0);
 
