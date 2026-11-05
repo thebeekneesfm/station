@@ -139,6 +139,21 @@
   @media (max-width: 760px) { .week-head { display: none; } }
 
   @media (max-width: 760px) { .week li { grid-template-columns: 1fr auto; } .wk-theme, .wk-films { grid-column: 1 / -1; } }
+  /* laptops and desktops: picture on the left sized to the screen, tonight's bill and the controls beside it */
+  @media (min-width: 1000px) {
+    .wrap { max-width: 1440px; padding-right: max(60px, env(safe-area-inset-right, 0px)); padding-left: max(60px, env(safe-area-inset-left, 0px)); }
+    .stage { --sh: clamp(380px, calc(100vh - 200px), 800px); display: grid; grid-template-columns: minmax(0, calc(var(--sh) * 16 / 9)) 340px; justify-content: center; grid-template-rows: auto minmax(0, 1fr); grid-template-areas: "scr mq" "scr np"; gap: 0 22px; height: var(--sh); align-items: start; }
+    .stage .scr { grid-area: scr; width: min(100%, calc(var(--sh) * 16 / 9)); align-self: center; justify-self: center; }
+    .stage .marquee { grid-area: mq; padding: 16px 18px; }
+    .mq-theme { font-size: 30px; } .mq-feats { font-size: 21px; } .mq-when { font-size: 17px; }
+    .stage .np { grid-area: np; margin-top: 14px; grid-template-columns: 1fr; gap: 6px; padding: 16px 18px; }
+    .np-when { text-align: left; }
+    .np-series { font-size: 26px; } .np-title { font-size: 24px; }
+    .np .scr-ctrl { gap: 8px; } .np .scr-ctrl button { flex: 1 1 auto; padding: 10px 12px; font-size: 17px; min-height: 42px; }
+    .np .scr-vol { flex: 1 1 100%; display: flex; align-items: center; gap: 10px; } .np .scr-vol input { flex: 1; }
+  }
+  /* phones and small tablets: the bill sits above the screen, as before */
+  @media (max-width: 999px) { .stage .marquee { order: -1; margin-bottom: 18px; } }
 </style>
 </head>
 <body data-mode="drivein">
@@ -149,8 +164,8 @@
     </div>
     <nav class="links" aria-label="Pages"><a href="index.html">The radio</a><a href="tv.html">TV</a><a href="drive-in.html" aria-current="page">Drive-In</a><a href="comics.html">Comics</a><a href="magazines.html">Magazines</a><a href="ads.html">Vintage ads</a><a href="about.html">About</a><a href="guestbook.html">Guest Book</a></nav>
   </header>
-  <section class="paper marquee"><div class="mq-theme"></div><div class="mq-feats"></div><div class="mq-when"></div></section>
   <div class="stage">
+    <section class="paper marquee"><div class="mq-theme"></div><div class="mq-feats"></div><div class="mq-when"></div></section>
     <div class="scr muted"><video playsinline preload="auto"></video><div class="scr-standby" role="status" aria-label="Please stand by"><video class="static" src="art/screen/static.mp4" autoplay muted loop playsinline disablepictureinpicture aria-hidden="true"></video></div><div class="scr-slate" hidden></div></div>
     <section class="paper np" aria-live="polite">
       <div class="np-what"><div class="np-ch"></div><div class="np-line"><span class="np-series"></span> <a class="np-title" target="_blank" rel="noopener" href="#"></a></div><div class="np-date"></div></div>
