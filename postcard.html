@@ -172,7 +172,7 @@
       <h1>Ready to mail</h1>
       <p class="lede" style="text-align:center">Here's your postcard's link. Send it any way you like: whoever opens it gets the card and can turn it over to read your note.</p>
       <div class="linkbox"><input id="s-link" readonly aria-label="Your postcard's link"><button type="button" class="btn" id="s-copy">Copy</button></div>
-      <div class="row"><button type="button" class="btn red" id="s-share" hidden>Share</button><a class="btn" id="s-mail" href="#">Email it</a><a class="btn" id="s-text" href="#">Text it</a><button type="button" class="btn ghost" id="s-again">Send another</button></div>
+      <div class="row"><button type="button" class="btn red" id="s-share" hidden>Share</button><a class="btn" id="s-mail" href="#" target="_top">Email it</a><a class="btn" id="s-text" href="#" target="_top">Text it</a><button type="button" class="btn ghost" id="s-again">Send another</button></div>
       <p class="note" id="s-note" role="status" aria-live="polite"></p>
     </section>
     <!-- 4. receiving one -->
@@ -238,9 +238,17 @@
     $("s-link").value = url;
     var subj = "A postcard for you", body = (t ? "Dear " + t + ",\n\n" : "") + (f ? f + " sent you" : "You've got") + " a vintage postcard from The Bee's Knees! Open it here and turn it over to read the back:\n\n" + url;
     $("s-mail").href = "mailto:?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
-    $("s-text").href = "sms:?&body=" + encodeURIComponent(body);
+    // iPhones want "sms:&body=", Android wants "sms:?body="
+    $("s-text").href = (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent) && "ontouchend" in document ? "sms:&body=" : "sms:?body=") + encodeURIComponent(body);
     $("s-share").hidden = !navigator.share;
     $("s-note").textContent = ""; show("v-sent");
+  });
+  // inside the radio's pop-up, phones won't open Mail or Messages from the frame, so open them from the main window
+  ["s-mail", "s-text"].forEach(function (id) {
+    $(id).addEventListener("click", function (e) {
+      if (window.top === window) return;
+      e.preventDefault(); try { window.top.location.href = this.href; } catch (x) { window.location.href = this.href; }
+    });
   });
   $("s-copy").addEventListener("click", function () {
     var i = $("s-link"); i.select();

@@ -1423,7 +1423,7 @@
     let box = document.getElementById("rack-ov");
     if (!box) {
       box = document.createElement("div"); box.id = "rack-ov"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.hidden = true;
-      box.innerHTML = '<div class="rk-card"><button type="button" class="ab-close rk-close">Close</button><iframe title="" allow="fullscreen"></iframe></div>';
+      box.innerHTML = '<div class="rk-card"><button type="button" class="ab-close rk-close">Close</button><iframe title="" allow="fullscreen; web-share; clipboard-write"></iframe></div>';
       document.body.appendChild(box);
       box.addEventListener("click", e => { if (e.target === box) closeRack(); });
       box.querySelector(".rk-close").addEventListener("click", () => closeRack());
@@ -1433,7 +1433,7 @@
     if (box.dataset.kind !== kind) {
       // a fresh frame for each rack: changing a frame's address would add a step to the browser's Back history
       box.dataset.kind = kind;
-      const nf = document.createElement("iframe"); nf.setAttribute("allow", "fullscreen");
+      const nf = document.createElement("iframe"); nf.setAttribute("allow", "fullscreen; web-share; clipboard-write");
       nf.title = RACK_TITLES[kind]; nf.src = kind + ".html?embed=1";
       fr.replaceWith(nf); fr = nf;
     }
