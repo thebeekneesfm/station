@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Guest Book · The Bee's Knees.fm</title>
 <meta name="description" content="Sign the guest book at The Bee's Knees.fm and see who else has tuned in.">
@@ -88,6 +89,10 @@
   .register .when { float: right; font-size: 15px; color: var(--dim); font-variant-numeric: tabular-nums; margin-left: 12px; }
   .register .msg { margin: 6px 0 0; white-space: pre-wrap; overflow-wrap: anywhere; }
   .empty { font-style: italic; color: var(--ink-2); }
+  /* opened over the radio (?embed=1): no site header, the close button sits top right */
+  .embed .mast { display: none; }
+  .embed .wrap { padding-top: 12px; }
+  .embed main h1 { padding-right: 110px; }
 </style>
 </head>
 <body>
