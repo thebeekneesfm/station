@@ -375,6 +375,7 @@
     var osd = $(".scr-osd"), osdT = 0;
     var tune = function (c) {
       cur = c; store.set("tv.ch", c.id);
+      if (typeof fsName !== "undefined" && fsName) fsName.textContent = c.num + "  " + c.name;
       if (location.hash !== "#" + c.id) history.replaceState(null, "", "#" + c.id);
       state.src = ""; guideKey = ""; tick(true);
       if (osd) {
@@ -388,6 +389,17 @@
     setTimeout(function () { dial.style.scrollBehavior = "auto"; centerDial(cur); dial.style.scrollBehavior = ""; }, 0);
     var step = function (d) { var k = CH.indexOf(cur); tune(CH[(k + d + CH.length) % CH.length]); };
     document.querySelectorAll(".ch-step").forEach(function (b) { b.addEventListener("click", function () { step(+b.dataset.step); }); });
+    // full screen: a little remote along the bottom of the picture, so you can change channel without leaving full screen.
+    // It shows when you move the mouse or tap, and fades after a few seconds.
+    var fsBar = document.createElement("div"); fsBar.className = "scr-fsbar";
+    fsBar.innerHTML = '<button type="button" data-d="-1" aria-label="Previous channel">\u25C0</button><span class="fs-name"></span><button type="button" data-d="1" aria-label="Next channel">\u25B6</button><button type="button" class="fs-exit">Exit full screen</button>';
+    screen.appendChild(fsBar);
+    var fsName = fsBar.querySelector(".fs-name"), fsT = 0;
+    var wake = function () { screen.classList.add("awake"); clearTimeout(fsT); fsT = setTimeout(function () { screen.classList.remove("awake"); }, 3000); };
+    fsBar.querySelectorAll("[data-d]").forEach(function (b) { b.addEventListener("click", function (e) { e.stopPropagation(); step(+b.dataset.d); wake(); }); });
+    fsBar.querySelector(".fs-exit").addEventListener("click", function (e) { e.stopPropagation(); if (document.fullscreenElement) document.exitFullscreen().catch(function () {}); });
+    ["mousemove", "pointerdown", "touchstart"].forEach(function (ev) { screen.addEventListener(ev, function () { if (document.fullscreenElement === screen) wake(); }, { passive: true }); });
+    document.addEventListener("fullscreenchange", function () { fsName.textContent = cur.num + "  " + cur.name; if (document.fullscreenElement === screen) wake(); else screen.classList.remove("awake"); });
     // keyboard: left/right change the channel
     document.addEventListener("keydown", function (e) {
       if (e.altKey || e.ctrlKey || e.metaKey) return;
