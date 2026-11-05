@@ -132,6 +132,13 @@
   .spread .mine { background: #f6efdc url("art/newsprint.jpg") 0 0 / 640px 640px; padding: 26px 24px; display: grid; align-content: start; gap: 10px; color: #2b2520; border-left: 1px solid rgba(43,37,32,.25); }
   .spread .mine .hand { font-size: 23px; }
   .spread .sig { text-align: right; }
+  /* while writing: back to the rack at the top, and arrows to flip through this occasion's cards */
+  .w-top { display: flex; justify-content: flex-start; margin-bottom: 10px; }
+  .small-btn { font-size: 16px; padding: 9px 14px; }
+  .browse { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 12px; font-style: italic; color: var(--ink-2); font-size: 17px; }
+  .arrow { font: 700 30px/1 "BK Serif", Georgia, serif; width: 46px; height: 46px; border-radius: 50%; border: 1.5px solid var(--ink); background: #f6efdc; color: var(--ink); cursor: pointer; display: grid; place-items: center; padding: 0; }
+  .arrow:hover { background: var(--ink); color: #f3ead6; }
+  .arrow:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
   [hidden] { display: none !important; }
   @media (max-width: 640px) {
     .pc-back, .compose-back { grid-template-columns: 1fr; padding: 16px; }
@@ -167,7 +174,9 @@
     </section>
     <!-- 2. writing one -->
     <section id="v-write" hidden>
+      <div class="w-top"><button type="button" class="btn ghost small-btn" id="w-all">&larr; All cards</button></div>
       <h1 id="w-head">Write on the back</h1>
+      <div class="browse"><button type="button" class="arrow" id="w-prev" aria-label="Previous card"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M12 3 6 9l6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><span id="w-pos" aria-live="polite"></span><button type="button" class="arrow" id="w-next" aria-label="Next card"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M6 3l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>
       <div class="card"><div class="face front"><img id="w-img" alt=""></div></div>
       <div class="card"><div class="compose-back" id="w-back-face">
         <div class="pc-left">
@@ -262,12 +271,27 @@
   var startTab = null; try { startTab = sessionStorage.getItem("card.tab"); } catch (e) {}
   if (!have.some(function (o) { return o[0] === startTab; })) startTab = have.some(function (o) { return o[0] === pickDefault; }) ? pickDefault : (have[0] || [""])[0];
   $("tabs").hidden = have.length < 2; rack(startTab);
-  function write(p) {
+  function write(p, browsing) {
     var fold = p.kind === "folded"; $("w-back-face").classList.toggle("folded", fold); $("w-head").textContent = fold ? "Write inside" : "Write on the back";
     cur = p; $("w-img").src = IMG + p.f; $("w-img").alt = p.title; $("w-img").closest(".card").style.setProperty("--ar", p.w / p.h);
     document.querySelectorAll(".pm-date").forEach(function (e) { if (e.id !== "g-date") e.textContent = stamp(); });
-    $("w-note").textContent = ""; show("v-write"); $("w-msg").focus();
+    var L = P.filter(function (x) { return x.occ === p.occ; }), i = L.indexOf(p), name = (OCC.filter(function (o) { return o[0] === p.occ; })[0] || ["", ""])[1];
+    $("w-pos").textContent = name + ": card " + (i + 1) + " of " + L.length;
+    $("w-note").textContent = ""; if (!browsing) { show("v-write"); $("w-msg").focus({ preventScroll: true }); }
   }
+  function flip(d) { var L = P.filter(function (x) { return x.occ === cur.occ; }); write(L[(L.indexOf(cur) + d + L.length) % L.length], true); }
+  $("w-prev").addEventListener("click", function () { flip(-1); });
+  $("w-next").addEventListener("click", function () { flip(1); });
+  $("w-all").addEventListener("click", function () { show("v-rack"); });
+  // swipe the card left or right on a phone
+  (function () { var x0 = null, img = $("w-img");
+    img.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    img.addEventListener("touchend", function (e) { if (x0 == null) return; var dx = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(dx) > 50) flip(dx < 0 ? 1 : -1); });
+  })();
+  document.addEventListener("keydown", function (e) {
+    if ($("v-write").hidden || /INPUT|TEXTAREA/.test((document.activeElement || {}).tagName || "")) return;
+    if (e.key === "ArrowLeft") flip(-1); else if (e.key === "ArrowRight") flip(1);
+  });
   $("w-msg").addEventListener("input", function () { $("w-count").textContent = (280 - this.value.length) + " left"; });
   $("w-back").addEventListener("click", function () { show("v-rack"); });
   $("w-send").addEventListener("click", function () {
