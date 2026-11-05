@@ -39,6 +39,10 @@
     patronsSub: "Thank you for keeping us on the air",
     patronsJoin: "Become a patron",
     patronsEmpty: "Your name could be the first one here.",
+    patronsMembers: "Members",
+    patronsTippers: "Top Tippers",
+    patronsNoMembers: "Be the first member!",
+    patronsNoTippers: "Buy us a coffee and see your name here.",
     visits: "Site visits: {n}",
     aired: "Originally aired",
     released: "Originally released",
@@ -922,13 +926,14 @@
       } else if (type === "patrons") {
         // Patrons of the Station: names only, members first, then the biggest supporters of the last 90 days
         el.classList.add("hot", "t-patrons");
-        el.innerHTML = '<div class="pt-card"><div class="pt-head"></div><div class="pt-sub"></div><ol class="pt-list"></ol><a class="pt-link" target="_blank" rel="noopener"></a></div>';
+        el.innerHTML = '<div class="pt-card"><div class="pt-head"></div><div class="pt-sub"></div><div class="pt-cols"><div class="pt-sec"><div class="pt-h"></div><ol class="pt-list pt-m"></ol></div><div class="pt-sec"><div class="pt-h"></div><ol class="pt-list pt-t"></ol></div></div><a class="pt-link" target="_blank" rel="noopener"></a></div>';
         el.querySelector(".pt-head").textContent = L.title || WORDS.patronsTitle;
         el.querySelector(".pt-sub").textContent = WORDS.patronsSub;
         const a = el.querySelector(".pt-link");
         if (CONFIG.tip) { a.href = CONFIG.tip; a.textContent = WORDS.patronsJoin; } else a.hidden = true;
         a.addEventListener("click", e => { if (state.editing) e.preventDefault(); e.stopPropagation(); });
-        rec.patrons = { list: el.querySelector(".pt-list"), key: null };
+        const hs = el.querySelectorAll(".pt-h"); hs[0].textContent = WORDS.patronsMembers; hs[1].textContent = WORDS.patronsTippers;
+        rec.patrons = { members: el.querySelector(".pt-m"), tippers: el.querySelector(".pt-t"), key: null };
         patronRecs.push(rec); paintPatrons(rec);
         if (patronRecs.length === 1) { loadPatrons(); setInterval(loadPatrons, 10 * 60 * 1000); }
       } else if (type === "guide") {
@@ -1718,7 +1723,7 @@
     const L = CONFIG.listeners || {};
     if (!L.url || !L.key || !window.fetch) { patrons.list = []; patronRecs.forEach(paintPatrons); return; }
     fetch(L.url + "/rest/v1/rpc/patrons", { method: "POST",
-      headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" }, body: JSON.stringify({ days: 90, max_rows: 8 }) })
+      headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" }, body: JSON.stringify({ days: 90, max_rows: 14 }) })
       .then(r => r.ok ? r.json() : []).then(list => { patrons.list = Array.isArray(list) ? list : []; patronRecs.forEach(paintPatrons); })
       .catch(() => { patrons.list = patrons.list || []; patronRecs.forEach(paintPatrons); });
   }
@@ -1726,14 +1731,19 @@
     const P = rec.patrons, list = patrons.list;
     if (!list) return;
     const key = JSON.stringify(list); if (key === P.key) return; P.key = key;
-    P.list.textContent = "";
-    if (!list.length) { const li = document.createElement("li"); li.className = "pt-empty"; li.textContent = WORDS.patronsEmpty; P.list.appendChild(li); return; }
-    list.forEach(p => {
-      const li = document.createElement("li");
-      const n = document.createElement("span"); n.className = "pt-name"; n.textContent = String(p.name).slice(0, 40); li.appendChild(n);
-      if (p.member) { const t = document.createElement("span"); t.className = "pt-tier"; t.textContent = p.tier_name ? p.tier_name + " member" : "Member"; li.appendChild(t); }
-      P.list.appendChild(li);
-    });
+    // two columns: members (with their tier) and the biggest tippers of the last 90 days; amounts are never shown
+    const fill = (ol, rows, empty) => {
+      ol.textContent = "";
+      if (!rows.length) { const li = document.createElement("li"); li.className = "pt-empty"; li.textContent = empty; ol.appendChild(li); return; }
+      rows.slice(0, 6).forEach(p => {
+        const li = document.createElement("li");
+        const n = document.createElement("span"); n.className = "pt-name"; n.textContent = String(p.name).slice(0, 40); li.appendChild(n);
+        if (p.member && p.tier_name) { const t = document.createElement("span"); t.className = "pt-tier"; t.textContent = p.tier_name; li.appendChild(t); }
+        ol.appendChild(li);
+      });
+    };
+    fill(P.members, list.filter(p => p.member), WORDS.patronsNoMembers);
+    fill(P.tippers, list.filter(p => !p.member), WORDS.patronsNoTippers);
   }
   loadTips(); setInterval(loadTips, 3 * 60 * 1000);
   loadMembers(); setInterval(loadMembers, 10 * 60 * 1000);
