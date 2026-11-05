@@ -93,6 +93,15 @@
   .won p { margin: 8px 0 0; }
   .credit { font-size: 16px; color: var(--ink-2); margin-top: 10px; }
   .soon { margin-top: 26px; padding-top: 14px; border-top: 2px solid var(--ink); font-size: 18px; }
+  /* the picture on the box lid: always in view, tap for a big look */
+  .lid { flex: none; padding: 5px; background: #f3ead6; border: 0; box-shadow: 0 2px 0 rgba(0,0,0,.3), 0 4px 10px rgba(0,0,0,.22); transform: rotate(-2deg); cursor: zoom-in; display: grid; gap: 3px; justify-items: center; }
+  .lid img { display: block; height: 96px; width: auto; max-width: 150px; object-fit: contain; }
+  .lid span { font: italic 14px/1 "BK Serif", Georgia, serif; color: var(--ink-2); }
+  .lid:focus-visible { outline: 3px solid var(--honey); outline-offset: 3px; }
+  .bigview { position: fixed; inset: 0; z-index: 50; background: rgba(20,15,10,.82); display: grid; place-items: center; padding: max(16px, env(safe-area-inset-top, 0px)) 16px 16px; cursor: zoom-out; }
+  .bigview img { max-width: min(92vw, 900px); max-height: 82vh; width: auto; height: auto; box-shadow: 0 0 0 8px #f3ead6, 0 14px 40px rgba(0,0,0,.6); }
+  .bigview p { margin: 14px 0 0; color: #f3ead6; font-size: 17px; text-align: center; }
+  @media (max-width: 560px) { .lid img { height: 72px; } }
   [hidden] { display: none !important; }
   /* opened over the radio (?embed=1): no site header, the close button sits top right */
   .embed .mast { display: none; }
@@ -113,6 +122,7 @@
     <h1>The Puzzle Page</h1>
     <p class="lede">A new jigsaw every day, cut from a real vintage ad or postcard. Everyone gets the same picture, so put the radio on and take your time. Your puzzle is saved as you go.</p>
     <div class="bar">
+      <button type="button" class="lid" id="lid" aria-label="See the finished picture"><img id="lidimg" alt=""><span>The finished picture</span></button>
       <span class="lbl">Pieces:</span>
       <button type="button" class="size" data-n="24">Easy &middot; 24</button>
       <button type="button" class="size" data-n="48">Medium &middot; 48</button>
@@ -126,6 +136,7 @@
     <p class="soon"><b>Coming soon:</b> a daily crossword from 1924, the year America went crossword-crazy.</p>
   </main>
 </div>
+<div class="bigview" id="bigview" hidden role="dialog" aria-label="The finished picture"><div><img id="bigimg" alt=""><p>Tap anywhere to go back to your puzzle</p></div></div>
 <script src="config.js?v=20261105a"></script>
 <script src="ads.js?v=1"></script>
 <script src="art/postcards/postcards.js?v=1"></script>
@@ -152,7 +163,10 @@
 
   $("credit").innerHTML = ""; var a = document.createElement("a"); a.href = pick.item; a.target = "_blank"; a.rel = "noopener";
   a.textContent = "Today's picture: " + pick.title + " (Internet Archive)"; $("credit").appendChild(a);
-  ghost.src = img.src = pick.src; ghost.alt = pick.title;
+  ghost.src = img.src = $("lidimg").src = $("bigimg").src = pick.src; ghost.alt = $("bigimg").alt = pick.title;
+  $("lid").addEventListener("click", function () { $("bigview").hidden = false; });
+  $("bigview").addEventListener("click", function () { $("bigview").hidden = true; $("lid").focus(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") $("bigview").hidden = true; });
   img.onload = function () { build(); };
 
   document.querySelectorAll(".size").forEach(function (b) {
