@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Send a Postcard · The Bee's Knees.fm</title>
-<meta name="description" content="Send a real antique postcard with your own note, from The Bee's Knees.fm.">
+<title>Send a Card · The Bee's Knees.fm</title>
+<meta name="description" content="Send a real antique greeting card or postcard with your own note, from The Bee's Knees.fm.">
 <link rel="canonical" href="https://thebeesknees.fm/postcard.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Bee's Knees.fm">
-<meta property="og:title" content="Send a Postcard · The Bee's Knees.fm">
-<meta property="og:description" content="Send a real antique postcard with your own note, from The Bee's Knees.fm.">
+<meta property="og:title" content="Send a Card · The Bee's Knees.fm">
+<meta property="og:description" content="Send a real antique greeting card or postcard with your own note, from The Bee's Knees.fm.">
 <meta property="og:url" content="https://thebeesknees.fm/postcard.html">
 <meta property="og:image" content="https://thebeesknees.fm/art/postcards/pc-1922-christmas-joy-holly-snowy-cabin.jpg">
 <meta property="og:image:width" content="1400">
@@ -117,6 +117,21 @@
   .linkbox { display: flex; gap: 8px; max-width: 640px; margin: 16px auto 0; }
   .linkbox input { flex: 1; min-width: 0; font: 16px/1.3 "BK Serif", Georgia, serif; padding: 10px; border: 1.5px solid var(--ink); background: #fffaf0; }
   .count { text-align: right; font-size: 14px; color: var(--dim); }
+  /* occasions */
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .tab { font: 700 17px/1 "BK Serif", Georgia, serif; background: transparent; color: var(--ink); border: 1.5px solid var(--ink); padding: 10px 13px; cursor: pointer; }
+  .tab[aria-selected="true"] { background: var(--ink); color: #f3ead6; }
+  .tab:focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
+  .rack-note { margin-top: 12px; font-style: italic; color: var(--ink-2); font-size: 17px; }
+  /* a folded card: no stamp, and it opens to the printed verse and your note */
+  .folded .pc-top { display: none; }
+  .spread { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; max-width: 900px; margin: 18px auto 0; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+  .spread > * { min-width: 0; }
+  .spread .verse { background: #f4ecd8; display: grid; place-items: center; }
+  .spread .verse img { display: block; width: 100%; height: auto; }
+  .spread .mine { background: #f6efdc url("art/newsprint.jpg") 0 0 / 640px 640px; padding: 26px 24px; display: grid; align-content: start; gap: 10px; color: #2b2520; border-left: 1px solid rgba(43,37,32,.25); }
+  .spread .mine .hand { font-size: 23px; }
+  .spread .sig { text-align: right; }
   [hidden] { display: none !important; }
   @media (max-width: 640px) {
     .pc-back, .compose-back { grid-template-columns: 1fr; padding: 16px; }
@@ -144,15 +159,17 @@
   <main class="paper">
     <!-- 1. the rack -->
     <section id="v-rack">
-      <h1>Send a Postcard</h1>
-      <p class="lede">Pick a real antique postcard, write a note on the back, and send it to someone with a link. Every card here was mailed or printed between about 1900 and 1950.</p>
+      <h1>Send a Card</h1>
+      <p class="lede">Pick a real antique greeting card or postcard, write your own note, and send it to someone with a link. Every card here was printed between about 1900 and 1965.</p>
+      <div class="tabs" role="tablist" aria-label="Occasions" id="tabs"></div>
+      <p class="rack-note" id="rack-note"></p>
       <ul class="rack" id="rack"></ul>
     </section>
     <!-- 2. writing one -->
     <section id="v-write" hidden>
-      <h1>Write on the back</h1>
+      <h1 id="w-head">Write on the back</h1>
       <div class="card"><div class="face front"><img id="w-img" alt=""></div></div>
-      <div class="card"><div class="compose-back">
+      <div class="card"><div class="compose-back" id="w-back-face">
         <div class="pc-left">
           <span class="pc-label">Your note</span>
           <textarea class="hand lines" id="w-msg" maxlength="280" placeholder="Wish you were here! The radio's playing Bing and it's snowing again..."></textarea>
@@ -170,8 +187,8 @@
     <!-- 3. ready to send -->
     <section id="v-sent" hidden>
       <h1>Ready to mail</h1>
-      <p class="lede" style="text-align:center">Here's your postcard's link. Send it any way you like: whoever opens it gets the card and can turn it over to read your note.</p>
-      <div class="linkbox"><input id="s-link" readonly aria-label="Your postcard's link"><button type="button" class="btn" id="s-copy">Copy</button></div>
+      <p class="lede" style="text-align:center">Here's your card's link. Send it any way you like: whoever opens it gets the card and can turn it over to read your note.</p>
+      <div class="linkbox"><input id="s-link" readonly aria-label="Your card's link"><button type="button" class="btn" id="s-copy">Copy</button></div>
       <div class="row"><button type="button" class="btn red" id="s-share" hidden>Share</button><a class="btn" id="s-mail" href="#" target="_top">Email it</a><a class="btn" id="s-text" href="#" target="_top">Text it</a><button type="button" class="btn ghost" id="s-again">Send another</button></div>
       <p class="note" id="s-note" role="status" aria-live="polite"></p>
     </section>
@@ -179,6 +196,7 @@
     <section id="v-got" hidden>
       <h1 id="g-head">You've got mail!</h1>
       <p class="lede" style="text-align:center" id="g-lede">Somebody sent you a postcard from The Bee's Knees. Turn it over to read it.</p>
+      <div class="spread" id="g-spread" hidden><div class="verse" id="g-verse"><img id="g-inside" alt=""></div><div class="mine"><div class="hand" id="g-to2"></div><div class="hand" id="g-msg2"></div><div class="hand sig" id="g-from2"></div></div></div>
       <div class="card" id="g-card"><div class="card-in">
         <div class="face front"><img id="g-img" alt=""></div>
         <div class="face pc-back">
@@ -197,14 +215,21 @@
 </div>
 <script src="config.js?v=20261105a"></script>
 <script src="art/postcards/postcards.js?v=2"></script>
+<script src="art/greetings/greetings.js?v=1"></script>
 <script src="ticker.js?v=4"></script>
 <script src="socials.js?v=2"></script>
 <script>
 (function () {
   "use strict";
-  var P = window.POSTCARDS || [], byId = {}; P.forEach(function (p) { byId[p.id] = p; });
+  // every card, in one list: the Christmas postcards plus the greeting cards (by occasion)
+  var P = (window.POSTCARDS || []).map(function (p) { return { id: p.id, occ: "christmas", kind: "postcard", f: "art/postcards/" + p.f, inside: null, title: p.title, year: p.year, w: p.w, h: p.h, item: p.item }; })
+    .concat((window.GREETINGS || []).map(function (g) { return { id: g.id, occ: g.occasion, kind: g.kind, f: "art/greetings/" + g.front, inside: g.inside ? "art/greetings/" + g.inside : null, title: g.title, year: g.year, w: g.w, h: g.h, item: g.item }; }));
+  var byId = {}; P.forEach(function (p) { byId[p.id] = p; });
   var $ = function (id) { return document.getElementById(id); };
-  var IMG = "art/postcards/";
+  var IMG = "";
+  var OCC = [["birthday", "Birthday"], ["thinking-of-you", "Thinking of You"], ["get-well", "Get Well"], ["thank-you", "Thank You"], ["valentines", "Valentine's"], ["easter", "Easter"], ["holidays", "Holidays"], ["christmas", "Christmas & Winter"], ["postcard", "Postcards"]];
+  var NOTES = { postcard: "Real postcards from towns, lakes and seasides. Wish them here!", christmas: "Antique Christmas and New Year postcards, mostly from the 1900s to the 1920s.", holidays: "Thanksgiving, New Year's, Halloween and the Fourth of July." };
+  var thumb = function (f) { return f.replace(/\.jpg$/, ".t.jpg"); };
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var stamp = function (iso) { var d = iso ? new Date(iso + "T12:00:00") : new Date(); return MONTHS[d.getMonth()] + " " + d.getDate() + " " + d.getFullYear(); };
   var today = function () { var d = new Date(); return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); };
@@ -217,13 +242,28 @@
   var show = function (v) { views.forEach(function (x) { $(x).hidden = x !== v; }); window.scrollTo(0, 0); };
   var cur = null;
 
-  P.forEach(function (p) {
-    var li = document.createElement("li"), b = document.createElement("button"), im = new Image();
-    b.type = "button"; b.setAttribute("aria-label", p.title + (p.year ? ", " + p.year : "")); im.src = IMG + p.f.replace(".jpg", ".t.jpg"); im.alt = ""; im.loading = "lazy";
-    b.appendChild(im); li.appendChild(b); $("rack").appendChild(li);
-    b.addEventListener("click", function () { write(p); });
+  var have = OCC.filter(function (o) { return P.some(function (p) { return p.occ === o[0]; }); });
+  var m0 = new Date().getMonth(), pickDefault = m0 >= 9 ? "christmas" : m0 === 1 ? "valentines" : (m0 === 2 || m0 === 3) ? "easter" : "birthday";
+  function rack(occ) {
+    try { sessionStorage.setItem("card.tab", occ); } catch (e) {}
+    $("rack").innerHTML = ""; $("rack-note").textContent = NOTES[occ] || "";
+    document.querySelectorAll(".tab").forEach(function (t) { t.setAttribute("aria-selected", t.dataset.occ === occ ? "true" : "false"); });
+    P.filter(function (p) { return p.occ === occ; }).forEach(function (p) {
+      var li = document.createElement("li"), b = document.createElement("button"), im = new Image();
+      b.type = "button"; b.setAttribute("aria-label", p.title + (p.year ? ", " + p.year : "")); im.src = thumb(p.f); im.alt = ""; im.loading = "lazy";
+      b.appendChild(im); li.appendChild(b); $("rack").appendChild(li);
+      b.addEventListener("click", function () { write(p); });
+    });
+  }
+  have.forEach(function (o) {
+    var t = document.createElement("button"); t.type = "button"; t.className = "tab"; t.setAttribute("role", "tab"); t.dataset.occ = o[0]; t.textContent = o[1];
+    t.addEventListener("click", function () { rack(o[0]); }); $("tabs").appendChild(t);
   });
+  var startTab = null; try { startTab = sessionStorage.getItem("card.tab"); } catch (e) {}
+  if (!have.some(function (o) { return o[0] === startTab; })) startTab = have.some(function (o) { return o[0] === pickDefault; }) ? pickDefault : (have[0] || [""])[0];
+  $("tabs").hidden = have.length < 2; rack(startTab);
   function write(p) {
+    var fold = p.kind === "folded"; $("w-back-face").classList.toggle("folded", fold); $("w-head").textContent = fold ? "Write inside" : "Write on the back";
     cur = p; $("w-img").src = IMG + p.f; $("w-img").alt = p.title; $("w-img").closest(".card").style.setProperty("--ar", p.w / p.h);
     document.querySelectorAll(".pm-date").forEach(function (e) { if (e.id !== "g-date") e.textContent = stamp(); });
     $("w-note").textContent = ""; show("v-write"); $("w-msg").focus();
@@ -236,7 +276,8 @@
     if (BAD.test(m + " " + t + " " + f)) { n.className = "note err"; n.textContent = "That card can't go out from The Bee's Knees. Please change the wording."; return; }
     var url = location.origin + location.pathname.replace(/[^/]*$/, "") + "c/" + cur.id + ".html#p=" + pack({ c: cur.id, m: m, t: t, f: f, d: today() });
     $("s-link").value = url;
-    var subj = "A postcard for you", body = (t ? "Dear " + t + ",\n\n" : "") + (f ? f + " sent you" : "You've got") + " a vintage postcard from The Bee's Knees! Open it here and turn it over to read the back:\n\n" + url;
+    var what = cur.kind === "folded" ? "card" : "postcard";
+    var subj = "A " + what + " for you", body = (t ? "Dear " + t + ",\n\n" : "") + (f ? f + " sent you" : "You've got") + " a vintage " + what + " from The Bee's Knees! Open it here" + (what === "card" ? ":" : " and turn it over to read the back:") + "\n\n" + url;
     $("s-mail").href = "mailto:?subject=" + encodeURIComponent(subj) + "&body=" + encodeURIComponent(body);
     // iPhones want "sms:&body=", Android wants "sms:?body="
     $("s-text").href = (/iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent) && "ontouchend" in document ? "sms:&body=" : "sms:?body=") + encodeURIComponent(body);
@@ -255,7 +296,7 @@
     var ok = function () { $("s-note").className = "note"; $("s-note").textContent = "Copied! Paste it anywhere."; };
     if (navigator.clipboard) navigator.clipboard.writeText(i.value).then(ok, function () { document.execCommand("copy"); ok(); }); else { document.execCommand("copy"); ok(); }
   });
-  $("s-share").addEventListener("click", function () { navigator.share({ title: "A postcard for you", text: "A vintage postcard from The Bee's Knees", url: $("s-link").value }).catch(function () {}); });
+  $("s-share").addEventListener("click", function () { var w = cur && cur.kind === "folded" ? "card" : "postcard"; navigator.share({ title: "A " + w + " for you", text: "A vintage " + w + " from The Bee's Knees", url: $("s-link").value }).catch(function () {}); });
   $("s-again").addEventListener("click", function () { $("w-msg").value = ""; $("w-count").textContent = "280 left"; show("v-rack"); });
 
   // opening a postcard someone sent
@@ -265,12 +306,24 @@
     $("g-msg").textContent = String(o.m || "").slice(0, 280);
     $("g-to").textContent = String(o.t || "").slice(0, 40); $("g-from").textContent = String(o.f || "").slice(0, 40);
     $("g-date").textContent = stamp(/^\d{4}-\d\d-\d\d$/.test(o.d || "") ? o.d : "");
-    if (o.f) $("g-lede").textContent = String(o.f).slice(0, 40) + " sent you a postcard from The Bee's Knees. Turn it over to read it.";
+    var fold = p.kind === "folded", w = fold ? "card" : "postcard";
+    $("g-lede").textContent = (o.f ? String(o.f).slice(0, 40) : "Somebody") + " sent you a " + w + " from The Bee's Knees. " + (fold ? "Open it to read it." : "Turn it over to read it.");
+    folded = fold; $("g-flip").textContent = fold ? "Open the card" : "Turn it over"; $("g-spread").hidden = true; $("g-card").hidden = false;
+    if (fold) {
+      $("g-verse").hidden = !p.inside; if (p.inside) { $("g-inside").src = p.inside; $("g-inside").alt = "The printed verse inside the card"; }
+      $("g-to2").textContent = o.t ? "Dear " + String(o.t).slice(0, 40) + "," : ""; $("g-msg2").textContent = String(o.m || "").slice(0, 280);
+      $("g-from2").textContent = o.f ? String(o.f).slice(0, 40) : "";
+    }
     $("g-credit").innerHTML = ""; var a = document.createElement("a"); a.href = p.item; a.target = "_blank"; a.rel = "noopener";
     a.textContent = "The card: " + p.title + (p.year ? ", " + p.year : "") + " (Internet Archive)"; $("g-credit").appendChild(a);
     show("v-got"); return true;
   }
-  $("g-flip").addEventListener("click", function () { var c = $("g-card"); c.classList.toggle("flipped"); this.textContent = c.classList.contains("flipped") ? "Turn it back" : "Turn it over"; });
+  var folded = false;
+  $("g-flip").addEventListener("click", function () {
+    if (folded) { var open = $("g-spread").hidden; $("g-spread").hidden = !open; $("g-card").hidden = open; this.textContent = open ? "Close the card" : "Open the card"; return; }
+    var c = $("g-card"); c.classList.toggle("flipped"); this.textContent = c.classList.contains("flipped") ? "Turn it back" : "Turn it over";
+  });
+  $("g-spread").addEventListener("click", function () { $("g-flip").click(); });
   $("g-card").addEventListener("click", function () { $("g-flip").click(); });
   $("g-reply").addEventListener("click", function () { history.replaceState(null, "", location.pathname + location.search); show("v-rack"); });
   var h = location.hash.match(/^#p=([\w-]+)/), o = h && unpack(h[1]);
