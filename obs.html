@@ -167,7 +167,7 @@
 <script src="config.js?v=20261105a"></script>
 <script src="stations.js?v=20261106a"></script>
 <script src="art/screen/tv-data.js?v=19"></script>
-<script src="obs-schedule.js?v=1"></script>
+<script src="obs-schedule.js?v=2"></script>
 <script>
 (function () {
   "use strict";
@@ -444,16 +444,27 @@
   /* ---------- the weekly schedule (?schedule=1): at the start of each block, switch by itself ---------- */
   var SCHED = Q.get("schedule") && window.STREAM_SCHEDULE, DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
   function pacific(ms) {
-    var p = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+    var p = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", weekday: "short", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
       .formatToParts(new Date(ms)).forEach(function (x) { p[x.type] = x.value; });
-    return { day: String(p.weekday).toLowerCase().slice(0, 3), hm: p.hour + ":" + p.minute };
+    return { day: String(p.weekday).toLowerCase().slice(0, 3), md: p.month + "-" + p.day, hm: p.hour + ":" + p.minute };
+  }
+  function onDate(dates, md) {
+    if (!dates) return true;
+    if (typeof dates === "string") return dates === md;
+    var f = dates.from, t = dates.to;
+    return f <= t ? (md >= f && md <= t) : (md >= f || md <= t);
+  }
+  function fits(b, t, timed) {
+    return onDate(b.dates, t.md) && (!b.days || b.days.indexOf(t.day) >= 0) && (!timed || (t.hm >= b.from && t.hm < b.to));
   }
   function blockNow(ms) {
-    var t = pacific(ms || Date.now());
-    var b = (SCHED.blocks || []).filter(function (x) { return x.days.indexOf(t.day) >= 0 && t.hm >= x.from && t.hm < x.to; })[0];
-    return b ? { key: t.day + x2(b), b: b } : { key: "otherwise", b: SCHED.otherwise || { play: "radio " + STATIONS[0].id } };
+    var t = pacific(ms || Date.now()), L = SCHED.blocks || [];
+    // holiday blocks (with dates) win over the weekly ones
+    var b = L.filter(function (x) { return x.dates && fits(x, t, true); })[0] || L.filter(function (x) { return !x.dates && fits(x, t, true); })[0];
+    if (b) return { key: t.md + "|" + b.from + "-" + b.to + "-" + b.play, b: b };
+    var O = [].concat(SCHED.otherwise || []), o = O.filter(function (x) { return fits(x, t, false); })[0] || { play: "radio " + STATIONS[0].id };
+    return { key: "otherwise|" + o.play, b: o };
   }
-  function x2(b) { return b.from + "-" + b.to + "-" + b.play; }
   var lastBlock = null;
   function followSchedule(first) {
     var n = blockNow(); if (n.key === lastBlock) return;
