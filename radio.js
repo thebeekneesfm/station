@@ -1580,7 +1580,11 @@
     if (slot.kind === "tv") {
       const sc = slot.sc, c = sc.ch, n = T.tvAt(sc, ms), it = n.item;
       let what = it.kind === "show" ? it.series : it.kind === "ad" ? "A word from our sponsors" : "Station break";
-      const tag = c.name + " \u00b7 " + what;
+      // skip the second half when it just repeats the channel ("Oddities · Oddities", "Home Movies · Home Movie")
+      const norm = x => String(x || "").toLowerCase().replace(/[^a-z0-9]/g, "").replace(/s$/, "");
+      const same = (a, b) => a && b && (a === b || a.startsWith(b) || b.startsWith(a));
+      if (same(norm(what), norm(c.name))) what = it.title && !same(norm(it.title), norm(c.name)) && it.title !== it.series ? it.title : "";
+      const tag = c.name + (what ? " \u00b7 " + what : "");
       return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: WORDS.tvGuide, href: "tv.html#" + c.id, key: c.id + (it.src || it.slate) };
     }
     const n = T.driveAt(ms); if (!n) return null;

@@ -181,6 +181,9 @@
   .tv-standby:empty { display: none; }
   .tv-tag { position: absolute; left: 6%; bottom: 7%; max-width: 88%; padding: .2em .55em; background: rgba(20,16,12,.78); color: #f3e9cf; font: italic calc(var(--g-size, 18px) * .78)/1.25 "BK Serif", Georgia, serif; border-radius: 2px; pointer-events: none; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .tv-tag[hidden] { display: none; }
+  /* the screen inside the DuMont set is small: center the label and let it wrap to two lines instead of cutting off */
+  [data-id="tv"] .tv-tag { left: 50%; right: auto; transform: translateX(-50%); bottom: 8%; max-width: 86%; width: max-content; text-align: center; white-space: normal; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; font-size: calc(var(--g-size, 18px) * .68); line-height: 1.2; }
+  [data-id="tv"] .tv-tag[hidden] { display: none; }
   .tv-link { cursor: pointer; }
 
   /* vintage ad panel */
@@ -669,7 +672,7 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261106a"></script>
+<script src="skin.js?v=20261106b"></script>
 <script src="stations.js?v=20261106b"></script>
 <script src="config.js?v=20261105a"></script>
 <script src="ads.js?v=20261102b"></script>
@@ -679,7 +682,7 @@
 <script src="art/screen/drivein-data.js?v=13"></script>
 <script src="art/screen/theater.js?v=36"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="radio.js?v=20261105e"></script>
+<script src="radio.js?v=20261106a"></script>
 <script src="socials.js?v=2"></script>
 <script src="chat.js?v=5"></script>
 </body>
