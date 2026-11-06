@@ -26,6 +26,15 @@ window.RADIO_CONFIG = {
      Example:  "chills": "Margaret",  */
   "sponsors": {
   },
+  /* The Shop page (shop.html) reads live products from Fourthwall's Storefront API.
+     token: from Fourthwall Settings > For developers > Storefront API. It is read-only and safe to be public.
+     collections: which collections to show, in order (their Fourthwall slugs). Empty ones are skipped. */
+  "shop": {
+    "token": "ptkn_0f3fee82-488e-43e7-8820-8fb0f2ea8183",
+    "shopUrl": "https://the-bees-knees-byn-shop.fourthwall.com",
+    "currency": "USD",
+    "collections": ["mugs", "journals", "buttons"]
+  },
   "listeners": {
     "url": "https://rjpztitddezmkzeiteaa.supabase.co",
     "key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJqcHp0aXRkZGV6bWt6ZWl0ZWFhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM0MzI3NDAsImV4cCI6MjEwOTAwODc0MH0.wTOlfDrJT48AJwIqXX2iK1jgyz52D0CIxdGh9GO6egI",
