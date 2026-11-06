@@ -21,6 +21,7 @@
     cooldown=180         seconds after a change before chat can change it again (default 180)
     vote=45              seconds chat has to vote once someone asks for a station (default 45)
     look=overlay         just the small now-playing card, for putting over your own scene
+    schedule=1           follow the weekly schedule in obs-schedule.js (switches by itself at each block)
   Example:  thebeesknees.fm/obs.html?station=swing&twitch=thebeeskneesfm
   The broadcaster and mods skip the vote and the cooldown.
 -->
@@ -166,6 +167,7 @@
 <script src="config.js?v=20261105a"></script>
 <script src="stations.js?v=20261106a"></script>
 <script src="art/screen/tv-data.js?v=19"></script>
+<script src="obs-schedule.js?v=1"></script>
 <script>
 (function () {
   "use strict";
@@ -439,9 +441,32 @@
     ws.onclose = function () { setTimeout(connect, 5000); };
   }
 
-  if (Q.get("test")) window.bkCommand = command;   // lets a test page pretend to be chat
+  /* ---------- the weekly schedule (?schedule=1): at the start of each block, switch by itself ---------- */
+  var SCHED = Q.get("schedule") && window.STREAM_SCHEDULE, DAYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+  function pacific(ms) {
+    var p = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+      .formatToParts(new Date(ms)).forEach(function (x) { p[x.type] = x.value; });
+    return { day: String(p.weekday).toLowerCase().slice(0, 3), hm: p.hour + ":" + p.minute };
+  }
+  function blockNow(ms) {
+    var t = pacific(ms || Date.now());
+    var b = (SCHED.blocks || []).filter(function (x) { return x.days.indexOf(t.day) >= 0 && t.hm >= x.from && t.hm < x.to; })[0];
+    return b ? { key: t.day + x2(b), b: b } : { key: "otherwise", b: SCHED.otherwise || { play: "radio " + STATIONS[0].id } };
+  }
+  function x2(b) { return b.from + "-" + b.to + "-" + b.play; }
+  var lastBlock = null;
+  function followSchedule(first) {
+    var n = blockNow(); if (n.key === lastBlock) return;
+    lastBlock = n.key;
+    var x = target(n.b.play); if (!x) return;
+    votes = null; lastChange = Date.now();
+    if (keyOf(x) !== keyOf(current())) setMode(x);
+    if (n.b.title) toast((first ? "" : "Now starting: ") + "<b>" + esc(n.b.title) + "</b>", 10000);
+  }
+  if (Q.get("test")) { window.bkCommand = command; window.bkBlockNow = blockNow; }   // lets a test page pretend to be chat
   if (mode === "radio") { card(); paint(); tick(); play(); }
   else { setMode(mode === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }); tick(); }
+  if (SCHED) { followSchedule(true); setInterval(followSchedule, 20000); }
 })();
 </script>
 </body>
