@@ -380,6 +380,8 @@
   /* playing videos and the scrolling line get their own GPU layers; anything drawn on top of them then
      needs extra full-size copies too. Keep those few pieces on top of everything else so nothing does. */
   .layer.t-tv { z-index: 900 !important; }
+  .layer[data-id="tv-set"] { z-index: 901 !important; filter: drop-shadow(3px 4px 0 rgba(0,0,0,.28)); }
+  html.phone .layer[data-id="tv-set"] { filter: none; }
   #stage { overflow: clip; }
   body { background: transparent !important; }
   #frame { background: transparent; }
@@ -667,7 +669,7 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261105d"></script>
+<script src="skin.js?v=20261106a"></script>
 <script src="stations.js?v=20261106b"></script>
 <script src="config.js?v=20261105a"></script>
 <script src="ads.js?v=20261102b"></script>
