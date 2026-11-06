@@ -47,7 +47,7 @@
     ".bkc-btn.bkc-tab{top:50%;bottom:auto;right:0;transform:translateY(-50%);writing-mode:vertical-rl;padding:18px 12px;box-shadow:-3px 3px 0 rgba(0,0,0,.35)}",
     "html.bkc-docked .bkc{top:0;bottom:0;right:0;width:400px;height:auto;box-shadow:-2px 0 0 #1f1b17,-10px 0 30px rgba(0,0,0,.4);padding-top:env(safe-area-inset-top,0px)}",
     "@media (prefers-reduced-motion:reduce){.bkc-peek{transition:none}}",
-    "@media (max-width:520px){.bkc{right:0;left:0;bottom:0;width:auto;height:min(70dvh,560px)}}",
+    "@media (max-width:520px){.bkc{right:0;left:0;bottom:0;width:auto;height:min(70dvh,560px)}.bkc-btn{font-size:16px;padding:9px 14px;right:max(10px,env(safe-area-inset-right,0px))}}",   /* phones: a smaller button that covers less of the page */
     "@media (prefers-color-scheme:dark){.bkc input{background:#fbf6e8;color:#1f1b17}}"
   ].join("");
   document.head.appendChild(css);
