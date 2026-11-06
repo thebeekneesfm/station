@@ -1,5 +1,7 @@
 /* The comic and magazine racks. Every issue is read straight from its page images at the Internet Archive.
-   Each one was looked through page by page (and its text searched) for racist caricature before it went on a shelf.
+   The first issues were looked through page by page for racist caricature; the Nov 2026 additions (Superheroes, Funny Pages,
+   Radio Mirror, Photoplay, Modern Screen, Mechanix Illustrated and more) were added without that review.
+   To hide a page, add its number (counting from 0) to a "hide" list on that issue, like the Saturday Evening Post has.
    To add an issue: copy a line, change the Archive id, title, issue, date, publisher and page count.
    To take one down: delete its line.
    Covers load from art/rack/covers/<id>.webp (300px wide) so the racks are quick; a new issue without one there uses its Archive cover until one is added. */
@@ -111,6 +113,78 @@ window.RACK = [
     "date": "January 1953",
     "publisher": "Fawcett Publications",
     "pages": 38
+   },
+   {
+    "id": "fawcett_This_Magazine_is_Haunted_007",
+    "title": "This Magazine Is Haunted",
+    "issue": "No. 7",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_This_Magazine_Is_Haunted_012_1953-08",
+    "title": "This Magazine Is Haunted",
+    "issue": "No. 12",
+    "date": "August 1953",
+    "publisher": "Fawcett Publications",
+    "pages": 33
+   },
+   {
+    "id": "fawcett_This_Magazine_is_Haunted_010_Fawcett_1953",
+    "title": "This Magazine Is Haunted",
+    "issue": "No. 10",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 34
+   },
+   {
+    "id": "fawcett_This_Magazine_Is_Haunted_013_Fawcett_1952",
+    "title": "This Magazine Is Haunted",
+    "issue": "No. 13",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett-beware-terror-tales-006",
+    "title": "Beware Terror Tales",
+    "issue": "No. 6",
+    "date": "March 1953",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Worlds_of_Fear_004_1952-05",
+    "title": "Worlds of Fear",
+    "issue": "No. 4",
+    "date": "May 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Strange_Suspense_Stories_002",
+    "title": "Strange Suspense Stories",
+    "issue": "No. 2",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Strange_Suspense_Stories_003",
+    "title": "Strange Suspense Stories",
+    "issue": "No. 3",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Strange_Suspense_Stories_005_Fawcett_1953",
+    "title": "Strange Suspense Stories",
+    "issue": "No. 5",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
    }
   ]
  },
@@ -165,6 +239,30 @@ window.RACK = [
     "date": "",
     "publisher": "Lev Gleason Publications",
     "pages": 37
+   },
+   {
+    "id": "fawcett_Underworld_Crime_003_1952-10",
+    "title": "Underworld Crime",
+    "issue": "No. 3",
+    "date": "October 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett-mike-barnett-mac-05",
+    "title": "Mike Barnett, Man Against Crime",
+    "issue": "No. 5",
+    "date": "August 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett-mike-barnett-mac-06",
+    "title": "Mike Barnett, Man Against Crime",
+    "issue": "No. 6",
+    "date": "October 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
    }
   ]
  },
@@ -267,6 +365,46 @@ window.RACK = [
     "date": "1954",
     "publisher": "Charlton Comics",
     "pages": 30
+   },
+   {
+    "id": "fawcett_Captain_Video_001_1951-02",
+    "title": "Captain Video",
+    "issue": "No. 1",
+    "date": "February 1951",
+    "publisher": "Fawcett Publications",
+    "pages": 26
+   },
+   {
+    "id": "fawcett_Captain_Video_004_1951-08",
+    "title": "Captain Video",
+    "issue": "No. 4",
+    "date": "August 1951",
+    "publisher": "Fawcett Publications",
+    "pages": 39
+   },
+   {
+    "id": "fawcett_Captain_Video_005_1951-10",
+    "title": "Captain Video",
+    "issue": "No. 5",
+    "date": "October 1951",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "destination-moon-50",
+    "title": "Destination Moon",
+    "issue": "No. 50",
+    "date": "1950",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "unknown-world-comics-01-1952-06",
+    "title": "Unknown World Comics",
+    "issue": "No. 1",
+    "date": "June 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 34
    }
   ]
  },
@@ -375,6 +513,274 @@ window.RACK = [
     "date": "August 1952",
     "publisher": "Fawcett Publications",
     "pages": 36
+   },
+   {
+    "id": "fawcett_Romantic_Secrets_029_1952-04",
+    "title": "Romantic Secrets",
+    "issue": "No. 29",
+    "date": "April 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Romantic_Secrets_037_1952-12",
+    "title": "Romantic Secrets",
+    "issue": "No. 37",
+    "date": "December 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Sweetheart_Diary_013_1952-11",
+    "title": "Sweetheart Diary",
+    "issue": "No. 13",
+    "date": "November 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Sweetheart_Diary_008_1951-12",
+    "title": "Sweetheart Diary",
+    "issue": "No. 8",
+    "date": "December 1951",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   }
+  ]
+ },
+ {
+  "shelf": "Superheroes",
+  "kind": "comics",
+  "issues": [
+   {
+    "id": "fawcett_Captain_Marvel_Jr_045",
+    "title": "Captain Marvel Jr.",
+    "issue": "No. 45",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Captain_Marvel_Jr_059",
+    "title": "Captain Marvel Jr.",
+    "issue": "No. 59",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Captain_Marvel_Jr_073",
+    "title": "Captain Marvel Jr.",
+    "issue": "No. 73",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Captain_Marvel_Jr_093",
+    "title": "Captain Marvel Jr.",
+    "issue": "No. 93",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Captain_Marvel_Jr_119_alt_scan",
+    "title": "Captain Marvel Jr.",
+    "issue": "No. 119",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Marvel_Family_08",
+    "title": "Marvel Family",
+    "issue": "No. 8",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Marvel_Family_17",
+    "title": "Marvel Family",
+    "issue": "No. 17",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 53
+   },
+   {
+    "id": "fawcett_Marvel_Family_35",
+    "title": "Marvel Family",
+    "issue": "No. 35",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Marvel_Family_055_1951-01",
+    "title": "Marvel Family",
+    "issue": "No. 55",
+    "date": "January 1951",
+    "publisher": "Fawcett Publications",
+    "pages": 53
+   },
+   {
+    "id": "fawcett_Marvel_Family_59",
+    "title": "Marvel Family",
+    "issue": "No. 59",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Marvel_Family_67",
+    "title": "Marvel Family",
+    "issue": "No. 67",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Marvel_Family_76",
+    "title": "Marvel Family",
+    "issue": "No. 76",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 33
+   },
+   {
+    "id": "fawcett_Marvel_Family_89_final_issue",
+    "title": "Marvel Family",
+    "issue": "No. 89",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 37
+   },
+   {
+    "id": "fawcett_Mary_Marvel_05",
+    "title": "Mary Marvel",
+    "issue": "No. 5",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Mary_Marvel_09",
+    "title": "Mary Marvel",
+    "issue": "No. 9",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Mary_Marvel_15",
+    "title": "Mary Marvel",
+    "issue": "No. 15",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 32
+   },
+   {
+    "id": "fawcett_Mary_Marvel_18",
+    "title": "Mary Marvel",
+    "issue": "No. 18",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Mary_Marvel_26",
+    "title": "Mary Marvel",
+    "issue": "No. 26",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Whiz_Comics_086",
+    "title": "Whiz Comics",
+    "issue": "No. 86",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Whiz_Comics_102",
+    "title": "Whiz Comics",
+    "issue": "No. 102",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 48
+   },
+   {
+    "id": "fawcett_Whiz_Comics_110",
+    "title": "Whiz Comics",
+    "issue": "No. 110",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 32
+   },
+   {
+    "id": "fawcett_Whiz_Comics_126",
+    "title": "Whiz Comics",
+    "issue": "No. 126",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Whiz_Comics_143",
+    "title": "Whiz Comics",
+    "issue": "No. 143",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 31
+   }
+  ]
+ },
+ {
+  "shelf": "Funny Pages",
+  "kind": "comics",
+  "issues": [
+   {
+    "id": "fawcett_Funny_Animals_038_1946-05",
+    "title": "Funny Animals",
+    "issue": "No. 38",
+    "date": "May 1946",
+    "publisher": "Fawcett Publications",
+    "pages": 52
+   },
+   {
+    "id": "fawcett_Funny_Animals_055_1947-11",
+    "title": "Funny Animals",
+    "issue": "No. 55",
+    "date": "November 1947",
+    "publisher": "Fawcett Publications",
+    "pages": 37
+   },
+   {
+    "id": "fawcett_Hoppy_the_Marvel_Bunny_001_1945-12",
+    "title": "Hoppy the Marvel Bunny",
+    "issue": "No. 1",
+    "date": "December 1945",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Hoppy_the_Marvel_Bunny_002_1946-01",
+    "title": "Hoppy the Marvel Bunny",
+    "issue": "No. 2",
+    "date": "January 1946",
+    "publisher": "Fawcett Publications",
+    "pages": 36
+   },
+   {
+    "id": "fawcett_Hoppy_the_Marvel_Bunny_003",
+    "title": "Hoppy the Marvel Bunny",
+    "issue": "No. 3",
+    "date": "",
+    "publisher": "Fawcett Publications",
+    "pages": 41
    }
   ]
  },
@@ -1661,6 +2067,334 @@ window.RACK = [
      74,
      75
     ]
+   }
+  ]
+ },
+ {
+  "shelf": "Radio Mirror",
+  "kind": "magazines",
+  "issues": [
+   {
+    "id": "Radio-Mirror-1934-09-Vol-2-No-5",
+    "title": "Radio Mirror",
+    "issue": "",
+    "date": "September 1934",
+    "publisher": "Macfadden Publications",
+    "pages": 83
+   },
+   {
+    "id": "Radio-Mirror-1936-07-Vol-6-No-3",
+    "title": "Radio Mirror",
+    "issue": "",
+    "date": "July 1936",
+    "publisher": "Macfadden Publications",
+    "pages": 93
+   },
+   {
+    "id": "Radio-Mirror-1938-07-Vol-10-No-3",
+    "title": "Radio Mirror",
+    "issue": "",
+    "date": "July 1938",
+    "publisher": "Macfadden Publications",
+    "pages": 89
+   },
+   {
+    "id": "Radio-and-Television-Mirror-1940-07-Vol-14-No-3",
+    "title": "Radio and Television Mirror",
+    "issue": "",
+    "date": "July 1940",
+    "publisher": "Macfadden Publications",
+    "pages": 85
+   },
+   {
+    "id": "Radio-Mirror-1943-07-Vol-20-No-3",
+    "title": "Radio Mirror",
+    "issue": "",
+    "date": "July 1943",
+    "publisher": "Macfadden Publications",
+    "pages": 91
+   },
+   {
+    "id": "Radio-Mirror-1946-07-Vol-26-No-2",
+    "title": "Radio Mirror",
+    "issue": "",
+    "date": "July 1946",
+    "publisher": "Macfadden Publications",
+    "pages": 97
+   },
+   {
+    "id": "Radio-and-Television-Mirror-1948-07-Vol-30-No-2",
+    "title": "Radio and Television Mirror",
+    "issue": "",
+    "date": "July 1948",
+    "publisher": "Macfadden Publications",
+    "pages": 107
+   },
+   {
+    "id": "Radio-and-Television-Mirror-1950-07-Vol-34-No-2",
+    "title": "Radio and Television Mirror",
+    "issue": "",
+    "date": "July 1950",
+    "publisher": "Macfadden Publications",
+    "pages": 107
+   },
+   {
+    "id": "Radio-TV-Mirror-1952-07-Vol-38-No-2",
+    "title": "Radio-TV Mirror",
+    "issue": "",
+    "date": "July 1952",
+    "publisher": "Macfadden Publications",
+    "pages": 107
+   },
+   {
+    "id": "Radio-TV-Mirror-1954-07-Vol-42-No-2",
+    "title": "Radio-TV Mirror",
+    "issue": "",
+    "date": "July 1954",
+    "publisher": "Macfadden Publications",
+    "pages": 103
+   },
+   {
+    "id": "TV-Radio-Mirror-1957-07-Vol-48-No-2",
+    "title": "TV Radio Mirror",
+    "issue": "",
+    "date": "July 1957",
+    "publisher": "Macfadden Publications",
+    "pages": 89
+   },
+   {
+    "id": "TV-Radio-Mirror-1959-04-Vol-51-No-5",
+    "title": "TV Radio Mirror",
+    "issue": "",
+    "date": "April 1959",
+    "publisher": "Macfadden Publications",
+    "pages": 85
+   },
+   {
+    "id": "tv-radio-mirror-1970-11-nov",
+    "title": "TV Radio Mirror",
+    "issue": "",
+    "date": "November 1970",
+    "publisher": "Macfadden Publications",
+    "pages": 112
+   },
+   {
+    "id": "tv-radio-mirror-1973-02-feb",
+    "title": "TV Radio Mirror",
+    "issue": "",
+    "date": "February 1973",
+    "publisher": "Macfadden Publications",
+    "pages": 61
+   }
+  ]
+ },
+ {
+  "shelf": "Photoplay",
+  "kind": "magazines",
+  "issues": [
+   {
+    "id": "photoplay-1924-12",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "December 1924",
+    "publisher": "Photoplay Publishing",
+    "pages": 211
+   },
+   {
+    "id": "Photoplay-1932-07-Vol-42-No-2",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1932",
+    "publisher": "Photoplay Publishing",
+    "pages": 129
+   },
+   {
+    "id": "Photoplay-1935-07-Vol-48-No-2",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1935",
+    "publisher": "Photoplay Publishing",
+    "pages": 121
+   },
+   {
+    "id": "Photoplay-1938-07-Vol-52-No-7",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1938",
+    "publisher": "Photoplay Publishing",
+    "pages": 95
+   },
+   {
+    "id": "Photoplay-1941-07-Vol-19-No-2",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1941",
+    "publisher": "Photoplay Publishing",
+    "pages": 107
+   },
+   {
+    "id": "Photoplay-1944-07-Vol-25-No-2",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1944",
+    "publisher": "Photoplay Publishing",
+    "pages": 123
+   },
+   {
+    "id": "Photoplay-1946-07-Vol-29-No-2",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1946",
+    "publisher": "Photoplay Publishing",
+    "pages": 137
+   },
+   {
+    "id": "Photoplay-1949-07-Vol-36-No-2",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1949",
+    "publisher": "Photoplay Publishing",
+    "pages": 105
+   },
+   {
+    "id": "Photoplay-1952-07-Vol-42-No-1",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1952",
+    "publisher": "Photoplay Publishing",
+    "pages": 113
+   },
+   {
+    "id": "Photoplay-1955-07-Vol-48-No-1",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1955",
+    "publisher": "Photoplay Publishing",
+    "pages": 107
+   },
+   {
+    "id": "Photoplay-1958-07-Vol-54-No-1",
+    "title": "Photoplay",
+    "issue": "",
+    "date": "July 1958",
+    "publisher": "Photoplay Publishing",
+    "pages": 101
+   }
+  ]
+ },
+ {
+  "shelf": "Modern Screen",
+  "kind": "magazines",
+  "issues": [
+   {
+    "id": "Modern-Screen-1930-11-Vol-1-No-1",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "November 1930",
+    "publisher": "Dell Publishing",
+    "pages": 131
+   },
+   {
+    "id": "Modern-Screen-1933-07-Vol-6-No-2",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "July 1933",
+    "publisher": "Dell Publishing",
+    "pages": 115
+   },
+   {
+    "id": "Modern-Screen-1937-08-Vol-15-No-3",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "August 1937",
+    "publisher": "Dell Publishing",
+    "pages": 101
+   },
+   {
+    "id": "Modern-Screen-1940-07-Vol-21-No-2",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "July 1940",
+    "publisher": "Dell Publishing",
+    "pages": 92
+   },
+   {
+    "id": "Modern-Screen-1943-04-Vol-26-No-5",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "April 1943",
+    "publisher": "Dell Publishing",
+    "pages": 95
+   },
+   {
+    "id": "Modern-Screen-1947-07-Vol-35-No-2",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "July 1947",
+    "publisher": "Dell Publishing",
+    "pages": 119
+   },
+   {
+    "id": "Modern-Screen-1950-06-Vol-41-No-1",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "June 1950",
+    "publisher": "Dell Publishing",
+    "pages": 113
+   },
+   {
+    "id": "Modern-Screen-1953-07-Vol-47-No-2",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "July 1953",
+    "publisher": "Dell Publishing",
+    "pages": 103
+   },
+   {
+    "id": "Modern-Screen-1957-07-Vol-51-No-7",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "July 1957",
+    "publisher": "Dell Publishing",
+    "pages": 95
+   },
+   {
+    "id": "Modern-Screen-1960-07-Vol-54-No-7",
+    "title": "Modern Screen",
+    "issue": "",
+    "date": "July 1960",
+    "publisher": "Dell Publishing",
+    "pages": 85
+   }
+  ]
+ },
+ {
+  "shelf": "Mechanix Illustrated",
+  "kind": "magazines",
+  "issues": [
+   {
+    "id": "mechanix-illustrated.1949.03",
+    "title": "Mechanix Illustrated",
+    "issue": "",
+    "date": "March 1949",
+    "publisher": "Fawcett Publications",
+    "pages": 190
+   },
+   {
+    "id": "mechanix-illustrated-195201",
+    "title": "Mechanix Illustrated",
+    "issue": "",
+    "date": "January 1952",
+    "publisher": "Fawcett Publications",
+    "pages": 197
+   },
+   {
+    "id": "mechanix-illustrated-195708",
+    "title": "Mechanix Illustrated",
+    "issue": "",
+    "date": "August 1957",
+    "publisher": "Fawcett Publications",
+    "pages": 195
    }
   ]
  }
