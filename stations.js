@@ -76244,7 +76244,7 @@ window.STATIONS = [
    }
   ],
   "season": {
-   "from": "11-15",
+   "from": "11-06",
    "to": "01-06"
   }
  }

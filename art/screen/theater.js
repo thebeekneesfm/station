@@ -25,12 +25,13 @@
   function inSeason(se, ms) { if (!se) return true; var t = mmdd(ms); return se.from <= se.to ? (t >= se.from && t <= se.to) : (t >= se.from || t <= se.to); }
   function liveChannels(ms) {
     var CH = (window.TVCH || []).filter(function (c) { return c.episodes && c.episodes.length && inSeason(c.season, ms); });
-    // a seasonal channel goes first while it's on, so it's where new viewers land
+    // a seasonal channel goes first from its "front" date (or as soon as it's on, if it has none), so it's where new viewers land
     // a seasonal channel's own commercials (the Christmas ones) join the Commercial Break channel while it's on
     var extra = [];
     CH.forEach(function (c) { if (c.season && c.ads) c.ads.forEach(function (a) { extra.push(Object.assign({ series: "Commercial" }, a)); }); });
     if (extra.length) CH = CH.map(function (c) { return c.allAds ? Object.assign({}, c, { episodes: c.episodes.concat(extra) }) : c; });
-    return CH.filter(function (c) { return c.season; }).concat(CH.filter(function (c) { return !c.season; }));
+    var lead = function (c) { return c.season && inSeason({ from: c.season.front || c.season.from, to: c.season.to }, ms); };
+    return CH.filter(lead).concat(CH.filter(function (c) { return !lead(c); }).sort(function (a, b) { return (a.num || 0) - (b.num || 0); }));
   }
 
   /* ---------------- schedules ---------------- */
