@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="art/favicon.png?v=2" type="image/png">
+<script src="art/backgrounds/backgrounds.js?v=20261101g3"></script>
 <link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
 <!--
   The Bee's Knees, made for streaming. Add this page to OBS as a Browser Source (1920 x 1080,
@@ -22,24 +23,25 @@
   The broadcaster and mods skip the vote and the cooldown.
 -->
 <style>
-  :root { --paper: #f3ead6; --ink: #1f1b17; --ink-2: #5a4a3a; --red: #c8321f; --honey: #e8b93a; }
+  :root { --paper: #e9e1c9; --ink: #1f1b17; --ink-2: #5d5244; --red: #c8321f; --honey: #e3a92f; }
   * { box-sizing: border-box; }
-  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #6e1f12; }
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #3f5a46; }
   body { font-family: "BK Serif", Georgia, serif; color: var(--ink); }
   #stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0;
-    background: #8a2a17 url("art/wallpaper.jpg") center / 900px auto; }
-  .paper { background: var(--paper) url("art/newsprint.jpg") 0 0 / 700px 700px; box-shadow: 0 3px 0 rgba(0,0,0,.25), 0 10px 26px rgba(0,0,0,.35); }
+    background: linear-gradient(var(--wall-shade, rgba(18,12,8,.22)), var(--wall-shade, rgba(18,12,8,.22))), var(--wall-img, url("art/wallpaper.jpg")) 0 0 / calc(var(--wall-size, 700px) * 1.2) repeat, #3f5a46; }
+  /* the radio's newsprint panels: flat print shadows, a hair off square */
+  .paper { background: url("art/newsprint.jpg") 0 0 / 768px 768px, var(--paper); box-shadow: 0 1px 0 rgba(0,0,0,.25), 3px 4px 0 rgba(0,0,0,.2); border-radius: 2px; transform: rotate(-.35deg); }
   .head { font-family: "BK Head", "BK Serif", Georgia, serif; font-weight: 400; letter-spacing: .01em; }
 
   /* masthead */
-  .mast { position: absolute; left: 40px; right: 40px; top: 28px; height: 128px; display: flex; align-items: center; justify-content: space-between; padding: 0 44px; }
+  .mast { transform: rotate(-.25deg); position: absolute; left: 40px; right: 40px; top: 28px; height: 128px; display: flex; align-items: center; justify-content: space-between; padding: 0 44px; }
   .logo { font-size: 92px; line-height: 1; white-space: nowrap; }
   .logo span { color: var(--red); font-size: .5em; }
   .tag { font-style: italic; font-size: 30px; color: var(--ink-2); margin-top: 4px; }
   .clock { font-size: 72px; font-weight: 700; letter-spacing: .02em; }
 
   /* the station card */
-  .card { position: absolute; left: 70px; top: 200px; width: 520px; height: 520px; transform: rotate(-2.5deg); overflow: hidden; background: var(--paper); box-shadow: 0 6px 0 rgba(0,0,0,.25), 0 16px 34px rgba(0,0,0,.45); }
+  .card { position: absolute; left: 70px; top: 200px; width: 520px; height: 520px; overflow: hidden; background: var(--paper); box-shadow: 3px 4px 0 rgba(0,0,0,.28); }
   .card img, .card video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .card .burst { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 40px;
     background: repeating-conic-gradient(from 0deg at 50% 50%, #f6e7c4 0 9deg, #efd9a8 9deg 18deg); }
@@ -59,35 +61,33 @@
 
   /* coming up */
   .next { position: absolute; left: 70px; top: 760px; width: 1100px; height: 200px; padding: 22px 40px; }
-  .next h2 { margin: 0 0 8px; font-size: 40px; color: var(--red); }
+  .next h2 { margin: 0 0 8px; padding-bottom: 4px; font-size: 40px; color: var(--red); border-bottom: 2px solid var(--ink); }
   .next ol { list-style: none; margin: 0; padding: 0; font-size: 30px; line-height: 1.5; }
   .next li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .next li b { color: var(--red); display: inline-block; min-width: 140px; }
 
   /* tune in */
-  .tunein { position: absolute; left: 1210px; top: 760px; width: 640px; height: 200px; padding: 24px 36px; display: flex; flex-direction: column; justify-content: center; transform: rotate(1.2deg); }
+  .tunein { position: absolute; left: 1210px; top: 760px; width: 640px; height: 200px; padding: 22px 36px; display: flex; flex-direction: column; justify-content: center; transform: rotate(.6deg); }
   .tunein .head { font-size: 44px; color: var(--red); }
   .tunein p { margin: 6px 0 0; font-size: 30px; line-height: 1.3; }
-  .tunein code { font-family: inherit; font-weight: 700; background: rgba(232,185,58,.35); padding: 0 6px; }
+  .tunein code { font-family: inherit; font-weight: 700; background: var(--honey); padding: 0 6px; }
 
   /* ticker */
-  .ticker { position: absolute; left: 0; right: 0; bottom: 30px; height: 66px; overflow: hidden; display: flex; align-items: center; }
-  .ticker .run { white-space: nowrap; font-size: 32px; padding-left: 100%; animation: run var(--dur, 90s) linear infinite; }
-  .ticker .run span { margin: 0 48px; }
-  .ticker .run span::before { content: "\2726"; color: var(--red); margin-right: 48px; }
-  @keyframes run { to { transform: translateX(-100%); } }
+  .ticker { position: absolute; left: 0; right: 0; bottom: 30px; height: 70px; overflow: hidden; display: flex; align-items: center; justify-content: center; transform: none; }
+  .ticker .run { font-size: 32px; padding: 0 60px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .5s ease; }
+  .ticker .run.fading { opacity: 0; }
 
   /* the station list chat can pick from */
   .list { position: absolute; right: 70px; top: 200px; width: 600px; z-index: 4; padding: 28px 34px; display: none; }
   .list.on { display: block; }
-  .list h2 { margin: 0 0 10px; color: var(--red); font-size: 44px; }
+  .list h2 { margin: 0 0 10px; padding-bottom: 4px; color: var(--red); font-size: 44px; border-bottom: 2px solid var(--ink); }
   .list ol { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 26px; font-size: 27px; line-height: 1.45; }
-  .list b { color: var(--red); }
+  .list b { display: inline-block; min-width: 1.6em; text-align: center; margin-right: 8px; background: var(--ink); color: var(--paper); font-size: .85em; padding: 0 .15em; }
 
   /* chat requests and votes */
-  .toast { position: absolute; left: 50%; top: 168px; transform: translateX(-50%) rotate(-1deg); padding: 18px 36px; font-size: 38px; background: var(--ink); color: var(--paper); box-shadow: 0 10px 26px rgba(0,0,0,.45); opacity: 0; transition: opacity .4s; white-space: nowrap; z-index: 5; }
+  .toast { position: absolute; left: 50%; top: 168px; transform: translateX(-50%) rotate(-.8deg); padding: 16px 34px; font-size: 38px; background: url("art/newsprint.jpg") 0 0 / 768px 768px, var(--paper); color: var(--ink); border-top: 6px solid var(--red); box-shadow: 6px 8px 0 rgba(0,0,0,.4); opacity: 0; transition: opacity .4s; white-space: nowrap; z-index: 5; }
   .toast.on { opacity: 1; }
-  .toast b { color: var(--honey); }
+  .toast b { color: var(--red); }
 
   /* "Click to start" for setting up in a normal browser (OBS plays on its own) */
   .start { position: fixed; inset: 0; display: none; place-items: center; background: rgba(20,12,8,.65); color: var(--paper); font-size: 40px; cursor: pointer; z-index: 9; }
@@ -97,7 +97,7 @@
   .overlay #stage { background: transparent; }
   .overlay .mast, .overlay .card, .overlay .next, .overlay .tunein, .overlay .ticker { display: none; }
   html.overlay, html.overlay body { background: transparent; }
-  .overlay .now { left: 40px; top: auto; bottom: 40px; width: 900px; height: auto; padding: 22px 32px; }
+  .overlay .now { transform: none; left: 40px; top: auto; bottom: 40px; width: 900px; height: auto; padding: 22px 32px; }
   .overlay .series { font-size: 44px; -webkit-line-clamp: 1; }
   .overlay .title { font-size: 36px; -webkit-line-clamp: 1; margin-top: 4px; }
   .overlay .date { font-size: 24px; }
@@ -251,9 +251,11 @@
 
   // the ticker: the same announcements as the website
   (function () {
-    var run = $("run"), parts = (CONFIG.announcements || []).filter(Boolean);
-    parts.forEach(function (a) { var s = document.createElement("span"); s.textContent = a; run.appendChild(s); });
-    run.style.setProperty("--dur", Math.max(40, run.textContent.length / 9) + "s");
+    var run = $("run"), parts = (CONFIG.announcements || []).filter(Boolean), k = 0;
+    if (!parts.length) return;
+    var show = function () { run.textContent = parts[k % parts.length]; run.classList.remove("fading"); k++; };
+    show();
+    setInterval(function () { run.classList.add("fading"); setTimeout(show, 500); }, 9000);
   })();
 
   // the station list (shown when chat asks for it)
