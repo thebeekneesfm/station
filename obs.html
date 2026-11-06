@@ -167,7 +167,7 @@
 <script src="config.js?v=20261105a"></script>
 <script src="stations.js?v=20261106a"></script>
 <script src="art/screen/tv-data.js?v=19"></script>
-<script src="obs-schedule.js?v=2"></script>
+<script src="obs-schedule.js?v=3"></script>
 <script>
 (function () {
   "use strict";
@@ -460,7 +460,10 @@
   function blockNow(ms) {
     var t = pacific(ms || Date.now()), L = SCHED.blocks || [];
     // holiday blocks (with dates) win over the weekly ones
-    var b = L.filter(function (x) { return x.dates && fits(x, t, true); })[0] || L.filter(function (x) { return !x.dates && fits(x, t, true); })[0];
+    // a single holiday (dates: "12-24") wins over a date range, which wins over the weekly blocks
+    var b = L.filter(function (x) { return typeof x.dates === "string" && fits(x, t, true); })[0]
+      || L.filter(function (x) { return x.dates && typeof x.dates !== "string" && fits(x, t, true); })[0]
+      || L.filter(function (x) { return !x.dates && fits(x, t, true); })[0];
     if (b) return { key: t.md + "|" + b.from + "-" + b.to + "-" + b.play, b: b };
     var O = [].concat(SCHED.otherwise || []), o = O.filter(function (x) { return fits(x, t, false); })[0] || { play: "radio " + STATIONS[0].id };
     return { key: "otherwise|" + o.play, b: o };
