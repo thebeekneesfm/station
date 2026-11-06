@@ -169,7 +169,9 @@
   /* ---------------- the screen ---------------- */
   var screen = $(".scr"), vid = $(".scr video"), card = $(".scr-slate"), standby = $(".scr-standby");
   var soundBtn = $(".scr-sound"), vol = $(".scr-vol input");
-  var state = { cur: null, src: "", sound: store.get(MODE + ".sound", false), vol: store.get(MODE + ".vol", 0.8) };
+  // ?broadcast=1: shown inside the streaming page (obs.html), so the sound is always on and full
+  var BROADCAST = /[?&]broadcast=1\b/.test(location.search);
+  var state = { cur: null, src: "", sound: BROADCAST || store.get(MODE + ".sound", false), vol: BROADCAST ? 1 : store.get(MODE + ".vol", 0.8) };
   vid.muted = true; vid.playsInline = true; vid.setAttribute("playsinline", "");
   vid.volume = state.vol;
   /* Browsers refuse to start a video with sound until the visitor has tapped the page. If that
@@ -363,6 +365,7 @@
     var OLD = { strange: "unknown", cartoons: "kids", space: "kids" }, alias = function (k) { return OLD[k] || k; };   // channels that were renamed or merged
     var pickCh = function () { var h = alias(location.hash.slice(1)); return CH.find(function (c) { return c.id === h; }) || CH.find(function (c) { return c.id === alias(store.get("tv.ch", "")); }) || CH[0]; };
     var cur = pickCh();
+    window.BK_CHANNELS = CH.map(function (c) { return { id: c.id, name: c.name, num: c.num }; });
     where = function (ms) { return tvAt(S[cur.id], ms || Date.now()); };
     // the channel dial
     var dial = $(".dial");

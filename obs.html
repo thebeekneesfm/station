@@ -10,12 +10,14 @@
 <link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
 <!--
   The Bee's Knees, made for streaming. Add this page to OBS as a Browser Source (1920 x 1080,
-  tick "Control audio via OBS") and it plays the radio, in sync with the website, with the
-  now-playing card on screen.
+  tick "Control audio via OBS") and it plays the radio, Bee's Knees TV or the Drive-In, in sync
+  with the website, with what's on shown on screen.
 
   Settings go after the "?" in the address, joined with "&":
-    station=swing        start on this station (its id or channel number; default: chills)
-    twitch=yourchannel   let chat change the station with !tune and list them with !stations
+    mode=radio           start on the radio (default), tv or drivein
+    station=swing        the radio station (its id or channel number; default: chills)
+    channel=kids         the TV channel, for mode=tv (its id or number; default: the first channel)
+    twitch=yourchannel   let chat change what's on: !tune swing, !tune tv kids, !tune drive-in, and !stations for the list
     cooldown=180         seconds after a change before chat can change it again (default 180)
     vote=45              seconds chat has to vote once someone asks for a station (default 45)
     look=overlay         just the small now-playing card, for putting over your own scene
@@ -78,16 +80,40 @@
   .ticker .run.fading { opacity: 0; }
 
   /* the station list chat can pick from */
-  .list { position: absolute; right: 70px; top: 200px; width: 600px; z-index: 4; padding: 28px 34px; display: none; }
+  .list { position: absolute; right: 60px; top: 268px; width: 900px; z-index: 4; padding: 26px 34px; display: none; }
+  .list .cols { display: grid; grid-template-columns: 1.15fr 1fr; gap: 30px; }
+  .list h3 { margin: 0 0 6px; font-size: 32px; color: var(--ink); }
+  .list h3 small { font-weight: 400; font-style: italic; font-size: 22px; color: var(--ink-2); }
+  .list .di { margin: 14px 0 0; font-size: 27px; border-top: 2px solid var(--ink); padding-top: 10px; }
+  .list code, .tunein code { font-family: inherit; font-weight: 700; background: var(--honey); padding: 0 6px; }
   .list.on { display: block; }
   .list h2 { margin: 0 0 10px; padding-bottom: 4px; color: var(--red); font-size: 44px; border-bottom: 2px solid var(--ink); }
-  .list ol { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 26px; font-size: 27px; line-height: 1.45; }
+  .list ol { margin: 0; padding: 0; list-style: none; font-size: 25px; line-height: 1.4; }
+  .list .radio ol { columns: 2; column-gap: 20px; }
   .list b { display: inline-block; min-width: 1.6em; text-align: center; margin-right: 8px; background: var(--ink); color: var(--paper); font-size: .85em; padding: 0 .15em; }
 
   /* chat requests and votes */
   .toast { position: absolute; left: 50%; top: 168px; transform: translateX(-50%) rotate(-.8deg); padding: 16px 34px; font-size: 38px; background: url("art/newsprint.jpg") 0 0 / 768px 768px, var(--paper); color: var(--ink); border-top: 6px solid var(--red); box-shadow: 6px 8px 0 rgba(0,0,0,.4); opacity: 0; transition: opacity .4s; white-space: nowrap; z-index: 5; }
   .toast.on { opacity: 1; }
   .toast b { color: var(--red); }
+
+  /* TV and Drive-In: the picture on the left, what's on beside it */
+  .screen { position: absolute; left: 60px; top: 186px; width: 1300px; height: 731px; background: #050403; box-shadow: 0 0 0 10px #1a120c, 5px 7px 0 10px rgba(0,0,0,.28); display: none; }
+  .screen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+  .scr-mode .screen { display: block; }
+  .scr-mode .card, .scr-mode .next, .scr-mode .bar { display: none; }
+  .scr-mode .now { left: 1410px; top: 186px; width: 450px; height: 524px; padding: 28px 32px; }
+  .scr-mode .kicker { font-size: 24px; }
+  .scr-mode .series { font-size: 46px; -webkit-line-clamp: 3; }
+  .scr-mode .title { font-size: 36px; -webkit-line-clamp: 3; margin-top: 8px; }
+  .scr-mode .date { font-size: 24px; }
+  .scr-mode .left { margin-top: auto; flex-direction: column; gap: 6px; font-size: 24px; }
+  .then { font-size: 24px; color: var(--ink-2); margin-top: 10px; display: none; }
+  .scr-mode .then { display: block; }
+  .scr-mode .tunein { left: 1410px; top: 736px; width: 450px; height: 190px; padding: 16px 26px; }
+  .scr-mode .tunein .head { font-size: 34px; }
+  .scr-mode .tunein p { font-size: 23px; }
+  .overlay .screen { opacity: 0; }
 
   /* "Click to start" for setting up in a normal browser (OBS plays on its own) */
   .start { position: fixed; inset: 0; display: none; place-items: center; background: rgba(20,12,8,.65); color: var(--paper); font-size: 40px; cursor: pointer; z-index: 9; }
@@ -113,11 +139,13 @@
     <div class="clock" id="clock"></div>
   </header>
   <div class="card" id="card"></div>
+  <div class="screen" id="screen"><iframe id="frame" title="Bee's Knees TV" allow="autoplay; fullscreen" src="about:blank"></iframe></div>
   <section class="now paper">
     <div class="kicker" id="kicker">Now playing</div>
     <div class="series head" id="series"></div>
     <div class="title" id="title"></div>
     <div class="date" id="date"></div>
+    <div class="then" id="then"></div>
     <div class="bar"><i id="bar"></i></div>
     <div class="left"><span id="left"></span><span>Listen free at thebeesknees.fm</span></div>
   </section>
@@ -126,7 +154,9 @@
     <div class="head">Tune in anywhere</div>
     <p>Every station, free and in sync, at <b>thebeesknees.fm</b></p>
   </section>
-  <section class="list paper" id="list"><h2 class="head">Pick a station</h2><ol id="stations"></ol></section>
+  <section class="list paper" id="list"><h2 class="head">What's on the dial</h2>
+    <div class="cols"><div class="radio"><h3>Radio <small>!tune swing</small></h3><ol id="stations"></ol></div><div><h3>TV <small>!tune tv kids</small></h3><ol id="channels"></ol></div></div>
+    <p class="di"><strong>The Drive-In</strong>: <code>!tune drive-in</code> for the picture show</p></section>
   <div class="ticker paper"><div class="run" id="run"></div></div>
   <div class="toast" id="toast"></div>
 </div>
@@ -135,6 +165,7 @@
 
 <script src="config.js?v=20261105a"></script>
 <script src="stations.js?v=20261106a"></script>
+<script src="art/screen/tv-data.js?v=19"></script>
 <script>
 (function () {
   "use strict";
@@ -168,13 +199,37 @@
     while (lo < hi) { var mid = (lo + hi + 1) >> 1; if (st._cum[mid] <= pos) lo = mid; else hi = mid - 1; }
     var tr = st.tracks[lo]; return { i: lo, track: tr, offset: pos - st._cum[lo], left: tr.length - (pos - st._cum[lo]) };
   }
-  function find(q) {
-    q = String(q || "").toLowerCase().replace(/[^a-z0-9]/g, "");
-    if (!q) return null;
-    return STATIONS.filter(function (s) { return s.id === q || String(+s.num) === String(+q) || s.name.toLowerCase().replace(/[^a-z0-9]/g, "") === q; })[0]
-      || STATIONS.filter(function (s) { return s.name.toLowerCase().replace(/[^a-z0-9]/g, "").indexOf(q) === 0 || s.id.indexOf(q) === 0; })[0] || null;
+  var squash = function (x) { return String(x || "").toLowerCase().replace(/[^a-z0-9]/g, ""); };
+  function pick(list, q) {
+    q = squash(q); if (!q) return null;
+    return list.filter(function (s) { return s.id === q || String(+s.num) === String(+q) || squash(s.name) === q; })[0]
+      || list.filter(function (s) { return squash(s.name).indexOf(q) === 0 || s.id.indexOf(q) === 0; })[0] || null;
   }
+  function find(q) { return pick(STATIONS, q); }
+
+  // the TV channels, in the same order and with the same numbers as the TV page
+  var CHANNELS = (window.TVCH || []).filter(function (c) { return c.episodes && c.episodes.length && inSeason(c); })
+    .sort(function (a, b) { return (a.num || 0) - (b.num || 0); }).map(function (c) { return { id: c.id, name: c.name, num: String(c.num) }; });
+  var OLD = { strange: "unknown", cartoons: "kids", space: "kids" };
+  function findCh(q) { return pick(CHANNELS, OLD[squash(q)] || q); }
+
+  /* What's on: { kind: "radio", st } or { kind: "tv", ch } or { kind: "drivein" } */
+  function target(q) {
+    var t = String(q || "").trim().toLowerCase();
+    if (/^(the )?(drive[\s-]?in|movies?|picture show|films?)$/.test(t)) return { kind: "drivein" };
+    var m = t.match(/^(tv|television|telly|channel)\b\s*(.*)$/);
+    if (m) { var c = m[2] ? findCh(m[2]) : (tvch || CHANNELS[0]); return c ? { kind: "tv", ch: c } : null; }
+    m = t.match(/^radio\b\s*(.*)$/);
+    if (m) { var r = m[1] ? find(m[1]) : station; return r ? { kind: "radio", st: r } : null; }
+    var st = find(t); if (st) return { kind: "radio", st: st };
+    var ch = findCh(t); if (ch) return { kind: "tv", ch: ch };
+    return null;
+  }
+  var keyOf = function (x) { return x.kind === "radio" ? "radio:" + x.st.id : x.kind === "tv" ? "tv:" + x.ch.id : "drivein"; };
+  var nameOf = function (x) { return x.kind === "radio" ? x.st.name + " on the radio" : x.kind === "tv" ? x.ch.name + " on TV" : "the Drive-In"; };
   var station = find(Q.get("station")) || STATIONS[0];
+  var tvch = findCh(Q.get("channel")) || CHANNELS[0];
+  var mode = { tv: "tv", drivein: "drivein" }[squash(Q.get("mode"))] || "radio";
 
   /* ---------- sound: an even level from record to record, so the stream never jumps ---------- */
   var audio = $("audio"), ctx = null, broken = {};
@@ -190,6 +245,7 @@
     } catch (e) { ctx = null; }
   }
   function play() {
+    if (mode !== "radio") return;
     var now = at(station), tr = now.track;
     if (broken[tr.src]) { now = nextGood(now); tr = now.track; }
     var seek = function () { try { audio.currentTime = Math.max(0, now.offset); } catch (e) {} start(); };
@@ -208,9 +264,10 @@
   }
   $("start").addEventListener("click", function () { $("start").classList.remove("on"); chain(); if (ctx) ctx.resume(); play(); });
   audio.addEventListener("ended", function () { setTimeout(play, 300); });
-  audio.addEventListener("error", function () { if (audio.dataset.src) broken[audio.dataset.src] = 1; setTimeout(play, 1500); });
+  audio.addEventListener("error", function () { if (mode !== "radio" || !audio.getAttribute("src")) return; if (audio.dataset.src) broken[audio.dataset.src] = 1; setTimeout(play, 1500); });
   // stay on the same second as the website
   setInterval(function () {
+    if (mode !== "radio") return;
     var now = at(station);
     if (now.track.src !== audio.dataset.src && !broken[now.track.src]) return play();
     if (!audio.paused && Math.abs(audio.currentTime - now.offset) > 6 && now.track.src === audio.dataset.src) { try { audio.currentTime = now.offset; } catch (e) {} }
@@ -228,6 +285,7 @@
     c.appendChild(img);
   }
   function paint() {
+    if (mode !== "radio") return;
     var now = at(station), tr = now.track;
     $("kicker").textContent = "Now playing on " + station.name + ", channel " + station.num;
     $("series").textContent = tr.series || "";
@@ -242,12 +300,54 @@
   }
   function tick() {
     $("clock").textContent = hm(Date.now());
+    if (mode !== "radio") return paintScreen();
     var now = at(station);
     $("bar").style.width = (100 * now.offset / now.track.length).toFixed(2) + "%";
     $("left").textContent = mmss(now.left) + " left";
     if (now.track.series !== $("series").textContent || now.track.title !== $("title").textContent) paint();
   }
   setInterval(tick, 1000);
+
+  /* ---------- TV and the Drive-In: the site's own player, picture only, in the frame ---------- */
+  var frame = $("frame");
+  function frameDoc() { try { return frame.contentDocument; } catch (e) { return null; } }
+  function txt(d, sel) { var e = d && d.querySelector(sel); return e ? e.textContent.trim() : ""; }
+  function paintScreen() {
+    var d = frameDoc();
+    if (mode === "tv") $("kicker").textContent = "Now on Bee's Knees TV: channel " + tvch.num + ", " + tvch.name;
+    else $("kicker").textContent = "Now at the Drive-In" + (txt(d, ".mq-theme") ? ": " + txt(d, ".mq-theme") : "");
+    if (!d) return;
+    $("series").textContent = txt(d, ".np-series");
+    $("title").textContent = txt(d, ".np-title");
+    $("date").textContent = txt(d, ".np-date");
+    $("left").textContent = txt(d, ".np-left");
+    $("then").textContent = txt(d, ".np-next") || (mode === "drivein" ? txt(d, ".mq-when") : "");
+  }
+  function showScreen(kind, ch) {
+    var url = kind === "tv" ? "tv.html?broadcast=1#" + ch.id : "drive-in.html?broadcast=1";
+    var same = frame.dataset.kind === kind;
+    frame.dataset.kind = kind;
+    if (same && kind === "tv") { try { frame.contentWindow.location.hash = ch.id; } catch (e) { frame.src = url; } }
+    else if (!same) frame.src = url;
+    frame.title = kind === "tv" ? "Bee's Knees TV" : "The Drive-In";
+  }
+  function setMode(x) {
+    var was = mode; mode = x.kind;
+    document.documentElement.classList.toggle("scr-mode", mode !== "radio");
+    if (mode === "radio") {
+      if (x.st) station = x.st;
+      frame.dataset.kind = ""; frame.src = "about:blank";
+      card(); audio.dataset.src = ""; play();
+      Q.set("mode", "radio"); Q.set("station", station.id); Q.delete("channel");
+    } else {
+      audio.pause(); audio.removeAttribute("src"); audio.dataset.src = ""; try { audio.load(); } catch (e) {}
+      if (mode === "tv") { tvch = x.ch || tvch; showScreen("tv", tvch); Q.set("mode", "tv"); Q.set("channel", tvch.id); }
+      else { showScreen("drivein"); Q.set("mode", "drivein"); Q.delete("channel"); }
+      ["series", "title", "date", "left", "then"].forEach(function (k) { if (was !== mode) $(k).textContent = ""; });
+      paintScreen();
+    }
+    try { history.replaceState(null, "", "?" + Q.toString()); } catch (e) {}
+  }
 
   // the ticker: the same announcements as the website
   (function () {
@@ -259,7 +359,8 @@
   })();
 
   // the station list (shown when chat asks for it)
-  STATIONS.forEach(function (s) { var li = document.createElement("li"), b = document.createElement("b"); b.textContent = +s.num + " "; li.appendChild(b); li.appendChild(document.createTextNode(s.name)); $("stations").appendChild(li); });
+  function listInto(ol, list) { list.forEach(function (s) { var li = document.createElement("li"), b = document.createElement("b"); b.textContent = +s.num; li.appendChild(b); li.appendChild(document.createTextNode(s.name)); ol.appendChild(li); }); }
+  listInto($("stations"), STATIONS); listInto($("channels"), CHANNELS);
 
   var toastT;
   function toast(html, ms) { var t = $("toast"); t.innerHTML = html; t.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove("on"); }, ms || 6000); }
@@ -267,48 +368,53 @@
   var listT;
   function showList(ms) { $("list").classList.add("on"); clearTimeout(listT); listT = setTimeout(function () { $("list").classList.remove("on"); }, ms || 15000); }
 
-  function tune(st, who) {
-    if (!st || st === station) return;
-    station = st; card(); play();
-    toast("Now tuned to <b>" + esc(st.name) + "</b>" + (who ? ", picked by " + esc(who) : ""), 7000);
-    try { history.replaceState(null, "", "?" + (function () { Q.set("station", st.id); return Q.toString(); })()); } catch (e) {}
+  function current() { return mode === "radio" ? { kind: "radio", st: station } : mode === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }; }
+  function tune(x, who) {
+    if (!x || keyOf(x) === keyOf(current())) return;
+    setMode(x);
+    toast("Now tuned to <b>" + esc(nameOf(x)) + "</b>" + (who ? ", picked by " + esc(who) : ""), 7000);
   }
-  // for whoever is running the stream: arrow keys change the station when OBS's "Interact" window is open
+  // for whoever is running the stream, in OBS's "Interact" window: arrow keys change station or channel,
+  // R, T and D switch to the radio, TV and the Drive-In
   addEventListener("keydown", function (e) {
-    var i = STATIONS.indexOf(station);
-    if (e.key === "ArrowRight" || e.key === "ArrowDown") tune(STATIONS[(i + 1) % STATIONS.length], "");
-    if (e.key === "ArrowLeft" || e.key === "ArrowUp") tune(STATIONS[(i - 1 + STATIONS.length) % STATIONS.length], "");
+    var d = e.key === "ArrowRight" || e.key === "ArrowDown" ? 1 : e.key === "ArrowLeft" || e.key === "ArrowUp" ? -1 : 0;
+    if (d && mode === "radio") { var i = STATIONS.indexOf(station); tune({ kind: "radio", st: STATIONS[(i + d + STATIONS.length) % STATIONS.length] }, ""); }
+    else if (d && mode === "tv") { var k = CHANNELS.indexOf(tvch); tune({ kind: "tv", ch: CHANNELS[(k + d + CHANNELS.length) % CHANNELS.length] }, ""); }
+    var m = { r: "radio", t: "tv", d: "drivein" }[e.key.toLowerCase()];
+    if (m) tune(m === "radio" ? { kind: "radio", st: station } : m === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }, "");
   });
 
   /* ---------- Twitch chat: !tune <station>, !stations ---------- */
   var channel = (Q.get("twitch") || "").toLowerCase().replace(/[^a-z0-9_]/g, "");
   var COOL = 1000 * (+Q.get("cooldown") || 180), VOTE = 1000 * (+Q.get("vote") || 45);
-  var lastChange = 0, votes = null, voteEnd = 0;
+  var lastChange = 0, votes = null, voteEnd = 0, cands = {};
   if (channel) {
-    $("tunein").innerHTML = '<div class="head">Pick the station</div><p>Type <code>!tune swing</code> (or a channel number) in chat. <code>!stations</code> shows the list. Listen free at <b>thebeesknees.fm</b></p>';
+    $("tunein").innerHTML = '<div class="head">You pick what\u2019s on</div><p>Type <code>!tune swing</code>, <code>!tune tv kids</code> or <code>!tune drive-in</code> in chat. <code>!stations</code> shows the dial. Free at <b>thebeesknees.fm</b></p>';
     connect();
   }
   function command(user, text, boss) {
-    var m = text.trim().match(/^!(tune|station|stations|radio)\b\s*(.*)$/i); if (!m) return;
-    var cmd = m[1].toLowerCase(), arg = m[2];
-    if (cmd === "stations" || (!arg && cmd !== "tune")) { showList(); return; }
-    var st = find(arg);
-    if (!st) { toast("No station called “" + esc(arg.slice(0, 24)) + "”. Type <b>!stations</b> for the list", 5000); return; }
+    var m = text.trim().match(/^!(tune|station|stations|channels|list|dial|radio|tv|watch|drive-?in|movies?)\b\s*(.*)$/i); if (!m) return;
+    var cmd = m[1].toLowerCase().replace("-", ""), arg = m[2].trim();
+    if (cmd === "stations" || cmd === "channels" || cmd === "list" || cmd === "dial" || ((cmd === "tune" || cmd === "station") && !arg)) { showList(); return; }
+    var q = cmd === "radio" ? "radio " + arg : cmd === "tv" || cmd === "watch" ? (arg && /^(the )?(drive|movie)/i.test(arg) ? arg : "tv " + arg) : /^(drivein|movies?)$/.test(cmd) ? "drive-in" : arg;
+    var st = target(q);
+    if (!st) { toast("Nothing on the dial called \u201c" + esc(arg.slice(0, 24)) + "\u201d. Type <b>!stations</b> for the list", 5000); return; }
     if (boss) { votes = null; lastChange = Date.now(); tune(st, user); return; }
     var wait = lastChange + COOL - Date.now();
     if (wait > 0 && !votes) { toast("The dial is resting. Next pick in <b>" + Math.ceil(wait / 60000) + " min</b>", 4000); return; }
     if (!votes) { votes = {}; voteEnd = Date.now() + VOTE; setTimeout(count, VOTE); }
-    votes[user.toLowerCase()] = st.id;
-    var tally = {}; Object.keys(votes).forEach(function (u) { tally[votes[u]] = (tally[votes[u]] || 0) + 1; });
-    var line = Object.keys(tally).sort(function (a, b) { return tally[b] - tally[a]; }).slice(0, 3).map(function (id) { return esc(find(id).name) + " <b>" + tally[id] + "</b>"; }).join(" &middot; ");
-    toast("Voting for the next station (" + Math.ceil((voteEnd - Date.now()) / 1000) + "s): " + line, VOTE);
+    votes[user.toLowerCase()] = st; cands[keyOf(st)] = st;
+    var tally = {}; Object.keys(votes).forEach(function (u) { var k = keyOf(votes[u]); tally[k] = (tally[k] || 0) + 1; });
+    var line = Object.keys(tally).sort(function (a, b) { return tally[b] - tally[a]; }).slice(0, 3).map(function (k) { return esc(nameOf(cands[k])) + " <b>" + tally[k] + "</b>"; }).join(" &middot; ");
+    toast("Voting on what\u2019s next (" + Math.ceil((voteEnd - Date.now()) / 1000) + "s): " + line, VOTE);
   }
   function count() {
     if (!votes) return; var tally = {}, best = null;
-    Object.keys(votes).forEach(function (u) { tally[votes[u]] = (tally[votes[u]] || 0) + 1; });
-    Object.keys(tally).forEach(function (id) { if (!best || tally[id] > tally[best]) best = id; });
+    Object.keys(votes).forEach(function (u) { var k = keyOf(votes[u]); tally[k] = (tally[k] || 0) + 1; });
+    Object.keys(tally).forEach(function (k) { if (!best || tally[k] > tally[best]) best = k; });
     votes = null; lastChange = Date.now();
-    var st = find(best); if (st === station) toast("Chat voted to stay on <b>" + esc(st.name) + "</b>", 5000); else tune(st, "chat");
+    var x = cands[best]; cands = {};
+    if (best === keyOf(current())) toast("Chat voted to stay on <b>" + esc(nameOf(x)) + "</b>", 5000); else tune(x, "chat");
   }
   function connect() {
     var ws = new WebSocket("wss://irc-ws.chat.twitch.tv:443");
@@ -329,7 +435,8 @@
   }
 
   if (Q.get("test")) window.bkCommand = command;   // lets a test page pretend to be chat
-  card(); paint(); tick(); play();
+  if (mode === "radio") { card(); paint(); tick(); play(); }
+  else { setMode(mode === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }); tick(); }
 })();
 </script>
 </body>
