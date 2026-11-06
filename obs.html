@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>On the Air · The Bee's Knees.fm</title>
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="art/favicon.png?v=2" type="image/png">
+<link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
+<!--
+  The Bee's Knees, made for streaming. Add this page to OBS as a Browser Source (1920 x 1080,
+  tick "Control audio via OBS") and it plays the radio, in sync with the website, with the
+  now-playing card on screen.
+
+  Settings go after the "?" in the address, joined with "&":
+    station=swing        start on this station (its id or channel number; default: chills)
+    twitch=yourchannel   let chat change the station with !tune and list them with !stations
+    cooldown=180         seconds after a change before chat can change it again (default 180)
+    vote=45              seconds chat has to vote once someone asks for a station (default 45)
+    look=overlay         just the small now-playing card, for putting over your own scene
+  Example:  thebeesknees.fm/obs.html?station=swing&twitch=thebeeskneesfm
+  The broadcaster and mods skip the vote and the cooldown.
+-->
+<style>
+  :root { --paper: #f3ead6; --ink: #1f1b17; --ink-2: #5a4a3a; --red: #c8321f; --honey: #e8b93a; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #6e1f12; }
+  body { font-family: "BK Serif", Georgia, serif; color: var(--ink); }
+  #stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0;
+    background: #8a2a17 url("art/wallpaper.jpg") center / 900px auto; }
+  .paper { background: var(--paper) url("art/newsprint.jpg") 0 0 / 700px 700px; box-shadow: 0 3px 0 rgba(0,0,0,.25), 0 10px 26px rgba(0,0,0,.35); }
+  .head { font-family: "BK Head", "BK Serif", Georgia, serif; font-weight: 400; letter-spacing: .01em; }
+
+  /* masthead */
+  .mast { position: absolute; left: 40px; right: 40px; top: 28px; height: 128px; display: flex; align-items: center; justify-content: space-between; padding: 0 44px; }
+  .logo { font-size: 92px; line-height: 1; white-space: nowrap; }
+  .logo span { color: var(--red); font-size: .5em; }
+  .tag { font-style: italic; font-size: 30px; color: var(--ink-2); margin-top: 4px; }
+  .clock { font-size: 72px; font-weight: 700; letter-spacing: .02em; }
+
+  /* the station card */
+  .card { position: absolute; left: 70px; top: 200px; width: 520px; height: 520px; transform: rotate(-2.5deg); overflow: hidden; background: var(--paper); box-shadow: 0 6px 0 rgba(0,0,0,.25), 0 16px 34px rgba(0,0,0,.45); }
+  .card img, .card video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .card .burst { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; padding: 40px;
+    background: repeating-conic-gradient(from 0deg at 50% 50%, #f6e7c4 0 9deg, #efd9a8 9deg 18deg); }
+  .card .burst b { font-family: "BK Head", serif; font-weight: 400; font-size: 96px; line-height: .95; color: var(--red); text-shadow: 3px 3px 0 var(--paper), 5px 5px 0 rgba(31,27,23,.25); }
+  .card .num { position: absolute; left: 22px; top: 18px; font-family: "BK Head", serif; font-size: 64px; color: #fff; text-shadow: 0 2px 6px rgba(0,0,0,.6); transform: rotate(-8deg); }
+  .card .burst ~ .num { color: var(--ink); text-shadow: none; }
+
+  /* now playing */
+  .now { position: absolute; left: 660px; top: 210px; width: 1190px; height: 500px; padding: 40px 54px; display: flex; flex-direction: column; }
+  .kicker { font-style: italic; font-size: 30px; color: var(--ink-2); }
+  .series { font-size: 74px; line-height: 1.02; color: var(--red); margin-top: 10px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .title { font-size: 62px; line-height: 1.1; margin-top: 12px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .date { font-style: italic; font-size: 34px; color: var(--ink-2); margin-top: 10px; }
+  .bar { margin-top: auto; height: 10px; background: rgba(31,27,23,.15); }
+  .bar i { display: block; height: 100%; width: 0; background: var(--red); }
+  .left { display: flex; justify-content: space-between; font-size: 30px; margin-top: 12px; color: var(--ink-2); }
+
+  /* coming up */
+  .next { position: absolute; left: 70px; top: 760px; width: 1100px; height: 200px; padding: 22px 40px; }
+  .next h2 { margin: 0 0 8px; font-size: 40px; color: var(--red); }
+  .next ol { list-style: none; margin: 0; padding: 0; font-size: 30px; line-height: 1.5; }
+  .next li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .next li b { color: var(--red); display: inline-block; min-width: 140px; }
+
+  /* tune in */
+  .tunein { position: absolute; left: 1210px; top: 760px; width: 640px; height: 200px; padding: 24px 36px; display: flex; flex-direction: column; justify-content: center; transform: rotate(1.2deg); }
+  .tunein .head { font-size: 44px; color: var(--red); }
+  .tunein p { margin: 6px 0 0; font-size: 30px; line-height: 1.3; }
+  .tunein code { font-family: inherit; font-weight: 700; background: rgba(232,185,58,.35); padding: 0 6px; }
+
+  /* ticker */
+  .ticker { position: absolute; left: 0; right: 0; bottom: 30px; height: 66px; overflow: hidden; display: flex; align-items: center; }
+  .ticker .run { white-space: nowrap; font-size: 32px; padding-left: 100%; animation: run var(--dur, 90s) linear infinite; }
+  .ticker .run span { margin: 0 48px; }
+  .ticker .run span::before { content: "\2726"; color: var(--red); margin-right: 48px; }
+  @keyframes run { to { transform: translateX(-100%); } }
+
+  /* the station list chat can pick from */
+  .list { position: absolute; right: 70px; top: 200px; width: 600px; z-index: 4; padding: 28px 34px; display: none; }
+  .list.on { display: block; }
+  .list h2 { margin: 0 0 10px; color: var(--red); font-size: 44px; }
+  .list ol { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 26px; font-size: 27px; line-height: 1.45; }
+  .list b { color: var(--red); }
+
+  /* chat requests and votes */
+  .toast { position: absolute; left: 50%; top: 168px; transform: translateX(-50%) rotate(-1deg); padding: 18px 36px; font-size: 38px; background: var(--ink); color: var(--paper); box-shadow: 0 10px 26px rgba(0,0,0,.45); opacity: 0; transition: opacity .4s; white-space: nowrap; z-index: 5; }
+  .toast.on { opacity: 1; }
+  .toast b { color: var(--honey); }
+
+  /* "Click to start" for setting up in a normal browser (OBS plays on its own) */
+  .start { position: fixed; inset: 0; display: none; place-items: center; background: rgba(20,12,8,.65); color: var(--paper); font-size: 40px; cursor: pointer; z-index: 9; }
+  .start.on { display: grid; }
+
+  /* look=overlay: just a lower-third card */
+  .overlay #stage { background: transparent; }
+  .overlay .mast, .overlay .card, .overlay .next, .overlay .tunein, .overlay .ticker { display: none; }
+  html.overlay, html.overlay body { background: transparent; }
+  .overlay .now { left: 40px; top: auto; bottom: 40px; width: 900px; height: auto; padding: 22px 32px; }
+  .overlay .series { font-size: 44px; -webkit-line-clamp: 1; }
+  .overlay .title { font-size: 36px; -webkit-line-clamp: 1; margin-top: 4px; }
+  .overlay .date { font-size: 24px; }
+  .overlay .kicker { font-size: 22px; }
+  .overlay .bar { margin-top: 14px; height: 6px; }
+  .overlay .left { font-size: 22px; margin-top: 6px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <header class="mast paper">
+    <div><div class="logo head">The Bee's Knees<span>.fm</span></div><div class="tag">Carefully curated to relieve you from our current timeline</div></div>
+    <div class="clock" id="clock"></div>
+  </header>
+  <div class="card" id="card"></div>
+  <section class="now paper">
+    <div class="kicker" id="kicker">Now playing</div>
+    <div class="series head" id="series"></div>
+    <div class="title" id="title"></div>
+    <div class="date" id="date"></div>
+    <div class="bar"><i id="bar"></i></div>
+    <div class="left"><span id="left"></span><span>Listen free at thebeesknees.fm</span></div>
+  </section>
+  <section class="next paper"><h2 class="head">Coming up</h2><ol id="next"></ol></section>
+  <section class="tunein paper" id="tunein">
+    <div class="head">Tune in anywhere</div>
+    <p>Every station, free and in sync, at <b>thebeesknees.fm</b></p>
+  </section>
+  <section class="list paper" id="list"><h2 class="head">Pick a station</h2><ol id="stations"></ol></section>
+  <div class="ticker paper"><div class="run" id="run"></div></div>
+  <div class="toast" id="toast"></div>
+</div>
+<div class="start" id="start">Click anywhere to start the sound</div>
+<audio id="audio" preload="auto" crossorigin="anonymous"></audio>
+
+<script src="config.js?v=20261105a"></script>
+<script src="stations.js?v=20261106a"></script>
+<script>
+(function () {
+  "use strict";
+  var $ = function (id) { return document.getElementById(id); };
+  var Q = new URLSearchParams(location.search);
+  if (Q.get("look") === "overlay") document.documentElement.classList.add("overlay");
+  var CONFIG = window.RADIO_CONFIG || {};
+
+  /* fit the 1920 x 1080 stage to whatever size the source is */
+  function fit() { var s = Math.min(innerWidth / 1920, innerHeight / 1080); $("stage").style.transform = "scale(" + s + ")"; }
+  addEventListener("resize", fit); fit();
+
+  /* ---------- the same schedule as the website, so the stream and the site play the same second ---------- */
+  function mmdd(d) { return String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0"); }
+  function inSeason(st) {
+    if (!st.season) return true; var t = mmdd(new Date()), f = st.season.from, to = st.season.to;
+    return f <= to ? (t >= f && t <= to) : (t >= f || t <= to);
+  }
+  var STATIONS = (window.STATIONS || []).filter(inSeason);
+  STATIONS.forEach(function (st, i) {
+    var t = 0; st._cum = st.tracks.map(function (tr) { var s = t; t += Number(tr.length) || 0; return s; });
+    st._total = t; st._epoch = Date.parse(st.epoch || "2026-11-01T00:00:00Z"); st.num = String(i + 1).padStart(2, "0");
+  });
+  var PHI = 0.6180339887498949;
+  function loopShift(n, starts) { var f = (n * PHI) % 1; if (f < 0) f += 1; return starts[Math.floor(f * starts.length)] || 0; }
+  function at(st, ms) {
+    ms = ms || Date.now();
+    var T = (ms - st._epoch) / 1000, n = Math.floor(T / st._total), pos = T - n * st._total + loopShift(n, st._cum);
+    if (pos >= st._total) pos -= st._total;
+    var lo = 0, hi = st.tracks.length - 1;
+    while (lo < hi) { var mid = (lo + hi + 1) >> 1; if (st._cum[mid] <= pos) lo = mid; else hi = mid - 1; }
+    var tr = st.tracks[lo]; return { i: lo, track: tr, offset: pos - st._cum[lo], left: tr.length - (pos - st._cum[lo]) };
+  }
+  function find(q) {
+    q = String(q || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (!q) return null;
+    return STATIONS.filter(function (s) { return s.id === q || String(+s.num) === String(+q) || s.name.toLowerCase().replace(/[^a-z0-9]/g, "") === q; })[0]
+      || STATIONS.filter(function (s) { return s.name.toLowerCase().replace(/[^a-z0-9]/g, "").indexOf(q) === 0 || s.id.indexOf(q) === 0; })[0] || null;
+  }
+  var station = find(Q.get("station")) || STATIONS[0];
+
+  /* ---------- sound: an even level from record to record, so the stream never jumps ---------- */
+  var audio = $("audio"), ctx = null, broken = {};
+  function chain() {
+    if (ctx) return;
+    try {
+      ctx = new (window.AudioContext || window.webkitAudioContext)();
+      var src = ctx.createMediaElementSource(audio), hp = ctx.createBiquadFilter(), comp = ctx.createDynamicsCompressor(), gain = ctx.createGain(), lim = ctx.createDynamicsCompressor();
+      hp.type = "highpass"; hp.frequency.value = 60;
+      comp.threshold.value = -30; comp.knee.value = 12; comp.ratio.value = 4; comp.attack.value = 0.01; comp.release.value = 0.4;
+      gain.gain.value = 1.8; lim.threshold.value = -3; lim.knee.value = 0; lim.ratio.value = 20; lim.attack.value = 0.002; lim.release.value = 0.1;
+      src.connect(hp); hp.connect(comp); comp.connect(gain); gain.connect(lim); lim.connect(ctx.destination);
+    } catch (e) { ctx = null; }
+  }
+  function play() {
+    var now = at(station), tr = now.track;
+    if (broken[tr.src]) { now = nextGood(now); tr = now.track; }
+    var seek = function () { try { audio.currentTime = Math.max(0, now.offset); } catch (e) {} start(); };
+    if (audio.dataset.src === tr.src && audio.readyState >= 1) seek();
+    else { audio.dataset.src = tr.src; audio.src = tr.src; audio.addEventListener("loadedmetadata", seek, { once: true }); audio.load(); }
+    paint();
+  }
+  function nextGood(now) {
+    var st = station, i = now.i;
+    for (var k = 1; k < st.tracks.length; k++) { var j = (i + k) % st.tracks.length; if (!broken[st.tracks[j].src]) return { i: j, track: st.tracks[j], offset: 0, left: st.tracks[j].length }; }
+    return now;
+  }
+  function start() {
+    chain(); if (ctx && ctx.state === "suspended") ctx.resume();
+    var p = audio.play(); if (p && p.catch) p.catch(function (e) { if (e && e.name === "NotAllowedError") $("start").classList.add("on"); });
+  }
+  $("start").addEventListener("click", function () { $("start").classList.remove("on"); chain(); if (ctx) ctx.resume(); play(); });
+  audio.addEventListener("ended", function () { setTimeout(play, 300); });
+  audio.addEventListener("error", function () { if (audio.dataset.src) broken[audio.dataset.src] = 1; setTimeout(play, 1500); });
+  // stay on the same second as the website
+  setInterval(function () {
+    var now = at(station);
+    if (now.track.src !== audio.dataset.src && !broken[now.track.src]) return play();
+    if (!audio.paused && Math.abs(audio.currentTime - now.offset) > 6 && now.track.src === audio.dataset.src) { try { audio.currentTime = now.offset; } catch (e) {} }
+  }, 5000);
+
+  /* ---------- the screen ---------- */
+  var hm = function (ms) { return new Date(ms).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); };
+  var mmss = function (s) { s = Math.max(0, Math.round(s)); var h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0"); };
+  function card() {
+    var c = $("card"); c.textContent = "";
+    var src = station.card || "", still = src.replace(/\.mp4$/, ".webp");
+    var img = new Image(); img.alt = ""; img.src = still;
+    img.onerror = function () { img.remove(); var b = document.createElement("div"); b.className = "burst"; var t = document.createElement("b"); t.textContent = station.name; b.appendChild(t); c.insertBefore(b, c.firstChild);
+      var n = document.createElement("div"); n.className = "num"; n.textContent = "Ch. " + station.num; c.appendChild(n); };
+    c.appendChild(img);
+  }
+  function paint() {
+    var now = at(station), tr = now.track;
+    $("kicker").textContent = "Now playing on " + station.name + ", channel " + station.num;
+    $("series").textContent = tr.series || "";
+    $("title").textContent = tr.title || "";
+    $("date").textContent = tr.date ? (station.music ? "Recorded " : "Originally aired ") + tr.date : "";
+    var ol = $("next"); ol.textContent = ""; var t = Date.now() + now.left * 1000;
+    for (var k = 1; k <= 3 && station.tracks.length > 1; k++) {
+      var nx = station.tracks[(now.i + k) % station.tracks.length], li = document.createElement("li"), b = document.createElement("b");
+      b.textContent = hm(t); li.appendChild(b); li.appendChild(document.createTextNode(" " + (nx.series || "") + (nx.title ? ": " + nx.title : ""))); ol.appendChild(li);
+      t += nx.length * 1000;
+    }
+  }
+  function tick() {
+    $("clock").textContent = hm(Date.now());
+    var now = at(station);
+    $("bar").style.width = (100 * now.offset / now.track.length).toFixed(2) + "%";
+    $("left").textContent = mmss(now.left) + " left";
+    if (now.track.series !== $("series").textContent || now.track.title !== $("title").textContent) paint();
+  }
+  setInterval(tick, 1000);
+
+  // the ticker: the same announcements as the website
+  (function () {
+    var run = $("run"), parts = (CONFIG.announcements || []).filter(Boolean);
+    parts.forEach(function (a) { var s = document.createElement("span"); s.textContent = a; run.appendChild(s); });
+    run.style.setProperty("--dur", Math.max(40, run.textContent.length / 9) + "s");
+  })();
+
+  // the station list (shown when chat asks for it)
+  STATIONS.forEach(function (s) { var li = document.createElement("li"), b = document.createElement("b"); b.textContent = +s.num + " "; li.appendChild(b); li.appendChild(document.createTextNode(s.name)); $("stations").appendChild(li); });
+
+  var toastT;
+  function toast(html, ms) { var t = $("toast"); t.innerHTML = html; t.classList.add("on"); clearTimeout(toastT); toastT = setTimeout(function () { t.classList.remove("on"); }, ms || 6000); }
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var listT;
+  function showList(ms) { $("list").classList.add("on"); clearTimeout(listT); listT = setTimeout(function () { $("list").classList.remove("on"); }, ms || 15000); }
+
+  function tune(st, who) {
+    if (!st || st === station) return;
+    station = st; card(); play();
+    toast("Now tuned to <b>" + esc(st.name) + "</b>" + (who ? ", picked by " + esc(who) : ""), 7000);
+    try { history.replaceState(null, "", "?" + (function () { Q.set("station", st.id); return Q.toString(); })()); } catch (e) {}
+  }
+  // for whoever is running the stream: arrow keys change the station when OBS's "Interact" window is open
+  addEventListener("keydown", function (e) {
+    var i = STATIONS.indexOf(station);
+    if (e.key === "ArrowRight" || e.key === "ArrowDown") tune(STATIONS[(i + 1) % STATIONS.length], "");
+    if (e.key === "ArrowLeft" || e.key === "ArrowUp") tune(STATIONS[(i - 1 + STATIONS.length) % STATIONS.length], "");
+  });
+
+  /* ---------- Twitch chat: !tune <station>, !stations ---------- */
+  var channel = (Q.get("twitch") || "").toLowerCase().replace(/[^a-z0-9_]/g, "");
+  var COOL = 1000 * (+Q.get("cooldown") || 180), VOTE = 1000 * (+Q.get("vote") || 45);
+  var lastChange = 0, votes = null, voteEnd = 0;
+  if (channel) {
+    $("tunein").innerHTML = '<div class="head">Pick the station</div><p>Type <code>!tune swing</code> (or a channel number) in chat. <code>!stations</code> shows the list. Listen free at <b>thebeesknees.fm</b></p>';
+    connect();
+  }
+  function command(user, text, boss) {
+    var m = text.trim().match(/^!(tune|station|stations|radio)\b\s*(.*)$/i); if (!m) return;
+    var cmd = m[1].toLowerCase(), arg = m[2];
+    if (cmd === "stations" || (!arg && cmd !== "tune")) { showList(); return; }
+    var st = find(arg);
+    if (!st) { toast("No station called “" + esc(arg.slice(0, 24)) + "”. Type <b>!stations</b> for the list", 5000); return; }
+    if (boss) { votes = null; lastChange = Date.now(); tune(st, user); return; }
+    var wait = lastChange + COOL - Date.now();
+    if (wait > 0 && !votes) { toast("The dial is resting. Next pick in <b>" + Math.ceil(wait / 60000) + " min</b>", 4000); return; }
+    if (!votes) { votes = {}; voteEnd = Date.now() + VOTE; setTimeout(count, VOTE); }
+    votes[user.toLowerCase()] = st.id;
+    var tally = {}; Object.keys(votes).forEach(function (u) { tally[votes[u]] = (tally[votes[u]] || 0) + 1; });
+    var line = Object.keys(tally).sort(function (a, b) { return tally[b] - tally[a]; }).slice(0, 3).map(function (id) { return esc(find(id).name) + " <b>" + tally[id] + "</b>"; }).join(" &middot; ");
+    toast("Voting for the next station (" + Math.ceil((voteEnd - Date.now()) / 1000) + "s): " + line, VOTE);
+  }
+  function count() {
+    if (!votes) return; var tally = {}, best = null;
+    Object.keys(votes).forEach(function (u) { tally[votes[u]] = (tally[votes[u]] || 0) + 1; });
+    Object.keys(tally).forEach(function (id) { if (!best || tally[id] > tally[best]) best = id; });
+    votes = null; lastChange = Date.now();
+    var st = find(best); if (st === station) toast("Chat voted to stay on <b>" + esc(st.name) + "</b>", 5000); else tune(st, "chat");
+  }
+  function connect() {
+    var ws = new WebSocket("wss://irc-ws.chat.twitch.tv:443");
+    ws.onopen = function () {
+      ws.send("CAP REQ :twitch.tv/tags"); ws.send("PASS SCHMOOPIIE"); ws.send("NICK justinfan" + Math.floor(10000 + Math.random() * 80000)); ws.send("JOIN #" + channel);
+    };
+    ws.onmessage = function (e) {
+      String(e.data).split("\r\n").forEach(function (line) {
+        if (!line) return;
+        if (line.indexOf("PING") === 0) { ws.send("PONG :tmi.twitch.tv"); return; }
+        var m = line.match(/^@(\S+) :(\w+)!\S+ PRIVMSG #\S+ :(.*)$/); if (!m) return;
+        var tags = {}; m[1].split(";").forEach(function (kv) { var p = kv.split("="); tags[p[0]] = p[1] || ""; });
+        var boss = /(^|,)(broadcaster|moderator)\//.test(tags.badges || "");
+        command(tags["display-name"] || m[2], m[3], boss);
+      });
+    };
+    ws.onclose = function () { setTimeout(connect, 5000); };
+  }
+
+  if (Q.get("test")) window.bkCommand = command;   // lets a test page pretend to be chat
+  card(); paint(); tick(); play();
+})();
+</script>
+</body>
+</html>
