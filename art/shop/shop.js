@@ -132,8 +132,57 @@
   });
   document.addEventListener("keydown", function (e) {
     if (e.key !== "Escape") return;
+    if (zoomBox && !zoomBox.hidden) return closeZoom();
     if (!cartSheet.hidden) closeSheet(cartSheet); else if (!pdSheet.hidden) closeSheet(pdSheet);
   });
+
+  /* Zoom: the picture full screen. Tap or click to get in close (and drag, or move the mouse, to look around);
+     tap again to step back. Arrows, swipe or the side buttons go between pictures. */
+  var zoomBox = null, zoomList = [], zoomAt = 0, zoomed = false;
+  function closeZoom() { if (!zoomBox) return; zoomBox.hidden = true; zoomed = false; var m = pdSheet.querySelector(".main"); if (m) m.focus && m.focus(); }
+  function showZoom() {
+    var im = zoomBox.querySelector("img");
+    im.src = zoomList[zoomAt]; zoomed = false; zoomBox.classList.remove("in"); im.style.transformOrigin = "50% 50%";
+    zoomBox.querySelector(".zc").textContent = zoomList.length > 1 ? (zoomAt + 1) + " of " + zoomList.length : "";
+    zoomBox.querySelectorAll(".zp,.zn").forEach(function (b) { b.hidden = zoomList.length < 2; });
+  }
+  function aim(e) {
+    var im = zoomBox.querySelector("img"), r = im.getBoundingClientRect();
+    var x = Math.max(0, Math.min(1, (e.clientX - r.left) / r.width)), y = Math.max(0, Math.min(1, (e.clientY - r.top) / r.height));
+    im.style.transformOrigin = (x * 100) + "% " + (y * 100) + "%";
+  }
+  function openZoom(list, at, name) {
+    if (!zoomBox) {
+      zoomBox = document.createElement("div"); zoomBox.className = "zoom"; zoomBox.hidden = true;
+      zoomBox.setAttribute("role", "dialog"); zoomBox.setAttribute("aria-modal", "true");
+      zoomBox.innerHTML = '<button type="button" class="zx" aria-label="Close">Close</button><button type="button" class="zp" aria-label="Previous picture">\u2039</button>' +
+        '<div class="zs"><img alt=""></div><button type="button" class="zn" aria-label="Next picture">\u203A</button><p class="zc" aria-live="polite"></p><p class="zh">Tap the picture to zoom in or out</p>';
+      document.body.appendChild(zoomBox);
+      var im = zoomBox.querySelector("img"), sx = 0, sy = 0, moved = false;
+      zoomBox.querySelector(".zx").addEventListener("click", closeZoom);
+      zoomBox.querySelector(".zp").addEventListener("click", function () { zoomAt = (zoomAt - 1 + zoomList.length) % zoomList.length; showZoom(); });
+      zoomBox.querySelector(".zn").addEventListener("click", function () { zoomAt = (zoomAt + 1) % zoomList.length; showZoom(); });
+      zoomBox.addEventListener("click", function (e) { if (e.target === zoomBox || e.target.classList.contains("zs")) closeZoom(); });
+      im.addEventListener("pointerdown", function (e) { sx = e.clientX; sy = e.clientY; moved = false; if (zoomed) im.setPointerCapture(e.pointerId); });
+      im.addEventListener("pointermove", function (e) {
+        if (Math.abs(e.clientX - sx) + Math.abs(e.clientY - sy) > 8) moved = true;
+        if (zoomed && (e.pointerType === "mouse" || e.buttons)) aim(e);
+      });
+      im.addEventListener("pointerup", function (e) {
+        var dx = e.clientX - sx;
+        if (!zoomed && moved && Math.abs(dx) > 50 && zoomList.length > 1) { zoomAt = (zoomAt + (dx < 0 ? 1 : -1) + zoomList.length) % zoomList.length; showZoom(); return; }
+        if (moved && zoomed) return;
+        zoomed = !zoomed; zoomBox.classList.toggle("in", zoomed); if (zoomed) aim(e);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (zoomBox.hidden) return;
+        if (e.key === "ArrowRight" && zoomList.length > 1) { zoomAt = (zoomAt + 1) % zoomList.length; showZoom(); }
+        if (e.key === "ArrowLeft" && zoomList.length > 1) { zoomAt = (zoomAt - 1 + zoomList.length) % zoomList.length; showZoom(); }
+      });
+    }
+    zoomList = list; zoomAt = at || 0; zoomBox.querySelector("img").alt = name || "";
+    showZoom(); zoomBox.hidden = false; zoomBox.querySelector(".zx").focus();
+  }
 
   function openProduct(slug, from) {
     var p = products[slug]; if (!p) return;
@@ -149,10 +198,16 @@
       (multi ? '<div class="opts"><label for="pdVar">Choose</label><select id="pdVar">' + vs.map(function (v) { return '<option value="' + esc(v.id) + '">' + esc((v.attributes && v.attributes.description) || v.name) + " · " + esc(money(v.unitPrice)) + "</option>"; }).join("") + "</select></div>" : "") +
       '<div class="buy"><button type="button" class="btn add"' + (soldOut(p) ? " disabled" : "") + ">" + (soldOut(p) ? "Sold out" : "Add to cart") + '</button><button type="button" class="btn alt view" hidden>View cart</button></div><div class="msg" role="status"></div>' +
       '<div class="desc">' + clean(p.description) + "</div></div>";
-    var main = box.querySelector(".main");
-    box.querySelectorAll(".thumbs button").forEach(function (t) {
+    var main = box.querySelector(".main"), shown = 0;
+    var all = pics.length ? pics : [img(p)];
+    main.title = "Tap to zoom in";
+    main.addEventListener("click", function () { openZoom(all, shown, p.name); });
+    var zb = document.createElement("button"); zb.type = "button"; zb.className = "zoom-btn"; zb.textContent = "\uD83D\uDD0D Zoom in";
+    zb.addEventListener("click", function () { openZoom(all, shown, p.name); });
+    main.insertAdjacentElement("afterend", zb);
+    box.querySelectorAll(".thumbs button").forEach(function (t, ti) {
       t.addEventListener("click", function () {
-        main.src = t.getAttribute("data-u");
+        main.src = t.getAttribute("data-u"); shown = ti;
         box.querySelectorAll(".thumbs button").forEach(function (o) { o.removeAttribute("aria-current"); });
         t.setAttribute("aria-current", "true");
       });
