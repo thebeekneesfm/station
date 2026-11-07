@@ -2202,7 +2202,7 @@ window.STATIONS = [
   "name": "Out West",
   "group": "Radio shows",
   "blurb": "Westerns: marshals, drifters and the frontier.",
-  "card": "art/cards/outwest.png",
+  "card": "art/cards/outwest.mp4",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
