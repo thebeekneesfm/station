@@ -25,6 +25,8 @@
     ".bkn .cur>a,.bkn .cur>button{color:#c8321f;font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}",
     ".bkn-sub{list-style:none;margin:0;padding:6px 0;position:absolute;left:0;top:100%;z-index:50;min-width:210px;background:#f3ead2;box-shadow:0 3px 0 rgba(0,0,0,.25),0 12px 26px rgba(0,0,0,.3);border-top:3px solid #c8321f}",
     ".bkn-sub[hidden]{display:none}",
+    ".bkn-sub::before{content:\"\";position:absolute;left:-14px;right:-14px;top:-16px;height:16px}",   /* an invisible bridge so the mouse never falls in a gap on the way down */
+    ".bkn-sub::after{content:\"\";position:absolute;left:-14px;right:-14px;bottom:-14px;height:14px}",
     ".bkn>li:nth-last-child(-n+2) .bkn-sub{left:auto;right:0}",   /* menus near the right edge open leftward so they stay on screen */
     ".bkn-sub a{display:flex;width:100%;padding:9px 16px;font-size:19px}",
     ".bkn-sub a:hover,.bkn-sub a:focus-visible{background:#e3d6b4;color:#c8321f}",
@@ -110,8 +112,14 @@
           viaMouse = false;
         });
         // a mouse can just point at the menu; touch and keyboard use the click
-        li.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") { clearTimeout(t); show(true); } });
-        li.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") { t = setTimeout(function () { show(false); }, 500); } });
+        li.addEventListener("pointerenter", function (e) { if (e.pointerType !== "touch") { clearTimeout(t); show(true); } });
+        // any movement over the menu or its list keeps it open, even if the browser sent a stray "left" a moment before
+        li.addEventListener("pointermove", function (e) { if (e.pointerType !== "touch") { clearTimeout(t); if (sub.hidden) show(true); } });
+        li.addEventListener("pointerleave", function (e) {
+          if (e.pointerType === "touch") return;
+          clearTimeout(t);
+          t = setTimeout(function () { if (!li.matches(":hover")) show(false); }, 900);
+        });
         sub.addEventListener("keydown", function (e) { if (e.key === "Escape") { show(false); btn.focus(); } });
         li.appendChild(btn); li.appendChild(sub);
       }
