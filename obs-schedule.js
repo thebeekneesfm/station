@@ -19,7 +19,7 @@ window.STREAM_SCHEDULE = {
     /* ---------- Christmas ---------- */
     // the holiday season's evenings: Christmas at the Drive-In every night, December 1 to 26
     { dates: { from: "12-01", to: "12-26" }, from: "19:00", to: "19:30", play: "tv christmas",    title: "Christmas at the Drive-In starts at 7:30" },
-    { dates: { from: "12-01", to: "12-26" }, from: "19:30", to: "23:59", play: "drive-in",        title: "Christmas at the Drive-In" },
+    { dates: { from: "12-01", to: "12-26" }, from: "19:30", to: "22:00", play: "drive-in",        title: "Christmas at the Drive-In" },
     // Saturday mornings in December: Christmas cartoons
     { dates: { from: "12-01", to: "12-26" }, days: ["sat"], from: "09:00", to: "11:00", play: "tv christmas", title: "Saturday Morning Christmas Cartoons" },
     // Christmas Eve: Christmas TV all afternoon, then the Drive-In's Christmas Eve double feature
