@@ -3585,13 +3585,14 @@ window.STATIONS = [
   "name": "Gramophone Radio",
   "group": "Music",
   "music": true,
-  "blurb": "Dance bands, early jazz and blues on 78s from 1925 and earlier.",
+  "blurb": "Dance bands, early jazz and blues on 78s from 1925 and earlier, drifting in from another room.",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
    "declick": 1,
    "decrackle": 1,
-   "tone": 6500
+   "dehiss": 1,
+   "tone": 5000
   },
   "tracks": [
    {
@@ -7098,7 +7099,12 @@ window.STATIONS = [
     "date": "1920",
     "item": "https://archive.org/details/78_oh-by-jingo-oh-by-gee-youre-the-only-girl-for-me_george-hamilton-greens-novel_gbia0011276b"
    }
-  ]
+  ],
+  "room": {
+   "muffle": 1400,
+   "echo": 0.6,
+   "ambience": 0.35
+  }
  },
  {
   "id": "rocknroll",

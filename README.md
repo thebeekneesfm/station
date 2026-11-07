@@ -98,7 +98,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Romance & Drama | Great love stories and dramas from Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Campbell Playhouse, Mercury Theatre and Columbia Workshop | about 65 hours |
 | Laughs | Jack Benny, Fibber McGee and Molly, Burns and Allen, The Great Gildersleeve, Our Miss Brooks | about 16 hours |
 | Variety | Bing Crosby, Bob Hope, The Chase and Sanborn Hour, Command Performance, Fred Allen, Jimmy Durante, Spike Jones, Martin and Lewis, Jubilee, Dinah Shore, The Railroad Hour | about 45 hours |
-| Gramophone Radio | Dance bands, early jazz and blues on 78s from 1925 and earlier (public domain) | about 23 hours |
+| Gramophone Radio | Dance bands, early jazz and blues on 78s from 1925 and earlier (public domain), heavily cleaned and played as if from another room. It also plays under the Home Movies TV channel, with the same muffled room sound (not on iPhones) | about 23 hours |
 
 Rock 'n' Roll, Blues, Swing, After Hours, Classical, Sleepy Time and Christmas are switched off (`"off": true` in stations.js) until the station has a broadcasting license; their track lists are kept. Their kind of music lives on the Record Shelf (`records.html`, `art/records/records.js`): albums that play on Archive.org, with five showcased each week under the radio.
 

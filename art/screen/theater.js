@@ -567,7 +567,7 @@
     if (bedSt && bedSt.id === id) return bedSt;
     var st = (window.STATIONS || []).find(function (x) { return x.id === id; });
     if (!st) {
-      if (!bedLoading && !window.STATIONS) { bedLoading = true; var sc = document.createElement("script"); sc.src = "stations.js?v=20261107gr"; sc.onload = function () { tick(true); }; document.head.appendChild(sc); }
+      if (!bedLoading && !window.STATIONS) { bedLoading = true; var sc = document.createElement("script"); sc.src = "stations.js?v=20261107dr"; sc.onload = function () { tick(true); }; document.head.appendChild(sc); }
       return null;
     }
     var t = 0; st._cumB = st.tracks.map(function (tr) { var a = t; t += Number(tr.length) || 0; return a; }); st._totB = t; st._epB = Date.parse(st.epoch || "2026-11-01T00:00:00Z");
@@ -580,6 +580,32 @@
     while (lo < hi) { var mid = (lo + hi + 1) >> 1; if (st._cumB[mid] <= pos) lo = mid; else hi = mid - 1; }
     return { track: st.tracks[lo], offset: pos - st._cumB[lo] };
   }
+  /* The radio under Home Movies sounds like it's coming from another room: the treble (and with it the
+     78s' hiss and crackle) muffled away, plus a soft room echo. iPhones play it plain (Apple's rules). */
+  function dreamy(el) {
+    try {
+      var apple = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      var AC = window.AudioContext || window.webkitAudioContext;
+      if (apple || !AC || window.BK_LITE) return;
+      el.crossOrigin = "anonymous";
+      var ac = new AC(), src = ac.createMediaElementSource(el);
+      var hp = ac.createBiquadFilter(); hp.type = "highpass"; hp.frequency.value = 70;
+      var m1 = ac.createBiquadFilter(); m1.type = "lowpass"; m1.frequency.value = 1400; m1.Q.value = 0.4;
+      var m2 = ac.createBiquadFilter(); m2.type = "lowpass"; m2.frequency.value = 2600; m2.Q.value = 0.3;
+      var dry = ac.createGain(); dry.gain.value = 0.85;
+      var wet = ac.createGain(); wet.gain.value = 0.6;
+      var verb = ac.createConvolver(), n = Math.floor(ac.sampleRate * 2.2), buf = ac.createBuffer(2, n, ac.sampleRate);
+      for (var c = 0; c < 2; c++) { var d = buf.getChannelData(c); for (var i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 3); }
+      verb.buffer = buf;
+      var lift = ac.createGain(); lift.gain.value = 1.6;   // muffling takes some loudness away; give it back
+      src.connect(hp); hp.connect(m1); m1.connect(m2); m2.connect(dry); m2.connect(verb); verb.connect(wet);
+      dry.connect(lift); wet.connect(lift); lift.connect(ac.destination);
+      el._ac = ac;
+      var wake = function () { if (ac.state === "suspended") ac.resume().catch(function () {}); };
+      ["pointerdown", "keydown", "touchend"].forEach(function (t) { document.addEventListener(t, wake, { passive: true }); });
+      el.addEventListener("play", wake);
+    } catch (e) {}
+  }
   function radioUnder(n) {
     var id = MODE === "tv" && typeof cur !== "undefined" && cur && cur.radio;
     var want = !!(id && n.item.kind === "show");
@@ -589,6 +615,7 @@
     if (!want || !st) { if (bedEl && !bedEl.paused) bedEl.pause(); state.bedTrack = null; return; }
     if (!bedEl) {
       bedEl = new Audio(); bedEl.preload = "auto";
+      dreamy(bedEl);
       bedEl.addEventListener("ended", function () { tick(true); });
       bedEl.addEventListener("error", function () { setTimeout(function () { if (bedEl) delete bedEl.dataset.src; }, 15000); });
       applySound();
