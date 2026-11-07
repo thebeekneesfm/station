@@ -95,13 +95,13 @@
   function duskOf(day) { var d = ptDate(day); return ptAt(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), SHOW_AT[0], SHOW_AT[1]); }
   function dayIndex(ms) { var d = ptDate(ms); return Math.round((Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) - Date.UTC(2026, 0, 5)) / 864e5); }  // 2026-01-05 was a Monday
   function seasonOf(ms) { var se = window.DRIVEIN.season; return se && se.films && se.films.length && inSeasonPT(se, ms) ? se : null; }
-  /* Saturdays only. From November 15, 2026 the Drive-In shows its double feature on Saturday nights
+  /* Saturdays only. From November 7, 2026 the Drive-In shows its double feature on Saturday nights
      (plus any extra nights the Christmas season lists, like Christmas Eve). The rest of the week it's
      closed: a "see you Saturday" sign with coming attractions playing. The theme changes every week,
      going round the themes in order, and each theme moves on to its next two films each time it comes
      back, so with two films a week it's well over a year before anything repeats. */
-  var CUTOVER = Date.UTC(2026, 10, 15, 8, 0);   // midnight Pacific, Sunday Nov 15 2026
-  var FIRST_SAT = 320;                           // dayIndex of Saturday Nov 21 2026, the first show of the rotation
+  var CUTOVER = Date.UTC(2026, 10, 7, 8, 0);    // midnight Pacific, Saturday Nov 7 2026
+  var FIRST_SAT = 306;                           // dayIndex of Saturday Nov 7 2026, the first show of the rotation
   function newRules(ms) { return ms >= CUTOVER; }
   function showNight(ms) {
     if (!newRules(ms)) return true;

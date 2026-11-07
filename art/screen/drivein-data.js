@@ -1,4 +1,4 @@
-/* The Bee's Knees Drive-In: one double feature every Saturday night (from Nov 21, 2026), with the theme
+/* The Bee's Knees Drive-In: one double feature every Saturday night (from Nov 7, 2026), with the theme
    changing every week (themes 0-6 take turns in order; each theme moves on to its next two films each time it
    comes back). Also coming-attraction trailers, snack-bar intermission reels and a serial that runs one chapter a show.
    Every feature is meant to be public domain in the US: no studio titles still under copyright, and no foreign films
@@ -6,7 +6,7 @@
    The "season" block is Christmas at the Drive-In (Dec 1-26): Saturdays plus Christmas Eve and Christmas night
    (extraNights), each with the set double feature listed under "nights". Delete a line to drop something; anything
    flagged by a viewer comes off here.
-   oldThemes: the nightly lineup the Drive-In ran until Saturday Nov 14, 2026. Safe to delete after that. */
+   oldThemes: the nightly lineup the Drive-In ran until Friday Nov 6, 2026. Safe to delete after that. */
 window.DRIVEIN = {
  "themes": {
   "0": {
