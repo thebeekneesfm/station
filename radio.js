@@ -1026,6 +1026,7 @@
         rec.guide = { el: g, key: "" };
         g.addEventListener("click", e => {
           if (state.editing) return;
+          if (e.target.closest(".gs-cover")) return;
           const shelf = e.target.closest(".g-shelf");
           if (shelf) { e.preventDefault(); openRack("records"); return; }
           const row = e.target.closest(".g-row"); if (!row) return;
@@ -1296,10 +1297,6 @@
         h += `<button type="button" class="g-row g-card${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}: ${esc(cur.track.series)}, ${esc(cur.track.title)}" title="Now: ${esc(cur.track.series)}, ${esc(cur.track.title)}\nNext at ${hhmm(at2)}: ${esc(nx.series)}${nx.title ? ", " + esc(nx.title) : ""}">` +
              `<span class="gc-top"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${sel && state.on ? '<span class="gc-live">On now</span>' : ""}</span>` +
              `<span class="g-now"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}</span></button>`;
-        // after the last music station: the Record Shelf, where the newer albums live until the station can license them
-        if (st.music && STATIONS.indexOf(st) === STATIONS.length - 1 - STATIONS.slice().reverse().findIndex(x => x.music))
-          h += `<a class="g-card g-shelf" href="records.html"><span class="gc-top"><span class="g-num">LP</span><span class="g-name">Record Shelf</span></span>` +
-               `<span class="g-now"><b>Today's five albums</b> from the '40s, '50s and '60s</span></a>`;
         return;
       }
       h += `<button type="button" class="g-row${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}">`;
@@ -1331,6 +1328,14 @@
       }
       h += `</button>`;
     });
+    // under the music: today's five albums from the Record Shelf (the newer music, played on Archive.org
+    // until the station can afford a broadcasting license). Tapping a cover opens it there; the rest opens the shelf.
+    if (window.RECORDS_TODAY) {
+      const T = window.RECORDS_TODAY();
+      h += `<div class="g-shelfrow"><a class="g-shelf" href="records.html"><span class="gs-name">The Record Shelf</span>` +
+           `<span class="gs-sub">Today's five albums from the '40s, '50s and '60s. Tap one to play it on Archive.org.</span></a>` +
+           `<span class="gs-covers">` + T.picks.map(r => `<a class="gs-cover" href="${esc(r.item)}" target="_blank" rel="noopener" title="${esc(r.title)}, ${esc(r.artist)}${r.year ? ", " + esc(r.year) : ""}"><img src="${esc(r.cover)}" alt="${esc(r.title)}, ${esc(r.artist)}" loading="lazy"></a>`).join("") + `</span></div>`;
+    }
     // only touch the page when something in the guide actually changed: rewriting it while someone is
     // flicking past it on a phone stops the scroll dead (that was the "glitch every so often")
     if (g.html === h) return;

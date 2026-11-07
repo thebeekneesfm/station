@@ -793,3 +793,27 @@ window.RECORDS = [
   "season": "christmas"
  }
 ];
+
+/* today's five: the same for everyone, by the station's clock (Pacific) */
+window.RECORDS_TODAY = function (when) {
+  var R = window.RECORDS || [], parts = {}, now = when || new Date();
+  try { new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now).forEach(function (p) { parts[p.type] = p.value; }); } catch (e) {}
+  var y = +parts.year || now.getFullYear(), m = +parts.month || now.getMonth() + 1, d = +parts.day || now.getDate();
+  var dayNo = Math.floor(Date.UTC(y, m - 1, d) / 864e5), md = m * 100 + d, christmas = md >= 1106 || md <= 106;
+  function shuffled(list, seed) {
+    var a = list.slice(), s = seed >>> 0;
+    function r() { s = (s + 0x6D2B79F5) >>> 0; var t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }
+    for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)); var x = a[i]; a[i] = a[j]; a[j] = x; }
+    return a;
+  }
+  function take(list, n, seed) {
+    if (!list.length) return [];
+    var a = shuffled(list, seed), out = [], start = (dayNo * n) % a.length;
+    for (var i = 0; i < Math.min(n, a.length); i++) out.push(a[(start + i) % a.length]);
+    return out;
+  }
+  var xmas = R.filter(function (r) { return r.season === "christmas"; }), rest = R.filter(function (r) { return r.season !== "christmas"; });
+  var picks = christmas ? take(xmas, 3, 1225).concat(take(rest, 2, 1953)) : take(rest, 5, 1953);
+  if (christmas && picks.length === 5) picks = [picks[0], picks[3], picks[1], picks[4], picks[2]];
+  return { picks: picks, month: m, day: d };
+};
