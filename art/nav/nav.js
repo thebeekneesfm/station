@@ -1,6 +1,29 @@
 /* The site menu, the same on every page.
    Change the groups and links here and every page (and the radio) follows.
    A link written "config.tip" uses the tip page from config.js. */
+/* Light mode for TV browsers (Fire TV's Silk, Android TV, smart TVs) and other slow devices:
+   no sound-cleaning engine, no extra videos, no animations or heavy effects, and clear focus
+   outlines for a remote. Add ?lite=1 to any address to turn it on, ?lite=0 to turn it off. */
+(function () {
+  var KEY = "otr.lite", q = location.search, on = null;
+  try { if (/[?&]lite=1/.test(q)) localStorage.setItem(KEY, "1"); else if (/[?&]lite=0/.test(q)) localStorage.setItem(KEY, "0"); on = localStorage.getItem(KEY); } catch (e) {}
+  var tv = /Silk|AFT[A-Z]|Android TV|GoogleTV|SMART-TV|SmartTV|Tizen|Web0S|webOS|CrKey|BRAVIA|AppleTV|Roku|HbbTV|NetCast|Viera|AQUOS/i.test(navigator.userAgent);
+  window.BK_LITE = on === "1" || (on !== "0" && tv);
+  if (!window.BK_LITE) return;
+  document.documentElement.classList.add("lite");
+  var css = document.createElement("style");
+  css.textContent = [
+    ".lite *,.lite *::before,.lite *::after{animation:none!important;transition:none!important;filter:none!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;box-shadow:none!important}",
+    ".lite .paper,.lite .mast,.lite [style*='mask']{-webkit-mask:none!important;mask:none!important}",
+    ".lite video.static,.lite [data-id='ambience']{display:none!important}",
+    ".lite :focus{outline:5px solid #e3a92f!important;outline-offset:3px!important}"
+  ].join("\n");
+  document.head.appendChild(css);
+  var stop = function () { document.querySelectorAll("video.static").forEach(function (v) { v.pause(); v.removeAttribute("src"); v.load(); }); document.querySelectorAll("video[loop]").forEach(function (v) { v.autoplay = false; v.pause(); }); };
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", stop); else stop();
+  new MutationObserver(function (m) { m.forEach(function (r) { r.addedNodes.forEach(function (n) { if (n.querySelectorAll) { n.querySelectorAll("video.static").forEach(function (v) { v.pause(); v.removeAttribute("src"); }); n.querySelectorAll("video[loop]").forEach(function (v) { v.autoplay = false; v.pause(); }); } if (n.tagName === "VIDEO" && n.loop) { n.autoplay = false; n.pause(); } }); }); }).observe(document.documentElement, { childList: true, subtree: true });
+})();
+
 (function () {
   "use strict";
   var MENU = [

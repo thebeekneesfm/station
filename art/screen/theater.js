@@ -294,7 +294,7 @@
   document.addEventListener("fullscreenchange", function () { setTimeout(function () { tick(true); go(); }, 300); });
   document.addEventListener("webkitfullscreenchange", function () { setTimeout(function () { tick(true); go(); }, 300); });
   function preloadNext(n) {
-    if (inNativeFull()) return;
+    if (inNativeFull() || window.BK_LITE) return;   // light mode: one video at a time
     if (!n || n.left > 45) return;
     var nx = where(Date.now() + (n.left + 1) * 1000);
     if (!nx || !nx.item.src || nx.item.src === state.src || pre.dataset.src === nx.item.src) return;

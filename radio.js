@@ -158,7 +158,7 @@
   const fx = { ready: false };       // the sound-cleaning chain
   const SOUND = Object.assign({ level: true, declick: 0.5, tone: 9000 }, SKIN.sound || {});
   function initAudio() {
-    if (ctx) return;
+    if (ctx || window.BK_LITE) return;   // light mode (TV browsers): plain playback, no sound-cleaning engine
     // tell the phone this is a music player, not page sound: it keeps playing with the screen off,
     // when you switch apps, and with the ringer switch on silent (Safari 16.4+)
     try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (e) {}
@@ -881,7 +881,7 @@
   function makeCardMedia(src, onState) {
     if (!/\.mp4(\?|$)/i.test(src)) return makeImg(src, onState);
     const still = src.replace(/\.mp4(\?|$)/i, ".webp$1");
-    if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) return makeImg(still, onState);
+    if (window.BK_LITE || (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches)) return makeImg(still, onState);
     const v = document.createElement("video");
     v.muted = true; v.loop = true; v.autoplay = true; v.playsInline = true;
     v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("aria-hidden", "true");
@@ -1746,6 +1746,7 @@
     return out;
   }
   function renderTV(rec, force) {
+    if (window.BK_LITE) return;   // light mode: the little TV on the radio stays dark
     const tv = rec.tv, now = whatsOn();
     if (!now) { rec.el.hidden = true; return; }
     if (tv.tag) { tv.tag.textContent = now.tag || ""; tv.tag.hidden = !now.tag; }
@@ -2446,7 +2447,7 @@
       autoArmed = false;
       ["pointerdown", "keydown", "touchend"].forEach(ev => document.removeEventListener(ev, go, true));
       if (state.on || state.editing) return;
-      if (e && e.target && e.target.closest && e.target.closest("a[href], .bkc, .bkc-btn, .bkc-peek, #welcome-ov")) {   // a link or the chat: let it do its own thing
+      if (e && e.target && e.target.closest && e.target.closest("a[href], .bkc, .bkc-btn, .bkc-peek, #welcome-ov, .bk-play")) {   // a link or the chat: let it do its own thing
         autoArmed = true; ["pointerdown", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true)); return;
       }
       power(true);
