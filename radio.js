@@ -523,6 +523,12 @@
     if (!(state.on && state.phase === "warming")) tuningSound(false);
   }
 
+  // the browser refused to make sound (nobody has tapped the page yet): show the radio as off, ready for the first tap,
+  // instead of looking switched on while silent (which made the first press of Play turn it off)
+  function refused(err) {
+    if (!err || err.name !== "NotAllowedError" || !state.on) return;
+    power(false); if (typeof armAutoStart === "function") armAutoStart();
+  }
   let lostTimer = 0;
   const broken = new Set();   // recordings that wouldn't load this visit
   const trace = [];   // last few playback decisions, for troubleshooting in the browser console (RADIO.trace)
@@ -549,16 +555,16 @@
     if (state.phase === "warming") tuningSound(true);
 
     const seek = () => {
-      if (reason === "early") { gate.arm(true); audio.play().catch(() => {}); return; }
+      if (reason === "early") { gate.arm(true); audio.play().catch(refused); return; }
       const fresh = at(st);
       if (fresh.track.src !== src) {
-        if (state.early === src) { gate.arm(false); audio.play().catch(() => {}); return; }
+        if (state.early === src) { gate.arm(false); audio.play().catch(refused); return; }
         return play();
       }
       if (audio.duration && fresh.offset >= audio.duration - 1) return waitForNext(fresh);
       gate.arm(fresh.offset < 3);       // starting a record from the top: wait for the music before fading in
       try { audio.currentTime = fresh.offset; } catch (e) {}
-      audio.play().catch(() => {});
+      audio.play().catch(refused);
     };
     if (audio.dataset.src === src && audio.readyState >= 1) seek();
     else {
@@ -568,7 +574,7 @@
       audio.src = src;
       audio.addEventListener("loadedmetadata", seek, { once: true });
       audio.load();
-      if (document.hidden) audio.play().catch(() => {});
+      if (document.hidden) audio.play().catch(refused);
     }
     mediaSession(st, now.track);
     applySound();
@@ -728,6 +734,11 @@
   function setPhase(p) { state.phase = p; applyVolume(); render(); presenceUpdate(); }
 
   function power(on) {
+    if (ear && !ear.dataset.unlocked && on !== false) {   // phones only let a player make sound later if a tap started it once
+      ear.dataset.unlocked = "1"; ear.muted = false; ear.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=";
+      const pr = ear.play(); const done = () => { ear.muted = true; ear.dataset.src = ""; };
+      if (pr && pr.then) pr.then(done, () => { ear.dataset.unlocked = ""; done(); }); else done();
+    }
     initAudio();
     if (ctx && ctx.state === "suspended") ctx.resume();
     state.on = on == null ? !state.on : on;
@@ -2445,14 +2456,14 @@
     const go = e => {
       if (!autoArmed) return;
       autoArmed = false;
-      ["pointerdown", "keydown", "touchend"].forEach(ev => document.removeEventListener(ev, go, true));
+      ["click", "keydown", "touchend"].forEach(ev => document.removeEventListener(ev, go, true));
       if (state.on || state.editing) return;
       if (e && e.target && e.target.closest && e.target.closest("a[href], .bkc, .bkc-btn, .bkc-peek, #welcome-ov, .bk-play")) {   // a link or the chat: let it do its own thing
-        autoArmed = true; ["pointerdown", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true)); return;
+        autoArmed = true; ["click", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true)); return;
       }
       power(true);
     };
-    ["pointerdown", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true));
+    ["click", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true));
   }
   if (!state.editing && !/[?&]noautoplay\b/.test(location.search)) {
     power(true);
