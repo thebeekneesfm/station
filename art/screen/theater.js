@@ -607,7 +607,6 @@
     var wantEar = document.hidden && state.sound && !state.bedOn && !!ear && !!ear.dataset.unlocked;
     if (wantEar !== !!state.earOn) { state.earOn = wantEar; if (wantEar) { vid.pause(); } else if (ear) { ear.pause(); } applySound(); }
     if (state.earOn) { earPlay(n); }
-    else if (IOS && state.sound && !state.bedOn && ear && ear.dataset.unlocked && !n.item.slate) earPlay(n);   // iPhone: run it muted alongside, ready to take over
     else if (n.item.slate) { if (force || key !== lastKey || n.item.slate === "intermission") showSlate(n.item, n); }
     else if (force || key !== lastKey || !document.hidden) playItem(n.item, n.offset);
     lastKey = key;

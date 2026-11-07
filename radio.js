@@ -155,7 +155,6 @@
      apps or lock the screen. So there the records play straight through the plain player, which Safari
      keeps going in the background (with the lock-screen controls), and the cleaning is skipped. */
   const APPLE_TOUCH = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  if (APPLE_TOUCH) document.documentElement.classList.add("apple-touch");   // (the ambience sliders need the engine, so they're hidden there)
   const audio = new Audio();
   audio.preload = "auto";
   audio.crossOrigin = "anonymous";   // lets the browser clean up the sound; the Archive allows it
@@ -170,6 +169,14 @@
     try {
       ctx = new (window.AudioContext || window.webkitAudioContext)();
       if (!APPLE_TOUCH) buildChain();
+      else {   // iPhone: the records stay out of the engine; only the ambience runs through it (and pauses when you leave the page)
+        const master = ctx.createGain(); master.gain.value = state.vol; master.connect(ctx.destination);
+        const amb = ctx.createGain(), ambLim = ctx.createDynamicsCompressor();
+        ambLim.threshold.value = -6; ambLim.knee.value = 0; ambLim.ratio.value = 20; ambLim.attack.value = 0.002; ambLim.release.value = 0.1;
+        amb.connect(ambLim); ambLim.connect(master);
+        const g = {}; AMB.forEach(n => { g[n] = ctx.createGain(); g[n].gain.value = 0; g[n].connect(amb); });
+        fx.master = master; fx.room = { amb, g, src: {}, on: false };
+      }
       tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
       loadSound("tuning"); AMB.forEach(n => { if (state.amb[n] > 0) loadSound(n); });
       // a phone call or another app can interrupt the sound: pick it back up afterwards
@@ -383,7 +390,7 @@
   }
   function roomFor(st) { return st && st.room ? Object.assign({ muffle: 1100, echo: 0.55, ambience: 0.35 }, st.room) : null; }
   function routeRoom() {
-    if (!fx.ready || !fx.room) return;
+    if (!fx.ready || !fx.room) { setAmbience(); return; }
     const R = fx.room, want = roomFor(state.on ? state.station : null);
     const tail = state.clean === false ? fx.src : fx.lim;
     try { fx.lim.disconnect(); } catch (e) {}
@@ -523,7 +530,7 @@
   }
   function applyVolume() {
     const v = state.vol * sleepFade();
-    if (fx.ready) fx.master.gain.setTargetAtTime(v, ctx.currentTime, 0.3); else audio.volume = v;
+    if (fx.ready) fx.master.gain.setTargetAtTime(v, ctx.currentTime, 0.3); else { audio.volume = v; if (fx.master) fx.master.gain.setTargetAtTime(v, ctx.currentTime, 0.3); }
     // the tuning sound plays only while changing stations; between songs and on a lost signal it's quiet
     if (!(state.on && state.phase === "warming")) tuningSound(false);
   }
