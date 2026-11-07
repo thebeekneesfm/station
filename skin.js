@@ -79,7 +79,7 @@ window.SKIN = {
     {"id": "recent-link", "type": "text", "text": "Recently played", "action": "recent", "x": 694, "y": 402, "w": 150, "h": 30, "font": "BK Serif", "size": 20, "color": "#1f1b17", "align": "right", "weight": 500},
     {"id": "now-status", "type": "text", "bind": "status", "x": 600, "y": 204, "w": 242, "h": 24, "font": "BK Serif", "size": 20, "color": "#c8321f", "align": "right", "italic": true},
     {"id": "guide-frame", "src": "art/guide-frame.png", "x": 40, "y": 544, "w": 1120, "h": 454, "look": "listings"},
-    {"id": "guide", "type": "guide", "mode": "nownext", "x": 48, "y": 558, "w": 1104, "h": 434, "rowHeight": 23, "labelWidth": 280, "font": "BK Serif", "size": 19, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "BK Serif", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
+    {"id": "guide", "type": "guide", "mode": "cards", "x": 48, "y": 558, "w": 1104, "h": 434, "rowHeight": 23, "labelWidth": 280, "font": "BK Serif", "size": 19, "color": "#1f1b17", "dim": "#5d5244", "highlight": "#c8321f", "labelFont": "BK Serif", "line": "rgba(31,27,23,.22)", "block": "transparent", "selected": "rgba(227,169,47,.28)", "paper": "#e9e1c9"},
     {"id": "tv", "type": "tv", "x": 915, "y": 214, "w": 215, "h": 164, "font": "BK Serif", "size": 18, "color": "#efe5cc"},
     {"id": "tv-set", "src": "art/screen/tv-set.webp", "x": 860, "y": 182, "w": 320, "h": 269},
     {"id": "funnies", "type": "funnies", "x": 1200, "y": 184, "w": 346, "h": 210},
