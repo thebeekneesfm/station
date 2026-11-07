@@ -1333,7 +1333,7 @@
     if (window.RECORDS_TODAY) {
       const T = window.RECORDS_TODAY();
       h += `<div class="g-shelfrow"><a class="g-shelf" href="records.html"><span class="gs-name">The Record Shelf</span>` +
-           `<span class="gs-sub">Today's five albums from the '40s, '50s and '60s. Tap one to play it on Archive.org.</span></a>` +
+           `<span class="gs-sub">This week's five albums from the '40s, '50s and '60s. Tap one to play it on Archive.org, or see the whole shelf.</span></a>` +
            `<span class="gs-covers">` + T.picks.map(r => `<a class="gs-cover" href="${esc(r.item)}" target="_blank" rel="noopener" title="${esc(r.title)}, ${esc(r.artist)}${r.year ? ", " + esc(r.year) : ""}"><img src="${esc(r.cover)}" alt="${esc(r.title)}, ${esc(r.artist)}" loading="lazy"></a>`).join("") + `</span></div>`;
     }
     // only touch the page when something in the guide actually changed: rewriting it while someone is

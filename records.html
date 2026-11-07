@@ -5,12 +5,12 @@
 <script>if (/[?&]embed=1/.test(location.search)) document.documentElement.classList.add("embed");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Record Shelf · The Bee's Knees.fm</title>
-<meta name="description" content="Five vintage albums from the 1940s, '50s and '60s every day at The Bee's Knees.fm, to play on Archive.org.">
+<meta name="description" content="Vintage albums from the 1940s, '50s and '60s at The Bee's Knees.fm, to play on Archive.org, with five showcased every week.">
 <link rel="canonical" href="https://thebeesknees.fm/records.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Bee's Knees.fm">
 <meta property="og:title" content="The Record Shelf · The Bee's Knees.fm">
-<meta property="og:description" content="Five vintage albums from the 1940s, '50s and '60s every day at The Bee's Knees.fm, to play on Archive.org.">
+<meta property="og:description" content="Vintage albums from the 1940s, '50s and '60s at The Bee's Knees.fm, to play on Archive.org, with five showcased every week.">
 <meta property="og:url" content="https://thebeesknees.fm/records.html">
 <meta property="og:image" content="https://thebeesknees.fm/art/share.jpg?v=2">
 <meta property="og:image:width" content="1200">
@@ -103,6 +103,16 @@
   .help .small2 { margin-top: 12px; font-size: 15px; color: #d8ceb2; }
   .help .small2 a { color: #f3ead6; }
   .radio-link { margin-top: 14px; }
+  h2.wk { margin-top: 26px; }
+  .all h2 { margin-top: 40px; }
+  .count { font-style: italic; color: var(--ink-2); font-size: 18px; }
+  h3.sec { font: 700 24px/1.2 "BK Serif", Georgia, serif; margin: 28px 0 0; }
+  .shelf.small { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 26px 18px; margin-top: 18px; border-bottom-width: 10px; }
+  .shelf.small .rec h3 { font-size: 16px; }
+  .shelf.small .rec .who { font-size: 14px; }
+  .shelf.small .rec .yr { font-size: 13px; }
+  @media (max-width: 900px) { .shelf.small { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .shelf.small { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 10px; } .shelf.small .rec h3 { font-size: 14px; } .shelf.small .rec .who { font-size: 13px; } }
   @media (max-width: 900px) { .shelf { grid-template-columns: repeat(3, minmax(0, 1fr)); } .why { grid-template-columns: 1fr; } }
   @media (max-width: 560px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 16px; } .rec h3 { font-size: 17px; } .rec .who { font-size: 15px; } }
   @media (prefers-reduced-motion: reduce) { .sleeve::before { transition: none; } }
@@ -123,11 +133,18 @@
 
   <main class="paper">
     <h1>The Record Shelf</h1>
-    <p class="lede">Five albums pulled from the stacks every day, from the 1940s, '50s and '60s. Tap a cover to hear the whole record on Archive.org.</p>
-    <p class="today" id="today">Today's five</p>
+    <p class="lede">Albums from the 1940s, '50s and '60s, pulled from the stacks at Archive.org. Tap a cover to hear the whole record there.</p>
+    <h2 class="wk">This week's five</h2>
+    <p class="today" id="today">A new five every Monday</p>
 
-    <ul class="shelf" id="shelf" aria-label="Today's five albums"></ul>
-    <p class="play">Five new ones go up every morning. Everyone sees the same five, and every album on the shelf comes around before any repeat.</p>
+    <ul class="shelf" id="shelf" aria-label="This week's five albums"></ul>
+    <p class="play">These five are also on the radio page this week. A new five go up every Monday.</p>
+
+    <section class="all" aria-labelledby="all-h">
+      <h2 id="all-h">The whole shelf</h2>
+      <p class="count" id="count"></p>
+      <div id="sections"></div>
+    </section>
 
     <section class="why" aria-labelledby="why-h">
       <h2 id="why-h">Why the radio stops at 1925</h2>
@@ -145,7 +162,7 @@
   </main>
 </div>
 <script src="config.js?v=20261106shop"></script>
-<script src="art/records/records.js?v=2"></script>
+<script src="art/records/records.js?v=3"></script>
 <script>
 (function () {
   "use strict";
@@ -153,11 +170,10 @@
   // opened over the radio: links back to the radio go to the whole page, not into this little window
   if (document.documentElement.classList.contains("embed")) document.querySelectorAll('a[href^="index.html"]').forEach(function (l) { l.target = "_top"; });
   try { if (window.RADIO_CONFIG && window.RADIO_CONFIG.tip) document.getElementById("kofi").href = window.RADIO_CONFIG.tip; } catch (e) {}
-  var T = window.RECORDS_TODAY(), picks = T.picks, m = T.month, d = T.day;
+  var T = window.RECORDS_TODAY(), picks = T.picks, m = T.month, d = T.day, W = T.weekOf;
   var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  document.getElementById("today").textContent = "Today's five, " + months[m - 1] + " " + d;
-  var shelf = document.getElementById("shelf");
-  picks.forEach(function (r) {
+  document.getElementById("today").textContent = "The week of " + months[W.month - 1] + " " + W.day + ". A new five every Monday.";
+  function card(r) {
     var li = document.createElement("li"); li.className = "rec";
     var a = document.createElement("a"); a.href = r.item; a.target = "_blank"; a.rel = "noopener";
     a.setAttribute("aria-label", r.title + " by " + r.artist + (r.year ? ", " + r.year : "") + ". Opens on Archive.org");
@@ -167,8 +183,25 @@
     var h = document.createElement("h3"); h.textContent = r.title; a.appendChild(h);
     var w = document.createElement("p"); w.className = "who"; w.textContent = r.artist; a.appendChild(w);
     if (r.year) { var yr = document.createElement("p"); yr.className = "yr"; yr.textContent = r.year; a.appendChild(yr); }
-    li.appendChild(a); shelf.appendChild(li);
+    li.appendChild(a); return li;
+  }
+  var shelf = document.getElementById("shelf");
+  picks.forEach(function (r) { shelf.appendChild(card(r)); });
+  // the whole shelf: Christmas first while it's the season, then everything else, oldest first
+  var md = m * 100 + d, season = md >= 1106 || md <= 106;
+  var byYear = function (a, b) { return (parseInt(a.year, 10) || 1960) - (parseInt(b.year, 10) || 1960) || a.title.localeCompare(b.title); };
+  var xm = R.filter(function (r) { return r.season === "christmas"; }).sort(byYear), rest = R.filter(function (r) { return r.season !== "christmas"; }).sort(byYear);
+  var groups = [["Jazz, blues, pop and more", rest], ["Christmas", xm]];
+  if (season) groups.reverse();
+  var box = document.getElementById("sections");
+  groups.forEach(function (g) {
+    if (!g[1].length) return;
+    var h = document.createElement("h3"); h.className = "sec"; h.textContent = g[0] + " (" + g[1].length + ")"; box.appendChild(h);
+    var ul = document.createElement("ul"); ul.className = "shelf small";
+    g[1].forEach(function (r) { ul.appendChild(card(r)); });
+    box.appendChild(ul);
   });
+  document.getElementById("count").textContent = R.length + " albums so far, with more on the way.";
 })();
 </script>
 <script src="art/nav/nav.js?v=6"></script>
