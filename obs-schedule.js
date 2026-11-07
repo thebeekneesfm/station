@@ -12,7 +12,7 @@ window.STREAM_SCHEDULE = {
   // what plays when no block is on (the first line that fits today wins)
   otherwise: [
     { dates: { from: "11-26", to: "01-06" }, play: "tv christmas", title: "Christmas on The Bee's Knees" },
-    { play: "radio gramophone", title: "The Bee's Knees, live" }
+    { play: "tv homemovies", title: "Home Movies on The Bee's Knees" }
   ],
 
   blocks: [
@@ -31,12 +31,16 @@ window.STREAM_SCHEDULE = {
     { dates: "12-31", from: "20:00", to: "23:59", play: "radio gramophone",   title: "New Year's Eve Dance Party" },
 
     /* ---------- every week ---------- */
-    { days: ["mon"], from: "19:00", to: "19:30", play: "radio chills",  title: "Monster Monday" },
-    { days: ["mon"], from: "19:30", to: "23:59", play: "drive-in",      title: "Monster Monday at the Drive-In" },
-    { days: ["fri"], from: "19:00", to: "19:30", play: "radio laughs",  title: "Comedy Friday" },
-    { days: ["fri"], from: "19:30", to: "23:59", play: "drive-in",      title: "Comedy Friday at the Drive-In" },
-    { days: ["sat"], from: "09:00", to: "11:00", play: "tv kids",       title: "Saturday Morning Cartoons" },
-    { days: ["sat"], from: "19:30", to: "23:59", play: "drive-in",      title: "Creature Feature Saturday" },
-    { days: ["sun"], from: "21:00", to: "23:59", play: "radio romance", title: "Sunday Night Theater" }
+    { days: ["mon"], from: "19:00", to: "19:30", play: "tv commercials", title: "Monster Monday: the show starts at 7:30" },
+    { days: ["mon"], from: "19:30", to: "22:00", play: "drive-in",       title: "Monster Monday at the Drive-In" },
+    { days: ["tue"], from: "19:00", to: "21:00", play: "tv newsreels",   title: "Oddities Night" },
+    { days: ["wed"], from: "19:00", to: "21:00", play: "tv homemovies",  title: "Another Room: Home Movies and Gramophone Radio" },
+    { days: ["fri"], from: "19:00", to: "19:30", play: "radio laughs",   title: "Comedy Friday" },
+    { days: ["fri"], from: "19:30", to: "22:00", play: "drive-in",       title: "Comedy Friday at the Drive-In" },
+    { days: ["sat"], from: "09:00", to: "11:00", play: "tv kids",        title: "Saturday Morning Cartoons" },
+    { days: ["sat"], from: "19:00", to: "19:30", play: "tv commercials", title: "Creature Feature starts at 7:30" },
+    { days: ["sat"], from: "19:30", to: "22:00", play: "drive-in",       title: "Creature Feature Saturday" },
+    { days: ["sun"], from: "10:00", to: "13:00", play: "tv homemovies",  title: "Sunday Drive" },
+    { days: ["sun"], from: "21:00", to: "23:00", play: "radio romance",  title: "Sunday Night Theater" }
   ]
 };

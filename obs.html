@@ -151,10 +151,7 @@
     <div class="left"><span id="left"></span><span>Listen free at thebeesknees.fm</span></div>
   </section>
   <section class="next paper"><h2 class="head">Coming up</h2><ol id="next"></ol></section>
-  <section class="tunein paper" id="tunein">
-    <div class="head">Tune in anywhere</div>
-    <p>Every station, free and in sync, at <b>thebeesknees.fm</b></p>
-  </section>
+  <section class="tunein paper" id="tunein"></section>
   <section class="list paper" id="list"><h2 class="head">What's on the dial</h2>
     <div class="cols"><div class="radio"><h3>Radio <small>!tune noir</small></h3><ol id="stations"></ol></div><div><h3>TV <small>!tune tv kids</small></h3><ol id="channels"></ol></div></div>
     <p class="di"><strong>The Drive-In</strong>: <code>!tune drive-in</code> for the picture show</p></section>
@@ -167,7 +164,7 @@
 <script src="config.js?v=20261107pp"></script>
 <script src="stations.js?v=20261107dr"></script>
 <script src="art/screen/tv-data.js?v=22"></script>
-<script src="obs-schedule.js?v=5"></script>
+<script src="obs-schedule.js?v=6"></script>
 <script>
 (function () {
   "use strict";
@@ -395,10 +392,15 @@
   var channel = (Q.get("twitch") || "").toLowerCase().replace(/[^a-z0-9_]/g, "");
   var COOL = 1000 * (+Q.get("cooldown") || 180), VOTE = 1000 * (+Q.get("vote") || 45);
   var lastChange = 0, votes = null, voteEnd = 0, cands = {};
-  if (channel) {
-    $("tunein").innerHTML = '<div class="head">You pick what\u2019s on</div><p>Type <code>!tune noir</code>, <code>!tune tv kids</code> or <code>!tune drive-in</code> in chat. <code>!stations</code> shows the dial. Free at <b>thebeesknees.fm</b></p>';
-    connect();
-  }
+  // the tune-in box: "keep watching 24/7", taking turns with the chat commands when chat is hooked up
+  var TUNE = [
+    '<div class="head">Want to keep watching 24/7?</div><p>Radio, TV and the Drive-In play around the clock, free, at <b>thebeesknees.fm</b></p>'
+  ];
+  if (channel) TUNE.push('<div class="head">You pick what\u2019s on</div><p>Type <code>!tune noir</code>, <code>!tune tv kids</code> or <code>!tune drive-in</code> in chat. <code>!stations</code> shows the dial.</p>');
+  var tuneAt = 0;
+  $("tunein").innerHTML = TUNE[0];
+  if (TUNE.length > 1) setInterval(function () { tuneAt = (tuneAt + 1) % TUNE.length; $("tunein").innerHTML = TUNE[tuneAt]; }, 30000);
+  if (channel) connect();
   function command(user, text, boss) {
     var m = text.trim().match(/^!(tune|station|stations|channels|list|dial|radio|tv|watch|drive-?in|movies?)\b\s*(.*)$/i); if (!m) return;
     var cmd = m[1].toLowerCase().replace("-", ""), arg = m[2].trim();
