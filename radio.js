@@ -674,10 +674,55 @@
     warmed = nx; const a = new Audio(); a.preload = "auto"; a.crossOrigin = "anonymous"; a.muted = true; a.src = nx;
   }, 2000);
 
+  /* iPhone and iPad: Safari silences the sound-cleaning engine the moment you switch apps or lock the
+     screen, so the radio would stop. A plain player runs alongside on those devices, muted and in step
+     with the radio. When the page goes out of view it takes over the sound and follows the schedule
+     from record to record; when you come back, the radio picks up where the schedule is. */
+  const IOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  const ear = IOS ? new Audio() : null;
+  let earOn = false;
+  if (ear) { ear.preload = "auto"; ear.muted = true; }
+  function earSync(force) {
+    if (!ear || !state.on || !state.station) return;
+    const src = audio.dataset.src; if (!src) return;
+    if (ear.dataset.src !== src) {
+      ear.dataset.src = src; ear.src = src;
+      ear.addEventListener("loadedmetadata", () => { try { ear.currentTime = audio.currentTime || 0; } catch (e) {} }, { once: true });
+    } else if (force || (ear.readyState >= 2 && !ear.seeking && Math.abs(ear.currentTime - audio.currentTime) > 2)) {
+      try { ear.currentTime = audio.currentTime; } catch (e) {}
+    }
+    if (ear.paused) ear.play().catch(() => {});
+  }
+  function earNext() {   // out of view: the next record on the schedule, straight through the plain player
+    const st = state.station; if (!ear || !earOn || !st) return;
+    let now = at(st);
+    if (now.track.src === ear.dataset.src) {   // this one ran out ahead of the schedule: start the next now
+      const i = (st.tracks.findIndex(t => t.src === ear.dataset.src) + 1) % st.tracks.length;
+      now = { track: st.tracks[i], offset: 0 };
+    }
+    ear.dataset.src = now.track.src; ear.src = now.track.src;
+    const off = now.offset;
+    ear.addEventListener("loadedmetadata", () => { try { ear.currentTime = off; } catch (e) {} }, { once: true });
+    ear.play().catch(() => {});
+    mediaSession(st, now.track);
+  }
+  if (ear) {
+    ear.addEventListener("ended", earNext);
+    ear.addEventListener("error", () => { if (earOn) setTimeout(earNext, 1500); });
+    audio.addEventListener("playing", () => earSync(true));
+    setInterval(() => { if (!document.hidden && state.on) earSync(false); }, 3000);
+  }
+
   document.addEventListener("visibilitychange", () => {
+    if (ear) {
+      if (document.hidden && state.on && state.station) { earSync(true); ear.muted = false; earOn = true; if (fx.ready) fx.master.gain.value = 0; else audio.muted = true; return; }   // only one of the two is ever heard
+      if (!document.hidden && earOn) { earOn = false; ear.muted = true; audio.muted = false; applyVolume(); }
+    }
     if (document.hidden || !state.on) return;
     if (ctx && ctx.state !== "running") ctx.resume().catch(() => {});
-    if (state.station && audio.paused && (state.phase === "playing" || state.phase === "next")) play();
+    if (!state.station) return;
+    const due = at(state.station).track.src, onDue = audio.dataset.src === due || state.early === audio.dataset.src;
+    if ((audio.paused && (state.phase === "playing" || state.phase === "next")) || (ear && (!onDue || audio.paused))) play();
   });
 
   function setPhase(p) { state.phase = p; applyVolume(); render(); presenceUpdate(); }
@@ -686,7 +731,7 @@
     initAudio();
     if (ctx && ctx.state === "suspended") ctx.resume();
     state.on = on == null ? !state.on : on;
-    if (!state.on) { audio.pause(); clearTimeout(lostTimer); try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} state.phase = "off"; routeRoom(); applyVolume(); render(); presenceUpdate(); return; }
+    if (!state.on) { audio.pause(); if (ear) { ear.pause(); earOn = false; ear.muted = true; } clearTimeout(lostTimer); try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} state.phase = "off"; routeRoom(); applyVolume(); render(); presenceUpdate(); return; }
     retune(true);
   }
   function retune(force) {

@@ -217,11 +217,12 @@
      programme carries on through a plain audio player at the same spot, and the picture picks back
      up on schedule when you come back. */
   var ear = null;
+  var IOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   function earUnlock() {   // phones only let a player make sound later if it was started by a tap once
     if (!ear) { ear = new Audio(); ear.preload = "auto"; ear.addEventListener("ended", function () { if (state.earOn) tick(true); }); }
     if (ear.dataset.unlocked) return;
     ear.dataset.unlocked = "1";
-    ear.muted = true; ear.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=";
+    ear.muted = false; ear.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=";
     var p = ear.play(); if (p && p.then) p.then(function () { ear.pause(); }).catch(function () {});
   }
   function gainOf(src) { if (!src) return 1; var g = GAIN[src]; return g > 0 ? Math.min(1, g) : GAIN_DEFAULT; }
@@ -230,7 +231,7 @@
     var fade = sleepFade();
     vid.muted = !state.sound || !!state.blocked || !!state.bedOn || !!state.earOn; vid.volume = state.vol * fade * gainOf(state.src + (state.clipKey != null ? "#" + state.clipKey : "")); if (typeof pre !== "undefined" && pre) pre.muted = true;
     if (typeof bedEl !== "undefined" && bedEl) { bedEl.muted = !state.sound || !!state.blocked; bedEl.volume = state.vol * fade * gainOf(bedEl.dataset.src); }
-    if (ear) { ear.muted = !state.sound; ear.volume = state.vol * fade * gainOf(ear.dataset.src); }
+    if (ear) { ear.muted = !state.sound || !state.earOn; ear.volume = state.vol * fade * gainOf(ear.dataset.src); }
     showSleep();
     showSoundState();
   }
@@ -606,6 +607,7 @@
     var wantEar = document.hidden && state.sound && !state.bedOn && !!ear && !!ear.dataset.unlocked;
     if (wantEar !== !!state.earOn) { state.earOn = wantEar; if (wantEar) { vid.pause(); } else if (ear) { ear.pause(); } applySound(); }
     if (state.earOn) { earPlay(n); }
+    else if (IOS && state.sound && !state.bedOn && ear && ear.dataset.unlocked && !n.item.slate) earPlay(n);   // iPhone: run it muted alongside, ready to take over
     else if (n.item.slate) { if (force || key !== lastKey || n.item.slate === "intermission") showSlate(n.item, n); }
     else if (force || key !== lastKey || !document.hidden) playItem(n.item, n.offset);
     lastKey = key;
