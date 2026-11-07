@@ -694,7 +694,9 @@
     store.set("dial", state.dial);
     if (st === state.station && !force) { render(); return; }
     state.station = st;
-    if (st && location.hash !== "#" + st.id) { try { history.replaceState(null, "", "#" + st.id); } catch (e) {} }
+    // keep an open page's address (#shop, #comics, #about) so a refresh reopens it; otherwise show the station
+    let pageOpen = false; try { pageOpen = location.hash === "#about" || isRack(location.hash.slice(1)); } catch (e) {}
+    if (st && !pageOpen && location.hash !== "#" + st.id) { try { history.replaceState(null, "", "#" + st.id); } catch (e) {} }
     if (!state.on) { render(); return; }
     routeRoom();
     if (!st) { audio.pause(); clearTimeout(lostTimer); setPhase("between"); return; }
@@ -1459,7 +1461,8 @@
     }
     box.setAttribute("aria-label", fr.title);
     box.hidden = false; overlayOpen(true);
-    if (push && location.hash !== "#" + kind) history.pushState({ rack: kind }, "", "#" + kind);
+    if (push && location.hash !== "#" + kind) { history.pushState({ rack: kind }, "", "#" + kind); box.dataset.pushed = "1"; }
+    else if (!push && !history.state) box.dataset.pushed = "";
     box.querySelector(".rk-close").focus();
   }
   function closeRack(fromHistory) {
@@ -1467,7 +1470,11 @@
     box.hidden = true; overlayOpen(false);
     // a YouTube video switched the radio off: switch it back on now the video is closed
     if (rackPausedRadio) { rackPausedRadio = false; if (!state.on) power(true); }
-    if (!fromHistory && isRack(location.hash.slice(1))) history.back();
+    if (!fromHistory && isRack(location.hash.slice(1))) {
+      // opened from a link straight to #shop (or after a refresh): going Back would leave the site, so just tidy the address
+      if (box.dataset.pushed) history.back();
+      else { try { history.replaceState(null, "", state.station ? "#" + state.station.id : location.pathname); } catch (e) {} }
+    }
   }
   // the YouTube page, opened over the radio, says when a video starts: switch the radio off so they don't play over each other
   let rackPausedRadio = false;
@@ -1476,7 +1483,8 @@
     if (state.on) { rackPausedRadio = true; power(false); }
   });
   window.addEventListener("popstate", () => { const k = location.hash.slice(1); if (isRack(k)) openRack(k, false); else closeRack(true); });
-  if (isRack(location.hash.slice(1))) setTimeout(() => openRack(location.hash.slice(1), false), 0);
+  // read the address now: the radio may switch it to the station (#chills) before the timer runs
+  { const k = location.hash.slice(1); if (isRack(k)) setTimeout(() => openRack(k, false), 0); }
 
   /* ---------- the Sunday Funnies (art/funnies/funnies.js) ----------
      One strip a week, from the same week in 1930. It changes on Sunday by the listener's own calendar,

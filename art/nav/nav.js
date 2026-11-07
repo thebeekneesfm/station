@@ -7,15 +7,17 @@
     { label: "Listen", href: "index.html" },
     { label: "Watch", items: [["TV", "tv.html"], ["Drive-In", "drive-in.html"], ["YouTube", "youtube.html"]] },
     { label: "Read", items: [["Comics", "comics.html"], ["Magazines", "magazines.html"], ["Vintage Ads", "ads.html"]] },
-    { label: "Play", items: [["Daily Puzzle", "puzzles.html"], ["Send a Card", "postcard.html"], ["Guest Book", "guestbook.html"]] },
+    { label: "Play", items: [["Daily Puzzle", "puzzles.html"], ["Send a Card", "postcard.html"]] },
     { label: "Shop", href: "shop.html" },
-    { label: "Support", items: [["Become a member", "config.tip"], ["Donate to the Internet Archive", "https://archive.org/donate"]] },
+    { label: "Support", items: [["Become a member", "config.tip"], ["Sign the Guest Book", "guestbook.html"], ["Donate to the Internet Archive", "https://archive.org/donate"]] },
     { label: "About", href: "about.html" }
   ];
 
   var CSS = [
     ".bkn{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;font-family:'BK Serif',Georgia,serif}",
     ".bkn>li{position:relative}",
+    /* the paper header on the other pages is cut out with a mask, which would also cut off the drop-downs */
+    ".mast:has(.bkn){-webkit-mask:none!important;mask:none!important;overflow:visible!important;position:relative;z-index:20}",
     ".bkn a,.bkn button{font:500 21px/1.2 'BK Serif',Georgia,serif;color:#1f1b17;background:none;border:0;padding:8px 10px;cursor:pointer;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;min-height:44px;box-sizing:border-box}",
     ".bkn>li>a:hover,.bkn>li>button:hover,.bkn>li>button[aria-expanded=true]{color:#c8321f}",
     ".bkn .caret{font-size:.6em;transition:transform .15s}",
@@ -23,6 +25,7 @@
     ".bkn .cur>a,.bkn .cur>button{color:#c8321f;font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}",
     ".bkn-sub{list-style:none;margin:0;padding:6px 0;position:absolute;left:0;top:100%;z-index:50;min-width:210px;background:#f3ead2;box-shadow:0 3px 0 rgba(0,0,0,.25),0 12px 26px rgba(0,0,0,.3);border-top:3px solid #c8321f}",
     ".bkn-sub[hidden]{display:none}",
+    ".bkn>li:nth-last-child(-n+2) .bkn-sub{left:auto;right:0}",   /* menus near the right edge open leftward so they stay on screen */
     ".bkn-sub a{display:flex;width:100%;padding:9px 16px;font-size:19px}",
     ".bkn-sub a:hover,.bkn-sub a:focus-visible{background:#e3d6b4;color:#c8321f}",
     ".bkn-sub a[aria-current]{color:#c8321f;font-weight:700}",
@@ -98,9 +101,15 @@
         });
         var o = { btn: btn, sub: sub }; openSubs.push(o);
         var show = function (on) { closeAll(o); sub.hidden = !on; btn.setAttribute("aria-expanded", on ? "true" : "false"); };
-        btn.addEventListener("click", function (e) { e.stopPropagation(); show(sub.hidden); });
+        // with a mouse the menu is already open from pointing at it, so a click keeps it open instead of closing it
+        var t = 0, viaMouse = false;
+        btn.addEventListener("pointerdown", function (e) { viaMouse = e.pointerType === "mouse"; });
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          if (viaMouse && e.detail > 0) { clearTimeout(t); show(true); } else show(sub.hidden);
+          viaMouse = false;
+        });
         // a mouse can just point at the menu; touch and keyboard use the click
-        var t = 0;
         li.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") { clearTimeout(t); show(true); } });
         li.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") { t = setTimeout(function () { show(false); }, 220); } });
         sub.addEventListener("keydown", function (e) { if (e.key === "Escape") { show(false); btn.focus(); } });
