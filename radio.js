@@ -1280,7 +1280,7 @@
     STATIONS.forEach(st => {
       if (st.group && st.group !== group) {
         const first = group === null; group = st.group;
-        h += `<div class="g-group"><span>${esc(group)}</span>` + (first ? `<span class="g-note">Everything plays from the Internet Archive (archive.org); nothing is hosted here. <a href="about.html#rights" class="g-rights">Rights holders: request a takedown</a></span>` : "") + `</div>`;
+        h += `<div class="g-group"><span>${esc(group)}</span>` + (first ? `<span class="g-note">Streaming from the Internet Archive (archive.org). <a href="about.html#rights" class="g-rights">Rights holders: request a takedown</a></span>` : "") + `</div>`;
       }
       const sel = state.station === st;
       const n = presence.live ? (presence.counts[st.id] || 0) : 0;
