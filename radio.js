@@ -151,6 +151,11 @@
   }
 
   /* ---------- audio ---------- */
+  /* iPhone and iPad: Safari stops any sound that runs through the sound-cleaning engine as soon as you switch
+     apps or lock the screen. So there the records play straight through the plain player, which Safari
+     keeps going in the background (with the lock-screen controls), and the cleaning is skipped. */
+  const APPLE_TOUCH = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (APPLE_TOUCH) document.documentElement.classList.add("apple-touch");   // (the ambience sliders need the engine, so they're hidden there)
   const audio = new Audio();
   audio.preload = "auto";
   audio.crossOrigin = "anonymous";   // lets the browser clean up the sound; the Archive allows it
@@ -164,7 +169,7 @@
     try { if (navigator.audioSession) navigator.audioSession.type = "playback"; } catch (e) {}
     try {
       ctx = new (window.AudioContext || window.webkitAudioContext)();
-      buildChain();
+      if (!APPLE_TOUCH) buildChain();
       tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
       loadSound("tuning"); AMB.forEach(n => { if (state.amb[n] > 0) loadSound(n); });
       // a phone call or another app can interrupt the sound: pick it back up afterwards
@@ -685,7 +690,7 @@
      with the radio. When the page goes out of view it takes over the sound and follows the schedule
      from record to record; when you come back, the radio picks up where the schedule is. */
   const IOS = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-  const ear = IOS ? new Audio() : null;
+  const ear = null;   // (an earlier approach: a second player alongside. Not needed now that iPhones play straight through.)
   let earOn = false;
   if (ear) { ear.preload = "auto"; ear.muted = true; }
   function earSync(force) {

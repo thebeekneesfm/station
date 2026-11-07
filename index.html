@@ -386,6 +386,7 @@
   .layer[data-id="tv-set"] { z-index: 901 !important; filter: drop-shadow(3px 4px 0 rgba(0,0,0,.28)); }
   html.phone .layer[data-id="tv-set"] { filter: none; }
   /* the site menu (art/nav/nav.js) sits above everything so its drop-downs aren't hidden */
+  .apple-touch [data-id='ambience'] { display: none !important; }
   .layer.t-menu { z-index: 1000 !important; overflow: visible; }
   .menu-box { display: flex; align-items: center; height: 100%; }
   .menu-box .bkn a, .menu-box .bkn button { font-size: var(--m-size, 22px); }
@@ -736,7 +737,7 @@
 <script src="art/screen/theater.js?v=39"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
 <script src="art/nav/nav.js?v=5"></script>
-<script src="radio.js?v=20261107ph"></script>
+<script src="radio.js?v=20261107ios"></script>
 <script src="socials.js?v=2"></script>
 <script src="chat.js?v=20261106nav"></script>
 </body>
