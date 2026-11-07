@@ -8820,7 +8820,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_lets-take-a-walk_bubber-johnson_gbia0065160b/let%27s%20Take%20A%20Walk%20-%20Bubber%20Johnson.mp3",
     "length": 179.43,
     "series": "Bubber Johnson",
-    "title": "let's Take A Walk",
+    "title": "Let's Take A Walk",
     "date": "1956",
     "item": "https://archive.org/details/78_lets-take-a-walk_bubber-johnson_gbia0065160b"
    },
@@ -10716,7 +10716,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_north-hollywood-blues_wingy-manone-and-his-go-group-burt-johnson-allen-stevenson_gbia0187279a/NORTH%20HOLLYWOOD%20BLUES%20-%20%22WINGY%22%20MANONE%20AND%20HIS%20GO-GROUP.mp3",
     "length": 160.7,
-    "series": "\"wingy\" Manone and His Go-group",
+    "series": "\"Wingy\" Manone and His Go-group",
     "title": "North Hollywood Blues",
     "date": "1949",
     "item": "https://archive.org/details/78_north-hollywood-blues_wingy-manone-and-his-go-group-burt-johnson-allen-stevenson_gbia0187279a"
@@ -10989,7 +10989,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_show-me-missouri-blues_julia-lee-tommy-douglas-orchestra-julia-lee-thomas-lee_gbia0162030b/%22SHOW%20ME%20MISSOURI%20BLUES%22%20-%20Julia%20Lee%20%26%20Tommy%20Douglas%27%20Orchestra.mp3",
     "length": 191,
     "series": "Julia Lee & Tommy Douglas' Orchestra",
-    "title": "\"show Me Missouri Blues\"",
+    "title": "\"Show Me Missouri Blues\"",
     "date": "1945",
     "item": "https://archive.org/details/78_show-me-missouri-blues_julia-lee-tommy-douglas-orchestra-julia-lee-thomas-lee_gbia0162030b"
    },
@@ -11429,7 +11429,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_everything-happens-to-me_lightnin-hopkins-and-his-guitar_gbia0475959b/%22EVERYTHING%20HAPPENS%20TO%20ME%22%20-%20Lightnin%27%20Hopkins%20and%20his%20Guitar.mp3",
     "length": 166.06,
     "series": "Lightnin' Hopkins and his Guitar",
-    "title": "\"everything Happens to Me\"",
+    "title": "\"Everything Happens to Me\"",
     "date": "1952",
     "item": "https://archive.org/details/78_everything-happens-to-me_lightnin-hopkins-and-his-guitar_gbia0475959b"
    },
@@ -12557,7 +12557,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_you-caused-my-heart-to-weep_lightnin-hopkins_gbia0334374a/%22YOU%20CAUSED%20MY%20HEART%20TO%20WEEP%22%20-%20Lightnin%27%20Hopkins.mp3",
     "length": 158.11,
     "series": "Lightnin' Hopkins",
-    "title": "you Caused My Heart to Weep",
+    "title": "You Caused My Heart to Weep",
     "date": "1954",
     "item": "https://archive.org/details/78_you-caused-my-heart-to-weep_lightnin-hopkins_gbia0334374a"
    },
@@ -12565,7 +12565,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_if-its-good_julia-lee-tommy-douglas-orchestra-julia-lee-lee-turner_gbia0162030a/%22IF%20IT%27S%20GOOD%22%20-%20Julia%20Lee%20%26%20Tommy%20Douglas%27%20Orchestra.mp3",
     "length": 182,
     "series": "Julia Lee & Tommy Douglas' Orchestra",
-    "title": "\"if It's Good\"",
+    "title": "\"If It's Good\"",
     "date": "1945",
     "item": "https://archive.org/details/78_if-its-good_julia-lee-tommy-douglas-orchestra-julia-lee-lee-turner_gbia0162030a"
    },
@@ -14397,7 +14397,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_why_lightnin-hopkins-and-his-guitar_gbia0475963a/%22WHY%22%20-%20Lightnin%27%20Hopkins%20and%20his%20Guitar.mp3",
     "length": 154.1,
     "series": "Lightnin' Hopkins and his Guitar",
-    "title": "\"why\"",
+    "title": "\"Why\"",
     "date": "1954",
     "item": "https://archive.org/details/78_why_lightnin-hopkins-and-his-guitar_gbia0475963a"
    },
@@ -14501,7 +14501,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_money-blues_james-wayne_gbia0196826a/%22MONEY%20BLUES%22%20-%20James%20Wayne.mp3",
     "length": 147,
     "series": "James Wayne",
-    "title": "\"money Blues\"",
+    "title": "\"Money Blues\"",
     "date": "1952",
     "item": "https://archive.org/details/78_money-blues_james-wayne_gbia0196826a"
    },
@@ -16301,7 +16301,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_grieving-blues_lightnin-hopkins-lightnin-hopkins-l-hopkins_gbia0408922b/%22GRIEVING%20BLUES%22%20-%20LIGHTNIN%27%20HOPKINS%20-%20Lightnin%27%20Hopkins.mp3",
     "length": 157.3,
     "series": "Lightnin' Hopkins",
-    "title": "grieving Blues",
+    "title": "Grieving Blues",
     "date": "1955",
     "item": "https://archive.org/details/78_grieving-blues_lightnin-hopkins-lightnin-hopkins-l-hopkins_gbia0408922b"
    },
@@ -16821,7 +16821,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_tap-dance-boogie_lightnin-hopkins_gbia0334374b/%22TAP%20DANCE%20BOOGIE%22%20-%20Lightnin%27%20Hopkins.mp3",
     "length": 159.55,
     "series": "Lightnin' Hopkins",
-    "title": "tap Dance Boogie",
+    "title": "Tap Dance Boogie",
     "date": "1954",
     "item": "https://archive.org/details/78_tap-dance-boogie_lightnin-hopkins_gbia0334374b"
    },
@@ -17741,7 +17741,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_18th-vine-st-blues_duke-henderson-king-perry-orchestra-king-perry-ike-brown-ma_gbia0053622b/18th%20%26%20Vine%20St.%20Blues%20-%20%22Duke%22%20Henderson.mp3",
     "length": 172,
     "series": "\"Duke\" Henderson",
-    "title": "18th & Vine St. Blues",
+    "title": "18Th & Vine St. Blues",
     "date": "1947",
     "item": "https://archive.org/details/78_18th-vine-st-blues_duke-henderson-king-perry-orchestra-king-perry-ike-brown-ma_gbia0053622b"
    },
@@ -18845,7 +18845,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_grievance-blues_lightnin-hopkins_gbia0500339b/%22GRIEVANCE%20BLUES%22%20-%20LIGHTNIN%27%20HOPKINS.mp3",
     "length": 188,
     "series": "Lightnin' Hopkins",
-    "title": "\"grievance Blues\"",
+    "title": "\"Grievance Blues\"",
     "date": "1950",
     "item": "https://archive.org/details/78_grievance-blues_lightnin-hopkins_gbia0500339b"
    },
@@ -19334,7 +19334,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_murder-he-says_gene-krupa-and-his-orchestra-anita-oday-loesser-mchugh_gbia3032568a/MURDER%2C%22%20HE%20SAYS%20-%20GENE%20KRUPA%20AND%20HIS%20ORCHESTRA.mp3",
     "length": 205,
     "series": "Gene Krupa and His Orchestra",
-    "title": "\"murder,\" He Says",
+    "title": "\"Murder,\" He Says",
     "date": "1944",
     "item": "https://archive.org/details/78_murder-he-says_gene-krupa-and-his-orchestra-anita-oday-loesser-mchugh_gbia3032568a"
    },
@@ -19374,7 +19374,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_sarah-come-back-to-the-range_les-benson-and-his-monticello-mounties-les-benson_gbia0409561a/%22SARAH%22%20COME%20BACK%20TO%20THE%20RANGE%20-%20LES%20BENSON%20And%20His%20MONTICELLO%20MOUNTIES.mp3",
     "length": 192.84,
     "series": "LES BENSON And His MONTICELLO MOUNTIES",
-    "title": "\"sarah\" Come Back to the Range",
+    "title": "\"Sarah\" Come Back to the Range",
     "date": "1947",
     "item": "https://archive.org/details/78_sarah-come-back-to-the-range_les-benson-and-his-monticello-mounties-les-benson_gbia0409561a"
    },
@@ -26053,7 +26053,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_st-louis-blues-march_418th-aaftc-band-captain-glenn-miller_gbia0385330b/ST.%20LOUIS%20BLUES%20MARCH%20-%20418th%20AAFTC%20Band.mp3",
     "length": 269.45,
-    "series": "418th AAFTC Band",
+    "series": "418Th AAFTC Band",
     "title": "St. Louis Blues March",
     "date": "1943",
     "item": "https://archive.org/details/78_st-louis-blues-march_418th-aaftc-band-captain-glenn-miller_gbia0385330b"
@@ -28477,7 +28477,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_dinah_1c-mus-sam-donahue-and-the-navy-dance-band-johnny-best-sam-donahue-dick-laf_gbia0382452b/DINAH%20-%201c%20Mus.%20Sam%20Donahue%20and%20the%20Navy%20Dance%20Band.mp3",
     "length": 261.91,
-    "series": "1/c Mus. Sam Donahue and the Navy Dance Band",
+    "series": "1/C Mus. Sam Donahue and the Navy Dance Band",
     "title": "Dinah",
     "date": "1945",
     "item": "https://archive.org/details/78_dinah_1c-mus-sam-donahue-and-the-navy-dance-band-johnny-best-sam-donahue-dick-laf_gbia0382452b"
@@ -30271,7 +30271,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_murder-he-says_gene-krupa-and-his-orchestra-anita-oday-loesser-mchugh_gbia3032568a/MURDER%2C%22%20HE%20SAYS%20-%20GENE%20KRUPA%20AND%20HIS%20ORCHESTRA.mp3",
     "length": 205,
     "series": "Gene Krupa and His Orchestra",
-    "title": "\"murder,\" He Says",
+    "title": "\"Murder,\" He Says",
     "date": "1944",
     "item": "https://archive.org/details/78_murder-he-says_gene-krupa-and-his-orchestra-anita-oday-loesser-mchugh_gbia3032568a"
    },
@@ -31519,7 +31519,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_the-ginny-simms-show-dance-with-a-dolly_ginny-simms_gbia0278244a/%22THE%20GINNY%20SIMMS%20SHOW%22%20-%20%22DANCE%20WITH%20A%20DOLLY%20-%20GINNY%20SIMMS.mp3",
     "length": 160.3,
     "series": "Ginny Simms",
-    "title": "\"the Ginny Simms Show\" - \"dance with a Dolly\"",
+    "title": "\"The Ginny Simms Show\" - \"dance with a Dolly\"",
     "date": "1944",
     "item": "https://archive.org/details/78_the-ginny-simms-show-dance-with-a-dolly_ginny-simms_gbia0278244a"
    },
@@ -32855,7 +32855,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_20th-century-blues_sir-charles-and-his-all-stars-sir-charles-buck-clayton-jimmy-but_gbia0267426a/20TH%20CENTURY%20BLUES%20-%20SIR%20CHARLES%20and%20his%20ALL%20STARS.mp3",
     "length": 179.18,
     "series": "SIR CHARLES and his ALL STARS",
-    "title": "20th Century Blues",
+    "title": "20Th Century Blues",
     "date": "September 4, 1945",
     "item": "https://archive.org/details/78_20th-century-blues_sir-charles-and-his-all-stars-sir-charles-buck-clayton-jimmy-but_gbia0267426a"
    },
@@ -32879,7 +32879,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_and-mimi_mel-torm-kennedy-simon_gbia0183350b/AND%20MIMI%20-%20MEL%20TORM%C3%89%20-%20Kennedy%20-%20Simon.mp3",
     "length": 189,
     "series": "Mel Tormé",
-    "title": "....and Mimi",
+    "title": "....And Mimi",
     "date": "1947",
     "item": "https://archive.org/details/78_and-mimi_mel-torm-kennedy-simon_gbia0183350b"
    },
@@ -33783,7 +33783,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_youre-the-top_ginny-simms-cole-porter_gbia0031214/01%20-%20Night%20and%20Day%20-%20Ginny%20Simms%20-%20Cole%20Porter.mp3",
     "length": 171,
     "series": "Cole Porter",
-    "title": "selections from Night and Day",
+    "title": "Selections from Night and Day",
     "date": "1947",
     "item": "https://archive.org/details/78_youre-the-top_ginny-simms-cole-porter_gbia0031214"
    },
@@ -33879,7 +33879,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_the-happy-wanderer_eddie-fisher-and-fred-waring-choir-sam-fox-music-co_gbia0350272a/%22THE%20HAPPY%20WANDERER%22%20-%20Eddie%20Fisher%20and%20Fred%20Waring%20Choir.mp3",
     "length": 197.04,
     "series": "Eddie Fisher and Fred Waring Choir",
-    "title": "\"the Happy Wanderer\"",
+    "title": "\"The Happy Wanderer\"",
     "date": "1954",
     "item": "https://archive.org/details/78_the-happy-wanderer_eddie-fisher-and-fred-waring-choir-sam-fox-music-co_gbia0350272a"
    },
@@ -34775,7 +34775,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_2nd-balcony-jump_billy-eckstine-and-his-orchestra-billy-eckstine-gerald-valentine_gbia0072649b/2nd%20Balcony%20Jump%20-%20Billy%20Eckstine%20and%20his%20Orchestra.mp3",
     "length": 179,
     "series": "Billy Eckstine and his Orchestra",
-    "title": "2nd Balcony Jump",
+    "title": "2Nd Balcony Jump",
     "date": "1946",
     "item": "https://archive.org/details/78_2nd-balcony-jump_billy-eckstine-and-his-orchestra-billy-eckstine-gerald-valentine_gbia0072649b"
    },
@@ -35183,7 +35183,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_blue-moon_bruce-clarke-quintet-ken-pimblett-allan-ford-jon-mosen-lindsay-motherwe_gbia3011841b/%22BLUE%20MOON%22%20-%20BRUCE%20CLARKE%20QUINTET%20-%20Ken%20Pimblett.mp3",
     "length": 293,
     "series": "Bruce Clarke Quintet",
-    "title": "\"blue Moon\"",
+    "title": "\"Blue Moon\"",
     "date": "1949",
     "item": "https://archive.org/details/78_blue-moon_bruce-clarke-quintet-ken-pimblett-allan-ford-jon-mosen-lindsay-motherwe_gbia3011841b"
    },
@@ -38319,7 +38319,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_i-dont-stand-a-ghost-of-a-chance_charlie-ventura-sextet-c-ventura-h-mcghee-a_gbia0122402a/%28I%20DON%27T%20STAND%29%20A%20GHOST%20OF%20A%20CHAN%20-%20Charlie%20Ventura%20Sextet.mp3",
     "length": 204,
     "series": "Charlie Ventura Sextet",
-    "title": "(i Don't Stand) a Ghost of a Chance",
+    "title": "(I Don't Stand) a Ghost of a Chance",
     "date": "1949",
     "item": "https://archive.org/details/78_i-dont-stand-a-ghost-of-a-chance_charlie-ventura-sextet-c-ventura-h-mcghee-a_gbia0122402a"
    },
@@ -39159,7 +39159,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_theres-a-new-side-to-an-old-love-story_benny-carter-and-his-orchestra-emma-lou-w_gbia0155067b/%28THERE%27S%20A%20NEW%20SIDE%20TO%29%20A%20-%20Benny%20Carter%20and%20his%20Orchestra.mp3",
     "length": 182,
     "series": "Benny Carter and his Orchestra",
-    "title": "(there's a New Side To) an Old Love Story",
+    "title": "(There's a New Side To) an Old Love Story",
     "date": "1948",
     "item": "https://archive.org/details/78_theres-a-new-side-to-an-old-love-story_benny-carter-and-his-orchestra-emma-lou-w_gbia0155067b"
    },
@@ -44328,7 +44328,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_4th-movement-part-1-allegro-con-brio_vienna-philharmonic-orchestra-beethoven-wilh_gbia7004341b/4th%20Movement%20%28Part%201%29%20Alle%20-%20VIENNA%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 220.95,
     "series": "Vienna Philharmonic Orchestra",
-    "title": "4th Movement (Part 1) Allegro con brio",
+    "title": "4Th Movement (Part 1) Allegro con brio",
     "date": "1954",
     "item": "https://archive.org/details/78_4th-movement-part-1-allegro-con-brio_vienna-philharmonic-orchestra-beethoven-wilh_gbia7004341b"
    },
@@ -44448,7 +44448,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_2nd-movement-conclusion-andante-sostenuto_vienna-philharmonic-orchestra-brahms-wi_gbia7004524a/2nd%20Movement%20%28Conclusion%29%20%20-%20VIENNA%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 220.3,
     "series": "Vienna Philharmonic Orchestra",
-    "title": "2nd Movement (Conclusion) Andante sostenuto",
+    "title": "2Nd Movement (Conclusion) Andante sostenuto",
     "date": "1948",
     "item": "https://archive.org/details/78_2nd-movement-conclusion-andante-sostenuto_vienna-philharmonic-orchestra-brahms-wi_gbia7004524a"
    },
@@ -44672,7 +44672,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-prelude-in-a-major-op-28-no-7-b-waltz-in-g-flat-major-op-70-no-1-c_gbia7003044a/%28a%29%20Prelude%20-%20LEOPOLD%20STOKOWSKI%20AND%20HIS%20SYMPHONY%20ORCHESTRA.mp3",
     "length": 300.65,
     "series": "Leopold Stokowski And His Symphony Orchestra",
-    "title": "(a) Prelude in A major, Op. 28, No. 7; (b) Waltz in G flat major, Op. 70, No. 1; (c) Mazurka in C major, Op. 67, No. 3",
+    "title": "(A) Prelude in A major, Op. 28, No. 7; (b) Waltz in G flat major, Op. 70, No. 1; (c) Mazurka in C major, Op. 67, No. 3",
     "date": "1951",
     "item": "https://archive.org/details/78_a-prelude-in-a-major-op-28-no-7-b-waltz-in-g-flat-major-op-70-no-1-c_gbia7003044a"
    },
@@ -45008,7 +45008,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-dance-of-the-young-maidens-b-sabre-dance_the-philharmonia-orchestra-khachaturi_gbia7003769b/a%29%20DANCE%20OF%20THE%20YOUNG%20MAIDENS%20-%20THE%20PHILHARMONIA%20ORCHESTRA.mp3",
     "length": 252.57,
     "series": "The Philharmonia Orchestra",
-    "title": "a) DANCE OF THE YOUNG MAIDENS; b) SABRE DANCE",
+    "title": "A) DANCE OF THE YOUNG MAIDENS; b) SABRE DANCE",
     "date": "1947",
     "item": "https://archive.org/details/78_a-dance-of-the-young-maidens-b-sabre-dance_the-philharmonia-orchestra-khachaturi_gbia7003769b"
    },
@@ -45080,7 +45080,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-part-1-allegro-maestoso_edwin-fischer-the-philharmonia-orchestra-moz_gbia7004468a/1st%20Movement%20%28Part%201%29%20Allegro%20maestoso%20-%20EDWIN%20FISCHER.mp3",
     "length": 263.95,
     "series": "Edwin Fischer",
-    "title": "1st Movement (Part 1) Allegro maestoso",
+    "title": "1St Movement (Part 1) Allegro maestoso",
     "date": "1946",
     "item": "https://archive.org/details/78_1st-movement-part-1-allegro-maestoso_edwin-fischer-the-philharmonia-orchestra-moz_gbia7004468a"
    },
@@ -45112,7 +45112,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-far-away-londonderry-air-b-the-old-woman_glasgow-orpheus-choir-sigerson-ca_gbia7004591a/%28a%29%20FAR%20AWAY%20%28LONDONDERRY%20AIR%29%3B%20%28b%20-%20GLASGOW%20ORPHEUS%20CHOIR.mp3",
     "length": 247.22,
     "series": "Glasgow Orpheus Choir",
-    "title": "(a) FAR AWAY (LONDONDERRY AIR); (b) THE OLD WOMAN",
+    "title": "(A) FAR AWAY (LONDONDERRY AIR); (b) THE OLD WOMAN",
     "date": "1951",
     "item": "https://archive.org/details/78_a-far-away-londonderry-air-b-the-old-woman_glasgow-orpheus-choir-sigerson-ca_gbia7004591a"
    },
@@ -45992,7 +45992,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1-tyri-kone-2-ke-som-ja-jabka-rala_zita-hudcov-freov-ladislav-chmel-a-mi_gbia0185138b/1.%20%C5%A0TYRI%20KONE%202.%20KE%C4%8E%20SOM%20JA%20JAB%C4%BD%C4%8CKA%20-%20Zita%20Hudcov%C3%A1-Fre%C5%A1ov%C3%A1.mp3",
     "length": 187.87,
     "series": "Zita Hudcová-Frešová",
-    "title": "1. štyri Kone 2. Keď Som Ja Jabľčka Ráňala",
+    "title": "1. šTyri Kone 2. Keď Som Ja Jabľčka Ráňala",
     "date": "1947",
     "item": "https://archive.org/details/78_1-tyri-kone-2-ke-som-ja-jabka-rala_zita-hudcov-freov-ladislav-chmel-a-mi_gbia0185138b"
    },
@@ -46096,7 +46096,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-bulgarian-rhythm-no-113_gerald-moore-bla-bartk_gbia7000906c/%28a%29%20Bulgarian%20Rhythm-No.%20113%20-%20GERALD%20MOORE.mp3",
     "length": 63.56,
     "series": "Gerald Moore",
-    "title": "(a) Bulgarian Rhythm-No. 113",
+    "title": "(A) Bulgarian Rhythm-No. 113",
     "date": "1952",
     "item": "https://archive.org/details/78_a-bulgarian-rhythm-no-113_gerald-moore-bla-bartk_gbia7000906c"
    },
@@ -46192,7 +46192,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-pas-de-quatre-b-cinderella-and-prince-fortune-c-the-blue-bird-and-the-enc_gbia7004354b/%28a%29%20Pas%20de%20%20-%20LEOPOLD%20STOKOWSKI%20AND%20HIS%20SYMPHONY%20ORCHESTRA.mp3",
     "length": 260.47,
     "series": "Leopold Stokowski and His Symphony Orchestra",
-    "title": "(a) Pas de quatre; (b) Cinderella and Prince Fortune; (c) The Blue-Bird and the Enchanted Princess; (d) Red Riding Hood and the Wolf",
+    "title": "(A) Pas de quatre; (b) Cinderella and Prince Fortune; (c) The Blue-Bird and the Enchanted Princess; (d) Red Riding Hood and the Wolf",
     "date": "1952",
     "item": "https://archive.org/details/78_a-pas-de-quatre-b-cinderella-and-prince-fortune-c-the-blue-bird-and-the-enc_gbia7004354b"
    },
@@ -46208,7 +46208,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_4th-movement-part-1-adagio-piu-andante_vienna-philharmonic-orchestra-brahms-wilhe_gbia7004526b/4th%20Movement%20%28Part%201%29%20Adag%20-%20VIENNA%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 288.84,
     "series": "Vienna Philharmonic Orchestra",
-    "title": "4th Movement (Part 1) Adagio-Piu Andante",
+    "title": "4Th Movement (Part 1) Adagio-Piu Andante",
     "date": "1948",
     "item": "https://archive.org/details/78_4th-movement-part-1-adagio-piu-andante_vienna-philharmonic-orchestra-brahms-wilhe_gbia7004526b"
    },
@@ -46248,7 +46248,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-part-3-allegro-con-spirito_solomon-the-philharmonia-orchestra-tchaik_gbia7003739a/1st%20Movement%20%28Part%203%29%20Allegro%20con%20spirito%20-%20SOLOMON.mp3",
     "length": 219.93,
     "series": "Solomon",
-    "title": "1st Movement (Part 3) Allegro con spirito",
+    "title": "1St Movement (Part 3) Allegro con spirito",
     "date": "1959",
     "item": "https://archive.org/details/78_1st-movement-part-3-allegro-con-spirito_solomon-the-philharmonia-orchestra-tchaik_gbia7003739a"
    },
@@ -46992,7 +46992,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-far-away-londonderry-air-b-the-old-woman_glasgow-orpheus-choir-sigerson-ca_gbia7003798a/%28a%29%20FAR%20AWAY%20%28LONDONDERRY%20AIR%29%3B%20%28b%20-%20GLASGOW%20ORPHEUS%20CHOIR.mp3",
     "length": 247.95,
     "series": "Glasgow Orpheus Choir",
-    "title": "(a) FAR AWAY (LONDONDERRY AIR); (b) THE OLD WOMAN",
+    "title": "(A) FAR AWAY (LONDONDERRY AIR); (b) THE OLD WOMAN",
     "date": "1946",
     "item": "https://archive.org/details/78_a-far-away-londonderry-air-b-the-old-woman_glasgow-orpheus-choir-sigerson-ca_gbia7003798a"
    },
@@ -47032,7 +47032,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-if-well-his-suit-has-sped-b-in-sailing-oer-lifes-ocean-wide_elsie-griffin-derek-o_gbia0539763b/a%29%20IF%20WELL%20HIS%20SUIT%20HAS%20SPED%3B%20%28b%29%20IN%20SAIL.mp3",
     "length": 169.17,
     "series": "Elsie Griffin",
-    "title": "(a) IF WELL HIS SUIT HAS SPED; (b) IN SAILING O'ER LIFE'S OCEAN WIDE",
+    "title": "(A) IF WELL HIS SUIT HAS SPED; (b) IN SAILING O'ER LIFE'S OCEAN WIDE",
     "date": "1940",
     "item": "https://archive.org/details/78_a-if-well-his-suit-has-sped-b-in-sailing-oer-lifes-ocean-wide_elsie-griffin-derek-o_gbia0539763b"
    },
@@ -47096,7 +47096,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-mazurka-b-panorama_leopold-stokowski-and-his-symphony-orchestra-tchaikovsky_gbia7004347b/%28a%29%20Mazurka%3B%20%28b%29%20Panorama%20-%20LEOPOLD%20STOKOWSKI%20AND%20HIS%20SYMPHONY%20ORCHESTRA.mp3",
     "length": 221.28,
     "series": "Leopold Stokowski And His Symphony Orchestra",
-    "title": "(a) Mazurka; (b) Panorama",
+    "title": "(A) Mazurka; (b) Panorama",
     "date": "1952",
     "item": "https://archive.org/details/78_a-mazurka-b-panorama_leopold-stokowski-and-his-symphony-orchestra-tchaikovsky_gbia7004347b"
    },
@@ -47288,7 +47288,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-part-2-vivace_vienna-philharmonic-orchestra-beethoven-wilhelm-furtw_gbia7004341a/1st%20Movement%20%28Part%202%29%20Vivace%20-%20VIENNA%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 272.83,
     "series": "Vienna Philharmonic Orchestra",
-    "title": "1st Movement (Part 2) Vivace",
+    "title": "1St Movement (Part 2) Vivace",
     "date": "1954",
     "item": "https://archive.org/details/78_1st-movement-part-2-vivace_vienna-philharmonic-orchestra-beethoven-wilhelm-furtw_gbia7004341a"
    },
@@ -47488,7 +47488,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-puss-in-boots-and-the-white-cat-b-pas-de-quatre-c-the-diamond-fairy_leopo_gbia7004353b/%28a%29%20Puss-in%20-%20LEOPOLD%20STOKOWSKI%20AND%20HIS%20SYMPHONY%20ORCHESTRA.mp3",
     "length": 310.55,
     "series": "Leopold Stokowski And His Symphony Orchestra",
-    "title": "(a) Puss-in-Boots and the White Cat; (b) Pas de quatre; (c) The Diamond Fairy",
+    "title": "(A) Puss-in-Boots and the White Cat; (b) Pas de quatre; (c) The Diamond Fairy",
     "date": "1952",
     "item": "https://archive.org/details/78_a-puss-in-boots-and-the-white-cat-b-pas-de-quatre-c-the-diamond-fairy_leopo_gbia7004353b"
    },
@@ -47736,7 +47736,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_2nd-movement-andante-con-moto_artur-rubinstein-royal-philharmonic-orchestra-beethov_gbia7004461b/2nd%20Movement-Andante%20con%20moto%20-%20ARTUR%20RUBINSTEIN.mp3",
     "length": 288.96,
     "series": "Artur Rubinstein",
-    "title": "2nd Movement-Andante con moto",
+    "title": "2Nd Movement-Andante con moto",
     "date": "1950",
     "item": "https://archive.org/details/78_2nd-movement-andante-con-moto_artur-rubinstein-royal-philharmonic-orchestra-beethov_gbia7004461b"
    },
@@ -47800,7 +47800,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_b-boating-no-125_gerald-moore-bla-bartk_gbia7000906d/%28b%29%20Boating-No.%20125%20-%20GERALD%20MOORE%20-%20B%C3%A9la%20Bart%C3%B3k.mp3",
     "length": 89.07,
     "series": "Gerald Moore",
-    "title": "(b) Boating-No. 125",
+    "title": "(B) Boating-No. 125",
     "date": "1952",
     "item": "https://archive.org/details/78_b-boating-no-125_gerald-moore-bla-bartk_gbia7000906d"
    },
@@ -48336,7 +48336,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-fantasie-impromptu-in-c-sharp-minor-op-66-op-posth-conclusion-b-waltz-i_gbia7015171b/a%29%20FANTASIE-IMPROMPTU%20IN%20C%20SHARP%20MINOR%20OP.%206%20-%20JOSE%20ITURBI.mp3",
     "length": 217.77,
     "series": "Jose Iturbi",
-    "title": "a) FANTASIE-IMPROMPTU IN C SHARP MINOR OP. 66 (OP. POSTH.) - CONCLUSION; b) WALTZ IN D FLAT, OP. 64, NO. 1",
+    "title": "A) FANTASIE-IMPROMPTU IN C SHARP MINOR OP. 66 (OP. POSTH.) - CONCLUSION; b) WALTZ IN D FLAT, OP. 64, NO. 1",
     "date": "1945",
     "item": "https://archive.org/details/78_a-fantasie-impromptu-in-c-sharp-minor-op-66-op-posth-conclusion-b-waltz-i_gbia7015171b"
    },
@@ -48911,7 +48911,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_ouvertre-zu-die-entfhrung-aus-dem-serail_karl-bhm-w-a-mozart-der-schsischen-staatsk_gbia7041753a/Ouvert%C3%BCre%20zu%20%22Die%20Entf%C3%BChrung%20aus%20dem%20Serail.mp3",
     "length": 264.66,
-    "series": "der Sächsischen Staatskapelle",
+    "series": "Der Sächsischen Staatskapelle",
     "title": "Ouvertüre zu \"Die Entführung aus dem Serail\"",
     "date": "1940",
     "item": "https://archive.org/details/78_ouvertre-zu-die-entfhrung-aus-dem-serail_karl-bhm-w-a-mozart-der-schsischen-staatsk_gbia7041753a"
@@ -49096,7 +49096,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-a-mountain-maid-b-russian-weaving-song-c-marianina_large-primary-school-in-n-midl_gbia0552303a/a%29%20A%20MOUNTAIN%20MAID%3B%20-%20LARGE%20PRIMARY%20SCHOOL%20IN%20N.%20MIDLANDS.mp3",
     "length": 239.58,
     "series": "Large Primary School In N. Midlands",
-    "title": "(a) A MOUNTAIN MAID; (b) RUSSIAN WEAVING SONG; (c) MARIANINA",
+    "title": "(A) A MOUNTAIN MAID; (b) RUSSIAN WEAVING SONG; (c) MARIANINA",
     "date": "1948",
     "item": "https://archive.org/details/78_a-a-mountain-maid-b-russian-weaving-song-c-marianina_large-primary-school-in-n-midl_gbia0552303a"
    },
@@ -49440,7 +49440,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78TrioKnibbeler/78BeethovenTrio4Besdur_trim.mp3",
     "length": 402.86,
     "series": "",
-    "title": "78rpm Shellack Recordings",
+    "title": "78Rpm Shellack Recordings",
     "date": "1946",
     "item": "https://archive.org/details/78TrioKnibbeler"
    },
@@ -49552,7 +49552,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_2nd-movement-part-1-romanze-andante_london-philharmonic-orchestra-mozart-sir-th_gbia7002897b/2nd%20Movement%20%28Part%201%29%20Roma%20-%20LONDON%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 215.58,
     "series": "London Philharmonic Orchestra",
-    "title": "2nd Movement (Part 1) Romanze (Andante)",
+    "title": "2Nd Movement (Part 1) Romanze (Andante)",
     "date": "1945",
     "item": "https://archive.org/details/78_2nd-movement-part-1-romanze-andante_london-philharmonic-orchestra-mozart-sir-th_gbia7002897b"
    },
@@ -49807,7 +49807,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_trumpet-tarantella_eleven-year-old-trumpeter-frankie-avalon-dick-reynolds-reynolds_gbia0263626a/TRUMPET%20TARANTELLA%20-%20eleven-year-old%20trumpeter%20Frankie%20Avalon.mp3",
     "length": 140.59,
-    "series": "eleven-year-old trumpeter Frankie Avalon",
+    "series": "Eleven-year-old trumpeter Frankie Avalon",
     "title": "Trumpet Tarantella",
     "date": "1954",
     "item": "https://archive.org/details/78_trumpet-tarantella_eleven-year-old-trumpeter-frankie-avalon-dick-reynolds-reynolds_gbia0263626a"
@@ -50536,7 +50536,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-adagio-sostenuto-excerpt_boston-promenade-orchestra-beethoven-arthur_gbia7013826a/1ST%20MOVEMENT%20ADAGIO%20SOSTENUTO%20-%20BOSTON%20PROMENADE%20ORCHESTRA.mp3",
     "length": 178.82,
     "series": "Boston Promenade Orchestra",
-    "title": "1st Movement Adagio Sostenuto (Excerpt)",
+    "title": "1St Movement Adagio Sostenuto (Excerpt)",
     "date": "1955",
     "item": "https://archive.org/details/78_1st-movement-adagio-sostenuto-excerpt_boston-promenade-orchestra-beethoven-arthur_gbia7013826a"
    },
@@ -50656,7 +50656,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_4th-movement-rondo-allegro_london-philharmonic-orchestra-mozart-sir-thomas-beecha_gbia7002681b/4th%20Movement-Rondo%20%28Allegro%29%20-%20LONDON%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 290.08,
     "series": "London Philharmonic Orchestra",
-    "title": "4th Movement-Rondo (Allegro)",
+    "title": "4Th Movement-Rondo (Allegro)",
     "date": "1945",
     "item": "https://archive.org/details/78_4th-movement-rondo-allegro_london-philharmonic-orchestra-mozart-sir-thomas-beecha_gbia7002681b"
    },
@@ -50808,7 +50808,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-le-coucou-b-musical-box_solomon-daquin-de-severac_gbia7003763b/%28a%29%20LE%20COUCOU%3B%20%28b%29%20MUSICAL%20BOX%20-%20SOLOMON.mp3",
     "length": 185.3,
     "series": "Solomon",
-    "title": "(a) LE COUCOU; (b) MUSICAL BOX",
+    "title": "(A) LE COUCOU; (b) MUSICAL BOX",
     "date": "1946",
     "item": "https://archive.org/details/78_a-le-coucou-b-musical-box_solomon-daquin-de-severac_gbia7003763b"
    },
@@ -51136,7 +51136,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-fantasie-impromptu-in-c-sharp-minor-op-66-op-posth-conclusion-b-waltz-i_gbia7015423b/%28a%29%20FANTASIE-IMPROMPTU%20IN%20C%20SHARP%20MINOR%2C%20OP.%20-%20JOSE%20ITURBI.mp3",
     "length": 218.13,
     "series": "Jose Iturbi",
-    "title": "(a) FANTASIE-IMPROMPTU IN C SHARP MINOR, OP. 66 (OP. POSTH.)-CONCLUSION (b) WALTZ IN D FLAT, OP. 64, NO. 1",
+    "title": "(A) FANTASIE-IMPROMPTU IN C SHARP MINOR, OP. 66 (OP. POSTH.)-CONCLUSION (b) WALTZ IN D FLAT, OP. 64, NO. 1",
     "date": "1945",
     "item": "https://archive.org/details/78_a-fantasie-impromptu-in-c-sharp-minor-op-66-op-posth-conclusion-b-waltz-i_gbia7015423b"
    },
@@ -51168,7 +51168,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-mov-concl-allegro-poco-sostenuto-2nd-mov-part-1-andante-sostenuto_vienna_gbia7004513a/1st%20Mov.%20%28Concl.%29%20Allegro-%20-%20VIENNA%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 268.35,
     "series": "Vienna Philharmonic Orchestra",
-    "title": "1st Mov. (Concl.) Allegro-Poco sostenuto; 2nd Mov (Part 1) Andante sostenuto",
+    "title": "1St Mov. (Concl.) Allegro-Poco sostenuto; 2nd Mov (Part 1) Andante sostenuto",
     "date": "1948",
     "item": "https://archive.org/details/78_1st-mov-concl-allegro-poco-sostenuto-2nd-mov-part-1-andante-sostenuto_vienna_gbia7004513a"
    },
@@ -51200,7 +51200,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-part-1-allegro_edwin-fischer-ronald-smith-denis-matthews-the-philhar_gbia7004523a/1st%20Movement%20%28Part%201%29%20Allegro%20-%20EDWIN%20FISCHER.mp3",
     "length": 211.75,
     "series": "Edwin Fischer",
-    "title": "1st Movement (Part 1) Allegro",
+    "title": "1St Movement (Part 1) Allegro",
     "date": "1941",
     "item": "https://archive.org/details/78_1st-movement-part-1-allegro_edwin-fischer-ronald-smith-denis-matthews-the-philhar_gbia7004523a"
    },
@@ -51456,7 +51456,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-mazurka-no-48-in-a-minor-op-68-no-2-b-waltz-in-e-minor-no-14-op-pos_gbia7003763a/%28a%29%20MAZURKA%20NO.%2048%20IN%20A%20MINOR%2C%20OP.%2068%2C%20NO.%202%3B%20%28b%20-%20SOLOMON.mp3",
     "length": 276.85,
     "series": "Solomon",
-    "title": "(a) MAZURKA NO. 48 IN A MINOR, OP. 68, NO. 2; (b) WALTZ IN E MINOR, NO. 14 (Op. Posth.)",
+    "title": "(A) MAZURKA NO. 48 IN A MINOR, OP. 68, NO. 2; (b) WALTZ IN E MINOR, NO. 14 (Op. Posth.)",
     "date": "1946",
     "item": "https://archive.org/details/78_a-mazurka-no-48-in-a-minor-op-68-no-2-b-waltz-in-e-minor-no-14-op-pos_gbia7003763a"
    },
@@ -51496,7 +51496,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-allegro_london-philharmonic-orchestra-mozart-sir-thomas-beecham-bart_gbia7002897a/1st%20Movement-Allegro%20-%20LONDON%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 241.43,
     "series": "London Philharmonic Orchestra",
-    "title": "1st Movement-Allegro",
+    "title": "1St Movement-Allegro",
     "date": "1945",
     "item": "https://archive.org/details/78_1st-movement-allegro_london-philharmonic-orchestra-mozart-sir-thomas-beecham-bart_gbia7002897a"
    },
@@ -51568,7 +51568,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1foraar-2-aftenstemning_elsa-sigfuss-svend-gyldmarks-stryge-ensemble-sv-gyldma_gbia7014566a/1%29FORAAR%20-%202%29%20AFTENSTEMNING%20-%20Elsa%20Sigfuss.mp3",
     "length": 146.19,
     "series": "Elsa Sigfuss",
-    "title": "1)foraar - 2) Aftenstemning",
+    "title": "1)Foraar - 2) Aftenstemning",
     "date": "1944",
     "item": "https://archive.org/details/78_1foraar-2-aftenstemning_elsa-sigfuss-svend-gyldmarks-stryge-ensemble-sv-gyldma_gbia7014566a"
    },
@@ -51728,7 +51728,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_2nd-mov-concl-adagio-un-poco-mosso-3rd-mov-part-1-rondo-allegro_edwin-fi_gbia7004534b/2nd%20Mov.%20%28Concl.%29%20Adagio%2C%20un%20poco%20mosso%3B%203%20-%20EDWIN%20FISCHER.mp3",
     "length": 256.43,
     "series": "Edwin Fischer",
-    "title": "2nd Mov. (Concl.) Adagio, un poco mosso; 3rd Mov. (Part 1) Rondo (Allegro)",
+    "title": "2Nd Mov. (Concl.) Adagio, un poco mosso; 3rd Mov. (Part 1) Rondo (Allegro)",
     "date": "1951",
     "item": "https://archive.org/details/78_2nd-mov-concl-adagio-un-poco-mosso-3rd-mov-part-1-rondo-allegro_edwin-fi_gbia7004534b"
    },
@@ -51928,7 +51928,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-rule-britannia-b-the-british-grenadiers_the-bbo-symphony-orchestra-arne_gbia7017087a/%28a%29%20RULE%20BRITANNIA%20%3B%20%28b%29%20T%20-%20THE%20B.B.O.%20SYMPHONY%20ORCHESTRA.mp3",
     "length": 148.07,
     "series": "The B.b.o. Symphony Orchestra",
-    "title": "(a) RULE BRITANNIA ; (b) THE BRITISH GRENADIERS",
+    "title": "(A) RULE BRITANNIA ; (b) THE BRITISH GRENADIERS",
     "date": "1953",
     "item": "https://archive.org/details/78_a-rule-britannia-b-the-british-grenadiers_the-bbo-symphony-orchestra-arne_gbia7017087a"
    },
@@ -51936,7 +51936,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-part-1-allegro-con-brio_vienna-philharmonic-orchestra-beethoven-wilh_gbia7002667a/1st%20Movement%20%28Part%201%29%20Alle%20-%20VIENNA%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 258.45,
     "series": "Vienna Philharmonic Orchestra",
-    "title": "1st Movement (Part 1) Allegro con brio",
+    "title": "1St Movement (Part 1) Allegro con brio",
     "date": "1949",
     "item": "https://archive.org/details/78_1st-movement-part-1-allegro-con-brio_vienna-philharmonic-orchestra-beethoven-wilh_gbia7002667a"
    },
@@ -51952,7 +51952,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-polonaise-b-the-silver-fairy_leopold-stokowski-and-his-symphony-orchestra-tc_gbia7004346b/%28a%29%20Polonai%20-%20LEOPOLD%20STOKOWSKI%20AND%20HIS%20SYMPHONY%20ORCHESTRA.mp3",
     "length": 275.01,
     "series": "Leopold Stokowski And His Symphony Orchestra",
-    "title": "(a) Polonaise; (b) The Silver Fairy",
+    "title": "(A) Polonaise; (b) The Silver Fairy",
     "date": "1952",
     "item": "https://archive.org/details/78_a-polonaise-b-the-silver-fairy_leopold-stokowski-and-his-symphony-orchestra-tc_gbia7004346b"
    },
@@ -52016,7 +52016,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_2nd-movement-concl-romanze-andante-3rd-movement-menuetto-allegretto-trio_gbia7002681a/2nd%20Movement%20%28Concl.%29%20Roma%20-%20LONDON%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 230.68,
     "series": "London Philharmonic Orchestra",
-    "title": "2nd Movement (Concl.) Romanze (Andante); 3rd Movement-Menuetto (Allegretto) & Trio",
+    "title": "2Nd Movement (Concl.) Romanze (Andante); 3rd Movement-Menuetto (Allegretto) & Trio",
     "date": "1945",
     "item": "https://archive.org/details/78_2nd-movement-concl-romanze-andante-3rd-movement-menuetto-allegretto-trio_gbia7002681a"
    },
@@ -52320,7 +52320,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1ste-movement-allegro-part-1_chamber-orchestra-of-the-palace-chapel-copenhagen-j_gbia7003707a/1ste%20Movement%3A%20Allegro.%20Part%201%20-%20CHAMBER%20ORCHESTRA%20OF%20THE%20PALACE%20CHAPEL%2C%20COPENHAGEN.mp3",
     "length": 231.39,
     "series": "Chamber Orchestra Of The Palace Chapel, Copenhagen",
-    "title": "1ste Movement: Allegro. Part 1",
+    "title": "1Ste Movement: Allegro. Part 1",
     "date": "1949",
     "item": "https://archive.org/details/78_1ste-movement-allegro-part-1_chamber-orchestra-of-the-palace-chapel-copenhagen-j_gbia7003707a"
    },
@@ -52568,7 +52568,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1ste-movement-allegro-part-2_chamber-orchestra-of-the-palace-chapel-copenhagen-j_gbia7003707b/1ste%20Movement%3A%20Allegro%2C%20Part%202%20-%20CHAMBER%20ORCHESTRA%20OF%20THE%20PALACE%20CHAPEL%2C%20COPENHAGEN.mp3",
     "length": 196.36,
     "series": "Chamber Orchestra Of The Palace Chapel, Copenhagen",
-    "title": "1ste Movement: Allegro, Part 2",
+    "title": "1Ste Movement: Allegro, Part 2",
     "date": "1940",
     "item": "https://archive.org/details/78_1ste-movement-allegro-part-2_chamber-orchestra-of-the-palace-chapel-copenhagen-j_gbia7003707b"
    },
@@ -52768,7 +52768,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-mov-part-1-un-poco-sostenuto-allegro_vienna-philharmonic-orchestra-brahms-wi_gbia7004517a/1st%20Mov.%20%28Part%201%29%20Un%20poco%20%20-%20VIENNA%20PHILHARMONIC%20ORCHESTRA.mp3",
     "length": 270.71,
     "series": "Vienna Philharmonic Orchestra",
-    "title": "1st Mov. (Part 1) Un poco sostenuto-Allegro",
+    "title": "1St Mov. (Part 1) Un poco sostenuto-Allegro",
     "date": "1948",
     "item": "https://archive.org/details/78_1st-mov-part-1-un-poco-sostenuto-allegro_vienna-philharmonic-orchestra-brahms-wi_gbia7004517a"
    },
@@ -52992,7 +52992,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_the-swan-lake-op-20_royal-opera-house-orchestra-covent-garden-joseph-shadwick_gbia7013303a/%22THE%20SWAN%20LAKE%2C%22%20OP.%2020%20-%20ROYAL%20OPERA%20HOUSE%20ORCHESTRA%2C%20COVENT%20GARDEN.mp3",
     "length": 279.55,
     "series": "Royal Opera House Orchestra, Covent Garden",
-    "title": "\"the Swan Lake,\" Op. 20",
+    "title": "\"The Swan Lake,\" Op. 20",
     "date": "1949",
     "item": "https://archive.org/details/78_the-swan-lake-op-20_royal-opera-house-orchestra-covent-garden-joseph-shadwick_gbia7013303a"
    },
@@ -53320,7 +53320,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-part-1-adagio-sostenuto_solomon-beethoven_gbia7003797a/1st%20Movement%20%28Part%201%29%20Adagio%20sostenuto%20-%20SOLOMON.mp3",
     "length": 273.07,
     "series": "Solomon",
-    "title": "1st Movement (Part 1) Adagio sostenuto",
+    "title": "1St Movement (Part 1) Adagio sostenuto",
     "date": "1945",
     "item": "https://archive.org/details/78_1st-movement-part-1-adagio-sostenuto_solomon-beethoven_gbia7003797a"
    },
@@ -53360,7 +53360,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-cyfrir-geifr-counting-the-goats-b-cydgan-y-morwyr-the-sailors-chorus_t_gbia0076787a/%28a%29%20Cyfri%27r%20-%20The%20Southern%20Counties%20Welsh%20Male%20Voice%20Choir.mp3",
     "length": 201.54,
     "series": "The Southern Counties Welsh Male Voice Choir",
-    "title": "(a) Cyfri'r Geifr (Counting the Goats); (b) Cydgan Y Morwyr (The Sailor's Chorus)",
+    "title": "(A) Cyfri'r Geifr (Counting the Goats); (b) Cydgan Y Morwyr (The Sailor's Chorus)",
     "date": "1952",
     "item": "https://archive.org/details/78_a-cyfrir-geifr-counting-the-goats-b-cydgan-y-morwyr-the-sailors-chorus_t_gbia0076787a"
    },
@@ -53520,7 +53520,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-gopak-b-the-flight-of-the-bumble-bee_the-philharmonia-orchestra-moussorgsky-r_gbia7013309a/a%29%20GOPAK%20-%20b%29%20THE%20FLIGHT%20OF%20T%20-%20THE%20PHILHARMONIA%20ORCHESTRA.mp3",
     "length": 191.82,
     "series": "The Philharmonia Orchestra",
-    "title": "a) GOPAK - b) THE FLIGHT OF THE BUMBLE BEE",
+    "title": "A) GOPAK - b) THE FLIGHT OF THE BUMBLE BEE",
     "date": "1949",
     "item": "https://archive.org/details/78_a-gopak-b-the-flight-of-the-bumble-bee_the-philharmonia-orchestra-moussorgsky-r_gbia7013309a"
    },
@@ -53560,7 +53560,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-the-birds-b-the-dream-man-c-someone_large-primary-school-in-n-midlands-h-belloc-p_gbia0552303b/a%29%20THE%20BIRDS%3B%20%28b%29%20T%20-%20LARGE%20PRIMARY%20SCHOOL%20IN%20N.%20MIDLANDS.mp3",
     "length": 260.91,
     "series": "Large Primary School In N. Midlands",
-    "title": "(a) THE BIRDS; (b) THE DREAM MAN; (c) SOMEONE",
+    "title": "(A) THE BIRDS; (b) THE DREAM MAN; (c) SOMEONE",
     "date": "1948",
     "item": "https://archive.org/details/78_a-the-birds-b-the-dream-man-c-someone_large-primary-school-in-n-midlands-h-belloc-p_gbia0552303b"
    },
@@ -53576,7 +53576,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-mov-conclusion-allegro-con-spirito_solomon-the-philharmonia-orchestra-tchaik_gbia7003739b/1st%20Mov.%20%28Conclusion%29%20Allegro%20con%20spirito%20-%20SOLOMON.mp3",
     "length": 256.62,
     "series": "Solomon",
-    "title": "1st Mov. (Conclusion) Allegro con spirito",
+    "title": "1St Mov. (Conclusion) Allegro con spirito",
     "date": "1959",
     "item": "https://archive.org/details/78_1st-mov-conclusion-allegro-con-spirito_solomon-the-philharmonia-orchestra-tchaik_gbia7003739b"
    },
@@ -54032,7 +54032,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_1st-movement-part-4-allegro_edwin-fischer-the-philharmonia-orchestra-beethoven-wi_gbia7004534a/1st%20Movement%20%28Part%204%29%20Allegro%20-%20EDWIN%20FISCHER.mp3",
     "length": 267.64,
     "series": "Edwin Fischer",
-    "title": "1st Movement (Part 4) Allegro",
+    "title": "1St Movement (Part 4) Allegro",
     "date": "1951",
     "item": "https://archive.org/details/78_1st-movement-part-4-allegro_edwin-fischer-the-philharmonia-orchestra-beethoven-wi_gbia7004534a"
    },
@@ -54453,7 +54453,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_det-r-din-da-ida_inga-sweyert-ke-jelvings-orkester-molin-westerberg_gbia7037952a/DET%20%C3%84R%20DIN%20DA%27%20IDA%27%20-%20INGA%20SWEYERT%20-%20%C3%85ke%20Jelvings%20orkester.mp3",
     "length": 202.69,
-    "series": "Åke Jelvings orkester",
+    "series": "ÅKe Jelvings orkester",
     "title": "Det är Din Da' Ida'",
     "date": "1954",
     "item": "https://archive.org/details/78_det-r-din-da-ida_inga-sweyert-ke-jelvings-orkester-molin-westerberg_gbia7037952a"
@@ -54776,7 +54776,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_czyja-to-dziewczyna_piew-stas-jaworski-orkiestra-dana-durlak-przybylski-w-h-saje_gbia0241631a/CZYJA%20TO%20DZIEWCZYNA%20-%20%C5%9Apiew%20Stas%20Jaworski.mp3",
     "length": 180.54,
-    "series": "Śpiew Stas Jaworski",
+    "series": "ŚPiew Stas Jaworski",
     "title": "Czyja To Dziewczyna",
     "date": "1951",
     "item": "https://archive.org/details/78_czyja-to-dziewczyna_piew-stas-jaworski-orkiestra-dana-durlak-przybylski-w-h-saje_gbia0241631a"
@@ -55392,7 +55392,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_du-hjrtanskr-p-rind-skr_ke-grnberg-arthur-sterwalls-orkester-g-wickstrm-e_gbia7031912a/Du%20hj%C3%A4rtansk%C3%A4r%20p%C3%A5%20Rind%C3%B6%20sk%C3%A4r%20-%20%C3%85ke%20Gr%C3%B6nberg.mp3",
     "length": 205.1,
-    "series": "Åke Grönberg",
+    "series": "ÅKe Grönberg",
     "title": "Du hjärtanskär på Rindö skär",
     "date": "1944",
     "item": "https://archive.org/details/78_du-hjrtanskr-p-rind-skr_ke-grnberg-arthur-sterwalls-orkester-g-wickstrm-e_gbia7031912a"
@@ -56618,7 +56618,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_tennessee-waltz_the-saddle-kings-fiddlin-tex-atchison-hank-caldwell-alabama-jim_gbia0192411a/%22TENNESSEE%20WALTZ%22%20-%20THE%20SADDLE%20KINGS%20-%20Fiddlin%27%20Tex%20Atchison.mp3",
     "length": 202,
     "series": "The Saddle Kings",
-    "title": "\"tennessee Waltz\"",
+    "title": "\"Tennessee Waltz\"",
     "date": "1952",
     "item": "https://archive.org/details/78_tennessee-waltz_the-saddle-kings-fiddlin-tex-atchison-hank-caldwell-alabama-jim_gbia0192411a"
    },
@@ -57006,7 +57006,7 @@ window.STATIONS = [
    {
     "src": "https://archive.org/download/78_konvaljens-avsked_ivind-lunde-olegs-specialorkester-o-lindvall_gbia7030797a/Konvaljens%20avsked%20-%20%C3%98ivind%20Lunde%20-%20Olegs%20Specialorkester.mp3",
     "length": 163.11,
-    "series": "Øivind Lunde",
+    "series": "ØIvind Lunde",
     "title": "Konvaljens avsked",
     "date": "1943",
     "item": "https://archive.org/details/78_konvaljens-avsked_ivind-lunde-olegs-specialorkester-o-lindvall_gbia7030797a"
@@ -57387,7 +57387,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_mexican-waltz_michael-herman-and-his-folk-orchestra_gbia0315645a/%22MEXICAN%22%20WALTZ%20-%20MICHAEL%20HERMAN%20AND%20HIS%20FOLK%20ORCHESTRA.mp3",
     "length": 192.5,
     "series": "Michael Herman and His Folk Orchestra",
-    "title": "\"mexican\" Waltz",
+    "title": "\"Mexican\" Waltz",
     "date": "1946",
     "item": "https://archive.org/details/78_mexican-waltz_michael-herman-and-his-folk-orchestra_gbia0315645a"
    },
@@ -57888,7 +57888,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_c-peggy-oneill-b-till-we-meet-again-c-wyoming-lullaby_jimmy-shand-and-his-band-jimm_gbia3035180b/c%29%20PEGGY%20O%27NEILL%3B%20%28b%29%20TILL%20WE%20%20-%20JIMMY%20SHAND%20AND%20HIS%20BAND.mp3",
     "length": 171.78,
     "series": "Jimmy Shand And His Band",
-    "title": "(c) PEGGY O'NEILL; (b) TILL WE MEET AGAIN; (c) WYOMING LULLABY",
+    "title": "(C) PEGGY O'NEILL; (b) TILL WE MEET AGAIN; (c) WYOMING LULLABY",
     "date": "1955",
     "item": "https://archive.org/details/78_c-peggy-oneill-b-till-we-meet-again-c-wyoming-lullaby_jimmy-shand-and-his-band-jimm_gbia3035180b"
    },
@@ -60456,7 +60456,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_estudiantina-waltz-op-191-concl_boston-promenade-orchestra-waldteufel-arthur_gbia7001864b/%22ESTUDIANTINA%22%20WALTZ%2C%20OP.%20191%20-%20BOSTON%20PROMENADE%20ORCHESTRA.mp3",
     "length": 181.49,
     "series": "Boston Promenade Orchestra",
-    "title": "\"estudiantina\" Waltz, Op. 191 - Concl.",
+    "title": "\"Estudiantina\" Waltz, Op. 191 - Concl.",
     "date": "1953",
     "item": "https://archive.org/details/78_estudiantina-waltz-op-191-concl_boston-promenade-orchestra-waldteufel-arthur_gbia7001864b"
    },
@@ -62190,7 +62190,7 @@ window.STATIONS = [
     "src": "https://archive.org/download/78_a-mazurka-no-48-in-a-minor-op-68-no-2-b-waltz-in-e-minor-no-14-op-pos_gbia7012337a/%28a%29%20MAZURKA%20NO.%2048%20IN%20A%20MINOR%2C%20OP.%2068%2C%20NO.%202%3B%20%28b%20-%20SOLOMON.mp3",
     "length": 275.64,
     "series": "Solomon",
-    "title": "(a) MAZURKA NO. 48 IN A MINOR, OP. 68, NO. 2; (b) WALTZ IN E MINOR, NO. 14 (Op. Posth.)",
+    "title": "(A) MAZURKA NO. 48 IN A MINOR, OP. 68, NO. 2; (b) WALTZ IN E MINOR, NO. 14 (Op. Posth.)",
     "date": "1946",
     "item": "https://archive.org/details/78_a-mazurka-no-48-in-a-minor-op-68-no-2-b-waltz-in-e-minor-no-14-op-pos_gbia7012337a"
    },
@@ -62715,1433 +62715,32 @@ window.STATIONS = [
   },
   "tracks": [
    {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/The%20Little%20Drummer%20Boy.mp3",
-    "length": 168.19,
-    "series": "Liberace",
-    "title": "The Little Drummer Boy",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/78_five-christmas-songs_tempos-carolaires_gbia0119025b/FIVE%20CHRISTMAS%20SONGS%20-%20Tempo%27s%20Carolaires.mp3",
-    "length": 149,
-    "series": "Tempo's Carolaires",
-    "title": "Five Christmas Songs",
-    "date": "1949",
-    "item": "https://archive.org/details/78_five-christmas-songs_tempos-carolaires_gbia0119025b"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0006829a/Jingle%20Bells%20-%20Joe%20Gumin%20and%20his%20Orchestra.mp3",
-    "length": 171.69,
-    "series": "Joe Gumin and his Orchestra",
-    "title": "Jingle Bells",
-    "date": "1948",
-    "item": "https://archive.org/details/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0006829a"
-   },
-   {
-    "src": "https://archive.org/download/1962-we-wish-you-a-merry-christmas-ray-conniff/03%20-%20Ring%20Christmas%20Bells.mp3",
-    "length": 153,
-    "series": "Ray Conniff",
-    "title": "Ring Christmas Bells",
-    "date": "1962",
-    "item": "https://archive.org/details/1962-we-wish-you-a-merry-christmas-ray-conniff"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnchorHocking.mp3",
-    "length": 44.85,
-    "series": "A word from our sponsor",
-    "title": "Anchor Hocking",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_good-king-wenceslas_harmonia-symphonic-orchestra_gbia0394712b/GOOD%20KING%20WENCESLAS%20-%20Harmonia%20Symphonic%20Orchestra.mp3",
-    "length": 144.53,
-    "series": "Harmonia Symphonic Orchestra",
-    "title": "Good King Wenceslas",
-    "date": "1948",
-    "item": "https://archive.org/details/78_good-king-wenceslas_harmonia-symphonic-orchestra_gbia0394712b"
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/B5%20-%20Silent%20night%2C%20holy%20night.mp3",
-    "length": 227.5,
-    "series": "Various",
-    "title": "Silent night, holy night",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-in-america_hal-hopper-and-the-voices-of-the-valley-raleigh-hopper_gbia0474081b/CHRISTMAS%20IN%20AMERICA%20-%20HAL%20HOPPER%20AND%20THE%20VOICES%20OF%20THE%20VALLEY.mp3",
-    "length": 148.75,
-    "series": "Hal Hopper And The Voices Of The Valley",
-    "title": "Christmas In America",
-    "date": "1952",
-    "item": "https://archive.org/details/78_christmas-in-america_hal-hopper-and-the-voices-of-the-valley-raleigh-hopper_gbia0474081b"
-   },
-   {
-    "src": "https://archive.org/download/78_frosty-the-snow-man_pat-omalley-rollins-nelson-the-sandpipers-mitchell-miller-and_gbia0001241b/Frosty%20The%20Snow%20Man%20-%20Pat%20O%27Malley%20-%20Rollins.mp3",
-    "length": 177,
-    "series": "Pat O'Malley",
-    "title": "Frosty The Snow Man",
-    "date": "1950",
-    "item": "https://archive.org/details/78_frosty-the-snow-man_pat-omalley-rollins-nelson-the-sandpipers-mitchell-miller-and_gbia0001241b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
-    "length": 49.1,
-    "series": "A word from our sponsor",
-    "title": "Goodyear Lifeguard Tires",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/the-organ-orchestra-that-happy-christmas-feeling-rca-camden-cas-542-stereo-orthophonic-side-1-f-eq/The%20Organ%20Orchestra%20-%20That%20Happy%20Christmas%20Feeling%20-%20RCA%20Camden%20CAS%20542%20stereo%20orthophonic%20side%201%20F%20EQ.mp3",
-    "length": 916,
-    "series": "The Organ Orchestra",
-    "title": "That Happy Christmas Feeling (Side 1)",
-    "date": "1959",
-    "item": "https://archive.org/details/the-organ-orchestra-that-happy-christmas-feeling-rca-camden-cas-542-stereo-orthophonic-side-1-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/78_frosty_stan-getz-orchestra-stan-getz-jimmy-rainey-al-haig-chas-perry-allan-eagar-c_gbia0064498b/Frosty%20-%20Stan%20Getz%20Orchestra%20-%20Stan%20Getz.mp3",
-    "length": 191,
-    "series": "Stan Getz Orchestra",
-    "title": "Frosty",
-    "date": "1948",
-    "item": "https://archive.org/details/78_frosty_stan-getz-orchestra-stan-getz-jimmy-rainey-al-haig-chas-perry-allan-eagar-c_gbia0064498b"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-song_anne-lloyd-the-sandpipers-mitch-miller_gbia0335943b/CHRISTMAS%20SONG%20-%20ANNE%20LLOYD%20-%20THE%20SANDPIPERS.mp3",
-    "length": 96.74,
-    "series": "Anne Lloyd",
-    "title": "Christmas Song",
-    "item": "https://archive.org/details/78_christmas-song_anne-lloyd-the-sandpipers-mitch-miller_gbia0335943b"
-   },
-   {
-    "src": "https://archive.org/download/78_o-come-all-ye-faithful-also-deck-the-halls-and-god-rest-ye-merry-gentlemen_gerry-_gbia0007686/01%20-%20O%20Come%20All%20Ye%20Faithful%20-%20Gerry%20%26%20Barbara%20Touchette.mp3",
-    "length": 183,
-    "series": "Gerry & Barbara Touchette",
-    "title": "O Come All Ye Faithful also Deck the Halls and God Rest Ye Merry Gentlemen",
-    "date": "1951",
-    "item": "https://archive.org/details/78_o-come-all-ye-faithful-also-deck-the-halls-and-god-rest-ye-merry-gentlemen_gerry-_gbia0007686"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/MAYFIELDCIGARETTES.mp3",
-    "length": 43.02,
-    "series": "A word from our sponsor",
-    "title": "Mayfield Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-ang_gbia0001174b/It%20Came%20Upon%20A%20Midnight%20Clear%20Away%20In%20A%20Manger%3B%20The%20First%20Noel%20Hark%21%20The%20Herald%20Angels%20Sing%20-%20The%20Caroleers.mp3",
-    "length": 198,
-    "series": "The Caroleers",
-    "title": "It Came Upon A Midnight Clear Away In A Manger; The First Noel Hark! The Herald Angels Sing",
-    "date": "1950",
-    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-ang_gbia0001174b"
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/O%20Tannenbaum%20-%20We%20Wish%20You%20A%20Merry%20Christmas.mp3",
-    "length": 111.36,
-    "series": "Liberace",
-    "title": "O Tannenbaum - We Wish You A Merry Christmas",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/11%20-%20Messiah-%20Hallelujah%20Chorus%20%28Handel%29%20-%20Sir%20homas%20Beecham-Royal%20Philharmonic%20Orch.mp3",
-    "length": 218.46,
-    "series": "Sir homas Beecham/Royal Philharmonic Orch",
-    "title": "Messiah: Hallelujah Chorus (Handel)",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_the-christmas-song-merry-christmas-to-you_eddy-howard-and-his-orchestra-torme-wel_gbia0069097b/The%20Christmas%20Song%20%28Merry%20%20-%20Eddy%20Howard%20and%20His%20Orchestra.mp3",
-    "length": 157,
-    "series": "Eddy Howard and His Orchestra",
-    "title": "The Christmas Song (Merry Christmas To You)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_the-christmas-song-merry-christmas-to-you_eddy-howard-and-his-orchestra-torme-wel_gbia0069097b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDoublemintGum.mp3",
-    "length": 17.98,
-    "series": "A word from our sponsor",
-    "title": "Doublemint Gum",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78-away-in-a-manger-the-trapp-family-choir-dr-franz-wasner-martin-luther-franz-w/_78_away-in-a-manger_the-trapp-family-choir-dr-franz-wasner-martin-luther-franz-wasner_gbia0018969a_01_3.5_ET_flat_02%20%3D%20Restored.mp3",
-    "length": 174.22,
-    "series": "The Trapp Family Choir",
-    "title": "The Von Trapp Family Choir - Away In A Manger (Restored)",
-    "date": "1940",
-    "item": "https://archive.org/details/78-away-in-a-manger-the-trapp-family-choir-dr-franz-wasner-martin-luther-franz-w"
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/05%20Christmas%20Time%20Is%20Here%20%28Instrumental%29.mp3",
-    "length": 361,
-    "series": "Vince Guaraldi",
-    "title": "Christmas Time Is Here (Instrumental)",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/78_ill-be-home-for-christmas_moose-jackson-moose-jackson-and-quartet-kent-gammon-ram_gbia0062688b/I%27ll%20Be%20Home%20for%20Christmas%20-%20Moose%20Jackson.mp3",
-    "length": 155,
-    "series": "Moose Jackson",
-    "title": "I'll Be Home for Christmas",
-    "date": "1951",
-    "item": "https://archive.org/details/78_ill-be-home-for-christmas_moose-jackson-moose-jackson-and-quartet-kent-gammon-ram_gbia0062688b"
-   },
-   {
-    "src": "https://archive.org/download/JV-28032-1948-QmZ7k4PdtgGtdALExHjiobc9K7wDjjAZ5Z3hcNpDveA7Fp.mp3/CL498642.mp3",
-    "length": 154.76,
-    "series": "Joe Turner & Pete Johnson",
-    "title": "Christmas Date Boogie",
-    "date": "1948",
-    "item": "https://archive.org/details/JV-28032-1948-QmZ7k4PdtgGtdALExHjiobc9K7wDjjAZ5Z3hcNpDveA7Fp.mp3"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceARoni.mp3",
-    "length": 38.06,
-    "series": "A word from our sponsor",
-    "title": "Rice-A-Roni",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/Santa%20Claus%20Is%20Coming%20To%20Town%20-%20Here%20Comes%20Santa%20Claus.mp3",
-    "length": 119.21,
-    "series": "Liberace",
-    "title": "Santa Claus Is Coming To Town - Here Comes Santa Claus",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/78_santas-on-his-way_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jacobs_gbia0378646a/SANTA%27S%20ON%20HIS%20WAY%20-%20Bill%20Tabbert%20and%20the%20%22400%22%20Quartet.mp3",
-    "length": 122.71,
-    "series": "Bill Tabbert and the \"400\" Quartet",
-    "title": "Santa's on His Way",
-    "date": "1951",
-    "item": "https://archive.org/details/78_santas-on-his-way_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jacobs_gbia0378646a"
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_the-mulcays-and-their-electric-harmonicas-johnny-mar_gbia0430143b/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20THE%20MULCAYS%20and%20their%20Electric%20Harmonicas.mp3",
-    "length": 107.42,
-    "series": "THE MULCAYS and their Electric Harmonicas",
-    "title": "Rudolph the Red Nosed Reindeer",
-    "date": "1954",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_the-mulcays-and-their-electric-harmonicas-johnny-mar_gbia0430143b"
-   },
-   {
-    "src": "https://archive.org/download/the-little-drummer-boy-the-voices-of-christmas-side-1/The%20Little%20Drummer%20Boy%20The%20voices%20of%20Christmas%20%28Side%201%29.mp3",
-    "length": 897.07,
-    "series": "The Voices of Christmas",
-    "title": "The Little Drummer Boy (Side 1)",
-    "date": "1966",
-    "item": "https://archive.org/details/the-little-drummer-boy-the-voices-of-christmas-side-1"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsodent.mp3",
-    "length": 38.53,
-    "series": "A word from our sponsor",
-    "title": "Pepsodent",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/03_Silent_Night.mp3",
-    "length": 199,
-    "series": "Monterey Brass",
-    "title": "Silent Night",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Jolly%20Old%20St.%20Nicholas.mp3",
-    "length": 134.28,
-    "series": "Chet Atkins",
-    "title": "Jolly Old St. Nicholas",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/hannabarberaxmas/05%20Deck%20the%20Halls.mp3",
-    "length": 102.82,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "Deck the Halls",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Silver%20Bells.mp3",
-    "length": 130.13,
-    "series": "Chet Atkins",
-    "title": "Silver Bells",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
-    "length": 36.39,
-    "series": "A word from our sponsor",
-    "title": "Lux Toilet Soap",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-greeting_gbia0371733a/CHRISTMAS%20GREETING.mp3",
-    "length": 218.93,
-    "series": "",
-    "title": "Christmas Greeting",
-    "date": "1953",
-    "item": "https://archive.org/details/78_christmas-greeting_gbia0371733a"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/03.SweetLittleJesusBoy.mp3",
-    "length": 238.34,
-    "series": "Solo: Luther Saxon",
-    "title": "Sweet Little Jesus Boy",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/the-new-christy-minstrels-merry-christmas-side-1-columbia-cs-8896-stereo-f-1/The%20New%20Christy%20Minstrels%20-%20Merry%20Christmas%20-%20side%201%20Columbia%20CS%208896%20stereo%20F1.mp3",
-    "length": 880,
-    "series": "The New Christy Minstrels",
-    "title": "Merry Christmas (Side 1)",
-    "date": "1963",
-    "item": "https://archive.org/details/the-new-christy-minstrels-merry-christmas-side-1-columbia-cs-8896-stereo-f-1"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_johnny-scat-davis-and-his-orchestra-irving-berlin_gbia0037482a/White%20Christmas%20-%20Johnny%20%22Scat%22%20Davis%20and%20his%20Orchestra.mp3",
-    "length": 189,
-    "series": "Johnny \"Scat\" Davis and his Orchestra",
-    "title": "White Christmas",
-    "date": "1942",
-    "item": "https://archive.org/details/78_white-christmas_johnny-scat-davis-and-his-orchestra-irving-berlin_gbia0037482a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzerPlopPlopFizzFizz.mp3",
-    "length": 29.98,
-    "series": "A word from our sponsor",
-    "title": "Alka Seltzer Plop Plop Fizz Fizz",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/08%20The%20Holly%20And%20The%20Ivy.mp3",
-    "length": 100.47,
-    "series": "Norman Luboff Choir",
-    "title": "The Holly And The Ivy",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_xmas-time-is-here_peggy-taylor-e-ballantine-orch-chorus-grace-biede_gbia0285854a/XMAS%20TIME%20IS%20HERE%20-%20PEGGY%20TAYLOR%20-%20E.%20Ballantine%20Orch.%20%26%20Chorus.mp3",
-    "length": 181.3,
-    "series": "Peggy Taylor",
-    "title": "Xmas Time is Here",
-    "date": "1953",
-    "item": "https://archive.org/details/78_xmas-time-is-here_peggy-taylor-e-ballantine-orch-chorus-grace-biede_gbia0285854a"
-   },
-   {
-    "src": "https://archive.org/download/ChristmasSingWithBingBroadcasts/1955%20Christmas%20Sing%20With%20Bing.mp3",
-    "length": 2711,
-    "series": "Bing Crosby",
-    "title": "Christmas Sing With Bing (broadcast 1)",
-    "date": "1955-62",
-    "item": "https://archive.org/details/ChristmasSingWithBingBroadcasts"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/01_Jumpin__Jimmy_Christmas.mp3",
-    "length": 120,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Jumpin' Jimmy Christmas",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzer.mp3",
-    "length": 117.36,
-    "series": "A word from our sponsor",
-    "title": "Alka Seltzer",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/22%20Silent%20Night%2C%20Holy%20Night.mp3",
-    "length": 124.47,
-    "series": "Norman Luboff Choir",
-    "title": "Silent Night, Holy Night",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/Happy%20Birthday%2C%20Dear%20Christ%20Child.mp3",
-    "length": 229.9,
-    "series": "Kate Smith",
-    "title": "Happy Birthday, Dear Christ Child",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/A6.%20Rudolph%20the%20Red%20Nosed%20Reindeer-Santa%20Claus%20Is%20Coming%20to%20Town.mp3",
-    "length": 131.14,
-    "series": "Jerry Fielding",
-    "title": "Rudolph the Red Nosed Reindeer-Santa Claus Is Coming to Town",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_michael-stewart-john-marks-the-sandpipers-mitchell-m_gbia0001241a/Rudolph%20The%20Red-Nosed%20Reindeer%20-%20Michael%20Stewart.mp3",
-    "length": 199,
-    "series": "Michael Stewart",
-    "title": "Rudolph The Red-Nosed Reindeer",
-    "date": "1950",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_michael-stewart-john-marks-the-sandpipers-mitchell-m_gbia0001241a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CHIQUITABANANNA.mp3",
-    "length": 34.75,
-    "series": "A word from our sponsor",
-    "title": "Chiquita Banana",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_im-gonna-hand-up-mommys-stocking_bobby-sabatino-and-the-charles-kenny-orchestra-n_gbia0005291a/I%27m%20Gonna%20-%20Bobby%20Sabatino%20and%20The%20Charles%20Kenny%20Orchestra.mp3",
-    "length": 175,
-    "series": "Bobby Sabatino and The Charles Kenny Orchestra",
-    "title": "I'm Gonna Hang Up Mommy's Stocking",
-    "date": "1953",
-    "item": "https://archive.org/details/78_im-gonna-hand-up-mommys-stocking_bobby-sabatino-and-the-charles-kenny-orchestra-n_gbia0005291a"
-   },
-   {
-    "src": "https://archive.org/download/78_i-just-wrote-to-santa_martin-walker-sammy-spear-orch-joe-cammarota_gbia0426654a/I%20JUST%20WROTE%20TO%20SANTA%20-%20MARTIN%20WALKER%20-%20Sammy%20Spear%20Orch..mp3",
-    "length": 175.25,
-    "series": "Martin Walker",
-    "title": "I Just Wrote to Santa",
-    "date": "1953",
-    "item": "https://archive.org/details/78_i-just-wrote-to-santa_martin-walker-sammy-spear-orch-joe-cammarota_gbia0426654a"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Christmas%20dreaming.mp3",
-    "length": 179,
-    "series": "Frank Sinatra",
-    "title": "Christmas dreaming",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town_phil-reed-gillespie-coots_gbia0449670b/SANTA%20CLAUS%20IS%20COMING%20TO%20TOWN%20-%20PHIL%20REED.mp3",
-    "length": 183.34,
-    "series": "Phil Reed",
-    "title": "Santa Claus is Coming to Town",
-    "date": "1947",
-    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town_phil-reed-gillespie-coots_gbia0449670b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
-    "length": 60.33,
-    "series": "A word from our sponsor",
-    "title": "Palmolive Soap",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_jingling-the-bells_frank-signorelli-and-his-quintet-joe-davis-frank-cheech-signor_gbia0165088b/JINGLING%20THE%20BELLS%20-%20Frank%20Signorelli%20and%20His%20Quintet.mp3",
-    "length": 180.48,
-    "series": "Frank Signorelli and His Quintet",
-    "title": "Jingling The Bells",
-    "date": "1946",
-    "item": "https://archive.org/details/78_jingling-the-bells_frank-signorelli-and-his-quintet-joe-davis-frank-cheech-signor_gbia0165088b"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-carols_gbia0034356b/Christmas%20Carols.mp3",
-    "length": 210.6,
+    "src": "https://archive.org/download/78_santa-claus-workshop_gbia0476925a/SANTA%20CLAUS%27%20WORKSHOP.mp3",
+    "length": 174.65,
     "series": "Unknown artist",
-    "title": "Christmas Carols",
-    "date": "1960",
-    "item": "https://archive.org/details/78_christmas-carols_gbia0034356b"
+    "title": "Santa Claus' Workshop",
+    "item": "https://archive.org/details/78_santa-claus-workshop_gbia0476925a"
    },
    {
-    "src": "https://archive.org/download/78_jingle-bells-polka_lil-wally-and-the-lucky-harmony-boys-orchestra-w-jagiello_gbia0530220b/JINGLE%20BELLS%20POLKA%20-%20LI%27L%20WALLY%20And%20The%20Lucky%20Harmony%20Boys%20Orchestra.mp3",
-    "length": 140,
-    "series": "LI'L WALLY And The Lucky Harmony Boys Orchestra",
-    "title": "Jingle Bells Polka",
-    "date": "1957",
-    "item": "https://archive.org/details/78_jingle-bells-polka_lil-wally-and-the-lucky-harmony-boys-orchestra-w-jagiello_gbia0530220b"
+    "src": "https://archive.org/download/78_there-aint-no-santa-clause_ben-samberg-benny-bell_gbia0000278b/There%20Ain%27t%20No%20Santa%20Clause%20-%20Ben%20Samberg.mp3",
+    "length": 179,
+    "series": "Ben Samberg",
+    "title": "There Ain't No Santa Clause",
+    "item": "https://archive.org/details/78_there-aint-no-santa-clause_ben-samberg-benny-bell_gbia0000278b"
    },
    {
-    "src": "https://archive.org/download/WhiteChristmas1941/14%20White%20Christmas%20%2825_12_41%29.mp3",
-    "length": 164.18,
-    "series": "Bing Crosby",
-    "title": "White Christmas (25/12/41)",
-    "date": "1941",
-    "item": "https://archive.org/details/WhiteChristmas1941"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/NESCAFE.MP3",
-    "length": 32.95,
-    "series": "A word from our sponsor",
-    "title": "Nescafé",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/12%20Mele%20Kalikimaka.mp3",
-    "length": 175,
-    "series": "Vic Schoen",
-    "title": "Mele Kalikimaka",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/78_joy-to-the-world-it-came-upon-a-midnight-clear-hark-the-herald-angels-sing_the-va_gbia0480632b/JOY%20TO%20THE%20WORLD%3B%20IT%20CAME%20UPON%20A%20M%20-%20The%20VARISTY%20CAROLEERS.mp3",
-    "length": 201,
-    "series": "The VARISTY CAROLEERS",
-    "title": "Joy to the World; It Came Upon a Midnight Clear; Hark the Herald Angels Sing",
-    "date": "1948",
-    "item": "https://archive.org/details/78_joy-to-the-world-it-came-upon-a-midnight-clear-hark-the-herald-angels-sing_the-va_gbia0480632b"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_jack-russell-and-the-honey-dreamers-irving-berlin_gbia0059405b/White%20Christmas%20-%20Jack%20Russell%20and%20The%20Honey%20Dreamers.mp3",
-    "length": 185.37,
-    "series": "Jack Russell and The Honey Dreamers",
-    "title": "White Christmas",
-    "date": "1952",
-    "item": "https://archive.org/details/78_white-christmas_jack-russell-and-the-honey-dreamers-irving-berlin_gbia0059405b"
-   },
-   {
-    "src": "https://archive.org/download/santa-claus-coming-jingle-bells/Santa_Claus_coming-jingle_bells_AES.mp3",
-    "length": 207.73,
-    "series": "The Roy-Cliffs",
-    "title": "Santa Claus Is Coming to Town / Jingle Bells",
-    "date": "1955",
-    "item": "https://archive.org/details/santa-claus-coming-jingle-bells"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAridDeoderant.mp3",
-    "length": 46.02,
-    "series": "A word from our sponsor",
-    "title": "Arrid Deodorant",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_det-kimer-nu-til-julefest_elsa-sigfuss-johs-viggo-pedersen-c-balle-grundtvig_gbia7015906a/DET%20KIMER%20NU%20TIL%20JULEFEST%20-%20ELSA%20SIGFUSS.mp3",
-    "length": 187.79,
-    "series": "Elsa Sigfuss",
-    "title": "Det Kimer Nu Til Julefest",
-    "date": "1941",
-    "item": "https://archive.org/details/78_det-kimer-nu-til-julefest_elsa-sigfuss-johs-viggo-pedersen-c-balle-grundtvig_gbia7015906a"
-   },
-   {
-    "src": "https://archive.org/download/jose-melis-and-his-orchestra-christmas-with-melis-side-1-bronjo-br-1060-stereo-f-eq/Jose%20Melis%20and%20his%20orchestra%20-%20Christmas%20With%20Melis%20-%20side%202%20%20Bronjo%20%20BR%201060%20stereo%20F%20EQ-nr.mp3",
-    "length": 805,
-    "series": "Jose Melis And His Orchestra",
-    "title": "Christmas With Melis (Side 2)",
-    "date": "1958",
-    "item": "https://archive.org/details/jose-melis-and-his-orchestra-christmas-with-melis-side-1-bronjo-br-1060-stereo-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/06%20I%27ll%20Be%20Home%20for%20Christmas.mp3",
-    "length": 178,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "I'll Be Home for Christmas",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/henry-mancini-orchestra-and-chorus-a-merry-mancini-christmas-rca-victor-lsp-3612/Henry%20Mancini%20Orchestra%20and%20Chorus%20-%20A%20Merry%20Mancini%20Christmas%20-%20RCA%20Victor%20LSP%203612%20Stereo%20side%201%20%20ET%20stylus%20F1.mp3",
-    "length": 1183,
-    "series": "Henry Mancini",
-    "title": "A Merry Mancini Christmas (Side 1)",
-    "date": "1966",
-    "item": "https://archive.org/details/henry-mancini-orchestra-and-chorus-a-merry-mancini-christmas-rca-victor-lsp-3612"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/OLGACOAL.MP3",
-    "length": 26.25,
-    "series": "A word from our sponsor",
-    "title": "Olga Coal",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_its-gonna-be-a-lonely-christmas_the-orioles-rose-sprung_gbia0466855b/%28IT%27S%20GONNA%20BE%20A%29%20LONELY%20CHRISTMAS%20-%20THE%20ORIOLES.mp3",
-    "length": 205.99,
-    "series": "The Orioles",
-    "title": "(It'S Gonna Be A) Lonely Christmas",
-    "date": "1949",
-    "item": "https://archive.org/details/78_its-gonna-be-a-lonely-christmas_the-orioles-rose-sprung_gbia0466855b"
-   },
-   {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/09%20While%20Shepherds%20Watched%20Their%20Flock.mp3",
-    "length": 160.21,
-    "series": "Chuck Wagon Gang",
-    "title": "While Shepherds Watched Their Flocks",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/let-it-snow-let-it-snow-let-it-snow/Let%20It%20Snow%21%20Let%20It%20Snow%21%20Let%20It%20Snow%21.mp3",
-    "length": 193.9,
-    "series": "Woody Herman and his Orchestra",
-    "title": "Let It Snow! Let It Snow! Let It Snow!",
-    "date": "1945",
-    "item": "https://archive.org/details/let-it-snow-let-it-snow-let-it-snow"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/04%20O%20Little%20Town%20Of%20Bethlehem.mp3",
-    "length": 97.78,
-    "series": "Norman Luboff Choir",
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_paul-peery-redner_gbia0310859b/O%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20PAUL%20PEERY%20-%20Redner.mp3",
+    "length": 135.37,
+    "series": "Paul Peery",
     "title": "O Little Town Of Bethlehem",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_paul-peery-redner_gbia0310859b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
-    "length": 52.84,
-    "series": "A word from our sponsor",
-    "title": "Popsicle",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/07%20Skating.mp3",
-    "length": 146,
-    "series": "Vince Guaraldi",
-    "title": "Skating",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-is-a-feeling-in-your-heart_andy-williams-kleinsinger-darion-archie-bleyer_gbia0498391b/CHRISTMAS%20IS%20A%20FEELING%20IN%20YOUR%20HEART%20-%20ANDY%20WILLIAMS.mp3",
-    "length": 169,
-    "series": "Andy Williams",
-    "title": "Christmas is a Feeling in Your Heart",
-    "date": "1955",
-    "item": "https://archive.org/details/78_christmas-is-a-feeling-in-your-heart_andy-williams-kleinsinger-darion-archie-bleyer_gbia0498391b"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_ralph-pedi-irving-berlin_gbia0114315a/White%20Christmas%20-%20Ralph%20Pedi%20-%20Irving%20Berlin.mp3",
-    "length": 171.3,
-    "series": "Ralph Pedi",
-    "title": "White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_white-christmas_ralph-pedi-irving-berlin_gbia0114315a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-santa-claus-crave_elzadie-robinson-bob-call_gbia3019267a/THE%20SANTA%20CLAUS%20CRAVE%20-%20Elzadie%20Robinson.mp3",
-    "length": 206,
-    "series": "Elzadie Robinson",
-    "title": "The Santa Claus Crave",
-    "date": "1950",
-    "item": "https://archive.org/details/78_the-santa-claus-crave_elzadie-robinson-bob-call_gbia3019267a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
-    "length": 49.71,
-    "series": "A word from our sponsor",
-    "title": "Creamo Cigars",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/White%20Christmas.mp3",
-    "length": 196.51,
-    "series": "Kate Smith",
-    "title": "White Christmas",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/04%20Canto%20Navidad%20%28Christmas%20Song%29.mp3",
-    "length": 177,
-    "series": "Los Cuatro Soles",
-    "title": "Canto Navidad (Christmas Song)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/A1.%20Joy%20to%20the%20World-Hark%20the%20Herald.mp3",
-    "length": 179.25,
-    "series": "Jerry Fielding",
-    "title": "Joy to the World-Hark the Herald",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/78_the-first-noel_phil-reed-stainer_gbia0080787b/The%20First%20Noel%20-%20Phil%20Reed%20-%20Stainer.mp3",
-    "length": 178,
-    "series": "Phil Reed",
-    "title": "The First Noel",
-    "date": "1948",
-    "item": "https://archive.org/details/78_the-first-noel_phil-reed-stainer_gbia0080787b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAutoLite.mp3",
-    "length": 57.75,
-    "series": "A word from our sponsor",
-    "title": "Auto-Lite",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0006810a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Arizona%20Cliff%20Martin.mp3",
-    "length": 177,
-    "series": "Arizona Cliff Martin",
-    "title": "Rudolph The Red Nosed Reindeer",
-    "date": "1953",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0006810a"
-   },
-   {
-    "src": "https://archive.org/download/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0123489a/JEG%20SAA%20JULEMANDEN%20KYSSE%20MOR%20%28I%20saw%20momm%20-%20RAQUEL%20RASTENNI.mp3",
-    "length": 185.48,
-    "series": "Raquel Rastenni",
-    "title": "JEG SAA JULEMANDEN KYSSE MOR (I saw mommy kissing Santa Claus)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0123489a"
-   },
-   {
-    "src": "https://archive.org/download/78_mr-sandman-hajji-baba_the-rhythmaires-mimi-martel-ronnie-deauville-lew-raymond_gbia0099515a/%22Mr.%20Sandman%22%3B%20Hajji%20Baba%20-%20The%20Rhythmaires.mp3",
-    "length": 335,
-    "series": "The Rhythmaires",
-    "title": "\"Mr. Sandman\"; Hajji Baba",
-    "date": "1954",
-    "item": "https://archive.org/details/78_mr-sandman-hajji-baba_the-rhythmaires-mimi-martel-ronnie-deauville-lew-raymond_gbia0099515a"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Introduction%20-%20christmas%20carol%20medley.mp3",
-    "length": 372,
-    "series": "Frank Sinatra",
-    "title": "Introduction - christmas carol medley",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsiCola.mp3",
-    "length": 33.38,
-    "series": "A word from our sponsor",
-    "title": "Pepsi Cola",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-carols-by-the-hour-of-charm-all-girl-orchestra-and-choir_phil-spitalny-an_gbia8006279/02%20-%20CAROL%20OF%20THE%20BELLS%3B%20GOD%20REST%20YE%20MERRY%2C%20%20-%20Phil%20SPITALNY%20and%20his%20HOUR%20of%20CHARM%20ALL-GIRL%20ORCHESTRA%20and%20CHOIR.mp3",
-    "length": 151,
-    "series": "Phil Spitalny and his Hour of Charm All-Girl Orchestra and Choir",
-    "title": "Carol Of The Bells; God Rest Ye Merry",
-    "item": "https://archive.org/details/78_christmas-carols-by-the-hour-of-charm-all-girl-orchestra-and-choir_phil-spitalny-an_gbia8006279"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bell-boogie_freddie-mitchell-orch.-rip-harrigan_gbia0001478a/Jingle%20Bell%20Boogie%20-%20Freddie%20Mitchell%20Orch-restored.mp3",
-    "length": 180.26,
-    "series": "Freddie Mitchell Orchestra",
-    "title": "Jingle Bell Boogie",
-    "date": "1949",
-    "item": "https://archive.org/details/78_jingle-bell-boogie_freddie-mitchell-orch.-rip-harrigan_gbia0001478a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-be-bop-santa-claus_babs-gonzalez-lloyd-williams_gbia0052890a/The%20Be-Bop%20Santa%20Claus%20-%20Babs%20Gonzalez%20-%20Lloyd%20Williams.mp3",
-    "length": 203,
-    "series": "Babs Gonzalez",
-    "title": "The Be-Bop Santa Claus",
-    "date": "1957",
-    "item": "https://archive.org/details/78_the-be-bop-santa-claus_babs-gonzalez-lloyd-williams_gbia0052890a"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/01%20Joy%20To%20The%20World.mp3",
-    "length": 72.99,
-    "series": "Norman Luboff Choir",
-    "title": "Joy To The World",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/RINSO.MP3",
-    "length": 84.67,
-    "series": "A word from our sponsor",
-    "title": "Rinso",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/11.WhatYouGonnaCallYoPrettyLittleBaby.mp3",
-    "length": 178.86,
-    "series": "The De Paur Chorus",
-    "title": "What You Gonna Call Yo' Pretty Little Baby",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/78_el-cant-des-ocells-song-of-the-birds_victoria-de-los-angeles-renata-tarrago-gra_gbia0076911a/El%20Cant%20des%20Ocells%20%28Song%20of%20the%20%20-%20Victoria%20de%20los%20Angeles.mp3",
-    "length": 158,
-    "series": "Victoria de los Angeles",
-    "title": "El Cant des Ocells (Song of the Birds)",
-    "date": "1952",
-    "item": "https://archive.org/details/78_el-cant-des-ocells-song-of-the-birds_victoria-de-los-angeles-renata-tarrago-gra_gbia0076911a"
-   },
-   {
-    "src": "https://archive.org/download/78_i-vant-a-xmas-drum_ole-svenson-and-his-smorgasbord-band-t-varnick-n-acquaviva_gbia0342826b/I%20VANT%20A%20XMAS%20DRUM%20-%20OLE%20SVENSON%20and%20his%20SMORGASBORD%20BAND.mp3",
-    "length": 143.66,
-    "series": "OLE SVENSON and his SMORGASBORD BAND",
-    "title": "I Vant a Xmas Drum",
-    "date": "1950",
-    "item": "https://archive.org/details/78_i-vant-a-xmas-drum_ole-svenson-and-his-smorgasbord-band-t-varnick-n-acquaviva_gbia0342826b"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/Good%20King%20Wenceslas.mp3",
-    "length": 132.31,
-    "series": "Ethel Smith",
-    "title": "Good King Wenceslas",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LUSTERCREAM.mp3",
-    "length": 50.11,
-    "series": "A word from our sponsor",
-    "title": "Lustre-Creme Shampoo",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/18%20-%20I%27ll%20Be%20Home%20For%20Christmas%20-%20Lana%20Cantrell.mp3",
-    "length": 146.94,
-    "series": "Lana Cantrell",
-    "title": "I'll Be Home For Christmas",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/01-gene-autry-and-the-pinafores-rudolph-the-red-nosed-reindeer/01-Gene%20Autry%20And%20The%20Pinafores%20%E2%80%93%20Rudolph%2C%20The%20Red-Nosed%20Reindeer.mp3",
-    "length": 195,
-    "series": "Gene Autry And The Pinafores",
-    "title": "Gene Autry And The Pinafores – Rudolph, The Red-Nosed Reindeer / If It Doesn't Snow On Christmas",
-    "date": "1949",
-    "item": "https://archive.org/details/01-gene-autry-and-the-pinafores-rudolph-the-red-nosed-reindeer"
-   },
-   {
-    "src": "https://archive.org/download/leroy-anderson-a-christmas-festival-decca-dl-8925-side-1-f-eq/Leroy%20Anderson%20-%20A%20Christmas%20Festival%20-%20Decca%20DL%208925%20%20side%201%20%20F%20EQ.mp3",
-    "length": 1304,
-    "series": "Leroy Anderson",
-    "title": "A Christmas Festival (Side 1)",
-    "date": "1959",
-    "item": "https://archive.org/details/leroy-anderson-a-christmas-festival-decca-dl-8925-side-1-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/eddie-layton-hammond-organ-music-for-christmas-with-chimes-brass-choir-epic-ln-2/Eddie%20Layton%20-%20%20Hammond%20Organ%20Music%20For%20Christmas%20with%20Chimes%20%26%20Brass%20Choir%20-%20Epic%20LN%2024118%20mono%20%20%20side%201%20F%20EQ.mp3",
-    "length": 905,
-    "series": "Eddie Layton",
-    "title": "Hammond Organ Music For Christmas With Chimes & Brass Choir (Side 1)",
-    "date": "1964",
-    "item": "https://archive.org/details/eddie-layton-hammond-organ-music-for-christmas-with-chimes-brass-choir-epic-ln-2"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsJackBennyDennisDayForTexaco.mp3",
-    "length": 59.64,
-    "series": "A word from our sponsor",
-    "title": "Texaco (with Jack Benny and Dennis Day)",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/08_White_Christmas.mp3",
-    "length": 131,
-    "series": "Jan Garber & His Orchestra",
-    "title": "White Christmas",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/78_hell-be-coming-down-the-chimney_enoch-light-and-his-orch.-jack-brown-al-j.-neibirg_gbia0001781a/He%27ll%20Be%20Coming%20Down%20The%20Chimney%20-%20Enoch%20Light%20and%20his%20Orch..mp3",
-    "length": 189,
-    "series": "Enoch Light and his Orchestra",
-    "title": "He'll Be Coming Down The Chimney",
-    "date": "1951",
-    "item": "https://archive.org/details/78_hell-be-coming-down-the-chimney_enoch-light-and-his-orch.-jack-brown-al-j.-neibirg_gbia0001781a"
-   },
-   {
-    "src": "https://archive.org/download/andre-kostelanetz-and-his-orchestra-wonderland-of-christmas-side-1-columbia-le-1/Andre%20Kostelanetz%20and%20his%20orchestra%20-%20Wonderland%20Of%20Christmas%20-%20side%202%20-%20Columbia%20LE%2010086%20%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 951,
-    "series": "Andre Kostelanetz And His Orchestra",
-    "title": "Wonderland Of Christmas (Side 2)",
-    "date": "1963",
-    "item": "https://archive.org/details/andre-kostelanetz-and-his-orchestra-wonderland-of-christmas-side-1-columbia-le-1"
-   },
-   {
-    "src": "https://archive.org/download/78_i-wouldnt-have-you-on-a-christmas-tree_dick-stratton-and-his-nite-owls-dick-stratt_gbia0006817b/I%20Wouldn%27t%20Have%20You%20On%20A%20-%20Dick%20Stratton%20and%20his%20Nite%20Owls.mp3",
-    "length": 147,
-    "series": "Dick Stratton and his Nite Owls",
-    "title": "I Wouldn't Have You On A Christmas Tree",
-    "date": "1950",
-    "item": "https://archive.org/details/78_i-wouldnt-have-you-on-a-christmas-tree_dick-stratton-and-his-nite-owls-dick-stratt_gbia0006817b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/GROVESNOSEDROPS.mp3",
-    "length": 70.71,
-    "series": "A word from our sponsor",
-    "title": "Grove's Nose Drops",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_ted-black-orchestra-dick-edwards-johnny-marks_gbia0110572a/RUDOLPH%2C%20THE%20RED-NOSED%20REINDEER%20-%20Ted%20Black%20Orchestra.mp3",
-    "length": 172,
-    "series": "Ted Black Orchestra",
-    "title": "Rudolph, the Red-nosed Reindeer",
-    "date": "1949",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_ted-black-orchestra-dick-edwards-johnny-marks_gbia0110572a"
-   },
-   {
-    "src": "https://archive.org/download/78_holly-holly-hollywood_max-hansen-jens-warnys-orkester_gbia0120297b/Holly%20Holly%20Hollywood%20-%20Max%20Hansen%20-%20Jens%20Warnys%20Orkester.mp3",
-    "length": 188,
-    "series": "Max Hansen",
-    "title": "Holly Holly Hollywood",
-    "date": "1940",
-    "item": "https://archive.org/details/78_holly-holly-hollywood_max-hansen-jens-warnys-orkester_gbia0120297b"
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dolph-dixon-the-prom-orchestra-and-chorus-johnny-mar_gbia7035761b/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20DOLPH%20DIXON.mp3",
-    "length": 181,
-    "series": "Dolph Dixon",
-    "title": "Rudolph the Red Nosed Reindeer",
-    "date": "1953",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dolph-dixon-the-prom-orchestra-and-chorus-johnny-mar_gbia7035761b"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/01%20-%20Silver%20Bells%20-%20Kate%20Smith.mp3",
-    "length": 161.8,
-    "series": "Kate Smith",
-    "title": "Silver Bells",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
-    "length": 40.72,
-    "series": "A word from our sponsor",
-    "title": "Anacin",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/02_The_Christmas_waltz.mp3",
-    "length": 152,
-    "series": "Wayne King & His Orchestra",
-    "title": "The Christmas waltz",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/78_1-joy-to-the-world-2-oh-little-town-of-bethlehem-3-angels-we-have-heard-on-high_gbia0110185b/1.%20Joy%20To%20The%20World%202.%20Oh%2C%20Little%20Tow%20-%20Tempo%27s%20Carolaires.mp3",
-    "length": 148,
-    "series": "Tempo's Carolaires",
-    "title": "1. Joy To The World 2. Oh, Little Town Of Bethlehem 3. Angels We Have Heard On High 4. Oh, Christmas Tree 5. The First Noel",
-    "date": "1950",
-    "item": "https://archive.org/details/78_1-joy-to-the-world-2-oh-little-town-of-bethlehem-3-angels-we-have-heard-on-high_gbia0110185b"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas-part-1_peter-hanley-the-sandpipers-irving-berlin-mitch-miller_gbia0534619a/WHITE%20CHRISTMAS%20-%20Part%201%20-%20PETER%20HANLEY%20-%20THE%20SANDPIPERS.mp3",
-    "length": 99,
-    "series": "Peter Hanley",
-    "title": "WHITE CHRISTMAS - Part 1",
-    "date": "1952",
-    "item": "https://archive.org/details/78_white-christmas-part-1_peter-hanley-the-sandpipers-irving-berlin-mitch-miller_gbia0534619a"
-   },
-   {
-    "src": "https://archive.org/download/oldfashionedchri00symp/10_Santa_Claus_is_coming_to_town__Lawrence_Welk_.mp3",
-    "length": 121,
-    "series": "Symphonette Society",
-    "title": "Santa Claus is coming to town",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/COLGATESHAVINGCREAM.mp3",
-    "length": 40.99,
-    "series": "A word from our sponsor",
-    "title": "Colgate Shaving Cream",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/hannabarberaxmas/06%20Oh%20Come%20All%20Ye%20Faithful.mp3",
-    "length": 123.24,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "Oh Come All Ye Faithful",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_nuttin-for-xmas_joe-ward-dave-terry-bennett-tepper_gbia0010371a/Nuttin%20For%20Xmas%20-%20Joe%20Ward%20-%20Dave%20Terry%20-%20Bennett.mp3",
-    "length": 141,
-    "series": "Joe Ward",
-    "title": "Nuttin For Xmas",
-    "date": "1955",
-    "item": "https://archive.org/details/78_nuttin-for-xmas_joe-ward-dave-terry-bennett-tepper_gbia0010371a"
-   },
-   {
-    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_bob-crosby-styne-cahn_gbia0219728a/LET%20IT%20SNOW%3B%20LET%20IT%20SNOW%3B%20LET%20IT%20SNOW%20-%20BOB%20CROSBY.mp3",
-    "length": 182.38,
-    "series": "Bob Crosby",
-    "title": "Let It Snow; Let It Snow; Let It Snow",
-    "date": "1946",
-    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_bob-crosby-styne-cahn_gbia0219728a"
-   },
-   {
-    "src": "https://archive.org/download/78_when-the-snowflakes-fall-again_carole-wilson-carole-wilson-ray_gbia0285446a/WHEN%20THE%20SNOWFLAKES%20FALL%20AGAIN%20-%20CAROLE%20WILSON.mp3",
-    "length": 174.41,
-    "series": "Carole Wilson",
-    "title": "When The Snowflakes Fall Again",
-    "date": "1952",
-    "item": "https://archive.org/details/78_when-the-snowflakes-fall-again_carole-wilson-carole-wilson-ray_gbia0285446a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGmGuardianMaintenance.mp3",
-    "length": 59.74,
-    "series": "A word from our sponsor",
-    "title": "GM Guardian Maintenance",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_im-dreaming-of-a-white-christmas_jim-mccahey_gbia0284844a/%22I%27M%20DREAMING%20OF%20A%20WHITE%20CHRISTMAS%22%20-%20JIM%20McCAHEY.mp3",
-    "length": 169.3,
-    "series": "JIM McCAHEY",
-    "title": "\"i'm Dreaming of a White Christmas\"",
-    "date": "1950",
-    "item": "https://archive.org/details/78_im-dreaming-of-a-white-christmas_jim-mccahey_gbia0284844a"
-   },
-   {
-    "src": "https://archive.org/download/78_slovenski-bozicni-vecer-christmas-eve-in-slovenia-sveta-noc-holy-night/1695-1.mp3",
-    "length": 247,
-    "series": "Anonymous",
-    "title": "Slovenski božični večer (Christmas Eve in Slovenia) – Sveta noč (Holy Night)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_slovenski-bozicni-vecer-christmas-eve-in-slovenia-sveta-noc-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/78_we-three-kings-of-orient-are-at-solemn-midnight-lo-how-a-rose-eer-blooming_char_gbia0034358a/We%20Three%20Kings%20of%20Orient%20Are%3B%20At%20Sole%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 209.1,
-    "series": "Charles R. Cronham",
-    "title": "We Three Kings of Orient Are; At Solemn Midnight; Lo, How a Rose E'er Blooming",
-    "date": "1960",
-    "item": "https://archive.org/details/78_we-three-kings-of-orient-are-at-solemn-midnight-lo-how-a-rose-eer-blooming_char_gbia0034358a"
-   },
-   {
-    "src": "https://archive.org/download/78_snack-for-santa_mad-man-michaels-michaels-mucha_gbia0082280b/Snack%20for%20Santa%20-%20Mad%20Man%20Michaels%20-%20Michaels.mp3",
-    "length": 146,
-    "series": "Mad Man Michaels",
-    "title": "Snack for Santa",
-    "date": "1955",
-    "item": "https://archive.org/details/78_snack-for-santa_mad-man-michaels-michaels-mucha_gbia0082280b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/OLDSPICE.MP3",
-    "length": 20.16,
-    "series": "A word from our sponsor",
-    "title": "Old Spice",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/A2%20-%20What%20child%20is%20this.mp3",
-    "length": 239.54,
-    "series": "Various",
-    "title": "What child is this",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_danny-oneil-ruby-newman-styne-cahn_gbia0012903b/Let%20It%20Snow%21%20Let%20It%20Snow%21%20Let%20It%20Snow%21%20-%20Danny%20O%27Neil.mp3",
-    "length": 156,
-    "series": "Danny O'Neil",
-    "title": "Let It Snow! Let It Snow! Let It Snow!",
-    "date": "1945",
-    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_danny-oneil-ruby-newman-styne-cahn_gbia0012903b"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/19%20All%20I%20Want%20for%20Christmas%20is%20Your%20Love.mp3",
-    "length": 184.78,
-    "series": "Dee Irwin & Mamie Galore",
-    "title": "All I Want for Christmas is Your Love",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-holy-night_phil-reed-gruber_gbia0080787a/Silent%20Night%20%28Holy%20Night%29%20-%20Phil%20Reed%20-%20Gruber.mp3",
-    "length": 182,
-    "series": "Phil Reed",
-    "title": "Silent Night (Holy Night)",
-    "date": "1948",
-    "item": "https://archive.org/details/78_silent-night-holy-night_phil-reed-gruber_gbia0080787a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/PEPSI.MP3",
-    "length": 42.47,
-    "series": "A word from our sponsor",
-    "title": "Pepsi",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/01%20A%20Very%20Merry%20Christmas.mp3",
-    "length": 134.06,
-    "series": "The Holidays",
-    "title": "A Very Merry Christmas",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/05_I_saw_Mommy_kissing_Santa_Claus.mp3",
-    "length": 163,
-    "series": "Jan Garber & His Orchestra",
-    "title": "I saw Mommy kissing Santa Claus",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/02%20What%20Child%20Is%20This.mp3",
-    "length": 144,
-    "series": "Vince Guaraldi",
-    "title": "What Child Is This",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-time-is-the-best-time-of-the-year_men-of-texas-adams-ward-j-t-adams_gbia0473674a/CHRISTMAS%20TIME%20IS%20THE%20BEST%20TIME%20OF%20THE%20YEAR%20-%20Men%20of%20Texas.mp3",
-    "length": 232.56,
-    "series": "Men of Texas",
-    "title": "Christmas Time is the Best Time of the Year",
-    "date": "1952",
-    "item": "https://archive.org/details/78_christmas-time-is-the-best-time-of-the-year_men-of-texas-adams-ward-j-t-adams_gbia0473674a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/ELGINAMERICAN.mp3",
-    "length": 105.57,
-    "series": "A word from our sponsor",
-    "title": "Elgin American",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/The%20First%20Noel.mp3",
-    "length": 105.79,
-    "series": "Chet Atkins",
-    "title": "The First Noel",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/78_polish-jingle-bells-dzwonki-na-gwiazdke---christmas-carol---koleda_ignacy-podgorski_gbia0002218a/Polish%20Jingle%20Bells%20Dzwonki%20Na%20Gwiazdke%20-%20Christmas%20Carol%20-%20Koleda%20-%20Ignacy%20Podgorski%20i%20jego%20Nadzwyczajna%20Orkiestra.mp3",
-    "length": 189,
-    "series": "Ignacy Podgorski i jego Nadzwyczajna Orkiestra",
-    "title": "Polish Jingle Bells Dzwonki Na Gwiazdke - Christmas Carol - Koleda",
-    "date": "1947",
-    "item": "https://archive.org/details/78_polish-jingle-bells-dzwonki-na-gwiazdke---christmas-carol---koleda_ignacy-podgorski_gbia0002218a"
-   },
-   {
-    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_charles-r-cronham_gbia0187401d/O%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 74.66,
-    "series": "Charles R. Cronham",
-    "title": "O Little Town Of Bethlehem",
-    "date": "1960",
-    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_charles-r-cronham_gbia0187401d"
-   },
-   {
-    "src": "https://archive.org/download/78_nr-vi-holder-julefest-christmas-in-killarney_hedvig-volmer-cavanaugh-weldon-eri_gbia7009898b/N%C3%85R%20VI%20HOLDER%20JULEFEST%20%28Christmas%20in%20Killa%20-%20HEDVIG%20VOLMER.mp3",
-    "length": 185.98,
-    "series": "Hedvig Volmer",
-    "title": "Når Vi Holder Julefest (Christmas in Killarney)",
-    "date": "1951",
-    "item": "https://archive.org/details/78_nr-vi-holder-julefest-christmas-in-killarney_hedvig-volmer-cavanaugh-weldon-eri_gbia7009898b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/JELLO1955.mp3",
-    "length": 15.17,
-    "series": "A word from our sponsor",
-    "title": "Jell-O",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_north-pole-town_jeff-stoughton-and-his-lake-placid-club-orchestra-larry-murphy-lew_gbia0285326a/NORTH%20POLE%20TOWN%20-%20Jeff%20Stoughton%20and%20his%20Lake%20Placid%20Club%20Orchestra.mp3",
-    "length": 213.58,
-    "series": "Jeff Stoughton and his Lake Placid Club Orchestra",
-    "title": "North Pole Town",
-    "date": "1956",
-    "item": "https://archive.org/details/78_north-pole-town_jeff-stoughton-and-his-lake-placid-club-orchestra-larry-murphy-lew_gbia0285326a"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/01.ChristmasInDeTropics.mp3",
-    "length": 151.64,
-    "series": "Solo: Hamilton Grandison",
-    "title": "Christmas in de Tropics",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/lp_echoes-of-christmas_george-feyer/disc1/01.01.%20Introduction%3B%20White%20Christmas%3B%20Anderson%3A%20Sleighride%3B%20Adeste%20Fideles%20%28O%20Come%20All%20Ye%20Faithful%29%3B%20Waldteufel%3A%20Skaters%27%20Waltz%3B%20Away%20In%20A%20Manger%3B%20Rudolph%2C%20The%20Red-Nosed%20Reindeer%3B%20O%20Little%20Town%20Of%20Bethlehem%3B%20Jingle%20Bells.mp3",
-    "length": 1103.04,
-    "series": "George Feyer",
-    "title": "Echoes Of Christmas (Side 1)",
-    "date": "1955",
-    "item": "https://archive.org/details/lp_echoes-of-christmas_george-feyer"
-   },
-   {
-    "src": "https://archive.org/download/78_lets-light-the-christmas-tree_jack-brown-and-the-three-jills-ruth-lyons-chic-gatwo_gbia0085047a/Let%27s%20Light%20the%20Christmas%20Tree%20-%20Jack%20Brown%20and%20The%20Three%20Jills.mp3",
-    "length": 181,
-    "series": "Jack Brown and The Three Jills",
-    "title": "Let's Light the Christmas Tree",
-    "date": "1948",
-    "item": "https://archive.org/details/78_lets-light-the-christmas-tree_jack-brown-and-the-three-jills-ruth-lyons-chic-gatwo_gbia0085047a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
-    "length": 45.43,
-    "series": "A word from our sponsor",
-    "title": "Signal Gasoline",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/A5.%20Oh%20Tannenbaum-Cantique%20De%20Noel.mp3",
-    "length": 139.65,
-    "series": "Jerry Fielding",
-    "title": "Oh Tannenbaum-Cantique De Noel",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/78_little-bitty-baby_tom-glazer-h-hopkins_gbia0460044/02%20-%20LITTLE%20BITTY%20BABY%20-%20TOM%20GLAZER%20-%20H.%20HOPKINS.mp3",
-    "length": 186.05,
-    "series": "Tom Glazer",
-    "title": "Little Bitty Baby",
-    "item": "https://archive.org/details/78_little-bitty-baby_tom-glazer-h-hopkins_gbia0460044"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_betty-lou-the-voice-of-tommy-riggs_gbia0218542a/SILENT%20NIGHT%20-%20BETTY%20LOU%20-%20The%20Voice%20of%20Tommy%20Riggs.mp3",
-    "length": 173.74,
-    "series": "Betty Lou",
-    "title": "Silent Night",
-    "date": "1948",
-    "item": "https://archive.org/details/78_silent-night_betty-lou-the-voice-of-tommy-riggs_gbia0218542a"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-monica-jump_slim-gaillard-and-his-orchestra-gaillard-and-brown-d-marmaros-h_gbia0180526a/SANTA%20MONICA%20JUMP%20-%20SLIM%20GAILLARD%20AND%20HIS%20ORCHESTRA.mp3",
-    "length": 189.06,
-    "series": "Slim Gaillard And His Orchestra",
-    "title": "Santa Monica Jump",
-    "date": "1945",
-    "item": "https://archive.org/details/78_santa-monica-jump_slim-gaillard-and-his-orchestra-gaillard-and-brown-d-marmaros-h_gbia0180526a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
-    "length": 59.17,
-    "series": "A word from our sponsor",
-    "title": "Armour Hot Dogs",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Panis%20Angelicus.mp3",
-    "length": 199.29,
-    "series": "Robert Goulet",
-    "title": "Panis Angelicus",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2006%20-%20Santa%20Claus%20Is%20Coming%20To%20Town.mp3",
-    "length": 326.64,
-    "series": "Jimmy Smith",
-    "title": "Santa Claus Is Coming To Town",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
-   },
-   {
-    "src": "https://archive.org/download/78_frosty-the-snow-man_dick-edwards-the-peter-pan-chorus-and-orchestra-vicky-kasen-nel_gbia0006809a/Frosty%20The%20Snow%20Man%20-%20Dick%20Edwards%20-%20The%20Peter%20Pan%20Chorus%20and%20Orchestra.mp3",
-    "length": 168,
-    "series": "Dick Edwards",
-    "title": "Frosty The Snow Man",
-    "date": "1950",
-    "item": "https://archive.org/details/78_frosty-the-snow-man_dick-edwards-the-peter-pan-chorus-and-orchestra-vicky-kasen-nel_gbia0006809a"
-   },
-   {
-    "src": "https://archive.org/download/78_here-comes-santa-claus_del-wood_gbia0056735b/Here%20Comes%20Santa%20Claus%20-%20Del%20Wood.mp3",
-    "length": 126.44,
-    "series": "Del Wood",
-    "title": "Here Comes Santa Claus",
-    "date": "1954",
-    "item": "https://archive.org/details/78_here-comes-santa-claus_del-wood_gbia0056735b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BUDWEISER.mp3",
-    "length": 19.07,
-    "series": "A word from our sponsor",
-    "title": "Budweiser",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_lets-go-home-for-christmas_betty-clooney-margaret-whittenberg-joel-nash_gbia0463302a/LET%27S%20GO%20HOME%20FOR%20CHRISTMAS%20-%20BETTY%20CLOONEY.mp3",
-    "length": 165.33,
-    "series": "Betty Clooney",
-    "title": "Let'S Go Home For Christmas",
-    "date": "1953",
-    "item": "https://archive.org/details/78_lets-go-home-for-christmas_betty-clooney-margaret-whittenberg-joel-nash_gbia0463302a"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/10%20Joseph%20Dearest%20Joseph%20Mine.mp3",
-    "length": 140.09,
-    "series": "Norman Luboff Choir",
-    "title": "Joseph Dearest, Joseph Mine",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/1962-we-wish-you-a-merry-christmas-ray-conniff/06%20-%20Medley%20-%20The%20First%20Noel%20-%20Hark%21%20The%20Herald%20Angels%20Sing%20-%20O%20Come%2C%20All%20Ye%20Faithful%20-%20We%20Wish%20You%20a%20Merry%20Christmas.mp3",
-    "length": 377,
-    "series": "Ray Conniff",
-    "title": "Medley: The First Noel / Hark! The Herald Angels Sing / O Come, All Ye Faithful / We Wish You a Merry Christmas",
-    "date": "1962",
-    "item": "https://archive.org/details/1962-we-wish-you-a-merry-christmas-ray-conniff"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/03%20-%20The%20Little%20Drummer%20Boy%20-%20Morton%20Gould%20and%20his%20Orchestra.mp3",
-    "length": 144.54,
-    "series": "Morton Gould and his Orchestra",
-    "title": "The Little Drummer Boy",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BRISKTOOTHPASTE.mp3",
-    "length": 34.51,
-    "series": "A word from our sponsor",
-    "title": "Brisk Toothpaste",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/Jingle%20Bells%20-%20White%20Christmas%20-%20Adeste%20Fideles%20-%20Silent%20Night.mp3",
-    "length": 243.46,
-    "series": "Liberace",
-    "title": "Jingle Bells - White Christmas - Adeste Fideles - Silent Night",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_bobby-doyle-ray-blochs-orchestra-and-choir-irving-berlin_gbia0371322a/WHITE%20CHRISTMAS%20-%20BOBBY%20DOYLE%20-%20Ray%20Bloch%27s%20Orchestra%20and%20Choir.mp3",
-    "length": 199.19,
-    "series": "Bobby Doyle",
-    "title": "White Christmas",
-    "date": "1946",
-    "item": "https://archive.org/details/78_white-christmas_bobby-doyle-ray-blochs-orchestra-and-choir-irving-berlin_gbia0371322a"
-   },
-   {
-    "src": "https://archive.org/download/78_pujarska_bohu-hank-miean-sbor-bratislavskho-rozhlasu-symfonick-orchestr-brati_gbia0185132a/PUJARSKA%20-%20BOHU%C5%A0%20HAN%C3%81K%20-%20mie%C5%A1an%C3%BD%20sbor%20bratislavsk%C3%A9ho%20rozhlasu.mp3",
-    "length": 213.26,
-    "series": "Bohuš Hanák",
-    "title": "Pujarska",
-    "date": "1947",
-    "item": "https://archive.org/details/78_pujarska_bohu-hank-miean-sbor-bratislavskho-rozhlasu-symfonick-orchestr-brati_gbia0185132a"
-   },
-   {
-    "src": "https://archive.org/download/1962-we-wish-you-a-merry-christmas-ray-conniff/04%20-%20Medley%20-%20Let%20It%20Snow%21%20Let%20It%20Snow%21%20Let%20It%20Snow%21%20-%20Count%20Your%20Blessings%20-%20We%20Wish%20You%20a%20Merry%20Christmas.mp3",
-    "length": 321,
-    "series": "Ray Conniff",
-    "title": "Medley: Let It Snow! Let It Snow! Let It Snow! / Count Your Blessings / We Wish You a Merry Christmas",
-    "date": "1962",
-    "item": "https://archive.org/details/1962-we-wish-you-a-merry-christmas-ray-conniff"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceKrispies.mp3",
-    "length": 58.26,
-    "series": "A word from our sponsor",
-    "title": "Rice Krispies",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Joy%20to%20the%20World.mp3",
-    "length": 133.49,
-    "series": "Percy Faith",
-    "title": "Joy to the World",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-a_gbia0435638b/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR%3B%20AWAY%20IN%20A%20M%20-%20THE%20CAROLEERS.mp3",
-    "length": 193.39,
-    "series": "The Caroleers",
-    "title": "It Came Upon A Midnight Clear; Away In A Manger; The First Noel; Hark! The Herald Angels Sing",
-    "date": "1950",
-    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-a_gbia0435638b"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_the-ellingtonians-al-hibbler-johnny-hodges-billy-strayhorn-irving-b_gbia0075474a/White%20Christmas%20-%20The%20Ellingtonians%20-%20Al%20Hibbler.mp3",
-    "length": 178,
-    "series": "The Ellingtonians",
-    "title": "White Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/78_white-christmas_the-ellingtonians-al-hibbler-johnny-hodges-billy-strayhorn-irving-b_gbia0075474a"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Deck%20The%20Halls.mp3",
-    "length": 76.03,
-    "series": "Chet Atkins",
-    "title": "Deck The Halls",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
-    "length": 47.54,
-    "series": "A word from our sponsor",
-    "title": "Chesterfield Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_noel_herb-kern-lloyd-sloop-warren-arey_gbia0056765a/Noel%20-%20Herb%20Kern%20-%20Lloyd%20Sloop%20-%20Warren%20Arey.mp3",
-    "length": 176,
-    "series": "Herb Kern",
-    "title": "Noel",
-    "date": "1947",
-    "item": "https://archive.org/details/78_noel_herb-kern-lloyd-sloop-warren-arey_gbia0056765a"
-   },
-   {
-    "src": "https://archive.org/download/78_santas-surprise_music-hall-drama-group-and-orchestra_gbia0006810b/Santa%27s%20Surprise%20-%20Music%20Hall%20Drama%20Group%20and%20Orchestra.mp3",
-    "length": 192,
-    "series": "Music Hall Drama Group and Orchestra",
-    "title": "Santa's Surprise",
-    "date": "1953",
-    "item": "https://archive.org/details/78_santas-surprise_music-hall-drama-group-and-orchestra_gbia0006810b"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/09%20-%20Santa%20Claus%20Is%20Comin%27%20To%20Town.mp3",
-    "length": 138.84,
-    "series": "The Beach Boys",
-    "title": "Santa Claus Is Comin' To Town",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/17%20O%20Holy%20Night.mp3",
-    "length": 156.89,
-    "series": "Norman Luboff Choir",
-    "title": "O Holy Night",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
+    "src": "https://archive.org/download/78_1-silent-night-2-joy-to-the-world-3-we-saw-three-ships_godfrey-malcolm-fredric_gbia0470251a/1.%20Silent%20Night%20%202.%20Joy%20To%20The%20World%20%203.%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 378.26,
+    "series": "Godfrey Malcolm",
+    "title": "1. Silent Night 2. Joy To The World 3. We Saw Three Ships",
+    "item": "https://archive.org/details/78_1-silent-night-2-joy-to-the-world-3-we-saw-three-ships_godfrey-malcolm-fredric_gbia0470251a"
    },
    {
     "src": "https://archive.org/download/RadioCommercialsShows/WHEATIESCEREAL.mp3",
@@ -64152,686 +62751,249 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/10%20What%20Child%20Is%20This.mp3",
-    "length": 142.34,
-    "series": "The Lennon Sisters",
-    "title": "What Child Is This",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/01%20Cantos%20De%20Posadas%20%28Posadas%20Songs%29.mp3",
-    "length": 222,
-    "series": "Coro Misioneros Del Espiritu Santo",
-    "title": "Cantos De Posadas (Posadas Songs)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/10%20Fu%CC%88r%20Elise.mp3",
-    "length": 66,
-    "series": "Vince Guaraldi",
-    "title": "Für Elise",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/78_o-holy-night-come-ye-lofty_charles-r-cronham_gbia0034357b/O%20Holy%20Night%3B%20Come%20Ye%20Lofty%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 223.95,
-    "series": "Charles R. Cronham",
-    "title": "O Holy Night; Come Ye Lofty",
-    "date": "1960",
-    "item": "https://archive.org/details/78_o-holy-night-come-ye-lofty_charles-r-cronham_gbia0034357b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/HALEYSMO.MP3",
-    "length": 42.55,
-    "series": "A word from our sponsor",
-    "title": "Haley's M-O",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-a-dog-for-christmas_the-billy-mayo-quintet-george-kent-and-wed-howard-leno_gbia0431808a/I%20WANT%20A%20DOG%20%28For%20Christmas%29%20-%20THE%20BILLY%20MAYO%20QUINTET.mp3",
-    "length": 178.8,
-    "series": "The Billy Mayo Quintet",
-    "title": "I WANT A DOG (For Christmas)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_i-want-a-dog-for-christmas_the-billy-mayo-quintet-george-kent-and-wed-howard-leno_gbia0431808a"
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/15%20Medley%20Kentucky%20Wassal%20Parade%20Of%20The%20Wooden%20Soldiers.mp3",
-    "length": 196.13,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "Medley: Kentucky Wassal Song/Parade Of The Wooden Soldier",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/03%20The%20Christmas%20Song.mp3",
-    "length": 151,
-    "series": "Peggy Lee",
-    "title": "The Christmas Song",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/07%20Home%20for%20the%20Holidays.mp3",
-    "length": 163.06,
-    "series": "The Lennon Sisters",
-    "title": "Home for the Holidays",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGlocoatWax.mp3",
-    "length": 16.06,
-    "series": "A word from our sponsor",
-    "title": "Glo-Coat Wax",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_campanelle_julius-larosa-archie-bleyer-l-jason-a-leonard-e-caroll_gbia0067003/01%20-%20Jingle%20Dingle%20-%20Julius%20Larosa%20-%20Archie%20Bleyer.mp3",
-    "length": 133,
-    "series": "Julius La Rosa",
-    "title": "Jingle Dingle",
-    "item": "https://archive.org/details/78_campanelle_julius-larosa-archie-bleyer-l-jason-a-leonard-e-caroll_gbia0067003"
-   },
-   {
-    "src": "https://archive.org/download/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia0192461b/BEST%20LOVED%20CHRISTMAS%20MUSIC%20-%20RAY%20BLOCH%20his%20Choir%20%26%20Orchestra.mp3",
-    "length": 202.38,
-    "series": "RAY BLOCH his Choir & Orchestra",
-    "title": "Best Loved Christmas Music",
-    "date": "1946",
-    "item": "https://archive.org/details/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia0192461b"
-   },
-   {
-    "src": "https://archive.org/download/78_adeste-fideles-o-come-all-ye-faithful-traditional_beniamino-gigli-rinaldo-zamb_gbia7017636a/ADESTE%20FIDELES%20%28O%20COME%2C%20ALL%20YE%20FAITHFUL%29%20-%20BENIAMINO%20GIGLI.mp3",
-    "length": 166.75,
-    "series": "Beniamino Gigli",
-    "title": "ADESTE FIDELES (O COME, ALL YE FAITHFUL) (Traditional)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_adeste-fideles-o-come-all-ye-faithful-traditional_beniamino-gigli-rinaldo-zamb_gbia7017636a"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/11%20-%20I%27ll%20Be%20Home%20For%20Christmas.mp3",
-    "length": 162.56,
-    "series": "The Beach Boys",
-    "title": "I'll Be Home For Christmas",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/OVALTINE.MP3",
-    "length": 126.24,
-    "series": "A word from our sponsor",
-    "title": "Ovaltine",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/11_Christmas_Canday.mp3",
-    "length": 193,
-    "series": "Monterey Brass",
-    "title": "Christmas Canday",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/Medley%20-%20Deck%20The%20Halls%20-%20Joy%20To%20The%20World%20-%20It%20Came%20Upon%20A%20Midnight%20Clear.mp3",
-    "length": 398.31,
-    "series": "Kate Smith",
-    "title": "Medley - Deck The Halls - Joy To The World - It Came Upon A Midnight Clear",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/living-trio-ill-be-home-for-christmas-rca-camden-cas-2159-stereo-side-1-f-eq/Living%20Trio%20-%20I%27ll%20Be%20Home%20For%20Christmas%20-%20RCA%20Camden%20CAS-2159%20stereo%20side%202%20F%20EQ.mp3",
-    "length": 1043,
-    "series": "Living Trio",
-    "title": "I'll Be Home For Christmas (Side 2)",
-    "date": "1967",
-    "item": "https://archive.org/details/living-trio-ill-be-home-for-christmas-rca-camden-cas-2159-stereo-side-1-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/78_our-christmas-waltz_ken-griffin-karen-ford-and-bill-snary-e-nelson-jr-s-nelson_gbia0119854a/OUR%20CHRISTMAS%20WALTZ%20-%20Ken%20Griffin%20-%20Karen%20Ford%20and%20Bill%20Snary.mp3",
-    "length": 156,
-    "series": "Ken Griffin",
-    "title": "Our Christmas Waltz",
-    "item": "https://archive.org/details/78_our-christmas-waltz_ken-griffin-karen-ford-and-bill-snary-e-nelson-jr-s-nelson_gbia0119854a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/HALLOSHAMPOO.mp3",
-    "length": 25.7,
-    "series": "A word from our sponsor",
-    "title": "Halo Shampoo",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_a-guid-new-year_the-five-smith-brothers-livingstone-hume-gleadhill_gbia3029249b/A%20GUID%20NEW%20YEAR%20-%20THE%20FIVE%20SMITH%20BROTHERS.mp3",
-    "length": 198,
-    "series": "The Five Smith Brothers",
-    "title": "A Guid New Year",
-    "date": "1951",
-    "item": "https://archive.org/details/78_a-guid-new-year_the-five-smith-brothers-livingstone-hume-gleadhill_gbia3029249b"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/A3.%20The%20First%20Noel.mp3",
-    "length": 140.83,
-    "series": "Jerry Fielding",
-    "title": "The First Noel",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-baby-mambo_pepi-adorno-and-his-orchestra-javits-p-springer-t-springer_gbia0119258b/SANTA%20BABY%20MAMBO%20-%20Pepi%20Adorno%20and%20his%20Orchestra.mp3",
-    "length": 176.97,
-    "series": "Pepi Adorno and his Orchestra",
-    "title": "Santa Baby Mambo",
-    "date": "1954",
-    "item": "https://archive.org/details/78_santa-baby-mambo_pepi-adorno-and-his-orchestra-javits-p-springer-t-springer_gbia0119258b"
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/03%20White%20Christmas.mp3",
-    "length": 150.1,
-    "series": "The Lennon Sisters",
-    "title": "White Christmas",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
-    "length": 49.41,
-    "series": "A word from our sponsor",
-    "title": "Lifebuoy Health Soap",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-polka/1099-18.mp3",
-    "length": 139,
-    "series": "Habat, Eddie",
-    "title": "Santa Claus Polka",
-    "date": "1951",
-    "item": "https://archive.org/details/78_santa-claus-polka"
-   },
-   {
-    "src": "https://archive.org/download/78_hark-the-herald-angels-sing-away-in-a-manger_elmer-ihrke_gbia0059673b/Hark%20the%20Herald%20Angels%20Sing%3B%20Away%20in%20a%20Mange%20-%20Elmer%20Ihrke.mp3",
-    "length": 172,
-    "series": "Elmer Ihrke",
-    "title": "Hark the Herald Angels Sing; Away in a Manger",
-    "date": "1947",
-    "item": "https://archive.org/details/78_hark-the-herald-angels-sing-away-in-a-manger_elmer-ihrke_gbia0059673b"
-   },
-   {
-    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_suzy-williams-tommie-connor_gbia0342822a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20SUZY%20WILLIAMS.mp3",
-    "length": 138.89,
-    "series": "Suzy Williams",
-    "title": "I Saw Mommy Kissing Santa Claus",
-    "date": "1953",
-    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_suzy-williams-tommie-connor_gbia0342822a"
-   },
-   {
-    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_herb-kern-lloyd-sloop-warren-arey_gbia0056766a/Hark%20the%20Herald%20Angels%20Sing%20-%20Herb%20Kern%20-%20Lloyd%20Sloop.mp3",
-    "length": 167,
-    "series": "Herb Kern",
-    "title": "Hark the Herald Angels Sing",
-    "date": "1947",
-    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_herb-kern-lloyd-sloop-warren-arey_gbia0056766a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/NABISCO.MP3",
-    "length": 89.11,
-    "series": "A word from our sponsor",
-    "title": "Nabisco",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_what-christmas-is_gen-adkins-the-tune-toppers-gen-adkins_gbia0424385a/WHAT%20CHRISTMAS%20IS%20-%20GEN%20ADKINS%20-%20THE%20TUNE%20TOPPERS.mp3",
-    "length": 137.83,
-    "series": "Gen Adkins",
-    "title": "What Christmas is",
-    "date": "1952",
-    "item": "https://archive.org/details/78_what-christmas-is_gen-adkins-the-tune-toppers-gen-adkins_gbia0424385a"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_sonora-choristers-eugene-mott_gbia0001237a/Silent%20Night%20-%20Sonora%20Choristers%20-%20Eugene%20Mott.mp3",
-    "length": 202,
-    "series": "Sonora Choristers",
-    "title": "Silent Night",
-    "date": "1945",
-    "item": "https://archive.org/details/78_silent-night_sonora-choristers-eugene-mott_gbia0001237a"
-   },
-   {
-    "src": "https://archive.org/download/eddie-dunstedter-with-the-jingle-bells-orchestra-christmas-candy-capitol-sm-1183/Eddie%20Dunstedter%20with%20the%20Jingle%20Bells%20Orchestra%20-%20Christmas%20Candy%20-%20Capitol%20SM-11831%20side%202%20%20Gulbransen%20electric%20organ%20F%20EQ.mp3",
-    "length": 836,
-    "series": "Eddie Dunstedter With The Jingle Bells Orchestra",
-    "title": "Christmas Candy (Side 2)",
-    "date": "1965",
-    "item": "https://archive.org/details/eddie-dunstedter-with-the-jingle-bells-orchestra-christmas-candy-capitol-sm-1183"
-   },
-   {
-    "src": "https://archive.org/download/78_underneath-the-mistletoe_mickey-carter-and-the-riff-tones-simpkins_gbia0060719b/Underneath%20the%20Mistletoe%20-%20Mickey%20Carter%20and%20the%20Riff-Tones.mp3",
-    "length": 139,
-    "series": "Mickey Carter and the Riff-Tones",
-    "title": "Underneath the Mistletoe",
-    "date": "1950",
-    "item": "https://archive.org/details/78_underneath-the-mistletoe_mickey-carter-and-the-riff-tones-simpkins_gbia0060719b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
-    "length": 14.08,
-    "series": "A word from our sponsor",
-    "title": "Colgate Tooth Powder",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells-adeste-fideles_the-caroleers_gbia0006854b/Jingle%20Bells%3B%20Adeste%20Fideles%20-%20The%20Caroleers.mp3",
-    "length": 206.85,
-    "series": "The Caroleers",
-    "title": "Jingle Bells; Adeste Fideles",
-    "date": "1949",
-    "item": "https://archive.org/details/78_jingle-bells-adeste-fideles_the-caroleers_gbia0006854b"
-   },
-   {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/Medley%20-%20The%20First%20Noel%20-%20Silent%20Night%20-%20O%20Holy%20Night.mp3",
-    "length": 467.5,
-    "series": "Kate Smith",
-    "title": "Medley - The First Noel - Silent Night - O Holy Night",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/AnOldFashionedTree/AnOldFashionedTree.mp3",
-    "length": 155,
-    "series": "Gene Autry",
-    "title": "An Old Fashioned Tree",
-    "item": "https://archive.org/details/AnOldFashionedTree"
-   },
-   {
-    "src": "https://archive.org/download/78_bethlehem-song-santas-sleigh_steve-race_gbia3012692a/Bethlehem%20Song%3B%20Santa%27s%20Sleigh%20-%20STEVE%20RACE.mp3",
-    "length": 199,
-    "series": "Steve Race",
-    "title": "Bethlehem Song; Santa's Sleigh",
-    "item": "https://archive.org/details/78_bethlehem-song-santas-sleigh_steve-race_gbia3012692a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/ROLSTONCEREAL.mp3",
-    "length": 35.84,
-    "series": "A word from our sponsor",
-    "title": "Ralston Cereal",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0197493a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
-    "length": 152.9,
-    "series": "Betty Johnson",
-    "title": "I Want Eddie Fisher For Christmas",
-    "date": "1954",
-    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0197493a"
-   },
-   {
-    "src": "https://archive.org/download/mx-283-bach-mass-in-b-ix/MX283%20Bach%20Magnificat%20%28ii%29.mp3",
-    "length": 201.25,
-    "series": "Columbia Records, Inc.",
-    "title": "Bach Sacred Arias (Carol Brice, 1947)",
-    "date": "1947",
-    "item": "https://archive.org/details/mx-283-bach-mass-in-b-ix"
-   },
-   {
-    "src": "https://archive.org/download/78_kris-kringle_frank-gallagher-dana-serenaders-and-orch-albert-gamse_gbia0200692a/KRIS%20KRINGLE%20-%20FRANK%20GALLAGHER%20-%20DANA%20SERENADERS%20and%20Orch..mp3",
-    "length": 150.86,
-    "series": "Frank Gallagher",
-    "title": "Kris Kringle",
-    "date": "1948",
-    "item": "https://archive.org/details/78_kris-kringle_frank-gallagher-dana-serenaders-and-orch-albert-gamse_gbia0200692a"
-   },
-   {
-    "src": "https://archive.org/download/78_all-around-the-xmas-tree_mark-warnow-stuart-klein-hit-parade-orch.-and-chorus_gbia0001208a/All%20Around%20The%20Xmas%20Tree%20-%20Mark%20Warnow%20-%20Stuart.mp3",
-    "length": 187.73,
-    "series": "Mark Warnow",
-    "title": "All Around The Xmas Tree",
-    "date": "1945",
-    "item": "https://archive.org/details/78_all-around-the-xmas-tree_mark-warnow-stuart-klein-hit-parade-orch.-and-chorus_gbia0001208a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAjax.mp3",
-    "length": 40.3,
-    "series": "A word from our sponsor",
-    "title": "Ajax",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_by-the-brook-vania-the-little-town-lullaby_country-grammar-school-in-sw-m-d-calvoco_gbia0552308b/BY%20THE%20BROOK%3B%20VANIA%3B%20THE%20%20-%20COUNTRY%20GRAMMAR%20SCHOOL%20IN%20S.W.mp3",
-    "length": 274,
-    "series": "Country Grammar School in S.w.",
-    "title": "By the Brook; Vania; the Little Town; Lullaby",
-    "date": "1947",
-    "item": "https://archive.org/details/78_by-the-brook-vania-the-little-town-lullaby_country-grammar-school-in-sw-m-d-calvoco_gbia0552308b"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Dance%20of%20the%20Sugar%20Plum%20Fairy_%20Waltz%20of%20Flowers.mp3",
-    "length": 223.58,
-    "series": "New York Philharmonic, Leonard Bernstein",
-    "title": "Dance of the Sugar Plum Fairy Waltz of Flowers",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/Ave%20Maria.mp3",
-    "length": 289.73,
-    "series": "Liberace",
-    "title": "Ave Maria",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/hannabarberaxmas/03%20The%2012%20Days%20of%20Christmas.mp3",
-    "length": 84.72,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "The 12 Days of Christmas",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/POSTUM.MP3",
-    "length": 120.78,
-    "series": "A word from our sponsor",
-    "title": "Postum",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/05_Jing-a-ling-ling.mp3",
-    "length": 134,
-    "series": "Wayne King & His Orchestra",
-    "title": "Jing-a-ling-ling",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/78_the-big-fat-man-with-the-long-white-beard_clark-mcmullen-schroeder-mcmullen_gbia0447325b/THE%20BIG%20FAT%20MAN%20%28With%20The%20Long%20White%20Be%20-%20CLARK%20%26%20McMULLEN.mp3",
-    "length": 144.26,
-    "series": "CLARK & McMULLEN",
-    "title": "THE BIG FAT MAN (With The Long White Beard)",
-    "date": "1950",
-    "item": "https://archive.org/details/78_the-big-fat-man-with-the-long-white-beard_clark-mcmullen-schroeder-mcmullen_gbia0447325b"
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/01_I_ll_be_home_for_Christmass.mp3",
-    "length": 141,
-    "series": "Wayne King & His Orchestra",
-    "title": "I'll be home for Christmass",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/A3%20-%20The%20secret%20of%20christmas.mp3",
-    "length": 174.45,
-    "series": "Various",
-    "title": "The secret of christmas",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/WINSTONCIGARETTES.mp3",
-    "length": 29.29,
-    "series": "A word from our sponsor",
-    "title": "Winston Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
-    "length": 172.72,
-    "series": "Andre Previn",
-    "title": "God Rest Ye Merry Gentlemen",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/O%20Little%20Town%20Of%20Bethelhem%20-%20It%20Came%20Upon%20A%20Midnight%20Clear%20-%20Joy%20To%20The%20World.mp3",
-    "length": 135.62,
-    "series": "Liberace",
-    "title": "O Little Town Of Bethelhem - It Came Upon A Midnight Clear - Joy To The World",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/A1%20-%20Season%27s%20greetings.mp3",
-    "length": 153.1,
-    "series": "Various",
-    "title": "Season's greetings",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/78_cicha-noc---koleda-silent-night_stas-jaworski-chor-i-orkiestra-w.-dana_gbia0001813a/Cicha%20Noc%20-%20Koleda%20%28Silent%20Night%29%20-%20Stas%20Jaworski.mp3",
-    "length": 196.27,
-    "series": "Chor I Orkiestra W. Dana",
-    "title": "Cicha Noc - Koleda (Silent Night)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_cicha-noc---koleda-silent-night_stas-jaworski-chor-i-orkiestra-w.-dana_gbia0001813a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
-    "length": 50.35,
-    "series": "A word from our sponsor",
-    "title": "Northwest Orient Airlines",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_santa-catalina-island-of-romance_eddy-howard-and-his-orchestra-eddy-howard-trio_gbia0007032b/Santa%20Catalina%20%28Island%20of%20%20-%20Eddy%20Howard%20and%20his%20Orchestra.mp3",
-    "length": 192.85,
-    "series": "Eddy Howard and his Orchestra",
-    "title": "Santa Catalina (Island of Romance)",
-    "date": "December 28, 1946",
-    "item": "https://archive.org/details/78_santa-catalina-island-of-romance_eddy-howard-and-his-orchestra-eddy-howard-trio_gbia0007032b"
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/10_The_Snowflake_Song.mp3",
-    "length": 188,
-    "series": "Monterey Brass",
-    "title": "The Snowflake Song",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/JV-30646-1950-QmYuiqN1hmkVDEpw6rg7SBpmBcPQiDvsSn8BbXJqyuvEVX.mp3/DecLA-5895.mp3",
-    "length": 163.99,
-    "series": "Lionel Hampton And His Orchestra",
-    "title": "Boogie Woogie Santa Claus",
-    "date": "1950",
-    "item": "https://archive.org/details/JV-30646-1950-QmYuiqN1hmkVDEpw6rg7SBpmBcPQiDvsSn8BbXJqyuvEVX.mp3"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Good%20King%20Wenceslas.mp3",
-    "length": 80.59,
-    "series": "The Mormon Tabernacle Choir",
-    "title": "Good King Wenceslas",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercials1957Chevrolet.mp3",
-    "length": 36.48,
-    "series": "A word from our sponsor",
-    "title": "1957 Chevrolet",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-a-christmas-carol_harmonia-symphonic-orchestra-fr-grber-1818_gbia0394712a/SILENT%20NIGHT%20A%20Christmas%20Carol%20-%20Harmonia%20Symphonic%20Orchestra.mp3",
-    "length": 178.27,
-    "series": "Harmonia Symphonic Orchestra",
-    "title": "SILENT NIGHT A Christmas Carol",
-    "date": "1948",
-    "item": "https://archive.org/details/78_silent-night-a-christmas-carol_harmonia-symphonic-orchestra-fr-grber-1818_gbia0394712a"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_herb-kern-lloyd-sloop-warren-arey_gbia0056767b/Silent%20Night%20-%20Herb%20Kern%20-%20Lloyd%20Sloop%20-%20Warren%20Arey.mp3",
-    "length": 181,
-    "series": "Herb Kern",
-    "title": "Silent Night",
-    "date": "1947",
-    "item": "https://archive.org/details/78_silent-night_herb-kern-lloyd-sloop-warren-arey_gbia0056767b"
-   },
-   {
-    "src": "https://archive.org/download/78_the-sussex-mummers-christmas-carol_forbes-watson-de-chaulieu-etiennette/M_540_DR_1700-2.mp3",
-    "length": 204,
-    "series": "Forbes, Watson",
-    "title": "The Sussex Mummers' Christmas Carol",
-    "date": "1942",
-    "item": "https://archive.org/details/78_the-sussex-mummers-christmas-carol_forbes-watson-de-chaulieu-etiennette"
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/02%20Do%20You%20Hear%20What%20I%20Hear.mp3",
-    "length": 176.07,
-    "series": "The Lennon Sisters",
-    "title": "Do You Hear What I Hear",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdamHats.mp3",
-    "length": 72.35,
-    "series": "A word from our sponsor",
-    "title": "Adam Hats",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_good-king-wenceslas-tannenbaum-deck-the-halls_the-varsity-caroleers_gbia0006796b/Good%20King%20Wenceslas%3B%20Tannenbaum%3B%20D%20-%20The%20Varsity%20Caroleers.mp3",
-    "length": 204,
-    "series": "The Varsity Caroleers",
-    "title": "Good King Wenceslas; Tannenbaum; Deck The Halls",
-    "date": "1950",
-    "item": "https://archive.org/details/78_good-king-wenceslas-tannenbaum-deck-the-halls_the-varsity-caroleers_gbia0006796b"
-   },
-   {
-    "src": "https://archive.org/download/DeckTheHalls_201611/Deck%20The%20Halls.mp3",
-    "length": 98.9,
-    "series": "Voco Orchestra",
-    "title": "Deck The Halls",
-    "date": "1949",
-    "item": "https://archive.org/details/DeckTheHalls_201611"
-   },
-   {
-    "src": "https://archive.org/download/78_the-night-before-christmas_peter-donald-mitch-miller_gbia0534670/01%20-%20THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20PART%20I%20-%20PETER%20DONALD.mp3",
-    "length": 110,
-    "series": "Peter Donald",
-    "title": "The Night Before Christmas",
-    "date": "1949",
-    "item": "https://archive.org/details/78_the-night-before-christmas_peter-donald-mitch-miller_gbia0534670"
-   },
-   {
-    "src": "https://archive.org/download/78_adeste-fideles-o-come-all-ye-faithful_beniamino-gigli-traditional-rinaldo-zambon_gbia0122574a/ADESTE%20FIDELES%20%28O%20COME%2C%20ALL%20YE%20FAITHFUL%29%20-%20Beniamino%20Gigli.mp3",
-    "length": 171,
-    "series": "Beniamino Gigli",
-    "title": "Adeste Fideles (o Come, All Ye Faithful)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_adeste-fideles-o-come-all-ye-faithful_beniamino-gigli-traditional-rinaldo-zambon_gbia0122574a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
-    "length": 86.85,
-    "series": "A word from our sponsor",
-    "title": "Sal Hepatica",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_dick-byron-and-the-sandpiper-chorus-mitch-miller_gbia0534262b/jingle%20bells%20-%20DICK%20BYRON%20AND%20THE%20SANDPIPER%20CHORUS.mp3",
-    "length": 96,
-    "series": "Dick Byron and the Sandpiper Chorus",
+    "src": "https://archive.org/download/78_jingle-bells_michael-hermans-folk-orchestra_gbia0337424a/JINGLE%20BELLS%20-%20Michael%20Herman%27s%20Folk%20Orchestra.mp3",
+    "length": 257.81,
+    "series": "Michael Herman's Folk Orchestra",
     "title": "Jingle Bells",
-    "date": "1949",
-    "item": "https://archive.org/details/78_jingle-bells_dick-byron-and-the-sandpiper-chorus-mitch-miller_gbia0534262b"
+    "date": "1950",
+    "item": "https://archive.org/details/78_jingle-bells_michael-hermans-folk-orchestra_gbia0337424a"
    },
    {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/B4%20-%20O%20come%20all%20ye%20faithful.mp3",
-    "length": 144.74,
-    "series": "Various",
-    "title": "O come all ye faithful",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
+    "src": "https://archive.org/download/78_oh-holy-night_godfrey-malcolm-fredrico_gbia0219430e/OH%20HOLY%20NIGHT%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 167.66,
+    "series": "Godfrey Malcolm",
+    "title": "Oh Holy Night",
+    "item": "https://archive.org/details/78_oh-holy-night_godfrey-malcolm-fredrico_gbia0219430e"
    },
    {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/05%20What%20Child%20Is%20This.mp3",
-    "length": 137.35,
-    "series": "Norman Luboff Choir",
-    "title": "What Child Is This?",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_hej-w-dzien-narodzenia---christmas-carol---koleda_ignacy-podgorski-i-jego-nadzwycz_gbia0002218b/Hej%21%20W%20Dzien%20Narodzenia%20-%20Christmas%20Carol%20-%20Koleda%20-%20Ignacy%20Podgorski%20i%20jego%20Nadzwyczajna%20Orkiestra.mp3",
-    "length": 180,
-    "series": "Ignacy Podgorski i jego Nadzwyczajna Orkiestra",
-    "title": "Hej! W Dzien Narodzenia - Christmas Carol - Koleda",
+    "src": "https://archive.org/download/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0391839a/JINGLE%20BELLS%20-%20JOE%20GUMIN%20And%20His%20Orchestra.mp3",
+    "length": 168.38,
+    "series": "JOE GUMIN And His Orchestra",
+    "title": "Jingle Bells",
     "date": "1947",
-    "item": "https://archive.org/details/78_hej-w-dzien-narodzenia---christmas-carol---koleda_ignacy-podgorski-i-jego-nadzwycz_gbia0002218b"
+    "item": "https://archive.org/details/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0391839a"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/MARCHOFDIMES.mp3",
-    "length": 70.39,
+    "src": "https://archive.org/download/78_silent-night-holy-night_lee-richardson-john-l-motley-wen-talberts-male-chorus_gbia0475068b/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20LEE%20RICHARDSON.mp3",
+    "length": 193.19,
+    "series": "Lee Richardson",
+    "title": "Silent Night, Holy Night",
+    "date": "1946",
+    "item": "https://archive.org/details/78_silent-night-holy-night_lee-richardson-john-l-motley-wen-talberts-male-chorus_gbia0475068b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/RINSO.MP3",
+    "length": 84.67,
     "series": "A word from our sponsor",
-    "title": "March Of Dimes",
+    "title": "Rinso",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/B6%20-%20Auld%20lang%20syne.mp3",
-    "length": 132.47,
-    "series": "Various",
-    "title": "Auld lang syne",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
+    "src": "https://archive.org/download/78_campanelle_julius-larosa-archie-bleyer-u-minucci-a-bleyer_gbia0028045a/Campanelle%20-%20Julius%20Larosa%20-%20Archie%20Bleyer.mp3",
+    "length": 159,
+    "series": "Julius Larosa",
+    "title": "Campanelle",
+    "date": "1954",
+    "item": "https://archive.org/details/78_campanelle_julius-larosa-archie-bleyer-u-minucci-a-bleyer_gbia0028045a"
    },
    {
-    "src": "https://archive.org/download/01-o-holy-night/10%20Away%20In%20A%20Manger.mp3",
-    "length": 161.41,
-    "series": "George Beverly Shea",
+    "src": "https://archive.org/download/78_gonna-have-a-merry-xmas_the-nic-nacs_gbia0451811a/GONNA%20HAVE%20A%20MERRY%20XMAS%20-%20THE%20NIC%20NACS.mp3",
+    "length": 178.51,
+    "series": "The Nic Nacs",
+    "title": "Gonna Have a Merry Xmas",
+    "date": "1952",
+    "item": "https://archive.org/details/78_gonna-have-a-merry-xmas_the-nic-nacs_gbia0451811a"
+   },
+   {
+    "src": "https://archive.org/download/78_snack-for-santa_mad-man-michaels-michaels-mucha_gbia0082280b/Snack%20for%20Santa%20-%20Mad%20Man%20Michaels%20-%20Michaels.mp3",
+    "length": 146,
+    "series": "Mad Man Michaels",
+    "title": "Snack for Santa",
+    "date": "1955",
+    "item": "https://archive.org/details/78_snack-for-santa_mad-man-michaels-michaels-mucha_gbia0082280b"
+   },
+   {
+    "src": "https://archive.org/download/78_first-noel_gbia3042331a/FIRST%20NOEL.mp3",
+    "length": 147.01,
+    "series": "Unknown artist",
+    "title": "First Noel",
+    "item": "https://archive.org/details/78_first-noel_gbia3042331a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/TOPVALUESTAMPS.mp3",
+    "length": 40.44,
+    "series": "A word from our sponsor",
+    "title": "Top Value Stamps",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas_gbia3008450b/Christmas.mp3",
+    "length": 244.04,
+    "series": "Unknown artist",
+    "title": "Christmas",
+    "item": "https://archive.org/details/78_christmas_gbia3008450b"
+   },
+   {
+    "src": "https://archive.org/download/78_we-three-kings-the-first-noel_louis-garisto_gbia0043358a/We%20Three%20Kings%3B%20The%20First%20Noel%20-%20Louis%20Garisto.mp3",
+    "length": 305.53,
+    "series": "Louis Garisto",
+    "title": "We Three Kings; The First Noel",
+    "item": "https://archive.org/details/78_we-three-kings-the-first-noel_louis-garisto_gbia0043358a"
+   },
+   {
+    "src": "https://archive.org/download/78_all-i-want-for-christmas-is-my-two-front-teeth-i-saw-mommy-kissing-santa-claus-on_gbia0037367a/All%20I%20Want%20for%20Christmas%20is%20My%20Two%20Front%20Tee%20-%20Don%20Gardner.mp3",
+    "length": 342.9,
+    "series": "Don Gardner",
+    "title": "All I Want for Christmas is My Two Front Teeth; I Saw Mommy Kissing Santa Claus; One Little Candle",
+    "item": "https://archive.org/details/78_all-i-want-for-christmas-is-my-two-front-teeth-i-saw-mommy-kissing-santa-claus-on_gbia0037367a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_slam-stewart-quintet-slam-stewart-red-norvo-johnny-guarnieri-bill-de-a_gbia0114433a/Jingle%20Bells%20-%20Slam%20Stewart%20Quintet%20-%20Slam%20Stewart.mp3",
+    "length": 191,
+    "series": "Slam Stewart Quintet",
+    "title": "Jingle Bells",
+    "date": "1945",
+    "item": "https://archive.org/details/78_jingle-bells_slam-stewart-quintet-slam-stewart-red-norvo-johnny-guarnieri-bill-de-a_gbia0114433a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
+    "length": 49.71,
+    "series": "A word from our sponsor",
+    "title": "Creamo Cigars",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_santa-lucia_decapua_gbia0033721a/Santa%20Lucia%20-%20Decapua.mp3",
+    "length": 180.37,
+    "series": "Decapua",
+    "title": "Santa Lucia",
+    "date": "1960",
+    "item": "https://archive.org/details/78_santa-lucia_decapua_gbia0033721a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-chopsticks_anne-lloyd-the-sandpipers-mitchell-miller-fred-heider_gbia0335944b/CHRISTMAS%20CHOPSTICKS%20-%20ANNE%20LLOYD%20-%20THE%20SANDPIPERS.mp3",
+    "length": 106.84,
+    "series": "Anne Lloyd",
+    "title": "Christmas Chopsticks",
+    "item": "https://archive.org/details/78_christmas-chopsticks_anne-lloyd-the-sandpipers-mitchell-miller-fred-heider_gbia0335944b"
+   },
+   {
+    "src": "https://archive.org/download/78_away-in-a-manger_the-peter-pan-caroleers-vicky-kasen_gbia0322412b/AWAY%20IN%20A%20MANGER%20-%20THE%20PETER%20PAN%20CAROLEERS.mp3",
+    "length": 106.24,
+    "series": "The Peter Pan Caroleers",
     "title": "Away In A Manger",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
+    "item": "https://archive.org/details/78_away-in-a-manger_the-peter-pan-caroleers-vicky-kasen_gbia0322412b"
    },
    {
-    "src": "https://archive.org/download/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0125461a/JEG%20SAA%20JULEMANDEN%20KYSSE%20MOR%20%28I%20saw%20momm%20-%20RAQUEL%20RASTENNI.mp3",
-    "length": 185.9,
-    "series": "Raquel Rastenni",
-    "title": "JEG SAA JULEMANDEN KYSSE MOR (I saw mommy kissing Santa Claus)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0125461a"
+    "src": "https://archive.org/download/78_lulajze-jezuniu_choir-of-the-holy-cross-church-in-warsaw-chor-kosciola-sw-krzyza_gbia0060908b/Lulajze%20Jezuniu%20-%20Choir%20of%20the%20Holy%20Cross%20Church%20in%20Warsaw%20%28Chor%20Kosciola%20Sw.%20Krzyza%20w%20Warszawie%29.mp3",
+    "length": 172.34,
+    "series": "Choir of the Holy Cross Church in Warsaw (Chor Kosciola Sw. Krzyza w Warszawie)",
+    "title": "Lulajze Jezuniu",
+    "item": "https://archive.org/details/78_lulajze-jezuniu_choir-of-the-holy-cross-church-in-warsaw-chor-kosciola-sw-krzyza_gbia0060908b"
    },
    {
-    "src": "https://archive.org/download/78_christmas-morning_angelic-gospel-singers-rev-r-moore_gbia0425735b/CHRISTMAS%20MORNING%20-%20ANGELIC%20GOSPEL%20SINGERS.mp3",
-    "length": 179.93,
-    "series": "Angelic Gospel Singers",
-    "title": "Christmas Morning",
-    "item": "https://archive.org/details/78_christmas-morning_angelic-gospel-singers-rev-r-moore_gbia0425735b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/PONTIAC.MP3",
-    "length": 27.1,
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATESHAVINGCREAM.mp3",
+    "length": 40.99,
     "series": "A word from our sponsor",
-    "title": "Pontiac",
+    "title": "Colgate Shaving Cream",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_christmas-island_jack-mclean-and-his-orchestra-wayne-gregg-moraine-down-melody-lane_gbia0102720b/Christmas%20Island%20-%20Jack%20McLean%20and%20his%20Orchestra.mp3",
-    "length": 184,
-    "series": "Jack McLean and his Orchestra",
-    "title": "Christmas Island",
-    "item": "https://archive.org/details/78_christmas-island_jack-mclean-and-his-orchestra-wayne-gregg-moraine-down-melody-lane_gbia0102720b"
+    "src": "https://archive.org/download/78_the-night-before-christmas_the-caroleers_gbia0203788a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20THE%20CAROLEERS.mp3",
+    "length": 204,
+    "series": "The Caroleers",
+    "title": "The Night Before Christmas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-night-before-christmas_the-caroleers_gbia0203788a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel_paul-perry_gbia0281707b/THE%20FIRST%20NOEL%20-%20PAUL%20PERRY.mp3",
+    "length": 142.89,
+    "series": "Paul Perry",
+    "title": "The First Noel",
+    "item": "https://archive.org/details/78_the-first-noel_paul-perry_gbia0281707b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-is-a-feeling-in-your-heart_andy-williams-kleinsinger-darion-archie-bleyer_gbia0498391b/CHRISTMAS%20IS%20A%20FEELING%20IN%20YOUR%20HEART%20-%20ANDY%20WILLIAMS.mp3",
+    "length": 169,
+    "series": "Andy Williams",
+    "title": "Christmas is a Feeling in Your Heart",
+    "date": "1955",
+    "item": "https://archive.org/details/78_christmas-is-a-feeling-in-your-heart_andy-williams-kleinsinger-darion-archie-bleyer_gbia0498391b"
+   },
+   {
+    "src": "https://archive.org/download/78_pedza-sanki-do-kosciola..-sleigh-ride_kazio-jarzebowski-ork-w.-dana-j.-cass_gbia0002305a/Pedza%20Sanki%20Do%20Kosciola..%20%28Sleigh%20Ride%29%20-%20Kazio%20Jarzebowski.mp3",
+    "length": 187,
+    "series": "Kazio Jarzebowski",
+    "title": "Pedza Sanki Do Kosciola.. (Sleigh Ride)",
+    "date": "1948",
+    "item": "https://archive.org/details/78_pedza-sanki-do-kosciola..-sleigh-ride_kazio-jarzebowski-ork-w.-dana-j.-cass_gbia0002305a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CAMPANA.MP3",
+    "length": 122.11,
+    "series": "A word from our sponsor",
+    "title": "Campana",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus-all-around-the-christmas-tree_t-connor_gbia0035050b/I%20Saw%20Mommy%20Kissing%20Santa%20Claus%3B%20All%20Around%20Th%20-%20T.%20Connor.mp3",
+    "length": 339,
+    "series": "T. Connor",
+    "title": "I Saw Mommy Kissing Santa Claus; All Around The Christmas Tree",
+    "date": "1956",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus-all-around-the-christmas-tree_t-connor_gbia0035050b"
+   },
+   {
+    "src": "https://archive.org/download/78_bongo-man_louise-bennett-caribbean-serenaders-leslie-hutchinson-denis-preston_gbia0378113b/BONGO%20MAN%20-%20LOUISE%20BENNETT%20-%20Caribbean%20Serenaders.mp3",
+    "length": 153.36,
+    "series": "Louise Bennett",
+    "title": "Bongo Man",
+    "date": "1950",
+    "item": "https://archive.org/details/78_bongo-man_louise-bennett-caribbean-serenaders-leslie-hutchinson-denis-preston_gbia0378113b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-clause-is-coming-to-town_lenny-and-judith-lil-wally-and-the-lucky-harmony-bo_gbia0082304a/Santa%20Clause%20Is%20Coming%20to%20Town%20-%20Lenny%20and%20Judith.mp3",
+    "length": 144,
+    "series": "Lenny and Judith",
+    "title": "Santa Claus Is Coming to Town",
+    "date": "1956",
+    "item": "https://archive.org/details/78_santa-clause-is-coming-to-town_lenny-and-judith-lil-wally-and-the-lucky-harmony-bo_gbia0082304a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_ken-griffin-mohr-gruber_gbia0430427a/SILENT%20NIGHT%20-%20KEN%20GRIFFIN%20-%20MOHR%20-%20GRUBER.mp3",
+    "length": 172.08,
+    "series": "Ken Griffin",
+    "title": "Silent Night",
+    "date": "1950",
+    "item": "https://archive.org/details/78_silent-night_ken-griffin-mohr-gruber_gbia0430427a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/RINSO.MP3",
+    "length": 84.67,
+    "series": "A word from our sponsor",
+    "title": "Rinso",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_frosty-the-snowman_frankie-stevens-nelson-rollins_gbia0534678b/FROSTY%20THE%20SNOWMAN%20-%20Frankie%20Stevens%20-%20Nelson.mp3",
+    "length": 164.52,
+    "series": "Frankie Stevens",
+    "title": "Frosty The Snowman",
+    "item": "https://archive.org/details/78_frosty-the-snowman_frankie-stevens-nelson-rollins_gbia0534678b"
+   },
+   {
+    "src": "https://archive.org/download/78_julens-melodier-i-del_wivexs-strygeorkester-knud-dalgaard_gbia7005603a/Julens%20Melodier%20I%20Del%20-%20Wivex%27s%20Strygeorkester.mp3",
+    "length": 197.99,
+    "series": "Wivex's Strygeorkester",
+    "title": "Julens Melodier I Del",
+    "item": "https://archive.org/details/78_julens-melodier-i-del_wivexs-strygeorkester-knud-dalgaard_gbia7005603a"
    },
    {
     "src": "https://archive.org/download/78_angels-from-the-realms-of-glory_charles-r-cronham_gbia0187401c/ANGELS%20FROM%20THE%20REALMS%20OF%20GLORY%20-%20Charles%20R.%20Cronham.mp3",
@@ -64842,187 +63004,95 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_angels-from-the-realms-of-glory_charles-r-cronham_gbia0187401c"
    },
    {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/The%20Coventry%20Carol%20-%20God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
-    "length": 206.9,
-    "series": "Chet Atkins",
-    "title": "The Coventry Carol - God Rest Ye Merry Gentlemen",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
+    "src": "https://archive.org/download/78_away-in-a-manger-o-christmas-tree_gbia0110779b/Away%20in%20a%20Manger%20O%20Christmas%20Tree.mp3",
+    "length": 154.74,
+    "series": "Unknown artist",
+    "title": "Away in a Manger O Christmas Tree",
+    "item": "https://archive.org/details/78_away-in-a-manger-o-christmas-tree_gbia0110779b"
    },
    {
-    "src": "https://archive.org/download/haveyourselfmerr00king/03_Winter_wonderland.mp3",
-    "length": 120,
-    "series": "Wayne King & His Orchestra",
-    "title": "Winter wonderland",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
-    "length": 45.51,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsHouseholdFinanceCorp.mp3",
+    "length": 22.72,
     "series": "A word from our sponsor",
-    "title": "Bubble Up",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0125578a/JEG%20SAA%20JULEMANDEN%20KYSSE%20MOR%20%28I%20saw%20momm%20-%20RAQUEL%20RASTENNI.mp3",
-    "length": 192,
-    "series": "Raquel Rastenni",
-    "title": "JEG SAA JULEMANDEN KYSSE MOR (I saw mommy kissing Santa Claus)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0125578a"
-   },
-   {
-    "src": "https://archive.org/download/78_for-children-a-allegro-b-molto-tranquillo-c-qausi-adagio-d-allegro-ironico-roumania_gbia0538388b/FOR%20CHILDREN%22%20%28a%29%20Allegro%20%28b%29%20Molto%20Tranqu.mp3",
-    "length": 185,
-    "series": "Gerald Moore",
-    "title": "\"FOR CHILDREN\" (a) Allegro (b) Molto Tranquillo (c) Qausi Adagio (d) Allegro Ironico; ROUMANIAN CHRISTMAS CAROLS (e) Allegretto",
-    "date": "1950",
-    "item": "https://archive.org/details/78_for-children-a-allegro-b-molto-tranquillo-c-qausi-adagio-d-allegro-ironico-roumania_gbia0538388b"
-   },
-   {
-    "src": "https://archive.org/download/78_little-town-in-ould-country-down_frank-connors-carlo-sanders-pascoe_gbia0037596a/Little%20Town%20in%20Ould%20Country%20Down%20-%20Frank%20Connors.mp3",
-    "length": 181,
-    "series": "Frank Connors",
-    "title": "Little Town in Ould Country Down",
-    "date": "1944",
-    "item": "https://archive.org/details/78_little-town-in-ould-country-down_frank-connors-carlo-sanders-pascoe_gbia0037596a"
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/03%20My%20Little%20Drum.mp3",
-    "length": 191,
-    "series": "Vince Guaraldi",
-    "title": "My Little Drum",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CONTADINATOMATOPASTE.mp3",
-    "length": 18.06,
-    "series": "A word from our sponsor",
-    "title": "Contadina Tomato Paste",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/04%20The%20Christmas%20Waltz.mp3",
-    "length": 151.12,
-    "series": "The Lennon Sisters",
-    "title": "The Christmas Waltz",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/06%20Dasher.mp3",
-    "length": 117.72,
-    "series": "Harvie June Van",
-    "title": "Dasher",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/It%27s%20Beginning%20To%20Look%20Like%20Christmas.mp3",
-    "length": 118.87,
-    "series": "Kate Smith",
-    "title": "It's Beginning To Look Like Christmas",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/Silver%20Bells.mp3",
-    "length": 155.93,
-    "series": "Liberace",
-    "title": "Silver Bells",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLowenbrauBeer.mp3",
-    "length": 56.53,
-    "series": "A word from our sponsor",
-    "title": "Löwenbräu Beer",
+    "title": "Household Finance Corp",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/ChristmasSingWithBingBroadcasts/1956Christmas%20Sing%20With%20Bing.mp3",
-    "length": 3619.94,
-    "series": "Bing Crosby",
-    "title": "Christmas Sing With Bing (broadcast 2)",
-    "date": "1955-62",
-    "item": "https://archive.org/details/ChristmasSingWithBingBroadcasts"
+    "src": "https://archive.org/download/78_come-all-ye-faithful-silent-night_boy-choristers_gbia0001240a/Come%20All%20Ye%20Faithful%3B%20Silent%20Night%20-%20Boy%20Choristers.mp3",
+    "length": 217.09,
+    "series": "Boy Choristers",
+    "title": "Come All Ye Faithful; Silent Night",
+    "item": "https://archive.org/details/78_come-all-ye-faithful-silent-night_boy-choristers_gbia0001240a"
    },
    {
-    "src": "https://archive.org/download/78_white-christmas_jack-russell-the-honey-dreamers-irving-berlin-vicky-kasen_gbia0203789a/WHITE%20CHRISTMAS%20-%20JACK%20RUSSELL%20-%20The%20Honey%20Dreamers.mp3",
-    "length": 183.82,
-    "series": "Jack Russell",
-    "title": "White Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/78_white-christmas_jack-russell-the-honey-dreamers-irving-berlin-vicky-kasen_gbia0203789a"
+    "src": "https://archive.org/download/78_la-piata-la-peen-yah-tah_the-starlighters-lloyd-shaffer-orchestra-cranston-blal_gbia0364388a/LA%20PI%C3%91ATA%20%28La%20Peen-Yah%27-Tah%29%20-%20THE%20STARLIGHTERS.mp3",
+    "length": 164.71,
+    "series": "The Starlighters",
+    "title": "LA PIÑATA (La Peen-Yah'-Tah)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_la-piata-la-peen-yah-tah_the-starlighters-lloyd-shaffer-orchestra-cranston-blal_gbia0364388a"
    },
    {
-    "src": "https://archive.org/download/78_a-cowboys-christmas-song_leon-mcauliffe-and-his-western-swing-band-jimmy-hall-mcau_gbia0182244b/A%20COWBOY%27S%20CHRISTMAS%20SONG%20-%20LEON%20McAULIFFE%20AND%20HIS%20WESTERN%20SWING%20BAND.mp3",
-    "length": 190.58,
-    "series": "LEON McAULIFFE AND HIS WESTERN SWING BAND",
-    "title": "A Cowboy'S Christmas Song",
-    "date": "1947",
-    "item": "https://archive.org/details/78_a-cowboys-christmas-song_leon-mcauliffe-and-his-western-swing-band-jimmy-hall-mcau_gbia0182244b"
+    "src": "https://archive.org/download/78_stilla-natt_ulla-katajavuori-gruber-koskimies_gbia7036139a/STILLA%20NATT%20-%20ULLA%20KATAJAVUORI%20-%20Gruber%20-%20Koskimies.mp3",
+    "length": 208,
+    "series": "Ulla Katajavuori",
+    "title": "Stilla Natt",
+    "date": "1949",
+    "item": "https://archive.org/details/78_stilla-natt_ulla-katajavuori-gruber-koskimies_gbia7036139a"
    },
    {
-    "src": "https://archive.org/download/christmasinmexico1957lp/05%20Aldehuela%20De%20Belem%20%28Little%20Village%20Of%20Bethlehem%29.mp3",
-    "length": 186,
-    "series": "Coro Misionerps Del Espiritu Santo",
-    "title": "Aldehuela De Belem (Little Village Of Bethlehem)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
+    "src": "https://archive.org/download/78_ma-my-toys-are-broken_bill-tabbert-400-quartet-joe-lipman-orchestra-jacobs_gbia0027339b/Ma%21%20My%20Toys%20are%20Broken%20-%20Bill%20Tabbert%20-%20400%20Quartet.mp3",
+    "length": 150,
+    "series": "Bill Tabbert",
+    "title": "Ma! My Toys are Broken",
+    "date": "1951",
+    "item": "https://archive.org/details/78_ma-my-toys-are-broken_bill-tabbert-400-quartet-joe-lipman-orchestra-jacobs_gbia0027339b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/ROITANCIGARS.mp3",
-    "length": 15.56,
+    "src": "https://archive.org/download/RadioCommercialsShows/NESCAFE.MP3",
+    "length": 32.95,
     "series": "A word from our sponsor",
-    "title": "Roi-Tan Cigars",
+    "title": "Nescafé",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289578b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO%20%28Formerly%20Rambler%20Trio%29.mp3",
-    "length": 171.53,
-    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO (Formerly Rambler Trio)",
-    "title": "Guitar Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289578b"
+    "src": "https://archive.org/download/78_christmas-service-part-2_st-mary-le-bow_gbia0538698b/CHRISTMAS%20SERVICE%20-%20PART%202%20-%20ST.%20MARY-LE-BOW.mp3",
+    "length": 201.11,
+    "series": "St. Mary-Le-Bow",
+    "title": "Christmas Service - Part 2",
+    "item": "https://archive.org/details/78_christmas-service-part-2_st-mary-le-bow_gbia0538698b"
    },
    {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/The%20First%20Noel.mp3",
-    "length": 110.6,
-    "series": "Nelson Eddy",
-    "title": "The First Noel",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
+    "src": "https://archive.org/download/78_christmas-carols-by-the-hour-of-charm-all-girl-orchestra-and-choir_phil-spitalny-an_gbia8006279/02%20-%20CAROL%20OF%20THE%20BELLS%3B%20GOD%20REST%20YE%20MERRY%2C%20%20-%20Phil%20SPITALNY%20and%20his%20HOUR%20of%20CHARM%20ALL-GIRL%20ORCHESTRA%20and%20CHOIR.mp3",
+    "length": 151,
+    "series": "Phil Spitalny and his Hour of Charm All-Girl Orchestra and Choir",
+    "title": "Carol Of The Bells; God Rest Ye Merry",
+    "item": "https://archive.org/details/78_christmas-carols-by-the-hour-of-charm-all-girl-orchestra-and-choir_phil-spitalny-an_gbia8006279"
    },
    {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/O%20Come%20All%20Ye%20Faithful.mp3",
-    "length": 120.16,
-    "series": "Earl Wrightson",
-    "title": "O Come All Ye Faithful",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
+    "src": "https://archive.org/download/78_christmas-in-your-heart_luis-russell-and-his-orchestra-kizer-russell-lee-richardson_gbia0001205a/Christmas%20In%20Your%20Heart%20-%20Luis%20Russell%20and%20his%20Orchestra.mp3",
+    "length": 188,
+    "series": "Luis Russell and his Orchestra",
+    "title": "Christmas In Your Heart",
+    "date": "1946",
+    "item": "https://archive.org/details/78_christmas-in-your-heart_luis-russell-and-his-orchestra-kizer-russell-lee-richardson_gbia0001205a"
    },
    {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0001234a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Arizona%20Cliff%20Martin.mp3",
-    "length": 178.18,
-    "series": "Arizona Cliff Martin",
-    "title": "Rudolph The Red Nosed Reindeer",
-    "date": "1953",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0001234a"
+    "src": "https://archive.org/download/78_white-christmas_sonny-walikis-and-his-squeeze-boy_gbia0001730b/White%20Christmas%20-%20Sonny%20Walikis%20and%20his%20Squeeze%20Boy.mp3",
+    "length": 250,
+    "series": "Sonny Walikis and his Squeeze Box",
+    "title": "White Christmas",
+    "item": "https://archive.org/details/78_white-christmas_sonny-walikis-and-his-squeeze-boy_gbia0001730b",
+    "date": "1940"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/CAMPANA.MP3",
-    "length": 122.11,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
+    "length": 59.17,
     "series": "A word from our sponsor",
-    "title": "Campana",
-    "item": "https://archive.org/details/RadioCommercialsShows",
+    "title": "Armour Hot Dogs",
+    "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
@@ -65034,147 +63104,25 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_santa-lucia_semprini-cottrau_gbia7000931a"
    },
    {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/10%20It%27s%20Beginning%20to%20Look%20a%20Lot%20Like%20Christmas.mp3",
-    "length": 169,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "It's Beginning to Look a Lot Like Christmas",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
+    "src": "https://archive.org/download/78_sleigh-bell-serenade_tom-memoli-phil-stewart_gbia0484437b/SLEIGH%20BELL%20SERENADE%20-%20TOM%20MEMOLI%20-%20PHIL%20STEWART.mp3",
+    "length": 179,
+    "series": "Tom Memoli",
+    "title": "Sleigh Bell Serenade",
+    "item": "https://archive.org/details/78_sleigh-bell-serenade_tom-memoli-phil-stewart_gbia0484437b"
    },
    {
-    "src": "https://archive.org/download/78_1-adeste-fidelis-2-silver-bells_the-roy-cliffs_gbia0488343a/1.%20ADESTE%20FIDELIS%3B%202.%20SILVER%20BELLS%20-%20THE%20ROY-CLIFFS.mp3",
-    "length": 251,
-    "series": "The Roy-cliffs",
-    "title": "1. Adeste Fidelis; 2. Silver Bells",
-    "date": "1955",
-    "item": "https://archive.org/details/78_1-adeste-fidelis-2-silver-bells_the-roy-cliffs_gbia0488343a"
+    "src": "https://archive.org/download/78_all-i-want-for-christmas-is-my-two-front-teeth-i-saw-mommy-kissing-santa-claus-on_gbia0043220a/All%20I%20Want%20for%20Christmas%20Is%20My%20Two%20Front%20Teeth%3B%20I%20Saw%20Mommy%20Kissing%20Santa%20Claus%3B%20One%20Little%20Candle.mp3",
+    "length": 341.23,
+    "series": "Unknown artist",
+    "title": "All I Want for Christmas Is My Two Front Teeth; I Saw Mommy Kissing Santa Claus; One Little Candle",
+    "item": "https://archive.org/details/78_all-i-want-for-christmas-is-my-two-front-teeth-i-saw-mommy-kissing-santa-claus-on_gbia0043220a"
    },
    {
-    "src": "https://archive.org/download/78_bongo-man_louise-bennett-caribbean-serenaders-leslie-hutchinson-denis-preston_gbia0378113b/BONGO%20MAN%20-%20LOUISE%20BENNETT%20-%20Caribbean%20Serenaders.mp3",
-    "length": 153.36,
-    "series": "Louise Bennett",
-    "title": "Bongo Man",
-    "date": "1950",
-    "item": "https://archive.org/details/78_bongo-man_louise-bennett-caribbean-serenaders-leslie-hutchinson-denis-preston_gbia0378113b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsHouseholdFinanceCorp.mp3",
-    "length": 22.72,
-    "series": "A word from our sponsor",
-    "title": "Household Finance Corp",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/for-a-musical-merry-christmas-side-1-rca-victor-pr-149-a-d-71-ee-mono-f-eq/For%20A%20Musical%20Merry%20Christmas%20-%20side%202%20-%20RCA%20Victor%20PR-149A%20D71EE%20mono%20%20F%20EQ.mp3",
-    "length": 1005,
-    "series": "Various Artists (RCA Victor)",
-    "title": "For A Musical Merry Christmas (Side 2)",
-    "date": "1964",
-    "item": "https://archive.org/details/for-a-musical-merry-christmas-side-1-rca-victor-pr-149-a-d-71-ee-mono-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/78_sonny-boys-christmas-blues_sonny-boy-williamson_gbia0057732a/Sonny%20Boy%27s%20Christmas%20Blues%20-%20Sonny%20Boy%20Williamson.mp3",
-    "length": 159,
-    "series": "Sonny Boy Williamson",
-    "title": "Sonny Boy's Christmas Blues",
-    "date": "1951",
-    "item": "https://archive.org/details/78_sonny-boys-christmas-blues_sonny-boy-williamson_gbia0057732a"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Silent%20Night.mp3",
-    "length": 121.8,
-    "series": "Chet Atkins",
-    "title": "Silent Night",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/78_child-in-the-manger_the-kirkintilloch-junior-choir-moira-anderson-meta-macpherson-r_gbia0124746a/CHILD%20IN%20THE%20MANGER%20-%20THE%20KIRKINTILLOCH%20JUNIOR%20CHOIR.mp3",
-    "length": 143,
-    "series": "The Kirkintilloch Junior Choir",
-    "title": "Child In The Manger",
-    "date": "1950",
-    "item": "https://archive.org/details/78_child-in-the-manger_the-kirkintilloch-junior-choir-moira-anderson-meta-macpherson-r_gbia0124746a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/TOPVALUESTAMPS.mp3",
-    "length": 40.44,
-    "series": "A word from our sponsor",
-    "title": "Top Value Stamps",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/04%20Candy%20Cane%20Sugary%20Plum.mp3",
-    "length": 140.86,
-    "series": "Danny and the Juniors",
-    "title": "Candy Cane Sugary Plum",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/12%20Echen%20Confites%20Y%20Canelones%20%28Throw%20Christmas%20Candles%29.mp3",
-    "length": 162,
-    "series": "Coro Misionerps Del Espiritu Santo",
-    "title": "Echen Confites Y Canelones (Throw Christmas Candles)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
-   },
-   {
-    "src": "https://archive.org/download/78_its-christmas-time_j-t-adams-and-the-men-of-texas-adams-j-t-adams_gbia0473674b/IT%27S%20CHRISTMAS%20TIME%20-%20J.%20T.%20ADAMS%20AND%20THE%20MEN%20OF%20TEXAS.mp3",
-    "length": 133.49,
-    "series": "J. T. Adams and the Men of Texas",
-    "title": "It's Christmas Time",
-    "date": "1952",
-    "item": "https://archive.org/details/78_its-christmas-time_j-t-adams-and-the-men-of-texas-adams-j-t-adams_gbia0473674b"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/It%20came%20upon%20the%20midnight%20clear.mp3",
-    "length": 213,
-    "series": "Frank Sinatra",
-    "title": "It came upon the midnight clear",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/ENERGINESHOEWHITE.mp3",
-    "length": 26.01,
-    "series": "A word from our sponsor",
-    "title": "Energine Shoe White",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/ChristmasSingWithBingBroadcasts/1958%20Christmas%20Sing%20With%20Bing.mp3",
-    "length": 3597.64,
-    "series": "Bing Crosby",
-    "title": "Christmas Sing With Bing (broadcast 4)",
-    "date": "1955-62",
-    "item": "https://archive.org/details/ChristmasSingWithBingBroadcasts"
-   },
-   {
-    "src": "https://archive.org/download/78_all-i-want-for-christmas-spike-jones-and-his-city-slickers-george/28447%20All%20I%20want%20for%20christmas.mp3",
-    "length": 187.22,
-    "series": "George Rock",
-    "title": "All I Want for Christmas",
-    "item": "https://archive.org/details/78_all-i-want-for-christmas-spike-jones-and-his-city-slickers-george"
-   },
-   {
-    "src": "https://archive.org/download/ferrante-and-teicher-we-wish-you-a-merry-christmas-side-1-united-artist-6536-stereo-f-eq-1/Ferrante%20and%20Teicher%20-%20We%20Wish%20You%20A%20Merry%20Christmas%20-%20side%201%20-%20United%20Artist%206536%20Stereo%20F%20EQ1.mp3",
-    "length": 1260,
-    "series": "Ferrante And Teicher",
-    "title": "We Wish You A Merry Christmas (Side 1)",
-    "date": "1966",
-    "item": "https://archive.org/details/ferrante-and-teicher-we-wish-you-a-merry-christmas-side-1-united-artist-6536-stereo-f-eq-1"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-also-it-came-upon-the-midnight-clear_the-sandpiper-chorus-mitchell-mil_gbia0533733/01%20-%20silent%20night%20-%20The%20Sandpiper%20Chorus%20-%20Mitchell%20Miller.mp3",
-    "length": 101,
-    "series": "The Sandpiper Chorus",
-    "title": "SILENT NIGHT also IT CAME UPON THE MIDNIGHT CLEAR",
-    "date": "1949",
-    "item": "https://archive.org/details/78_silent-night-also-it-came-upon-the-midnight-clear_the-sandpiper-chorus-mitchell-mil_gbia0533733"
+    "src": "https://archive.org/download/78_deck-the-halls_godfrey-malcolm-fredrico_gbia0219429h/DECK%20THE%20HALLS%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 111.03,
+    "series": "Godfrey Malcolm",
+    "title": "Deck The Halls",
+    "item": "https://archive.org/details/78_deck-the-halls_godfrey-malcolm-fredrico_gbia0219429h"
    },
    {
     "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoSeltzer.mp3",
@@ -65183,1663 +63131,6 @@ window.STATIONS = [
     "title": "Bromo Seltzer",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_charles-r-cronham_gbia0187401b/HARK%2C%20THE%20HERALD%20ANGELS%20SING%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 90.45,
-    "series": "Charles R. Cronham",
-    "title": "Hark, The Herald Angels Sing",
-    "date": "1960",
-    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_charles-r-cronham_gbia0187401b"
-   },
-   {
-    "src": "https://archive.org/download/78_see-amid-the-winters-snow_john-mccormack-gerald-moore-caswall_gbia0076974b/See%20Amid%20the%20Winter%27s%20Snow%20-%20John%20McCormack.mp3",
-    "length": 179,
-    "series": "John McCormack",
-    "title": "See Amid the Winter's Snow",
-    "date": "1940",
-    "item": "https://archive.org/details/78_see-amid-the-winters-snow_john-mccormack-gerald-moore-caswall_gbia0076974b"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/The%20First%20Nowell.mp3",
-    "length": 140.45,
-    "series": "Ethel Smith",
-    "title": "The First Nowell",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-fe_baby-boy-warren-warren_gbia0076865b/Santa%20Fe%20-%20Baby%20Boy%20Warren%20-%20Warren.mp3",
-    "length": 148.53,
-    "series": "Baby Boy Warren",
-    "title": "Santa Fe",
-    "date": "1954",
-    "item": "https://archive.org/details/78_santa-fe_baby-boy-warren-warren_gbia0076865b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/COLEMAN.MP3",
-    "length": 41.38,
-    "series": "A word from our sponsor",
-    "title": "Coleman",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_sleigh-ride_laura-leslie-the-peter-pan-orchestra-parish-anderson-vicky-kasen_gbia0322414a/SLEIGH%20RIDE%20-%20LAURA%20LESLIE%20-%20the%20Peter%20Pan%20Orchestra.mp3",
-    "length": 115.37,
-    "series": "Laura Leslie",
-    "title": "Sleigh Ride",
-    "item": "https://archive.org/details/78_sleigh-ride_laura-leslie-the-peter-pan-orchestra-parish-anderson-vicky-kasen_gbia0322414a"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/20%20-%20O%20Little%20Hown%20of%20Bethlehem%20-%20Henry%20Mancini%20and%20his%20Orchestra.mp3",
-    "length": 81.19,
-    "series": "Henry Mancini and his Orchestra",
-    "title": "O Little Hown of Bethlehem",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/11%20Medley%20Heigh%20Ho%20Heigh%20Ho.mp3",
-    "length": 182.94,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "Medley: Heigh Ho The Holly/See Amid The Winter's Snow",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/05%20Meledy%20%28What%20Child%20Is%20This%3B%20The%20Holly%20And%20The%20Ivy%29.mp3",
-    "length": 200,
-    "series": "Bing Crosby",
-    "title": "Meledy: What Child Is This; The Holly And The Ivy",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/JERGENSLOTION.mp3",
-    "length": 47.54,
-    "series": "A word from our sponsor",
-    "title": "Jergens Lotion",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-is-a-feeling-in-your-heart_anita-ellis-the-balladeers-joe-darion-george-k_gbia0387339a/CHRISTMAS%20IS%20A%20FEELING%20IN%20YOUR%20HEART%20-%20ANITA%20ELLIS.mp3",
-    "length": 169.68,
-    "series": "Anita Ellis",
-    "title": "Christmas Is A Feeling In Your Heart",
-    "item": "https://archive.org/details/78_christmas-is-a-feeling-in-your-heart_anita-ellis-the-balladeers-joe-darion-george-k_gbia0387339a"
-   },
-   {
-    "src": "https://archive.org/download/78_a-cowboys-christmas_leon-mcauliffe-and-his-western-swing-band-jimmy-hall-mcauliffe_gbia0068952b/A%20Cowboy%27s%20Christmas%20-%20Leon%20McAuliffe%20and%20his%20Western%20Swing%20Band.mp3",
-    "length": 190,
-    "series": "Leon McAuliffe and his Western Swing Band",
-    "title": "A Cowboy's Christmas Song",
-    "date": "1947",
-    "item": "https://archive.org/details/78_a-cowboys-christmas_leon-mcauliffe-and-his-western-swing-band-jimmy-hall-mcauliffe_gbia0068952b"
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/06%20Christmas%20Time%20Is%20Here%20%28Vocal%29.mp3",
-    "length": 165,
-    "series": "Vince Guaraldi",
-    "title": "Christmas Time Is Here (Vocal)",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/01_Jingle_Bells.mp3",
-    "length": 177,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Jingle Bells",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/PHILIPMORRISCIGARETTES.mp3",
-    "length": 52.61,
-    "series": "A word from our sponsor",
-    "title": "Philip Morris Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_on-the-atchison-topeka-and-the-santa-fe_louis-prima-and-his-orchestra-lilyann-caro_gbia0111439a/ON%20THE%20ATCHISON%2C%20TOPEKA%20AN%20-%20Louis%20Prima%20and%20his%20Orchestra.mp3",
-    "length": 168.53,
-    "series": "Louis Prima and his Orchestra",
-    "title": "On The Atchison, Topeka And The Santa Fe",
-    "date": "1945",
-    "item": "https://archive.org/details/78_on-the-atchison-topeka-and-the-santa-fe_louis-prima-and-his-orchestra-lilyann-caro_gbia0111439a"
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/13%20Away%20In%20A%20Manger.mp3",
-    "length": 63.16,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "Away In A Manger",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_im-gettin-nuttin-for-christmas-jolly-old-st-nicholas_tepper-bennett-bobby-stewart-t_gbia0533785/02%20-%20JOLLY%20OLD%20ST.%20NICHOLAS%20-%20THE%20PETER%20PAN%20CAROLEERS.mp3",
-    "length": 103,
-    "series": "Tepper",
-    "title": "Jolly Old St. Nicholas",
-    "item": "https://archive.org/details/78_im-gettin-nuttin-for-christmas-jolly-old-st-nicholas_tepper-bennett-bobby-stewart-t_gbia0533785"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/08%20Silent%20Night.mp3",
-    "length": 132,
-    "series": "The Lettermen",
-    "title": "Silent Night",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCrestToothpaste.mp3",
-    "length": 61.97,
-    "series": "A word from our sponsor",
-    "title": "Crest Toothpaste",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/06_Rudolph_the_Red-Nosed_Reindeer.mp3",
-    "length": 154,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Rudolph the Red-Nosed Reindeer",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/78_i-dont-want-to-be-alone-for-christmas_menaker-donafrio-russell_gbia0006789a/I%20Don%27t%20Want%20To%20Be%20Alone%20For%20Christmas%20-%20Menaker.mp3",
-    "length": 187,
-    "series": "Menaker",
-    "title": "I Don't Want To Be Alone For Christmas",
-    "date": "1952",
-    "item": "https://archive.org/details/78_i-dont-want-to-be-alone-for-christmas_menaker-donafrio-russell_gbia0006789a"
-   },
-   {
-    "src": "https://archive.org/download/the-new-christy-minstrels-christmas-with-the-christies-side-1-columbia-cs-9356-s/The%20New%20Christy%20Minstrels%20-%20Christmas%20With%20The%20Christies%20-%20side%202%20-%20Columbia%20CS%209356%20stereo%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 811,
-    "series": "The New Christy Minstrels",
-    "title": "Christmas With The Christies (Side 2)",
-    "date": "1967",
-    "item": "https://archive.org/details/the-new-christy-minstrels-christmas-with-the-christies-side-1-columbia-cs-9356-s"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/04_Silver_bells.mp3",
-    "length": 163,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Silver bells",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/PATTICAKECOOKIES.mp3",
-    "length": 45.98,
-    "series": "A word from our sponsor",
-    "title": "Patti-Cake Cookies",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0391839a/JINGLE%20BELLS%20-%20JOE%20GUMIN%20And%20His%20Orchestra.mp3",
-    "length": 168.38,
-    "series": "JOE GUMIN And His Orchestra",
-    "title": "Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0391839a"
-   },
-   {
-    "src": "https://archive.org/download/07-white-christmas/02%20SANTA%20CLAUS%20IS%20HERE.mp3",
-    "length": 87.33,
-    "series": "Bing Crosby, Danny Kaye",
-    "title": "Santa Claus Is Here",
-    "date": "1954",
-    "item": "https://archive.org/details/07-white-christmas"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_harold-goodfellow-and-his-good-fellows_gbia0025275b/Jingle%20Bells%20-%20Harold%20Goodfellow%20and%20His%20Good%20Fellows.mp3",
-    "length": 193,
-    "series": "Harold Goodfellow and His Good Fellows",
-    "title": "Jingle Bells",
-    "date": "1951",
-    "item": "https://archive.org/details/78_jingle-bells_harold-goodfellow-and-his-good-fellows_gbia0025275b"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/Angels%20We%20Have%20Heard%20On%20High.mp3",
-    "length": 111.46,
-    "series": "Ethel Smith",
-    "title": "Angels We Have Heard On High",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCampbellsSoup.mp3",
-    "length": 68.87,
-    "series": "A word from our sponsor",
-    "title": "Campbell's Soup",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/04%20-%20Rudolph%20the%20Red-Nosed%20Reindeer%20-%20Arthur%20Fiedler-Boston%20Pops%20Orchestra.mp3",
-    "length": 133.02,
-    "series": "Arthur Fiedler/Boston Pops Orchestra",
-    "title": "Rudolph the Red-Nosed Reindeer",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_im-dreaming-of-a-white-christmas_phil-reed-berlin_gbia0449670a/I%27M%20DREAMING%20OF%20A%20WHITE%20CHRISTMAS%20-%20PHIL%20REED.mp3",
-    "length": 186.29,
-    "series": "Phil Reed",
-    "title": "I'm Dreaming of a White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_im-dreaming-of-a-white-christmas_phil-reed-berlin_gbia0449670a"
-   },
-   {
-    "src": "https://archive.org/download/hannabarberaxmas/02%20Jingle%20Bells.mp3",
-    "length": 110.33,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "Jingle Bells",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2003%20-%20We%20Three%20Kings%20%28of%20Orient%20Are%29.mp3",
-    "length": 225.41,
-    "series": "Jimmy Smith",
-    "title": "We Three Kings (of Orient Are)",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/GEMBLADES.mp3",
-    "length": 14.23,
-    "series": "A word from our sponsor",
-    "title": "Gem Razor Blades",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/09%20Gesu%20Bambino%20%28Child%20Jesus%29.mp3",
-    "length": 97,
-    "series": "Niños Cantores De Navarra",
-    "title": "Gesu Bambino (Child Jesus)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
-   },
-   {
-    "src": "https://archive.org/download/JV-31211-1951-QmQSvzJFQLJtxDqJe5m4VPFrGQaFvs9yhHNqufVx3XWBSF.mp3/DV512479.mp3",
-    "length": 189.7,
-    "series": "Louis Jordan And His Orchestra",
-    "title": "May Every Day Be Christmas",
-    "date": "1951",
-    "item": "https://archive.org/details/JV-31211-1951-QmQSvzJFQLJtxDqJe5m4VPFrGQaFvs9yhHNqufVx3XWBSF.mp3"
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/07%20Coro%20De%20Las%20Camanas%20%28Chorus%20Of%20The%20Bells%29.mp3",
-    "length": 167,
-    "series": "Coro Misionerps Del Espiritu Santo",
-    "title": "Coro De Las Camanas (Chorus Of The Bells)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/B2.%20Auld%20Lang%20Syne-White%20Christmas.mp3",
-    "length": 187.66,
-    "series": "Jerry Fielding",
-    "title": "Auld Lang Syne-White Christmas",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCheverolet.mp3",
-    "length": 67.99,
-    "series": "A word from our sponsor",
-    "title": "Chevrolet",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/09%20A%20La%20Nanita%20Nana.mp3",
-    "length": 108.96,
-    "series": "Norman Luboff Choir",
-    "title": "A La Nanita Nana",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0417539a/JINGLE%20BELLS%20-%20JOE%20GUMIN%20And%20His%20Orchestra.mp3",
-    "length": 171.61,
-    "series": "JOE GUMIN And His Orchestra",
-    "title": "Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0417539a"
-   },
-   {
-    "src": "https://archive.org/download/78_because-because-because-hes-santa-claus_galli-sisters-galli-sisters-bobby-worth_gbia0466457a/BECAUSE%21%20BECAUSE%21%20BECAUSE%21%20HE%27S%20SANTA%20CLAU%20-%20GALLI%20SISTERS.mp3",
-    "length": 151.73,
-    "series": "Galli Sisters",
-    "title": "Because! Because! Because! He's Santa Claus",
-    "date": "1950",
-    "item": "https://archive.org/details/78_because-because-because-hes-santa-claus_galli-sisters-galli-sisters-bobby-worth_gbia0466457a"
-   },
-   {
-    "src": "https://archive.org/download/78_im-gonna-do-my-christmas-shopping-early_vicki-sunday-and-alan-hayes-cappa-barra-bo_gbia0498350a/I%27M%20GONNA%20DO%20MY%20CHRISTMAS%20SH%20-%20VICKI%20SUNDAY%20and%20ALAN%20HAYES.mp3",
-    "length": 150,
-    "series": "VICKI SUNDAY and ALAN HAYES",
-    "title": "I'm Gonna Do My Christmas Shopping Early",
-    "date": "1952",
-    "item": "https://archive.org/details/78_im-gonna-do-my-christmas-shopping-early_vicki-sunday-and-alan-hayes-cappa-barra-bo_gbia0498350a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoSeltzer.mp3",
-    "length": 95.08,
-    "series": "A word from our sponsor",
-    "title": "Bromo Seltzer",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/13_Let_It_Snow___Auld_Lang_Syne___A_Hot_Time_in_the_Old_Town_Tonight.mp3",
-    "length": 217,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Let It Snow / Auld Lang Syne / A Hot Time in the Old Town Tonight",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/78_running-bear-oh-carol-go-jimmy-go_bobby-krane-orch.--chorus_gbia0000835a/Running%20Bear%20Oh%2C%20Carol%20Go%2C%20Jimmy%2C%20Go%20-%20Bobby%20Krane%20Orch.%20%26%20Chorus-restored.mp3",
-    "length": 377,
-    "series": "Bobby Krane Orch. & Chorus",
-    "title": "Running Bear; Oh, Carol; Go, Jimmy, Go",
-    "date": "1959",
-    "item": "https://archive.org/details/78_running-bear-oh-carol-go-jimmy-go_bobby-krane-orch.--chorus_gbia0000835a"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_bobby-doyle-ray-blochs-orchestra-and-choir_gbia0371322b/SILENT%20NIGHT%20-%20BOBBY%20DOYLE%20-%20Ray%20Bloch%27s%20Orchestra%20and%20Choir.mp3",
-    "length": 194.11,
-    "series": "Bobby Doyle",
-    "title": "Silent Night",
-    "date": "1946",
-    "item": "https://archive.org/details/78_silent-night_bobby-doyle-ray-blochs-orchestra-and-choir_gbia0371322b"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/14%20Surfin%27%20Santa.mp3",
-    "length": 136.1,
-    "series": "Lord Douglas Byron",
-    "title": "Surfin' Santa",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/JELLOCHOCOLATEPUDDING.mp3",
-    "length": 51.44,
-    "series": "A word from our sponsor",
-    "title": "Jell-O Chocolate Pudding",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_phil-brito-ted-dale-orchestra-irving-berlin_gbia0195191a/WHITE%20CHRISTMAS%20-%20PHIL%20BRITO%20-%20Ted%20Dale%20%26%20Orchestra.mp3",
-    "length": 196,
-    "series": "Phil Brito",
-    "title": "White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_white-christmas_phil-brito-ted-dale-orchestra-irving-berlin_gbia0195191a"
-   },
-   {
-    "src": "https://archive.org/download/JV-30412-1950-QmZr5jZW5zKrJefmZ3Ts3Zh8mDB85k3cHtK4LQmcouvK8x.mp3/BB503541.mp3",
-    "length": 201.87,
-    "series": "Joe Bushkin Trio",
-    "title": "Everyday Is Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/JV-30412-1950-QmZr5jZW5zKrJefmZ3Ts3Zh8mDB85k3cHtK4LQmcouvK8x.mp3"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/March%20of%20the%20Toys_Toyland.mp3",
-    "length": 173.84,
-    "series": "Andre Kostelanetz",
-    "title": "March of the Toys Toyland",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/06%20Caroling%2C%20Caroling.mp3",
-    "length": 163,
-    "series": "Hollywood Pops Orchestra",
-    "title": "Caroling, Caroling",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLifebouySoap.mp3",
-    "length": 64.18,
-    "series": "A word from our sponsor",
-    "title": "Lifebuoy Soap",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/12_Deck_The_Hall.mp3",
-    "length": 152,
-    "series": "Monterey Brass",
-    "title": "Deck The Hall",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_jack-owens-eddie-ballantine-and-his-orchestra-berlin_gbia0133266b/WHITE%20CHRISTMAS%20-%20JACK%20OWENS%20-%20Eddie%20Ballantine%20And%20His%20Orchestra.mp3",
-    "length": 186,
-    "series": "Jack Owens",
-    "title": "White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_white-christmas_jack-owens-eddie-ballantine-and-his-orchestra-berlin_gbia0133266b"
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/Jesu%20Bambino.mp3",
-    "length": 165.58,
-    "series": "Liberace",
-    "title": "Jesu Bambino",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/78_great-christmas-part-2_errol-garner-garner_gbia0062402/01%20-%20Great%20Christmas%20-%20Part%201%20-%20Errol%20Garner%20-%20Garner.mp3",
-    "length": 139,
-    "series": "Errol Garner",
-    "title": "Great Christmas - Part 1; Great Christmas - Part 2",
-    "date": "1949",
-    "item": "https://archive.org/details/78_great-christmas-part-2_errol-garner-garner_gbia0062402"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/MAXWELLHOUSECOFFEE.mp3",
-    "length": 79.13,
-    "series": "A word from our sponsor",
-    "title": "Maxwell House Coffee",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_pussycats-christmas_gene-lowell-chorus-m-w-brown_gbia0340996a/PUSSYCAT%27S%20CHRISTMAS%20-%20Gene%20Lowell%20Chorus.mp3",
-    "length": 183.22,
-    "series": "Gene Lowell Chorus",
-    "title": "Pussycat's Christmas",
-    "item": "https://archive.org/details/78_pussycats-christmas_gene-lowell-chorus-m-w-brown_gbia0340996a"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_ralph-sigwald-horace-heidt-and-his-musical-knights_gbia0271310a/SILENT%20NIGHT%20-%20RALPH%20SIGWALD%20-%20HORACE%20HEIDT%20and%20His%20Musical%20Knights.mp3",
-    "length": 188.62,
-    "series": "Ralph Sigwald",
-    "title": "Silent Night",
-    "date": "1949",
-    "item": "https://archive.org/details/78_silent-night_ralph-sigwald-horace-heidt-and-his-musical-knights_gbia0271310a"
-   },
-   {
-    "src": "https://archive.org/download/78_nol-provenal-ronde-des-filles-de-quimperle_wyss-sophie/K_1065_AR_5500-1.mp3",
-    "length": 269,
-    "series": "Wyss, Sophie",
-    "title": "Noël Provençal; Ronde des Filles de Quimperle",
-    "date": "1941",
-    "item": "https://archive.org/details/78_nol-provenal-ronde-des-filles-de-quimperle_wyss-sophie"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/I%20Saw%20Three%20Ships%2C%20Here%20We%20Go%20A%20Caroling.mp3",
-    "length": 180.22,
-    "series": "Percy Faith",
-    "title": "Medley I Saw Three Ships Here We Go a Caroling",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/REYNOLDSALUMINUM.mp3",
-    "length": 36.23,
-    "series": "A word from our sponsor",
-    "title": "Reynolds Aluminum",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_stilla-natt-heliga-natt_tabernaklets-kr-martin-lidstam-franz-gruber_gbia7038575b/STILLA%20NATT%2C%20HELIGA%20NATT%20-%20Tabernaklets%20k%C3%B6r.mp3",
-    "length": 193,
-    "series": "Tabernaklets kör",
-    "title": "Stilla Natt, Heliga Natt",
-    "date": "1947",
-    "item": "https://archive.org/details/78_stilla-natt-heliga-natt_tabernaklets-kr-martin-lidstam-franz-gruber_gbia7038575b"
-   },
-   {
-    "src": "https://archive.org/download/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j._gbia0005291b/Funny%20Little%20Snow%20Man%20-%20Bobby%20Sabatino%20and%20The%20Charles%20Kenny%20Orchestra.mp3",
-    "length": 186,
-    "series": "Bobby Sabatino and The Charles Kenny Orchestra",
-    "title": "Funny Little Snow Man",
-    "date": "1953",
-    "item": "https://archive.org/details/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j._gbia0005291b"
-   },
-   {
-    "src": "https://archive.org/download/78_ringing-in-a-brand-new-year_billy-ward-and-his-dominoes-billy-ward_gbia0063125a/Ringing%20In%20a%20Brand%20New%20Year%20-%20Billy%20Ward%20And%20His%20Dominoes.mp3",
-    "length": 139,
-    "series": "Billy Ward And His Dominoes",
-    "title": "Ringing In a Brand New Year",
-    "date": "1953",
-    "item": "https://archive.org/details/78_ringing-in-a-brand-new-year_billy-ward-and-his-dominoes-billy-ward_gbia0063125a"
-   },
-   {
-    "src": "https://archive.org/download/oldfashionedchri00symp/02_The_Christmas_song__Mel_Torme_.mp3",
-    "length": 189,
-    "series": "Symphonette Society",
-    "title": "The Christmas song",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWingCigarettes.mp3",
-    "length": 32.99,
-    "series": "A word from our sponsor",
-    "title": "Wing Cigarettes",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/90371-must-be-santa-bill-fredricks-hal-moore-lorne-greene-with-the-jimmy-joyce-childrens-choir/90371%20Must%20Be%20Santa%20Bill%20Fredricks%3B%20Hal%20Moore%20Lorne%20Greene%20with%20The%20%20Jimmy%20Joyce%20Children%27s%20Choir.mp3",
-    "length": 150.82,
-    "series": "Lorne Greene",
-    "title": "Must Be Santa",
-    "date": "1966",
-    "item": "https://archive.org/details/90371-must-be-santa-bill-fredricks-hal-moore-lorne-greene-with-the-jimmy-joyce-childrens-choir"
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_varsity-caroleers-johnny-marks_gbia0366722a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20VARSITY%20CAROLEERS.mp3",
-    "length": 157.91,
-    "series": "Varsity Caroleers",
-    "title": "Rudolph The Red Nosed Reindeer",
-    "date": "1950",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_varsity-caroleers-johnny-marks_gbia0366722a"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/03%20Lonely%20Pup%20%28in%20a%20Christmas%20Shop%29.mp3",
-    "length": 107.93,
-    "series": "Adam Faith",
-    "title": "Lonely Pup (in a Christmas Shop)",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_happy-new-year-darling_ted-black-orchestra-dick-edwards-lombardo-marks_gbia0110572b/HAPPY%20NEW%20YEAR%2C%20DARLING%20-%20Ted%20Black%20Orchestra.mp3",
-    "length": 185,
-    "series": "Ted Black Orchestra",
-    "title": "Happy New Year, Darling",
-    "date": "1949",
-    "item": "https://archive.org/details/78_happy-new-year-darling_ted-black-orchestra-dick-edwards-lombardo-marks_gbia0110572b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/INTERNATIONALSTERLING.mp3",
-    "length": 95.28,
-    "series": "A word from our sponsor",
-    "title": "International Sterling",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_o-christmas-tree_the-sandpiper-chorus-mitchell-miller_gbia0534258/02%20-%20god%20rest%20ye%20merry%2C%20gentlemen%20-%20Ralph%20Nyland%20and%20The%20Sandpiper%20Chorus.mp3",
-    "length": 104,
-    "series": "The Sandpiper Chorus",
-    "title": "God Rest Ye Merry, Gentlemen",
-    "item": "https://archive.org/details/78_o-christmas-tree_the-sandpiper-chorus-mitchell-miller_gbia0534258"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_the-sandpiper-chorus-mitch-miller_gbia0534262a/SILENT%20NIGHT%20-%20THE%20SANDPIPER%20CHORUS%20-%20MITCH%20MILLER.mp3",
-    "length": 104,
-    "series": "The Sandpiper Chorus",
-    "title": "Silent Night",
-    "date": "1949",
-    "item": "https://archive.org/details/78_silent-night_the-sandpiper-chorus-mitch-miller_gbia0534262a"
-   },
-   {
-    "src": "https://archive.org/download/78_there-aint-no-santa-clause_ben-samberg-benny-bell_gbia0000278b/There%20Ain%27t%20No%20Santa%20Clause%20-%20Ben%20Samberg.mp3",
-    "length": 179,
-    "series": "Ben Samberg",
-    "title": "There Ain't No Santa Clause",
-    "item": "https://archive.org/details/78_there-aint-no-santa-clause_ben-samberg-benny-bell_gbia0000278b"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/04%20-%20Merry%20Christmas%2C%20Baby.mp3",
-    "length": 144.74,
-    "series": "The Beach Boys",
-    "title": "Merry Christmas, Baby",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/DUPONT.MP3",
-    "length": 127.33,
-    "series": "A word from our sponsor",
-    "title": "Dupont",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/11%20Ave%20Maria.mp3",
-    "length": 204,
-    "series": "Franco Corelli",
-    "title": "Ave Maria",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/12.RingDeChristmasBells.mp3",
-    "length": 159.27,
-    "series": "Solo: Grady Menefield",
-    "title": "Ring de Christmas Bells",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/07%20I%20Wonder%20As%20I%20Wander%20Out%20Under%20The%20Sky.mp3",
-    "length": 156.21,
-    "series": "George Beverly Shea",
-    "title": "I Wonder as I Wander",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/06%20-%20Santa%20Claus%20is%20Coming%20to%20Town%20-%20Vic%20Damone.mp3",
-    "length": 159.03,
-    "series": "Vic Damone",
-    "title": "Santa Claus is Coming to Town",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWildRootCreamOil.mp3",
-    "length": 42.5,
-    "series": "A word from our sponsor",
-    "title": "Wildroot Cream-Oil",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/O%20Come%20All%20Ye%20Faithful.mp3",
-    "length": 98.9,
-    "series": "The Mormon Tabernacle Choir",
-    "title": "O Come All Ye Faithful",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-wont-be-the-same-with-you-away_the-starlighters-lloyd-shaffer-orchestr_gbia0364388b/CHRISTMAS%20WON%27T%20BE%20THE%20SAME%20%28WITH%20YOU%20A%20-%20THE%20STARLIGHTERS.mp3",
-    "length": 176.5,
-    "series": "The Starlighters",
-    "title": "Christmas Won't Be the Same (with You Away)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_christmas-wont-be-the-same-with-you-away_the-starlighters-lloyd-shaffer-orchestr_gbia0364388b"
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/02%20Adeste%20Fideles.mp3",
-    "length": 192,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "Adeste Fideles",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/78_the-christmas-carol-part-2_bret-morrison-charles-dickens_gbia0366288b/THE%20CHRISTMAS%20CAROL%20%28Part%202%29%20-%20BRET%20MORRISON.mp3",
-    "length": 211.55,
-    "series": "Bret Morrison",
-    "title": "THE CHRISTMAS CAROL (Part 2)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_the-christmas-carol-part-2_bret-morrison-charles-dickens_gbia0366288b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsFatimaCigarettes.mp3",
-    "length": 126.66,
-    "series": "A word from our sponsor",
-    "title": "Fatima Cigarettes",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/oldfashionedchri00symp/05_It_s_beginning_to_look_like_Christmas__Sammy_Kaye_.mp3",
-    "length": 133,
-    "series": "Symphonette Society",
-    "title": "It's beginning to look like Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
-   },
-   {
-    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-j-s-pierpont_gbia0275193b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO.mp3",
-    "length": 174.84,
-    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO",
-    "title": "Guitar Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-j-s-pierpont_gbia0275193b"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/22%20-%20A%20Star%20in%20the%20East%20-%20Harry%20Belafonte.mp3",
-    "length": 258.77,
-    "series": "Harry Belafonte",
-    "title": "A Star in the East",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells-boogie-woogie_will-bradley-and-his-boogie-woogie-boys-will-bradley-bil_gbia0023170a/Jingle%20Bells%20Boogie%20Woogie%20-%20Will%20Bradley%20and%20his%20Boogie%20Woogie%20Boys.mp3",
-    "length": 168,
-    "series": "Will Bradley and his Boogie Woogie Boys",
-    "title": "Jingle Bells Boogie Woogie",
-    "date": "1944",
-    "item": "https://archive.org/details/78_jingle-bells-boogie-woogie_will-bradley-and-his-boogie-woogie-boys-will-bradley-bil_gbia0023170a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
-    "length": 45.43,
-    "series": "A word from our sponsor",
-    "title": "Signal Gasoline",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_little-town-in-ould-county-down_frank-connors-carlo-sanders-pascoe_gbia0042539a/Little%20Town%20in%20Ould%20County%20Down%20-%20Frank%20Connors.mp3",
-    "length": 184,
-    "series": "Frank Connors",
-    "title": "Little Town in Ould County Down",
-    "date": "1944",
-    "item": "https://archive.org/details/78_little-town-in-ould-county-down_frank-connors-carlo-sanders-pascoe_gbia0042539a"
-   },
-   {
-    "src": "https://archive.org/download/78_angels-from-the-realms-of-glory-good-christian-men-rejoice-angels-from-the-realms_gbia0187403b/Angels%20From%20the%20Realms%20of%20Glory%3B%20Good%20Christian%20Men%20Rejoice%3B%20Angels%20From%20the%20Realms%20of%20Glory.mp3",
-    "length": 140.81,
-    "series": "Unknown artist",
-    "title": "Angels From the Realms of Glory; Good Christian Men Rejoice; Angels From the Realms of Glory",
-    "date": "1960",
-    "item": "https://archive.org/details/78_angels-from-the-realms-of-glory-good-christian-men-rejoice-angels-from-the-realms_gbia0187403b"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/11%20That%27s%20What%20I%20Want%20for%20Christmas.mp3",
-    "length": 142.08,
-    "series": "Robyn Alvarez",
-    "title": "That's What I Want for Christmas",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Medley%20Snow%20in%20the%20Street_Joseph%20Dearest_Joseph%20Mine.mp3",
-    "length": 124.58,
-    "series": "New Christy Minstrels",
-    "title": "Snow in the Street Joseph Dearest Joseph Mine",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BLUECOAL.MP3",
-    "length": 22.27,
-    "series": "A word from our sponsor",
-    "title": "Blue Coal",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_barbaras-carol_barbara-carroll-trio-barbara-carroll-dante-martucci-herb-wasserman_gbia0238253b/BARBARA%27S%20CAROL%20-%20BARBARA%20CARROLL%20TRIO%20-%20Barbara%20Carroll.mp3",
-    "length": 202.56,
-    "series": "Barbara Carroll Trio",
-    "title": "Barbara's Carol",
-    "date": "1950",
-    "item": "https://archive.org/details/78_barbaras-carol_barbara-carroll-trio-barbara-carroll-dante-martucci-herb-wasserman_gbia0238253b"
-   },
-   {
-    "src": "https://archive.org/download/78_mothers-christmas-tree_fran-mckenna-the-mulcays-jimmy-and-mildred-jewell-barne_gbia0405697b/MOTHER%27S%20CHRISTMAS%20TREE%20-%20FRAN%20McKENNA%20-%20%22THE%20MULCAYS%22%20%28Jimmy%20and%20Mildred%29.mp3",
-    "length": 142.92,
-    "series": "FRAN McKENNA",
-    "title": "Mother's Christmas Tree",
-    "date": "1952",
-    "item": "https://archive.org/details/78_mothers-christmas-tree_fran-mckenna-the-mulcays-jimmy-and-mildred-jewell-barne_gbia0405697b"
-   },
-   {
-    "src": "https://archive.org/download/78_the-contented-hour-christmas-dreaming_buddy-clark_gbia0354817a/THE%20CONTENTED%20HOUR%20%28CHRISTMAS%20DREAMING%29%20-%20BUDDY%20CLARK.mp3",
-    "length": 186.41,
-    "series": "Buddy Clark",
-    "title": "The Contented Hour (christmas Dreaming)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_the-contented-hour-christmas-dreaming_buddy-clark_gbia0354817a"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/09%20Christmas%20Is%20For%20Children.mp3",
-    "length": 203,
-    "series": "Glen Campbell",
-    "title": "Christmas Is For Children",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdmiral.mp3",
-    "length": 77.38,
-    "series": "A word from our sponsor",
-    "title": "Admiral",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/oldfashionedchri00symp/01_Sleigh_ride__Leroy_Anderson_.mp3",
-    "length": 160,
-    "series": "Symphonette Society",
-    "title": "Sleigh ride",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
-   },
-   {
-    "src": "https://archive.org/download/78_adeste-fidelis_herb-kern-lloyd-sloop-warren-arey_gbia0056767a/Adeste%20Fidelis%20-%20Herb%20Kern%20-%20Lloyd%20Sloop.mp3",
-    "length": 163,
-    "series": "Herb Kern",
-    "title": "Adeste Fidelis",
-    "date": "1947",
-    "item": "https://archive.org/details/78_adeste-fidelis_herb-kern-lloyd-sloop-warren-arey_gbia0056767a"
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/08%20Hark%2C%20The%20Herald%20Angels%20Sing.mp3",
-    "length": 114,
-    "series": "Vince Guaraldi",
-    "title": "Hark, The Herald Angels Sing",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_fats-waller-and-his-rhythm-fats-waller-hencock_gbia0100473a/Jingle%20Bells%20-%20%22Fats%22%20Waller%20and%20his%20Rhythm.mp3",
-    "length": 184,
-    "series": "\"Fats\" Waller and his Rhythm",
-    "title": "Jingle Bells",
-    "date": "1957",
-    "item": "https://archive.org/details/78_jingle-bells_fats-waller-and-his-rhythm-fats-waller-hencock_gbia0100473a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/STURDYDOGFOOD.mp3",
-    "length": 19.54,
-    "series": "A word from our sponsor",
-    "title": "Sturdy Dog Food",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/earl-grant-winter-wonderland-decca-dl-74677-side-1-stereo-et-stylus-f-eq/Earl%20Grant%20-%20Winter%20Wonderland%20-%20Decca%20DL%2074677%20side%202%20Stereo%20%20ET%20stylus%20F%20EQ.mp3",
-    "length": 1184,
-    "series": "Earl Grant",
-    "title": "Winter Wonderland (Side 2)",
-    "date": "1965",
-    "item": "https://archive.org/details/earl-grant-winter-wonderland-decca-dl-74677-side-1-stereo-et-stylus-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/08%20Amarga%20Navidad%20%28Bitter%20Christmas%29.mp3",
-    "length": 152,
-    "series": "El Mariachi Jalisco, Tony Aguilar",
-    "title": "Amarga Navidad (Bitter Christmas)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/21%20Do%20You%20Know%20How%20Christmas%20Trees%20Are%20Grown_.mp3",
-    "length": 212.93,
-    "series": "Jackie DeShannon",
-    "title": "Do You Know How Christmas Trees Are Grown?",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_1-the-first-noel-2-joy-to-the-world_rosemary-page-yuletide-chorus_gbia0535600b/1.%20THE%20FIRST%20NOEL%3B%202.%20JOY%20TO%20THE%20WORLD%20-%20ROSEMARY%20PAGE.mp3",
-    "length": 195,
-    "series": "Rosemary Page",
-    "title": "1. the First Noel; 2. Joy to the World",
-    "date": "1952",
-    "item": "https://archive.org/details/78_1-the-first-noel-2-joy-to-the-world_rosemary-page-yuletide-chorus_gbia0535600b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/VIMMSVITAMINS.mp3",
-    "length": 21.64,
-    "series": "A word from our sponsor",
-    "title": "Vimms Vitamins",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/09%20Hark%20The%20Herald%20Angels%20Sing.mp3",
-    "length": 88.89,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "Hark! The Herald Angels Sing",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_jingling-the-bells_frank-signorelli-and-his-quintet-frank-cheech-signorelli-phil_gbia0063785b/Jingling%20the%20Bells%20-%20Frank%20Signorelli%20and%20His%20Quintet.mp3",
-    "length": 181,
-    "series": "Frank Signorelli and His Quintet",
-    "title": "Jingling the Bells",
-    "date": "1946",
-    "item": "https://archive.org/details/78_jingling-the-bells_frank-signorelli-and-his-quintet-frank-cheech-signorelli-phil_gbia0063785b"
-   },
-   {
-    "src": "https://archive.org/download/78_auld-lang-syne_joe-gumin-and-his-orchestra-with-vocal-quartet_gbia0006829b/Auld%20Lang%20Syne%20-%20Joe%20Gumin%20and%20his%20Orchestra%20with%20Vocal%20Quartet.mp3",
-    "length": 164,
-    "series": "Joe Gumin and his Orchestra with Vocal Quartet",
-    "title": "Auld Lang Syne",
-    "date": "1948",
-    "item": "https://archive.org/details/78_auld-lang-syne_joe-gumin-and-his-orchestra-with-vocal-quartet_gbia0006829b"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/16%20O%20Holy%20Child.mp3",
-    "length": 147,
-    "series": "Dusty Springfield",
-    "title": "O Holy Child",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/VELVEETA.MP3",
-    "length": 36.31,
-    "series": "A word from our sponsor",
-    "title": "Velveeta",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-in-heaven_billy-ward-and-his-dominoes-billy-ward_gbia0063125b/Christmas%20In%20Heaven%20-%20Billy%20Ward%20And%20His%20Dominoes.mp3",
-    "length": 169,
-    "series": "Billy Ward And His Dominoes",
-    "title": "Christmas In Heaven",
-    "date": "1953",
-    "item": "https://archive.org/details/78_christmas-in-heaven_billy-ward-and-his-dominoes-billy-ward_gbia0063125b"
-   },
-   {
-    "src": "https://archive.org/download/78_glade-jul_kantele-spilles-af-ulla-katajavuori-gruber-koskimies_gbia7007703a/Glade%20Jul%20-%20Kantele%20spilles%20af%20Ulla%20Katajavuori.mp3",
-    "length": 202.08,
-    "series": "Kantele spilles af Ulla Katajavuori",
-    "title": "Glade Jul",
-    "date": "1949",
-    "item": "https://archive.org/details/78_glade-jul_kantele-spilles-af-ulla-katajavuori-gruber-koskimies_gbia7007703a"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/02%20The%20Virgin%27s%20Slumber%20Song.mp3",
-    "length": 157,
-    "series": "Tennessee Ernie Ford",
-    "title": "The Virgin's Slumber Song",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/B1%20-%20The%20christmas%20song.mp3",
-    "length": 266.37,
-    "series": "Various",
-    "title": "The christmas song",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/FITCH.MP3",
-    "length": 123.67,
-    "series": "A word from our sponsor",
-    "title": "Fitch Shampoo",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas-part-2_barbara-gussow-david-anderson-irving-berlin-mitchell-miller_gbia0534619b/WHITE%20CHRISTMAS%20-%20Part%202%20-%20BARBARA%20GUSSOW.mp3",
-    "length": 100.28,
-    "series": "Barbara Gussow",
-    "title": "WHITE CHRISTMAS - Part 2",
-    "date": "1952",
-    "item": "https://archive.org/details/78_white-christmas-part-2_barbara-gussow-david-anderson-irving-berlin-mitchell-miller_gbia0534619b"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-lucia_don-baker-lee-pepper-w-eiger_gbia0163167b/SANTA%20LUCIA%20-%20Don%20Baker%20-%20Lee%20Pepper%20-%20W.%20Eiger.mp3",
-    "length": 161.11,
-    "series": "Don Baker",
-    "title": "Santa Lucia",
-    "date": "1947",
-    "item": "https://archive.org/details/78_santa-lucia_don-baker-lee-pepper-w-eiger_gbia0163167b"
-   },
-   {
-    "src": "https://archive.org/download/raymond-lefevre-and-his-orchestra-merry-christmas-side-1-kapp-record-fcs-4257-st/Raymond%20Lefevre%20and%20his%20orchestra%20-%20Merry%20Christmas%20-%20side%201%20-%20Kapp%20Record%20FCS-4257%20stereo%20%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 901,
-    "series": "Raymond Lefevre And His Orchestra",
-    "title": "Merry Christmas (Side 1)",
-    "date": "1968",
-    "item": "https://archive.org/details/raymond-lefevre-and-his-orchestra-merry-christmas-side-1-kapp-record-fcs-4257-st"
-   },
-   {
-    "src": "https://archive.org/download/78_march-of-the-toys_hebert-elmer-ihrke_gbia0000259b/March%20of%20The%20Toys%20-%20Hebert%20-%20Elmer%20Ihrke-restored.mp3",
-    "length": 166.82,
-    "series": "Hebert",
-    "title": "March of The Toys",
-    "date": "1948",
-    "item": "https://archive.org/details/78_march-of-the-toys_hebert-elmer-ihrke_gbia0000259b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsTempoCigarettes.mp3",
-    "length": 59.74,
-    "series": "A word from our sponsor",
-    "title": "Tempo Cigarettes",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/ChristmasSingWithBingBroadcasts/1957%20Christmas%20Sing%20With%20Bing.mp3",
-    "length": 3599.04,
-    "series": "Bing Crosby",
-    "title": "Christmas Sing With Bing (broadcast 3)",
-    "date": "1955-62",
-    "item": "https://archive.org/details/ChristmasSingWithBingBroadcasts"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Ave%20maria.mp3",
-    "length": 209,
-    "series": "Frank Sinatra",
-    "title": "Ave maria",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-jr_eddie-cletro-the-frontiersmen-gould-lertzman_gbia0404442a/SANTA%20CLAUS%2C%20JR.%20-%20EDDIE%20CLETRO%20-%20THE%20FRONTIERSMEN.mp3",
-    "length": 113.59,
-    "series": "Eddie Cletro",
-    "title": "Santa Claus, Jr.",
-    "date": "1956",
-    "item": "https://archive.org/details/78_santa-claus-jr_eddie-cletro-the-frontiersmen-gould-lertzman_gbia0404442a"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Carol%20of%20the%20Bells.mp3",
-    "length": 163.06,
-    "series": "Leonard Bernstein New York Philharmonic",
-    "title": "Carol of the Bells",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsIngramGasoline.mp3",
-    "length": 60.83,
-    "series": "A word from our sponsor",
-    "title": "Ingram Gasoline",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bell-boogie_freddie-mitchell-orchestra-rip-harrigan_gbia0454220a/JINGLE%20BELL%20BOOGIE%20-%20FREDDIE%20MITCHELL%20ORCHESTRA.mp3",
-    "length": 185.38,
-    "series": "Freddie Mitchell Orchestra",
-    "title": "Jingle Bell Boogie",
-    "date": "1949",
-    "item": "https://archive.org/details/78_jingle-bell-boogie_freddie-mitchell-orchestra-rip-harrigan_gbia0454220a"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_jack-russell-and-the-honey-dreamers-irving-berlin_gbia0131293b/WHITE%20CHRISTMAS%20-%20Jack%20Russell%20and%20The%20Honey%20Dreamers.mp3",
-    "length": 183,
-    "series": "Jack Russell and The Honey Dreamers",
-    "title": "White Christmas",
-    "date": "1955",
-    "item": "https://archive.org/details/78_white-christmas_jack-russell-and-the-honey-dreamers-irving-berlin_gbia0131293b"
-   },
-   {
-    "src": "https://archive.org/download/78_ma-my-toys-are-broken_bill-tabbert-400-quartet-joe-lipman-orchestra-jacobs_gbia0027339b/Ma%21%20My%20Toys%20are%20Broken%20-%20Bill%20Tabbert%20-%20400%20Quartet.mp3",
-    "length": 150,
-    "series": "Bill Tabbert",
-    "title": "Ma! My Toys are Broken",
-    "date": "1951",
-    "item": "https://archive.org/details/78_ma-my-toys-are-broken_bill-tabbert-400-quartet-joe-lipman-orchestra-jacobs_gbia0027339b"
-   },
-   {
-    "src": "https://archive.org/download/john-gary-the-john-gary-christmas-album-rca-victor-lsp-2940-stereo-side-1-f-eq-2/John%20Gary%20-%20The%20John%20Gary%20Christmas%20Album%20-%20RCA%20Victor%20LSP-2940%20stereo%20side%202%20F%20EQ.mp3",
-    "length": 1086,
-    "series": "John Gary",
-    "title": "Christmas Album (Side 2)",
-    "date": "1963",
-    "item": "https://archive.org/details/john-gary-the-john-gary-christmas-album-rca-victor-lsp-2940-stereo-side-1-f-eq-2"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDodge.mp3",
-    "length": 62.27,
-    "series": "A word from our sponsor",
-    "title": "Dodge",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/04%20Linus%20And%20Lucy.mp3",
-    "length": 185,
-    "series": "Vince Guaraldi",
-    "title": "Linus And Lucy",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/19%20The%20Wassell%20Song%20Here%20We%20Come%20A%20Wasselling.mp3",
-    "length": 76.96,
-    "series": "Norman Luboff Choir",
-    "title": "The Wassell Song (Here We Come A Wasselling)",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/arthur-fiedler-boston-pops-pops-christmas-party-side-1-rca-victor-lsc-2329-livin/Arthur%20Fiedler%20Boston%20Pops%20-%20Pops%20Christmas%20Party%20-%20side%202%20-%20RCA%20Victor%20LSC-2329%20Living%20Stereo%20%20D71EE%20F%20EQ.mp3",
-    "length": 1129,
-    "series": "Arthur Fiedler Boston Pops",
-    "title": "Pops Christmas Party (Side 2)",
-    "date": "1959",
-    "item": "https://archive.org/details/arthur-fiedler-boston-pops-pops-christmas-party-side-1-rca-victor-lsc-2329-livin"
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/04_Mama_Santa_s_Surprise.mp3",
-    "length": 151,
-    "series": "Monterey Brass",
-    "title": "Mama Santa's Surprise",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/FORD.MP3",
-    "length": 87.16,
-    "series": "A word from our sponsor",
-    "title": "Ford",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/O%20Little%20Town%20of%20Bethlehem.mp3",
-    "length": 186.85,
-    "series": "Eugene Ormandy and the Philadelphia Orchestra",
-    "title": "O Little Town of Bethlehem",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/78_1-deck-the-halls-2-hark-the-herald-angels-sing-3-it-came-upon-a-midnight-clear_gbia0110185a/1.%20Deck%20The%20Halls%202.%20Hark%2C%20The%20Herald%20-%20Tempo%27s%20Carolaires.mp3",
-    "length": 152,
-    "series": "Tempo's Carolaires",
-    "title": "1. Deck The Halls 2. Hark, The Herald Angels Sing 3. It Came Upon A Midnight Clear 4. We Three Kings Of Orient Are 5. Jingle Bells",
-    "date": "1950",
-    "item": "https://archive.org/details/78_1-deck-the-halls-2-hark-the-herald-angels-sing-3-it-came-upon-a-midnight-clear_gbia0110185a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-little-stowaway-on-santas-sleigh_anne-lloyd-mike-stewart-the-sandpipers-tobias-_gbia0534606a/THE%20LITTLE%20STOWAWAY%20ON%20SANTA%27S%20SLEIGH%20-%20ANNE%20LLOYD.mp3",
-    "length": 97,
-    "series": "Anne Lloyd",
-    "title": "The Little Stowaway On Santa's Sleigh",
-    "item": "https://archive.org/details/78_the-little-stowaway-on-santas-sleigh_anne-lloyd-mike-stewart-the-sandpipers-tobias-_gbia0534606a"
-   },
-   {
-    "src": "https://archive.org/download/78_my-christmas-song-for-you_hoagy-carmichael-and-orchestra-martha-mears-tudor-william_gbia0203045a/MY%20CHRISTMAS%20SONG%20FOR%20YOU%20-%20HOAGY%20CARMICHAEL%20and%20ORCHESTRA.mp3",
-    "length": 184,
-    "series": "HOAGY CARMICHAEL and ORCHESTRA",
-    "title": "My Christmas Song for You",
-    "date": "1945",
-    "item": "https://archive.org/details/78_my-christmas-song-for-you_hoagy-carmichael-and-orchestra-martha-mears-tudor-william_gbia0203045a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWhiteKingSoap.mp3",
-    "length": 81.37,
-    "series": "A word from our sponsor",
-    "title": "White King Soap",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_auld-lang-syne_r.-traub-ferko-string-band_gbia0000061b/Auld%20Lang%20Syne%20-%20R.%20Traub%20-%20Ferko%20String%20Band.mp3",
-    "length": 167,
-    "series": "R. Traub",
-    "title": "Auld Lang Syne",
-    "date": "1948",
-    "item": "https://archive.org/details/78_auld-lang-syne_r.-traub-ferko-string-band_gbia0000061b"
-   },
-   {
-    "src": "https://archive.org/download/78_o-come-all-ye-faithful_charles-r-cronham_gbia0187401a/O%20COME%20ALL%20YE%20FAITHFUL%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 84.19,
-    "series": "Charles R. Cronham",
-    "title": "O Come All Ye Faithful",
-    "date": "1960",
-    "item": "https://archive.org/details/78_o-come-all-ye-faithful_charles-r-cronham_gbia0187401a"
-   },
-   {
-    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus-all-around-the-christmas-tree_t-connor_gbia0035050b/I%20Saw%20Mommy%20Kissing%20Santa%20Claus%3B%20All%20Around%20Th%20-%20T.%20Connor.mp3",
-    "length": 339,
-    "series": "T. Connor",
-    "title": "I Saw Mommy Kissing Santa Claus; All Around The Christmas Tree",
-    "date": "1956",
-    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus-all-around-the-christmas-tree_t-connor_gbia0035050b"
-   },
-   {
-    "src": "https://archive.org/download/78_ting-a-ling-a-jingle-christmas-lullaby/1099-17.mp3",
-    "length": 168,
-    "series": "Habat, Eddie",
-    "title": "Ting-a-Ling-a-Jingle (Christmas Lullaby)",
-    "date": "1951",
-    "item": "https://archive.org/details/78_ting-a-ling-a-jingle-christmas-lullaby"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/STUDEBAKERLARK.mp3",
-    "length": 43.17,
-    "series": "A word from our sponsor",
-    "title": "Studebaker Lark",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_eros-hear-me-ye-frosty-cold-hearts-_richard-tauber-benzon-grieg-schmidt_gbia0196188b/EROS%20%28%22%20Hear%20me%2C%20ye%20frosty%20cold%20hearts%20%22%29%20-%20RICHARD%20TAUBER.mp3",
-    "length": 171,
-    "series": "Richard Tauber",
-    "title": "EROS (\" Hear me, ye frosty cold hearts \")",
-    "date": "1946",
-    "item": "https://archive.org/details/78_eros-hear-me-ye-frosty-cold-hearts-_richard-tauber-benzon-grieg-schmidt_gbia0196188b"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-in-your-heart_luis-russell-and-his-orchestra-kizer-russell-lee-richardson_gbia0001205a/Christmas%20In%20Your%20Heart%20-%20Luis%20Russell%20and%20his%20Orchestra.mp3",
-    "length": 188,
-    "series": "Luis Russell and his Orchestra",
-    "title": "Christmas In Your Heart",
-    "date": "1946",
-    "item": "https://archive.org/details/78_christmas-in-your-heart_luis-russell-and-his-orchestra-kizer-russell-lee-richardson_gbia0001205a"
-   },
-   {
-    "src": "https://archive.org/download/78_nutcracker-suite-part-one_toscanini-and-the-nbc-symphony-orchestra-tchaikovsky_gbia0546793a/NUTCRACKER%20SUITE%20%28Part%20One%29%20-%20Toscanini%20and%20the%20NBC%20Symphony%20Orchestra.mp3",
-    "length": 312.7,
-    "series": "Toscanini and the NBC Symphony Orchestra",
-    "title": "NUTCRACKER SUITE (Part One)",
-    "date": "1945",
-    "item": "https://archive.org/details/78_nutcracker-suite-part-one_toscanini-and-the-nbc-symphony-orchestra-tchaikovsky_gbia0546793a"
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/14%20Medley%20A%20Musical%20Christmas.mp3",
-    "length": 173.22,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "Medley: A Musical Christmas Card/Oh Christmas Tree/The Sleigh",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LUCKYBEER.mp3",
-    "length": 21.33,
-    "series": "A word from our sponsor",
-    "title": "Lucky Beer",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/Silver%20Bells.mp3",
-    "length": 159.38,
-    "series": "Kate Smith",
-    "title": "Silver Bells",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/78_snowman_frank-wojnarowski-i-jego-orkiestra-balwan-ze-sniegu_gbia0063720b/Snowman%20-%20Frank%20Wojnarowski%20i%20jego%20Orkiestra.mp3",
-    "length": 168,
-    "series": "Frank Wojnarowski i jego Orkiestra",
-    "title": "Snowman",
-    "date": "1948",
-    "item": "https://archive.org/details/78_snowman_frank-wojnarowski-i-jego-orkiestra-balwan-ze-sniegu_gbia0063720b"
-   },
-   {
-    "src": "https://archive.org/download/bill-doggett-12-songs-of-christmas-king-600-mono-side-1-f-eq-nr/Bill%20Doggett%20-%2012%20Songs%20Of%20Christmas%20-%20King%20600%20mono%20side%202%20F%20EQ-nr.mp3",
-    "length": 947,
-    "series": "Bill Doggett",
-    "title": "12 Songs Of Christmas (Side 2)",
-    "date": "1958",
-    "item": "https://archive.org/details/bill-doggett-12-songs-of-christmas-king-600-mono-side-1-f-eq-nr"
-   },
-   {
-    "src": "https://archive.org/download/78_the-little-boys-letter-to-santa-claus_jimmie-selph-fowler-arnold-blanchard_gbia0005796b/The%20Little%20Boy%27s%20Letter%20to%20Santa%20Claus%20-%20Jimmie%20Selph.mp3",
-    "length": 191,
-    "series": "Jimmie Selph",
-    "title": "The Little Boy's Letter to Santa Claus",
-    "date": "1947",
-    "item": "https://archive.org/details/78_the-little-boys-letter-to-santa-claus_jimmie-selph-fowler-arnold-blanchard_gbia0005796b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/IRONIZEDYEAST.mp3",
-    "length": 53.55,
-    "series": "A word from our sponsor",
-    "title": "Ironized Yeast",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_ave-maria_igo-gutman-franz-schubert_gbia0118458b/Ave%20Maria%20-%20Igo%20Gutman%20-%20Franz%20Schubert.mp3",
-    "length": 177.75,
-    "series": "Igo Gutman",
-    "title": "Ave Maria",
-    "date": "1944",
-    "item": "https://archive.org/details/78_ave-maria_igo-gutman-franz-schubert_gbia0118458b"
-   },
-   {
-    "src": "https://archive.org/download/78_the-skaters-waltz_continental-musette-orchestra-waldteufel_gbia0009739b/The%20Skaters%20Waltz%20-%20Continental%20Musette%20Orchestra.mp3",
-    "length": 172,
-    "series": "Continental Musette Orchestra",
-    "title": "The Skaters Waltz",
-    "date": "1948",
-    "item": "https://archive.org/details/78_the-skaters-waltz_continental-musette-orchestra-waldteufel_gbia0009739b"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Silent%20Night.mp3",
-    "length": 140.64,
-    "series": "Earl Wrightson",
-    "title": "Silent Night",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/henry-mancini-orchestra-and-chorus-a-merry-mancini-christmas-rca-victor-lsp-3612/Henry%20Mancini%20Orchestra%20and%20Chorus%20-%20A%20Merry%20Mancini%20Christmas%20-%20RCA%20Victor%20LSP%203612%20Stereo%20side%202%20%20ET%20stylus%20F.mp3",
-    "length": 1281,
-    "series": "Henry Mancini",
-    "title": "A Merry Mancini Christmas (Side 2)",
-    "date": "1966",
-    "item": "https://archive.org/details/henry-mancini-orchestra-and-chorus-a-merry-mancini-christmas-rca-victor-lsp-3612"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoQuinine.mp3",
-    "length": 26.09,
-    "series": "A word from our sponsor",
-    "title": "Bromo Quinine",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_adeste-fideles-o-come-all-ye-faithful_ken-griffin_gbia0048606b/Adeste%20Fideles%20%28O%20Come%2C%20All%20Ye%20Faithful%29%20-%20Ken%20Griffin.mp3",
-    "length": 180,
-    "series": "Ken Griffin",
-    "title": "Adeste Fideles (O Come, All Ye Faithful)",
-    "date": "1950",
-    "item": "https://archive.org/details/78_adeste-fideles-o-come-all-ye-faithful_ken-griffin_gbia0048606b"
-   },
-   {
-    "src": "https://archive.org/download/78_1.-wildwood-flower-2.-auld-lang-syne_sonny-osborne-and-his-sunny-mountain-boys_gbia0004168a/1.%20Wildwood%20Fl%20-%20Sonny%20Osborne%20and%20his%20Sunny%20Mountain%20Boys.mp3",
-    "length": 285,
-    "series": "Sonny Osborne and his Sunny Mountain Boys",
-    "title": "1. Wildwood Flower; 2. Auld Lang Syne",
-    "date": "1956",
-    "item": "https://archive.org/details/78_1.-wildwood-flower-2.-auld-lang-syne_sonny-osborne-and-his-sunny-mountain-boys_gbia0004168a"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/White%20Christmas.mp3",
-    "length": 143.93,
-    "series": "Chet Atkins",
-    "title": "White Christmas",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/the-hollyridge-strings-christmas-music/The%20Hollyridge%20Strings%20%20-%20Christmas%20music.mp3",
-    "length": 448.56,
-    "series": "The Hollyridge Strings",
-    "title": "Christmas Music",
-    "date": "1965",
-    "item": "https://archive.org/details/the-hollyridge-strings-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CARTERSLITTLELIVERPILLS.mp3",
-    "length": 47.62,
-    "series": "A word from our sponsor",
-    "title": "Carter's Little Liver Pills",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/we-wanna-see-santa-do-the-mambo-bill-darnel-and-the-smith-brothers-with-sid-bass/0671%20We%20Wanna%20See%20Santa%20Do%20the%20Mambo%20Fred%20Smith%3B%20Horace%20Webb%20Bill%20Darnel%20and%20The%20Smith%20Brothers%20with%20Sid%20Bass%20and%20His%20Orchestra.mp3",
-    "length": 136.99,
-    "series": "Bill Darnel and the Smith Brothers",
-    "title": "We Wanna See Santa Do the Mambo",
-    "date": "1954",
-    "item": "https://archive.org/details/we-wanna-see-santa-do-the-mambo-bill-darnel-and-the-smith-brothers-with-sid-bass"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_the-scottish-festivals-of-male-voice-praise-gruber-james-mcroberts_gbia3030358a/SILENT%20NIGHT%20-%20THE%20SCOTTISH%20FESTIVALS%20OF%20MALE%20VOICE%20PRAISE.mp3",
-    "length": 174,
-    "series": "The Scottish Festivals of Male Voice Praise",
-    "title": "Silent Night",
-    "date": "1954",
-    "item": "https://archive.org/details/78_silent-night_the-scottish-festivals-of-male-voice-praise-gruber-james-mcroberts_gbia3030358a"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/12_Jingle_bells.mp3",
-    "length": 180,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Jingle bells",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/78_id-like-to-find-you-in-my-stocking_kathy-march-lawrence-piano-roll-cook-nick-ken_gbia0433043a/I%27D%20LIKE%20TO%20FIND%20YOU%20IN%20MY%20STOCKING%20-%20KATHY%20MARCH.mp3",
-    "length": 168.65,
-    "series": "Kathy March",
-    "title": "I'd Like to Find You in My Stocking",
-    "date": "1950",
-    "item": "https://archive.org/details/78_id-like-to-find-you-in-my-stocking_kathy-march-lawrence-piano-roll-cook-nick-ken_gbia0433043a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/QUAKER.MP3",
-    "length": 128.43,
-    "series": "A word from our sponsor",
-    "title": "Quaker",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/08%20Gloria%20In%20Excelsis.mp3",
-    "length": 252.11,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "Gloria In Excelsis",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells-up-on-the-housetop-god-rest-ye-merry-gentlemen-away-in-a-manger-i_gbia0203791b/JINGLE%20BELLS%3B%20UP%20ON%20THE%20HOUSETOP%3B%20G%20-%20THE%20SANDPIPER%20CHORUS.mp3",
-    "length": 246.05,
-    "series": "The Sandpiper Chorus",
-    "title": "Jingle Bells; Up on the Housetop; God Rest Ye Merry, Gentlemen; Away in a Manger; It Came Upon the Midnight Clear; Silent Night",
-    "date": "1952",
-    "item": "https://archive.org/details/78_jingle-bells-up-on-the-housetop-god-rest-ye-merry-gentlemen-away-in-a-manger-i_gbia0203791b"
-   },
-   {
-    "src": "https://archive.org/download/78_bob-schofield-christmas-1950_gbia0346159b/Bob%20Schofield%20Christmas%201950.mp3",
-    "length": 244.85,
-    "series": "",
-    "title": "Bob Schofield Christmas 1950",
-    "date": "1950",
-    "item": "https://archive.org/details/78_bob-schofield-christmas-1950_gbia0346159b"
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/09_Snowbound.mp3",
-    "length": 121,
-    "series": "Wayne King & His Orchestra",
-    "title": "Snowbound",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CAMELCIGARETTES.mp3",
-    "length": 126.01,
-    "series": "A word from our sponsor",
-    "title": "Camel Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_the-skaters_sulas-musette-orchestra_gbia0045151b/The%20Skaters%20-%20Sula%27s%20Musette%20Orchestra.mp3",
-    "length": 171,
-    "series": "Sula's Musette Orchestra",
-    "title": "The Skaters",
-    "date": "1948",
-    "item": "https://archive.org/details/78_the-skaters_sulas-musette-orchestra_gbia0045151b"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/10%20-%20The%20First%20Noel%20-%20Mario%20Lanza.mp3",
-    "length": 244.85,
-    "series": "Mario Lanza",
-    "title": "The First Noel",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_6142-White-Christmas/6142-White-Christmas.mp3",
-    "length": 150.7,
-    "series": "Gustav Winckler",
-    "title": "White Christmas",
-    "date": "1951",
-    "item": "https://archive.org/details/78_6142-White-Christmas"
-   },
-   {
-    "src": "https://archive.org/download/78_winter-wonderland_lenny-and-judith-lil-wally-and-the-lucky-harmony-boys-orchestra_gbia0082304b/Winter%20Wonderland%20-%20Lenny%20and%20Judith%20-%20Li%27l%20Wally%20And%20The%20Lucky%20Harmony%20Boys%20Orchestra.mp3",
-    "length": 130,
-    "series": "Lenny and Judith",
-    "title": "Winter Wonderland",
-    "date": "1956",
-    "item": "https://archive.org/details/78_winter-wonderland_lenny-and-judith-lil-wally-and-the-lucky-harmony-boys-orchestra_gbia0082304b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
-    "length": 45.51,
-    "series": "A word from our sponsor",
-    "title": "Bubble Up",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/04%20C%20H%20R%20I%20S%20T%20M%20A%20S.mp3",
-    "length": 119.09,
-    "series": "George Beverly Shea",
-    "title": "O Men From the fields",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/19%20-%20Good%20King%20Wenceslaus%20-%20Morton%20Gould%20and%20his%20Orchestra.mp3",
-    "length": 153.26,
-    "series": "Morton Gould and his Orchestra",
-    "title": "Good King Wenceslaus",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/07_Carol_of_the_bells.mp3",
-    "length": 128,
-    "series": "Wayne King & His Orchestra",
-    "title": "Carol of the bells",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/The%20Holly%20and%20the%20Ivy.mp3",
-    "length": 107.55,
-    "series": "Norman Luboff Choir",
-    "title": "The Holly and the Ivy",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnchorHocking.mp3",
-    "length": 44.85,
-    "series": "A word from our sponsor",
-    "title": "Anchor Hocking",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/10%20In%20The%20Sweet%20Forever.mp3",
-    "length": 156.58,
-    "series": "Chuck Wagon Gang",
-    "title": "In The Sweet Forever",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_the-caroleers-vicky-kasen_gbia0203789b/JINGLE%20BELLS%20-%20THE%20CAROLEERS%20-%20Vicky%20Kasen.mp3",
-    "length": 206.69,
-    "series": "The Caroleers",
-    "title": "Jingle Bells",
-    "date": "1950",
-    "item": "https://archive.org/details/78_jingle-bells_the-caroleers-vicky-kasen_gbia0203789b"
-   },
-   {
-    "src": "https://archive.org/download/78_new-year-bells_jack-swanson-and-dotty-travis-sid-prosen_gbia0433064b/NEW%20YEAR%20BELLS%20-%20JACK%20SWANSON%20and%20DOTTY%20TRAVIS.mp3",
-    "length": 130.56,
-    "series": "Jack Swanson and Dotty Travis",
-    "title": "New Year Bells",
-    "date": "1951",
-    "item": "https://archive.org/details/78_new-year-bells_jack-swanson-and-dotty-travis-sid-prosen_gbia0433064b"
-   },
-   {
-    "src": "https://archive.org/download/78_glory-to-god-in-the-highest_stamford-high-school-a-cappella-choir-pergolesi-w.-raym_gbia0001195a/Glory%20to%20God%20in%20The%20Highest%20-%20Stamford%20High%20School%20A%20Cappella%20Choir.mp3",
-    "length": 187,
-    "series": "Stamford High School A Cappella Choir",
-    "title": "Glory to God in The Highest",
-    "date": "1950",
-    "item": "https://archive.org/details/78_glory-to-god-in-the-highest_stamford-high-school-a-cappella-choir-pergolesi-w.-raym_gbia0001195a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
-    "length": 49.1,
-    "series": "A word from our sponsor",
-    "title": "Goodyear Lifeguard Tires",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/Christmas%20Eve%20In%20My%20Home%20Town.mp3",
-    "length": 201.19,
-    "series": "Kate Smith",
-    "title": "Christmas Eve In My Home Town",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/the-three-suns-the-sound-of-christmas-side-1-rca-camden-cal-633-re-d-71-ee-dc-ar/The%20Three%20Suns%20-%20The%20Sound%20Of%20Christmas%20-%20side%202%20-%20RCA%20Camden%20CAL-633%20RE%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 1153,
-    "series": "The Three Suns",
-    "title": "The Sound Of Christmas (Side 2)",
-    "date": "1960",
-    "item": "https://archive.org/details/the-three-suns-the-sound-of-christmas-side-1-rca-camden-cal-633-re-d-71-ee-dc-ar"
-   },
-   {
-    "src": "https://archive.org/download/78_the-first-noel-joy-to-the-world-the-first-noel_gbia0187403a/The%20First%20Noel%3B%20Joy%20To%20The%20World%3B%20The%20First%20Noel.mp3",
-    "length": 179.54,
-    "series": "Unknown artist",
-    "title": "The First Noel; Joy To The World; The First Noel",
-    "date": "1960",
-    "item": "https://archive.org/details/78_the-first-noel-joy-to-the-world-the-first-noel_gbia0187403a"
-   },
-   {
-    "src": "https://archive.org/download/78_its-santa-claus-time-merry-christmas-day_cousin-fuzzy-and-his-cousins-chuck-ro_gbia0474803a/%22IT%27S%20SANTA%20CLAUS%20TIME%22%20%28Me%20-%20COUSIN%20FUZZY%20and%20His%20Cousins.mp3",
-    "length": 143.09,
-    "series": "COUSIN FUZZY and His Cousins",
-    "title": "\"IT'S SANTA CLAUS TIME\" (Merry Christmas Day)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_its-santa-claus-time-merry-christmas-day_cousin-fuzzy-and-his-cousins-chuck-ro_gbia0474803a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/MAYFIELDCIGARETTES.mp3",
-    "length": 43.02,
-    "series": "A word from our sponsor",
-    "title": "Mayfield Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-holy-night_beniamino-gigli-praga-grber-rinaldo-zamboni_gbia7017636b/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20BENIAMINO%20GIGLI.mp3",
-    "length": 154.39,
-    "series": "Beniamino Gigli",
-    "title": "Silent Night, Holy Night",
-    "date": "1947",
-    "item": "https://archive.org/details/78_silent-night-holy-night_beniamino-gigli-praga-grber-rinaldo-zamboni_gbia7017636b"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/16%20-%20Let%20It%20Snow%21%20Let%20It%20Snow%21%20Let%20It%20Snow%21%20-%20Ed%20Ames.mp3",
-    "length": 151.41,
-    "series": "Ed Ames",
-    "title": "Let It Snow! Let It Snow! Let It Snow!",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/10%20Nieve%20%28Snow%29.mp3",
-    "length": 149,
-    "series": "Linda Arce",
-    "title": "Nieve (Snow)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
    },
    {
     "src": "https://archive.org/download/78_i-dreamed-i-spent-christmas-in-heaven_zeke-clements-and-his-western-swing-gang-zeke_gbia0417713b/I%20DREAMED%20I%20SPE%20-%20Zeke%20Clements%20and%20his%20Western%20Swing%20Gang.mp3",
@@ -66850,1117 +63141,64 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_i-dreamed-i-spent-christmas-in-heaven_zeke-clements-and-his-western-swing-gang-zeke_gbia0417713b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDoublemintGum.mp3",
-    "length": 17.98,
+    "src": "https://archive.org/download/78_julens-melodier-i-del_wivex-strygeorkester-knud-dalgaard_gbia7009069a/Julens%20Melodier%20-%20I.%20Del%20-%20Wivex%27%20Strygeorkester.mp3",
+    "length": 197.77,
+    "series": "Wivex' Strygeorkester",
+    "title": "Julens Melodier - I. Del",
+    "item": "https://archive.org/details/78_julens-melodier-i-del_wivex-strygeorkester-knud-dalgaard_gbia7009069a"
+   },
+   {
+    "src": "https://archive.org/download/78_gdy-sie-chrystus-rodzi_w-lachman_gbia0060908a/Gdy%20Sie%20Chrystus%20Rodzi%20-%20W.%20Lachman.mp3",
+    "length": 195.43,
+    "series": "W. Lachman",
+    "title": "Gdy Sie Chrystus Rodzi",
+    "item": "https://archive.org/details/78_gdy-sie-chrystus-rodzi_w-lachman_gbia0060908a"
+   },
+   {
+    "src": "https://archive.org/download/78_toyland-jubilee_lenny-herman-quintet-hermanaires-jon-arthur-jan-garber_gbia0399015b/TOYLAND%20JUBILEE%20-%20LENNY%20HERMAN%20QUINTET%20-%20HERMANAIRES.mp3",
+    "length": 169.94,
+    "series": "Lenny Herman Quintet",
+    "title": "Toyland Jubilee",
+    "date": "1951",
+    "item": "https://archive.org/details/78_toyland-jubilee_lenny-herman-quintet-hermanaires-jon-arthur-jan-garber_gbia0399015b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoSeltzer.mp3",
+    "length": 95.08,
     "series": "A word from our sponsor",
-    "title": "Doublemint Gum",
+    "title": "Bromo Seltzer",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_the-mistletoe-song_jack-owens-sam-cowling-eddie-ballantine-and-his-orchestra-owens_gbia0133266a/THE%20MISTLETOE%20SONG%20-%20JACK%20OWENS%20-%20SAM%20COWLING.mp3",
-    "length": 177,
-    "series": "Jack Owens",
-    "title": "The Mistletoe Song",
-    "date": "1947",
-    "item": "https://archive.org/details/78_the-mistletoe-song_jack-owens-sam-cowling-eddie-ballantine-and-his-orchestra-owens_gbia0133266a"
+    "src": "https://archive.org/download/78_julen-har-bragt-velsignet-bud_medlemmer-af-radiokoret-palle-alsfelt-c-e-f-weyse_gbia7005814a/Julen%20har%20bragt%20velsignet%20Bud%20-%20Medlemmer%20af%20Radiokoret.mp3",
+    "length": 171.24,
+    "series": "Medlemmer af Radiokoret",
+    "title": "Julen har bragt velsignet Bud",
+    "item": "https://archive.org/details/78_julen-har-bragt-velsignet-bud_medlemmer-af-radiokoret-palle-alsfelt-c-e-f-weyse_gbia7005814a"
    },
    {
-    "src": "https://archive.org/download/78_kris-kringle_jiminy-cricket-m-schwab-c-edwards_gbia8001523a/%22KRIS%20KRINGLE%22%20-%20JIMINY%20CRICKET%20-%20M.%20Schwab.mp3",
-    "length": 187.73,
-    "series": "Jiminy Cricket",
-    "title": "\"kris Kringle\"",
-    "date": "1956",
-    "item": "https://archive.org/details/78_kris-kringle_jiminy-cricket-m-schwab-c-edwards_gbia8001523a"
-   },
-   {
-    "src": "https://archive.org/download/78_stilla-natt_ulla-katajavuori-gruber-koskimies_gbia7036139a/STILLA%20NATT%20-%20ULLA%20KATAJAVUORI%20-%20Gruber%20-%20Koskimies.mp3",
-    "length": 208,
+    "src": "https://archive.org/download/78_glade-jul_ulla-katajavuori-gruber-koskimies_gbia7008769a/Glade%20Jul%20-%20Ulla%20Katajavuori%20-%20Gruber%20-%20Koskimies.mp3",
+    "length": 201.29,
     "series": "Ulla Katajavuori",
-    "title": "Stilla Natt",
+    "title": "Glade Jul",
     "date": "1949",
-    "item": "https://archive.org/details/78_stilla-natt_ulla-katajavuori-gruber-koskimies_gbia7036139a"
+    "item": "https://archive.org/details/78_glade-jul_ulla-katajavuori-gruber-koskimies_gbia7008769a"
    },
    {
-    "src": "https://archive.org/download/the-new-christy-minstrels-merry-christmas-side-1-columbia-cs-8896-stereo-f-1/The%20New%20Christy%20Minstrels%20-%20Merry%20Christmas%20-%20side%202%20Columbia%20CS%208896%20stereo%20DC%20Art10.mp3",
-    "length": 833,
-    "series": "The New Christy Minstrels",
-    "title": "Merry Christmas (Side 2)",
-    "date": "1963",
-    "item": "https://archive.org/details/the-new-christy-minstrels-merry-christmas-side-1-columbia-cs-8896-stereo-f-1"
+    "src": "https://archive.org/download/78_first-noel-holy-night_robert-rheims_gbia0285488a/First%20Noel%3B%20Holy%20Night%20-%20ROBERT%20RHEIMS.mp3",
+    "length": 162.39,
+    "series": "Robert Rheims",
+    "title": "First Noel; Holy Night",
+    "item": "https://archive.org/details/78_first-noel-holy-night_robert-rheims_gbia0285488a"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceARoni.mp3",
-    "length": 38.06,
-    "series": "A word from our sponsor",
-    "title": "Rice-A-Roni",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/12%20The%20First%20Noel.mp3",
-    "length": 185.94,
-    "series": "The Lennon Sisters",
-    "title": "The First Noel",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_bob-crosby-and-orchestra-bob-crosby-styne-cah_gbia0077492a/Let%20It%20Snow%3B%20Let%20It%20Snow%3B%20Let%20I%20-%20Bob%20Crosby%20and%20Orchestra.mp3",
-    "length": 182,
-    "series": "Bob Crosby and Orchestra",
-    "title": "Let It Snow; Let It Snow; Let It Snow",
-    "date": "1946",
-    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_bob-crosby-and-orchestra-bob-crosby-styne-cah_gbia0077492a"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Sleep%20Holy%20Baby.mp3",
-    "length": 122.23,
-    "series": "Eileen Farrell",
-    "title": "Sleep Holy Baby",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/78_the-night-before-christmas_the-caroleers_gbia0203788a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20THE%20CAROLEERS.mp3",
-    "length": 204,
-    "series": "The Caroleers",
+    "src": "https://archive.org/download/78_the-night-before-christmas_gbia0048208b/The%20Night%20Before%20Christmas.mp3",
+    "length": 193,
+    "series": "",
     "title": "The Night Before Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/78_the-night-before-christmas_the-caroleers_gbia0203788a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsodent.mp3",
-    "length": 38.53,
-    "series": "A word from our sponsor",
-    "title": "Pepsodent",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_sleigh-bell-serenade_tom-memoli-phil-stewart_gbia0484437b/SLEIGH%20BELL%20SERENADE%20-%20TOM%20MEMOLI%20-%20PHIL%20STEWART.mp3",
-    "length": 179,
-    "series": "Tom Memoli",
-    "title": "Sleigh Bell Serenade",
-    "item": "https://archive.org/details/78_sleigh-bell-serenade_tom-memoli-phil-stewart_gbia0484437b"
-   },
-   {
-    "src": "https://archive.org/download/JV-18873-1941-QmaLa8CZ6bggTcWEA93ZMKNWPLXYAtxMptCQXG7DcNNDWu.mp3/RiCol36268.mp3",
-    "length": 202.34,
-    "series": "Claude Thornhill And His Orchestra",
-    "title": "Snowfall (Theme)",
-    "date": "1941",
-    "item": "https://archive.org/details/JV-18873-1941-QmaLa8CZ6bggTcWEA93ZMKNWPLXYAtxMptCQXG7DcNNDWu.mp3"
-   },
-   {
-    "src": "https://archive.org/download/78_c-h-r-i-s-t-m-a-s_buddy-kaine-arnold-carson_gbia3021256b/C-H-R-I-S-T-M-A-S%20-%20BUDDY%20KAINE%20-%20Arnold.mp3",
-    "length": 204,
-    "series": "Buddy Kaine",
-    "title": "C-h-r-i-s-t-m-a-s",
-    "date": "1951",
-    "item": "https://archive.org/details/78_c-h-r-i-s-t-m-a-s_buddy-kaine-arnold-carson_gbia3021256b"
-   },
-   {
-    "src": "https://archive.org/download/WillieLewisAndHisNegroBand-ChristmasNightInHarlem/Willie_Lewis_and_his_Negro_Band-Christmas_Night_In_Harlem.mp3",
-    "length": 136,
-    "series": "Willie Lewis",
-    "title": "Christmas Night In Harlem",
-    "date": "1941",
-    "item": "https://archive.org/details/WillieLewisAndHisNegroBand-ChristmasNightInHarlem"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
-    "length": 36.39,
-    "series": "A word from our sponsor",
-    "title": "Lux Toilet Soap",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/07_Joy_to_The_World_Deck_The_Hall.mp3",
-    "length": 133,
-    "series": "Monterey Brass",
-    "title": "Joy to The World Deck The Hall",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/11_Christmas_in_Killarney.mp3",
-    "length": 103,
-    "series": "Wayne King & His Orchestra",
-    "title": "Christmas in Killarney",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_del-wood_gbia0250154a/JINGLE%20BELLS%20-%20DEL%20WOOD.mp3",
-    "length": 119.59,
-    "series": "Del Wood",
-    "title": "Jingle Bells",
-    "date": "1954",
-    "item": "https://archive.org/details/78_jingle-bells_del-wood_gbia0250154a"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bell-rock_bobby-helms_joe-beal_jim-boothe_gbia10499455_item/Jingle%20Bell%20Rock-Bobby%20Helms.mp3",
-    "length": 130,
-    "series": "Bobby Helms",
-    "title": "Jingle Bell Rock",
-    "date": "1957",
-    "item": "https://archive.org/details/78_jingle-bell-rock_bobby-helms_joe-beal_jim-boothe_gbia10499455_item"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzerPlopPlopFizzFizz.mp3",
-    "length": 29.98,
-    "series": "A word from our sponsor",
-    "title": "Alka Seltzer Plop Plop Fizz Fizz",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/pete-fountain-candy-clarinet-christmas-coral-crl-57487-side-2-mono-f-eq/Pete%20Fountain%20-%20Candy%20Clarinet%20Christmas%20-%20Coral%20CRL%2057487%20side%201%20mono%20F%20EQ.mp3",
-    "length": 907,
-    "series": "Pete Fountain",
-    "title": "Candy Clarinet Christmas (Side 1)",
-    "date": "1967",
-    "item": "https://archive.org/details/pete-fountain-candy-clarinet-christmas-coral-crl-57487-side-2-mono-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/78_on-the-atcheson-topeka-and-the-santa-fe_harry-roy-his-band-eve-lombard-warren-merce_gbia3032579b/ON%20THE%20ATCHESON%2C%20TOPEKA%20AND%20THE%20SAN%20-%20HARRY%20ROY%20%26%20HIS%20BAND.mp3",
-    "length": 181.58,
-    "series": "Harry Roy & His Band",
-    "title": "On The Atcheson, Topeka And The Santa Fe",
-    "date": "1946",
-    "item": "https://archive.org/details/78_on-the-atcheson-topeka-and-the-santa-fe_harry-roy-his-band-eve-lombard-warren-merce_gbia3032579b"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/20%20Christmas%20Time%20is%20Here%20Again.mp3",
-    "length": 221.5,
-    "series": "The Flirtations",
-    "title": "Christmas Time is Here Again",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town_johnny-frank-coots-gillespie_gbia0480632a/SANTA%20CLAUS%20IS%20COMING%20TO%20TOWN%20-%20JOHNNY%20FRANK.mp3",
-    "length": 152.93,
-    "series": "Johnny Frank",
-    "title": "Santa Claus is Coming to Town",
-    "date": "1948",
-    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town_johnny-frank-coots-gillespie_gbia0480632a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzer.mp3",
-    "length": 117.36,
-    "series": "A word from our sponsor",
-    "title": "Alka Seltzer",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/11%20The%20Star%20Carol.mp3",
-    "length": 175.12,
-    "series": "The Lennon Sisters",
-    "title": "The Star Carol",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/marian-anderson-christmas-carols-side-1-rca-victor-lm-2613-d-71-ee-f-eq/Marian%20Anderson%20-%20Christmas%20Carols%20-%20side%201%20-%20RCA%20Victor%20LM-2613%20D71EE%20%20F%20EQ.mp3",
-    "length": 1354,
-    "series": "Marian Anderson",
-    "title": "Christmas Carols (Side 1)",
-    "date": "1962",
-    "item": "https://archive.org/details/marian-anderson-christmas-carols-side-1-rca-victor-lm-2613-d-71-ee-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/06%20The%20Christmas%20Song%20%28Chestnuts%20Roasting%20on%20a%20Open%20Fire%29.mp3",
-    "length": 176.98,
-    "series": "The Lennon Sisters",
-    "title": "The Christmas Song (Chestnuts Roasting on a Open Fire)",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/78_theres-a-christmas-tree-in-heaven_four-aces-max-spickol-bill-borelli-jr_gbia0078530a/There%27s%20a%20Christmas%20Tree%20In%20Heaven%20-%20Four%20Aces.mp3",
-    "length": 207,
-    "series": "Four Aces",
-    "title": "There's a Christmas Tree In Heaven",
-    "date": "1951",
-    "item": "https://archive.org/details/78_theres-a-christmas-tree-in-heaven_four-aces-max-spickol-bill-borelli-jr_gbia0078530a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CHIQUITABANANNA.mp3",
-    "length": 34.75,
-    "series": "A word from our sponsor",
-    "title": "Chiquita Banana",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/07%20-%20What%20Child%20is%20This%20-%20Ed%20Ames.mp3",
-    "length": 150.28,
-    "series": "Ed Ames",
-    "title": "What Child is This",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_slam-stewart-quintet-slam-stewart-red-norvo-johnny-guarnieri-bill-de-a_gbia0114433a/Jingle%20Bells%20-%20Slam%20Stewart%20Quintet%20-%20Slam%20Stewart.mp3",
-    "length": 191,
-    "series": "Slam Stewart Quintet",
-    "title": "Jingle Bells",
-    "date": "1945",
-    "item": "https://archive.org/details/78_jingle-bells_slam-stewart-quintet-slam-stewart-red-norvo-johnny-guarnieri-bill-de-a_gbia0114433a"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/11_There_s_no_place_like_home_at_Christmas.mp3",
-    "length": 175,
-    "series": "Jan Garber & His Orchestra",
-    "title": "There's no place like home at Christmas",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/78_o-holy-night_alex-paterson-ralph-ford-adolphe-adam_gbia0270459b/%22O%20HOLY%20NIGHT%22%20-%20ALEX%20PATERSON%20-%20RALPH%20FORD.mp3",
-    "length": 197.64,
-    "series": "Alex Paterson",
-    "title": "\"o Holy Night\"",
-    "date": "1950",
-    "item": "https://archive.org/details/78_o-holy-night_alex-paterson-ralph-ford-adolphe-adam_gbia0270459b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
-    "length": 60.33,
-    "series": "A word from our sponsor",
-    "title": "Palmolive Soap",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_gwiazdor_mad-man-michaels-michaels_gbia0082280a/Gwiazdor%20-%20Mad%20Man%20Michaels%20-%20Michaels.mp3",
-    "length": 204,
-    "series": "Mad Man Michaels",
-    "title": "Gwiazdor",
-    "date": "1955",
-    "item": "https://archive.org/details/78_gwiazdor_mad-man-michaels-michaels_gbia0082280a"
-   },
-   {
-    "src": "https://archive.org/download/earl-grant-winter-wonderland-decca-dl-74677-side-1-stereo-et-stylus-f-eq/Earl%20Grant%20-%20Winter%20Wonderland%20-%20Decca%20DL%2074677%20side%201%20Stereo%20%20ET%20stylus%20F%20EQ.mp3",
-    "length": 1018,
-    "series": "Earl Grant",
-    "title": "Winter Wonderland (Side 1)",
-    "date": "1965",
-    "item": "https://archive.org/details/earl-grant-winter-wonderland-decca-dl-74677-side-1-stereo-et-stylus-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/08%20-%20Blue%20Christmas.mp3",
-    "length": 189.05,
-    "series": "The Beach Boys",
-    "title": "Blue Christmas",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_herb-kern-lloyd-sloops-warren-arey_gbia0056765b/O%20Little%20Town%20of%20Bethlehem%20-%20Herb%20Kern%20-%20Lloyd%20Sloops.mp3",
-    "length": 181,
-    "series": "Herb Kern",
-    "title": "O Little Town of Bethlehem",
-    "date": "1947",
-    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_herb-kern-lloyd-sloops-warren-arey_gbia0056765b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/NESCAFE.MP3",
-    "length": 32.95,
-    "series": "A word from our sponsor",
-    "title": "Nescafé",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_elizabeth_gbia0520020a/Silent%20Night%20-%20Elizabeth.mp3",
-    "length": 90.58,
-    "series": "Elizabeth",
-    "title": "Silent Night",
-    "date": "December 16, 1941",
-    "item": "https://archive.org/details/78_silent-night_elizabeth_gbia0520020a"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_scotty-macgregor-scotty-macgregor_gbia0474083/01%20-%20IT%27S%20SANTA%20CLAUS%20-%20SCOTTY%20MACGREGOR%20-%20Scotty%20Macgregor.mp3",
-    "length": 126.94,
-    "series": "Scotty Macgregor",
-    "title": "It's Santa Claus",
-    "item": "https://archive.org/details/78_jingle-bells_scotty-macgregor-scotty-macgregor_gbia0474083"
-   },
-   {
-    "src": "https://archive.org/download/78_when-christmas-comes-to-our-house-open-up-your-heart-over-the-rainbow_dottie-evan_gbia0470062a/WHEN%20CHRISTMAS%20COMES%20TO%20OUR%20HOUSE%3B%20OPEN%20UP%20%20-%20Dottie%20Evans.mp3",
-    "length": 389.83,
-    "series": "Dottie Evans",
-    "title": "When Christmas Comes To Our House; Open Up Your Heart; Over The Rainbow",
-    "item": "https://archive.org/details/78_when-christmas-comes-to-our-house-open-up-your-heart-over-the-rainbow_dottie-evan_gbia0470062a"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/O%20Come%20All%20Ye%20Faithful.mp3",
-    "length": 140.42,
-    "series": "Chet Atkins",
-    "title": "O Come All Ye Faithful",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAridDeoderant.mp3",
-    "length": 46.02,
-    "series": "A word from our sponsor",
-    "title": "Arrid Deodorant",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_lonely-christmas_cedric-wallace-orch-jimmy-holmes-sprung-rose_gbia0415769a/LONELY%20CHRISTMAS%20-%20CEDRIC%20WALLACE%20ORCH.%20-%20JIMMY%20HOLMES.mp3",
-    "length": 196.73,
-    "series": "Cedric Wallace Orch.",
-    "title": "Lonely Christmas",
-    "date": "1951",
-    "item": "https://archive.org/details/78_lonely-christmas_cedric-wallace-orch-jimmy-holmes-sprung-rose_gbia0415769a"
-   },
-   {
-    "src": "https://archive.org/download/78_a-king-herod-and-the-cock-b-on-christmas-night_patrick-shuldham-shaw-isabel-bedling_gbia0552712a/a%29%20KING%20HEROD%20AND%20THE%20COCK%3B%20%28b%29%20O%20-%20PATRICK%20SHULDHAM-SHAW.mp3",
-    "length": 202,
-    "series": "Patrick Shuldham-Shaw",
-    "title": "(A) King Herod And The Cock; (B) On Christmas Night",
-    "date": "1949",
-    "item": "https://archive.org/details/78_a-king-herod-and-the-cock-b-on-christmas-night_patrick-shuldham-shaw-isabel-bedling_gbia0552712a"
-   },
-   {
-    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289367b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO%20%28Formerly%20Rambler%20Trio%29.mp3",
-    "length": 173.29,
-    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO (Formerly Rambler Trio)",
-    "title": "Guitar Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289367b"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/05_Silver_Bells___Oh_Christmas_Tree___We_Wish_You_a_Merry_Christmas.mp3",
-    "length": 188,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Silver Bells / Oh Christmas Tree / We Wish You a Merry Christmas",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/OLGACOAL.MP3",
-    "length": 26.25,
-    "series": "A word from our sponsor",
-    "title": "Olga Coal",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/oldfashionedchri00symp/03_Caroling__caroling__Fred_Waring_.mp3",
-    "length": 74,
-    "series": "Symphonette Society",
-    "title": "Caroling, caroling",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
-   },
-   {
-    "src": "https://archive.org/download/hannabarberaxmas/07%20It%20Came%20Upon%20a%20Midnight%20Clear.mp3",
-    "length": 111.98,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "It Came Upon a Midnight Clear",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Medley%20We%20Wish%20You%20a%20Merry%20Christmas_Holly%20and%20the%20Ivy.mp3",
-    "length": 178.86,
-    "series": "Andre Previn",
-    "title": "Medley We Wish You a Merry Christmas Holly and the Ivy",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/82487-bing-crosby-white-christmas/82487%20Bing%20Crosby%20-%20White%20Christmas.mp3",
-    "length": 186,
-    "series": "Bing Crosby - Gesang, John Scott Trotter & His Orchestra, Ken Darby Singers",
-    "title": "White Christmas (Irving Berlin)",
-    "date": "1951",
-    "item": "https://archive.org/details/82487-bing-crosby-white-christmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
-    "length": 52.84,
-    "series": "A word from our sponsor",
-    "title": "Popsicle",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_what-are-you-doing-new-years-eve_the-orioles-frank-loesser_gbia0001203b/What%20Are%20You%20Doing%20New%20Year%27s%20Eve%20-%20The%20Orioles.mp3",
-    "length": 183,
-    "series": "The Orioles",
-    "title": "What Are You Doing New Year's Eve",
-    "date": "1949",
-    "item": "https://archive.org/details/78_what-are-you-doing-new-years-eve_the-orioles-frank-loesser_gbia0001203b"
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/06%20The%20Coventry%20Carol.mp3",
-    "length": 149.34,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "The Coventry Carol",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_cantique-de-noel-christmas-song_martin-walker-sammy-spear-orch-adolphe-adam_gbia0556786b/CANTIQUE%20de%20NOEL%20%28Christmas%20Song%29%20-%20MARTIN%20WALKER.mp3",
-    "length": 154,
-    "series": "Martin Walker",
-    "title": "Cantique de Noel (Christmas Song)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_cantique-de-noel-christmas-song_martin-walker-sammy-spear-orch-adolphe-adam_gbia0556786b"
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/05%20Put%20Christ%20Back%20Into%20Christmas.mp3",
-    "length": 167,
-    "series": "George Beverly Shea",
-    "title": "Put the Christ Back Into Christmas",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
-    "length": 49.71,
-    "series": "A word from our sponsor",
-    "title": "Creamo Cigars",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_et-barn-er-fodt-i-bethlehem-statsradiofoniens-drengekor-dir-henning/16317%20Et%20barn%20er%20f%C3%B8dt%20i%20Bethlehem.mp3",
-    "length": 189.39,
-    "series": "Statsradiofoniens drengekor",
-    "title": "Et barn er født i Bethlehem",
-    "date": "1943",
-    "item": "https://archive.org/details/78_et-barn-er-fodt-i-bethlehem-statsradiofoniens-drengekor-dir-henning"
-   },
-   {
-    "src": "https://archive.org/download/78_deck-the-halls-o-christmas-tree-hark-the-herald-angels-sing-o-little-town-of-b_gbia0203791a/DECK%20THE%20-%20THE%20SANDPIPER%20CHORUS%2C%20BOYS%27%20CHOIR%20AND%20ORCHESTRA.mp3",
-    "length": 239,
-    "series": "The Sandpiper Chorus, Boys' Choir and Orchestra",
-    "title": "Deck the Halls; O Christmas Tree!; Hark! the Herald Angels Sing; O Little Town of Bethlehem; Joy to the World; O Come, All Ye Faithful",
     "date": "1952",
-    "item": "https://archive.org/details/78_deck-the-halls-o-christmas-tree-hark-the-herald-angels-sing-o-little-town-of-b_gbia0203791a"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/04%20Deck%20The%20Halls.mp3",
-    "length": 68,
-    "series": "Nat King Cole",
-    "title": "Deck The Halls",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/eddie-dunstedter-the-bells-of-christmas-capitol-sm-1264-side-1-f-eq/Eddie%20Dunstedter%20-%20The%20Bells%20Of%20Christmas%20-%20Capitol%20SM-1264%20side%202%20%20F%20EQ.mp3",
-    "length": 1232,
-    "series": "Eddie Dunstedter",
-    "title": "The Bells Of Christmas (Side 2)",
-    "date": "1959",
-    "item": "https://archive.org/details/eddie-dunstedter-the-bells-of-christmas-capitol-sm-1264-side-1-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAutoLite.mp3",
-    "length": 57.75,
-    "series": "A word from our sponsor",
-    "title": "Auto-Lite",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_lets-go-home-for-christmas_betty-clooney-margaret-whittenberg-joel-nash_gbia0463301a/LET%27S%20GO%20HOME%20FOR%20CHRISTMAS%20-%20BETTY%20CLOONEY.mp3",
-    "length": 165.55,
-    "series": "Betty Clooney",
-    "title": "Let's Go Home for Christmas",
-    "date": "1953",
-    "item": "https://archive.org/details/78_lets-go-home-for-christmas_betty-clooney-margaret-whittenberg-joel-nash_gbia0463301a"
-   },
-   {
-    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289433b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO%20%28Formerly%20Rambler%20Trio%29.mp3",
-    "length": 176.11,
-    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO (Formerly Rambler Trio)",
-    "title": "Guitar Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289433b"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/10%20-%20White%20Christmas.mp3",
-    "length": 147.62,
-    "series": "The Beach Boys",
-    "title": "White Christmas",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/78_sancta-lucia_harmony-sisters-sven-arefeldts-orkester-l-b-jacobson-s-arefeldt_gbia7035959a/Sancta%20Lucia%20-%20Harmony%20Sisters%20-%20Sven%20Arefeldts%20Orkester.mp3",
-    "length": 203,
-    "series": "Harmony Sisters",
-    "title": "Sancta Lucia",
-    "date": "1947",
-    "item": "https://archive.org/details/78_sancta-lucia_harmony-sisters-sven-arefeldts-orkester-l-b-jacobson-s-arefeldt_gbia7035959a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsiCola.mp3",
-    "length": 33.38,
-    "series": "A word from our sponsor",
-    "title": "Pepsi Cola",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_the-promenaders-irving-berlin_gbia0342822b/WHITE%20CHRISTMAS%20-%20THE%20PROMENADERS%20-%20Irving%20Berlin.mp3",
-    "length": 182.62,
-    "series": "The Promenaders",
-    "title": "White Christmas",
-    "date": "1953",
-    "item": "https://archive.org/details/78_white-christmas_the-promenaders-irving-berlin_gbia0342822b"
-   },
-   {
-    "src": "https://archive.org/download/78_merry-christmas_frank-gallagher-dana-serenaders-ken-hecht-walt-dana_gbia0288519a/MERRY%20CHRISTMAS%20-%20FRANK%20GALLAGHER%20-%20DANA%20SERENADERS.mp3",
-    "length": 163.86,
-    "series": "Frank Gallagher",
-    "title": "Merry Christmas",
-    "date": "1948",
-    "item": "https://archive.org/details/78_merry-christmas_frank-gallagher-dana-serenaders-ken-hecht-walt-dana_gbia0288519a"
-   },
-   {
-    "src": "https://archive.org/download/78_i-remember-christmas_jimmy-collett-lynn-weir-smith_gbia0006789b/I%20Remember%20Christmas%20-%20Jimmy%20Collett%20-%20Lynn%20Weir%20Smith.mp3",
-    "length": 153,
-    "series": "Jimmy Collett",
-    "title": "I Remember Christmas",
-    "date": "1952",
-    "item": "https://archive.org/details/78_i-remember-christmas_jimmy-collett-lynn-weir-smith_gbia0006789b"
-   },
-   {
-    "src": "https://archive.org/download/78_merry-christmas-one-all_the-rhythm-kings-isaac-royal-orch-cliff-king_gbia0475076b/MERRY%20CHRISTMAS%20ONE%20%26%20ALL%20-%20THE%20RHYTHM%20KINGS.mp3",
-    "length": 181.85,
-    "series": "The Rhythm Kings",
-    "title": "Merry Christmas One & All",
-    "date": "1950",
-    "item": "https://archive.org/details/78_merry-christmas-one-all_the-rhythm-kings-isaac-royal-orch-cliff-king_gbia0475076b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/RINSO.MP3",
-    "length": 84.67,
-    "series": "A word from our sponsor",
-    "title": "Rinso",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/billy-cotton-and-his-band-when-santa-got-stuck-up-the-chimney/Billy%20Cotton%20and%20His%20Band%20-%20When%20Santa%20Got%20Stuck%20Up%20The%20Chimney.mp3",
-    "length": 146.21,
-    "series": "Billy Cotton and His Band",
-    "title": "When Santa Got Stuck Up The Chimney",
-    "date": "1954",
-    "item": "https://archive.org/details/billy-cotton-and-his-band-when-santa-got-stuck-up-the-chimney"
-   },
-   {
-    "src": "https://archive.org/download/OLittleTownOfBethlehem_201611/O%2C%20Little%20Town%20Of%20Bethlehem.mp3",
-    "length": 106.69,
-    "series": "Voco Orchestra",
-    "title": "O, Little Town Of Bethlehem",
-    "date": "1949",
-    "item": "https://archive.org/details/OLittleTownOfBethlehem_201611"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_bobby-nicholas-the-peter-pan-orchestra-and-chorus-j_gbia0331967a/SANTA%20CLAUS%20IS%20COMIN%27%20TO%20TOWN%20-%20BOBBY%20NICHOLAS.mp3",
-    "length": 170.34,
-    "series": "Bobby Nicholas",
-    "title": "Santa Claus Is Comin' To Town",
-    "date": "1952",
-    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_bobby-nicholas-the-peter-pan-orchestra-and-chorus-j_gbia0331967a"
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/01%20Silent%20Night.mp3",
-    "length": 159,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "Silent Night",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LUSTERCREAM.mp3",
-    "length": 50.11,
-    "series": "A word from our sponsor",
-    "title": "Lustre-Creme Shampoo",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_this-christmas-night_curt-massey_gbia0285023d/THIS%20CHRISTMAS%20NIGHT%20-%20CURT%20MASSEY.mp3",
-    "length": 159,
-    "series": "Curt Massey",
-    "title": "This Christmas Night",
-    "item": "https://archive.org/details/78_this-christmas-night_curt-massey_gbia0285023d"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-questions_joe-ward-dave-terry-louie-innis_gbia0010371b/Christmas%20Questions%20-%20Joe%20Ward%20-%20Dave%20Terry.mp3",
-    "length": 134,
-    "series": "Joe Ward",
-    "title": "Christmas Questions",
-    "date": "1955",
-    "item": "https://archive.org/details/78_christmas-questions_joe-ward-dave-terry-louie-innis_gbia0010371b"
-   },
-   {
-    "src": "https://archive.org/download/78_sleigh-bells-waltz_lil-wally-and-the-lucky-harmony-boys-orchestra-joe-koldyn-walter_gbia0530220a/SLEIGH%20BELLS%20WALTZ%20-%20LI%27L%20WALLY%20And%20The%20Lucky%20Harmony%20Boys%20Orchestra.mp3",
-    "length": 146,
-    "series": "Li'l Wally And The Lucky Harmony Boys Orchestra",
-    "title": "Sleigh Bells Waltz",
-    "date": "1957",
-    "item": "https://archive.org/details/78_sleigh-bells-waltz_lil-wally-and-the-lucky-harmony-boys-orchestra-joe-koldyn-walter_gbia0530220a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-first-noel-a-joyous-christmas-song_charles-r-cronham_gbia0034360b/The%20First%20Noel%3B%20A%20Joyous%20Christmas%20So%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 171.32,
-    "series": "Charles R. Cronham",
-    "title": "The First Noel; A Joyous Christmas Song",
-    "date": "1960",
-    "item": "https://archive.org/details/78_the-first-noel-a-joyous-christmas-song_charles-r-cronham_gbia0034360b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsJackBennyDennisDayForTexaco.mp3",
-    "length": 59.64,
-    "series": "A word from our sponsor",
-    "title": "Texaco (with Jack Benny and Dennis Day)",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_hello-mr-snowman_johnny-lane-lane-quartet-warner-weiner-gold_gbia0285775b/HELLO%20MR.%20SNOWMAN%20-%20JOHNNY%20LANE%20-%20LANE%20QUARTET.mp3",
-    "length": 160.63,
-    "series": "Johnny Lane",
-    "title": "Hello Mr. Snowman",
-    "date": "1949",
-    "item": "https://archive.org/details/78_hello-mr-snowman_johnny-lane-lane-quartet-warner-weiner-gold_gbia0285775b"
-   },
-   {
-    "src": "https://archive.org/download/78_glej-zvezdice-bozje-twinkling-christmas-stars-prisla-je-noc-the-holy-night-came/1695-3.mp3",
-    "length": 252,
-    "series": "Anonymous",
-    "title": "Glej zvezdice božje (Twinkling Christmas Stars) - Prišla je noč (The Holy Night Came)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_glej-zvezdice-bozje-twinkling-christmas-stars-prisla-je-noc-the-holy-night-came"
-   },
-   {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/11%20Christmas%20Song.mp3",
-    "length": 195,
-    "series": "Vince Guaraldi",
-    "title": "Christmas Song",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/78_lonesome-christmas_lowell-fulson-lloyd-glenn_gbia0182887a/LONESOME%20CHRISTMAS%20-%20LOWELL%20FULSON%20-%20Lloyd%20Glenn.mp3",
-    "length": 156,
-    "series": "Lowell Fulson",
-    "title": "Lonesome Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/78_lonesome-christmas_lowell-fulson-lloyd-glenn_gbia0182887a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/GROVESNOSEDROPS.mp3",
-    "length": 70.71,
-    "series": "A word from our sponsor",
-    "title": "Grove's Nose Drops",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-island_glenn-davis-lyle-moraine_gbia0378583a/CHRISTMAS%20ISLAND%20-%20GLENN%20DAVIS%20-%20Lyle%20Moraine.mp3",
-    "length": 179.33,
-    "series": "Glenn Davis",
-    "title": "Christmas Island",
-    "item": "https://archive.org/details/78_christmas-island_glenn-davis-lyle-moraine_gbia0378583a"
-   },
-   {
-    "src": "https://archive.org/download/78_dear-mr-santa_doye-odell-ceelie-burke_gbia0465369a/DEAR%20MR.%20SANTA%20-%20DOYE%20O%27DELL%20-%20Ceelie%20Burke.mp3",
-    "length": 155.97,
-    "series": "Doye O'Dell",
-    "title": "Dear Mr. Santa",
-    "date": "1948",
-    "item": "https://archive.org/details/78_dear-mr-santa_doye-odell-ceelie-burke_gbia0465369a"
-   },
-   {
-    "src": "https://archive.org/download/78_julemanden_ib-schnberg-arthur-jensen-norma-rhodin-leth-hansen_gbia0125002b/JULEMANDEN%20-%20IB%20SCH%C3%98NBERG%20-%20ARTHUR%20JENSEN.mp3",
-    "length": 189.06,
-    "series": "Ib Schønberg",
-    "title": "Julemanden",
-    "date": "1953",
-    "item": "https://archive.org/details/78_julemanden_ib-schnberg-arthur-jensen-norma-rhodin-leth-hansen_gbia0125002b"
-   },
-   {
-    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_davey-piper-enoch-light-tommy-connor_gbia7035761a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20DAVEY%20PIPER.mp3",
-    "length": 140.82,
-    "series": "Davey Piper",
-    "title": "I Saw Mommy Kissing Santa Claus",
-    "date": "1953",
-    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_davey-piper-enoch-light-tommy-connor_gbia7035761a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
-    "length": 40.72,
-    "series": "A word from our sponsor",
-    "title": "Anacin",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_barnyard-christmas_spike-jones-and-his-city-slickers-the-bell-sisters-jack-stearn-s_gbia7030589a/BARNYARD%20CHRISTMAS%20-%20SPIKE%20JONES%20AND%20HIS%20CITY%20SLICKERS.mp3",
-    "length": 170,
-    "series": "Spike Jones And His City Slickers",
-    "title": "Barnyard Christmas",
-    "item": "https://archive.org/details/78_barnyard-christmas_spike-jones-and-his-city-slickers-the-bell-sisters-jack-stearn-s_gbia7030589a"
-   },
-   {
-    "src": "https://archive.org/download/here-comes-santa-claus/Here%20Comes%20Santa%20Claus.mp3",
-    "length": 151,
-    "series": "Gene Autry",
-    "title": "Here Comes Santa Claus",
-    "date": "1947",
-    "item": "https://archive.org/details/here-comes-santa-claus"
-   },
-   {
-    "src": "https://archive.org/download/78_slumber-beloved-part-1-from-christmas-oratorio_thomas-marjorie-london-symph/C_3935_2EA_13336-1.mp3",
-    "length": 259,
-    "series": "Marjorie Thomas",
-    "title": "Slumber, Beloved - part 1 (from \"Christmas Oratorio\")",
-    "date": "1948",
-    "item": "https://archive.org/details/78_slumber-beloved-part-1-from-christmas-oratorio_thomas-marjorie-london-symph"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/04_Here_Comes_Santa_Claus___Frosty_the_Snowman.mp3",
-    "length": 155,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Here Comes Santa Claus / Frosty the Snowman",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/COLGATESHAVINGCREAM.mp3",
-    "length": 40.99,
-    "series": "A word from our sponsor",
-    "title": "Colgate Shaving Cream",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Angels%20We%20Have%20Heard%20on%20High.mp3",
-    "length": 88.42,
-    "series": "The Mormon Tabernacle Choir",
-    "title": "Angels We Have Heard on High",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/07%20-%20We%20Three%20Kings%20Of%20Orient%20Are.mp3",
-    "length": 242.18,
-    "series": "The Beach Boys",
-    "title": "We Three Kings Of Orient Are",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_harold-parr-horace-heidt-and-his-musical-knights-irving-berlin_gbia0271310b/WHITE%20CHRISTMAS%20-%20HAROLD%20PARR%20-%20HORACE%20HEIDT%20and%20His%20Musical%20Knights.mp3",
-    "length": 192.89,
-    "series": "Harold Parr",
-    "title": "White Christmas",
-    "date": "1949",
-    "item": "https://archive.org/details/78_white-christmas_harold-parr-horace-heidt-and-his-musical-knights-irving-berlin_gbia0271310b"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Deck%20The%20Halls.mp3",
-    "length": 110.6,
-    "series": "Philadelphia Orchestra Eugene Ormandy",
-    "title": "Deck The Halls",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGmGuardianMaintenance.mp3",
-    "length": 59.74,
-    "series": "A word from our sponsor",
-    "title": "GM Guardian Maintenance",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/08.OhPoorLittleJesus.mp3",
-    "length": 132.91,
-    "series": "The De Paur Chorus",
-    "title": "Oh, Poor Little Jesus",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/08%20Santa%20Claus%20Is%20Coming%20to%20Town.mp3",
-    "length": 164,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "Santa Claus Is Coming to Town",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_harold-goodfellow-and-his-good-fellows_gbia0025155b/Jingle%20Bells%20-%20Harold%20Goodfellow%20and%20His%20Good%20Fellows.mp3",
-    "length": 190.75,
-    "series": "Harold Goodfellow and His Good Fellows",
-    "title": "Jingle Bells",
-    "date": "1948",
-    "item": "https://archive.org/details/78_jingle-bells_harold-goodfellow-and-his-good-fellows_gbia0025155b"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/12%20God%20Rest%20Ye%20Merry%20Gentleman%3B%20We%20Wish%20You%20A%20Merry%20Christmas.mp3",
-    "length": 116,
-    "series": "Nat King Cole: Hollywood Pops Orchestra",
-    "title": "God Rest Ye Merry Gentleman/ We Wish You A Merry Christmas",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/OLDSPICE.MP3",
-    "length": 20.16,
-    "series": "A word from our sponsor",
-    "title": "Old Spice",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/07-white-christmas/14%20WHITE%20CHRISTMAS%20FINALE.mp3",
-    "length": 157.18,
-    "series": "Bing Crosby, Danny Kaye, Rosemary Clooney, Trudy Stevens",
-    "title": "Finale",
-    "date": "1954",
-    "item": "https://archive.org/details/07-white-christmas"
-   },
-   {
-    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_buttons-brown-enoch-light-and-his-orchestra-tommi_gbia0059405a/I%20Saw%20Mommy%20Kissing%20Santa%20Claus%20-%20%22Buttons%22%20Brown.mp3",
-    "length": 140,
-    "series": "\"Buttons\" Brown",
-    "title": "I Saw Mommy Kissing Santa Claus",
-    "date": "1952",
-    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_buttons-brown-enoch-light-and-his-orchestra-tommi_gbia0059405a"
-   },
-   {
-    "src": "https://archive.org/download/78_cicha-noc-silent-night_sta-jaworski-chr-i-orkiestra-w-dana_gbia0531365a/CICHA%20NOC%20%28Silent%20Night%29%20-%20STA%C5%9A%20JAWORSKI.mp3",
-    "length": 196,
-    "series": "Staś Jaworski",
-    "title": "CICHA NOC (Silent Night)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_cicha-noc-silent-night_sta-jaworski-chr-i-orkiestra-w-dana_gbia0531365a"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-o-little-town-of-bethlehem_the-caroleers_gbia0006854a/Silent%20Night%3B%20O%20Little%20Town%20of%20Bethlehem%20-%20The%20Caroleers.mp3",
-    "length": 203,
-    "series": "The Caroleers",
-    "title": "Silent Night; O Little Town of Bethlehem",
-    "date": "1949",
-    "item": "https://archive.org/details/78_silent-night-o-little-town-of-bethlehem_the-caroleers_gbia0006854a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/PEPSI.MP3",
-    "length": 42.47,
-    "series": "A word from our sponsor",
-    "title": "Pepsi",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_sonny-walikis-and-his-squeeze-boy_gbia0001730b/White%20Christmas%20-%20Sonny%20Walikis%20and%20his%20Squeeze%20Boy.mp3",
-    "length": 250,
-    "series": "Sonny Walikis and his Squeeze Box",
-    "title": "White Christmas",
-    "item": "https://archive.org/details/78_white-christmas_sonny-walikis-and-his-squeeze-boy_gbia0001730b",
-    "date": "1940"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-holy-night_lee-richardson-john-l-motley-wen-talberts-male-chorus_gbia0475068b/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20LEE%20RICHARDSON.mp3",
-    "length": 193.19,
-    "series": "Lee Richardson",
-    "title": "Silent Night, Holy Night",
-    "date": "1946",
-    "item": "https://archive.org/details/78_silent-night-holy-night_lee-richardson-john-l-motley-wen-talberts-male-chorus_gbia0475068b"
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/02%20Oh%20Little%20Town%20Of%20Bethlehem.mp3",
-    "length": 174.73,
-    "series": "George Beverly Shea",
-    "title": "O Little Town of Bethlehem",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/12%20-%20Auld%20Lang%20Syne.mp3",
-    "length": 77.66,
-    "series": "The Beach Boys",
-    "title": "Auld Lang Syne",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/ELGINAMERICAN.mp3",
-    "length": 105.57,
-    "series": "A word from our sponsor",
-    "title": "Elgin American",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_en-sommarkvll-i-santa-cruz_ulla-sallert-sven-arefeldts-orkester-payan-hartley-gst_gbia0307495a/En%20sommarkv%C3%A4ll%20i%20Santa%20Cruz%20-%20Ulla%20Sallert.mp3",
-    "length": 230.83,
-    "series": "Ulla Sallert",
-    "title": "En sommarkväll i Santa Cruz",
-    "date": "1948",
-    "item": "https://archive.org/details/78_en-sommarkvll-i-santa-cruz_ulla-sallert-sven-arefeldts-orkester-payan-hartley-gst_gbia0307495a"
-   },
-   {
-    "src": "https://archive.org/download/78_nr-vi-holder-julefest-christmas-in-killarney_hedvig-volmer-cavanaugh-weldon-eri_gbia7015625b/N%C3%85R%20VI%20HOLDER%20JULEFEST%20%28Christmas%20in%20Killa%20-%20HEDVIG%20VOLMER.mp3",
-    "length": 189.51,
-    "series": "Hedvig Volmer",
-    "title": "NÅR VI HOLDER JULEFEST (Christmas in Killarney)",
-    "date": "1951",
-    "item": "https://archive.org/details/78_nr-vi-holder-julefest-christmas-in-killarney_hedvig-volmer-cavanaugh-weldon-eri_gbia7015625b"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_the-ellingtonians-al-hibbler-irving-berlin_gbia0501479a/WHITE%20CHRISTMAS%20-%20THE%20ELLINGTONIANS%20-%20AL%20HIBBLER.mp3",
-    "length": 183.03,
-    "series": "The Ellingtonians",
-    "title": "White Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/78_white-christmas_the-ellingtonians-al-hibbler-irving-berlin_gbia0501479a"
-   },
-   {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/02%20Silent%20Night%20Holy%20Night.mp3",
-    "length": 152.01,
-    "series": "Chuck Wagon Gang",
-    "title": "Silent Night, Holy Night",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/JELLO1955.mp3",
-    "length": 15.17,
-    "series": "A word from our sponsor",
-    "title": "Jell-O",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_buttons-brown-enoch-light-and-his-orchestra-tommi_gbia0131293a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20%22Buttons%22%20Brown.mp3",
-    "length": 140.47,
-    "series": "\"Buttons\" Brown",
-    "title": "I Saw Mommy Kissing Santa Claus",
-    "date": "1955",
-    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_buttons-brown-enoch-light-and-his-orchestra-tommi_gbia0131293a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-night-before-christmas-part-i_peter-donald-mitch-miller-and-orchestra_gbia0534261a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20PART%20I%20-%20PETER%20DONALD.mp3",
-    "length": 110.85,
-    "series": "Peter Donald",
-    "title": "The Night Before Christmas - Part I",
-    "date": "1949",
-    "item": "https://archive.org/details/78_the-night-before-christmas-part-i_peter-donald-mitch-miller-and-orchestra_gbia0534261a"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Jingle%20Bells.mp3",
-    "length": 111.36,
-    "series": "Chet Atkins",
-    "title": "Jingle Bells",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/Do%20You%20Hear%20What%20I%20Hear.mp3",
-    "length": 184.8,
-    "series": "Kate Smith",
-    "title": "Do You Hear What I Hear",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
-    "length": 45.43,
-    "series": "A word from our sponsor",
-    "title": "Signal Gasoline",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/02%20It%20Came%20Upon%20The%20Midnight%20Clear.mp3",
-    "length": 111.78,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "It Came Upon The Midnight Clear",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_merry-christmas_ken-griffin-eric-gawehn_gbia0025055a/Merry%20Christmas%20-%20Ken%20Griffin%20-%20Eric%20Gawehn.mp3",
-    "length": 165,
-    "series": "Ken Griffin",
-    "title": "Merry Christmas",
-    "item": "https://archive.org/details/78_merry-christmas_ken-griffin-eric-gawehn_gbia0025055a"
-   },
-   {
-    "src": "https://archive.org/download/paul-mauriat-and-his-orchestra-the-christmas-album-side-1-philips-600-255-stereo-et-stylus-f-eq/Paul%20Mauriat%20and%20his%20orchestra%20-%20The%20Christmas%20Album%20-%20side%201%20Philips%20600-255%20stereo%20ET%20stylus%20F%20EQ.mp3",
-    "length": 945,
-    "series": "Paul Mauriat And His Orchestra",
-    "title": "The Christmas Album (Side 1)",
-    "date": "1967",
-    "item": "https://archive.org/details/paul-mauriat-and-his-orchestra-the-christmas-album-side-1-philips-600-255-stereo-et-stylus-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/04_Let_it_snow__Let_it_snow__Let_it_snow_.mp3",
-    "length": 144,
-    "series": "Wayne King & His Orchestra",
-    "title": "Let it snow! Let it snow! Let it snow!",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
-    "length": 59.17,
-    "series": "A word from our sponsor",
-    "title": "Armour Hot Dogs",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-chopsticks/1083-16.mp3",
-    "length": 165,
-    "series": "Yankovic, Frank",
-    "title": "Christmas Chopsticks",
-    "date": "1951",
-    "item": "https://archive.org/details/78_christmas-chopsticks"
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/09%20Christmas%20Christmas.mp3",
-    "length": 135.71,
-    "series": "George Beverly Shea",
-    "title": "The Birthday of a King",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/eddie-dunstedter-with-the-jingle-bells-orchestra-christmas-candy-capitol-sm-1183/Eddie%20Dunstedter%20with%20the%20Jingle%20Bells%20Orchestra%20-%20Christmas%20Candy%20-%20Capitol%20SM-11831%20side%201%20%20Gulbransen%20electric%20organ%20F%20EQ.mp3",
-    "length": 749,
-    "series": "Eddie Dunstedter With The Jingle Bells Orchestra",
-    "title": "Christmas Candy (Side 1)",
-    "date": "1965",
-    "item": "https://archive.org/details/eddie-dunstedter-with-the-jingle-bells-orchestra-christmas-candy-capitol-sm-1183"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-clause-is-coming-to-town_lenny-and-judith-lil-wally-and-the-lucky-harmony-bo_gbia0082304a/Santa%20Clause%20Is%20Coming%20to%20Town%20-%20Lenny%20and%20Judith.mp3",
-    "length": 144,
-    "series": "Lenny and Judith",
-    "title": "Santa Claus Is Coming to Town",
-    "date": "1956",
-    "item": "https://archive.org/details/78_santa-clause-is-coming-to-town_lenny-and-judith-lil-wally-and-the-lucky-harmony-bo_gbia0082304a"
+    "item": "https://archive.org/details/78_the-night-before-christmas_gbia0048208b"
    },
    {
     "src": "https://archive.org/download/RadioCommercialsShows/BUDWEISER.mp3",
@@ -67971,84 +63209,51 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/christmasdancepa00garb/03_Jingle_bells_rock.mp3",
-    "length": 115,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Jingle bells rock",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
+    "src": "https://archive.org/download/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0288519b/YOU%27RE%20ALL%20I%20WANT%20FOR%20CHRISTMAS%20-%20FRANK%20GALLAGHER.mp3",
+    "length": 209.59,
+    "series": "Frank Gallagher",
+    "title": "You'Re All I Want For Christmas",
+    "date": "1948",
+    "item": "https://archive.org/details/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0288519b"
    },
    {
-    "src": "https://archive.org/download/78_i-dont-want-to-be-alone-for-christmas_marian-caruso-mac-mcguire-menaker-donofrio-ru_gbia0564382b/I%20DON%27T%20WANT%20TO%20BE%20ALONE%20FOR%20-%20MARIAN%20CARUSO%20%26%20MAC%20McGUIRE.mp3",
-    "length": 164,
-    "series": "MARIAN CARUSO & MAC McGUIRE",
-    "title": "I Don't Want to Be Alone for Christmas",
+    "src": "https://archive.org/download/78_adeste-fideles_bing-crosby_john-scott-trotter-aho_max-terr-choir/adeste%20fideles_bing%20crosby_mono_2023.mp3",
+    "length": 196.5,
+    "series": "My 78s",
+    "title": "Adeste Fideles (Come all ye Faithful) - Bing Crosby with the Max Terr Choir And John Scott Trotter and his Orchestra",
+    "date": "1942",
+    "item": "https://archive.org/details/78_adeste-fideles_bing-crosby_john-scott-trotter-aho_max-terr-choir"
+   },
+   {
+    "src": "https://archive.org/download/78_a-christmas-carol-2_mitch-miller-and-orchestra-mary-rodgers-beatly-charles-dickens_gbia0534546b/A%20CHRISTMAS%20CAROL%20%282%29%20-%20MITCH%20MILLER%20AND%20ORCHESTRA.mp3",
+    "length": 108.67,
+    "series": "Mitch Miller And Orchestra",
+    "title": "A Christmas Carol (2)",
+    "item": "https://archive.org/details/78_a-christmas-carol-2_mitch-miller-and-orchestra-mary-rodgers-beatly-charles-dickens_gbia0534546b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_buttons-brown-enoch-light-and-his-orchestra-tommi_gbia0059405a/I%20Saw%20Mommy%20Kissing%20Santa%20Claus%20-%20%22Buttons%22%20Brown.mp3",
+    "length": 140,
+    "series": "\"Buttons\" Brown",
+    "title": "I Saw Mommy Kissing Santa Claus",
     "date": "1952",
-    "item": "https://archive.org/details/78_i-dont-want-to-be-alone-for-christmas_marian-caruso-mac-mcguire-menaker-donofrio-ru_gbia0564382b"
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_buttons-brown-enoch-light-and-his-orchestra-tommi_gbia0059405a"
    },
    {
-    "src": "https://archive.org/download/78_christmas-serenade_nick-paone-and-the-gang-n-paone-neal-hefti_gbia0469751b/CHRISTMAS%20SERENADE%20-%20NICK%20PAONE%20And%20The%20Gang.mp3",
-    "length": 167.11,
-    "series": "NICK PAONE And The Gang",
-    "title": "Christmas Serenade",
-    "date": "1950",
-    "item": "https://archive.org/details/78_christmas-serenade_nick-paone-and-the-gang-n-paone-neal-hefti_gbia0469751b"
-   },
-   {
-    "src": "https://archive.org/download/78_karelsk-vuggevise_ulla-katajavuori-w-hannikainen_gbia7005537b/Karelsk%20Vuggevise%20-%20Ulla%20Katajavuori%20-%20W.%20Hannikainen.mp3",
-    "length": 149.38,
-    "series": "Ulla Katajavuori",
-    "title": "Karelsk Vuggevise",
-    "date": "1949",
-    "item": "https://archive.org/details/78_karelsk-vuggevise_ulla-katajavuori-w-hannikainen_gbia7005537b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BRISKTOOTHPASTE.mp3",
-    "length": 34.51,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsHouseholdFinanceCorp.mp3",
+    "length": 22.72,
     "series": "A word from our sponsor",
-    "title": "Brisk Toothpaste",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-a-hippopotamus-for-christmas_vicki-dale-the-peter-pan-orchestra_gbia0000281a/I%20Want%20A%20Hippopotamus%20For%20Christmas%20-%20Vicki%20Dale-restored.mp3",
-    "length": 157.94,
-    "series": "Vicki Dale",
-    "title": "I Want A Hippopotamus For Christmas",
-    "date": "1953",
-    "item": "https://archive.org/details/78_i-want-a-hippopotamus-for-christmas_vicki-dale-the-peter-pan-orchestra_gbia0000281a"
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/05_Hark__The_Herald_Angels_Sing.mp3",
-    "length": 128,
-    "series": "Monterey Brass",
-    "title": "Hark! The Herald Angels Sing",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0377225a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
-    "length": 156.37,
-    "series": "Betty Johnson",
-    "title": "I Want Eddie Fisher For Christmas",
-    "date": "1954",
-    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0377225a"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town-poppy-the-puppy_coots-gillespie-tommy-johnston_gbia0035050a/Santa%20Claus%20Is%20Coming%20to%20Town%3B%20Poppy%20the%20Puppy%20-%20Coots.mp3",
-    "length": 301,
-    "series": "Coots",
-    "title": "Santa Claus Is Coming to Town; Poppy the Puppy",
-    "date": "1956",
-    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town-poppy-the-puppy_coots-gillespie-tommy-johnston_gbia0035050a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceKrispies.mp3",
-    "length": 58.26,
-    "series": "A word from our sponsor",
-    "title": "Rice Krispies",
+    "title": "Household Finance Corp",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_this-christmas-will-be-wonderful_glen-moores-quartette-jane-palmer-helen-langlois_gbia0351282a/THIS%20CHRISTMAS%20WILL%20BE%20WONDERFUL%20-%20GLEN%20MOORE%27S%20QUARTETTE.mp3",
+    "length": 161.62,
+    "series": "Glen Moore's Quartette",
+    "title": "This Christmas Will Be Wonderful",
+    "date": "1949",
+    "item": "https://archive.org/details/78_this-christmas-will-be-wonderful_glen-moores-quartette-jane-palmer-helen-langlois_gbia0351282a"
    },
    {
     "src": "https://archive.org/download/78_merry-christmas-baby_thelma-cooper-three-smarties_gbia0059116a/Merry%20Christmas%20Baby%20-%20Thelma%20Cooper%20-%20Three%20Smarties.mp3",
@@ -68059,60 +63264,218 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_merry-christmas-baby_thelma-cooper-three-smarties_gbia0059116a"
    },
    {
-    "src": "https://archive.org/download/78_jingle-bells_jeff-stoughton-and-his-lake-placid-club-orchestra-larry-murphy_gbia0285326b/JINGLE%20BELLS%20-%20Jeff%20Stoughton%20and%20his%20Lake%20Placid%20Club%20Orchestra.mp3",
-    "length": 181.25,
-    "series": "Jeff Stoughton and his Lake Placid Club Orchestra",
-    "title": "Jingle Bells",
-    "date": "1956",
-    "item": "https://archive.org/details/78_jingle-bells_jeff-stoughton-and-his-lake-placid-club-orchestra-larry-murphy_gbia0285326b"
+    "src": "https://archive.org/download/78_what-are-you-doing-new-years-eve_the-orioles-frank-loesser_gbia0001203b/What%20Are%20You%20Doing%20New%20Year%27s%20Eve%20-%20The%20Orioles.mp3",
+    "length": 183,
+    "series": "The Orioles",
+    "title": "What Are You Doing New Year's Eve",
+    "date": "1949",
+    "item": "https://archive.org/details/78_what-are-you-doing-new-years-eve_the-orioles-frank-loesser_gbia0001203b"
    },
    {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2001%20-%20God%20Rest%20Ye%20Merry%20Gentleman.mp3",
-    "length": 259.87,
-    "series": "Jimmy Smith",
-    "title": "God Rest Ye Merry Gentleman",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
+    "src": "https://archive.org/download/78_the-night-before-christmas_gbia0438453b/The%20Night%20Before%20Christmas.mp3",
+    "length": 195.96,
+    "series": "Unknown artist",
+    "title": "The Night Before Christmas",
+    "item": "https://archive.org/details/78_the-night-before-christmas_gbia0438453b"
    },
    {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/The%20Christmas%20Song.mp3",
-    "length": 192.65,
-    "series": "Kate Smith",
-    "title": "The Christmas Song",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
-    "length": 47.54,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
+    "length": 49.71,
     "series": "A word from our sponsor",
-    "title": "Chesterfield Cigarettes",
+    "title": "Creamo Cigars",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-wont-be-the-same-with-you-away_the-starlighters-lloyd-shaffer-orchestr_gbia0364388b/CHRISTMAS%20WON%27T%20BE%20THE%20SAME%20%28WITH%20YOU%20A%20-%20THE%20STARLIGHTERS.mp3",
+    "length": 176.5,
+    "series": "The Starlighters",
+    "title": "Christmas Won't Be the Same (with You Away)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_christmas-wont-be-the-same-with-you-away_the-starlighters-lloyd-shaffer-orchestr_gbia0364388b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas---part-1_the-caroleers_gbia0001174a/The%20Night%20Before%20Christmas%20-%20Part%201%20-%20The%20Caroleers.mp3",
+    "length": 206,
+    "series": "The Caroleers",
+    "title": "The Night Before Christmas - Part 1",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-night-before-christmas---part-1_the-caroleers_gbia0001174a"
+   },
+   {
+    "src": "https://archive.org/download/78_first-noel-holy-night_eric-silver_gbia0366718a/FIRST%20NOEL%20%3B%20HOLY%20NIGHT%20-%20ERIC%20SILVER.mp3",
+    "length": 169.45,
+    "series": "Eric Silver",
+    "title": "First Noel ; Holy Night",
+    "item": "https://archive.org/details/78_first-noel-holy-night_eric-silver_gbia0366718a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-heard-the-bells-on-christmas-day_dick-edwards-peter-pan-orchestra-chorus_gbia0533065b/I%20HEARD%20THE%20BELLS%20ON%20CHRISTMAS%20DAY%20-%20DICK%20EDWARDS.mp3",
+    "length": 136,
+    "series": "Dick Edwards",
+    "title": "I Heard The Bells On Christmas Day",
+    "item": "https://archive.org/details/78_i-heard-the-bells-on-christmas-day_dick-edwards-peter-pan-orchestra-chorus_gbia0533065b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGmGuardianMaintenance.mp3",
+    "length": 59.74,
+    "series": "A word from our sponsor",
+    "title": "GM Guardian Maintenance",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_on-the-atcheson-topeka-and-the-santa-fe_harry-roy-his-band-eve-lombard-warren-merce_gbia3032579b/ON%20THE%20ATCHESON%2C%20TOPEKA%20AND%20THE%20SAN%20-%20HARRY%20ROY%20%26%20HIS%20BAND.mp3",
+    "length": 181.58,
+    "series": "Harry Roy & His Band",
+    "title": "On The Atcheson, Topeka And The Santa Fe",
+    "date": "1946",
+    "item": "https://archive.org/details/78_on-the-atcheson-topeka-and-the-santa-fe_harry-roy-his-band-eve-lombard-warren-merce_gbia3032579b"
+   },
+   {
+    "src": "https://archive.org/download/78_deck-the-halls-we-three-kings-of-orient-are-the-first-nowell_godfrey-malcolm-fr_gbia0321792b/Deck%20The%20Halls%20-%20We%20Three%20Kings%20of%20Orien%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 357.49,
+    "series": "Godfrey Malcolm",
+    "title": "Deck The Halls - We Three Kings of Orient Are - The First Nowell",
+    "item": "https://archive.org/details/78_deck-the-halls-we-three-kings-of-orient-are-the-first-nowell_godfrey-malcolm-fr_gbia0321792b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_fred-mendelsohn-franz-gruber_gbia0544450a/SILENT%20NIGHT%20-%20FRED%20MENDELSOHN%20-%20Franz%20Gruber.mp3",
+    "length": 172.81,
+    "series": "Fred Mendelsohn",
+    "title": "Silent Night",
+    "item": "https://archive.org/details/78_silent-night_fred-mendelsohn-franz-gruber_gbia0544450a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_leo-watson-vic-dickenson-quintet-vic-dickenson-jellyroll-lipschitz-arv_gbia0061676a/Jingle%20Bells%20-%20Leo%20Watson%20-%20Vic%20Dickenson%20Quintet.mp3",
+    "length": 172,
+    "series": "Leo Watson",
+    "title": "Jingle Bells",
+    "date": "1946",
+    "item": "https://archive.org/details/78_jingle-bells_leo-watson-vic-dickenson-quintet-vic-dickenson-jellyroll-lipschitz-arv_gbia0061676a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CONTADINATOMATOPASTE.mp3",
+    "length": 18.06,
+    "series": "A word from our sponsor",
+    "title": "Contadina Tomato Paste",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Medley%20It%20Came%20Upon%20a%20Midnight%20Clear_Away%20in%20a%20Manger.mp3",
-    "length": 203.02,
-    "series": "Mitch Miller",
-    "title": "Medley It Came Upon a Midnight Clear Away in a Manger",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
+    "src": "https://archive.org/download/78_mr-sandman-hajji-baba_the-rhythmaires-mimi-martel-ronnie-deauville-lew-raymond_gbia0099515a/%22Mr.%20Sandman%22%3B%20Hajji%20Baba%20-%20The%20Rhythmaires.mp3",
+    "length": 335,
+    "series": "The Rhythmaires",
+    "title": "\"Mr. Sandman\"; Hajji Baba",
+    "date": "1954",
+    "item": "https://archive.org/details/78_mr-sandman-hajji-baba_the-rhythmaires-mimi-martel-ronnie-deauville-lew-raymond_gbia0099515a"
    },
    {
-    "src": "https://archive.org/download/christmasbrassso00mont/08_Mr._Reindeer.mp3",
-    "length": 146,
-    "series": "Monterey Brass",
-    "title": "Mr. Reindeer",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
+    "src": "https://archive.org/download/78_nuttin-for-christmas_lori-ann-and-the-tinkertones-warren-vincent_gbia0532929a/NUTTIN%27%20for%20Christmas%20-%20LORI%20ANN%20and%20THE%20TINKERTONES.mp3",
+    "length": 170.02,
+    "series": "LORI ANN and THE TINKERTONES",
+    "title": "NUTTIN' for Christmas",
+    "item": "https://archive.org/details/78_nuttin-for-christmas_lori-ann-and-the-tinkertones-warren-vincent_gbia0532929a"
    },
    {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dick-edwards-johnny-marks-the-peter-pan-chorus-and-o_gbia0001238a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Dick%20Edwards.mp3",
-    "length": 181,
-    "series": "Dick Edwards",
+    "src": "https://archive.org/download/78_silent-night_bobby-doyle-ray-blochs-orchestra-and-choir_gbia0371322b/SILENT%20NIGHT%20-%20BOBBY%20DOYLE%20-%20Ray%20Bloch%27s%20Orchestra%20and%20Choir.mp3",
+    "length": 194.11,
+    "series": "Bobby Doyle",
+    "title": "Silent Night",
+    "date": "1946",
+    "item": "https://archive.org/details/78_silent-night_bobby-doyle-ray-blochs-orchestra-and-choir_gbia0371322b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-medley_john-kiley_gbia0285024b/CHRISTMAS%20MEDLEY%20-%20JOHN%20KILEY.mp3",
+    "length": 205.82,
+    "series": "John Kiley",
+    "title": "Christmas Medley",
+    "item": "https://archive.org/details/78_christmas-medley_john-kiley_gbia0285024b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
+    "length": 45.43,
+    "series": "A word from our sponsor",
+    "title": "Signal Gasoline",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_bobby-nicholas-peter-pan-orchestra-and-chorus-j-fred_gbia0296730a/SANTA%20CLAUS%20IS%20COMIN%27%20TO%20TOWN%20-%20BOBBY%20NICHOLAS.mp3",
+    "length": 123.62,
+    "series": "Bobby Nicholas",
+    "title": "Santa Claus is Comin' to Town",
+    "date": "1959",
+    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_bobby-nicholas-peter-pan-orchestra-and-chorus-j-fred_gbia0296730a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-wouldnt-have-you-on-a-christmas-tree_dick-stratton-and-his-nite-owls-dick-stratt_gbia0006817b/I%20Wouldn%27t%20Have%20You%20On%20A%20-%20Dick%20Stratton%20and%20his%20Nite%20Owls.mp3",
+    "length": 147,
+    "series": "Dick Stratton and his Nite Owls",
+    "title": "I Wouldn't Have You On A Christmas Tree",
+    "date": "1950",
+    "item": "https://archive.org/details/78_i-wouldnt-have-you-on-a-christmas-tree_dick-stratton-and-his-nite-owls-dick-stratt_gbia0006817b"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0001234a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Arizona%20Cliff%20Martin.mp3",
+    "length": 178.18,
+    "series": "Arizona Cliff Martin",
     "title": "Rudolph The Red Nosed Reindeer",
-    "date": "1952",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dick-edwards-johnny-marks-the-peter-pan-chorus-and-o_gbia0001238a"
+    "date": "1953",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0001234a"
+   },
+   {
+    "src": "https://archive.org/download/78_little-bitty-baby_tom-glazer-h-hopkins_gbia0460044/02%20-%20LITTLE%20BITTY%20BABY%20-%20TOM%20GLAZER%20-%20H.%20HOPKINS.mp3",
+    "length": 186.05,
+    "series": "Tom Glazer",
+    "title": "Little Bitty Baby",
+    "item": "https://archive.org/details/78_little-bitty-baby_tom-glazer-h-hopkins_gbia0460044"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzer.mp3",
+    "length": 117.36,
+    "series": "A word from our sponsor",
+    "title": "Alka Seltzer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_fats-waller-and-his-rhythm-fats-waller-hencock_gbia0100473a/Jingle%20Bells%20-%20%22Fats%22%20Waller%20and%20his%20Rhythm.mp3",
+    "length": 184,
+    "series": "\"Fats\" Waller and his Rhythm",
+    "title": "Jingle Bells",
+    "date": "1957",
+    "item": "https://archive.org/details/78_jingle-bells_fats-waller-and-his-rhythm-fats-waller-hencock_gbia0100473a"
+   },
+   {
+    "src": "https://archive.org/download/78_polish-jingle-bells-dzwonki-na-gwiazdke---christmas-carol---koleda_ignacy-podgorski_gbia0002218a/Polish%20Jingle%20Bells%20Dzwonki%20Na%20Gwiazdke%20-%20Christmas%20Carol%20-%20Koleda%20-%20Ignacy%20Podgorski%20i%20jego%20Nadzwyczajna%20Orkiestra.mp3",
+    "length": 189,
+    "series": "Ignacy Podgorski i jego Nadzwyczajna Orkiestra",
+    "title": "Polish Jingle Bells Dzwonki Na Gwiazdke - Christmas Carol - Koleda",
+    "date": "1947",
+    "item": "https://archive.org/details/78_polish-jingle-bells-dzwonki-na-gwiazdke---christmas-carol---koleda_ignacy-podgorski_gbia0002218a"
+   },
+   {
+    "src": "https://archive.org/download/78_kris-kringle-part-1_gbia0534380a/KRIS%20KRINGLE%20PART%201.mp3",
+    "length": 102.37,
+    "series": "Unknown artist",
+    "title": "Kris Kringle Part 1",
+    "item": "https://archive.org/details/78_kris-kringle-part-1_gbia0534380a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-medley-jingle-bells-little-brown-jug-auld-lang-syne_eddie-piano-mil_gbia0167039b/CHRISTMAS%20MEDLEY%20%28Jingle%20Bells%2C%20Lit%20-%20Eddie%20%22Piano%22%20Miller.mp3",
+    "length": 141.29,
+    "series": "Eddie \"Piano\" Miller",
+    "title": "CHRISTMAS MEDLEY (Jingle Bells, Little Brown Jug, Auld Lang Syne)",
+    "item": "https://archive.org/details/78_christmas-medley-jingle-bells-little-brown-jug-auld-lang-syne_eddie-piano-mil_gbia0167039b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUSTERCREAM.mp3",
+    "length": 50.11,
+    "series": "A word from our sponsor",
+    "title": "Lustre-Creme Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
     "src": "https://archive.org/download/78_jag-drmmer-om-en-jul-hemma_bertil-boo-sven-arefeldts-orkester-irving-berlin-karl-l_gbia7033293b/Jag%20dr%C3%B6mmer%20om%20en%20jul%20hemma%20-%20Bertil%20Boo.mp3",
@@ -68123,347 +63486,19 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_jag-drmmer-om-en-jul-hemma_bertil-boo-sven-arefeldts-orkester-irving-berlin-karl-l_gbia7033293b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/WHEATIESCEREAL.mp3",
-    "length": 85.21,
-    "series": "A word from our sponsor",
-    "title": "Wheaties",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
+    "src": "https://archive.org/download/78_barnyard-christmas_spike-jones-and-his-city-slickers-the-bell-sisters-jack-stearn-s_gbia7030589a/BARNYARD%20CHRISTMAS%20-%20SPIKE%20JONES%20AND%20HIS%20CITY%20SLICKERS.mp3",
+    "length": 170,
+    "series": "Spike Jones And His City Slickers",
+    "title": "Barnyard Christmas",
+    "item": "https://archive.org/details/78_barnyard-christmas_spike-jones-and-his-city-slickers-the-bell-sisters-jack-stearn-s_gbia7030589a"
    },
    {
-    "src": "https://archive.org/download/78_christmas-day_eddie-gould-orch-will-sullivan_gbia0284374a/CHRISTMAS%20DAY%20-%20Eddie%20Gould%20%26%20Orch.%20-%20Will%20Sullivan.mp3",
-    "length": 178.82,
-    "series": "Eddie Gould & Orch.",
-    "title": "Christmas Day",
-    "date": "1952",
-    "item": "https://archive.org/details/78_christmas-day_eddie-gould-orch-will-sullivan_gbia0284374a"
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/01%20O%20Holy%20Night.mp3",
-    "length": 199,
-    "series": "George Beverly Shea",
-    "title": "O Holy Night",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/the-organ-orchestra-that-happy-christmas-feeling-rca-camden-cas-542-stereo-orthophonic-side-1-f-eq/The%20Organ%20Orchestra%20-%20That%20Happy%20Christmas%20Feeling%20-%20RCA%20Camden%20CAS%20542%20stereo%20orthophonic%20side%202%20F%20EQ1.mp3",
-    "length": 786,
-    "series": "The Organ Orchestra",
-    "title": "That Happy Christmas Feeling (Side 2)",
-    "date": "1959",
-    "item": "https://archive.org/details/the-organ-orchestra-that-happy-christmas-feeling-rca-camden-cas-542-stereo-orthophonic-side-1-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/07-white-christmas/03%20WHITE%20CHRISTMAS.mp3",
-    "length": 90.57,
-    "series": "Bing Crosby",
+    "src": "https://archive.org/download/78_white-christmas_the-promenaders-irving-berlin_gbia0342822b/WHITE%20CHRISTMAS%20-%20THE%20PROMENADERS%20-%20Irving%20Berlin.mp3",
+    "length": 182.62,
+    "series": "The Promenaders",
     "title": "White Christmas",
-    "date": "1954",
-    "item": "https://archive.org/details/07-white-christmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/HALEYSMO.MP3",
-    "length": 42.55,
-    "series": "A word from our sponsor",
-    "title": "Haley's M-O",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/05%20The%20Christmas%20Song.mp3",
-    "length": 185.18,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "The Christmas Song (Merry Christmas To You)",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/john-gary-the-john-gary-christmas-album-rca-victor-lsp-2940-stereo-side-1-f-eq-2/John%20Gary%20-%20The%20John%20Gary%20Christmas%20Album%20-%20RCA%20Victor%20LSP-2940%20stereo%20side%201%20F%20EQ2.mp3",
-    "length": 1037,
-    "series": "John Gary",
-    "title": "Christmas Album (Side 1)",
-    "date": "1963",
-    "item": "https://archive.org/details/john-gary-the-john-gary-christmas-album-rca-victor-lsp-2940-stereo-side-1-f-eq-2"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/12%20-%20O%20Holy%20Night%20%28Cantique%20de%20Noel%29%20-%20Jan%20Peerce%2C%20Columbia%20Boys%20Choir.mp3",
-    "length": 242.05,
-    "series": "Jan Peerce, Columbia Boys Choir",
-    "title": "O Holy Night (Cantique de Noel)",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_the-coventry-carol_master-billy-neely-gerald-moore-moore_gbia0553501a/THE%20COVENTRY%20CAROL%20-%20MASTER%20BILLY%20NEELY%20-%20Gerald%20Moore.mp3",
-    "length": 186,
-    "series": "Master Billy Neely",
-    "title": "The Coventry Carol",
-    "date": "1952",
-    "item": "https://archive.org/details/78_the-coventry-carol_master-billy-neely-gerald-moore-moore_gbia0553501a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGlocoatWax.mp3",
-    "length": 16.06,
-    "series": "A word from our sponsor",
-    "title": "Glo-Coat Wax",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/02%20-%20The%20Christmas%20Song%20%28Chestnuts%20Roasting%20on%20an%20Open%20Fire%29%20-%20Henry%20Mancini%2C%20his%20Or.mp3",
-    "length": 212.72,
-    "series": "Henry Mancini, his Or",
-    "title": "The Christmas Song (Chestnuts Roasting on an Open Fire)",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_merry-christmas-baby_johnny-moores-three-blazers-johnny-moore-eddie-williams-lou_gbia0465370b/MERRY%20CHRISTMAS%2C%20BABY%20-%20JOHNNY%20MOORE%27S%20THREE%20BLAZERS.mp3",
-    "length": 168.02,
-    "series": "Johnny Moore's Three Blazers",
-    "title": "Merry Christmas, Baby",
-    "date": "1948",
-    "item": "https://archive.org/details/78_merry-christmas-baby_johnny-moores-three-blazers-johnny-moore-eddie-williams-lou_gbia0465370b"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/18%20Coventry%20Carol.mp3",
-    "length": 127.71,
-    "series": "Norman Luboff Choir",
-    "title": "Coventry Carol",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_the-night-before-christmas-part-ii_roy-rogers-and-dale-evans-mitchell-miller_gbia0534128b/THE%20NIGHT%20BEFORE%20CHRISTMAS%20Par%20-%20ROY%20ROGERS%20and%20DALE%20EVANS.mp3",
-    "length": 118.35,
-    "series": "ROY ROGERS and DALE EVANS",
-    "title": "THE NIGHT BEFORE CHRISTMAS Part II",
-    "date": "1954",
-    "item": "https://archive.org/details/78_the-night-before-christmas-part-ii_roy-rogers-and-dale-evans-mitchell-miller_gbia0534128b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/OVALTINE.MP3",
-    "length": 126.24,
-    "series": "A word from our sponsor",
-    "title": "Ovaltine",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_my-cactus-christmas-tree_redd-harper-harper-barnett_gbia3011671a/MY%20CACTUS%20CHRISTMAS%20TREE%20-%20REDD%20HARPER%20-%20Harper.mp3",
-    "length": 179,
-    "series": "Redd Harper",
-    "title": "My Cactus Christmas Tree",
-    "item": "https://archive.org/details/78_my-cactus-christmas-tree_redd-harper-harper-barnett_gbia3011671a"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_betty-lou-the-voice-of-tommy-riggs_gbia0218542b/JINGLE%20BELLS%20-%20BETTY%20LOU%20-%20The%20Voice%20of%20Tommy%20Riggs.mp3",
-    "length": 152.71,
-    "series": "Betty Lou",
-    "title": "Jingle Bells",
-    "date": "1948",
-    "item": "https://archive.org/details/78_jingle-bells_betty-lou-the-voice-of-tommy-riggs_gbia0218542b"
-   },
-   {
-    "src": "https://archive.org/download/78_parade-of-the-wooden-soldiers_the-sandpipers-anne-lloyd-mitchell-miller-macdonald-j_gbia0534118a/PARADE%20OF%20THE%20WOODEN%20SOLDIERS%20-%20THE%20SANDPIPERS.mp3",
-    "length": 99,
-    "series": "The Sandpipers",
-    "title": "Parade Of The Wooden Soldiers",
-    "date": "1951",
-    "item": "https://archive.org/details/78_parade-of-the-wooden-soldiers_the-sandpipers-anne-lloyd-mitchell-miller-macdonald-j_gbia0534118a"
-   },
-   {
-    "src": "https://archive.org/download/hannabarberaxmas/11%20We%20Three%20Kings.mp3",
-    "length": 120.53,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "We Three Kings",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/HALLOSHAMPOO.mp3",
-    "length": 25.7,
-    "series": "A word from our sponsor",
-    "title": "Halo Shampoo",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_1-deck-the-hall-2-away-in-a-manger-3-hark-the-herald-angels-sing_ray-bloch_gbia0433486a/1.%20Deck%20The%20Hall%3B%202.%20Away%20in%20a%20Manger%3B%203.%20Hark%20-%20RAY%20BLOCH.mp3",
-    "length": 179.78,
-    "series": "Ray Bloch",
-    "title": "1. Deck The Hall; 2. Away in a Manger; 3. Hark! The Herald Angels Sing",
-    "date": "1946",
-    "item": "https://archive.org/details/78_1-deck-the-hall-2-away-in-a-manger-3-hark-the-herald-angels-sing_ray-bloch_gbia0433486a"
-   },
-   {
-    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0118610b/GUITAR%20JINGLE%20BELLS%20-%20Arthur%20%22Guitar%20Boogie%22%20Smith%27s%20Sensational%20Trio%20%28Formerly%20Rambler%20Trio%29.mp3",
-    "length": 172,
-    "series": "Arthur \"Guitar Boogie\" Smith's Sensational Trio",
-    "title": "Guitar Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0118610b"
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-phil-springer-jimmy-ley_gbia0285967a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
-    "length": 149.4,
-    "series": "Betty Johnson",
-    "title": "I Want Eddie Fisher for Christmas",
-    "date": "1954",
-    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-phil-springer-jimmy-ley_gbia0285967a"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Joy%20to%20the%20World.mp3",
-    "length": 101.8,
-    "series": "The Mormon Tabernacle Choir",
-    "title": "Joy to the World",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
-    "length": 49.41,
-    "series": "A word from our sponsor",
-    "title": "Lifebuoy Health Soap",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-polka-rudolph-the-red-nosed-reindeer_tony-puskarz-and-his-orchestra-st_gbia0428830a/RUDOLPH%20-%20POLKA%20%28Rudolph%20%20-%20TONY%20PUSKARZ%20AND%20HIS%20ORCHESTRA.mp3",
-    "length": 149.52,
-    "series": "Tony Puskarz and His Orchestra",
-    "title": "RUDOLPH - POLKA (Rudolph The Red Nosed Reindeer)",
-    "date": "1951",
-    "item": "https://archive.org/details/78_rudolph-polka-rudolph-the-red-nosed-reindeer_tony-puskarz-and-his-orchestra-st_gbia0428830a"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_harmonia-symphonic-orchestra-fr-grueber_gbia0131212a/SILENT%20NIGHT%20-%20Harmonia%20Symphonic%20Orchestra.mp3",
-    "length": 181,
-    "series": "Harmonia Symphonic Orchestra",
-    "title": "Silent Night",
-    "date": "1948",
-    "item": "https://archive.org/details/78_silent-night_harmonia-symphonic-orchestra-fr-grueber_gbia0131212a"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Jingle%20Bell%20Rock.mp3",
-    "length": 110.5,
-    "series": "Chet Atkins",
-    "title": "Jingle Bell Rock",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/04.MaryHadABaby.mp3",
-    "length": 77.9,
-    "series": "The De Paur Chorus",
-    "title": "Mary Had a Baby",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/NABISCO.MP3",
-    "length": 89.11,
-    "series": "A word from our sponsor",
-    "title": "Nabisco",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/06%20Go%20Tell%20It%20On%20The%20Mountain.mp3",
-    "length": 138.21,
-    "series": "George Beverly Shea",
-    "title": "Go Tell It On The Mountain",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/arthur-fiedler-boston-pops-pops-christmas-party-side-1-rca-victor-lsc-2329-livin/Arthur%20Fiedler%20Boston%20Pops%20-%20Pops%20Christmas%20Party%20-%20side%201%20-%20RCA%20Victor%20LSC-2329%20Living%20Stereo%20%20D71EE%20F%20EQ.mp3",
-    "length": 1294,
-    "series": "Arthur Fiedler Boston Pops",
-    "title": "Pops Christmas Party (Side 1)",
-    "date": "1959",
-    "item": "https://archive.org/details/arthur-fiedler-boston-pops-pops-christmas-party-side-1-rca-victor-lsc-2329-livin"
-   },
-   {
-    "src": "https://archive.org/download/andre-kostelanetz-and-his-orchestra-wonderland-of-christmas-side-1-columbia-le-1/Andre%20Kostelanetz%20and%20his%20orchestra%20-%20Wonderland%20Of%20Christmas%20-%20side%201%20-%20Columbia%20LE%2010086%20%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 853,
-    "series": "Andre Kostelanetz And His Orchestra",
-    "title": "Wonderland Of Christmas (Side 1)",
-    "date": "1963",
-    "item": "https://archive.org/details/andre-kostelanetz-and-his-orchestra-wonderland-of-christmas-side-1-columbia-le-1"
-   },
-   {
-    "src": "https://archive.org/download/78_theres-a-christmas-tree-in-heaven_four-aces-al-alberts-max-spickol-bill-borelli-j_gbia0111860a/THERE%27S%20A%20CHRISTMAS%20TREE%20IN%20HEAVEN%20-%20Four%20Aces.mp3",
-    "length": 206.03,
-    "series": "Four Aces",
-    "title": "There'S A Christmas Tree In Heaven",
-    "date": "1951",
-    "item": "https://archive.org/details/78_theres-a-christmas-tree-in-heaven_four-aces-al-alberts-max-spickol-bill-borelli-j_gbia0111860a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
-    "length": 14.08,
-    "series": "A word from our sponsor",
-    "title": "Colgate Tooth Powder",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/Coventry%20Carol.mp3",
-    "length": 126.89,
-    "series": "Liberace",
-    "title": "Coventry Carol",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_monica-lewis-ray-bloch-and-his-orchestra-irving-berlin_gbia0014394a/White%20Christmas%20-%20Monica%20Lewis%20-%20Ray%20Bloch%20and%20His%20Orchestra.mp3",
-    "length": 199,
-    "series": "Monica Lewis",
-    "title": "White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_white-christmas_monica-lewis-ray-bloch-and-his-orchestra-irving-berlin_gbia0014394a"
-   },
-   {
-    "src": "https://archive.org/download/78_blue-shadows-on-a-white-christmas-tree_eddie-hazelwood-and-his-carolina-woodchopper_gbia0430674b/BLUE%20SHADO%20-%20EDDIE%20HAZELWOOD%20and%20His%20Carolina%20Woodchoppers.mp3",
-    "length": 173.06,
-    "series": "EDDIE HAZELWOOD and His Carolina Woodchoppers",
-    "title": "Blue Shadows on a White Christmas Tree",
-    "date": "1951",
-    "item": "https://archive.org/details/78_blue-shadows-on-a-white-christmas-tree_eddie-hazelwood-and-his-carolina-woodchopper_gbia0430674b"
-   },
-   {
-    "src": "https://archive.org/download/78_winter-wonderland_fran-mckenna-the-mulcays-jimmy-and-mildred-dick-smith-felix-b_gbia0405697a/WINTER%20WONDERLAND%20-%20FRAN%20McKENNA%20-%20%22THE%20MULCAYS%22%20%28Jimmy%20and%20Mildred%29.mp3",
-    "length": 142.33,
-    "series": "FRAN McKENNA",
-    "title": "Winter Wonderland",
-    "date": "1952",
-    "item": "https://archive.org/details/78_winter-wonderland_fran-mckenna-the-mulcays-jimmy-and-mildred-dick-smith-felix-b_gbia0405697a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/ROLSTONCEREAL.mp3",
-    "length": 35.84,
-    "series": "A word from our sponsor",
-    "title": "Ralston Cereal",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/01%20Have%20Yourself%20a%20Merry%20Little%20Christmas.mp3",
-    "length": 187.48,
-    "series": "The Lennon Sisters",
-    "title": "Have Yourself a Merry Little Christmas",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-a-hippopotamus-for-christmas_toby-deane-enoch-light-and-his-orchestra-john-r_gbia0476360a/I%20WANT%20A%20HIPPOPOTAMUS%20FOR%20CHRISTMAS%20-%20TOBY%20DEANE.mp3",
-    "length": 163.87,
-    "series": "Toby Deane",
-    "title": "I Want a Hippopotamus for Christmas",
     "date": "1953",
-    "item": "https://archive.org/details/78_i-want-a-hippopotamus-for-christmas_toby-deane-enoch-light-and-his-orchestra-john-r_gbia0476360a"
+    "item": "https://archive.org/details/78_white-christmas_the-promenaders-irving-berlin_gbia0342822b"
    },
    {
     "src": "https://archive.org/download/78_a-merry-merry-merry-merry-christmas-and-a-happy-little-new-year_anne-lloyd-the-sand_gbia0534135/02%20-%20A%20HAPPY%20LITTLE%20NEW%20YEAR%20-%20ANNE%20LLOYD%20-%20THE%20SANDPIPERS.mp3",
@@ -68473,337 +63508,125 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_a-merry-merry-merry-merry-christmas-and-a-happy-little-new-year_anne-lloyd-the-sand_gbia0534135"
    },
    {
-    "src": "https://archive.org/download/HereComesSantaClaus_201905/HereComesSantaClaus.mp3",
-    "length": 146,
-    "series": "Gene Autry",
-    "title": "Here Comes Santa Claus",
-    "item": "https://archive.org/details/HereComesSantaClaus_201905"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAjax.mp3",
-    "length": 40.3,
+    "src": "https://archive.org/download/RadioCommercialsShows/REYNOLDSALUMINUM.mp3",
+    "length": 36.23,
     "series": "A word from our sponsor",
-    "title": "Ajax",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_santa-fe-is-a-long-long-way-from-broadway_leon-mcauliffe-and-his-western-swing-ban_gbia0068948b/Santa%20Fe%20Is%20a%20%20-%20Leon%20McAuliffe%20and%20his%20Western%20Swing%20Band.mp3",
-    "length": 165.77,
-    "series": "Leon McAuliffe and his Western Swing Band",
-    "title": "Santa Fe Is a Long, Long Way from Broadway",
-    "date": "1947",
-    "item": "https://archive.org/details/78_santa-fe-is-a-long-long-way-from-broadway_leon-mcauliffe-and-his-western-swing-ban_gbia0068948b"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/09.MaryMaryWhereIsYourBaby.mp3",
-    "length": 156.21,
-    "series": "The De Paur Chorus",
-    "title": "Mary, Mary, Where Is Your Baby",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-party-shuffle_lowell-fulson_gbia0060579b/Christmas%20Party%20Shuffle%20-%20Lowell%20Fulson.mp3",
-    "length": 195,
-    "series": "Lowell Fulson",
-    "title": "Christmas Party Shuffle",
-    "date": "1950",
-    "item": "https://archive.org/details/78_christmas-party-shuffle_lowell-fulson_gbia0060579b"
-   },
-   {
-    "src": "https://archive.org/download/78_the-winter-song_john-linehan-orch-will-sullivan_gbia0284374b/THE%20WINTER%20SONG%20-%20John%20Linehan%20%26%20Orch%20-%20Will%20Sullivan.mp3",
-    "length": 122.57,
-    "series": "John Linehan & Orch",
-    "title": "The Winter Song",
-    "date": "1952",
-    "item": "https://archive.org/details/78_the-winter-song_john-linehan-orch-will-sullivan_gbia0284374b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/POSTUM.MP3",
-    "length": 120.78,
-    "series": "A word from our sponsor",
-    "title": "Postum",
+    "title": "Reynolds Aluminum",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_home-for-the-holidays_roye-goodrich-the-holidays-roye-goodrich-the-holidays-blake-l_gbia0409858a/HOME%20FOR%20THE%20HOLIDAYS%20-%20ROYE%20GOODRICH%20-%20THE%20HOLIDAYS.mp3",
-    "length": 183.26,
-    "series": "Roye Goodrich",
-    "title": "Home For The Holidays",
-    "date": "1952",
-    "item": "https://archive.org/details/78_home-for-the-holidays_roye-goodrich-the-holidays-roye-goodrich-the-holidays-blake-l_gbia0409858a"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-holy-night_lee-richardson-wen-talberts-male-chorus-john-m.-motley_gbia0001205b/Silent%20Night%2C%20Holy%20Night%20-%20Lee%20Richardson.mp3",
-    "length": 196.61,
-    "series": "Lee Richardson",
-    "title": "Silent Night, Holy Night",
-    "date": "1946",
-    "item": "https://archive.org/details/78_silent-night-holy-night_lee-richardson-wen-talberts-male-chorus-john-m.-motley_gbia0001205b"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_ray-bloch-and-his-orchestra-cahn-styne-the-eldorado-f_gbia0014393/01%20-%20Santa%20Claus%20Is%20Comin%27%20to%20Town%20-%20Ray%20Bloch%20and%20his%20Orchestra.mp3",
-    "length": 187,
-    "series": "Ray Bloch and his Orchestra",
-    "title": "Let It Snow, Let It Snow, Let It Snow; Santa Claus Is Comin' to Town",
-    "date": "1947",
-    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_ray-bloch-and-his-orchestra-cahn-styne-the-eldorado-f_gbia0014393"
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/A4%20-%20Medley%20-%20The%20First%20Noel%3B%20Wassail%2C%20Wassail%2C%20All%20Over%20The%20Town%3B%20Hark%2C%20The%20Herald%20Angels%20Sing%3B%20God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
-    "length": 395,
-    "series": "Various",
-    "title": "Medley - The First Noel; Wassail, Wassail, All Over The Town; Hark, The Herald Angels Sing; God Rest Ye Merry Gentl",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/WINSTONCIGARETTES.mp3",
-    "length": 29.29,
-    "series": "A word from our sponsor",
-    "title": "Winston Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/B3%20-%20Number%20one%20day%20of%20christmas.mp3",
-    "length": 198.66,
-    "series": "Various",
-    "title": "Number one day of christmas",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/wooden-soldiers-swing/wooden-soldiers-swing.mp3",
-    "length": 139,
-    "series": "Eddie Chamblee and his Orchestra",
-    "title": "Wooden Soldiers Swing",
-    "date": "1952",
-    "item": "https://archive.org/details/wooden-soldiers-swing"
-   },
-   {
-    "src": "https://archive.org/download/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j_gbia0170701b/FUNNY%20LITTLE%20SNOW%20MAN%20-%20BOBBY%20SABATINO%20AND%20THE%20CHARLES%20KENNY%20ORCHESTRA.mp3",
-    "length": 185.13,
-    "series": "Bobby Sabatino And The Charles Kenny Orchestra",
-    "title": "Funny Little Snow Man",
-    "date": "December 19, 1953",
-    "item": "https://archive.org/details/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j_gbia0170701b"
-   },
-   {
-    "src": "https://archive.org/download/78_winter-wonderland_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble-berna_gbia0211798b/WINTER%20WONDERLAND%20-%20JOHNNY%20LONG%20and%20his%20Orchestra.mp3",
-    "length": 191.61,
-    "series": "JOHNNY LONG and his Orchestra",
-    "title": "Winter Wonderland",
-    "date": "1947",
-    "item": "https://archive.org/details/78_winter-wonderland_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble-berna_gbia0211798b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
-    "length": 50.35,
-    "series": "A word from our sponsor",
-    "title": "Northwest Orient Airlines",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/09%20Silver%20Bells.mp3",
-    "length": 185,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "Silver Bells",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/03_Dance_of_the_Sugar_Plum_Fairies.mp3",
-    "length": 167,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Dance of the Sugar Plum Fairies",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/18%20Christmas%20Country%20Style.mp3",
-    "length": 121.92,
-    "series": "Johnny Tillotson",
-    "title": "Christmas Country Style",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/Hark%21%20The%20Herald%20Angel%20Sings.mp3",
-    "length": 134.38,
-    "series": "Ethel Smith",
-    "title": "Hark! The Herald Angel Sings",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercials1957Chevrolet.mp3",
-    "length": 36.48,
-    "series": "A word from our sponsor",
-    "title": "1957 Chevrolet",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/22%20John%20Forgot%20to%20Sing.mp3",
-    "length": 241.94,
-    "series": "Pete Ham & Tom Evans",
-    "title": "John Forgot to Sing",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_merry-christmas_frank-gallagher-dana-serenaders-ken-hecht-walt-dana_gbia0024837a/Merry%20Christmas%20-%20Frank%20Gallagher%20-%20Dana%20Serenaders.mp3",
-    "length": 163,
-    "series": "Frank Gallagher",
-    "title": "Merry Christmas",
-    "date": "1949",
-    "item": "https://archive.org/details/78_merry-christmas_frank-gallagher-dana-serenaders-ken-hecht-walt-dana_gbia0024837a"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/14%20-%20Sleigh%20Ride%20-%20Arthur%20Fiedler-Boston%20Pops%20Orchestra.mp3",
-    "length": 181.13,
-    "series": "Arthur Fiedler/Boston Pops Orchestra",
-    "title": "Sleigh Ride",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/02_White_Christmas___I_ll_Be_Home_for_Christmas___Home_for_the_Holidays___Happy_Holiday.mp3",
-    "length": 236,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "White Christmas / I'll Be Home for Christmas / Home for the Holidays / Happy Holiday",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdamHats.mp3",
-    "length": 72.35,
-    "series": "A word from our sponsor",
-    "title": "Adam Hats",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_the-night-before-christmas_mort-lawrence-vicky-kasen_gbia0435638a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20MORT%20LAWRENCE.mp3",
-    "length": 201.5,
-    "series": "Mort Lawrence",
-    "title": "The Night Before Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/78_the-night-before-christmas_mort-lawrence-vicky-kasen_gbia0435638a"
-   },
-   {
-    "src": "https://archive.org/download/JV-33019-1953-QmRfLSae7PKin6TTZfwUetf9NoRU9HkqjMCeRWQogQdn8H.mp3/DEC85419.mp3",
-    "length": 172.86,
-    "series": "Louis Armstrong With The Commanders",
-    "title": "Zat You, Santa Claus ?",
-    "date": "1953",
-    "item": "https://archive.org/details/JV-33019-1953-QmRfLSae7PKin6TTZfwUetf9NoRU9HkqjMCeRWQogQdn8H.mp3"
-   },
-   {
-    "src": "https://archive.org/download/78_snow-man-rock_big-bud-goodman-barouick-rose_gbia0266143b/SNOW-MAN%20ROCK%20-%20BIG%20BUD%20-%20Goodman%20-%20Barouick.mp3",
-    "length": 130.74,
-    "series": "Big Bud",
-    "title": "Snow-Man Rock",
-    "date": "1955",
-    "item": "https://archive.org/details/78_snow-man-rock_big-bud-goodman-barouick-rose_gbia0266143b"
-   },
-   {
-    "src": "https://archive.org/download/78_four-little-orphans-on-christmas-eve-meet_bernie-knee-the-hi-liters-ernest-bey_gbia0475116b/FOUR%20LITTLE%20ORPHANS%20%28On%20Christmas%20Eve%20Meet%29%20-%20BERNIE%20KNEE.mp3",
-    "length": 176.33,
-    "series": "Bernie Knee",
-    "title": "Four Little Orphans (On Christmas Eve Meet)",
-    "item": "https://archive.org/details/78_four-little-orphans-on-christmas-eve-meet_bernie-knee-the-hi-liters-ernest-bey_gbia0475116b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
-    "length": 86.85,
-    "series": "A word from our sponsor",
-    "title": "Sal Hepatica",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_the-church-bells-are-ringing-on-christmas-morn_irene-treadwell-and-the-phil-ellis-c_gbia0463902b/THE%20CHURCH%20BELL%20-%20IRENE%20TREADWELL%20And%20The%20PHIL%20ELLIS%20CHOIR.mp3",
-    "length": 153.86,
-    "series": "IRENE TREADWELL And The PHIL ELLIS CHOIR",
-    "title": "The Church Bells Are Ringing on Christmas Morn",
-    "date": "1953",
-    "item": "https://archive.org/details/78_the-church-bells-are-ringing-on-christmas-morn_irene-treadwell-and-the-phil-ellis-c_gbia0463902b"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/11_Winter_Wonderland.mp3",
-    "length": 157,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Winter Wonderland",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/07%20Jingle%20Bells.mp3",
-    "length": 157,
-    "series": "Vic Schoen",
+    "src": "https://archive.org/download/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0006829a/Jingle%20Bells%20-%20Joe%20Gumin%20and%20his%20Orchestra.mp3",
+    "length": 171.69,
+    "series": "Joe Gumin and his Orchestra",
     "title": "Jingle Bells",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
+    "date": "1948",
+    "item": "https://archive.org/details/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0006829a"
    },
    {
-    "src": "https://archive.org/download/78_give-me-an-old-fashioned-christmas_eddie-cletro-the-fronteirsmen-carl-m-lertzman_gbia0404442b/GIVE%20ME%20AN%20OLD-FASHIONED%20CHRISTMAS%20-%20EDDIE%20CLETRO.mp3",
-    "length": 119.71,
-    "series": "Eddie Cletro",
-    "title": "Give Me an Old-fashioned Christmas",
-    "date": "1956",
-    "item": "https://archive.org/details/78_give-me-an-old-fashioned-christmas_eddie-cletro-the-fronteirsmen-carl-m-lertzman_gbia0404442b"
+    "src": "https://archive.org/download/78_jingle-bells_harold-goodfellow-and-his-good-fellows_gbia0025155b/Jingle%20Bells%20-%20Harold%20Goodfellow%20and%20His%20Good%20Fellows.mp3",
+    "length": 190.75,
+    "series": "Harold Goodfellow and His Good Fellows",
+    "title": "Jingle Bells",
+    "date": "1948",
+    "item": "https://archive.org/details/78_jingle-bells_harold-goodfellow-and-his-good-fellows_gbia0025155b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/MARCHOFDIMES.mp3",
-    "length": 70.39,
+    "src": "https://archive.org/download/78_angels-we-have-heard-on-high_godfrey-malcolm-fredrico_gbia0219429f/ANGELS%20WE%20HAVE%20HEARD%20ON%20HIGH%20-%20Godfrey%20Malcolm.mp3",
+    "length": 134.65,
+    "series": "Godfrey Malcolm",
+    "title": "Angels We Have Heard On High",
+    "item": "https://archive.org/details/78_angels-we-have-heard-on-high_godfrey-malcolm-fredrico_gbia0219429f"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-medley_ferko-string-band-r-traub_gbia0323218a/CHRISTMAS%20MEDLEY%20-%20FERKO%20STRING%20BAND%20-%20R.%20Traub.mp3",
+    "length": 162.6,
+    "series": "Ferko String Band",
+    "title": "Christmas Medley",
+    "date": "1947",
+    "item": "https://archive.org/details/78_christmas-medley_ferko-string-band-r-traub_gbia0323218a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OLDSPICE.MP3",
+    "length": 20.16,
     "series": "A word from our sponsor",
-    "title": "March Of Dimes",
+    "title": "Old Spice",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_all-around-the-christmas-tree_mark-warnow-and-orchestra-dick-todd_gbia0286262a/ALL%20AROUND%20THE%20CHRISTMAS%20TREE%20-%20MARK%20WARNOW%20and%20Orchestra.mp3",
-    "length": 179.69,
-    "series": "MARK WARNOW and Orchestra",
-    "title": "All Around the Christmas Tree",
-    "date": "1948",
-    "item": "https://archive.org/details/78_all-around-the-christmas-tree_mark-warnow-and-orchestra-dick-todd_gbia0286262a"
+    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0377225a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
+    "length": 156.37,
+    "series": "Betty Johnson",
+    "title": "I Want Eddie Fisher For Christmas",
+    "date": "1954",
+    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0377225a"
    },
    {
-    "src": "https://archive.org/download/78_sleigh-bells_gbia0033131b/Sleigh%20Bells.mp3",
-    "length": 185.68,
-    "series": "Unknown artist",
-    "title": "Sleigh Bells",
-    "date": "1960",
-    "item": "https://archive.org/details/78_sleigh-bells_gbia0033131b"
+    "src": "https://archive.org/download/78_the-night-before-christmas-oh-come-all-ye-faithful_the-caroleers-peter-pan-orchestr_gbia0533751a/THE%20NIGHT%20BEFORE%20CHRISTMAS%3B%20OH%20COME%20ALL%20YE.mp3",
+    "length": 125.5,
+    "series": "The Caroleers",
+    "title": "The Night Before Christmas; Oh Come All Ye Faithful",
+    "item": "https://archive.org/details/78_the-night-before-christmas-oh-come-all-ye-faithful_the-caroleers-peter-pan-orchestr_gbia0533751a"
    },
    {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/O%20Holy%20Night.mp3",
-    "length": 133.63,
-    "series": "Ethel Smith",
-    "title": "O Holy Night",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
+    "src": "https://archive.org/download/78_julestemning_otte-svendsen-medlemmer-af-radioen-chr-thomsen-kai-mortensen_gbia7013078a/Julestemning%20-%20Otte%20Svendsen%20-%20Medlemmer%20af%20Radioen.mp3",
+    "length": 260.18,
+    "series": "Otte Svendsen",
+    "title": "Julestemning",
+    "item": "https://archive.org/details/78_julestemning_otte-svendsen-medlemmer-af-radioen-chr-thomsen-kai-mortensen_gbia7013078a"
    },
    {
-    "src": "https://archive.org/download/longlostsixtiesxmas/07%20Christmas%20Day.mp3",
-    "length": 141.12,
-    "series": "Pepper-Pots",
-    "title": "Christmas Day",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
+    "src": "https://archive.org/download/78_theres-no-place-like-home-for-the-holidays_frankie-starr-the-peter-pan-orchestra-a_gbia0322412a/There%27s%20No%20Place%20Like%20HOME%20FOR%20THE%20HOLIDAY%20-%20FRANKIE%20STARR.mp3",
+    "length": 164.53,
+    "series": "Frankie Starr",
+    "title": "There's No Place Like HOME FOR THE HOLIDAYS",
+    "item": "https://archive.org/details/78_theres-no-place-like-home-for-the-holidays_frankie-starr-the-peter-pan-orchestra-a_gbia0322412a"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/PONTIAC.MP3",
-    "length": 27.1,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAutoLite.mp3",
+    "length": 57.75,
     "series": "A word from our sponsor",
-    "title": "Pontiac",
-    "item": "https://archive.org/details/RadioCommercialsShows",
+    "title": "Auto-Lite",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-j-s-pierpont_gbia0275193b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO.mp3",
+    "length": 174.84,
+    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO",
+    "title": "Guitar Jingle Bells",
+    "date": "1947",
+    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-j-s-pierpont_gbia0275193b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-favorites_the-choraleers_gbia0438428b/CHRISTMAS%20FAVORITES%20-%20The%20Choraleers.mp3",
+    "length": 200.53,
+    "series": "The Choraleers",
+    "title": "Christmas Favorites",
+    "item": "https://archive.org/details/78_christmas-favorites_the-choraleers_gbia0438428b"
+   },
+   {
+    "src": "https://archive.org/download/78_boz-narodzenie_sta-jaworski-dana-orkiestra-w-dana_gbia0332104b/BOZ%C3%89%20NARODZENIE%20-%20STA%C5%9A%20JAWORSKI%20DANA%20ORKIESTRA.mp3",
+    "length": 185.63,
+    "series": "Staś Jaworski Dana Orkiestra",
+    "title": "Bozé Narodzenie",
+    "item": "https://archive.org/details/78_boz-narodzenie_sta-jaworski-dana-orkiestra-w-dana_gbia0332104b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-monica-jump_slim-gaillard-and-his-orchestra-gaillard-and-brown-d-marmaros-h_gbia0180526a/SANTA%20MONICA%20JUMP%20-%20SLIM%20GAILLARD%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 189.06,
+    "series": "Slim Gaillard And His Orchestra",
+    "title": "Santa Monica Jump",
+    "date": "1945",
+    "item": "https://archive.org/details/78_santa-monica-jump_slim-gaillard-and-his-orchestra-gaillard-and-brown-d-marmaros-h_gbia0180526a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLowenbrauBeer.mp3",
+    "length": 56.53,
+    "series": "A word from our sponsor",
+    "title": "Löwenbräu Beer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
@@ -68815,156 +63638,356 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_jingle-bells_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble_gbia0211798a"
    },
    {
-    "src": "https://archive.org/download/78_silent-night_ken-griffin-mohr-gruber_gbia0430427a/SILENT%20NIGHT%20-%20KEN%20GRIFFIN%20-%20MOHR%20-%20GRUBER.mp3",
-    "length": 172.08,
-    "series": "Ken Griffin",
-    "title": "Silent Night",
-    "date": "1950",
-    "item": "https://archive.org/details/78_silent-night_ken-griffin-mohr-gruber_gbia0430427a"
+    "src": "https://archive.org/download/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0125461a/JEG%20SAA%20JULEMANDEN%20KYSSE%20MOR%20%28I%20saw%20momm%20-%20RAQUEL%20RASTENNI.mp3",
+    "length": 185.9,
+    "series": "Raquel Rastenni",
+    "title": "JEG SAA JULEMANDEN KYSSE MOR (I saw mommy kissing Santa Claus)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0125461a"
    },
    {
-    "src": "https://archive.org/download/78_18-christmas-carols_the-metropolitan-caroleers-james-polack_gbia0011232b/18%20Christmas%20Carols%20-%20The%20Metropolitan%20Caroleers.mp3",
-    "length": 292,
-    "series": "The Metropolitan Caroleers",
-    "title": "18 Christmas Carols",
-    "date": "1950",
-    "item": "https://archive.org/details/78_18-christmas-carols_the-metropolitan-caroleers-james-polack_gbia0011232b"
-   },
-   {
-    "src": "https://archive.org/download/78_the-night-before-christmas---part-1_the-caroleers_gbia0001174a/The%20Night%20Before%20Christmas%20-%20Part%201%20-%20The%20Caroleers.mp3",
-    "length": 206,
-    "series": "The Caroleers",
-    "title": "The Night Before Christmas - Part 1",
-    "date": "1950",
-    "item": "https://archive.org/details/78_the-night-before-christmas---part-1_the-caroleers_gbia0001174a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
-    "length": 45.51,
-    "series": "A word from our sponsor",
-    "title": "Bubble Up",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_pedza-sanki-do-kosciola..-sleigh-ride_kazio-jarzebowski-ork-w.-dana-j.-cass_gbia0002305a/Pedza%20Sanki%20Do%20Kosciola..%20%28Sleigh%20Ride%29%20-%20Kazio%20Jarzebowski.mp3",
-    "length": 187,
-    "series": "Kazio Jarzebowski",
-    "title": "Pedza Sanki Do Kosciola.. (Sleigh Ride)",
+    "src": "https://archive.org/download/78_merry-christmas-baby_johnny-moores-three-blazers-johnny-moore-eddie-williams-lou_gbia0465370b/MERRY%20CHRISTMAS%2C%20BABY%20-%20JOHNNY%20MOORE%27S%20THREE%20BLAZERS.mp3",
+    "length": 168.02,
+    "series": "Johnny Moore's Three Blazers",
+    "title": "Merry Christmas, Baby",
     "date": "1948",
-    "item": "https://archive.org/details/78_pedza-sanki-do-kosciola..-sleigh-ride_kazio-jarzebowski-ork-w.-dana-j.-cass_gbia0002305a"
+    "item": "https://archive.org/details/78_merry-christmas-baby_johnny-moores-three-blazers-johnny-moore-eddie-williams-lou_gbia0465370b"
    },
    {
-    "src": "https://archive.org/download/george-melachrino-his-orchestra-christmas-joy-side-1-rca-victor-lpm-2044-mono-d-/George%20Melachrino%20%26%20his%20orchestra%20-%20Christmas%20Joy%20-%20side%202%20-%20RCA%20Victor%20LPM%20-%202044%20%20mono%20%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 1403,
-    "series": "George Melachrino & His Orchestra",
-    "title": "Christmas Joy (Side 2)",
-    "date": "1959",
-    "item": "https://archive.org/details/george-melachrino-his-orchestra-christmas-joy-side-1-rca-victor-lpm-2044-mono-d-"
+    "src": "https://archive.org/download/78_the-big-fat-man-with-the-long-white-beard_clark-mcmullen-schroeder-mcmullen_gbia0447325b/THE%20BIG%20FAT%20MAN%20%28With%20The%20Long%20White%20Be%20-%20CLARK%20%26%20McMULLEN.mp3",
+    "length": 144.26,
+    "series": "CLARK & McMULLEN",
+    "title": "THE BIG FAT MAN (With The Long White Beard)",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-big-fat-man-with-the-long-white-beard_clark-mcmullen-schroeder-mcmullen_gbia0447325b"
    },
    {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/06%20-%20Frosty%20The%20Snowman.mp3",
-    "length": 113.06,
-    "series": "The Beach Boys",
-    "title": "Frosty The Snowman",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/78_xmas-tree-song_pearl-five_gbia0099670a/Xmas%20Tree%20Song%20-%20Pearl%20Five.mp3",
-    "length": 145,
-    "series": "Pearl Five",
-    "title": "Xmas Tree Song",
-    "date": "1947",
-    "item": "https://archive.org/details/78_xmas-tree-song_pearl-five_gbia0099670a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CONTADINATOMATOPASTE.mp3",
-    "length": 18.06,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
+    "length": 59.17,
     "series": "A word from our sponsor",
-    "title": "Contadina Tomato Paste",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_the-first-christmas-bell_eddie-dean-the-frontiersmen-marian-hall-e-dean-hal-sother_gbia0473785a/THE%20FIRST%20CHRISTMAS%20BELL%20-%20EDDIE%20DEAN%20-%20THE%20FRONTIERSMEN.mp3",
-    "length": 171.55,
-    "series": "Eddie Dean",
-    "title": "The First Christmas Bell",
-    "date": "1955",
-    "item": "https://archive.org/details/78_the-first-christmas-bell_eddie-dean-the-frontiersmen-marian-hall-e-dean-hal-sother_gbia0473785a"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/White%20Christmas.mp3",
-    "length": 185.69,
-    "series": "Ethel Smith",
-    "title": "White Christmas",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/living-strings-orchestra-the-spirit-of-christmas-side-1-rca-camden-cas-783-stereo-d-71-ee-f-eq-fb-h/Living%20Strings%20Orchestra%20-%20The%20Spirit%20Of%20Christmas%20-%20side%202%20-%20RCA%20Camden%20CAS%20783%20Stereo%20%20D71EE%20F%20EQ%20FB%20H.mp3",
-    "length": 1085,
-    "series": "Living Strings Orchestra",
-    "title": "The Spirit Of Christmas (Side 2)",
-    "date": "1963",
-    "item": "https://archive.org/details/living-strings-orchestra-the-spirit-of-christmas-side-1-rca-camden-cas-783-stereo-d-71-ee-f-eq-fb-h"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/10%20Christmas%20Time.mp3",
-    "length": 121.94,
-    "series": "Jan Bradley",
-    "title": "Christmas Time",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLowenbrauBeer.mp3",
-    "length": 56.53,
-    "series": "A word from our sponsor",
-    "title": "Löwenbräu Beer",
+    "title": "Armour Hot Dogs",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0024837b/You%27re%20All%20I%20Want%20for%20Christmas%20-%20Frank%20Gallagher.mp3",
-    "length": 209,
-    "series": "Frank Gallagher",
-    "title": "You're All I Want for Christmas",
-    "date": "1949",
-    "item": "https://archive.org/details/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0024837b"
+    "src": "https://archive.org/download/78_the-little-stowaway-on-santas-sleigh_anne-lloyd-mike-stewart-the-sandpipers-tobias-_gbia0534606a/THE%20LITTLE%20STOWAWAY%20ON%20SANTA%27S%20SLEIGH%20-%20ANNE%20LLOYD.mp3",
+    "length": 97,
+    "series": "Anne Lloyd",
+    "title": "The Little Stowaway On Santa's Sleigh",
+    "item": "https://archive.org/details/78_the-little-stowaway-on-santas-sleigh_anne-lloyd-mike-stewart-the-sandpipers-tobias-_gbia0534606a"
    },
    {
-    "src": "https://archive.org/download/for-a-musical-merry-christmas-side-1-rca-victor-pr-149-a-d-71-ee-mono-f-eq/For%20A%20Musical%20Merry%20Christmas%20-%20side%201%20-%20RCA%20Victor%20PR-149A%20D71EE%20Mono%20F%20EQ.mp3",
-    "length": 1015,
-    "series": "Various Artists (RCA Victor)",
-    "title": "For A Musical Merry Christmas (Side 1)",
-    "date": "1964",
-    "item": "https://archive.org/details/for-a-musical-merry-christmas-side-1-rca-victor-pr-149-a-d-71-ee-mono-f-eq"
+    "src": "https://archive.org/download/78_communion-hymn-saw-ye-my-saviour_kenny-baker-mary-baker-eddy_gbia8003251/03%20-%20CHRISTMAS%20MORN%20%28Blest%20Christmas%20Morn%29%20-%20KENNY%20BAKER.mp3",
+    "length": 180.41,
+    "series": "Kenny Baker",
+    "title": "Christmas Morn (Blest Christmas Morn)",
+    "item": "https://archive.org/details/78_communion-hymn-saw-ye-my-saviour_kenny-baker-mary-baker-eddy_gbia8003251"
    },
    {
-    "src": "https://archive.org/download/78_libbey-owens-ford-glass-company_gbia0457279b/LIBBEY-OWENS-FORD%20GLASS%20COMPANY.mp3",
-    "length": 229.7,
-    "series": "Lionel Barrymore",
-    "title": "A Very Special Christmas Message From Libbey - Owens - Ford Glass Company",
-    "date": "1951",
-    "item": "https://archive.org/details/78_libbey-owens-ford-glass-company_gbia0457279b"
+    "src": "https://archive.org/download/78_the-first-noel_phil-reed-stainer_gbia0080787b/The%20First%20Noel%20-%20Phil%20Reed%20-%20Stainer.mp3",
+    "length": 178,
+    "series": "Phil Reed",
+    "title": "The First Noel",
+    "date": "1948",
+    "item": "https://archive.org/details/78_the-first-noel_phil-reed-stainer_gbia0080787b"
    },
    {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/09%20Christmas%20Is%20Coming.mp3",
-    "length": 203,
-    "series": "Vince Guaraldi",
-    "title": "Christmas Is Coming",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
+    "src": "https://archive.org/download/78_mare-e-santa-lucia_clara-stella-orchestra-di-l-canoro-l-canoro_gbia0061517a/Mare%20%27E%20Santa%20Lucia%20-%20Clara%20Stella%20-%20orchestra%20di%20L.%20Canoro.mp3",
+    "length": 190.46,
+    "series": "Clara Stella",
+    "title": "Mare 'E Santa Lucia",
+    "item": "https://archive.org/details/78_mare-e-santa-lucia_clara-stella-orchestra-di-l-canoro-l-canoro_gbia0061517a"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/ROITANCIGARS.mp3",
-    "length": 15.56,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercials1957Chevrolet.mp3",
+    "length": 36.48,
     "series": "A word from our sponsor",
-    "title": "Roi-Tan Cigars",
+    "title": "1957 Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-sound-of-christmas_the-cricketones-warren-vincent_gbia0533842b/THE%20SOUND%20OF%20CHRISTMAS%20-%20THE%20CRICKETONES.mp3",
+    "length": 172.69,
+    "series": "The Cricketones",
+    "title": "The Sound Of Christmas",
+    "item": "https://archive.org/details/78_the-sound-of-christmas_the-cricketones-warren-vincent_gbia0533842b"
+   },
+   {
+    "src": "https://archive.org/download/78_bob-schofield-christmas-1950_gbia0346159b/Bob%20Schofield%20Christmas%201950.mp3",
+    "length": 244.85,
+    "series": "",
+    "title": "Bob Schofield Christmas 1950",
+    "date": "1950",
+    "item": "https://archive.org/details/78_bob-schofield-christmas-1950_gbia0346159b"
+   },
+   {
+    "src": "https://archive.org/download/78_c-h-r-i-s-t-m-a-s_buddy-kaine-arnold-carson_gbia3021256b/C-H-R-I-S-T-M-A-S%20-%20BUDDY%20KAINE%20-%20Arnold.mp3",
+    "length": 204,
+    "series": "Buddy Kaine",
+    "title": "C-h-r-i-s-t-m-a-s",
+    "date": "1951",
+    "item": "https://archive.org/details/78_c-h-r-i-s-t-m-a-s_buddy-kaine-arnold-carson_gbia3021256b"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_wesley_gbia0533595a/Hark%21%20The%20Herald%20Angels%20Sing%20-%20WESLEY.mp3",
+    "length": 70.3,
+    "series": "Wesley",
+    "title": "Hark! The Herald Angels Sing",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_wesley_gbia0533595a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsFatimaCigarettes.mp3",
+    "length": 126.66,
+    "series": "A word from our sponsor",
+    "title": "Fatima Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_til-juletr-med-onkel-harald-2_harald-mortensens-orkester-statsradiofoniens-pigek_gbia0124878b/Til%20juletr%C3%A6%20med%20Onkel%20Harald%20%20-%20Harald%20Mortensens%20orkester.mp3",
+    "length": 176.28,
+    "series": "Harald Mortensens orkester",
+    "title": "Til juletræ med Onkel Harald (2)",
+    "item": "https://archive.org/details/78_til-juletr-med-onkel-harald-2_harald-mortensens-orkester-statsradiofoniens-pigek_gbia0124878b"
+   },
+   {
+    "src": "https://archive.org/download/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr/A1.%20It_s%20The%20Most%20Wonderful%20Time.mp3",
+    "length": 146.08,
+    "series": "The U.S. Air Force Band and Singing Sergeants",
+    "title": "It's the Most Wonderful Time of the Year",
+    "date": "1967",
+    "item": "https://archive.org/details/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr"
+   },
+   {
+    "src": "https://archive.org/download/78_jo-jo-the-jolly-christmas-tree_al-nobel-jack-purcell-orch-the-martinaires-willet_gbia0478382/01%20-%20JO%20JO%20THE%20JOLLY%20CHRISTMAS%20TREE%20-%20FAYE%20PARKER%20and%20BILLY%20HINDS.mp3",
+    "length": 124.08,
+    "series": "Willett",
+    "title": "Jo Jo The Jolly Christmas Tree",
+    "item": "https://archive.org/details/78_jo-jo-the-jolly-christmas-tree_al-nobel-jack-purcell-orch-the-martinaires-willet_gbia0478382"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_the-three-stooges-and-orchestra-barer_gbia0534530b/JINGLE%20BELLS%20-%20THE%20THREE%20STOOGES%20AND%20ORCHESTRA.mp3",
+    "length": 101.93,
+    "series": "The Three Stooges And Orchestra",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_the-three-stooges-and-orchestra-barer_gbia0534530b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAjax.mp3",
+    "length": 40.3,
+    "series": "A word from our sponsor",
+    "title": "Ajax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_thats-what-i-want-for-christmas_mary-jane-sutherland-the-sandpipers-caeser-marks-mi_gbia0534606b/THAT%27S%20WHAT%20I%20WANT%20FOR%20CHRISTMAS%20-%20MARY%20JANE%20SUTHERLAND.mp3",
+    "length": 102.27,
+    "series": "Mary Jane Sutherland",
+    "title": "That'S What I Want For Christmas",
+    "item": "https://archive.org/details/78_thats-what-i-want-for-christmas_mary-jane-sutherland-the-sandpipers-caeser-marks-mi_gbia0534606b"
+   },
+   {
+    "src": "https://archive.org/download/78_1-adeste-fidelis-2-silver-bells_the-roy-cliffs_gbia0488343a/1.%20ADESTE%20FIDELIS%3B%202.%20SILVER%20BELLS%20-%20THE%20ROY-CLIFFS.mp3",
+    "length": 251,
+    "series": "The Roy-cliffs",
+    "title": "1. Adeste Fidelis; 2. Silver Bells",
+    "date": "1955",
+    "item": "https://archive.org/details/78_1-adeste-fidelis-2-silver-bells_the-roy-cliffs_gbia0488343a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-church-bells-are-ringing-on-christmas-morn_irene-treadwell-and-the-phil-ellis-c_gbia0463902b/THE%20CHURCH%20BELL%20-%20IRENE%20TREADWELL%20And%20The%20PHIL%20ELLIS%20CHOIR.mp3",
+    "length": 153.86,
+    "series": "IRENE TREADWELL And The PHIL ELLIS CHOIR",
+    "title": "The Church Bells Are Ringing on Christmas Morn",
+    "date": "1953",
+    "item": "https://archive.org/details/78_the-church-bells-are-ringing-on-christmas-morn_irene-treadwell-and-the-phil-ellis-c_gbia0463902b"
+   },
+   {
+    "src": "https://archive.org/download/78_joy-to-the-world-it-came-upon-a-midnight-clear-hark-the-herald-angels-sing_gbia0195429d/JOY%20TO%20THE%20WORLD%20IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR-HARK%20THE%20HERALD%20ANGELS%20SING.mp3",
+    "length": 197.22,
+    "series": "Unknown artist",
+    "title": "Joy To The World It Came Upon A Midnight Clear-Hark The Herald Angels Sing",
+    "item": "https://archive.org/details/78_joy-to-the-world-it-came-upon-a-midnight-clear-hark-the-herald-angels-sing_gbia0195429d"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NABISCO.MP3",
+    "length": 89.11,
+    "series": "A word from our sponsor",
+    "title": "Nabisco",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-party-shuffle_lowell-fulson_gbia0060579b/Christmas%20Party%20Shuffle%20-%20Lowell%20Fulson.mp3",
+    "length": 195,
+    "series": "Lowell Fulson",
+    "title": "Christmas Party Shuffle",
+    "date": "1950",
+    "item": "https://archive.org/details/78_christmas-party-shuffle_lowell-fulson_gbia0060579b"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-ang_gbia0001174b/It%20Came%20Upon%20A%20Midnight%20Clear%20Away%20In%20A%20Manger%3B%20The%20First%20Noel%20Hark%21%20The%20Herald%20Angels%20Sing%20-%20The%20Caroleers.mp3",
+    "length": 198,
+    "series": "The Caroleers",
+    "title": "It Came Upon A Midnight Clear Away In A Manger; The First Noel Hark! The Herald Angels Sing",
+    "date": "1950",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-ang_gbia0001174b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_jimmy-wilber-and-the-little-band-the-three-jills_gbia0085047b/Jingle%20Bells%20-%20Jimmy%20Wilber%20and%20The%20Little%20Band.mp3",
+    "length": 159,
+    "series": "Jimmy Wilber and The Little Band",
+    "title": "Jingle Bells",
+    "date": "1948",
+    "item": "https://archive.org/details/78_jingle-bells_jimmy-wilber-and-the-little-band-the-three-jills_gbia0085047b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-ravens-rendition-of-white-christmas_jimmy-ricks-irving-berlin_gbia0321703b/THE%20RAVEN%27S%20RENDITION%20OF%3A%20WHITE%20CHRISTMAS%20-%20Jimmy%20Ricks.mp3",
+    "length": 194.71,
+    "series": "Jimmy Ricks",
+    "title": "The Raven's Rendition Of: White Christmas",
+    "date": "1948",
+    "item": "https://archive.org/details/78_the-ravens-rendition-of-white-christmas_jimmy-ricks-irving-berlin_gbia0321703b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGlocoatWax.mp3",
+    "length": 16.06,
+    "series": "A word from our sponsor",
+    "title": "Glo-Coat Wax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_noel_herb-kern-lloyd-sloop-warren-arey_gbia0056765a/Noel%20-%20Herb%20Kern%20-%20Lloyd%20Sloop%20-%20Warren%20Arey.mp3",
+    "length": 176,
+    "series": "Herb Kern",
+    "title": "Noel",
+    "date": "1947",
+    "item": "https://archive.org/details/78_noel_herb-kern-lloyd-sloop-warren-arey_gbia0056765a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-lucia-luntana_alberto-amato-e-a-mario_gbia3042234a/SANTA%20LUCIA%20LUNTANA%20-%20ALBERTO%20AMATO%20-%20E.%20A.%20Mario.mp3",
+    "length": 220.36,
+    "series": "Alberto Amato",
+    "title": "Santa Lucia Luntana",
+    "date": "1949",
+    "item": "https://archive.org/details/78_santa-lucia-luntana_alberto-amato-e-a-mario_gbia3042234a"
+   },
+   {
+    "src": "https://archive.org/download/78_nol-provenal-ronde-des-filles-de-quimperle_wyss-sophie/K_1065_AR_5500-1.mp3",
+    "length": 269,
+    "series": "Wyss, Sophie",
+    "title": "Noël Provençal; Ronde des Filles de Quimperle",
+    "date": "1941",
+    "item": "https://archive.org/details/78_nol-provenal-ronde-des-filles-de-quimperle_wyss-sophie"
+   },
+   {
+    "src": "https://archive.org/download/78_joy-to-the-world-the-lord-is-come_glenn-davis-antioch_gbia0378580a/JOY%20TO%20THE%20WORLD%21%20THE%20LORD%20IS%20COME%20-%20GLENN%20DAVIS.mp3",
+    "length": 159.94,
+    "series": "Glenn Davis",
+    "title": "Joy To The World! The Lord Is Come",
+    "item": "https://archive.org/details/78_joy-to-the-world-the-lord-is-come_glenn-davis-antioch_gbia0378580a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/WINSTONCIGARETTES.mp3",
+    "length": 29.29,
+    "series": "A word from our sponsor",
+    "title": "Winston Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_til-juletr-med-onkel-harald_harald-mortensens-orkester-statsradiofoniens-pigekor_gbia7016564a/Til%20Juletr%C3%A6%20med%20Onkel%20Harald%20-%20Harald%20Mortensens%20Orkester.mp3",
+    "length": 189.5,
+    "series": "Harald Mortensens Orkester",
+    "title": "Til Juletræ med Onkel Harald",
+    "item": "https://archive.org/details/78_til-juletr-med-onkel-harald_harald-mortensens-orkester-statsradiofoniens-pigekor_gbia7016564a"
+   },
+   {
+    "src": "https://archive.org/download/78_underneath-the-misteltoe_three-reinerts-and-sussie-don-gais-trio-don-gais-helge-ja_gbia0124299a/Underneath%20the%20misteltoe%20-%20Three%20Reinerts%20and%20Sussie.mp3",
+    "length": 153.34,
+    "series": "Three Reinerts and Sussie",
+    "title": "Underneath the misteltoe",
+    "item": "https://archive.org/details/78_underneath-the-misteltoe_three-reinerts-and-sussie-don-gais-trio-don-gais-helge-ja_gbia0124299a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-luzia_cavallera-salvatore-salvati_gbia7026381a/Santa%20Luzia%20-%20Cavallera%20Salvatore%20Salvati.mp3",
+    "length": 196.26,
+    "series": "Cavallera Salvatore Salvati",
+    "title": "Santa Luzia",
+    "item": "https://archive.org/details/78_santa-luzia_cavallera-salvatore-salvati_gbia7026381a"
+   },
+   {
+    "src": "https://archive.org/download/78_det-kimer-nu-til-julefest_kgl-kammersangerinde-edith-oldrup-arne-bertelsen-c-bail_gbia7007970b/Det%20kimer%20nu%20til%20julefest%20-%20Kgl.%20kammersangerinde%20EDITH%20OLDRUP.mp3",
+    "length": 186.19,
+    "series": "Kgl. kammersangerinde EDITH OLDRUP",
+    "title": "Det kimer nu til julefest",
+    "item": "https://archive.org/details/78_det-kimer-nu-til-julefest_kgl-kammersangerinde-edith-oldrup-arne-bertelsen-c-bail_gbia7007970b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
+    "length": 50.35,
+    "series": "A word from our sponsor",
+    "title": "Northwest Orient Airlines",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas-part-i_roy-rogers-and-dale-evans-mitchell-miller_gbia0534128a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20Par%20-%20ROY%20ROGERS%20and%20DALE%20EVANS.mp3",
+    "length": 107.09,
+    "series": "ROY ROGERS and DALE EVANS",
+    "title": "THE NIGHT BEFORE CHRISTMAS Part I",
+    "date": "1954",
+    "item": "https://archive.org/details/78_the-night-before-christmas-part-i_roy-rogers-and-dale-evans-mitchell-miller_gbia0534128a"
+   },
+   {
+    "src": "https://archive.org/download/78_snow-man-rock_big-bud-goodman-barouick-rose_gbia0266143b/SNOW-MAN%20ROCK%20-%20BIG%20BUD%20-%20Goodman%20-%20Barouick.mp3",
+    "length": 130.74,
+    "series": "Big Bud",
+    "title": "Snow-Man Rock",
+    "date": "1955",
+    "item": "https://archive.org/details/78_snow-man-rock_big-bud-goodman-barouick-rose_gbia0266143b"
+   },
+   {
+    "src": "https://archive.org/download/78_when-the-snowflakes-fall-again_carole-wilson-carole-wilson-ray_gbia0285446a/WHEN%20THE%20SNOWFLAKES%20FALL%20AGAIN%20-%20CAROLE%20WILSON.mp3",
+    "length": 174.41,
+    "series": "Carole Wilson",
+    "title": "When The Snowflakes Fall Again",
+    "date": "1952",
+    "item": "https://archive.org/details/78_when-the-snowflakes-fall-again_carole-wilson-carole-wilson-ray_gbia0285446a"
+   },
+   {
+    "src": "https://archive.org/download/78_deck-the-halls-o-christmas-tree-hark-the-herald-angels-sing-o-little-town-of-b_gbia0203791a/DECK%20THE%20-%20THE%20SANDPIPER%20CHORUS%2C%20BOYS%27%20CHOIR%20AND%20ORCHESTRA.mp3",
+    "length": 239,
+    "series": "The Sandpiper Chorus, Boys' Choir and Orchestra",
+    "title": "Deck the Halls; O Christmas Tree!; Hark! the Herald Angels Sing; O Little Town of Bethlehem; Joy to the World; O Come, All Ye Faithful",
+    "date": "1952",
+    "item": "https://archive.org/details/78_deck-the-halls-o-christmas-tree-hark-the-herald-angels-sing-o-little-town-of-b_gbia0203791a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUDWEISER.mp3",
+    "length": 19.07,
+    "series": "A word from our sponsor",
+    "title": "Budweiser",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_rudolf-z-czerwonym-nosem-rudolph-the-red-nosed-reindeer_regina-kujawa-dana-orchestr_gbia3028352b/RUDOLF%20Z%20CZERWONYM%20NOSEM%20%28Rudolph%2C%20The%20Red.mp3",
+    "length": 188.92,
+    "series": "Regina Kujawa",
+    "title": "RUDOLF Z CZERWONYM NOSEM (Rudolph, The Red-Nosed Reindeer)",
+    "item": "https://archive.org/details/78_rudolf-z-czerwonym-nosem-rudolph-the-red-nosed-reindeer_regina-kujawa-dana-orchestr_gbia3028352b"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear_elmer-ihrke_gbia0059673a/It%20Came%20upon%20a%20Midnight%20Clear%20-%20Elmer%20Ihrke.mp3",
+    "length": 164,
+    "series": "Elmer Ihrke",
+    "title": "It Came upon a Midnight Clear",
+    "date": "1947",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear_elmer-ihrke_gbia0059673a"
    },
    {
     "src": "https://archive.org/download/78_silent-night-holy-night_bing-crosby-2023_wave/silent%20night%20holy%20night_bing%20crosby_2023.mp3",
@@ -68975,560 +63998,33 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_silent-night-holy-night_bing-crosby-2023_wave"
    },
    {
-    "src": "https://archive.org/download/oldfashionedchri00symp/08_I_saw_mommy_kissing_Santa_Claus__Guy_Lombardo_.mp3",
-    "length": 170,
-    "series": "Symphonette Society",
-    "title": "I saw mommy kissing Santa Claus",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
+    "src": "https://archive.org/download/78_1-o-come-all-ye-faithful-2-o-holy-night-cantique-noel-3-god-give-ye-merry-chr_gbia0470251b/1.%20O%20Come%20All%20Ye%20Faithful%20%202.%20O%20Holy%20Nig%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 375.27,
+    "series": "Godfrey Malcolm",
+    "title": "1. O Come All Ye Faithful 2. O Holy Night- Cantique Noel 3. God Give Ye Merry Christmas Tide",
+    "item": "https://archive.org/details/78_1-o-come-all-ye-faithful-2-o-holy-night-cantique-noel-3-god-give-ye-merry-chr_gbia0470251b"
    },
    {
-    "src": "https://archive.org/download/raymond-lefevre-and-his-orchestra-merry-christmas-side-1-kapp-record-fcs-4257-st/Raymond%20Lefevre%20and%20his%20orchestra%20-%20Merry%20Christmas%20-%20side%202%20-%20Kapp%20Record%20FCS-4257%20stereo%20%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 941,
-    "series": "Raymond Lefevre And His Orchestra",
-    "title": "Merry Christmas (Side 2)",
-    "date": "1968",
-    "item": "https://archive.org/details/raymond-lefevre-and-his-orchestra-merry-christmas-side-1-kapp-record-fcs-4257-st"
-   },
-   {
-    "src": "https://archive.org/download/78_bobbys-christmas-song_bobby-gregory-and-his-cactus-cowboys-bobby-gregory-scott-swa_gbia0263080a/BOBBY%27S%20CHRISTMAS%20SONG%20-%20BOBBY%20GREGORY%20and%20His%20Cactus%20Cowboys.mp3",
-    "length": 131.88,
-    "series": "BOBBY GREGORY and His Cactus Cowboys",
-    "title": "Bobby's Christmas Song",
-    "date": "1949",
-    "item": "https://archive.org/details/78_bobbys-christmas-song_bobby-gregory-and-his-cactus-cowboys-bobby-gregory-scott-swa_gbia0263080a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CAMPANA.MP3",
-    "length": 122.11,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceARoni.mp3",
+    "length": 38.06,
     "series": "A word from our sponsor",
-    "title": "Campana",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_my-christmas-song-for-you_hoagy-carmichael-martha-mears-tudor-williams-quartet-carm_gbia0420931a/MY%20CHRISTMAS%20SONG%20FOR%20YOU%20-%20HOAGY%20CARMICHAEL.mp3",
-    "length": 182.71,
-    "series": "Hoagy Carmichael",
-    "title": "My Christmas Song for You",
-    "date": "1945",
-    "item": "https://archive.org/details/78_my-christmas-song-for-you_hoagy-carmichael-martha-mears-tudor-williams-quartet-carm_gbia0420931a"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-lucia-i-love-you_enzo-de-mola-lloyd-shaffer-orch-the-satisfiers-quartet-e_gbia0084779b/Santa%20Lucia%20I%20Love%20You%20-%20Enzo%20De%20Mola%20-%20Lloyd%20Shaffer%20Orch..mp3",
-    "length": 179.18,
-    "series": "Enzo De Mola",
-    "title": "Santa Lucia I Love You",
-    "date": "1950",
-    "item": "https://archive.org/details/78_santa-lucia-i-love-you_enzo-de-mola-lloyd-shaffer-orch-the-satisfiers-quartet-e_gbia0084779b"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/17%20A%20Child%20Was%20Born%20%28The%20Prince%20of%20Peace%29.mp3",
-    "length": 150.05,
-    "series": "Sammy Turner",
-    "title": "A Child Was Born (The Prince of Peace)",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-medley_ferko-string-band-r-traub_gbia0323218a/CHRISTMAS%20MEDLEY%20-%20FERKO%20STRING%20BAND%20-%20R.%20Traub.mp3",
-    "length": 162.6,
-    "series": "Ferko String Band",
-    "title": "Christmas Medley",
-    "date": "1947",
-    "item": "https://archive.org/details/78_christmas-medley_ferko-string-band-r-traub_gbia0323218a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsHouseholdFinanceCorp.mp3",
-    "length": 22.72,
-    "series": "A word from our sponsor",
-    "title": "Household Finance Corp",
+    "title": "Rice-A-Roni",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_varsity-caroleers-johnny-marks_gbia0006796a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Varsity%20Caroleers.mp3",
-    "length": 160,
-    "series": "Varsity Caroleers",
-    "title": "Rudolph The Red Nosed Reindeer",
-    "date": "1950",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_varsity-caroleers-johnny-marks_gbia0006796a"
+    "src": "https://archive.org/download/78_julens-melodier-ii-del_wivexs-strygeorkester-knud-dalgaard_gbia7005603b/Julens%20Melodier%20II%20Del%20-%20Wivex%27s%20Strygeorkester.mp3",
+    "length": 175.56,
+    "series": "Wivex's Strygeorkester",
+    "title": "Julens Melodier II Del",
+    "item": "https://archive.org/details/78_julens-melodier-ii-del_wivexs-strygeorkester-knud-dalgaard_gbia7005603b"
    },
    {
-    "src": "https://archive.org/download/78_the-night-before-christmas-part-ii_peter-donald-mitch-miller-and-orchestra_gbia0534261b/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20PART%20II%20-%20PETER%20DONALD.mp3",
-    "length": 96.09,
-    "series": "Peter Donald",
-    "title": "The Night Before Christmas - Part Ii",
-    "date": "1949",
-    "item": "https://archive.org/details/78_the-night-before-christmas-part-ii_peter-donald-mitch-miller-and-orchestra_gbia0534261b"
-   },
-   {
-    "src": "https://archive.org/download/78_winter-wonderland_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble-berna_gbia0131155b/WINTER%20WONDERLAND%20-%20Johnny%20Long%20and%20his%20Orchestra.mp3",
-    "length": 192,
-    "series": "Johnny Long and his Orchestra",
-    "title": "Winter Wonderland",
-    "date": "1947",
-    "item": "https://archive.org/details/78_winter-wonderland_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble-berna_gbia0131155b"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/O%20Tannenbaum.mp3",
-    "length": 165.93,
-    "series": "Percy Faith",
-    "title": "O Tannenbaum",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/TOPVALUESTAMPS.mp3",
-    "length": 40.44,
-    "series": "A word from our sponsor",
-    "title": "Top Value Stamps",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_biale-gody---white-christmas_vivian-bazan-irving-berlin_gbia0002418a/Biale%20Gody%20-%20White%20Christmas%20-%20Vivian%20Bazan.mp3",
-    "length": 169,
-    "series": "Vivian Bazan",
-    "title": "Biale Gody - White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_biale-gody---white-christmas_vivian-bazan-irving-berlin_gbia0002418a"
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/01_Jingle_Bell.mp3",
-    "length": 188,
-    "series": "Monterey Brass",
-    "title": "Jingle Bell",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/01.Prelude/01.Prelude.mp3",
-    "length": 261.07,
-    "series": "Muir Mathieson, London Symphony Orchestra",
-    "title": "Prelude",
-    "date": "1945",
-    "item": "https://archive.org/details/01.Prelude"
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-phil-springer-jimmy-ley_gbia0285966a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
-    "length": 149.06,
-    "series": "Betty Johnson",
-    "title": "I Want Eddie Fisher For Christmas",
-    "date": "1954",
-    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-phil-springer-jimmy-ley_gbia0285966a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/ENERGINESHOEWHITE.mp3",
-    "length": 26.01,
-    "series": "A word from our sponsor",
-    "title": "Energine Shoe White",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/21%20-%20Medley-%20O%20Come%20All%20Ye%20Faithful-Angels%20We%20Have%20Heard%20on%20High%20-%20Robert%20Shaw%20Chora.mp3",
-    "length": 259.89,
-    "series": "Robert Shaw Chora",
-    "title": "Medley: O Come All Ye Faithful/Angels We Have Heard on High",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/02_Sing_A_Kris_Kringle_Jingle.mp3",
-    "length": 115,
-    "series": "Monterey Brass",
-    "title": "Sing A Kris Kringle Jingle",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/lp_at-christmas-time_teresa-brewer/disc1/01.01.%20Take%20A%20Step%20In%20The%20Right%20Direction%3B%20Humpteen%20Days%20Before%20Christmas%3B%20Christmas%20Cookies%20And%20Holiday%20Hearts%3B%20Listen%20My%20Children%3B%20Down%20The%20Holiday%20Trail%3B%20The%20Flying%20Suit%20Song%3B%20Hush-A-Bye%20Wink-A-Bye.mp3",
-    "length": 1042.54,
-    "series": "Teresa Brewer",
-    "title": "At Christmas Time (Side 1)",
-    "date": "1957",
-    "item": "https://archive.org/details/lp_at-christmas-time_teresa-brewer"
-   },
-   {
-    "src": "https://archive.org/download/rudolph-white_xmas/rudolph-white_xmas_AES.mp3",
-    "length": 234.66,
-    "series": "The Roy-Cliffs",
-    "title": "Rudolph the Red-Nosed Reindeer / White Christmas",
-    "date": "1955",
-    "item": "https://archive.org/details/rudolph-white_xmas"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoSeltzer.mp3",
-    "length": 95.08,
-    "series": "A word from our sponsor",
-    "title": "Bromo Seltzer",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_don-baker-don-gabor_gbia8002114/01%20-%20JINGLE%20BELLS%20-%20DON%20BAKER%20-%20Don%20Gabor.mp3",
-    "length": 166.2,
-    "series": "Gillespie",
-    "title": "Christmas Carols",
-    "date": "1947",
-    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_don-baker-don-gabor_gbia8002114"
-   },
-   {
-    "src": "https://archive.org/download/78_silver-bells_jerry-jacka-trio_gbia0024695b/Silver%20Bells%20-%20Jerry%20Jacka%20Trio.mp3",
-    "length": 186,
-    "series": "Jerry Jacka Trio",
-    "title": "Silver Bells",
-    "item": "https://archive.org/details/78_silver-bells_jerry-jacka-trio_gbia0024695b"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-holy-night_the-luton-girls-choir-melachrino-rene-soames-arthur-e-davie_gbia3043144a/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20THE%20LUTON%20GIRLS%20CHOIR.mp3",
-    "length": 191.41,
-    "series": "The Luton Girls Choir",
-    "title": "Silent Night, Holy Night",
-    "date": "1948",
-    "item": "https://archive.org/details/78_silent-night-holy-night_the-luton-girls-choir-melachrino-rene-soames-arthur-e-davie_gbia3043144a"
-   },
-   {
-    "src": "https://archive.org/download/78_santas-little-sleigh-bells_ruby-wright-ruby-wright-cole-navarre_gbia0484732b/SANTA%27S%20LITTLE%20SLEIGH%20BELLS%20-%20RUBY%20WRIGHT.mp3",
-    "length": 143,
-    "series": "Ruby Wright",
-    "title": "Santa's Little Sleigh Bells",
-    "date": "1953",
-    "item": "https://archive.org/details/78_santas-little-sleigh-bells_ruby-wright-ruby-wright-cole-navarre_gbia0484732b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/COLEMAN.MP3",
-    "length": 41.38,
-    "series": "A word from our sponsor",
-    "title": "Coleman",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_under-the-mistletoe_mrs-sidney-rauh_gbia0417603b/UNDER%20THE%20MISTLETOE%20-%20MRS.%20SIDNEY%20RAUH.mp3",
-    "length": 176.88,
-    "series": "Mrs. Sidney Rauh",
-    "title": "Under the Mistletoe",
-    "date": "1946",
-    "item": "https://archive.org/details/78_under-the-mistletoe_mrs-sidney-rauh_gbia0417603b"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-catalina_eddy-howard-and-his-orchestra-eddy-howard-harold-spina_gbia0012729b/Santa%20Catalina%20-%20Eddy%20Howard%20and%20His%20Orchestra.mp3",
-    "length": 192.64,
-    "series": "Eddy Howard and His Orchestra",
-    "title": "Santa Catalina",
-    "date": "December 28, 1946",
-    "item": "https://archive.org/details/78_santa-catalina_eddy-howard-and-his-orchestra-eddy-howard-harold-spina_gbia0012729b"
-   },
-   {
-    "src": "https://archive.org/download/78_its-gonna-be-a-lonely-christmas_the-orioles-rose-sprung_gbia0260708a/%28IT%27S%20GONNA%20BE%20A%29%20LONELY%20CHRISTMAS%20-%20THE%20ORIOLES.mp3",
-    "length": 204.91,
-    "series": "The Orioles",
-    "title": "(It's Gonna Be A) Lonely Christmas",
-    "date": "1949",
-    "item": "https://archive.org/details/78_its-gonna-be-a-lonely-christmas_the-orioles-rose-sprung_gbia0260708a"
-   },
-   {
-    "src": "https://archive.org/download/78_ill-be-home-for-christmas_eddy-howard-and-his-orchestra-eddy-howard-gannon-ram-ken_gbia0006822b/I%27ll%20Be%20Home%20For%20Christmas%20-%20Eddy%20Howard%20and%20his%20Orchestra.mp3",
-    "length": 181,
-    "series": "Eddy Howard and his Orchestra",
-    "title": "I'll Be Home For Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_ill-be-home-for-christmas_eddy-howard-and-his-orchestra-eddy-howard-gannon-ram-ken_gbia0006822b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/JERGENSLOTION.mp3",
-    "length": 47.54,
-    "series": "A word from our sponsor",
-    "title": "Jergens Lotion",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/02%20I%20Saw%20Three%20Ships.mp3",
-    "length": 78.39,
-    "series": "Norman Luboff Choir",
-    "title": "I Saw Three Ships",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_ill-be-home-for-christmas_sid-peltyn-and-his-orchestra-gannon-kent-ram_gbia0375530a/I%27LL%20BE%20HOME%20FOR%20CHRISTMAS%20-%20SID%20PELTYN%20and%20his%20ORCHESTRA.mp3",
-    "length": 178.31,
-    "series": "SID PELTYN and his ORCHESTRA",
-    "title": "I'Ll Be Home For Christmas",
-    "date": "1943",
-    "item": "https://archive.org/details/78_ill-be-home-for-christmas_sid-peltyn-and-his-orchestra-gannon-kent-ram_gbia0375530a"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Here%20We%20Coma%20A%20Caroling.mp3",
-    "length": 79.99,
-    "series": "Norman Luboff Choir",
-    "title": "Here We Come A Caroling",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/78_the-ravens-rendition-of-silent-night_jimmy-ricks-j-mohr-f-gruber_gbia0321703a/THE%20RAVEN%27S%20RENDITION%20OF%3A%20SILENT%20NIGHT%20-%20Jimmy%20Ricks.mp3",
-    "length": 178.78,
-    "series": "Jimmy Ricks",
-    "title": "The Raven's Rendition Of: Silent Night",
-    "date": "1948",
-    "item": "https://archive.org/details/78_the-ravens-rendition-of-silent-night_jimmy-ricks-j-mohr-f-gruber_gbia0321703a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/PHILIPMORRISCIGARETTES.mp3",
-    "length": 52.61,
-    "series": "A word from our sponsor",
-    "title": "Philip Morris Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-issue_milwaukee-gas-light-company-quartet_gbia0006828/01%20-%20Traditional%20Christmas%20Carols%20-%20Milwaukee%20Gas%20Light%20Company%20Quartet-restored.mp3",
-    "length": 195.02,
-    "series": "Milwaukee Gas Light Company Quartet",
-    "title": "Christmas Issue",
-    "date": "1957",
-    "item": "https://archive.org/details/78_christmas-issue_milwaukee-gas-light-company-quartet_gbia0006828"
-   },
-   {
-    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_danny-oneil-ruby-newman-styne-cahn_gbia0006178b/Let%20It%20Snow%21%20Let%20It%20Snow%21%20Let%20It%20Snow%21%20-%20Danny%20O%27Neil.mp3",
-    "length": 155.31,
-    "series": "Danny O'Neil",
-    "title": "Let It Snow! Let It Snow! Let It Snow!",
-    "date": "1945",
-    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_danny-oneil-ruby-newman-styne-cahn_gbia0006178b"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/07.MarysLittleBoyChile.mp3",
-    "length": 139.39,
-    "series": "Solo: Hamilton Grandison",
-    "title": "Mary's Little Boy Chile",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/06_Rudolph_the_red-nosed_reindeer.mp3",
-    "length": 146,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Rudolph the red-nosed reindeer",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCrestToothpaste.mp3",
-    "length": 61.97,
-    "series": "A word from our sponsor",
-    "title": "Crest Toothpaste",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_dear-santa-bring-back-my-daddy-to-me_irene-treadwell-and-the-phil-ellis-choir-gle_gbia0463902a/DEAR%20SANTA%2C%20BRI%20-%20IRENE%20TREADWELL%20And%20The%20PHIL%20ELLIS%20CHOIR.mp3",
-    "length": 159.86,
-    "series": "IRENE TREADWELL And The PHIL ELLIS CHOIR",
-    "title": "Dear Santa, Bring Back My Daddy to Me!",
-    "date": "1953",
-    "item": "https://archive.org/details/78_dear-santa-bring-back-my-daddy-to-me_irene-treadwell-and-the-phil-ellis-choir-gle_gbia0463902a"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Winter%20wonderland.mp3",
-    "length": 125,
-    "series": "Frank Sinatra",
-    "title": "Winter wonderland",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/eddie-dunstedter-the-bells-of-christmas-capitol-sm-1264-side-1-f-eq/Eddie%20Dunstedter%20-%20The%20Bells%20Of%20Christmas%20-%20Capitol%20SM-1264%20side%201%20F%20EQ.mp3",
-    "length": 1139,
-    "series": "Eddie Dunstedter",
-    "title": "The Bells Of Christmas (Side 1)",
-    "date": "1959",
-    "item": "https://archive.org/details/eddie-dunstedter-the-bells-of-christmas-capitol-sm-1264-side-1-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/B6.%20Deck%20the%20Halls%20%20Here-We%20Come%20A-Caroling.mp3",
-    "length": 147.64,
-    "series": "Jerry Fielding",
-    "title": "Deck the Halls Here-We Come A-Caroling",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/PATTICAKECOOKIES.mp3",
-    "length": 45.98,
-    "series": "A word from our sponsor",
-    "title": "Patti-Cake Cookies",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_mike-stewart-the-sandpipers-john-marks-mitchell-mill_gbia0534626/01%20-%20RUDOLPH%20THE%20RED-NOSED%20REINDEER%20-%20MIKE%20STEWART.mp3",
-    "length": 105,
-    "series": "Mike Stewart",
-    "title": "Rudolph the Red-Nosed Reindeer",
-    "date": "1951",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_mike-stewart-the-sandpipers-john-marks-mitchell-mill_gbia0534626"
-   },
-   {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2009%20-%20Baby%2C%20It_s%20Cold%20Outside.mp3",
-    "length": 360.18,
-    "series": "Jimmy Smith",
-    "title": "Baby, It's Cold Outside",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
-   },
-   {
-    "src": "https://archive.org/download/78_i-just-cant-wait-till-christmas_anne-lloyd-the-sandpipers-abeson-nomis-dee-mitchell_gbia0534614b/I%20JUST%20CAN%27T%20WAIT%20TILL%20CHRISTMAS%20-%20ANNE%20LLOYD.mp3",
-    "length": 106,
-    "series": "Anne Lloyd",
-    "title": "I Just Can't Wait Till Christmas",
-    "item": "https://archive.org/details/78_i-just-cant-wait-till-christmas_anne-lloyd-the-sandpipers-abeson-nomis-dee-mitchell_gbia0534614b"
-   },
-   {
-    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_peter-pan-orchestra_gbia0534393/02%20-%20RING%20OUT%20WILD%20BELLS%20-%20PETER%20PAN%20Orchestra.mp3",
-    "length": 119,
-    "series": "Peter Pan Orchestra",
-    "title": "Ring Out Wild Bells",
-    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_peter-pan-orchestra_gbia0534393"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCampbellsSoup.mp3",
-    "length": 68.87,
-    "series": "A word from our sponsor",
-    "title": "Campbell's Soup",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/A4.%20God%20Rest%20Ye%20Merry%20Gentlemen-O%20Come%20All%20Ye%20Faithful.mp3",
-    "length": 153.5,
-    "series": "Jerry Fielding",
-    "title": "God Rest Ye Merry Gentlemen-O Come All Ye Faithful",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/B3.%20Silent%20Night.mp3",
-    "length": 155.3,
-    "series": "Jerry Fielding",
-    "title": "Silent Night",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/78_cantique-de-noel_martin-walker-sammy-spear-orch-adolphe-adam_gbia0426654b/CANTIQUE%20de%20NOEL%20-%20MARTIN%20WALKER%20-%20Sammy%20Spear%20Orch..mp3",
-    "length": 145.94,
-    "series": "Martin Walker",
-    "title": "CANTIQUE de NOEL",
-    "date": "1953",
-    "item": "https://archive.org/details/78_cantique-de-noel_martin-walker-sammy-spear-orch-adolphe-adam_gbia0426654b"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-comes-but-once-a-year_henry-jerome-his-orchestra-dick-judge-haggar-raza_gbia0283912b/CHRISTMAS%20COMES%20BUT%20ONCE%20A%20%20-%20HENRY%20JEROME%20%26%20His%20Orchestra.mp3",
-    "length": 180.86,
-    "series": "HENRY JEROME & His Orchestra",
-    "title": "Christmas Comes but Once a Year",
-    "date": "1948",
-    "item": "https://archive.org/details/78_christmas-comes-but-once-a-year_henry-jerome-his-orchestra-dick-judge-haggar-raza_gbia0283912b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/GEMBLADES.mp3",
-    "length": 14.23,
-    "series": "A word from our sponsor",
-    "title": "Gem Razor Blades",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/Silent%20Night.mp3",
-    "length": 143.57,
-    "series": "Ethel Smith",
-    "title": "Silent Night",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/B1.%20The%20Twelve%20Gifts%20of%20Christmas.mp3",
-    "length": 116.69,
-    "series": "Jerry Fielding",
-    "title": "The Twelve Gifts of Christmas",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/02_Sleigh_ride.mp3",
-    "length": 149,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Sleigh ride",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/10_Winter_wonderland.mp3",
-    "length": 138,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Winter wonderland",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCheverolet.mp3",
-    "length": 67.99,
-    "series": "A word from our sponsor",
-    "title": "Chevrolet",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/06%20Navidad%20Blanca%20%28White%20Christmas%29.mp3",
-    "length": 177,
-    "series": "Carmela Rey",
-    "title": "Navidad Blanca (White Christmas)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
-   },
-   {
-    "src": "https://archive.org/download/78_hello-new-year-hello_henry-jerome-his-orchestra-dick-judge-haggar-razaf-klickman_gbia0283912a/HELLO%20NEW%20YEAR%2C%20HELLO%20-%20HENRY%20JEROME%20%26%20His%20Orchestra.mp3",
-    "length": 146.74,
-    "series": "Henry Jerome & His Orchestra",
-    "title": "Hello New Year, Hello",
-    "date": "1948",
-    "item": "https://archive.org/details/78_hello-new-year-hello_henry-jerome-his-orchestra-dick-judge-haggar-razaf-klickman_gbia0283912a"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-in-my-heart_june-winters-madison-kanner-bresler_gbia0425134a/CHRISTMAS%20IN%20MY%20HEART%20-%20JUNE%20WINTERS%20-%20Madison.mp3",
-    "length": 196.87,
-    "series": "June Winters",
-    "title": "Christmas In My Heart",
-    "item": "https://archive.org/details/78_christmas-in-my-heart_june-winters-madison-kanner-bresler_gbia0425134a"
-   },
-   {
-    "src": "https://archive.org/download/78_all-around-the-xmas-tree_mark-warnow-dick-todd-hit-parade-orch-and-chorus-klein-st_gbia0014551a/All%20Around%20the%20Xmas%20Tree%20-%20Mark%20Warnow%20-%20Dick%20Todd.mp3",
-    "length": 185,
-    "series": "Mark Warnow",
-    "title": "All Around the Xmas Tree",
-    "date": "1945",
-    "item": "https://archive.org/details/78_all-around-the-xmas-tree_mark-warnow-dick-todd-hit-parade-orch-and-chorus-klein-st_gbia0014551a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoSeltzer.mp3",
-    "length": 95.08,
-    "series": "A word from our sponsor",
-    "title": "Bromo Seltzer",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/the-three-suns-the-sound-of-christmas-side-1-rca-camden-cal-633-re-d-71-ee-dc-ar/The%20Three%20Suns%20-%20The%20Sound%20Of%20Christmas%20-%20side%201%20-%20RCA%20Camden%20CAL-633%20RE%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 1164,
-    "series": "The Three Suns",
-    "title": "The Sound Of Christmas (Side 1)",
-    "date": "1960",
-    "item": "https://archive.org/details/the-three-suns-the-sound-of-christmas-side-1-rca-camden-cal-633-re-d-71-ee-dc-ar"
+    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_the-sandpipers-anne-lloyd-mitch-miller-gillespie-coot_gbia0335943a/SANTA%20CLAUS%20IS%20COMIN%27%20TO%20TOWN%20-%20THE%20SANDPIPERS.mp3",
+    "length": 98.63,
+    "series": "The Sandpipers",
+    "title": "Santa Claus Is Comin' To Town",
+    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_the-sandpipers-anne-lloyd-mitch-miller-gillespie-coot_gbia0335943a"
    },
    {
     "src": "https://archive.org/download/78_carol-medley-part-2_the-fairey-aviation-works-band-harry-mortimer_gbia3035143b/CAROL%20MEDLEY%20-%20Part%202%20-%20THE%20FAIREY%20AVIATION%20WORKS%20BAND.mp3",
@@ -69539,66 +64035,1387 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_carol-medley-part-2_the-fairey-aviation-works-band-harry-mortimer_gbia3035143b"
    },
    {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2007%20-%20Silent%20Night.mp3",
-    "length": 244.27,
-    "series": "Jimmy Smith",
-    "title": "Silent Night",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
+    "src": "https://archive.org/download/78_christmas-polka/1049-9.mp3",
+    "length": 185,
+    "series": "Frank Yankovic",
+    "title": "Christmas Polka",
+    "date": "1949",
+    "item": "https://archive.org/details/78_christmas-polka"
    },
    {
-    "src": "https://archive.org/download/78_the-night-before-christmas_gbia0048208b/The%20Night%20Before%20Christmas.mp3",
-    "length": 193,
-    "series": "",
-    "title": "The Night Before Christmas",
-    "date": "1952",
-    "item": "https://archive.org/details/78_the-night-before-christmas_gbia0048208b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/JELLOCHOCOLATEPUDDING.mp3",
-    "length": 51.44,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAutoLite.mp3",
+    "length": 57.75,
     "series": "A word from our sponsor",
-    "title": "Jell-O Chocolate Pudding",
+    "title": "Auto-Lite",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dick-edwards-the-peter-pan-chorus-and-orchestra-john_gbia0341978a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20DICK%20EDWARDS.mp3",
+    "length": 179.58,
+    "series": "Dick Edwards",
+    "title": "Rudolph The Red Nosed Reindeer",
+    "date": "1952",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dick-edwards-the-peter-pan-chorus-and-orchestra-john_gbia0341978a"
+   },
+   {
+    "src": "https://archive.org/download/78_julen-har-bragt-velsignet-bud_louis-preils-radioorkester-c-e-f-weyse-b-j-ingem_gbia7011044b/Julen%20har%20bragt%20velsignet%20Bud%20-%20Louis%20Preils%20Radioorkester.mp3",
+    "length": 180.19,
+    "series": "Louis Preils Radioorkester",
+    "title": "Julen har bragt velsignet Bud",
+    "item": "https://archive.org/details/78_julen-har-bragt-velsignet-bud_louis-preils-radioorkester-c-e-f-weyse-b-j-ingem_gbia7011044b"
+   },
+   {
+    "src": "https://archive.org/download/78_blue-christmas_doye-odell-billy-johnson-jay-johnson_gbia0465369b/BLUE%20CHRISTMAS%20-%20DOYE%20O%27DELL%20-%20Billy%20Johnson.mp3",
+    "length": 165.67,
+    "series": "Doye O'dell",
+    "title": "Blue Christmas",
+    "date": "1948",
+    "item": "https://archive.org/details/78_blue-christmas_doye-odell-billy-johnson-jay-johnson_gbia0465369b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_ray-bloch-and-his-orchestra-cahn-styne-the-eldorado-f_gbia0014393/01%20-%20Santa%20Claus%20Is%20Comin%27%20to%20Town%20-%20Ray%20Bloch%20and%20his%20Orchestra.mp3",
+    "length": 187,
+    "series": "Ray Bloch and his Orchestra",
+    "title": "Let It Snow, Let It Snow, Let It Snow; Santa Claus Is Comin' to Town",
+    "date": "1947",
+    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_ray-bloch-and-his-orchestra-cahn-styne-the-eldorado-f_gbia0014393"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PHILIPMORRISCIGARETTES.mp3",
+    "length": 52.61,
+    "series": "A word from our sponsor",
+    "title": "Philip Morris Cigarettes",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_santa-lucia_joe-venuti-herb-kern-larry-breen-vincent-terri-charlotte-laughton-tinsl_gbia0085911a/Santa%20Lucia%20-%20Joe%20Venuti%20-%20Herb%20Kern%20-%20Larry%20Breen.mp3",
-    "length": 186.42,
-    "series": "Joe Venuti",
-    "title": "Santa Lucia",
-    "date": "1948",
-    "item": "https://archive.org/details/78_santa-lucia_joe-venuti-herb-kern-larry-breen-vincent-terri-charlotte-laughton-tinsl_gbia0085911a"
+    "src": "https://archive.org/download/78_im-gonna-write-a-letter-to-santa-claus_eugenia-regos-eugenia-regos-joseph-koss_gbia0474435a/I%27M%20GONNA%20WRITE%20A%20LETTER%20TO%20SANTA%20CLAUS%20-%20EUGENIA%20REGOS.mp3",
+    "length": 137.11,
+    "series": "Eugenia Regos",
+    "title": "I'm Gonna Write a Letter to Santa Claus",
+    "date": "1953",
+    "item": "https://archive.org/details/78_im-gonna-write-a-letter-to-santa-claus_eugenia-regos-eugenia-regos-joseph-koss_gbia0474435a"
    },
    {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Little%20Drummer%20Boy.mp3",
-    "length": 149.42,
-    "series": "Chet Atkins",
-    "title": "Little Drummer Boy",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
+    "src": "https://archive.org/download/78_twas-the-night-before-christmas_jiminy-cricket-c-moore-g-bruns-m-ash_gbia8001523b/%22T%27WAS%20THE%20NIGHT%20BEFORE%20CHRISTMAS%22%20-%20JIMINY%20CRICKET.mp3",
+    "length": 278.26,
+    "series": "Jiminy Cricket",
+    "title": "\"T'was the Night Before Christmas\"",
+    "date": "1956",
+    "item": "https://archive.org/details/78_twas-the-night-before-christmas_jiminy-cricket-c-moore-g-bruns-m-ash_gbia8001523b"
    },
    {
-    "src": "https://archive.org/download/JV-29158-1949-QmdAh7Lx9coZqRUZCJo2GuVxdNHDAjZWu6xAdEQBmazAtb.mp3/CL496972.mp3",
-    "length": 152.35,
-    "series": "The King Cole Trio",
-    "title": "All I Want For Christmas (Is My Two Front Teeth)",
-    "date": "1949",
-    "item": "https://archive.org/details/JV-29158-1949-QmdAh7Lx9coZqRUZCJo2GuVxdNHDAjZWu6xAdEQBmazAtb.mp3"
+    "src": "https://archive.org/download/78_it-came-upon-the-midnight-clear_gbia0511896b/IT%20CAME%20UPON%20THE%20MIDNIGHT%20CLEAR.mp3",
+    "length": 167.02,
+    "series": "Unknown artist",
+    "title": "It Came Upon The Midnight Clear",
+    "item": "https://archive.org/details/78_it-came-upon-the-midnight-clear_gbia0511896b"
    },
    {
-    "src": "https://archive.org/download/78_we-wanna-see-santa-do-the-mambo_john-greer-fred-smith-horace-webb_gbia0061007b/We%20Wanna%20See%20Santa%20Do%20the%20Mambo%20-%20John%20Greer.mp3",
-    "length": 157,
-    "series": "John Greer",
-    "title": "We Wanna See Santa Do the Mambo",
-    "date": "1954",
-    "item": "https://archive.org/details/78_we-wanna-see-santa-do-the-mambo_john-greer-fred-smith-horace-webb_gbia0061007b"
+    "src": "https://archive.org/download/78_1-christmas-carol-2-i-danced-with-a-mosquito-3-round-dance_max-goberman-liadow_gbia0079569a/1.%20Christmas%20Carol%202.%20I%20Danced%20With%20A%20Mosqu%20-%20Max%20Goberman.mp3",
+    "length": 191.46,
+    "series": "Max Goberman",
+    "title": "1. Christmas Carol 2. I Danced With A Mosquito 3. Round Dance",
+    "item": "https://archive.org/details/78_1-christmas-carol-2-i-danced-with-a-mosquito-3-round-dance_max-goberman-liadow_gbia0079569a"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLifebouySoap.mp3",
-    "length": 64.18,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceARoni.mp3",
+    "length": 38.06,
     "series": "A word from our sponsor",
-    "title": "Lifebuoy Soap",
+    "title": "Rice-A-Roni",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_herb-kern-lloyd-sloops-warren-arey_gbia0056765b/O%20Little%20Town%20of%20Bethlehem%20-%20Herb%20Kern%20-%20Lloyd%20Sloops.mp3",
+    "length": 181,
+    "series": "Herb Kern",
+    "title": "O Little Town of Bethlehem",
+    "date": "1947",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_herb-kern-lloyd-sloops-warren-arey_gbia0056765b"
+   },
+   {
+    "src": "https://archive.org/download/78_wreck-the-halls-with-boughs-of-holly_the-three-stooges-and-orchestra-barer_gbia0534530a/WRECK%20THE%20HALLS%20WITH%20BOU%20-%20THE%20THREE%20STOOGES%20AND%20ORCHESTRA.mp3",
+    "length": 111.4,
+    "series": "The Three Stooges And Orchestra",
+    "title": "Wreck The Halls With Boughs Of Holly",
+    "item": "https://archive.org/details/78_wreck-the-halls-with-boughs-of-holly_the-three-stooges-and-orchestra-barer_gbia0534530a"
+   },
+   {
+    "src": "https://archive.org/download/78_im-dreaming-of-a-white-christmas_jim-mccahey_gbia0284844a/%22I%27M%20DREAMING%20OF%20A%20WHITE%20CHRISTMAS%22%20-%20JIM%20McCAHEY.mp3",
+    "length": 169.3,
+    "series": "JIM McCAHEY",
+    "title": "\"I'm Dreaming of a White Christmas\"",
+    "date": "1950",
+    "item": "https://archive.org/details/78_im-dreaming-of-a-white-christmas_jim-mccahey_gbia0284844a"
+   },
+   {
+    "src": "https://archive.org/download/78_jeg-s-julemanden-kysse-mor_mie-sid-merrimans-orkester-tommy-connor-susanne-palsb_gbia7008024b/Jeg%20s%C3%A5%20julemanden%20kysse%20mor%20-%20%22MIE%22%20-%20Sid%20Merrimans%20orkester.mp3",
+    "length": 189.56,
+    "series": "\"Mie\"",
+    "title": "Jeg så julemanden kysse mor",
+    "item": "https://archive.org/details/78_jeg-s-julemanden-kysse-mor_mie-sid-merrimans-orkester-tommy-connor-susanne-palsb_gbia7008024b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/DUPONT.MP3",
+    "length": 127.33,
+    "series": "A word from our sponsor",
+    "title": "Dupont",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-the-midnight-clear_national-vespers-mixed-choir_gbia0386931b/IT%20CAME%20UPON%20THE%20MIDNIGHT%20C%20-%20NATIONAL%20VESPERS%20MIXED%20CHOIR.mp3",
+    "length": 194.21,
+    "series": "National Vespers Mixed Choir",
+    "title": "It Came Upon the Midnight Clear",
+    "date": "1958",
+    "item": "https://archive.org/details/78_it-came-upon-the-midnight-clear_national-vespers-mixed-choir_gbia0386931b"
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland_glenn-davis-felix-bernard-dick-smith_gbia0378097b/WINTER%20WONDERLAND%20-%20GLENN%20DAVIS%20-%20Felix%20Bernard.mp3",
+    "length": 185.01,
+    "series": "Glenn Davis",
+    "title": "Winter Wonderland",
+    "item": "https://archive.org/details/78_winter-wonderland_glenn-davis-felix-bernard-dick-smith_gbia0378097b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-ye-merry-gentlemen-adeste-fideles_elmer-ihrke_gbia0479387a/O%20COME%20YE%20MERRY%20GENTLEMEN%3B%20ADESTE%20FIDELES%20-%20ELMER%20IHRKE.mp3",
+    "length": 172.53,
+    "series": "Elmer Ihrke",
+    "title": "O Come Ye Merry Gentlemen; Adeste Fideles",
+    "item": "https://archive.org/details/78_o-come-ye-merry-gentlemen-adeste-fideles_elmer-ihrke_gbia0479387a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-in-florida_hack-swain-and-his-music-lon-saxon-and-the-sun-maids-john-a-m_gbia0463277a/CHRISTMAS%20IN%20FLORIDA%20-%20HACK%20SWAIN%20AND%20HIS%20MUSIC.mp3",
+    "length": 154.7,
+    "series": "Hack Swain And His Music",
+    "title": "Christmas In Florida",
+    "item": "https://archive.org/details/78_christmas-in-florida_hack-swain-and-his-music-lon-saxon-and-the-sun-maids-john-a-m_gbia0463277a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/JERGENSLOTION.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Jergens Lotion",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_hurry-up-santa-claus_ballard_gbia0533594a/Hurry%20up%2C%20Santa%20Claus%20-%20BALLARD.mp3",
+    "length": 69.46,
+    "series": "Ballard",
+    "title": "Hurry up, Santa Claus",
+    "item": "https://archive.org/details/78_hurry-up-santa-claus_ballard_gbia0533594a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas-part-2_mort-lawrence-vicky-kasen_gbia0533978b/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20Part%202%20-%20MORT%20LAWRENCE.mp3",
+    "length": 118.67,
+    "series": "Mort Lawrence",
+    "title": "THE NIGHT BEFORE CHRISTMAS - Part 2",
+    "item": "https://archive.org/details/78_the-night-before-christmas-part-2_mort-lawrence-vicky-kasen_gbia0533978b"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_ray-heatherton-johnny-marks_gbia0533555a/RUDOLPH%2C%20THE%20RED-NOSED%20REINDEER%20-%20RAY%20HEATHERTON.mp3",
+    "length": 105.67,
+    "series": "Ray Heatherton",
+    "title": "Rudolph, The Red-Nosed Reindeer",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_ray-heatherton-johnny-marks_gbia0533555a"
+   },
+   {
+    "src": "https://archive.org/download/78_our-christmas-waltz_ken-griffin-karen-ford-and-bill-snary-e-nelson-jr-s-nelson_gbia0119854a/OUR%20CHRISTMAS%20WALTZ%20-%20Ken%20Griffin%20-%20Karen%20Ford%20and%20Bill%20Snary.mp3",
+    "length": 156,
+    "series": "Ken Griffin",
+    "title": "Our Christmas Waltz",
+    "item": "https://archive.org/details/78_our-christmas-waltz_ken-griffin-karen-ford-and-bill-snary-e-nelson-jr-s-nelson_gbia0119854a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCrestToothpaste.mp3",
+    "length": 61.97,
+    "series": "A word from our sponsor",
+    "title": "Crest Toothpaste",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_0554-Du-kere-gamle-julemand/0554-Du-kere-gamle-julemand.mp3",
+    "length": 159.19,
+    "series": "Erik Andreasen",
+    "title": "Du kare, gamle julemand (Je no crois plus au Pere Noel)",
+    "date": "1949",
+    "item": "https://archive.org/details/78_0554-Du-kere-gamle-julemand"
+   },
+   {
+    "src": "https://archive.org/download/78_silver-bells_jerry-jacka-trio_gbia0024695b/Silver%20Bells%20-%20Jerry%20Jacka%20Trio.mp3",
+    "length": 186,
+    "series": "Jerry Jacka Trio",
+    "title": "Silver Bells",
+    "item": "https://archive.org/details/78_silver-bells_jerry-jacka-trio_gbia0024695b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-in-my-heart_june-winters-madison-kanner-bresler_gbia0425134a/CHRISTMAS%20IN%20MY%20HEART%20-%20JUNE%20WINTERS%20-%20Madison.mp3",
+    "length": 196.87,
+    "series": "June Winters",
+    "title": "Christmas In My Heart",
+    "item": "https://archive.org/details/78_christmas-in-my-heart_june-winters-madison-kanner-bresler_gbia0425134a"
+   },
+   {
+    "src": "https://archive.org/download/78_here-comes-santa-claus-jingle-bells_autry-haldeman-melka_gbia0035049b/Here%20Comes%20Santa%20Claus%3B%20Jingle%20Bells%20-%20Autry.mp3",
+    "length": 267.6,
+    "series": "Autry",
+    "title": "Here Comes Santa Claus; Jingle Bells",
+    "item": "https://archive.org/details/78_here-comes-santa-claus-jingle-bells_autry-haldeman-melka_gbia0035049b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PHILIPMORRISCIGARETTES.mp3",
+    "length": 52.61,
+    "series": "A word from our sponsor",
+    "title": "Philip Morris Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_santas-comin_ken-griffin-sauers-gawehn_gbia0025055b/Santa%27s%20Comin%20-%20Ken%20Griffin%20-%20Sauers%20-%20Gawehn.mp3",
+    "length": 164,
+    "series": "Ken Griffin",
+    "title": "Santa's Coming",
+    "item": "https://archive.org/details/78_santas-comin_ken-griffin-sauers-gawehn_gbia0025055b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-just-cant-wait-till-christmas_anne-lloyd-the-sandpipers-abeson-nomis-dee-mitchell_gbia0534614b/I%20JUST%20CAN%27T%20WAIT%20TILL%20CHRISTMAS%20-%20ANNE%20LLOYD.mp3",
+    "length": 106,
+    "series": "Anne Lloyd",
+    "title": "I Just Can't Wait Till Christmas",
+    "item": "https://archive.org/details/78_i-just-cant-wait-till-christmas_anne-lloyd-the-sandpipers-abeson-nomis-dee-mitchell_gbia0534614b"
+   },
+   {
+    "src": "https://archive.org/download/78_march-of-the-toys_hebert-elmer-ihrke_gbia0000259b/March%20of%20The%20Toys%20-%20Hebert%20-%20Elmer%20Ihrke-restored.mp3",
+    "length": 166.82,
+    "series": "Hebert",
+    "title": "March of The Toys",
+    "date": "1948",
+    "item": "https://archive.org/details/78_march-of-the-toys_hebert-elmer-ihrke_gbia0000259b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-oh-little-town-of-bethlehem_arno_gbia0367138a/SILENT%20NIGHT%3B%20OH%2C%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20Arno.mp3",
+    "length": 179.94,
+    "series": "Arno",
+    "title": "Silent Night; Oh, Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_silent-night-oh-little-town-of-bethlehem_arno_gbia0367138a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHIQUITABANANNA.mp3",
+    "length": 34.75,
+    "series": "A word from our sponsor",
+    "title": "Chiquita Banana",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_glade-jul-heilige-jul_operasanger-w-loudrup-jensen-ingemann_gbia7005619a/Glade%20Jul%2C%20heilige%20Jul%20-%20Operasanger%20W.%20Loudrup%20Jensen.mp3",
+    "length": 191.13,
+    "series": "Operasanger W. Loudrup Jensen",
+    "title": "Glade Jul, heilige Jul",
+    "item": "https://archive.org/details/78_glade-jul-heilige-jul_operasanger-w-loudrup-jensen-ingemann_gbia7005619a"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-away-in-a-manger_the-caroleers-vicky-kasen_gbia0534322b/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR%3B%20AWAY%20IN%20A%20M.mp3",
+    "length": 102.02,
+    "series": "The Caroleers",
+    "title": "It Came Upon A Midnight Clear; Away In A Manger",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-away-in-a-manger_the-caroleers-vicky-kasen_gbia0534322b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-chopsticks-twas-a-night-before-christmas_bobby-burns-peter-pan-orchestr_gbia0296727b/CHRISTMAS%20CHOPSTICKS%20%28TWAS%20A%20NIGHT%20BEFORE%20CH%20-%20BOBBY%20BURNS.mp3",
+    "length": 88.84,
+    "series": "Bobby Burns",
+    "title": "Christmas Chopsticks (Twas A Night Before Christmas)",
+    "item": "https://archive.org/details/78_christmas-chopsticks-twas-a-night-before-christmas_bobby-burns-peter-pan-orchestr_gbia0296727b"
+   },
+   {
+    "src": "https://archive.org/download/78_how-i-hate-to-see-xmas-come-around_jimmy-witherspoon_gbia0060588b/How%20I%20Hate%20to%20See%20Xmas%20Come%20Around%20-%20Jimmy%20Witherspoon.mp3",
+    "length": 184,
+    "series": "Jimmy Witherspoon",
+    "title": "How I Hate to See Xmas Come Around",
+    "date": "1950",
+    "item": "https://archive.org/details/78_how-i-hate-to-see-xmas-come-around_jimmy-witherspoon_gbia0060588b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLEMAN.MP3",
+    "length": 41.38,
+    "series": "A word from our sponsor",
+    "title": "Coleman",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr/A8.%20O%20Holy%20Night.mp3",
+    "length": 190.59,
+    "series": "The U.S. Air Force Band and Singing Sergeants",
+    "title": "O Holy Night",
+    "date": "1967",
+    "item": "https://archive.org/details/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr"
+   },
+   {
+    "src": "https://archive.org/download/78_hvid-jul-white-christmas_hedvig-volmer-irving-berlin-v-skaarup_gbia7009898a/HVID%20JUL%20%28White%20Christmas%29%20-%20HEDVIG%20VOLMER.mp3",
+    "length": 182.42,
+    "series": "Hedvig Volmer",
+    "title": "HVID JUL (White Christmas)",
+    "date": "1951",
+    "item": "https://archive.org/details/78_hvid-jul-white-christmas_hedvig-volmer-irving-berlin-v-skaarup_gbia7009898a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-just-wrote-to-santa_martin-walker-sammy-spear-orch-joe-cammarota_gbia0426654a/I%20JUST%20WROTE%20TO%20SANTA%20-%20MARTIN%20WALKER%20-%20Sammy%20Spear%20Orch..mp3",
+    "length": 175.25,
+    "series": "Martin Walker",
+    "title": "I Just Wrote to Santa",
+    "date": "1953",
+    "item": "https://archive.org/details/78_i-just-wrote-to-santa_martin-walker-sammy-spear-orch-joe-cammarota_gbia0426654a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_monica-lewis-ray-bloch-and-his-orchestra-irving-berlin_gbia0014394a/White%20Christmas%20-%20Monica%20Lewis%20-%20Ray%20Bloch%20and%20His%20Orchestra.mp3",
+    "length": 199,
+    "series": "Monica Lewis",
+    "title": "White Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_white-christmas_monica-lewis-ray-bloch-and-his-orchestra-irving-berlin_gbia0014394a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
+    "length": 49.41,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Health Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland_michael-reed-the-peter-pan-orchestra-vicky-kasen_gbia0534322a/WINTER%20WONDERLAND%20-%20MICHAEL%20REED%20-%20the%20Peter%20Pan%20Orchestra.mp3",
+    "length": 124.87,
+    "series": "Michael Reed",
+    "title": "Winter Wonderland",
+    "item": "https://archive.org/details/78_winter-wonderland_michael-reed-the-peter-pan-orchestra-vicky-kasen_gbia0534322a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_ted-black-orchestra-dick-edwards-johnny-marks_gbia0114825a/Rudolph%2C%20The%20Red-Nosed%20Reindeer%20-%20Ted%20Black%20Orchestra.mp3",
+    "length": 172.03,
+    "series": "Ted Black Orchestra",
+    "title": "Rudolph, The Red-Nosed Reindeer",
+    "date": "1949",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_ted-black-orchestra-dick-edwards-johnny-marks_gbia0114825a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-holy-night_carmichael-singers_gbia0473838b/O%20HOLY%20NIGHT%20-%20CARMICHAEL%20SINGERS.mp3",
+    "length": 136.62,
+    "series": "Carmichael Singers",
+    "title": "O Holy Night",
+    "item": "https://archive.org/details/78_o-holy-night_carmichael-singers_gbia0473838b"
+   },
+   {
+    "src": "https://archive.org/download/78_w-zlobie-lezy_w-lachman_gbia0060909b/W%20Zlobie%20Lezy%20-%20W.%20Lachman.mp3",
+    "length": 194.18,
+    "series": "W. Lachman",
+    "title": "W Zlobie Lezy",
+    "item": "https://archive.org/details/78_w-zlobie-lezy_w-lachman_gbia0060909b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/HALEYSMO.MP3",
+    "length": 42.55,
+    "series": "A word from our sponsor",
+    "title": "Haley's M-O",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j_gbia0170701b/FUNNY%20LITTLE%20SNOW%20MAN%20-%20BOBBY%20SABATINO%20AND%20THE%20CHARLES%20KENNY%20ORCHESTRA.mp3",
+    "length": 185.13,
+    "series": "Bobby Sabatino And The Charles Kenny Orchestra",
+    "title": "Funny Little Snow Man",
+    "date": "December 19, 1953",
+    "item": "https://archive.org/details/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j_gbia0170701b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-vant-a-xmas-drum_ole-svenson-and-his-smorgasbord-band-t-varnick-n-acquaviva_gbia0342826b/I%20VANT%20A%20XMAS%20DRUM%20-%20OLE%20SVENSON%20and%20his%20SMORGASBORD%20BAND.mp3",
+    "length": 143.66,
+    "series": "OLE SVENSON and his SMORGASBORD BAND",
+    "title": "I Vant a Xmas Drum",
+    "date": "1950",
+    "item": "https://archive.org/details/78_i-vant-a-xmas-drum_ole-svenson-and-his-smorgasbord-band-t-varnick-n-acquaviva_gbia0342826b"
+   },
+   {
+    "src": "https://archive.org/download/78_wilija-u-bartka_bartek-i-kasia-wesoy-zespl_gbia0530353a/WILIJA%20U%20BARTKA%20-%20BARTEK%20I%20KASIA%20-%20Weso%C5%82y%20Zesp%C3%B3l.mp3",
+    "length": 185.71,
+    "series": "Bartek I Kasia",
+    "title": "Wilija U Bartka",
+    "item": "https://archive.org/details/78_wilija-u-bartka_bartek-i-kasia-wesoy-zespl_gbia0530353a"
+   },
+   {
+    "src": "https://archive.org/download/78_beim-leuchtturm-von-santa-maria_geschwister-zeiser-und-das-orchester-frederic-charl_gbia3027734a/BE%20-%20GESCHWISTER%20ZEISER%20und%20das%20Orchester%20Frederic%20Charles.mp3",
+    "length": 178.58,
+    "series": "GESCHWISTER ZEISER und das Orchester Frederic Charles",
+    "title": "Beim Leuchtturm Von Santa Maria",
+    "item": "https://archive.org/details/78_beim-leuchtturm-von-santa-maria_geschwister-zeiser-und-das-orchester-frederic-charl_gbia3027734a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsTempoCigarettes.mp3",
+    "length": 59.74,
+    "series": "A word from our sponsor",
+    "title": "Tempo Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_night-before-christmas_music-hall-drama-group_gbia0475737b/Night%20Before%20Christmas%20-%20Music%20Hall%20Drama%20Group.mp3",
+    "length": 205.67,
+    "series": "Music Hall Drama Group",
+    "title": "Night Before Christmas",
+    "item": "https://archive.org/details/78_night-before-christmas_music-hall-drama-group_gbia0475737b"
+   },
+   {
+    "src": "https://archive.org/download/78_til-juletr-med-onkel-harald-1_harald-mortensens-orkester-statsradiofoniens-pigek_gbia0124878a/Til%20juletr%C3%A6%20med%20Onkel%20Harald%20%20-%20Harald%20Mortensens%20orkester.mp3",
+    "length": 197.7,
+    "series": "Harald Mortensens orkester",
+    "title": "Til juletræ med Onkel Harald (1)",
+    "item": "https://archive.org/details/78_til-juletr-med-onkel-harald-1_harald-mortensens-orkester-statsradiofoniens-pigek_gbia0124878a"
+   },
+   {
+    "src": "https://archive.org/download/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr/A7.%20Go%20Tell%20It%20On%20The%20Mountain.mp3",
+    "length": 180.87,
+    "series": "The U.S. Air Force Band and Singing Sergeants",
+    "title": "Go Tell It on the Mountain",
+    "date": "1967",
+    "item": "https://archive.org/details/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_bobby-doyle-ray-blochs-orchestra-and-choir-irving-berlin_gbia0371322a/WHITE%20CHRISTMAS%20-%20BOBBY%20DOYLE%20-%20Ray%20Bloch%27s%20Orchestra%20and%20Choir.mp3",
+    "length": 199.19,
+    "series": "Bobby Doyle",
+    "title": "White Christmas",
+    "date": "1946",
+    "item": "https://archive.org/details/78_white-christmas_bobby-doyle-ray-blochs-orchestra-and-choir-irving-berlin_gbia0371322a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAridDeoderant.mp3",
+    "length": 46.02,
+    "series": "A word from our sponsor",
+    "title": "Arrid Deodorant",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_biae-gody-white-christmas_vivian-bazan-irving-berlin_gbia0531614a/BIA%C5%81E%20GODY%20%28White%20Christmas%29%20-%20Vivian%20Bazan.mp3",
+    "length": 171,
+    "series": "Vivian Bazan",
+    "title": "BIAŁE GODY (White Christmas)",
+    "date": "1947",
+    "item": "https://archive.org/details/78_biae-gody-white-christmas_vivian-bazan-irving-berlin_gbia0531614a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-skaters_sulas-musette-orchestra_gbia0045151b/The%20Skaters%20-%20Sula%27s%20Musette%20Orchestra.mp3",
+    "length": 171,
+    "series": "Sula's Musette Orchestra",
+    "title": "The Skaters",
+    "date": "1948",
+    "item": "https://archive.org/details/78_the-skaters_sulas-musette-orchestra_gbia0045151b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-jr_eddie-cletro-the-frontiersmen-gould-lertzman_gbia0404442a/SANTA%20CLAUS%2C%20JR.%20-%20EDDIE%20CLETRO%20-%20THE%20FRONTIERSMEN.mp3",
+    "length": 113.59,
+    "series": "Eddie Cletro",
+    "title": "Santa Claus, Jr.",
+    "date": "1956",
+    "item": "https://archive.org/details/78_santa-claus-jr_eddie-cletro-the-frontiersmen-gould-lertzman_gbia0404442a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-service-part-1_st-mary-le-bow-walford-davies_gbia0538698a/CHRISTMAS%20SERVICE%20-%20PART%201%20-%20ST.%20MARY-LE-BOW.mp3",
+    "length": 217,
+    "series": "St. Mary-Le-Bow",
+    "title": "Christmas Service - Part 1",
+    "item": "https://archive.org/details/78_christmas-service-part-1_st-mary-le-bow-walford-davies_gbia0538698a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/RINSO.MP3",
+    "length": 84.67,
+    "series": "A word from our sponsor",
+    "title": "Rinso",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_little-town-of-bethlehem_george-wright_gbia0321697b/LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20GEORGE%20WRIGHT.mp3",
+    "length": 178.06,
+    "series": "George Wright",
+    "title": "Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_little-town-of-bethlehem_george-wright_gbia0321697b"
+   },
+   {
+    "src": "https://archive.org/download/78_min-julekalender_svend-nicolaisens-danseorkester-erik-andreasen-peer-frost-wilh-gr_gbia0120082b/Min%20julekalender%20-%20Svend%20Nicolaisens%20danseorkester.mp3",
+    "length": 191.51,
+    "series": "Svend Nicolaisens danseorkester",
+    "title": "Min julekalender",
+    "item": "https://archive.org/details/78_min-julekalender_svend-nicolaisens-danseorkester-erik-andreasen-peer-frost-wilh-gr_gbia0120082b"
+   },
+   {
+    "src": "https://archive.org/download/78_nissepolka_elith-foss-sid-merrimans-orkester-medlemmer-af-statsradiofoniens-drengek_gbia7008454a/Nissepolka%20-%20Elith%20Foss%20-%20Sid%20Merrimans%20orkester.mp3",
+    "length": 185.57,
+    "series": "Elith Foss",
+    "title": "Nissepolka",
+    "item": "https://archive.org/details/78_nissepolka_elith-foss-sid-merrimans-orkester-medlemmer-af-statsradiofoniens-drengek_gbia7008454a"
+   },
+   {
+    "src": "https://archive.org/download/78_auld-lang-syne_r.-traub-ferko-string-band_gbia0000061b/Auld%20Lang%20Syne%20-%20R.%20Traub%20-%20Ferko%20String%20Band.mp3",
+    "length": 167,
+    "series": "R. Traub",
+    "title": "Auld Lang Syne",
+    "date": "1948",
+    "item": "https://archive.org/details/78_auld-lang-syne_r.-traub-ferko-string-band_gbia0000061b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATESHAVINGCREAM.mp3",
+    "length": 40.99,
+    "series": "A word from our sponsor",
+    "title": "Colgate Shaving Cream",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_a-cowboys-christmas_leon-mcauliffe-and-his-western-swing-band-jimmy-hall-mcauliffe_gbia0068952b/A%20Cowboy%27s%20Christmas%20-%20Leon%20McAuliffe%20and%20his%20Western%20Swing%20Band.mp3",
+    "length": 190,
+    "series": "Leon McAuliffe and his Western Swing Band",
+    "title": "A Cowboy's Christmas Song",
+    "date": "1947",
+    "item": "https://archive.org/details/78_a-cowboys-christmas_leon-mcauliffe-and-his-western-swing-band-jimmy-hall-mcauliffe_gbia0068952b"
+   },
+   {
+    "src": "https://archive.org/download/78_lets-light-the-christmas-tree_jack-brown-and-the-three-jills-ruth-lyons-chic-gatwo_gbia0085047a/Let%27s%20Light%20the%20Christmas%20Tree%20-%20Jack%20Brown%20and%20The%20Three%20Jills.mp3",
+    "length": 181,
+    "series": "Jack Brown and The Three Jills",
+    "title": "Let's Light the Christmas Tree",
+    "date": "1948",
+    "item": "https://archive.org/details/78_lets-light-the-christmas-tree_jack-brown-and-the-three-jills-ruth-lyons-chic-gatwo_gbia0085047a"
+   },
+   {
+    "src": "https://archive.org/download/78_auld-lang-syne_the-roy-kral-jackie-cain-sextet-jackie-cain-and-roy-kral-kral-obrie_gbia0038150a/Auld%20Lang%20Syne%20-%20The%20Roy%20Kral-Jackie%20Cain%20Sextet.mp3",
+    "length": 164,
+    "series": "The Roy Kral-Jackie Cain Sextet",
+    "title": "Auld Lang Syne",
+    "date": "1949",
+    "item": "https://archive.org/details/78_auld-lang-syne_the-roy-kral-jackie-cain-sextet-jackie-cain-and-roy-kral-kral-obrie_gbia0038150a"
+   },
+   {
+    "src": "https://archive.org/download/78_nuttin-for-xmas_joe-ward-dave-terry-bennett-tepper_gbia0010371a/Nuttin%20For%20Xmas%20-%20Joe%20Ward%20-%20Dave%20Terry%20-%20Bennett.mp3",
+    "length": 141,
+    "series": "Joe Ward",
+    "title": "Nuttin For Xmas",
+    "date": "1955",
+    "item": "https://archive.org/details/78_nuttin-for-xmas_joe-ward-dave-terry-bennett-tepper_gbia0010371a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
+    "length": 45.51,
+    "series": "A word from our sponsor",
+    "title": "Bubble Up",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_the-mulcays-and-their-electric-harmonicas-johnny-mar_gbia0430143b/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20THE%20MULCAYS%20and%20their%20Electric%20Harmonicas.mp3",
+    "length": 107.42,
+    "series": "THE MULCAYS and their Electric Harmonicas",
+    "title": "Rudolph the Red Nosed Reindeer",
+    "date": "1954",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_the-mulcays-and-their-electric-harmonicas-johnny-mar_gbia0430143b"
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fideles_gbia0195429f/ADESTE%20FIDELES.mp3",
+    "length": 180.74,
+    "series": "Unknown artist",
+    "title": "Adeste Fideles",
+    "item": "https://archive.org/details/78_adeste-fideles_gbia0195429f"
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland_bonnemere-and-his-piano-smith-bernard_gbia0059939b/Winter%20Wonderland%20-%20Bonnemere%20and%20His%20Piano.mp3",
+    "length": 188,
+    "series": "Bonnemere and His Piano",
+    "title": "Winter Wonderland",
+    "date": "1954",
+    "item": "https://archive.org/details/78_winter-wonderland_bonnemere-and-his-piano-smith-bernard_gbia0059939b"
+   },
+   {
+    "src": "https://archive.org/download/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia8006239/01%20-%201.%20Here%20We%20Come%20A-Caroli%20-%20RAY%20BLOCH%20his%20Choir%20%26%20Orchestra.mp3",
+    "length": 196,
+    "series": "RAY BLOCH his Choir & Orchestra",
+    "title": "Best Loved Christmas Music",
+    "date": "1946",
+    "item": "https://archive.org/details/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia8006239"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CARTERSLITTLELIVERPILLS.mp3",
+    "length": 47.62,
+    "series": "A word from our sponsor",
+    "title": "Carter's Little Liver Pills",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_brooks_gbia0533593b/O%20Little%20Town%20of%20Bethlehem%20-%20BROOKS.mp3",
+    "length": 64.47,
+    "series": "Brooks",
+    "title": "O Little Town of Bethlehem",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_brooks_gbia0533593b"
+   },
+   {
+    "src": "https://archive.org/download/78_im-gonna-do-my-christmas-shopping-early_vicki-sunday-and-alan-hayes-cappa-barra-bo_gbia0498350a/I%27M%20GONNA%20DO%20MY%20CHRISTMAS%20SH%20-%20VICKI%20SUNDAY%20and%20ALAN%20HAYES.mp3",
+    "length": 150,
+    "series": "VICKI SUNDAY and ALAN HAYES",
+    "title": "I'm Gonna Do My Christmas Shopping Early",
+    "date": "1952",
+    "item": "https://archive.org/details/78_im-gonna-do-my-christmas-shopping-early_vicki-sunday-and-alan-hayes-cappa-barra-bo_gbia0498350a"
+   },
+   {
+    "src": "https://archive.org/download/78_julemandens-rejse_nyborg-jensens-piger-sid-merrimans-orkester-h-c-andersen-sv-gy_gbia7010590a/Julemandens%20rejse%20-%20Nyborg-Jensens%20piger.mp3",
+    "length": 180.87,
+    "series": "Nyborg-Jensens piger",
+    "title": "Julemandens rejse",
+    "item": "https://archive.org/details/78_julemandens-rejse_nyborg-jensens-piger-sid-merrimans-orkester-h-c-andersen-sv-gy_gbia7010590a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-in-florida_john-a.-mcgee-hack-swain-and-his-music-lon-saxon-and-the-sun-m_gbia0000290a/Christmas%20in%20Florida%20-%20John%20A.%20McGee%20-%20Hack%20Swain%20and%20his%20Music.mp3",
+    "length": 156,
+    "series": "John A. McGee",
+    "title": "Christmas in Florida",
+    "date": "1952",
+    "item": "https://archive.org/details/78_christmas-in-florida_john-a.-mcgee-hack-swain-and-his-music-lon-saxon-and-the-sun-m_gbia0000290a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MARCHOFDIMES.mp3",
+    "length": 70.39,
+    "series": "A word from our sponsor",
+    "title": "March Of Dimes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-serenade_nick-paone-and-the-gang-n-paone-neal-hefti_gbia0469751b/CHRISTMAS%20SERENADE%20-%20NICK%20PAONE%20And%20The%20Gang.mp3",
+    "length": 167.11,
+    "series": "NICK PAONE And The Gang",
+    "title": "Christmas Serenade",
+    "date": "1950",
+    "item": "https://archive.org/details/78_christmas-serenade_nick-paone-and-the-gang-n-paone-neal-hefti_gbia0469751b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas_gbia3009082a/Christmas..mp3",
+    "length": 236.67,
+    "series": "Unknown artist",
+    "title": "Christmas.",
+    "item": "https://archive.org/details/78_christmas_gbia3009082a"
+   },
+   {
+    "src": "https://archive.org/download/78_glade-jul_ulla-katajavuori-gruber-koskimies_gbia7005537a/Glade%20Jul%20-%20Ulla%20Katajavuori%20-%20Gruber%20-%20Koskimies.mp3",
+    "length": 204.78,
+    "series": "Ulla Katajavuori",
+    "title": "Glade Jul",
+    "date": "1949",
+    "item": "https://archive.org/details/78_glade-jul_ulla-katajavuori-gruber-koskimies_gbia7005537a"
+   },
+   {
+    "src": "https://archive.org/download/78_stilla-natt-heliga-natt_tabernaklets-kr-martin-lidstam-franz-gruber_gbia7038575b/STILLA%20NATT%2C%20HELIGA%20NATT%20-%20Tabernaklets%20k%C3%B6r.mp3",
+    "length": 193,
+    "series": "Tabernaklets kör",
+    "title": "Stilla Natt, Heliga Natt",
+    "date": "1947",
+    "item": "https://archive.org/details/78_stilla-natt-heliga-natt_tabernaklets-kr-martin-lidstam-franz-gruber_gbia7038575b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/WINSTONCIGARETTES.mp3",
+    "length": 29.29,
+    "series": "A word from our sponsor",
+    "title": "Winston Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town_cosmo-teri-coots_gbia0059611a/Santa%20Claus%20Is%20Coming%20to%20Town%20-%20Cosmo%20Teri.mp3",
+    "length": 169.43,
+    "series": "Cosmo Teri",
+    "title": "Santa Claus Is Coming to Town",
+    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town_cosmo-teri-coots_gbia0059611a"
+   },
+   {
+    "src": "https://archive.org/download/78_julemanden_ib-schnberg-arthur-jensen-norma-rhodin-leth-hansen_gbia0125002b/JULEMANDEN%20-%20IB%20SCH%C3%98NBERG%20-%20ARTHUR%20JENSEN.mp3",
+    "length": 189.06,
+    "series": "Ib Schønberg",
+    "title": "Julemanden",
+    "date": "1953",
+    "item": "https://archive.org/details/78_julemanden_ib-schnberg-arthur-jensen-norma-rhodin-leth-hansen_gbia0125002b"
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fidelis_herb-kern-lloyd-sloop-warren-arey_gbia0056767a/Adeste%20Fidelis%20-%20Herb%20Kern%20-%20Lloyd%20Sloop.mp3",
+    "length": 163,
+    "series": "Herb Kern",
+    "title": "Adeste Fidelis",
+    "date": "1947",
+    "item": "https://archive.org/details/78_adeste-fidelis_herb-kern-lloyd-sloop-warren-arey_gbia0056767a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-lucia_enzo-di-mola-orchestra-di-nick-aversano_gbia0067459b/Santa%20Lucia%20-%20Enzo%20Di%20Mola%20-%20orchestra%20di%20Nick%20Aversano.mp3",
+    "length": 180.34,
+    "series": "Enzo Di Mola",
+    "title": "Santa Lucia",
+    "item": "https://archive.org/details/78_santa-lucia_enzo-di-mola-orchestra-di-nick-aversano_gbia0067459b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Chesterfield Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear_gbia0219431a/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR.mp3",
+    "length": 167.29,
+    "series": "Unknown artist",
+    "title": "It Came Upon A Midnight Clear",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear_gbia0219431a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_george-wright_gbia0446884a/SILENT%20NIGHT%20-%20GEORGE%20WRIGHT.mp3",
+    "length": 169.93,
+    "series": "George Wright",
+    "title": "Silent Night",
+    "item": "https://archive.org/details/78_silent-night_george-wright_gbia0446884a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-roses_clark-mcmullen-peters-catsos_gbia0447325a/CHRISTMAS%20ROSES%20-%20CLARK%20%26%20McMULLEN%20-%20Peters.mp3",
+    "length": 167.35,
+    "series": "CLARK & McMULLEN",
+    "title": "Christmas Roses",
+    "date": "1950",
+    "item": "https://archive.org/details/78_christmas-roses_clark-mcmullen-peters-catsos_gbia0447325a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-christmas-carol-part-2_bret-morrison-charles-dickens_gbia0366288b/THE%20CHRISTMAS%20CAROL%20%28Part%202%29%20-%20BRET%20MORRISON.mp3",
+    "length": 211.55,
+    "series": "Bret Morrison",
+    "title": "THE CHRISTMAS CAROL (Part 2)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_the-christmas-carol-part-2_bret-morrison-charles-dickens_gbia0366288b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
+    "length": 14.08,
+    "series": "A word from our sponsor",
+    "title": "Colgate Tooth Powder",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_my-cactus-christmas-tree_redd-harper-harper-barnett_gbia3011671a/MY%20CACTUS%20CHRISTMAS%20TREE%20-%20REDD%20HARPER%20-%20Harper.mp3",
+    "length": 179,
+    "series": "Redd Harper",
+    "title": "My Cactus Christmas Tree",
+    "item": "https://archive.org/details/78_my-cactus-christmas-tree_redd-harper-harper-barnett_gbia3011671a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel-joy-to-the-world-the-first-noel_gbia0187403a/The%20First%20Noel%3B%20Joy%20To%20The%20World%3B%20The%20First%20Noel.mp3",
+    "length": 179.54,
+    "series": "Unknown artist",
+    "title": "The First Noel; Joy To The World; The First Noel",
+    "date": "1960",
+    "item": "https://archive.org/details/78_the-first-noel-joy-to-the-world-the-first-noel_gbia0187403a"
+   },
+   {
+    "src": "https://archive.org/download/78_when-santa-claus-gets-your-letter_johnny-marks-gabby-dixon-and-the-crickets-the-pet_gbia0533973a/WHEN%20SANTA%20CLAUS%20GETS%20YOUR%20LETTER%20-%20Johnny%20Marks.mp3",
+    "length": 102,
+    "series": "Johnny Marks",
+    "title": "When Santa Claus Gets Your Letter",
+    "item": "https://archive.org/details/78_when-santa-claus-gets-your-letter_johnny-marks-gabby-dixon-and-the-crickets-the-pet_gbia0533973a"
+   },
+   {
+    "src": "https://archive.org/download/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas-god-rest-ye-merry-gentleme_gbia0203787b/Deck%20The%20Halls%20With%20Boughs%20of%20Holly%3B%20Good%20%20-%20THE%20CAROLEERS.mp3",
+    "length": 168.14,
+    "series": "The Caroleers",
+    "title": "Deck The Halls With Boughs of Holly; Good King Wencelas; God Rest Ye Merry Gentlemen; Joy To The World.",
+    "date": "1952",
+    "item": "https://archive.org/details/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas-god-rest-ye-merry-gentleme_gbia0203787b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
+    "length": 50.35,
+    "series": "A word from our sponsor",
+    "title": "Northwest Orient Airlines",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble-berna_gbia0131155b/WINTER%20WONDERLAND%20-%20Johnny%20Long%20and%20his%20Orchestra.mp3",
+    "length": 192,
+    "series": "Johnny Long and his Orchestra",
+    "title": "Winter Wonderland",
+    "date": "1947",
+    "item": "https://archive.org/details/78_winter-wonderland_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble-berna_gbia0131155b"
+   },
+   {
+    "src": "https://archive.org/download/78_det-kimer-nu-til-julefest_operasanger-w-loudrup-jensen-c-balle-ingemann_gbia7005619b/Det%20kimer%20nu%20til%20Julefest%20-%20Operasanger%20W.%20Loudrup%20Jensen.mp3",
+    "length": 188.43,
+    "series": "Operasanger W. Loudrup Jensen",
+    "title": "Det kimer nu til Julefest",
+    "item": "https://archive.org/details/78_det-kimer-nu-til-julefest_operasanger-w-loudrup-jensen-c-balle-ingemann_gbia7005619b"
+   },
+   {
+    "src": "https://archive.org/download/78_blue-shadows-on-a-white-christmas-tree_eddie-hazelwood-and-his-carolina-woodchopper_gbia0430674b/BLUE%20SHADO%20-%20EDDIE%20HAZELWOOD%20and%20His%20Carolina%20Woodchoppers.mp3",
+    "length": 173.06,
+    "series": "EDDIE HAZELWOOD and His Carolina Woodchoppers",
+    "title": "Blue Shadows on a White Christmas Tree",
+    "date": "1951",
+    "item": "https://archive.org/details/78_blue-shadows-on-a-white-christmas-tree_eddie-hazelwood-and-his-carolina-woodchopper_gbia0430674b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful_gbia3029502b/O%20COME%20ALL%20YE%20FAITHFUL.mp3",
+    "length": 219.7,
+    "series": "Unknown artist",
+    "title": "O Come All Ye Faithful",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful_gbia3029502b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ELGINAMERICAN.mp3",
+    "length": 105.57,
+    "series": "A word from our sponsor",
+    "title": "Elgin American",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_how-lovely-is-christmas_bing-crosby_gbia0534568/01%20-%20HOW%20LOVELY%20IS%20CHRISTMAS%20-%20BING%20CROSBY.mp3",
+    "length": 95,
+    "series": "Bing Crosby",
+    "title": "How Lovely Is Christmas",
+    "item": "https://archive.org/details/78_how-lovely-is-christmas_bing-crosby_gbia0534568"
+   },
+   {
+    "src": "https://archive.org/download/78_lonely-christmas_cedric-wallace-orch-jimmy-holmes-sprung-rose_gbia0415769a/LONELY%20CHRISTMAS%20-%20CEDRIC%20WALLACE%20ORCH.%20-%20JIMMY%20HOLMES.mp3",
+    "length": 196.73,
+    "series": "Cedric Wallace Orch.",
+    "title": "Lonely Christmas",
+    "date": "1951",
+    "item": "https://archive.org/details/78_lonely-christmas_cedric-wallace-orch-jimmy-holmes-sprung-rose_gbia0415769a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-remember-christmas_jimmy-collett-lynn-weir-smith_gbia0006789b/I%20Remember%20Christmas%20-%20Jimmy%20Collett%20-%20Lynn%20Weir%20Smith.mp3",
+    "length": 153,
+    "series": "Jimmy Collett",
+    "title": "I Remember Christmas",
+    "date": "1952",
+    "item": "https://archive.org/details/78_i-remember-christmas_jimmy-collett-lynn-weir-smith_gbia0006789b"
+   },
+   {
+    "src": "https://archive.org/download/78_santas-on-his-way_bill-tabbert-400-quartet-joe-lipman-orchestra-jacobs_gbia0027339a/Santa%27s%20on%20His%20Way%20-%20Bill%20Tabbert%20-%20400%20Quartet.mp3",
+    "length": 129,
+    "series": "Bill Tabbert",
+    "title": "Santa's on His Way",
+    "date": "1951",
+    "item": "https://archive.org/details/78_santas-on-his-way_bill-tabbert-400-quartet-joe-lipman-orchestra-jacobs_gbia0027339a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OVALTINE.MP3",
+    "length": 126.24,
+    "series": "A word from our sponsor",
+    "title": "Ovaltine",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_happy-new-year-darling_ted-black-orchestra-dick-edwards-lombardo-marks_gbia0110572b/HAPPY%20NEW%20YEAR%2C%20DARLING%20-%20Ted%20Black%20Orchestra.mp3",
+    "length": 185,
+    "series": "Ted Black Orchestra",
+    "title": "Happy New Year, Darling",
+    "date": "1949",
+    "item": "https://archive.org/details/78_happy-new-year-darling_ted-black-orchestra-dick-edwards-lombardo-marks_gbia0110572b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_betty-jane-vicki-kasen_gbia0273450a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20BETTY%20JANE.mp3",
+    "length": 137.19,
+    "series": "Betty Jane",
+    "title": "I Saw Mommy Kissing Santa Claus",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_betty-jane-vicki-kasen_gbia0273450a"
+   },
+   {
+    "src": "https://archive.org/download/78_oh-christmas-tree-o-tannenbaum_ken-griffin_gbia0190672b/OH%20CHRISTMAS%20TREE%21%20%28O%20Tannenbaum%29%20-%20KEN%20GRIFFIN.mp3",
+    "length": 179.08,
+    "series": "Ken Griffin",
+    "title": "OH CHRISTMAS TREE! (O Tannenbaum)",
+    "item": "https://archive.org/details/78_oh-christmas-tree-o-tannenbaum_ken-griffin_gbia0190672b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-lucia_hugo-manzoni_gbia7035850a/Santa%20Lucia%20-%20Hugo%20Manzoni.mp3",
+    "length": 192.39,
+    "series": "None legible",
+    "title": "Santa Lucia",
+    "item": "https://archive.org/details/78_santa-lucia_hugo-manzoni_gbia7035850a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/FORD.MP3",
+    "length": 87.16,
+    "series": "A word from our sponsor",
+    "title": "Ford",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_a-king-herod-and-the-cock-b-on-christmas-night_patrick-shuldham-shaw-isabel-bedling_gbia0552712a/a%29%20KING%20HEROD%20AND%20THE%20COCK%3B%20%28b%29%20O%20-%20PATRICK%20SHULDHAM-SHAW.mp3",
+    "length": 202,
+    "series": "Patrick Shuldham-Shaw",
+    "title": "(A) King Herod And The Cock; (B) On Christmas Night",
+    "date": "1949",
+    "item": "https://archive.org/details/78_a-king-herod-and-the-cock-b-on-christmas-night_patrick-shuldham-shaw-isabel-bedling_gbia0552712a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas-part-1_peter-hanley-the-sandpipers-irving-berlin-mitch-miller_gbia0534619a/WHITE%20CHRISTMAS%20-%20Part%201%20-%20PETER%20HANLEY%20-%20THE%20SANDPIPERS.mp3",
+    "length": 99,
+    "series": "Peter Hanley",
+    "title": "WHITE CHRISTMAS - Part 1",
+    "date": "1952",
+    "item": "https://archive.org/details/78_white-christmas-part-1_peter-hanley-the-sandpipers-irving-berlin-mitch-miller_gbia0534619a"
+   },
+   {
+    "src": "https://archive.org/download/78_its-christmas-time_j-t-adams-and-the-men-of-texas-adams-j-t-adams_gbia0473674b/IT%27S%20CHRISTMAS%20TIME%20-%20J.%20T.%20ADAMS%20AND%20THE%20MEN%20OF%20TEXAS.mp3",
+    "length": 133.49,
+    "series": "J. T. Adams and the Men of Texas",
+    "title": "It's Christmas Time",
+    "date": "1952",
+    "item": "https://archive.org/details/78_its-christmas-time_j-t-adams-and-the-men-of-texas-adams-j-t-adams_gbia0473674b"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dick-edwards-peter-pan-orchestra-chorus-j-marks_gbia0533065a/RUDOLPH%20THE%20RED-NOSED%20REINDEER%20-%20DICK%20EDWARDS.mp3",
+    "length": 125.57,
+    "series": "Dick Edwards",
+    "title": "Rudolph The Red-Nosed Reindeer",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dick-edwards-peter-pan-orchestra-chorus-j-marks_gbia0533065a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUSTERCREAM.mp3",
+    "length": 50.11,
+    "series": "A word from our sponsor",
+    "title": "Lustre-Creme Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful_godfrey-malcolm-fredrico_gbia0219430d/O%20COME%20ALL%20YE%20FAITHFUL%20-%20Godfrey%20Malcolm.mp3",
+    "length": 131.1,
+    "series": "Godfrey Malcolm",
+    "title": "O Come All Ye Faithful",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful_godfrey-malcolm-fredrico_gbia0219430d"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-deck-the-halls_ruth-cottingham-phil-proud-rex-chorus_gbia0184597a/Jingle%20Bells%3B%20Deck%20The%20Halls%20-%20Ruth%20Cottingham.mp3",
+    "length": 200.62,
+    "series": "Ruth Cottingham",
+    "title": "Jingle Bells; Deck The Halls",
+    "item": "https://archive.org/details/78_jingle-bells-deck-the-halls_ruth-cottingham-phil-proud-rex-chorus_gbia0184597a"
+   },
+   {
+    "src": "https://archive.org/download/78_den-lystige-sldefart_mandolin-og-guitar-musikforeingens-orkester-otto-parlasca-gre_gbia7008746a/Den%20lystige%20Sl%C3%A6defart%20-%20Mandolin-og%20Guitar-Musikforeingens%20Orkester.mp3",
+    "length": 172.68,
+    "series": "Mandolin-og Guitar-Musikforeingens Orkester",
+    "title": "Den lystige Slædefart",
+    "item": "https://archive.org/details/78_den-lystige-sldefart_mandolin-og-guitar-musikforeingens-orkester-otto-parlasca-gre_gbia7008746a"
+   },
+   {
+    "src": "https://archive.org/download/78_deck-the-halls-we-three-kings-of-orient-are-the-first-nowell_godfrey-malcolm-fred_gbia0375273b/Deck%20The%20Halls%3B%20We%20Three%20Kings%20of%20Orient%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 363.93,
+    "series": "Godfrey Malcolm",
+    "title": "Deck The Halls; We Three Kings of Orient Are; The First Nowell",
+    "item": "https://archive.org/details/78_deck-the-halls-we-three-kings-of-orient-are-the-first-nowell_godfrey-malcolm-fred_gbia0375273b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsiCola.mp3",
+    "length": 33.38,
+    "series": "A word from our sponsor",
+    "title": "Pepsi Cola",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_julemanden_ib-schnberg-arthur-jensen-norma-rhodin-leth-hansen_gbia0125002a/JULEMANDEN%20-%20IB%20SCH%C3%98NBERG%20-%20ARTHUR%20JENSEN.mp3",
+    "length": 153.08,
+    "series": "Ib Schønberg",
+    "title": "Julemanden",
+    "date": "1953",
+    "item": "https://archive.org/details/78_julemanden_ib-schnberg-arthur-jensen-norma-rhodin-leth-hansen_gbia0125002a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful-also-deck-the-halls-and-god-rest-ye-merry-gentlemen_gerry-_gbia0007686/01%20-%20O%20Come%20All%20Ye%20Faithful%20-%20Gerry%20%26%20Barbara%20Touchette.mp3",
+    "length": 183,
+    "series": "Gerry & Barbara Touchette",
+    "title": "O Come All Ye Faithful also Deck the Halls and God Rest Ye Merry Gentlemen",
+    "date": "1951",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful-also-deck-the-halls-and-god-rest-ye-merry-gentlemen_gerry-_gbia0007686"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-the-midnite-clear_pat-oconnor-michael-king_gbia0533454a/IT%20CAME%20UPON%20THE%20MIDNITE%20CLEAR%20-%20PAT%20O%27CONNOR.mp3",
+    "length": 77.05,
+    "series": "Pat O'Connor",
+    "title": "It Came Upon The Midnite Clear",
+    "item": "https://archive.org/details/78_it-came-upon-the-midnite-clear_pat-oconnor-michael-king_gbia0533454a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_ray-bloch-bobby-doyle_gbia0559317b/SILENT%20NIGHT%20-%20RAY%20BLOCH%20-%20BOBBY%20DOYLE.mp3",
+    "length": 196.02,
+    "series": "Ray Bloch",
+    "title": "Silent Night",
+    "item": "https://archive.org/details/78_silent-night_ray-bloch-bobby-doyle_gbia0559317b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
+    "length": 59.17,
+    "series": "A word from our sponsor",
+    "title": "Armour Hot Dogs",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dick-edwards-johnny-marks-the-peter-pan-chorus-and-o_gbia0001238a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Dick%20Edwards.mp3",
+    "length": 181,
+    "series": "Dick Edwards",
+    "title": "Rudolph The Red Nosed Reindeer",
+    "date": "1952",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dick-edwards-johnny-marks-the-peter-pan-chorus-and-o_gbia0001238a"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing-it-came-upon-a-midnight-clear-shepherds-shake-off-you_gbia0375274b/Hark%20The%20Herald%20Angels%20Sing%3B%20It%20Came%20Upo%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 357.46,
+    "series": "Godfrey Malcolm",
+    "title": "Hark The Herald Angels Sing; It Came Upon a Midnight Clear; Shepherds Shake Off Your Drowsy Sleep",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing-it-came-upon-a-midnight-clear-shepherds-shake-off-you_gbia0375274b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_elmer-ihrke-and-skip-berg_gbia0285342a/JINGLE%20BELLS%20-%20Elmer%20Ihrke%20and%20Skip%20Berg.mp3",
+    "length": 162.79,
+    "series": "Elmer Ihrke and Skip Berg",
+    "title": "Jingle Bells",
+    "date": "1948",
+    "item": "https://archive.org/details/78_jingle-bells_elmer-ihrke-and-skip-berg_gbia0285342a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-christmas-song-merry-christmas-to-you_eddy-howard-and-his-orchestra-torme-wel_gbia0069097b/The%20Christmas%20Song%20%28Merry%20%20-%20Eddy%20Howard%20and%20His%20Orchestra.mp3",
+    "length": 157,
+    "series": "Eddy Howard and His Orchestra",
+    "title": "The Christmas Song (Merry Christmas To You)",
+    "date": "1947",
+    "item": "https://archive.org/details/78_the-christmas-song-merry-christmas-to-you_eddy-howard-and-his-orchestra-torme-wel_gbia0069097b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
+    "length": 49.1,
+    "series": "A word from our sponsor",
+    "title": "Goodyear Lifeguard Tires",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_1-joy-to-the-world-2-good-king-wenceslas-3-angels-we-have-heard-on-high_ray-bl_gbia8003366/01%20-%201.%20Here%20We%20Come%20A-Caroli%20-%20RAY%20BLOCH%20his%20Choir%20%26%20Orchestra.mp3",
+    "length": 199.49,
+    "series": "Ray Bloch His Choir & Orchestra",
+    "title": "Here We Come A-Caroling; 2. The First Noel; 3. God Rest Ye Merry Gentlemen",
+    "date": "1946",
+    "item": "https://archive.org/details/78_1-joy-to-the-world-2-good-king-wenceslas-3-angels-we-have-heard-on-high_ray-bl_gbia8003366"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-in-heaven_billy-ward-and-his-dominoes-billy-ward_gbia0063125b/Christmas%20In%20Heaven%20-%20Billy%20Ward%20And%20His%20Dominoes.mp3",
+    "length": 169,
+    "series": "Billy Ward And His Dominoes",
+    "title": "Christmas In Heaven",
+    "date": "1953",
+    "item": "https://archive.org/details/78_christmas-in-heaven_billy-ward-and-his-dominoes-billy-ward_gbia0063125b"
+   },
+   {
+    "src": "https://archive.org/download/78_ill-be-home-for-christmas_moose-jackson-moose-jackson-and-quartet-kent-gammon-ram_gbia0062688b/I%27ll%20Be%20Home%20for%20Christmas%20-%20Moose%20Jackson.mp3",
+    "length": 155,
+    "series": "Moose Jackson",
+    "title": "I'll Be Home for Christmas",
+    "date": "1951",
+    "item": "https://archive.org/details/78_ill-be-home-for-christmas_moose-jackson-moose-jackson-and-quartet-kent-gammon-ram_gbia0062688b"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_gbia0219431c/WHITE%20CHRISTMAS.mp3",
+    "length": 98.99,
+    "series": "Unknown artist",
+    "title": "White Christmas",
+    "item": "https://archive.org/details/78_white-christmas_gbia0219431c"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/QUAKER.MP3",
+    "length": 128.43,
+    "series": "A word from our sponsor",
+    "title": "Quaker",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_my-christmas-song-for-you_hoagy-carmichael-and-orchestra-martha-mears-tudor-william_gbia0203045a/MY%20CHRISTMAS%20SONG%20FOR%20YOU%20-%20HOAGY%20CARMICHAEL%20and%20ORCHESTRA.mp3",
+    "length": 184,
+    "series": "HOAGY CARMICHAEL and ORCHESTRA",
+    "title": "My Christmas Song for You",
+    "date": "1945",
+    "item": "https://archive.org/details/78_my-christmas-song-for-you_hoagy-carmichael-and-orchestra-martha-mears-tudor-william_gbia0203045a"
+   },
+   {
+    "src": "https://archive.org/download/78_god-rest-you-merry-gentlemen-joy-to-the-world_the-caroleers-vicky-kasen_gbia0533746b/GOD%20REST%20YOU%20MERRY%20GENTLEMEN%3B%20JOY%20TO%20THE%20W.mp3",
+    "length": 89.29,
+    "series": "The Caroleers",
+    "title": "God Rest You Merry Gentlemen; Joy To The World",
+    "item": "https://archive.org/details/78_god-rest-you-merry-gentlemen-joy-to-the-world_the-caroleers-vicky-kasen_gbia0533746b"
+   },
+   {
+    "src": "https://archive.org/download/78_juletret-2_mogens-lorentzen-ole-willumsen_gbia7005904b/Juletr%C3%A6et%20%282%29%20-%20Mogens%20Lorentzen%20-%20Ole%20Willumsen.mp3",
+    "length": 197.98,
+    "series": "Mogens Lorentzen",
+    "title": "Juletræet (2)",
+    "item": "https://archive.org/details/78_juletret-2_mogens-lorentzen-ole-willumsen_gbia7005904b"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_liberty-orchestra-with-singing-irving-berlin_gbia0019669b/White%20Christmas%20-%20Liberty%20Orchestra%20with%20Singing.mp3",
+    "length": 183,
+    "series": "Liberty Orchestra with Singing",
+    "title": "White Christmas",
+    "date": "1942",
+    "item": "https://archive.org/details/78_white-christmas_liberty-orchestra-with-singing-irving-berlin_gbia0019669b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
+    "length": 40.72,
+    "series": "A word from our sponsor",
+    "title": "Anacin",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_frosty-the-snowman-twas-the-night-before-christmas-god-rest-ye-merry-gentlemen_tops_gbia0547807a/Frosty%20The%20Snowman%3B%20%27Twas%20The%20Ni%20-%20Tops%20Orch.%20%26%20Choristers.mp3",
+    "length": 393.99,
+    "series": "Tops Orch. & Choristers",
+    "title": "Frosty The Snowman; 'Twas The Night Before Christmas; God Rest Ye Merry Gentlemen",
+    "item": "https://archive.org/details/78_frosty-the-snowman-twas-the-night-before-christmas-god-rest-ye-merry-gentlemen_tops_gbia0547807a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_glenn-davis-j-pierpont_gbia0378097a/JINGLE%20BELLS%20-%20GLENN%20DAVIS%20-%20J.%20Pierpont.mp3",
+    "length": 158.65,
+    "series": "Glenn Davis",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_glenn-davis-j-pierpont_gbia0378097a"
+   },
+   {
+    "src": "https://archive.org/download/78_santas-little-sleigh-bells_ruby-wright-ruby-wright-cole-navarre_gbia0484732b/SANTA%27S%20LITTLE%20SLEIGH%20BELLS%20-%20RUBY%20WRIGHT.mp3",
+    "length": 143,
+    "series": "Ruby Wright",
+    "title": "Santa's Little Sleigh Bells",
+    "date": "1953",
+    "item": "https://archive.org/details/78_santas-little-sleigh-bells_ruby-wright-ruby-wright-cole-navarre_gbia0484732b"
+   },
+   {
+    "src": "https://archive.org/download/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr/A3.%20We%20Need%20A%20Little%20Christmas.mp3",
+    "length": 155.9,
+    "series": "The U.S. Air Force Band and Singing Sergeants",
+    "title": "We Need a Little Christmas",
+    "date": "1967",
+    "item": "https://archive.org/details/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCampbellsSoup.mp3",
+    "length": 68.87,
+    "series": "A word from our sponsor",
+    "title": "Campbell's Soup",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas-winter-wonderland-silent-night_jeffrey-clay-and-the-caroliers-jef_gbia0030546a/White%20Christmas%3B%20Winter%20W%20-%20Jeffrey%20Clay%20and%20The%20Caroliers.mp3",
+    "length": 328.8,
+    "series": "Jeffrey Clay and The Caroliers",
+    "title": "White Christmas; Winter Wonderland; Silent Night",
+    "item": "https://archive.org/details/78_white-christmas-winter-wonderland-silent-night_jeffrey-clay-and-the-caroliers-jef_gbia0030546a"
+   },
+   {
+    "src": "https://archive.org/download/78_slovenski-bozicni-vecer-christmas-eve-in-slovenia-sveta-noc-holy-night/1695-1.mp3",
+    "length": 247,
+    "series": "Anonymous",
+    "title": "Slovenski božični večer (Christmas Eve in Slovenia) – Sveta noč (Holy Night)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_slovenski-bozicni-vecer-christmas-eve-in-slovenia-sveta-noc-holy-night"
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_buttons-brown-enoch-light-and-his-orchestra-tommi_gbia0131293a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20%22Buttons%22%20Brown.mp3",
+    "length": 140.47,
+    "series": "\"Buttons\" Brown",
+    "title": "I Saw Mommy Kissing Santa Claus",
+    "date": "1955",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_buttons-brown-enoch-light-and-his-orchestra-tommi_gbia0131293a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_the-peter-pan-players-peter-pan-orchestra-and-chorus_gbia0335942a/RUDOLPH%20THE%20RED-NOSED%20REINDEER%20-%20the%20Peter%20Pan%20Players.mp3",
+    "length": 125.62,
+    "series": "The Peter Pan Players",
+    "title": "Rudolph The Red-Nosed Reindeer",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_the-peter-pan-players-peter-pan-orchestra-and-chorus_gbia0335942a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
+    "length": 36.39,
+    "series": "A word from our sponsor",
+    "title": "Lux Toilet Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_julenissen_elith-foss-sid-merrimans-orkester-n-c-petersen-viggo-sanne_gbia7008454b/Julenissen%20-%20Elith%20Foss%20-%20Sid%20Merrimans%20orkester.mp3",
+    "length": 169.38,
+    "series": "Elith Foss",
+    "title": "Julenissen",
+    "item": "https://archive.org/details/78_julenissen_elith-foss-sid-merrimans-orkester-n-c-petersen-viggo-sanne_gbia7008454b"
+   },
+   {
+    "src": "https://archive.org/download/78_nr-vi-holder-julefest-christmas-in-killarney_hedvig-volmer-cavanaugh-weldon-eri_gbia7015625b/N%C3%85R%20VI%20HOLDER%20JULEFEST%20%28Christmas%20in%20Killa%20-%20HEDVIG%20VOLMER.mp3",
+    "length": 189.51,
+    "series": "Hedvig Volmer",
+    "title": "NÅR VI HOLDER JULEFEST (Christmas in Killarney)",
+    "date": "1951",
+    "item": "https://archive.org/details/78_nr-vi-holder-julefest-christmas-in-killarney_hedvig-volmer-cavanaugh-weldon-eri_gbia7015625b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-sleigh-ride_lloyd-glenn-lloyd-glenns-combo_gbia0060585b/Christmas%20Sleigh%20Ride%20-%20Lloyd%20Glenn%20-%20Lloyd%20Glenn%27s%20Combo.mp3",
+    "length": 173,
+    "series": "Lloyd Glenn",
+    "title": "Christmas Sleigh Ride",
+    "date": "1947",
+    "item": "https://archive.org/details/78_christmas-sleigh-ride_lloyd-glenn-lloyd-glenns-combo_gbia0060585b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town-poppy-the-puppy_coots-gillespie-tommy-johnston_gbia0035050a/Santa%20Claus%20Is%20Coming%20to%20Town%3B%20Poppy%20the%20Puppy%20-%20Coots.mp3",
+    "length": 301,
+    "series": "Coots",
+    "title": "Santa Claus Is Coming to Town; Poppy the Puppy",
+    "date": "1956",
+    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town-poppy-the-puppy_coots-gillespie-tommy-johnston_gbia0035050a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
+    "length": 36.39,
+    "series": "A word from our sponsor",
+    "title": "Lux Toilet Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_ill-be-home-for-christmas_sid-peltyn-and-his-orchestra-gannon-kent-ram_gbia0162525a/I%27LL%20BE%20HOME%20FOR%20CHRISTMAS%20-%20Sid%20Peltyn%20and%20his%20Orchestra.mp3",
+    "length": 181,
+    "series": "Sid Peltyn and his Orchestra",
+    "title": "I'll Be Home for Christmas",
+    "date": "1943",
+    "item": "https://archive.org/details/78_ill-be-home-for-christmas_sid-peltyn-and-his-orchestra-gannon-kent-ram_gbia0162525a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_elizabeth_gbia0520020a/Silent%20Night%20-%20Elizabeth.mp3",
+    "length": 90.58,
+    "series": "Elizabeth",
+    "title": "Silent Night",
+    "date": "December 16, 1941",
+    "item": "https://archive.org/details/78_silent-night_elizabeth_gbia0520020a"
+   },
+   {
+    "src": "https://archive.org/download/78_jolly-old-st-nicholas_gbia0533595b/JOLLY%20OLD%20ST.%20NICHOLAS.mp3",
+    "length": 82.71,
+    "series": "Unknown artist",
+    "title": "Jolly Old St. Nicholas",
+    "item": "https://archive.org/details/78_jolly-old-st-nicholas_gbia0533595b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bell-boogie_freddie-mitchell-orchestra-rip-harrigan_gbia0454220a/JINGLE%20BELL%20BOOGIE%20-%20FREDDIE%20MITCHELL%20ORCHESTRA.mp3",
+    "length": 185.38,
+    "series": "Freddie Mitchell Orchestra",
+    "title": "Jingle Bell Boogie",
+    "date": "1949",
+    "item": "https://archive.org/details/78_jingle-bell-boogie_freddie-mitchell-orchestra-rip-harrigan_gbia0454220a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
+    "length": 45.43,
+    "series": "A word from our sponsor",
+    "title": "Signal Gasoline",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_sorrento-santa-lucia-o-sole-mio-bicycle-built-for-two-the-bowery-the-sidewalks_gbia0004949a/Sorrento%3B%20Santa%20Lucia%3B%20O%20Sole%20Mio%3B%20Bicy%20-%20Knuckles%20O%27Toole.mp3",
+    "length": 349.18,
+    "series": "Knuckles O'Toole",
+    "title": "Sorrento; Santa Lucia; O Sole Mio; Bicycle Built For Two; The Bowery; The Sidewalks of New York",
+    "item": "https://archive.org/details/78_sorrento-santa-lucia-o-sole-mio-bicycle-built-for-two-the-bowery-the-sidewalks_gbia0004949a"
+   },
+   {
+    "src": "https://archive.org/download/78_co-to-z-namena-nesem-nam-noviny_gbia0018213b/Co-To-Z%20Namena%20Nesem-Nam%20Noviny.mp3",
+    "length": 148.48,
+    "series": "Unknown artist",
+    "title": "Co-To-Z Namena Nesem-Nam Noviny",
+    "item": "https://archive.org/details/78_co-to-z-namena-nesem-nam-noviny_gbia0018213b"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_godfrey-malcolm-fredrico_gbia0219429b/HARK%20THE%20HERALD%20ANGELS%20SING%20-%20Godfrey%20Malcolm.mp3",
+    "length": 126.89,
+    "series": "Godfrey Malcolm",
+    "title": "Hark The Herald Angels Sing",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_godfrey-malcolm-fredrico_gbia0219429b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-adeste-fideles_the-caroleers-vicky-kasen_gbia0331967b/JINGLE%20BELLS%3B%20ADESTE%20FIDELES%20-%20THE%20CAROLEERS.mp3",
+    "length": 205.31,
+    "series": "The Caroleers",
+    "title": "Jingle Bells; Adeste Fideles",
+    "date": "1952",
+    "item": "https://archive.org/details/78_jingle-bells-adeste-fideles_the-caroleers-vicky-kasen_gbia0331967b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
+    "length": 49.71,
+    "series": "A word from our sponsor",
+    "title": "Creamo Cigars",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_im-dreaming-of-a-white-christmas_robert-rheims_gbia0006787a/Im%20Dreaming%20Of%20A%20White%20Christmas%20-%20Robert%20Rheims-restored.mp3",
+    "length": 167.69,
+    "series": "Robert Rheims",
+    "title": "I'm Dreaming Of A White Christmas",
+    "item": "https://archive.org/details/78_im-dreaming-of-a-white-christmas_robert-rheims_gbia0006787a"
+   },
+   {
+    "src": "https://archive.org/download/78_en-sommarkvll-i-santa-cruz_ulla-sallert-sven-arefeldts-orkester-payan-hartley-gst_gbia0307495a/En%20sommarkv%C3%A4ll%20i%20Santa%20Cruz%20-%20Ulla%20Sallert.mp3",
+    "length": 230.83,
+    "series": "Ulla Sallert",
+    "title": "En sommarkväll i Santa Cruz",
+    "date": "1948",
+    "item": "https://archive.org/details/78_en-sommarkvll-i-santa-cruz_ulla-sallert-sven-arefeldts-orkester-payan-hartley-gst_gbia0307495a"
+   },
+   {
+    "src": "https://archive.org/download/78_im-dreaming-of-a-white-christmas_berlin-robert-rheims_gbia8000913c/I%27m%20Dreaming%20Of%20A%20White%20Christmas%20-%20BERLIN.mp3",
+    "length": 170.33,
+    "series": "Berlin",
+    "title": "I'm Dreaming Of A White Christmas",
+    "item": "https://archive.org/details/78_im-dreaming-of-a-white-christmas_berlin-robert-rheims_gbia8000913c"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel-it-came-upon-the-midnight-clear_the-caroleers-peter-pan-orchestra_gbia0533751b/THE%20FIRST%20NOEL%3B%20IT%20CAME%20UPON%20THE%20MIDNIGHT.mp3",
+    "length": 130.74,
+    "series": "The Caroleers",
+    "title": "The First Noel; It Came Upon The Midnight Clear",
+    "item": "https://archive.org/details/78_the-first-noel-it-came-upon-the-midnight-clear_the-caroleers-peter-pan-orchestra_gbia0533751b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDoublemintGum.mp3",
+    "length": 17.98,
+    "series": "A word from our sponsor",
+    "title": "Doublemint Gum",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
@@ -69611,234 +65428,261 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_18-christmas-carols_the-metropolitan-caroleers-james-polack_gbia0011232a"
    },
    {
-    "src": "https://archive.org/download/78_christmas-chopsticks-twas-the-night-before-christmas_fred-heider-bobby-burns-pet_gbia0000281b/Christmas%20Chopsticks%20%28%27Twas%20The%20Night%20Before%20Christmas%29%20-%20Fred%20Heider.mp3",
-    "length": 166,
-    "series": "Fred Heider",
-    "title": "Christmas Chopsticks ('Twas The Night Before Christmas)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_christmas-chopsticks-twas-the-night-before-christmas_fred-heider-bobby-burns-pet_gbia0000281b"
+    "src": "https://archive.org/download/78_when-christmas-comes-to-our-house-open-up-your-heart-over-the-rainbow_dottie-evan_gbia0470062a/WHEN%20CHRISTMAS%20COMES%20TO%20OUR%20HOUSE%3B%20OPEN%20UP%20%20-%20Dottie%20Evans.mp3",
+    "length": 389.83,
+    "series": "Dottie Evans",
+    "title": "When Christmas Comes To Our House; Open Up Your Heart; Over The Rainbow",
+    "item": "https://archive.org/details/78_when-christmas-comes-to-our-house-open-up-your-heart-over-the-rainbow_dottie-evan_gbia0470062a"
    },
    {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/17%20-%20Medley-%20Winter%20Wonderland-Jingle%20Bells%20-%20Peter%20Nero.mp3",
-    "length": 236.85,
-    "series": "Peter Nero",
-    "title": "Medley: Winter Wonderland/Jingle Bells",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
+    "src": "https://archive.org/download/78_bartek-po-koldzie_bartek-i-kasia_gbia0530364b/BARTEK%20PO%20KOL%C4%98DZIE%20-%20BARTEK%20I%20KASIA.mp3",
+    "length": 177.04,
+    "series": "Bartek I Kasia",
+    "title": "Bartek Po Kolędzie",
+    "item": "https://archive.org/details/78_bartek-po-koldzie_bartek-i-kasia_gbia0530364b"
    },
    {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/07%20The%20Christmas%20Waltz.mp3",
-    "length": 164,
-    "series": "Nancy Wilson",
-    "title": "The Christmas Waltz",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/MAXWELLHOUSECOFFEE.mp3",
-    "length": 79.13,
-    "series": "A word from our sponsor",
-    "title": "Maxwell House Coffee",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_carol---noel-silent-night_stamford-high-school-a-cappella-choir-gruber-wilhousky-w_gbia0001195b/Carol%20-%20Noel%3B%20Silent%20Night%20-%20Stamford%20High%20School%20A%20Cappella%20Choir.mp3",
-    "length": 184,
-    "series": "Stamford High School A Cappella Choir",
-    "title": "Carol - Noel; Silent Night",
-    "date": "1950",
-    "item": "https://archive.org/details/78_carol---noel-silent-night_stamford-high-school-a-cappella-choir-gruber-wilhousky-w_gbia0001195b"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-medley_herb-kern-lloyd-sloop-warren-arey_gbia0056766b/Christmas%20Medley%20-%20Herb%20Kern%20-%20Lloyd%20Sloop.mp3",
-    "length": 185,
-    "series": "Herb Kern",
-    "title": "Christmas Medley",
+    "src": "https://archive.org/download/78_white-christmas_ralph-pedi-irving-berlin_gbia0114446a/White%20Christmas%20-%20Ralph%20Pedi%20-%20Irving%20Berlin.mp3",
+    "length": 173,
+    "series": "Ralph Pedi",
+    "title": "White Christmas",
     "date": "1947",
-    "item": "https://archive.org/details/78_christmas-medley_herb-kern-lloyd-sloop-warren-arey_gbia0056766b"
+    "item": "https://archive.org/details/78_white-christmas_ralph-pedi-irving-berlin_gbia0114446a"
    },
    {
-    "src": "https://archive.org/download/the-ray-conniff-singers-christmas-with-conniff-side-1-columbia-cs-8185-stereo-d-/The%20Ray%20Conniff%20Singers%20-%20Christmas%20With%20Conniff%20-%20side%201%20-%20Columbia%20CS%208185%20stereo%20%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 922,
-    "series": "The Ray Conniff Singers",
-    "title": "Christmas With Conniff (Side 1)",
-    "date": "1959",
-    "item": "https://archive.org/details/the-ray-conniff-singers-christmas-with-conniff-side-1-columbia-cs-8185-stereo-d-"
-   },
-   {
-    "src": "https://archive.org/download/78_good-king-wenceslas-tannenbaum-deck-the-hall_varsity-caroleers_gbia0366722b/GOOD%20KING%20WENCESLAS%20%3B%20TANNENBAUM%20%3B%20DEC%20-%20VARSITY%20CAROLEERS.mp3",
-    "length": 201.77,
-    "series": "Varsity Caroleers",
-    "title": "Good King Wenceslas ; Tannenbaum ; Deck the Hall",
-    "date": "1950",
-    "item": "https://archive.org/details/78_good-king-wenceslas-tannenbaum-deck-the-hall_varsity-caroleers_gbia0366722b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/REYNOLDSALUMINUM.mp3",
-    "length": 36.23,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
+    "length": 40.72,
     "series": "A word from our sponsor",
-    "title": "Reynolds Aluminum",
-    "item": "https://archive.org/details/RadioCommercialsShows",
+    "title": "Anacin",
+    "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_its-christmas_herb-george-herb-george-alfredo-antonini-orchestra-kalmanoff-baer_gbia0485789a/IT%27S%20CHRISTMAS%20-%20HERB%20GEORGE%20-%20Herb%20George.mp3",
-    "length": 192,
-    "series": "Herb George",
-    "title": "It's Christmas",
+    "src": "https://archive.org/download/78_nr-vi-holder-julefest-christmas-in-killarney_hedvig-volmer-cavanaugh-weldon-eri_gbia7009898b/N%C3%85R%20VI%20HOLDER%20JULEFEST%20%28Christmas%20in%20Killa%20-%20HEDVIG%20VOLMER.mp3",
+    "length": 185.98,
+    "series": "Hedvig Volmer",
+    "title": "Når Vi Holder Julefest (Christmas in Killarney)",
     "date": "1951",
-    "item": "https://archive.org/details/78_its-christmas_herb-george-herb-george-alfredo-antonini-orchestra-kalmanoff-baer_gbia0485789a"
+    "item": "https://archive.org/details/78_nr-vi-holder-julefest-christmas-in-killarney_hedvig-volmer-cavanaugh-weldon-eri_gbia7009898b"
    },
    {
-    "src": "https://archive.org/download/the-little-drummer-boy-the-voices-of-christmas-side-1/The%20Little%20Drummer%20Boy%20The%20voices%20of%20Christmas%20%28Side%202%29.mp3",
-    "length": 793.05,
-    "series": "The Voices of Christmas",
-    "title": "The Little Drummer Boy (Side 2)",
-    "date": "1966",
-    "item": "https://archive.org/details/the-little-drummer-boy-the-voices-of-christmas-side-1"
+    "src": "https://archive.org/download/78_best-loved-christmas-music_ray-bloch_gbia0559317a/BEST%20LOVED%20CHRISTMAS%20MUSIC%20-%20RAY%20BLOCH.mp3",
+    "length": 185,
+    "series": "Ray Bloch",
+    "title": "Best Loved Christmas Music",
+    "item": "https://archive.org/details/78_best-loved-christmas-music_ray-bloch_gbia0559317a"
    },
    {
-    "src": "https://archive.org/download/hannabarberaxmas/10%20What%20Child%20Is%20This_.mp3",
-    "length": 121.87,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "What Child Is This?",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
+    "src": "https://archive.org/download/78_christmas-service-part-1_st-mary-le-bow-choir-walford-davies_gbia0537897a/CHRISTMAS%20SERVICE%20-%20PART%201%20-%20ST.%20MARY-LE-BOW%20CHOIR.mp3",
+    "length": 218.76,
+    "series": "St. Mary-Le-Bow Choir",
+    "title": "Christmas Service - Part 1",
+    "item": "https://archive.org/details/78_christmas-service-part-1_st-mary-le-bow-choir-walford-davies_gbia0537897a"
    },
    {
-    "src": "https://archive.org/download/kate-smith-the-kate-smith-christmas-album/I%20Heard%20The%20Bells%20On%20Christmas%20Day.mp3",
-    "length": 165.7,
-    "series": "Kate Smith",
-    "title": "I Heard The Bells On Christmas Day",
-    "date": "1966",
-    "item": "https://archive.org/details/kate-smith-the-kate-smith-christmas-album"
+    "src": "https://archive.org/download/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia0192461b/BEST%20LOVED%20CHRISTMAS%20MUSIC%20-%20RAY%20BLOCH%20his%20Choir%20%26%20Orchestra.mp3",
+    "length": 202.38,
+    "series": "RAY BLOCH his Choir & Orchestra",
+    "title": "Best Loved Christmas Music",
+    "date": "1946",
+    "item": "https://archive.org/details/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia0192461b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWingCigarettes.mp3",
-    "length": 32.99,
+    "src": "https://archive.org/download/RadioCommercialsShows/MAYFIELDCIGARETTES.mp3",
+    "length": 43.02,
     "series": "A word from our sponsor",
-    "title": "Wing Cigarettes",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_santa-send-someone-to-me_galli-sisters-galli-sisters-tishman-isaac-radd-greene_gbia0466457b/SANTA%20SEND%20SOMEONE%20TO%20ME%20-%20GALLI%20SISTERS.mp3",
-    "length": 186.06,
-    "series": "Galli Sisters",
-    "title": "Santa Send Someone To Me",
-    "date": "September 25, 1950",
-    "item": "https://archive.org/details/78_santa-send-someone-to-me_galli-sisters-galli-sisters-tishman-isaac-radd-greene_gbia0466457b"
-   },
-   {
-    "src": "https://archive.org/download/78_la-piata-la-peen-yah-tah_the-starlighters-lloyd-shaffer-orchestra-cranston-blal_gbia0364388a/LA%20PI%C3%91ATA%20%28La%20Peen-Yah%27-Tah%29%20-%20THE%20STARLIGHTERS.mp3",
-    "length": 164.71,
-    "series": "The Starlighters",
-    "title": "LA PIÑATA (La Peen-Yah'-Tah)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_la-piata-la-peen-yah-tah_the-starlighters-lloyd-shaffer-orchestra-cranston-blal_gbia0364388a"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/13%20I%20Remember%20Christmas.mp3",
-    "length": 117.79,
-    "series": "The Drifters",
-    "title": "I Remember Christmas",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/07-white-christmas/08%20COUNT%20YOUR%20BLESSINGS.mp3",
-    "length": 166.27,
-    "series": "Bing Crosby, Rosemary Clooney",
-    "title": "Count Your Blessings",
-    "date": "1954",
-    "item": "https://archive.org/details/07-white-christmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/INTERNATIONALSTERLING.mp3",
-    "length": 95.28,
-    "series": "A word from our sponsor",
-    "title": "International Sterling",
+    "title": "Mayfield Cigarettes",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/06%20O%20Little%20Town%20Of%20Bethlehem.mp3",
-    "length": 134.09,
-    "series": "Chuck Wagon Gang",
-    "title": "O Little Town Of Bethlehem",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Let%20it%20snow%21%20let%20it%20snow%21%20let%20it%20snow.mp3",
-    "length": 155,
-    "series": "Frank Sinatra",
-    "title": "Let it snow! let it snow! let it snow",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/B4.%20The%20Christmas%20Song-Let%20It%20Snow%2C%20Let%20It%20Snow%2C%20Let%20It%20Snow.mp3",
-    "length": 200.33,
-    "series": "Jerry Fielding",
-    "title": "The Christmas Song-Let It Snow, Let It Snow, Let It Snow",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/78_happy-birthday-gentle-saviour_redd-harper-dale-evans-rogers_gbia3011671b/HAPPY%20BIRTHDAY%2C%20GENTLE%20SAVIOUR%20-%20REDD%20HARPER.mp3",
+    "src": "https://archive.org/download/78_white-christmas_liberty-orchestra-irving-berlin_gbia0118458a/White%20Christmas%20-%20Liberty%20Orchestra%20-%20Irving%20Berlin.mp3",
     "length": 184,
-    "series": "Redd Harper",
-    "title": "Happy Birthday, Gentle Saviour",
-    "item": "https://archive.org/details/78_happy-birthday-gentle-saviour_redd-harper-dale-evans-rogers_gbia3011671b"
+    "series": "Liberty Orchestra",
+    "title": "White Christmas",
+    "date": "1944",
+    "item": "https://archive.org/details/78_white-christmas_liberty-orchestra-irving-berlin_gbia0118458a"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/DUPONT.MP3",
-    "length": 127.33,
+    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town_phil-reed-gillespie-coots_gbia0449670b/SANTA%20CLAUS%20IS%20COMING%20TO%20TOWN%20-%20PHIL%20REED.mp3",
+    "length": 183.34,
+    "series": "Phil Reed",
+    "title": "Santa Claus is Coming to Town",
+    "date": "1947",
+    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town_phil-reed-gillespie-coots_gbia0449670b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_charles-r-cronham_gbia0187401d/O%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 74.66,
+    "series": "Charles R. Cronham",
+    "title": "O Little Town Of Bethlehem",
+    "date": "1960",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_charles-r-cronham_gbia0187401d"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-day_eddie-gould-orch-will-sullivan_gbia0284374a/CHRISTMAS%20DAY%20-%20Eddie%20Gould%20%26%20Orch.%20-%20Will%20Sullivan.mp3",
+    "length": 178.82,
+    "series": "Eddie Gould & Orch.",
+    "title": "Christmas Day",
+    "date": "1952",
+    "item": "https://archive.org/details/78_christmas-day_eddie-gould-orch-will-sullivan_gbia0284374a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceKrispies.mp3",
+    "length": 58.26,
     "series": "A word from our sponsor",
-    "title": "Dupont",
+    "title": "Rice Krispies",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fideles_the-caroleers-vicky-kasen_gbia0533741b/ADESTE%20FIDELES%20-%20THE%20CAROLEERS%20-%20Vicky%20Kasen.mp3",
+    "length": 119.9,
+    "series": "The Caroleers",
+    "title": "Adeste Fideles",
+    "item": "https://archive.org/details/78_adeste-fideles_the-caroleers-vicky-kasen_gbia0533741b"
+   },
+   {
+    "src": "https://archive.org/download/78_away-in-a-manger_gbia0185582a/AWAY%20IN%20A%20MANGER.mp3",
+    "length": 185.02,
+    "series": "Unknown artist",
+    "title": "Away In A Manger",
+    "item": "https://archive.org/details/78_away-in-a-manger_gbia0185582a"
+   },
+   {
+    "src": "https://archive.org/download/78_joy-to-the-world-it-came-upon-a-midnight-clear-hark-the-herald-angels-sing_the-va_gbia0480632b/JOY%20TO%20THE%20WORLD%3B%20IT%20CAME%20UPON%20A%20M%20-%20The%20VARISTY%20CAROLEERS.mp3",
+    "length": 201,
+    "series": "The VARISTY CAROLEERS",
+    "title": "Joy to the World; It Came Upon a Midnight Clear; Hark the Herald Angels Sing",
+    "date": "1948",
+    "item": "https://archive.org/details/78_joy-to-the-world-it-came-upon-a-midnight-clear-hark-the-herald-angels-sing_the-va_gbia0480632b"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_harold-parr-horace-heidt-and-his-musical-knights-irving-berlin_gbia0271310b/WHITE%20CHRISTMAS%20-%20HAROLD%20PARR%20-%20HORACE%20HEIDT%20and%20His%20Musical%20Knights.mp3",
+    "length": 192.89,
+    "series": "Harold Parr",
+    "title": "White Christmas",
+    "date": "1949",
+    "item": "https://archive.org/details/78_white-christmas_harold-parr-horace-heidt-and-his-musical-knights-irving-berlin_gbia0271310b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POSTUM.MP3",
+    "length": 120.78,
+    "series": "A word from our sponsor",
+    "title": "Postum",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/10252-a-fathers-christmas-decision-blaine-smith/10252%20A%20Father%27s%20Christmas%20Decision%20Blaine%20Smith.mp3",
-    "length": 159.74,
-    "series": "Marty Roberts",
-    "title": "A Father's Christmas Decision",
-    "date": "1950",
-    "item": "https://archive.org/details/10252-a-fathers-christmas-decision-blaine-smith"
-   },
-   {
-    "src": "https://archive.org/download/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas-god-rest-ye-merry-gentleme_gbia0001238b/Deck%20The%20Halls%20With%20Boughs%20of%20Holly%3B%20Good%20King%20Wencelas%3B%20God%20Rest%20Ye%20Merry%20Gentlemen%3B%20Joy%20to%20The%20World%20-%20The%20Caroleers.mp3",
-    "length": 171.35,
-    "series": "The Caroleers",
-    "title": "Deck The Halls With Boughs of Holly; Good King Wencelas; God Rest Ye Merry Gentlemen; Joy to The World",
-    "date": "1952",
-    "item": "https://archive.org/details/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas-god-rest-ye-merry-gentleme_gbia0001238b"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/Jingle%20Bells.mp3",
+    "src": "https://archive.org/download/78_its-christmas-every-day-when-youre-in-love_bob-houston-johnny-smith-bobby-hacke_gbia0285747a/IT%27S%20CHRISTMAS%20EVERY%20DAY%20%28When%20You%27re%20in%20Lov%20-%20BOB%20HOUSTON.mp3",
     "length": 172.78,
-    "series": "Ethel Smith",
-    "title": "Jingle Bells",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
+    "series": "Bob Houston",
+    "title": "IT'S CHRISTMAS EVERY DAY (When You're in Love)",
+    "date": "1952",
+    "item": "https://archive.org/details/78_its-christmas-every-day-when-youre-in-love_bob-houston-johnny-smith-bobby-hacke_gbia0285747a"
    },
    {
-    "src": "https://archive.org/download/01WhenChristmasComesAroundEachYear/01%20When%20Christmas%20Comes%20Around%20Each%20Year.mp3",
-    "length": 98.51,
-    "series": "Paul Parnes",
-    "title": "When Christmas Comes Around Each Year",
-    "date": "1961",
-    "item": "https://archive.org/details/01WhenChristmasComesAroundEachYear"
+    "src": "https://archive.org/download/78_the-twelve-days-of-christmas_the-cricketone-childrens-chorus_gbia0533824b/THE%20TWELVE%20DAYS%20OF%20CHRISTMAS%20-%20The%20Cricketone%20Children%27s%20Chorus.mp3",
+    "length": 198.61,
+    "series": "The Cricketone Children's Chorus",
+    "title": "The Twelve Days Of Christmas",
+    "item": "https://archive.org/details/78_the-twelve-days-of-christmas_the-cricketone-childrens-chorus_gbia0533824b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWildRootCreamOil.mp3",
-    "length": 42.5,
+    "src": "https://archive.org/download/78_the-first-nol_mario-lanza-jeff-alexander-choir-ray-sinatra_gbia7034733b/THE%20FIRST%20NO%C3%8BL%20-%20MARIO%20LANZA%20-%20Jeff%20Alexander%20Choir.mp3",
+    "length": 195,
+    "series": "Mario Lanza",
+    "title": "The First Noël",
+    "date": "1951",
+    "item": "https://archive.org/details/78_the-first-nol_mario-lanza-jeff-alexander-choir-ray-sinatra_gbia7034733b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-christmas-sound_the-tinkertones-warren-vincent_gbia0532929b/THE%20CHRISTMAS%20SOUND%20-%20THE%20TINKERTONES%20-%20Warren%20Vincent.mp3",
+    "length": 172.67,
+    "series": "The Tinkertones",
+    "title": "The Christmas Sound",
+    "item": "https://archive.org/details/78_the-christmas-sound_the-tinkertones-warren-vincent_gbia0532929b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
+    "length": 52.84,
     "series": "A word from our sponsor",
-    "title": "Wildroot Cream-Oil",
-    "item": "https://archive.org/details/VintageRadioCommercials",
+    "title": "Popsicle",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christine-the-christmas-tree_reggie-kay-bernie-wyte-and-his-silver-bells-orch-pint_gbia0444383b/CHRISTINE%20THE%20CHRISTMAS%20TREE%20-%20REGGIE%20KAY.mp3",
+    "length": 183.55,
+    "series": "Reggie Kay",
+    "title": "Christine the Christmas Tree",
+    "date": "1952",
+    "item": "https://archive.org/details/78_christine-the-christmas-tree_reggie-kay-bernie-wyte-and-his-silver-bells-orch-pint_gbia0444383b"
+   },
+   {
+    "src": "https://archive.org/download/78_7525-Santa-Lucia/7525-Santa-Lucia.mp3",
+    "length": 188.16,
+    "series": "Cav. Salvatore Salvati",
+    "title": "Santa Lucia",
+    "item": "https://archive.org/details/78_7525-Santa-Lucia"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-is-a-feeling-in-your-heart_anita-ellis-the-balladeers-joe-darion-george-k_gbia0387339a/CHRISTMAS%20IS%20A%20FEELING%20IN%20YOUR%20HEART%20-%20ANITA%20ELLIS.mp3",
+    "length": 169.68,
+    "series": "Anita Ellis",
+    "title": "Christmas Is A Feeling In Your Heart",
+    "item": "https://archive.org/details/78_christmas-is-a-feeling-in-your-heart_anita-ellis-the-balladeers-joe-darion-george-k_gbia0387339a"
+   },
+   {
+    "src": "https://archive.org/download/78_dear-santa-bring-back-my-daddy-to-me_irene-treadwell-and-the-phil-ellis-choir-gle_gbia0463902a/DEAR%20SANTA%2C%20BRI%20-%20IRENE%20TREADWELL%20And%20The%20PHIL%20ELLIS%20CHOIR.mp3",
+    "length": 159.86,
+    "series": "IRENE TREADWELL And The PHIL ELLIS CHOIR",
+    "title": "Dear Santa, Bring Back My Daddy to Me!",
+    "date": "1953",
+    "item": "https://archive.org/details/78_dear-santa-bring-back-my-daddy-to-me_irene-treadwell-and-the-phil-ellis-choir-gle_gbia0463902a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
+    "length": 49.1,
+    "series": "A word from our sponsor",
+    "title": "Goodyear Lifeguard Tires",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fideles-o-come-all-ye-faithful_robert-rheims_gbia0546448a/Adeste%20Fideles%3B%20O%20Come%20All%20Ye%20Faithful%20-%20ROBERT%20RHEIMS.mp3",
+    "length": 170.69,
+    "series": "Robert Rheims",
+    "title": "Adeste Fideles; O Come All Ye Faithful",
+    "item": "https://archive.org/details/78_adeste-fideles-o-come-all-ye-faithful_robert-rheims_gbia0546448a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-merry-merry-chiming-bells_vernon-dalhart_gbia0533770b/CHRISTMAS%20%28Merry%2C%20Merry%20Chiming%20Bells%29%20-%20Vernon%20Dalhart.mp3",
+    "length": 136.65,
+    "series": "Vernon Dalhart",
+    "title": "CHRISTMAS (Merry, Merry Chiming Bells)",
+    "item": "https://archive.org/details/78_christmas-merry-merry-chiming-bells_vernon-dalhart_gbia0533770b"
+   },
+   {
+    "src": "https://archive.org/download/78_while-shepherds-watched-their-flocks_kenny-martin-michael-king_gbia0533455b/While%20Shepherds%20Watched%20Their%20Flocks%20-%20KENNY%20MARTIN.mp3",
+    "length": 74.92,
+    "series": "Kenny Martin",
+    "title": "While Shepherds Watched Their Flocks",
+    "item": "https://archive.org/details/78_while-shepherds-watched-their-flocks_kenny-martin-michael-king_gbia0533455b"
+   },
+   {
+    "src": "https://archive.org/download/78_dzwo-dzwo-dzwo-jingle-bells_sta-jaworski-dana-orkiestra-n-nobis_gbia0332104a/DZWO%C5%83%2C%20DZWO%C5%83%2C%20DZWO%C5%83%20%28Jingle%20-%20STA%C5%9A%20JAWORSKI%20DANA%20ORKIESTRA.mp3",
+    "length": 185.69,
+    "series": "Staś Jaworski Dana Orkiestra",
+    "title": "DZWOŃ, DZWOŃ, DZWOŃ (Jingle Bells)",
+    "item": "https://archive.org/details/78_dzwo-dzwo-dzwo-jingle-bells_sta-jaworski-dana-orkiestra-n-nobis_gbia0332104a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROLSTONCEREAL.mp3",
+    "length": 35.84,
+    "series": "A word from our sponsor",
+    "title": "Ralston Cereal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
@@ -69850,266 +65694,66 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_rock-around-the-christmas-tree_big-bud-goodman-barouick-rose_gbia0266143a"
    },
    {
-    "src": "https://archive.org/download/0672-too-fat-to-be-santa-claus-d.-m.-lippincott-bill-darnel-and-the-smith-brothe/0672%20Too%20Fat%20to%20Be%20Santa%20Claus%20D.%20M.%20Lippincott%20Bill%20Darnel%20and%20The%20Smith%20Brothers%20with%20Sid%20Bass%20and%20His%20Orchestra.mp3",
-    "length": 140.62,
-    "series": "Bill Darnel and the Smith Brothers",
-    "title": "Too Fat to Be Santa Claus",
-    "date": "1954",
-    "item": "https://archive.org/details/0672-too-fat-to-be-santa-claus-d.-m.-lippincott-bill-darnel-and-the-smith-brothe"
+    "src": "https://archive.org/download/78_winter-wonderland_ken-griffin-d-smith-f-bernard_gbia0468317b/WINTER%20WONDERLAND%20-%20KEN%20GRIFFIN%20-%20D.%20Smith.mp3",
+    "length": 162.84,
+    "series": "Ken Griffin",
+    "title": "Winter Wonderland",
+    "item": "https://archive.org/details/78_winter-wonderland_ken-griffin-d-smith-f-bernard_gbia0468317b"
    },
    {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/02%20-%20The%20Man%20With%20All%20The%20Toys.mp3",
-    "length": 88.76,
-    "series": "The Beach Boys",
-    "title": "The Man With All The Toys",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
+    "src": "https://archive.org/download/78_hej-w-dzien-narodzenia---christmas-carol---koleda_ignacy-podgorski-i-jego-nadzwycz_gbia0002218b/Hej%21%20W%20Dzien%20Narodzenia%20-%20Christmas%20Carol%20-%20Koleda%20-%20Ignacy%20Podgorski%20i%20jego%20Nadzwyczajna%20Orkiestra.mp3",
+    "length": 180,
+    "series": "Ignacy Podgorski i jego Nadzwyczajna Orkiestra",
+    "title": "Hej! W Dzien Narodzenia - Christmas Carol - Koleda",
+    "date": "1947",
+    "item": "https://archive.org/details/78_hej-w-dzien-narodzenia---christmas-carol---koleda_ignacy-podgorski-i-jego-nadzwycz_gbia0002218b"
    },
    {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/O%20Holy%20Night.mp3",
-    "length": 179.3,
-    "series": "Liberace",
-    "title": "O Holy Night",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
+    "src": "https://archive.org/download/78_joy-to-the-world_gbia0249500b/JOY%20TO%20THE%20WORLD.mp3",
+    "length": 163.87,
+    "series": "Unknown artist",
+    "title": "Joy To The World",
+    "item": "https://archive.org/details/78_joy-to-the-world_gbia0249500b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsFatimaCigarettes.mp3",
-    "length": 126.66,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzer.mp3",
+    "length": 117.36,
     "series": "A word from our sponsor",
-    "title": "Fatima Cigarettes",
+    "title": "Alka Seltzer",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_jingle-bells_michael-hermans-folk-orchestra_gbia0337424a/JINGLE%20BELLS%20-%20Michael%20Herman%27s%20Folk%20Orchestra.mp3",
-    "length": 257.81,
-    "series": "Michael Herman's Folk Orchestra",
-    "title": "Jingle Bells",
-    "date": "1950",
-    "item": "https://archive.org/details/78_jingle-bells_michael-hermans-folk-orchestra_gbia0337424a"
+    "src": "https://archive.org/download/78_gdy-sie-chrystus-rodzi-when-christ-is-born_sta-jaworski-chr-i-orkiestra-w-dana_gbia0362799b/GDY%20SIE%20CHRYSTUS%20RODZI%20%28When%20Christ%20Is%20Bor%20-%20STA%C5%9A%20JAWORSKI.mp3",
+    "length": 197.9,
+    "series": "Staś Jaworski",
+    "title": "Gdy Sie Chrystus Rodzi (When Christ Is Born)",
+    "date": "1947",
+    "item": "https://archive.org/details/78_gdy-sie-chrystus-rodzi-when-christ-is-born_sta-jaworski-chr-i-orkiestra-w-dana_gbia0362799b"
    },
    {
-    "src": "https://archive.org/download/78_santa-lucia-luntana_alberto-amato-e-a-mario_gbia3042234a/SANTA%20LUCIA%20LUNTANA%20-%20ALBERTO%20AMATO%20-%20E.%20A.%20Mario.mp3",
-    "length": 220.36,
-    "series": "Alberto Amato",
-    "title": "Santa Lucia Luntana",
-    "date": "1949",
-    "item": "https://archive.org/details/78_santa-lucia-luntana_alberto-amato-e-a-mario_gbia3042234a"
-   },
-   {
-    "src": "https://archive.org/download/78_...title-songs_mark-warnow-and-his-hit-parade-orchestra_gbia0001208b/Title%20Songs%20-%20Mark%20Warnow%20and%20his%20Hit%20Parade%20Orchestra.mp3",
-    "length": 179,
-    "series": "Mark Warnow and his Hit Parade Orchestra",
-    "title": "Happy Little Songs",
-    "date": "1945",
-    "item": "https://archive.org/details/78_...title-songs_mark-warnow-and-his-hit-parade-orchestra_gbia0001208b"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/24%20-%20Ave%20Maria%20-%20Leontyne%20Price%20w-Choir%20of%20Men%20and%20Boys%20of%20St.%20Thomas%20Episcopal%20Chur.mp3",
-    "length": 292.39,
-    "series": "Leontyne Price w/Choir of Men and Boys of St. Thomas Episcopal Chur",
-    "title": "Ave Maria",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
-    "length": 45.43,
-    "series": "A word from our sponsor",
-    "title": "Signal Gasoline",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_song-spinners-irving-berlin_gbia0072514a/White%20Christmas%20-%20Song%20Spinners%20-%20Irving%20Berlin.mp3",
-    "length": 197,
-    "series": "Song Spinners",
-    "title": "White Christmas",
-    "date": "1942",
-    "item": "https://archive.org/details/78_white-christmas_song-spinners-irving-berlin_gbia0072514a"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/02.DeVirginMaryHadABabyBoy.mp3",
-    "length": 190.69,
-    "series": "Solo: Herbert Stubbs",
-    "title": "De Virgin Mary Had a Baby Boy",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/78_boogie-woogie-santa-claus_mabel-scott-leon-rene_gbia0109779b/Boogie%20Woogie%20Santa%20Claus%20-%20Mabel%20Scott%20-%20Leon%20Rene.mp3",
-    "length": 143,
-    "series": "Mabel Scott",
-    "title": "Boogie Woogie Santa Claus",
-    "item": "https://archive.org/details/78_boogie-woogie-santa-claus_mabel-scott-leon-rene_gbia0109779b"
-   },
-   {
-    "src": "https://archive.org/download/lp_at-christmas-time_teresa-brewer/disc1/02.01.%20My%20Christmas%20Rosary%3B%20The%20Imp%3B%20The%20Gingerbread%20House%3B%20Lost.%20A%20Little%20Puppy%3B%20Mary%20Make%20Believe%3B%20Because%20Him%20Is%20A%20Baby%3B%20Goodnight%20God.mp3",
-    "length": 1007.33,
-    "series": "Teresa Brewer",
-    "title": "At Christmas Time (Side 2)",
-    "date": "1957",
-    "item": "https://archive.org/details/lp_at-christmas-time_teresa-brewer"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BLUECOAL.MP3",
-    "length": 22.27,
-    "series": "A word from our sponsor",
-    "title": "Blue Coal",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/08%20-%20Joy%20to%20the%20World-It%20Came%20Upon%20a%20Midnight%20Clear%20-%20Robert%20Shaw%20Chorale.mp3",
-    "length": 172.02,
-    "series": "Robert Shaw Chorale",
-    "title": "Joy to the World/It Came Upon a Midnight Clear",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/05%20Faith%20of%20Our%20Fathers.mp3",
-    "length": 176,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "Faith of Our Fathers",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/78_introduction-and-variations-on-an-ancient-polish-noel_george-thalben-ball-guilmant_gbia0011409a/Introduction%20and%20Variations%20on%20an%20An%20-%20George%20Thalben-Ball.mp3",
-    "length": 204,
-    "series": "George Thalben-Ball",
-    "title": "Introduction and Variations on an Ancient Polish Noel",
+    "src": "https://archive.org/download/78_its-christmas_herb-george-herb-george-alfredo-antonini-orchestra-kalmanoff-baer_gbia0485789a/IT%27S%20CHRISTMAS%20-%20HERB%20GEORGE%20-%20Herb%20George.mp3",
+    "length": 192,
+    "series": "Herb George",
+    "title": "It's Christmas",
     "date": "1951",
-    "item": "https://archive.org/details/78_introduction-and-variations-on-an-ancient-polish-noel_george-thalben-ball-guilmant_gbia0011409a"
+    "item": "https://archive.org/details/78_its-christmas_herb-george-herb-george-alfredo-antonini-orchestra-kalmanoff-baer_gbia0485789a"
    },
    {
-    "src": "https://archive.org/download/78_hvid-jul-white-christmas_hedvig-volmer-irving-berlin-v-skaarup_gbia7009898a/HVID%20JUL%20%28White%20Christmas%29%20-%20HEDVIG%20VOLMER.mp3",
-    "length": 182.42,
-    "series": "Hedvig Volmer",
-    "title": "HVID JUL (White Christmas)",
+    "src": "https://archive.org/download/78_new-year-bells_jack-swanson-and-dotty-travis-sid-prosen_gbia0433064b/NEW%20YEAR%20BELLS%20-%20JACK%20SWANSON%20and%20DOTTY%20TRAVIS.mp3",
+    "length": 130.56,
+    "series": "Jack Swanson and Dotty Travis",
+    "title": "New Year Bells",
     "date": "1951",
-    "item": "https://archive.org/details/78_hvid-jul-white-christmas_hedvig-volmer-irving-berlin-v-skaarup_gbia7009898a"
+    "item": "https://archive.org/details/78_new-year-bells_jack-swanson-and-dotty-travis-sid-prosen_gbia0433064b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdmiral.mp3",
-    "length": 77.38,
-    "series": "A word from our sponsor",
-    "title": "Admiral",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas-the-first-noel_irving-berlin_gbia0035628a/White%20Christmas%3B%20The%20First%20Noel%20-%20Irving%20Berlin.mp3",
-    "length": 320,
-    "series": "Irving Berlin",
-    "title": "White Christmas; The First Noel",
-    "date": "1956",
-    "item": "https://archive.org/details/78_white-christmas-the-first-noel_irving-berlin_gbia0035628a"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/23%20-%20Medley-%20Hark%21%20The%20Herald%20Angels%20Sing-God%20Rest%20Ye%20Merry%2C%20Gentlemen-The%20First%20Noe.mp3",
-    "length": 211.77,
-    "series": "Various",
-    "title": "Medley: Hark! The Herald Angels Sing/God Rest Ye Merry, Gentlemen/The First Noe",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_frosty-the-snowman_bud-roman-and-the-toppers-hal-lomen-orchestra-nelson-rollins_gbia0048208a/Frosty%20the%20Snowman%20-%20Bud%20Roman%20and%20The%20Toppers.mp3",
-    "length": 162,
-    "series": "Bud Roman and The Toppers",
-    "title": "Frosty the Snowman",
-    "date": "1952",
-    "item": "https://archive.org/details/78_frosty-the-snowman_bud-roman-and-the-toppers-hal-lomen-orchestra-nelson-rollins_gbia0048208a"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-in-florida_john-a.-mcgee-hack-swain-and-his-music-lon-saxon-and-the-sun-m_gbia0000290a/Christmas%20in%20Florida%20-%20John%20A.%20McGee%20-%20Hack%20Swain%20and%20his%20Music.mp3",
-    "length": 156,
-    "series": "John A. McGee",
-    "title": "Christmas in Florida",
-    "date": "1952",
-    "item": "https://archive.org/details/78_christmas-in-florida_john-a.-mcgee-hack-swain-and-his-music-lon-saxon-and-the-sun-m_gbia0000290a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/STURDYDOGFOOD.mp3",
-    "length": 19.54,
-    "series": "A word from our sponsor",
-    "title": "Sturdy Dog Food",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_still-night-holy-night_john-mccormack-gerald-moore-douglas-gruber-woodgate_gbia0076973a/Still%20Night%2C%20Holy%20Night%20-%20John%20McCormack.mp3",
-    "length": 185,
-    "series": "John McCormack",
-    "title": "Still Night, Holy Night",
-    "date": "1940",
-    "item": "https://archive.org/details/78_still-night-holy-night_john-mccormack-gerald-moore-douglas-gruber-woodgate_gbia0076973a"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Blue%20Christmas.mp3",
-    "length": 172.22,
-    "series": "Chet Atkins",
-    "title": "Blue Christmas",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/07%20Alleluia.mp3",
-    "length": 62.62,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "Alleluia",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-in-your-heart_luis-russell-and-his-orchestra-lee-richardson-russell-kizer_gbia0475068a/CHRISTMAS%20IN%20YOUR%20HEART%20-%20LUIS%20RUSSELL%20AND%20HIS%20ORCHESTRA.mp3",
-    "length": 184.07,
-    "series": "Luis Russell And His Orchestra",
-    "title": "Christmas In Your Heart",
-    "date": "1946",
-    "item": "https://archive.org/details/78_christmas-in-your-heart_luis-russell-and-his-orchestra-lee-richardson-russell-kizer_gbia0475068a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/VIMMSVITAMINS.mp3",
-    "length": 21.64,
-    "series": "A word from our sponsor",
-    "title": "Vimms Vitamins",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/1-celebrity-quartette-col-db-2464/1%20Celebrity%20Quartette%20-%20Col%20DB%202464.mp3",
-    "length": 168.54,
-    "series": "Celebrity Quartette",
-    "title": "Celebrity Quartette - 2 Christmas Carols (Holst, Mendelssohn) Col DB 2464 1948",
-    "date": "1948",
-    "item": "https://archive.org/details/1-celebrity-quartette-col-db-2464"
-   },
-   {
-    "src": "https://archive.org/download/78_it-came-upon-the-midnight-clear-shepherds-christmas-song-i-saw-three-ships-asai_gbia0034356a/It%20Came%20Upon%20the%20Midnight%20Clear%3B%20Shep%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 198.95,
-    "series": "Charles R. Cronham",
-    "title": "It Came Upon the Midnight Clear; Shepherd's Christmas Song; I Saw Three Ships A'Sailing",
-    "date": "1960",
-    "item": "https://archive.org/details/78_it-came-upon-the-midnight-clear-shepherds-christmas-song-i-saw-three-ships-asai_gbia0034356a"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/21%20Deck%20The%20Halls%20With%20Boughs%20Of%20Holly.mp3",
-    "length": 69.36,
-    "series": "Norman Luboff Choir",
-    "title": "Deck The Halls With Boughs Of Holly",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_tom-glazer-sings-olden-ballads_tom-glazer_gbia8005793/01%20-%20TWELVE%20DAYS%20OF%20CHRISTMAS%20-%20TOM%20GLAZER.mp3",
-    "length": 173,
-    "series": "Tom Glazer",
-    "title": "Twelve Days Of Christmas",
-    "item": "https://archive.org/details/78_tom-glazer-sings-olden-ballads_tom-glazer_gbia8005793"
+    "src": "https://archive.org/download/78_all-around-the-xmas-tree_mark-warnow-dick-todd-hit-parade-orch-and-chorus-klein-st_gbia0044303a/All%20Around%20the%20Xmas%20Tree%20-%20Mark%20Warnow%20-%20Dick%20Todd.mp3",
+    "length": 186,
+    "series": "Mark Warnow",
+    "title": "All Around the Xmas Tree",
+    "date": "1945",
+    "item": "https://archive.org/details/78_all-around-the-xmas-tree_mark-warnow-dick-todd-hit-parade-orch-and-chorus-klein-st_gbia0044303a"
    },
    {
     "src": "https://archive.org/download/RadioCommercialsShows/VELVEETA.MP3",
@@ -70120,116 +65764,184 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/O%2C%20Come%20All%20Ye%20Faithful.mp3",
-    "length": 133.56,
-    "series": "Ethel Smith",
-    "title": "O, Come All Ye Faithful",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
+    "src": "https://archive.org/download/78_julestemning-ii-del_operasanger-ved-det-kgl-teater-otte-svendsen-medlemmer-af-ra_gbia7002968b/Julestemning%20II%20del%20-%20Operasanger%20ved%20%22Det%20kgl.%20Teater%22%20OTTE%20SVENDSEN.mp3",
+    "length": 257.22,
+    "series": "Operasanger ved \"Det kgl. Teater\" OTTE SVENDSEN",
+    "title": "Julestemning II del",
+    "item": "https://archive.org/details/78_julestemning-ii-del_operasanger-ved-det-kgl-teater-otte-svendsen-medlemmer-af-ra_gbia7002968b"
    },
    {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/O%20little%20town%20of%20bethlehem.mp3",
-    "length": 185,
-    "series": "Frank Sinatra",
-    "title": "O little town of bethlehem",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
+    "src": "https://archive.org/download/78_winter-wonderland_cosmo-teri-smith-bernard_gbia0059611b/Winter%20Wonderland%20-%20Cosmo%20Teri%20-%20Smith%20-%20Bernard.mp3",
+    "length": 179.14,
+    "series": "Cosmo Teri",
+    "title": "Winter Wonderland",
+    "item": "https://archive.org/details/78_winter-wonderland_cosmo-teri-smith-bernard_gbia0059611b"
    },
    {
-    "src": "https://archive.org/download/78_good-king-wenceslas-tannenbaum-deck-the-hall_sonora-choristers-eugene-mott_gbia0071973/01%20-%20Adeste%20Fideles%20%28O%20Come%2C%20All%20Ye%20Faithfu%20-%20Sonora%20Choristers.mp3",
-    "length": 188,
-    "series": "Sonora Choristers",
-    "title": "Adeste Fideles (O Come, All Ye Faithful)",
-    "date": "1945",
-    "item": "https://archive.org/details/78_good-king-wenceslas-tannenbaum-deck-the-hall_sonora-choristers-eugene-mott_gbia0071973"
+    "src": "https://archive.org/download/78_a-christmas-carol-1_mitch-miller-and-orchestra-mary-rodgers-beatly-charles-dickens_gbia0534546a/A%20CHRISTMAS%20CAROL%20%281%29%20-%20MITCH%20MILLER%20AND%20ORCHESTRA.mp3",
+    "length": 111.32,
+    "series": "Mitch Miller And Orchestra",
+    "title": "A Christmas Carol (1)",
+    "item": "https://archive.org/details/78_a-christmas-carol-1_mitch-miller-and-orchestra-mary-rodgers-beatly-charles-dickens_gbia0534546a"
    },
    {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/10%20God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
-    "length": 98.35,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "God Rest Ye Merry Gentlemen",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
+    "src": "https://archive.org/download/78_i-denne-sde-juletid_edith-oldrup-rich-sterfelt-c-balle-brorson_gbia7026147a/I%20denne%20s%C3%B8de%20juletid%20-%20Edith%20Oldrup%20-%20Rich.%20%C3%98sterfelt.mp3",
+    "length": 210.6,
+    "series": "Edith Oldrup",
+    "title": "I denne søde juletid",
+    "item": "https://archive.org/details/78_i-denne-sde-juletid_edith-oldrup-rich-sterfelt-c-balle-brorson_gbia7026147a"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/FITCH.MP3",
-    "length": 123.67,
+    "src": "https://archive.org/download/RadioCommercialsShows/GROVESNOSEDROPS.mp3",
+    "length": 70.71,
     "series": "A word from our sponsor",
-    "title": "Fitch Shampoo",
+    "title": "Grove's Nose Drops",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_jingle-bells_the-mulcays-and-their-electric-harmonicas-jimmy-and-mildred-mulcay-j_gbia0430143a/JINGLE%20BELLS%20-%20THE%20MULCAYS%20and%20their%20Electric%20Harmonicas.mp3",
-    "length": 110.06,
-    "series": "THE MULCAYS and their Electric Harmonicas",
-    "title": "Jingle Bells",
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_bud-roman-frankie-martin-orchestra-marks_gbia0438428a/RUDOLPH%20THE%20RED-NOSED%20REINDEER%20-%20BUD%20ROMAN.mp3",
+    "length": 202.98,
+    "series": "Bud Roman",
+    "title": "Rudolph The Red-Nosed Reindeer",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_bud-roman-frankie-martin-orchestra-marks_gbia0438428a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_bonnemere-and-his-piano-i-berlin_gbia0059939a/White%20Christmas%20-%20Bonnemere%20and%20His%20Piano.mp3",
+    "length": 158,
+    "series": "Bonnemere and His Piano",
+    "title": "White Christmas",
     "date": "1954",
-    "item": "https://archive.org/details/78_jingle-bells_the-mulcays-and-their-electric-harmonicas-jimmy-and-mildred-mulcay-j_gbia0430143a"
+    "item": "https://archive.org/details/78_white-christmas_bonnemere-and-his-piano-i-berlin_gbia0059939a"
    },
    {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/20%20O%20Come%20All%20Ye%20Faithful.mp3",
-    "length": 108.04,
-    "series": "Norman Luboff Choir",
-    "title": "O Come All Ye Faithful (Adeste Fideles)",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
+    "src": "https://archive.org/download/78_the-christmas-carol-part-1_bret-morrison-charles-dickens_gbia0366288a/THE%20CHRISTMAS%20CAROL%20%28Part%201%29%20-%20BRET%20MORRISON.mp3",
+    "length": 213.19,
+    "series": "Bret Morrison",
+    "title": "THE CHRISTMAS CAROL (Part 1)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_the-christmas-carol-part-1_bret-morrison-charles-dickens_gbia0366288a"
    },
    {
-    "src": "https://archive.org/download/78_twas-the-night-before-christmas_mort-lawrence-vicky-kasen_gbia3011413a/%27TWAS%20THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20MORT%20LAWRENCE.mp3",
-    "length": 208.91,
-    "series": "Mort Lawrence",
-    "title": "'Twas The Night Before Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/78_twas-the-night-before-christmas_mort-lawrence-vicky-kasen_gbia3011413a"
+    "src": "https://archive.org/download/78_a-while-shepherds-watched-b-christians-awake_the-trinity-singers_gbia3015670a/%28a%29%20While%20Shepherds%20Watched%3B%20%28b%29%20Chr%20-%20THE%20TRINITY%20SINGERS.mp3",
+    "length": 185.27,
+    "series": "The Trinity Singers",
+    "title": "(A) While Shepherds Watched; (b) Christians Awake",
+    "item": "https://archive.org/details/78_a-while-shepherds-watched-b-christians-awake_the-trinity-singers_gbia3015670a"
    },
    {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/05%20Lullaby%20for%20Christmas%20Eve.mp3",
-    "length": 169.4,
-    "series": "The Lennon Sisters",
-    "title": "Lullaby for Christmas Eve",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsTempoCigarettes.mp3",
-    "length": 59.74,
+    "src": "https://archive.org/download/RadioCommercialsShows/STURDYDOGFOOD.mp3",
+    "length": 19.54,
     "series": "A word from our sponsor",
-    "title": "Tempo Cigarettes",
+    "title": "Sturdy Dog Food",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-a-dog-for-christmas_the-billy-mayo-quintet-george-kent-and-wed-howard-leno_gbia0431808a/I%20WANT%20A%20DOG%20%28For%20Christmas%29%20-%20THE%20BILLY%20MAYO%20QUINTET.mp3",
+    "length": 178.8,
+    "series": "The Billy Mayo Quintet",
+    "title": "I WANT A DOG (For Christmas)",
+    "date": "1947",
+    "item": "https://archive.org/details/78_i-want-a-dog-for-christmas_the-billy-mayo-quintet-george-kent-and-wed-howard-leno_gbia0431808a"
+   },
+   {
+    "src": "https://archive.org/download/78_santas-on-his-way_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jacobs_gbia0483044a/SANTA%27S%20ON%20HIS%20WAY%20-%20Bill%20Tabbert%20and%20the%20%22400%22%20Quartet.mp3",
+    "length": 129.91,
+    "series": "Bill Tabbert and the \"400\" Quartet",
+    "title": "Santa'S On His Way",
+    "date": "1951",
+    "item": "https://archive.org/details/78_santas-on-his-way_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jacobs_gbia0483044a"
+   },
+   {
+    "src": "https://archive.org/download/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0024837b/You%27re%20All%20I%20Want%20for%20Christmas%20-%20Frank%20Gallagher.mp3",
+    "length": 209,
+    "series": "Frank Gallagher",
+    "title": "You're All I Want for Christmas",
+    "date": "1949",
+    "item": "https://archive.org/details/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0024837b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-story_michael-reynolds_gbia3025039b/CHRISTMAS%20STORY%20-%20Michael%20Reynolds.mp3",
+    "length": 180.1,
+    "series": "Michael Reynolds",
+    "title": "Christmas Story",
+    "item": "https://archive.org/details/78_christmas-story_michael-reynolds_gbia3025039b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/IRONIZEDYEAST.mp3",
+    "length": 53.55,
+    "series": "A word from our sponsor",
+    "title": "Ironized Yeast",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel-hark-the-herald-angels-sing_the-caroleers-vicky-kasen_gbia0534412b/THE%20FIRST%20NOEL%3B%20HARK%21%20THE%20HERALD%20ANGELS%20SI.mp3",
+    "length": 97.94,
+    "series": "The Caroleers",
+    "title": "The First Noel; Hark! The Herald Angels Sing",
+    "item": "https://archive.org/details/78_the-first-noel-hark-the-herald-angels-sing_the-caroleers-vicky-kasen_gbia0534412b"
+   },
+   {
+    "src": "https://archive.org/download/78_det-kimer-nu-til-julefest_statsradiofoniens-pigekor-c-balle-n-f-s-grundtvig-lis_gbia7032268b/Det%20kimer%20nu%20til%20Julefest%20-%20Statsradiofoniens%20Pigekor.mp3",
+    "length": 186.18,
+    "series": "Statsradiofoniens Pigekor",
+    "title": "Det kimer nu til Julefest",
+    "item": "https://archive.org/details/78_det-kimer-nu-til-julefest_statsradiofoniens-pigekor-c-balle-n-f-s-grundtvig-lis_gbia7032268b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingling-the-bells_frank-signorelli-and-his-quintet-frank-cheech-signorelli-phil_gbia0063785b/Jingling%20the%20Bells%20-%20Frank%20Signorelli%20and%20His%20Quintet.mp3",
+    "length": 181,
+    "series": "Frank Signorelli and His Quintet",
+    "title": "Jingling the Bells",
+    "date": "1946",
+    "item": "https://archive.org/details/78_jingling-the-bells_frank-signorelli-and-his-quintet-frank-cheech-signorelli-phil_gbia0063785b"
+   },
+   {
+    "src": "https://archive.org/download/78_youre-all-i-want-for-christmas-jingle-bells-silver-bells-silent-night_moore-ell_gbia0037367b/You%27re%20All%20I%20Want%20for%20Christmas%3B%20Jingle%20Bells%2C%20Sil%20-%20Moore.mp3",
+    "length": 176.73,
+    "series": "Moore",
+    "title": "You're All I Want for Christmas; Jingle Bells, Silver Bells; Silent Night",
+    "item": "https://archive.org/details/78_youre-all-i-want-for-christmas-jingle-bells-silver-bells-silent-night_moore-ell_gbia0037367b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoSeltzer.mp3",
+    "length": 95.08,
+    "series": "A word from our sponsor",
+    "title": "Bromo Seltzer",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Medley%20Hark%20The%20Herald%20Angels%20Sing_%20A%20La%20Nanita%20Nana.mp3",
-    "length": 215.46,
-    "series": "Norman Luboff Choir",
-    "title": "Hark The Herald Angels Sing A La Nanita Nana",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_ted-black-orchestra-dick-edwards-johnny-marks_gbia0110572a/RUDOLPH%2C%20THE%20RED-NOSED%20REINDEER%20-%20Ted%20Black%20Orchestra.mp3",
+    "length": 172,
+    "series": "Ted Black Orchestra",
+    "title": "Rudolph, the Red-nosed Reindeer",
+    "date": "1949",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_ted-black-orchestra-dick-edwards-johnny-marks_gbia0110572a"
    },
    {
-    "src": "https://archive.org/download/78_bring-a-torch-jeannette-isabella-good-christian-men-rejoice_charles-r-cronham_gbia0034357a/Bring%20a%20Torch%20Jeannette%2C%20Isabella%3B%20Go%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 181.49,
-    "series": "Charles R. Cronham",
-    "title": "Bring a Torch Jeannette, Isabella; Good Christian Men Rejoice",
-    "date": "1960",
-    "item": "https://archive.org/details/78_bring-a-torch-jeannette-isabella-good-christian-men-rejoice_charles-r-cronham_gbia0034357a"
+    "src": "https://archive.org/download/78_o-holy-night-silent-night_louis-garisto_gbia0459026b/O%20HOLY%20NIGHT%3B%20SILENT%20NIGHT%20-%20Louis%20Garisto.mp3",
+    "length": 322.13,
+    "series": "Louis Garisto",
+    "title": "O Holy Night; Silent Night",
+    "item": "https://archive.org/details/78_o-holy-night-silent-night_louis-garisto_gbia0459026b"
    },
    {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Away%20in%20the%20Manger.mp3",
-    "length": 68.99,
-    "series": "Andre Kostelanetz",
-    "title": "Away in the Manger",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
+    "src": "https://archive.org/download/78_the-sussex-mummers-christmas-carol_forbes-watson-de-chaulieu-etiennette/M_540_DR_1700-2.mp3",
+    "length": 204,
+    "series": "Forbes, Watson",
+    "title": "The Sussex Mummers' Christmas Carol",
+    "date": "1942",
+    "item": "https://archive.org/details/78_the-sussex-mummers-christmas-carol_forbes-watson-de-chaulieu-etiennette"
    },
    {
-    "src": "https://archive.org/download/longlostsixtiesxmas/15%20Give%20Me%20Your%20Heart%20for%20Xmas.mp3",
-    "length": 117.26,
-    "series": "Dora Hall",
-    "title": "Give Me Your Heart for Xmas",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
+    "src": "https://archive.org/download/78_jingle-bells-santa-claus-is-flying-the-first-noel_tops-orch-choristers_gbia0547808a/Jingle%20Bells%3B%20Santa%20Claus%20Is%20Fly%20-%20Tops%20Orch.%20%26%20Choristers.mp3",
+    "length": 402.06,
+    "series": "Tops Orch. & Choristers",
+    "title": "Jingle Bells; Santa Claus Is Flying; The First Noel",
+    "item": "https://archive.org/details/78_jingle-bells-santa-claus-is-flying-the-first-noel_tops-orch-choristers_gbia0547808a"
    },
    {
     "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsIngramGasoline.mp3",
@@ -70240,99 +65952,40 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/christmasinmexico1957lp/03%20Noche%20De%20Paz%20%28Silent%20Night%2C%20Holy%20Night%29.mp3",
-    "length": 181,
-    "series": "Niños Cantores De Navarra",
-    "title": "Noche De Paz (Silent Night, Holy Night)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
+    "src": "https://archive.org/download/78_kender-de-den-om-rudolf-rudolph-the-red-nosed-reindeer_sid-merrimans-danseorkes_gbia7005823b/Kender%20De%20den%20om%20Rudolf%3F%20%28Ru%20-%20Sid%20Merrimans%20danseorkester.mp3",
+    "length": 162.45,
+    "series": "Sid Merrimans danseorkester",
+    "title": "Kender De den om Rudolf? (Rudolph, the red-nosed reindeer)",
+    "item": "https://archive.org/details/78_kender-de-den-om-rudolf-rudolph-the-red-nosed-reindeer_sid-merrimans-danseorkes_gbia7005823b"
    },
    {
-    "src": "https://archive.org/download/78_blue-christmas_doye-odell-billy-johnson-jay-johnson_gbia0465369b/BLUE%20CHRISTMAS%20-%20DOYE%20O%27DELL%20-%20Billy%20Johnson.mp3",
-    "length": 165.67,
-    "series": "Doye O'dell",
-    "title": "Blue Christmas",
-    "date": "1948",
-    "item": "https://archive.org/details/78_blue-christmas_doye-odell-billy-johnson-jay-johnson_gbia0465369b"
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing-it-came-upon-a-midnight-clear-shepherds-shake-off-you_gbia0364274b/Hark%20The%20Herald%20Angels%20Sing%3B%20It%20Came%20Upo%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 355.15,
+    "series": "Godfrey Malcolm",
+    "title": "Hark The Herald Angels Sing; It Came Upon a Midnight Clear; Shepherds Shake Off Your Drowsy Sheep",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing-it-came-upon-a-midnight-clear-shepherds-shake-off-you_gbia0364274b"
    },
    {
-    "src": "https://archive.org/download/hannabarberaxmas/01%20Joy%20to%20the%20World.mp3",
-    "length": 114.84,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "Joy to the World",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
+    "src": "https://archive.org/download/78_christmas-island_glenn-davis-lyle-moraine_gbia0378583a/CHRISTMAS%20ISLAND%20-%20GLENN%20DAVIS%20-%20Lyle%20Moraine.mp3",
+    "length": 179.33,
+    "series": "Glenn Davis",
+    "title": "Christmas Island",
+    "item": "https://archive.org/details/78_christmas-island_glenn-davis-lyle-moraine_gbia0378583a"
    },
    {
-    "src": "https://archive.org/download/78_i-want-a-beautiful-doll-for-christmas_tony-pastor-and-his-orchestra-tony-pastor-liv_gbia0168499b/I%20WANT%20A%20BEAUTIFUL%20DOLL%20FO%20-%20Tony%20Pastor%20And%20His%20Orchestra.mp3",
-    "length": 198,
-    "series": "Tony Pastor And His Orchestra",
-    "title": "I Want a Beautiful Doll for Christmas",
-    "date": "1946",
-    "item": "https://archive.org/details/78_i-want-a-beautiful-doll-for-christmas_tony-pastor-and-his-orchestra-tony-pastor-liv_gbia0168499b"
+    "src": "https://archive.org/download/78_it-came-upon-the-midnight-clear_the-sandpiper-chorus-mitch-miller_gbia0534124b/it%20came%20upon%20the%20midnight%20clear%20-%20The%20Sandpiper%20Chorus.mp3",
+    "length": 105.33,
+    "series": "The Sandpiper Chorus",
+    "title": "It came upon the midnight clear",
+    "item": "https://archive.org/details/78_it-came-upon-the-midnight-clear_the-sandpiper-chorus-mitch-miller_gbia0534124b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDodge.mp3",
-    "length": 62.27,
+    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
+    "length": 60.33,
     "series": "A word from our sponsor",
-    "title": "Dodge",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/01%20When%20Angels%20Sang%20Of%20Peace.mp3",
-    "length": 197.85,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "When Angels Sang Of Peace",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Jingle%20Bells.mp3",
-    "length": 97.8,
-    "series": "Nelson Eddy",
-    "title": "Jingle Bells",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/78_im-gettin-nuttin-for-christmas-jolly-old-st-nicholas_tepper-bennett-bobby-stewart-t_gbia0533785/01%20-%20NUTTIN%27%20FOR%20CHRISTMAS%20-%20Tepper%20-%20Bennett.mp3",
-    "length": 171,
-    "series": "Tepper",
-    "title": "Nuttin' For Christmas",
-    "item": "https://archive.org/details/78_im-gettin-nuttin-for-christmas-jolly-old-st-nicholas_tepper-bennett-bobby-stewart-t_gbia0533785"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-holy-night-oh-little-town-of-bethlehem-god-rest-ye-merry-gentlemen_gbia0035628b/Silent%20Night%2C%20Holy%20Night%3B%20Oh%20Little%20Town%20of%20Bethlehem%3B%20God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
-    "length": 383,
-    "series": "",
-    "title": "Silent Night, Holy Night; Oh Little Town of Bethlehem; God Rest Ye Merry Gentlemen",
-    "date": "1956",
-    "item": "https://archive.org/details/78_silent-night-holy-night-oh-little-town-of-bethlehem-god-rest-ye-merry-gentlemen_gbia0035628b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/FORD.MP3",
-    "length": 87.16,
-    "series": "A word from our sponsor",
-    "title": "Ford",
+    "title": "Palmolive Soap",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/08_The_Christmas_song__Merry_Christmas_to_you_.mp3",
-    "length": 162,
-    "series": "Wayne King & His Orchestra",
-    "title": "The Christmas song (Merry Christmas to you)",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/78_carol-of-the-sheep-fold-o-god-our-help_augmented-choir_gbia0362562b/CAROL%20OF%20THE%20SHEEP%20FOLD%20%26%20O%20GOD%20OUR%20HELP%20-%20AUGMENTED%20CHOIR.mp3",
-    "length": 315.1,
-    "series": "Augmented Choir",
-    "title": "Carol of the Sheep Fold & O God Our Help",
-    "date": "1946",
-    "item": "https://archive.org/details/78_carol-of-the-sheep-fold-o-god-our-help_augmented-choir_gbia0362562b"
    },
    {
     "src": "https://archive.org/download/78_joy-to-the-world-it-came-upon-a-midnight-clear-hark-the-herald-angels-sing_the-va_gbia0366747b/JOY%20TO%20THE%20WORLD%3B%20IT%20CAME%20UPON%20A%20M%20-%20The%20VARSITY%20CAROLEERS.mp3",
@@ -70343,19 +65996,2168 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_joy-to-the-world-it-came-upon-a-midnight-clear-hark-the-herald-angels-sing_the-va_gbia0366747b"
    },
    {
-    "src": "https://archive.org/download/78_christine-the-christmas-tree_reggie-kay-bernie-wyte-and-his-silver-bells-orch-pint_gbia0444383b/CHRISTINE%20THE%20CHRISTMAS%20TREE%20-%20REGGIE%20KAY.mp3",
-    "length": 183.55,
-    "series": "Reggie Kay",
-    "title": "Christine the Christmas Tree",
-    "date": "1952",
-    "item": "https://archive.org/details/78_christine-the-christmas-tree_reggie-kay-bernie-wyte-and-his-silver-bells-orch-pint_gbia0444383b"
+    "src": "https://archive.org/download/78_i-wish-that-i-were-santa-claus-deck-the-halls_bob-kennedy-tops-orchestra-tops-chor_gbia0439575b/I%20WISH%20THAT%20I%20WERE%20SANTA%20CLAUS%3B%20DECK%20THE%20HAL%20-%20Bob%20Kennedy.mp3",
+    "length": 200.13,
+    "series": "Bob Kennedy",
+    "title": "I Wish That I Were Santa Claus; Deck The Halls",
+    "item": "https://archive.org/details/78_i-wish-that-i-were-santa-claus-deck-the-halls_bob-kennedy-tops-orchestra-tops-chor_gbia0439575b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWhiteKingSoap.mp3",
-    "length": 81.37,
+    "src": "https://archive.org/download/78_god-rest-ye-merry-gentlemen-the-citizens-of-chatres_charles-r-cronham_gbia0034360a/God%20Rest%20Ye%20Merry%20Gentlemen%3B%20The%20Citi%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 175.27,
+    "series": "Charles R. Cronham",
+    "title": "God Rest Ye Merry Gentlemen; The Citizens of Chatres",
+    "date": "1960",
+    "item": "https://archive.org/details/78_god-rest-ye-merry-gentlemen-the-citizens-of-chatres_charles-r-cronham_gbia0034360a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_anne-lloyd-the-sandpipers-marshall-barer-mitchell-miller_gbia0534654a/JINGLE%20BELLS%20-%20ANNE%20LLOYD%20-%20THE%20SANDPIPERS.mp3",
+    "length": 88.78,
+    "series": "Anne Lloyd",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_anne-lloyd-the-sandpipers-marshall-barer-mitchell-miller_gbia0534654a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnchorHocking.mp3",
+    "length": 44.85,
     "series": "A word from our sponsor",
-    "title": "White King Soap",
+    "title": "Anchor Hocking",
     "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_julen-har-bragt-velsignet-bud_otte-svendsen-kai-mortensens-strygeorkester-cef-we_gbia7008189a/Julen%20har%20bragt%20velsignet%20bud%20-%20OTTE%20SVENDSEN.mp3",
+    "length": 146.36,
+    "series": "Otte Svendsen",
+    "title": "Julen har bragt velsignet bud",
+    "item": "https://archive.org/details/78_julen-har-bragt-velsignet-bud_otte-svendsen-kai-mortensens-strygeorkester-cef-we_gbia7008189a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_del-wood_gbia0056735a/Jingle%20Bells%20-%20Del%20Wood.mp3",
+    "length": 122.26,
+    "series": "Del Wood",
+    "title": "Jingle Bells",
+    "date": "1954",
+    "item": "https://archive.org/details/78_jingle-bells_del-wood_gbia0056735a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_scotty-macgregor-scotty-macgregor_gbia0474083/01%20-%20IT%27S%20SANTA%20CLAUS%20-%20SCOTTY%20MACGREGOR%20-%20Scotty%20Macgregor.mp3",
+    "length": 126.94,
+    "series": "Scotty Macgregor",
+    "title": "It's Santa Claus",
+    "item": "https://archive.org/details/78_jingle-bells_scotty-macgregor-scotty-macgregor_gbia0474083"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_eddy-howard-and-his-orchestra-eddy-howard-irving-berlin_gbia0006822a/White%20Christmas%20-%20Eddy%20Howard%20and%20his%20Orchestra.mp3",
+    "length": 183,
+    "series": "Eddy Howard and his Orchestra",
+    "title": "White Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_white-christmas_eddy-howard-and-his-orchestra-eddy-howard-irving-berlin_gbia0006822a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PEPSI.MP3",
+    "length": 42.47,
+    "series": "A word from our sponsor",
+    "title": "Pepsi",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel-ring-out-wild-bells_johnny-kay-the-caroleers-vicky-kasen_gbia0533969a/THE%20FIRST%20NOEL%3B%20RING%20OUT%20WILD%20BELLS%20-%20JOHNNY%20KAY.mp3",
+    "length": 111,
+    "series": "Johnny Kay",
+    "title": "The First Noel; Ring Out Wild Bells",
+    "item": "https://archive.org/details/78_the-first-noel-ring-out-wild-bells_johnny-kay-the-caroleers-vicky-kasen_gbia0533969a"
+   },
+   {
+    "src": "https://archive.org/download/78_kapela-generalna_choir-of-the-holy-cross-church-in-warsaw-chr-kociola-w-kryzyza-w-w_gbia0529129b/KAPELA%20GENERALNA%20-%20Choir%20of%20the%20Holy%20Cross%20Church%20in%20Warsaw.mp3",
+    "length": 165.35,
+    "series": "Choir of the Holy Cross Church in Warsaw",
+    "title": "Kapela Generalna",
+    "item": "https://archive.org/details/78_kapela-generalna_choir-of-the-holy-cross-church-in-warsaw-chr-kociola-w-kryzyza-w-w_gbia0529129b"
+   },
+   {
+    "src": "https://archive.org/download/78_til-juletr-med-onkel-harald_harald-mortensens-orkester-statsradiofoniens-pigekor_gbia7017159a/Til%20Juletr%C3%A6%20med%20Onkel%20Harald%20-%20Harald%20Mortensen%27s%20Orkester.mp3",
+    "length": 189.29,
+    "series": "Harald Mortensen's Orkester",
+    "title": "Til Juletræ med Onkel Harald",
+    "item": "https://archive.org/details/78_til-juletr-med-onkel-harald_harald-mortensens-orkester-statsradiofoniens-pigekor_gbia7017159a"
+   },
+   {
+    "src": "https://archive.org/download/78_cantique-de-noel_martin-walker-sammy-spear-orch-adolphe-adam_gbia0426654b/CANTIQUE%20de%20NOEL%20-%20MARTIN%20WALKER%20-%20Sammy%20Spear%20Orch..mp3",
+    "length": 145.94,
+    "series": "Martin Walker",
+    "title": "CANTIQUE de NOEL",
+    "date": "1953",
+    "item": "https://archive.org/details/78_cantique-de-noel_martin-walker-sammy-spear-orch-adolphe-adam_gbia0426654b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OVALTINE.MP3",
+    "length": 126.24,
+    "series": "A word from our sponsor",
+    "title": "Ovaltine",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_we-saw-three-ships_godfrey-malcolm-fredrico_gbia0219430c/WE%20SAW%20THREE%20SHIPS%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 118.84,
+    "series": "Godfrey Malcolm",
+    "title": "We Saw Three Ships",
+    "item": "https://archive.org/details/78_we-saw-three-ships_godfrey-malcolm-fredrico_gbia0219430c"
+   },
+   {
+    "src": "https://archive.org/download/78_julen-har-bragt-velsignet-bud_tono-strygeorkester-j-tscherning-mller-c-e-f-wey_gbia7011043a/Julen%20har%20bragt%20velsignet%20Bud%20-%20TONO%20Strygeorkester.mp3",
+    "length": 171.53,
+    "series": "TONO Strygeorkester",
+    "title": "Julen har bragt velsignet Bud",
+    "item": "https://archive.org/details/78_julen-har-bragt-velsignet-bud_tono-strygeorkester-j-tscherning-mller-c-e-f-wey_gbia7011043a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_song-spinners-irving-berlin_gbia0072514a/White%20Christmas%20-%20Song%20Spinners%20-%20Irving%20Berlin.mp3",
+    "length": 197,
+    "series": "Song Spinners",
+    "title": "White Christmas",
+    "date": "1942",
+    "item": "https://archive.org/details/78_white-christmas_song-spinners-irving-berlin_gbia0072514a"
+   },
+   {
+    "src": "https://archive.org/download/78_im-gettin-nuttin-for-christmas-jolly-old-st-nicholas_tepper-bennett-bobby-stewart-t_gbia0533785/01%20-%20NUTTIN%27%20FOR%20CHRISTMAS%20-%20Tepper%20-%20Bennett.mp3",
+    "length": 171,
+    "series": "Tepper",
+    "title": "Nuttin' For Christmas",
+    "item": "https://archive.org/details/78_im-gettin-nuttin-for-christmas-jolly-old-st-nicholas_tepper-bennett-bobby-stewart-t_gbia0533785"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsJackBennyDennisDayForTexaco.mp3",
+    "length": 59.64,
+    "series": "A word from our sponsor",
+    "title": "Texaco (with Jack Benny and Dennis Day)",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_bene-allen-marks_gbia0534678a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20Bene%20Allen.mp3",
+    "length": 90.43,
+    "series": "Bene Allen",
+    "title": "Rudolph The Red Nosed Reindeer",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_bene-allen-marks_gbia0534678a"
+   },
+   {
+    "src": "https://archive.org/download/78_under-the-mistletoe_mrs-sidney-rauh_gbia0417603b/UNDER%20THE%20MISTLETOE%20-%20MRS.%20SIDNEY%20RAUH.mp3",
+    "length": 176.88,
+    "series": "Mrs. Sidney Rauh",
+    "title": "Under the Mistletoe",
+    "date": "1946",
+    "item": "https://archive.org/details/78_under-the-mistletoe_mrs-sidney-rauh_gbia0417603b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-up-on-the-housetop-god-rest-ye-merry-gentlemen-away-in-a-manger-i_gbia0203791b/JINGLE%20BELLS%3B%20UP%20ON%20THE%20HOUSETOP%3B%20G%20-%20THE%20SANDPIPER%20CHORUS.mp3",
+    "length": 246.05,
+    "series": "The Sandpiper Chorus",
+    "title": "Jingle Bells; Up on the Housetop; God Rest Ye Merry, Gentlemen; Away in a Manger; It Came Upon the Midnight Clear; Silent Night",
+    "date": "1952",
+    "item": "https://archive.org/details/78_jingle-bells-up-on-the-housetop-god-rest-ye-merry-gentlemen-away-in-a-manger-i_gbia0203791b"
+   },
+   {
+    "src": "https://archive.org/download/78_its-santa-claus-time-merry-christmas-day_cousin-fuzzy-and-his-cousins-chuck-ro_gbia0474803a/%22IT%27S%20SANTA%20CLAUS%20TIME%22%20%28Me%20-%20COUSIN%20FUZZY%20and%20His%20Cousins.mp3",
+    "length": 143.09,
+    "series": "COUSIN FUZZY and His Cousins",
+    "title": "\"IT'S SANTA CLAUS TIME\" (Merry Christmas Day)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_its-santa-claus-time-merry-christmas-day_cousin-fuzzy-and-his-cousins-chuck-ro_gbia0474803a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLowenbrauBeer.mp3",
+    "length": 56.53,
+    "series": "A word from our sponsor",
+    "title": "Löwenbräu Beer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_gbia0219431d/RUDOLPH%20THE%20RED-NOSED%20REINDEER.mp3",
+    "length": 84.76,
+    "series": "Unknown artist",
+    "title": "Rudolph The Red-Nosed Reindeer",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_gbia0219431d"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas_mort-lawrence-vicky-kasen_gbia0435638a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20MORT%20LAWRENCE.mp3",
+    "length": 201.5,
+    "series": "Mort Lawrence",
+    "title": "The Night Before Christmas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-night-before-christmas_mort-lawrence-vicky-kasen_gbia0435638a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_varsity-caroleers-johnny-marks_gbia0006796a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Varsity%20Caroleers.mp3",
+    "length": 160,
+    "series": "Varsity Caroleers",
+    "title": "Rudolph The Red Nosed Reindeer",
+    "date": "1950",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_varsity-caroleers-johnny-marks_gbia0006796a"
+   },
+   {
+    "src": "https://archive.org/download/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas_the-caroleers-vicky-kasen_gbia0533746a/DECK%20THE%20HALLS%20WITH%20BOUGHS%20OF%20HOLLY%3B%20GOOD.mp3",
+    "length": 101.97,
+    "series": "The Caroleers",
+    "title": "Deck The Halls With Boughs Of Holly; Good King Wencelas",
+    "item": "https://archive.org/details/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas_the-caroleers-vicky-kasen_gbia0533746a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/INTERNATIONALSTERLING.mp3",
+    "length": 95.28,
+    "series": "A word from our sponsor",
+    "title": "International Sterling",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel_the-varsity-caroleers_gbia0006851b/The%20First%20Noel%20-%20The%20Varsity%20Caroleers.mp3",
+    "length": 179.2,
+    "series": "The Varsity Caroleers",
+    "title": "The First Noel",
+    "item": "https://archive.org/details/78_the-first-noel_the-varsity-caroleers_gbia0006851b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-fe-is-a-long-long-way-from-broadway_leon-mcauliffe-and-his-western-swing-ban_gbia0068948b/Santa%20Fe%20Is%20a%20%20-%20Leon%20McAuliffe%20and%20his%20Western%20Swing%20Band.mp3",
+    "length": 165.77,
+    "series": "Leon McAuliffe and his Western Swing Band",
+    "title": "Santa Fe Is a Long, Long Way from Broadway",
+    "date": "1947",
+    "item": "https://archive.org/details/78_santa-fe-is-a-long-long-way-from-broadway_leon-mcauliffe-and-his-western-swing-ban_gbia0068948b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-joy-to-the-world-we-saw-three-ships_godfrey-malcolm-fredrico_gbia0426809a/Silent%20Night%3B%20Joy%20To%20The%20World%3B%20We%20Saw%20T%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 381.97,
+    "series": "Godfrey Malcolm",
+    "title": "Silent Night; Joy To The World; We Saw Three Ships",
+    "item": "https://archive.org/details/78_silent-night-joy-to-the-world-we-saw-three-ships_godfrey-malcolm-fredrico_gbia0426809a"
+   },
+   {
+    "src": "https://archive.org/download/78_bjldeklang-jingle-bells_svend-nicolaisens-danseorkester-grete-sandberg-eddie-rus_gbia7010091a/Bj%C3%A6ldeklang%20%28Jingle%20Bells%29%20-%20Svend%20Nicolaisens%20Danseorkester.mp3",
+    "length": 198.1,
+    "series": "Svend Nicolaisens Danseorkester",
+    "title": "Bjældeklang (Jingle Bells)",
+    "item": "https://archive.org/details/78_bjldeklang-jingle-bells_svend-nicolaisens-danseorkester-grete-sandberg-eddie-rus_gbia7010091a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CAMPANA.MP3",
+    "length": 122.11,
+    "series": "A word from our sponsor",
+    "title": "Campana",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jolly-old-st-nicholas_the-knaves-nancy-harrie-vaughn-horton_gbia3015485b/JOLLY%20OLD%20ST.%20NICHOLAS%20-%20THE%20KNAVES%20-%20NANCY%20HARRIE.mp3",
+    "length": 196,
+    "series": "The Knaves",
+    "title": "Jolly Old St. Nicholas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_jolly-old-st-nicholas_the-knaves-nancy-harrie-vaughn-horton_gbia3015485b"
+   },
+   {
+    "src": "https://archive.org/download/78_a-guid-new-year_the-five-smith-brothers-livingstone-hume-gleadhill_gbia3029249b/A%20GUID%20NEW%20YEAR%20-%20THE%20FIVE%20SMITH%20BROTHERS.mp3",
+    "length": 198,
+    "series": "The Five Smith Brothers",
+    "title": "A Guid New Year",
+    "date": "1951",
+    "item": "https://archive.org/details/78_a-guid-new-year_the-five-smith-brothers-livingstone-hume-gleadhill_gbia3029249b"
+   },
+   {
+    "src": "https://archive.org/download/78_away-in-a-manger_godfrey-malcolm-fredrico_gbia0219430h/AWAY%20IN%20A%20MANGER%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 139.23,
+    "series": "Godfrey Malcolm",
+    "title": "Away In A Manger",
+    "item": "https://archive.org/details/78_away-in-a-manger_godfrey-malcolm-fredrico_gbia0219430h"
+   },
+   {
+    "src": "https://archive.org/download/78_beautiful-saviour_godfrey-malcolm-fredrico_gbia0219429a/BEAUTIFUL%20SAVIOUR%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 147.4,
+    "series": "Godfrey Malcolm",
+    "title": "Beautiful Saviour",
+    "item": "https://archive.org/details/78_beautiful-saviour_godfrey-malcolm-fredrico_gbia0219429a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NABISCO.MP3",
+    "length": 89.11,
+    "series": "A word from our sponsor",
+    "title": "Nabisco",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-in-america_hal-hopper-and-the-voices-of-the-valley-raleigh-hopper_gbia0474081b/CHRISTMAS%20IN%20AMERICA%20-%20HAL%20HOPPER%20AND%20THE%20VOICES%20OF%20THE%20VALLEY.mp3",
+    "length": 148.75,
+    "series": "Hal Hopper And The Voices Of The Valley",
+    "title": "Christmas In America",
+    "date": "1952",
+    "item": "https://archive.org/details/78_christmas-in-america_hal-hopper-and-the-voices-of-the-valley-raleigh-hopper_gbia0474081b"
+   },
+   {
+    "src": "https://archive.org/download/78_xmas-time-is-here_peggy-taylor-e-ballantine-orch-chorus-grace-biede_gbia0285854a/XMAS%20TIME%20IS%20HERE%20-%20PEGGY%20TAYLOR%20-%20E.%20Ballantine%20Orch.%20%26%20Chorus.mp3",
+    "length": 181.3,
+    "series": "Peggy Taylor",
+    "title": "Xmas Time is Here",
+    "date": "1953",
+    "item": "https://archive.org/details/78_xmas-time-is-here_peggy-taylor-e-ballantine-orch-chorus-grace-biede_gbia0285854a"
+   },
+   {
+    "src": "https://archive.org/download/78_song-of-the-christmas-lights_cousin-fuzzy-and-his-cousins-earl-mcnellis_gbia0474803b/Song%20of%20the%20%22CHRISTMAS%20LIGHTS%22%20-%20COUSIN%20FUZZY%20and%20His%20Cousins.mp3",
+    "length": 149.11,
+    "series": "COUSIN FUZZY and His Cousins",
+    "title": "Song of the \"CHRISTMAS LIGHTS\"",
+    "date": "1953",
+    "item": "https://archive.org/details/78_song-of-the-christmas-lights_cousin-fuzzy-and-his-cousins-earl-mcnellis_gbia0474803b"
+   },
+   {
+    "src": "https://archive.org/download/78_sancta-lucia_harmony-sisters-sven-arefeldts-orkester-l-b-jacobson-s-arefeldt_gbia7035959a/Sancta%20Lucia%20-%20Harmony%20Sisters%20-%20Sven%20Arefeldts%20Orkester.mp3",
+    "length": 203,
+    "series": "Harmony Sisters",
+    "title": "Sancta Lucia",
+    "date": "1947",
+    "item": "https://archive.org/details/78_sancta-lucia_harmony-sisters-sven-arefeldts-orkester-l-b-jacobson-s-arefeldt_gbia7035959a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLifebouySoap.mp3",
+    "length": 64.18,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Soap",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_campanelle_julius-larosa-archie-bleyer-l-jason-a-leonard-e-caroll_gbia0067003/01%20-%20Jingle%20Dingle%20-%20Julius%20Larosa%20-%20Archie%20Bleyer.mp3",
+    "length": 133,
+    "series": "Julius La Rosa",
+    "title": "Jingle Dingle",
+    "item": "https://archive.org/details/78_campanelle_julius-larosa-archie-bleyer-l-jason-a-leonard-e-caroll_gbia0067003"
+   },
+   {
+    "src": "https://archive.org/download/78_glade-jul-dejlige-jul_medlemmer-af-radiokoret-palle-alsfelt-c-e-f-weyse-b-s-i_gbia0125814b/Glade%20jul%2C%20dejlige%20jul%20-%20Medlemmer%20af%20radiokoret.mp3",
+    "length": 183.41,
+    "series": "Medlemmer af radiokoret",
+    "title": "Glade jul, dejlige jul",
+    "item": "https://archive.org/details/78_glade-jul-dejlige-jul_medlemmer-af-radiokoret-palle-alsfelt-c-e-f-weyse-b-s-i_gbia0125814b"
+   },
+   {
+    "src": "https://archive.org/download/78_juleklokkerne_kgl-kammersangerinde-edith-oldrup-arne-bertelsen-riis-magnussen-kai_gbia7007970a/Juleklokkerne%20-%20Kgl.%20kammersangerinde%20EDITH%20OLDRUP.mp3",
+    "length": 165.87,
+    "series": "Kgl. kammersangerinde EDITH OLDRUP",
+    "title": "Juleklokkerne",
+    "item": "https://archive.org/details/78_juleklokkerne_kgl-kammersangerinde-edith-oldrup-arne-bertelsen-riis-magnussen-kai_gbia7007970a"
+   },
+   {
+    "src": "https://archive.org/download/78_til-julebal-i-nisseland_radioens-drengekor-sid-merrimans-orkester-sv-aa-moeller-s_gbia0122487a/Til%20julebal%20i%20nisseland%20-%20Radioens%20drengekor.mp3",
+    "length": 204.06,
+    "series": "Radioens drengekor",
+    "title": "Til julebal i nisseland",
+    "item": "https://archive.org/details/78_til-julebal-i-nisseland_radioens-drengekor-sid-merrimans-orkester-sv-aa-moeller-s_gbia0122487a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/VELVEETA.MP3",
+    "length": 36.31,
+    "series": "A word from our sponsor",
+    "title": "Velveeta",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_all-around-the-christmas-tree_mark-warnow-and-orchestra-dick-todd_gbia0286262a/ALL%20AROUND%20THE%20CHRISTMAS%20TREE%20-%20MARK%20WARNOW%20and%20Orchestra.mp3",
+    "length": 179.69,
+    "series": "MARK WARNOW and Orchestra",
+    "title": "All Around the Christmas Tree",
+    "date": "1948",
+    "item": "https://archive.org/details/78_all-around-the-christmas-tree_mark-warnow-and-orchestra-dick-todd_gbia0286262a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer-joy-to-the-world-it-came-upon-a-midnight-clear_to_gbia0176994b/RUDOLPH%2C%20THE%20RED-NOSED%20REIND%20-%20TOPS%20ORCHESTRA%20%26%20CHORISTERS.mp3",
+    "length": 408,
+    "series": "Tops Orchestra & Choristers",
+    "title": "Rudolph, the Red-nosed Reindeer; Joy to the World; It Came Upon a Midnight Clear",
+    "date": "1954",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer-joy-to-the-world-it-came-upon-a-midnight-clear_to_gbia0176994b"
+   },
+   {
+    "src": "https://archive.org/download/78_nativity-the-story-of-christmas_lanny-ross-and-the-nativity-choir-john-scott-mel-ba_gbia0542713a/NATIVITY%20%28The%20Story%20of%20-%20LANNY%20ROSS%20And%20The%20Nativity%20Choir.mp3",
+    "length": 332.02,
+    "series": "LANNY ROSS And The Nativity Choir",
+    "title": "NATIVITY (The Story of Christmas)",
+    "item": "https://archive.org/details/78_nativity-the-story-of-christmas_lanny-ross-and-the-nativity-choir-john-scott-mel-ba_gbia0542713a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_the-caroleers-vicky-kasen_gbia0203789b/JINGLE%20BELLS%20-%20THE%20CAROLEERS%20-%20Vicky%20Kasen.mp3",
+    "length": 206.69,
+    "series": "The Caroleers",
+    "title": "Jingle Bells",
+    "date": "1950",
+    "item": "https://archive.org/details/78_jingle-bells_the-caroleers-vicky-kasen_gbia0203789b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsiCola.mp3",
+    "length": 33.38,
+    "series": "A word from our sponsor",
+    "title": "Pepsi Cola",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-winter-song_john-linehan-orch-will-sullivan_gbia0284374b/THE%20WINTER%20SONG%20-%20John%20Linehan%20%26%20Orch%20-%20Will%20Sullivan.mp3",
+    "length": 122.57,
+    "series": "John Linehan & Orch",
+    "title": "The Winter Song",
+    "date": "1952",
+    "item": "https://archive.org/details/78_the-winter-song_john-linehan-orch-will-sullivan_gbia0284374b"
+   },
+   {
+    "src": "https://archive.org/download/78_du-kre-gamle-julemand-je-ne-crois-plus-au-pere-noel_svend-nicolaisens-danseorke_gbia7011290a/Du%20k%C3%A6re%2C%20gamle%20julemand%20%20-%20Svend%20Nicolaisens%20danseorkester.mp3",
+    "length": 164.67,
+    "series": "Svend Nicolaisens danseorkester",
+    "title": "Du kære, gamle julemand (Je ne crois plus au Pere Noel)",
+    "item": "https://archive.org/details/78_du-kre-gamle-julemand-je-ne-crois-plus-au-pere-noel_svend-nicolaisens-danseorke_gbia7011290a"
+   },
+   {
+    "src": "https://archive.org/download/78_good-king-wenceslas-tannenbaum-deck-the-hall_varsity-caroleers_gbia0366722b/GOOD%20KING%20WENCESLAS%20%3B%20TANNENBAUM%20%3B%20DEC%20-%20VARSITY%20CAROLEERS.mp3",
+    "length": 201.77,
+    "series": "Varsity Caroleers",
+    "title": "Good King Wenceslas ; Tannenbaum ; Deck the Hall",
+    "date": "1950",
+    "item": "https://archive.org/details/78_good-king-wenceslas-tannenbaum-deck-the-hall_varsity-caroleers_gbia0366722b"
+   },
+   {
+    "src": "https://archive.org/download/78_pedza-sanki-do-kociola-sleigh-ride_kazio-jarzebowski-orkiestra-w-dana-j-cass_gbia0528089a/PEDZA%20SANKI%20DO%20KO%C5%9ACIOLA..%20%28Sleigh%20Ride%20-%20KAZIO%20JARZEBOWSKI.mp3",
+    "length": 184.03,
+    "series": "Kazio Jarzebowski",
+    "title": "PEDZA SANKI DO KOŚCIOLA.. (Sleigh Ride)",
+    "item": "https://archive.org/details/78_pedza-sanki-do-kociola-sleigh-ride_kazio-jarzebowski-orkiestra-w-dana-j-cass_gbia0528089a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsTempoCigarettes.mp3",
+    "length": 59.74,
+    "series": "A word from our sponsor",
+    "title": "Tempo Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_auld-lang-syne_joe-gumin-and-his-orchestra-with-vocal-quartet_gbia0006829b/Auld%20Lang%20Syne%20-%20Joe%20Gumin%20and%20his%20Orchestra%20with%20Vocal%20Quartet.mp3",
+    "length": 164,
+    "series": "Joe Gumin and his Orchestra with Vocal Quartet",
+    "title": "Auld Lang Syne",
+    "date": "1948",
+    "item": "https://archive.org/details/78_auld-lang-syne_joe-gumin-and-his-orchestra-with-vocal-quartet_gbia0006829b"
+   },
+   {
+    "src": "https://archive.org/download/78_dzisiaj-w-betlejem-today-in-bethlehem_sta-jaworski-gil-bajek-w-dana-afra-ed-sennert_gbia0528055b/DZISIAJ%20W%20BETLEJEM%20%28Today%20in%20Bethlehem%29%20-%20STA%C5%9A%20JAWORSKI.mp3",
+    "length": 144,
+    "series": "Staś Jaworski",
+    "title": "Dzisiaj W Betlejem (Today in Bethlehem)",
+    "date": "1955",
+    "item": "https://archive.org/details/78_dzisiaj-w-betlejem-today-in-bethlehem_sta-jaworski-gil-bajek-w-dana-afra-ed-sennert_gbia0528055b"
+   },
+   {
+    "src": "https://archive.org/download/78_where-did-my-snowman-go_petula-clark-children-of-dr-barnardos-homes-venis-poser_gbia3026479a/WHERE%20DID%20MY%20SNOWMAN%20GO%20-%20PETULA%20CLARK%20-%20Children%20of%20Dr.%20Barnardo%27s%20Homes.mp3",
+    "length": 138,
+    "series": "Petula Clark",
+    "title": "Where Did My Snowman Go",
+    "date": "1953",
+    "item": "https://archive.org/details/78_where-did-my-snowman-go_petula-clark-children-of-dr-barnardos-homes-venis-poser_gbia3026479a"
+   },
+   {
+    "src": "https://archive.org/download/78_introduction-and-variations-on-an-ancient-polish-noel_george-thalben-ball-guilmant_gbia0011409a/Introduction%20and%20Variations%20on%20an%20An%20-%20George%20Thalben-Ball.mp3",
+    "length": 204,
+    "series": "George Thalben-Ball",
+    "title": "Introduction and Variations on an Ancient Polish Noel",
+    "date": "1951",
+    "item": "https://archive.org/details/78_introduction-and-variations-on-an-ancient-polish-noel_george-thalben-ball-guilmant_gbia0011409a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MAXWELLHOUSECOFFEE.mp3",
+    "length": 79.13,
+    "series": "A word from our sponsor",
+    "title": "Maxwell House Coffee",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_scrooge_roye-goodrich-the-holidays-roye-goodrich-the-holidays-schram-reed_gbia0409858b/SCROOGE%20-%20ROYE%20GOODRICH%20-%20THE%20HOLIDAYS%20-%20Roye%20Goodrich.mp3",
+    "length": 142.73,
+    "series": "Roye Goodrich",
+    "title": "Scrooge",
+    "date": "1952",
+    "item": "https://archive.org/details/78_scrooge_roye-goodrich-the-holidays-roye-goodrich-the-holidays-schram-reed_gbia0409858b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-carol-medley_the-cricket-choral-group_gbia0533841b/CHRISTMAS%20CAROL%20MEDLEY%20-%20The%20CRICKET%20Choral%20Group.mp3",
+    "length": 145.33,
+    "series": "The CRICKET Choral Group",
+    "title": "Christmas Carol Medley",
+    "item": "https://archive.org/details/78_christmas-carol-medley_the-cricket-choral-group_gbia0533841b"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-polka-rudolph-the-red-nosed-reindeer_tony-puskarz-and-his-orchestra-st_gbia0428830a/RUDOLPH%20-%20POLKA%20%28Rudolph%20%20-%20TONY%20PUSKARZ%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 149.52,
+    "series": "Tony Puskarz and His Orchestra",
+    "title": "RUDOLPH - POLKA (Rudolph The Red Nosed Reindeer)",
+    "date": "1951",
+    "item": "https://archive.org/details/78_rudolph-polka-rudolph-the-red-nosed-reindeer_tony-puskarz-and-his-orchestra-st_gbia0428830a"
+   },
+   {
+    "src": "https://archive.org/download/78_first-nol-adeste-fideles-it-came-upon-a-midnight-clear_arno_gbia0381658a/FIRST%20NO%C3%8BL%3B%20ADESTE%20FIDELES%3B%20IT%20CAME%20UPON%20A%20MIDNIGHT%20-%20Arno.mp3",
+    "length": 169.34,
+    "series": "Arno",
+    "title": "First Noël; Adeste Fideles; It Came Upon A Midnight Clear",
+    "item": "https://archive.org/details/78_first-nol-adeste-fideles-it-came-upon-a-midnight-clear_arno_gbia0381658a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/INTERNATIONALSTERLING.mp3",
+    "length": 95.28,
+    "series": "A word from our sponsor",
+    "title": "International Sterling",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_all-i-want-for-christmas-spike-jones-and-his-city-slickers-george/28447%20All%20I%20want%20for%20christmas.mp3",
+    "length": 187.22,
+    "series": "George Rock",
+    "title": "All I Want for Christmas",
+    "item": "https://archive.org/details/78_all-i-want-for-christmas-spike-jones-and-his-city-slickers-george"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-lucia_don-baker-lee-pepper-w-eiger_gbia0163167b/SANTA%20LUCIA%20-%20Don%20Baker%20-%20Lee%20Pepper%20-%20W.%20Eiger.mp3",
+    "length": 161.11,
+    "series": "Don Baker",
+    "title": "Santa Lucia",
+    "date": "1947",
+    "item": "https://archive.org/details/78_santa-lucia_don-baker-lee-pepper-w-eiger_gbia0163167b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-carols_joseph-walikis-and-his-accordian_gbia0001738a/Christmas%20Carols%20-%20Joseph%20Walikis%20and%20his%20Accordian-restored.mp3",
+    "length": 233.64,
+    "series": "Joseph Walikis and his Accordian",
+    "title": "Christmas Carols",
+    "item": "https://archive.org/details/78_christmas-carols_joseph-walikis-and-his-accordian_gbia0001738a",
+    "date": "1940"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bell-boogie_freddie-mitchell-orch.-rip-harrigan_gbia0001478a/Jingle%20Bell%20Boogie%20-%20Freddie%20Mitchell%20Orch-restored.mp3",
+    "length": 180.26,
+    "series": "Freddie Mitchell Orchestra",
+    "title": "Jingle Bell Boogie",
+    "date": "1949",
+    "item": "https://archive.org/details/78_jingle-bell-boogie_freddie-mitchell-orch.-rip-harrigan_gbia0001478a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
+    "length": 50.35,
+    "series": "A word from our sponsor",
+    "title": "Northwest Orient Airlines",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_joy-to-the-world-o-come-all-ye-faithful_lorin-whitney-handel_gbia0310865a/JOY%20TO%20THE%20WORLD%3B%20O%20COME%20ALL%20YE%20FAITHFUL%20-%20LORIN%20WHITNEY.mp3",
+    "length": 162.78,
+    "series": "Lorin Whitney",
+    "title": "Joy To The World; O Come All Ye Faithful",
+    "item": "https://archive.org/details/78_joy-to-the-world-o-come-all-ye-faithful_lorin-whitney-handel_gbia0310865a"
+   },
+   {
+    "src": "https://archive.org/download/78_joy-to-the-world-it-came-upon-the-midnight-clear-hark-the-herald-angels-sing_son_gbia0001237b/Joy%20To%20The%20World%3B%20It%20Came%20Upon%20The%20Midnight%20Clear%3B%20Hark%2C%20The%20Herald%20Angels%20Sing%20-%20Sonora%20Choristers.mp3",
+    "length": 206.84,
+    "series": "Sonora Choristers",
+    "title": "Joy To The World; It Came Upon The Midnight Clear; Hark, The Herald Angels Sing",
+    "date": "1945",
+    "item": "https://archive.org/details/78_joy-to-the-world-it-came-upon-the-midnight-clear-hark-the-herald-angels-sing_son_gbia0001237b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_the-robinettes-haven-gillespie_gbia0534676b/SANTA%20CLAUS%20IS%20COMIN%27%20TO%20TOWN%20-%20The%20Robinettes.mp3",
+    "length": 112.08,
+    "series": "The Robinettes",
+    "title": "Santa Claus Is Comin' To Town",
+    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_the-robinettes-haven-gillespie_gbia0534676b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas-song_johnny-marks-laura-leslie-the-peter-pan-orchestra-a_gbia0533972a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20SONG%20-%20Johnny%20Marks.mp3",
+    "length": 149.13,
+    "series": "Laura Leslie",
+    "title": "The Night Before Christmas Song",
+    "item": "https://archive.org/details/78_the-night-before-christmas-song_johnny-marks-laura-leslie-the-peter-pan-orchestra-a_gbia0533972a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWildRootCreamOil.mp3",
+    "length": 42.5,
+    "series": "A word from our sponsor",
+    "title": "Wildroot Cream-Oil",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_all-around-the-xmas-tree_mark-warnow-stuart-klein-hit-parade-orch.-and-chorus_gbia0001208a/All%20Around%20The%20Xmas%20Tree%20-%20Mark%20Warnow%20-%20Stuart.mp3",
+    "length": 187.73,
+    "series": "Mark Warnow",
+    "title": "All Around The Xmas Tree",
+    "date": "1945",
+    "item": "https://archive.org/details/78_all-around-the-xmas-tree_mark-warnow-stuart-klein-hit-parade-orch.-and-chorus_gbia0001208a"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-the-midnight-clear-angels-from-the-realms-of-glory_lorin-whitney-will_gbia0310865b/IT%20CAME%20UPON%20THE%20MIDNIGHT%20CLEAR%3B%20ANGELS%20FR%20-%20LORIN%20WHITNEY.mp3",
+    "length": 183.07,
+    "series": "Lorin Whitney",
+    "title": "It Came Upon The Midnight Clear; Angels From The Realms Of Glory",
+    "item": "https://archive.org/details/78_it-came-upon-the-midnight-clear-angels-from-the-realms-of-glory_lorin-whitney-will_gbia0310865b"
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fideles-o-come-all-ye-faithful_beniamino-gigli-traditional-rinaldo-zambon_gbia0122574a/ADESTE%20FIDELES%20%28O%20COME%2C%20ALL%20YE%20FAITHFUL%29%20-%20Beniamino%20Gigli.mp3",
+    "length": 171,
+    "series": "Beniamino Gigli",
+    "title": "Adeste Fideles (o Come, All Ye Faithful)",
+    "date": "1947",
+    "item": "https://archive.org/details/78_adeste-fideles-o-come-all-ye-faithful_beniamino-gigli-traditional-rinaldo-zambon_gbia0122574a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-send-someone-to-me_galli-sisters-galli-sisters-tishman-isaac-radd-greene_gbia0466457b/SANTA%20SEND%20SOMEONE%20TO%20ME%20-%20GALLI%20SISTERS.mp3",
+    "length": 186.06,
+    "series": "Galli Sisters",
+    "title": "Santa Send Someone To Me",
+    "date": "September 25, 1950",
+    "item": "https://archive.org/details/78_santa-send-someone-to-me_galli-sisters-galli-sisters-tishman-isaac-radd-greene_gbia0466457b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OLGACOAL.MP3",
+    "length": 26.25,
+    "series": "A word from our sponsor",
+    "title": "Olga Coal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_bring-a-torch-jeannette-isabella-good-christian-men-rejoice_charles-r-cronham_gbia0034357a/Bring%20a%20Torch%20Jeannette%2C%20Isabella%3B%20Go%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 181.49,
+    "series": "Charles R. Cronham",
+    "title": "Bring a Torch Jeannette, Isabella; Good Christian Men Rejoice",
+    "date": "1960",
+    "item": "https://archive.org/details/78_bring-a-torch-jeannette-isabella-good-christian-men-rejoice_charles-r-cronham_gbia0034357a"
+   },
+   {
+    "src": "https://archive.org/download/78_her-komme-jesus-dine-sma_otte-svendsen-kai-mortensens-stryorkester-j-a-p-schul_gbia0120130b/Her%20komme%2C%20Jesus%2C%20dine%20sma%20-%20Otte%20Svendsen.mp3",
+    "length": 192.55,
+    "series": "Otte Svendsen",
+    "title": "Her komme, Jesus, dine sma",
+    "item": "https://archive.org/details/78_her-komme-jesus-dine-sma_otte-svendsen-kai-mortensens-stryorkester-j-a-p-schul_gbia0120130b"
+   },
+   {
+    "src": "https://archive.org/download/78_god-rest-you-merry-gentlemen-angels-we-have-heard-on-high-good-king-wenceslas_god_gbia0375273a/God%20Rest%20You%20Merry%20Gentlemen%3B%20Angels%20We%20%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 386.21,
+    "series": "Godfrey Malcolm",
+    "title": "God Rest You Merry Gentlemen; Angels We Have Heard On High; Good King Wenceslas",
+    "item": "https://archive.org/details/78_god-rest-you-merry-gentlemen-angels-we-have-heard-on-high-good-king-wenceslas_god_gbia0375273a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_the-caroleers-vicky-kasen_gbia0322414b/O%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20THE%20CAROLEERS.mp3",
+    "length": 112.85,
+    "series": "The Caroleers",
+    "title": "O Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_the-caroleers-vicky-kasen_gbia0322414b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
+    "length": 45.51,
+    "series": "A word from our sponsor",
+    "title": "Bubble Up",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_gbia0219431f/LET%20IT%20SNOW%2C%20LET%20IT%20SNOW%2C%20LET%20IT%20SNOW.mp3",
+    "length": 73.51,
+    "series": "Unknown artist",
+    "title": "Let It Snow, Let It Snow, Let It Snow",
+    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_gbia0219431f"
+   },
+   {
+    "src": "https://archive.org/download/78_o-holy-night-come-ye-lofty_charles-r-cronham_gbia0034357b/O%20Holy%20Night%3B%20Come%20Ye%20Lofty%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 223.95,
+    "series": "Charles R. Cronham",
+    "title": "O Holy Night; Come Ye Lofty",
+    "date": "1960",
+    "item": "https://archive.org/details/78_o-holy-night-come-ye-lofty_charles-r-cronham_gbia0034357b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_judy-harriet-the-toppers-the-les-morgan-orchestra-t_gbia0439575a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20JUDY%20HARRIET.mp3",
+    "length": 153.86,
+    "series": "Judy Harriet",
+    "title": "I Saw Mommy Kissing Santa Claus",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_judy-harriet-the-toppers-the-les-morgan-orchestra-t_gbia0439575a"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_charles-r-cronham_gbia0187401b/HARK%2C%20THE%20HERALD%20ANGELS%20SING%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 90.45,
+    "series": "Charles R. Cronham",
+    "title": "Hark, The Herald Angels Sing",
+    "date": "1960",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_charles-r-cronham_gbia0187401b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnchorHocking.mp3",
+    "length": 44.85,
+    "series": "A word from our sponsor",
+    "title": "Anchor Hocking",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0123489a/JEG%20SAA%20JULEMANDEN%20KYSSE%20MOR%20%28I%20saw%20momm%20-%20RAQUEL%20RASTENNI.mp3",
+    "length": 185.48,
+    "series": "Raquel Rastenni",
+    "title": "JEG SAA JULEMANDEN KYSSE MOR (I saw mommy kissing Santa Claus)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0123489a"
+   },
+   {
+    "src": "https://archive.org/download/78_good-king-wenceslas_godfrey-malcolm-fredrico_gbia0219429g/GOOD%20KING%20WENCESLAS%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 134.73,
+    "series": "Godfrey Malcolm",
+    "title": "Good King Wenceslas",
+    "item": "https://archive.org/details/78_good-king-wenceslas_godfrey-malcolm-fredrico_gbia0219429g"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-fe_baby-boy-warren-warren_gbia0076865b/Santa%20Fe%20-%20Baby%20Boy%20Warren%20-%20Warren.mp3",
+    "length": 148.53,
+    "series": "Baby Boy Warren",
+    "title": "Santa Fe",
+    "date": "1954",
+    "item": "https://archive.org/details/78_santa-fe_baby-boy-warren-warren_gbia0076865b"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nose-reindeer_kathy-march-lawrence-piano-roll-cook-qrs-piano_gbia0433043b/RUDOLPH%2C%20THE%20RED%20NOSE%20REINDEER%20-%20KATHY%20MARCH.mp3",
+    "length": 138.7,
+    "series": "Kathy March",
+    "title": "Rudolph, the Red Nose Reindeer",
+    "date": "1950",
+    "item": "https://archive.org/details/78_rudolph-the-red-nose-reindeer_kathy-march-lawrence-piano-roll-cook-qrs-piano_gbia0433043b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGmGuardianMaintenance.mp3",
+    "length": 59.74,
+    "series": "A word from our sponsor",
+    "title": "GM Guardian Maintenance",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-come-all-ye-faithful_st-patricks-boys-choir_gbia0475739a/Silent%20Night%3B%20Come%20All%20Ye%20Faith%20-%20St.%20Patrick%27s%20Boys%20Choir.mp3",
+    "length": 215.21,
+    "series": "St. Patrick's Boys Choir",
+    "title": "Silent Night; Come All Ye Faithful",
+    "item": "https://archive.org/details/78_silent-night-come-all-ye-faithful_st-patricks-boys-choir_gbia0475739a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer-frosty-the-snowman_marks-nelson-rollins_gbia0035049a/Rudolph%20the%20Red%20Nosed%20Reindeer%3B%20Frosty%20the%20Snowman%20-%20Marks.mp3",
+    "length": 311.69,
+    "series": "Marks",
+    "title": "Rudolph the Red Nosed Reindeer; Frosty the Snowman",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer-frosty-the-snowman_marks-nelson-rollins_gbia0035049a"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-adeste-fideles_johnny-kay-the-caroleers-vicky-kasen_gbia0533969b/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR%3B%20ADESTE%20FIDELES.mp3",
+    "length": 117.19,
+    "series": "Johnny Kay",
+    "title": "It Came Upon A Midnight Clear; Adeste Fideles",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-adeste-fideles_johnny-kay-the-caroleers-vicky-kasen_gbia0533969b"
+   },
+   {
+    "src": "https://archive.org/download/78_im-gettin-nuttin-for-christmas_ricky-zahnd-the-blue-jeaners-tony-mottola-orchesra-s_gbia3025759a/I%27m%20Gettin%27%29%20NUTTIN%27%20FOR%20CHRISTMAS%20-%20RICKY%20ZAHND.mp3",
+    "length": 173.49,
+    "series": "Ricky Zahnd",
+    "title": "(I'm Gettin') NUTTIN' FOR CHRISTMAS",
+    "item": "https://archive.org/details/78_im-gettin-nuttin-for-christmas_ricky-zahnd-the-blue-jeaners-tony-mottola-orchesra-s_gbia3025759a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/REYNOLDSALUMINUM.mp3",
+    "length": 36.23,
+    "series": "A word from our sponsor",
+    "title": "Reynolds Aluminum",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_here-comes-santa-claus_gbia0195429g/HERE%20COMES%20SANTA%20CLAUS.mp3",
+    "length": 149.11,
+    "series": "Unknown artist",
+    "title": "Here Comes Santa Claus",
+    "item": "https://archive.org/details/78_here-comes-santa-claus_gbia0195429g"
+   },
+   {
+    "src": "https://archive.org/download/78_lonesome-christmas_lowell-fulson-lloyd-glenn_gbia0182887a/LONESOME%20CHRISTMAS%20-%20LOWELL%20FULSON%20-%20Lloyd%20Glenn.mp3",
+    "length": 156,
+    "series": "Lowell Fulson",
+    "title": "Lonesome Christmas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_lonesome-christmas_lowell-fulson-lloyd-glenn_gbia0182887a"
+   },
+   {
+    "src": "https://archive.org/download/78_pussycats-christmas-part-2_albert-grobe-gene-lowell-chorus-m-w-brown_gbia7036267b/PUSSYCAT%27S%20CHRISTMAS%20-%20Part%202%20-%20ALBERT%20GROBE.mp3",
+    "length": 149.69,
+    "series": "Gene Lowell Chorus",
+    "title": "PUSSYCAT'S CHRISTMAS - Part 2",
+    "item": "https://archive.org/details/78_pussycats-christmas-part-2_albert-grobe-gene-lowell-chorus-m-w-brown_gbia7036267b"
+   },
+   {
+    "src": "https://archive.org/download/78_pussycats-christmas_albert-grobe-gene-lowell-chorus-m-w-brown_gbia0242078b/PUSSYCAT%27S%20CHRISTMAS%20-%20ALBERT%20GROBE%20-%20Gene%20Lowell%20Chorus.mp3",
+    "length": 149.29,
+    "series": "Albert Grobe",
+    "title": "Pussycat'S Christmas",
+    "item": "https://archive.org/details/78_pussycats-christmas_albert-grobe-gene-lowell-chorus-m-w-brown_gbia0242078b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
+    "length": 86.85,
+    "series": "A word from our sponsor",
+    "title": "Sal Hepatica",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-carols_robert-rheims_gbia0034369a/Christmas%20Carols%20-%20Robert%20Rheims.mp3",
+    "length": 172.78,
+    "series": "Robert Rheims",
+    "title": "Christmas Carols",
+    "item": "https://archive.org/details/78_christmas-carols_robert-rheims_gbia0034369a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel-holy-night_elmer-ihrke_gbia0059641a/The%20First%20Noel%3B%20Holy%20Night%20-%20Elmer%20Ihrke.mp3",
+    "length": 179.56,
+    "series": "Elmer Ihrke",
+    "title": "The First Noel; Holy Night",
+    "item": "https://archive.org/details/78_the-first-noel-holy-night_elmer-ihrke_gbia0059641a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-dont-want-to-be-alone-for-christmas_menaker-donafrio-russell_gbia0006789a/I%20Don%27t%20Want%20To%20Be%20Alone%20For%20Christmas%20-%20Menaker.mp3",
+    "length": 187,
+    "series": "Menaker",
+    "title": "I Don't Want To Be Alone For Christmas",
+    "date": "1952",
+    "item": "https://archive.org/details/78_i-dont-want-to-be-alone-for-christmas_menaker-donafrio-russell_gbia0006789a"
+   },
+   {
+    "src": "https://archive.org/download/78_oh-holy-night-cantique-de-nol_arno_gbia0381658b/OH%2C%20HOLY%20NIGHT%20%28Cantique%20de%20No%C3%ABl%29%20-%20Arno.mp3",
+    "length": 165.69,
+    "series": "Arno",
+    "title": "OH, HOLY NIGHT (Cantique de Noël)",
+    "item": "https://archive.org/details/78_oh-holy-night-cantique-de-nol_arno_gbia0381658b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsLifebouySoap.mp3",
+    "length": 64.18,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Soap",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jasmin-aus-santa-monica-jasmin-from-santa-monica_erni-bieler-the-sunshine-revellers_gbia3027817b/JASMIN%20AUS%20SANTA%20MO%20-%20ERNI%20BIELER%20%26%20THE%20SUNSHINE%20REVELLERS.mp3",
+    "length": 208.31,
+    "series": "Erni Bieler & The Sunshine Revellers",
+    "title": "JASMIN AUS SANTA MONICA (Jasmin from Santa Monica)",
+    "item": "https://archive.org/details/78_jasmin-aus-santa-monica-jasmin-from-santa-monica_erni-bieler-the-sunshine-revellers_gbia3027817b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-bells_ballard_gbia0533593a/Christmas%20Bells%20-%20BALLARD.mp3",
+    "length": 78.78,
+    "series": "Ballard",
+    "title": "Christmas Bells",
+    "item": "https://archive.org/details/78_christmas-bells_ballard_gbia0533593a"
+   },
+   {
+    "src": "https://archive.org/download/78_break-forth-o-beauteous-heavenly-light-away-in-a-manger_charles-r-cronham_gbia0034359b/Break%20Forth%20O%20Beauteous%20Heavenly%20Ligh%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 178.49,
+    "series": "Charles R. Cronham",
+    "title": "Break Forth O Beauteous Heavenly Light; Away in a Manger",
+    "date": "1960",
+    "item": "https://archive.org/details/78_break-forth-o-beauteous-heavenly-light-away-in-a-manger_charles-r-cronham_gbia0034359b"
+   },
+   {
+    "src": "https://archive.org/download/78_du-kaere-gamle-julemand-je-ne-crois-plus-au-pere-noel_svend-nicolaisens-danseork_gbia0120082a/Du%20kaere%2C%20gamle%20julemand%20-%20Svend%20Nicolaisens%20danseorkester.mp3",
+    "length": 165.81,
+    "series": "Svend Nicolaisens danseorkester",
+    "title": "Du kaere, gamle julemand (Je ne crois plus au Pere Noel)",
+    "item": "https://archive.org/details/78_du-kaere-gamle-julemand-je-ne-crois-plus-au-pere-noel_svend-nicolaisens-danseork_gbia0120082a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAridDeoderant.mp3",
+    "length": 46.02,
+    "series": "A word from our sponsor",
+    "title": "Arrid Deodorant",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_we-wanna-see-santa-do-the-mambo_john-greer-fred-smith-horace-webb_gbia0061007b/We%20Wanna%20See%20Santa%20Do%20the%20Mambo%20-%20John%20Greer.mp3",
+    "length": 157,
+    "series": "John Greer",
+    "title": "We Wanna See Santa Do the Mambo",
+    "date": "1954",
+    "item": "https://archive.org/details/78_we-wanna-see-santa-do-the-mambo_john-greer-fred-smith-horace-webb_gbia0061007b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-ye-merry-gentlemen-adeste-fideles_elmer-ihrke_gbia0317697a/O%20COME%20YE%20MERRY%20GENTLEMEN%20-%20ADESTE%20FIDELES%20-%20Elmer%20Ihrke.mp3",
+    "length": 172,
+    "series": "Elmer Ihrke",
+    "title": "O Come Ye Merry Gentlemen - Adeste Fideles",
+    "item": "https://archive.org/details/78_o-come-ye-merry-gentlemen-adeste-fideles_elmer-ihrke_gbia0317697a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful-o-holy-night-cantique-noel-god-give-ye-merry-christmas-t_gbia0426809b/O%20Come%20All%20Ye%20Faithful%3B%20O%20Holy%20Night%20-%20C%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 373.67,
+    "series": "Godfrey Malcolm",
+    "title": "O Come All Ye Faithful; O Holy Night - Cantique Noel; God Give Ye Merry Christmas Tide",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful-o-holy-night-cantique-noel-god-give-ye-merry-christmas-t_gbia0426809b"
+   },
+   {
+    "src": "https://archive.org/download/78_good-king-wenceslas-tannenbaum-deck-the-halls_the-varsity-caroleers_gbia0006796b/Good%20King%20Wenceslas%3B%20Tannenbaum%3B%20D%20-%20The%20Varsity%20Caroleers.mp3",
+    "length": 204,
+    "series": "The Varsity Caroleers",
+    "title": "Good King Wenceslas; Tannenbaum; Deck The Halls",
+    "date": "1950",
+    "item": "https://archive.org/details/78_good-king-wenceslas-tannenbaum-deck-the-halls_the-varsity-caroleers_gbia0006796b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/STUDEBAKERLARK.mp3",
+    "length": 43.17,
+    "series": "A word from our sponsor",
+    "title": "Studebaker Lark",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel-a-joyous-christmas-song_charles-r-cronham_gbia0034360b/The%20First%20Noel%3B%20A%20Joyous%20Christmas%20So%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 171.32,
+    "series": "Charles R. Cronham",
+    "title": "The First Noel; A Joyous Christmas Song",
+    "date": "1960",
+    "item": "https://archive.org/details/78_the-first-noel-a-joyous-christmas-song_charles-r-cronham_gbia0034360b"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_johnny-scat-davis-and-his-orchestra-irving-berlin_gbia0037482a/White%20Christmas%20-%20Johnny%20%22Scat%22%20Davis%20and%20his%20Orchestra.mp3",
+    "length": 189,
+    "series": "Johnny \"Scat\" Davis and his Orchestra",
+    "title": "White Christmas",
+    "date": "1942",
+    "item": "https://archive.org/details/78_white-christmas_johnny-scat-davis-and-his-orchestra-irving-berlin_gbia0037482a"
+   },
+   {
+    "src": "https://archive.org/download/78_hello-mr-snowman_johnny-lane-lane-quartet-warner-weiner-gold_gbia0285775b/HELLO%20MR.%20SNOWMAN%20-%20JOHNNY%20LANE%20-%20LANE%20QUARTET.mp3",
+    "length": 160.63,
+    "series": "Johnny Lane",
+    "title": "Hello Mr. Snowman",
+    "date": "1949",
+    "item": "https://archive.org/details/78_hello-mr-snowman_johnny-lane-lane-quartet-warner-weiner-gold_gbia0285775b"
+   },
+   {
+    "src": "https://archive.org/download/78_sleigh-bells_gbia0033131b/Sleigh%20Bells.mp3",
+    "length": 185.68,
+    "series": "Unknown artist",
+    "title": "Sleigh Bells",
+    "date": "1960",
+    "item": "https://archive.org/details/78_sleigh-bells_gbia0033131b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BLUECOAL.MP3",
+    "length": 22.27,
+    "series": "A word from our sponsor",
+    "title": "Blue Coal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fideles-o-come-all-ye-faithful_ken-griffin_gbia0048606b/Adeste%20Fideles%20%28O%20Come%2C%20All%20Ye%20Faithful%29%20-%20Ken%20Griffin.mp3",
+    "length": 180,
+    "series": "Ken Griffin",
+    "title": "Adeste Fideles (O Come, All Ye Faithful)",
+    "date": "1950",
+    "item": "https://archive.org/details/78_adeste-fideles-o-come-all-ye-faithful_ken-griffin_gbia0048606b"
+   },
+   {
+    "src": "https://archive.org/download/78_xmas-tree-song_pearl-five_gbia0099670a/Xmas%20Tree%20Song%20-%20Pearl%20Five.mp3",
+    "length": 145,
+    "series": "Pearl Five",
+    "title": "Xmas Tree Song",
+    "date": "1947",
+    "item": "https://archive.org/details/78_xmas-tree-song_pearl-five_gbia0099670a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas-part-1_mort-lawrence-vicky-kasen_gbia0533978a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20Part%201%20-%20MORT%20LAWRENCE.mp3",
+    "length": 114.04,
+    "series": "Mort Lawrence",
+    "title": "THE NIGHT BEFORE CHRISTMAS - Part 1",
+    "item": "https://archive.org/details/78_the-night-before-christmas-part-1_mort-lawrence-vicky-kasen_gbia0533978a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-holy-night_beniamino-gigli-praga-gruuber-rinaldo-zamboni_gbia0122574b/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20Beniamino%20Gigli.mp3",
+    "length": 162,
+    "series": "Beniamino Gigli",
+    "title": "Silent Night, Holy Night",
+    "date": "1947",
+    "item": "https://archive.org/details/78_silent-night-holy-night_beniamino-gigli-praga-gruuber-rinaldo-zamboni_gbia0122574b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PATTICAKECOOKIES.mp3",
+    "length": 45.98,
+    "series": "A word from our sponsor",
+    "title": "Patti-Cake Cookies",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_twas-the-night-before-christmas_mort-lawrence-vicky-kasen_gbia3011413a/%27TWAS%20THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20MORT%20LAWRENCE.mp3",
+    "length": 208.91,
+    "series": "Mort Lawrence",
+    "title": "'Twas The Night Before Christmas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_twas-the-night-before-christmas_mort-lawrence-vicky-kasen_gbia3011413a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas-the-first-noel_irving-berlin_gbia0035628a/White%20Christmas%3B%20The%20First%20Noel%20-%20Irving%20Berlin.mp3",
+    "length": 320,
+    "series": "Irving Berlin",
+    "title": "White Christmas; The First Noel",
+    "date": "1956",
+    "item": "https://archive.org/details/78_white-christmas-the-first-noel_irving-berlin_gbia0035628a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem-o-tannenbaum-i-saw-three-ships_louis-garisto_gbia0459027a/O%20LITTLE%20TOWN%20OF%20BETHLEHEM%3B%20O%20TANNENBAUM%3B%20%20-%20Louis%20Garisto.mp3",
+    "length": 287.41,
+    "series": "Louis Garisto",
+    "title": "O Little Town Of Bethlehem; O Tannenbaum; I Saw Three Ships",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem-o-tannenbaum-i-saw-three-ships_louis-garisto_gbia0459027a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-phil-springer-jimmy-ley_gbia0285966a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
+    "length": 149.06,
+    "series": "Betty Johnson",
+    "title": "I Want Eddie Fisher For Christmas",
+    "date": "1954",
+    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-phil-springer-jimmy-ley_gbia0285966a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/VIMMSVITAMINS.mp3",
+    "length": 21.64,
+    "series": "A word from our sponsor",
+    "title": "Vimms Vitamins",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-chopsticks-twas-a-night-before-christmas_bobby-burns-peter-pan-orchestra-_gbia0534209b/CHRISTMAS%20CHOPSTICKS%20-%20TWAS%20A%20NIGHT%20BEFORE%20C.mp3",
+    "length": 87.94,
+    "series": "Bobby Burns",
+    "title": "Christmas Chopsticks - Twas A Night Before Christmas",
+    "item": "https://archive.org/details/78_christmas-chopsticks-twas-a-night-before-christmas_bobby-burns-peter-pan-orchestra-_gbia0534209b"
+   },
+   {
+    "src": "https://archive.org/download/78_what-child-is-this_gbia3042331b/WHAT%20CHILD%20IS%20THIS.mp3",
+    "length": 147.56,
+    "series": "Unknown artist",
+    "title": "What Child Is This?",
+    "item": "https://archive.org/details/78_what-child-is-this_gbia3042331b"
+   },
+   {
+    "src": "https://archive.org/download/78_sing-a-song-of-christmas_the-smoothies-barry-thomson-ted-cott_gbia0110890a/SING-A-SONG%20OF%20CHRISTMAS%20-%20The%20Smoothies.mp3",
+    "length": 186,
+    "series": "The Smoothies",
+    "title": "Sing-A-Song Of Christmas",
+    "item": "https://archive.org/details/78_sing-a-song-of-christmas_the-smoothies-barry-thomson-ted-cott_gbia0110890a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_mike-stewart-the-sandpipers-john-marks-mitchell-mill_gbia0534626/01%20-%20RUDOLPH%20THE%20RED-NOSED%20REINDEER%20-%20MIKE%20STEWART.mp3",
+    "length": 105,
+    "series": "Mike Stewart",
+    "title": "Rudolph the Red-Nosed Reindeer",
+    "date": "1951",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_mike-stewart-the-sandpipers-john-marks-mitchell-mill_gbia0534626"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdmiral.mp3",
+    "length": 77.38,
+    "series": "A word from our sponsor",
+    "title": "Admiral",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_peter-pan-orchestra_gbia0534393/02%20-%20RING%20OUT%20WILD%20BELLS%20-%20PETER%20PAN%20Orchestra.mp3",
+    "length": 119,
+    "series": "Peter Pan Orchestra",
+    "title": "Ring Out Wild Bells",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_peter-pan-orchestra_gbia0534393"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-baby-mambo_pepi-adorno-and-his-orchestra-javits-p-springer-t-springer_gbia0119258b/SANTA%20BABY%20MAMBO%20-%20Pepi%20Adorno%20and%20his%20Orchestra.mp3",
+    "length": 176.97,
+    "series": "Pepi Adorno and his Orchestra",
+    "title": "Santa Baby Mambo",
+    "date": "1954",
+    "item": "https://archive.org/details/78_santa-baby-mambo_pepi-adorno-and-his-orchestra-javits-p-springer-t-springer_gbia0119258b"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear_donald-dame_gbia0533371b/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR%20-%20DONALD%20DAME.mp3",
+    "length": 109.95,
+    "series": "Donald Dame",
+    "title": "It Came Upon A Midnight Clear",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear_donald-dame_gbia0533371b"
+   },
+   {
+    "src": "https://archive.org/download/78_im-dreaming-of-a-white-christmas_phil-reed-berlin_gbia0449670a/I%27M%20DREAMING%20OF%20A%20WHITE%20CHRISTMAS%20-%20PHIL%20REED.mp3",
+    "length": 186.29,
+    "series": "Phil Reed",
+    "title": "I'm Dreaming of a White Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_im-dreaming-of-a-white-christmas_phil-reed-berlin_gbia0449670a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ENERGINESHOEWHITE.mp3",
+    "length": 26.01,
+    "series": "A word from our sponsor",
+    "title": "Energine Shoe White",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_1-the-first-noel-2-joy-to-the-world_rosemary-page-yuletide-chorus_gbia0535600b/1.%20THE%20FIRST%20NOEL%3B%202.%20JOY%20TO%20THE%20WORLD%20-%20ROSEMARY%20PAGE.mp3",
+    "length": 195,
+    "series": "Rosemary Page",
+    "title": "1. The First Noel; 2. Joy to the World",
+    "date": "1952",
+    "item": "https://archive.org/details/78_1-the-first-noel-2-joy-to-the-world_rosemary-page-yuletide-chorus_gbia0535600b"
+   },
+   {
+    "src": "https://archive.org/download/78_8783-Et-barn-er-fodt-i-Bethlehem/8783-Et-barn-er-fodt-i-Bethlehem.mp3",
+    "length": 198.22,
+    "series": "Otte Svendsen",
+    "title": "Et barn er fodt i Bethlehem",
+    "date": "1952",
+    "item": "https://archive.org/details/78_8783-Et-barn-er-fodt-i-Bethlehem"
+   },
+   {
+    "src": "https://archive.org/download/78_el-cant-des-ocells-song-of-the-birds_victoria-de-los-angeles-renata-tarrago-gra_gbia0076911a/El%20Cant%20des%20Ocells%20%28Song%20of%20the%20%20-%20Victoria%20de%20los%20Angeles.mp3",
+    "length": 158,
+    "series": "Victoria de los Angeles",
+    "title": "El Cant des Ocells (Song of the Birds)",
+    "date": "1952",
+    "item": "https://archive.org/details/78_el-cant-des-ocells-song-of-the-birds_victoria-de-los-angeles-renata-tarrago-gra_gbia0076911a"
+   },
+   {
+    "src": "https://archive.org/download/78_god-rest-you-merry-gentlemen-christians-awake_arno_gbia0367138b/GOD%20REST%20YOU%2C%20MERRY%20GENTLEMEN%3B%20CHRISTIANS%20AWAKE%20-%20Arno.mp3",
+    "length": 174.04,
+    "series": "Arno",
+    "title": "God Rest You, Merry Gentlemen; Christians Awake",
+    "item": "https://archive.org/details/78_god-rest-you-merry-gentlemen-christians-awake_arno_gbia0367138b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsIngramGasoline.mp3",
+    "length": 60.83,
+    "series": "A word from our sponsor",
+    "title": "Ingram Gasoline",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_ill-keep-christmas-in-my-heart_alan-mcgill-carmichael-singers-virgil-and-blanche-b_gbia0473837b/I%27LL%20KEEP%20CHRISTMAS%20IN%20MY%20HEART%20-%20ALAN%20McGILL.mp3",
+    "length": 159.41,
+    "series": "Alan McGill",
+    "title": "I'll Keep Christmas In My Heart",
+    "item": "https://archive.org/details/78_ill-keep-christmas-in-my-heart_alan-mcgill-carmichael-singers-virgil-and-blanche-b_gbia0473837b"
+   },
+   {
+    "src": "https://archive.org/download/78_theres-a-christmas-tree-in-heaven_four-aces-max-spickol-bill-borelli-jr_gbia0078530a/There%27s%20a%20Christmas%20Tree%20In%20Heaven%20-%20Four%20Aces.mp3",
+    "length": 207,
+    "series": "Four Aces",
+    "title": "There's a Christmas Tree In Heaven",
+    "date": "1951",
+    "item": "https://archive.org/details/78_theres-a-christmas-tree-in-heaven_four-aces-max-spickol-bill-borelli-jr_gbia0078530a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-phil-springer-jimmy-ley_gbia0285967a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
+    "length": 149.4,
+    "series": "Betty Johnson",
+    "title": "I Want Eddie Fisher for Christmas",
+    "date": "1954",
+    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-phil-springer-jimmy-ley_gbia0285967a"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_the-kingsmen-michael-king_gbia0533454b/HARK%20THE%20HERALD%20ANGELS%20SING%20-%20THE%20KINGSMEN.mp3",
+    "length": 78.85,
+    "series": "The Kingsmen",
+    "title": "Hark The Herald Angels Sing",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_the-kingsmen-michael-king_gbia0533454b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/IRONIZEDYEAST.mp3",
+    "length": 53.55,
+    "series": "A word from our sponsor",
+    "title": "Ironized Yeast",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_merry-christmas_frank-gallagher-dana-serenaders-ken-hecht-walt-dana_gbia0024837a/Merry%20Christmas%20-%20Frank%20Gallagher%20-%20Dana%20Serenaders.mp3",
+    "length": 163,
+    "series": "Frank Gallagher",
+    "title": "Merry Christmas",
+    "date": "1949",
+    "item": "https://archive.org/details/78_merry-christmas_frank-gallagher-dana-serenaders-ken-hecht-walt-dana_gbia0024837a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-polka_lil-wally-and-the-lucky-harmony-boys-orchestra-w-jagiello_gbia0530220b/JINGLE%20BELLS%20POLKA%20-%20LI%27L%20WALLY%20And%20The%20Lucky%20Harmony%20Boys%20Orchestra.mp3",
+    "length": 140,
+    "series": "LI'L WALLY And The Lucky Harmony Boys Orchestra",
+    "title": "Jingle Bells Polka",
+    "date": "1957",
+    "item": "https://archive.org/details/78_jingle-bells-polka_lil-wally-and-the-lucky-harmony-boys-orchestra-w-jagiello_gbia0530220b"
+   },
+   {
+    "src": "https://archive.org/download/78_parade-of-the-wooden-soldiers_the-sandpipers-anne-lloyd-mitchell-miller-macdonald-j_gbia0534118a/PARADE%20OF%20THE%20WOODEN%20SOLDIERS%20-%20THE%20SANDPIPERS.mp3",
+    "length": 99,
+    "series": "The Sandpipers",
+    "title": "Parade Of The Wooden Soldiers",
+    "date": "1951",
+    "item": "https://archive.org/details/78_parade-of-the-wooden-soldiers_the-sandpipers-anne-lloyd-mitchell-miller-macdonald-j_gbia0534118a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas_earl-rogers_gbia0533985a/CHRISTMAS%20-%20EARL%20ROGERS.mp3",
+    "length": 109.53,
+    "series": "Earl Rogers",
+    "title": "Christmas",
+    "item": "https://archive.org/details/78_christmas_earl-rogers_gbia0533985a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GROVESNOSEDROPS.mp3",
+    "length": 70.71,
+    "series": "A word from our sponsor",
+    "title": "Grove's Nose Drops",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_merry-christmas_frank-gallagher-dana-serenaders-ken-hecht-walt-dana_gbia0288519a/MERRY%20CHRISTMAS%20-%20FRANK%20GALLAGHER%20-%20DANA%20SERENADERS.mp3",
+    "length": 163.86,
+    "series": "Frank Gallagher",
+    "title": "Merry Christmas",
+    "date": "1948",
+    "item": "https://archive.org/details/78_merry-christmas_frank-gallagher-dana-serenaders-ken-hecht-walt-dana_gbia0288519a"
+   },
+   {
+    "src": "https://archive.org/download/78_we-three-kings-of-orient-are-at-solemn-midnight-lo-how-a-rose-eer-blooming_char_gbia0034358a/We%20Three%20Kings%20of%20Orient%20Are%3B%20At%20Sole%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 209.1,
+    "series": "Charles R. Cronham",
+    "title": "We Three Kings of Orient Are; At Solemn Midnight; Lo, How a Rose E'er Blooming",
+    "date": "1960",
+    "item": "https://archive.org/details/78_we-three-kings-of-orient-are-at-solemn-midnight-lo-how-a-rose-eer-blooming_char_gbia0034358a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_new-century-orchestra-w-harris-leon-young_gbia3013059a/JINGLE%20BELLS%20-%20NEW%20CENTURY%20ORCHESTRA%20-%20W.%20Harris.mp3",
+    "length": 128.12,
+    "series": "New Century Orchestra",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_new-century-orchestra-w-harris-leon-young_gbia3013059a"
+   },
+   {
+    "src": "https://archive.org/download/78_on-the-atchison-topeka-and-the-santa-fe_louis-prima-and-his-orchestra-lilyann-caro_gbia0111439a/ON%20THE%20ATCHISON%2C%20TOPEKA%20AN%20-%20Louis%20Prima%20and%20his%20Orchestra.mp3",
+    "length": 168.53,
+    "series": "Louis Prima and his Orchestra",
+    "title": "On The Atchison, Topeka And The Santa Fe",
+    "date": "1945",
+    "item": "https://archive.org/details/78_on-the-atchison-topeka-and-the-santa-fe_louis-prima-and-his-orchestra-lilyann-caro_gbia0111439a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAridDeoderant.mp3",
+    "length": 46.02,
+    "series": "A word from our sponsor",
+    "title": "Arrid Deodorant",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_hvid-jul-white-christmas_hedvig-volmer-irving-berlin-v-skaarup_gbia7015625a/HVID%20JUL%20%28White%20Christmas%29%20-%20HEDVIG%20VOLMER.mp3",
+    "length": 183.93,
+    "series": "Hedvig Volmer",
+    "title": "HVID JUL (White Christmas)",
+    "date": "1951",
+    "item": "https://archive.org/details/78_hvid-jul-white-christmas_hedvig-volmer-irving-berlin-v-skaarup_gbia7015625a"
+   },
+   {
+    "src": "https://archive.org/download/78_merry-christmas-one-all_the-rhythm-kings-isacc-royal-orch-cliff-king_gbia0475076a/MERRY%20CHRISTMAS%20ONE%20%26%20ALL%20-%20THE%20RHYTHM%20KINGS.mp3",
+    "length": 182.64,
+    "series": "The Rhythm Kings",
+    "title": "Merry Christmas One & All",
+    "date": "1950",
+    "item": "https://archive.org/details/78_merry-christmas-one-all_the-rhythm-kings-isacc-royal-orch-cliff-king_gbia0475076a"
+   },
+   {
+    "src": "https://archive.org/download/78_god-give-ye-merry-christmas-tide_godfrey-malcolm-fredrico_gbia0219430f/GOD%20GIVE%20YE%20MERRY%20CHRISTMAS%20TIDE%20-%20Godfrey%20Malcolm.mp3",
+    "length": 71.32,
+    "series": "Godfrey Malcolm",
+    "title": "God Give Ye Merry Christmas Tide",
+    "item": "https://archive.org/details/78_god-give-ye-merry-christmas-tide_godfrey-malcolm-fredrico_gbia0219430f"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-workshop_gbia3005037a/SANTA%20CLAUS%20WORKSHOP.mp3",
+    "length": 176.46,
+    "series": "Unknown artist",
+    "title": "Santa Claus Workshop",
+    "item": "https://archive.org/details/78_santa-claus-workshop_gbia3005037a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POSTUM.MP3",
+    "length": 120.78,
+    "series": "A word from our sponsor",
+    "title": "Postum",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas_the-robin-hood-players_gbia0534677a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20The%20Robin%20Hood%20Players.mp3",
+    "length": 130.79,
+    "series": "The Robin Hood Players",
+    "title": "The Night Before Christmas",
+    "item": "https://archive.org/details/78_the-night-before-christmas_the-robin-hood-players_gbia0534677a"
+   },
+   {
+    "src": "https://archive.org/download/78_home-for-the-holidays_roye-goodrich-the-holidays-roye-goodrich-the-holidays-blake-l_gbia0409858a/HOME%20FOR%20THE%20HOLIDAYS%20-%20ROYE%20GOODRICH%20-%20THE%20HOLIDAYS.mp3",
+    "length": 183.26,
+    "series": "Roye Goodrich",
+    "title": "Home For The Holidays",
+    "date": "1952",
+    "item": "https://archive.org/details/78_home-for-the-holidays_roye-goodrich-the-holidays-roye-goodrich-the-holidays-blake-l_gbia0409858a"
+   },
+   {
+    "src": "https://archive.org/download/78_here-it-is-christmas_harry-noble_gbia0285440b/HERE%20IT%20IS%20CHRISTMAS%20-%20HARRY%20NOBLE.mp3",
+    "length": 174.36,
+    "series": "Harry Noble",
+    "title": "Here It Is Christmas",
+    "item": "https://archive.org/details/78_here-it-is-christmas_harry-noble_gbia0285440b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-holy-night_phil-reed-gruber_gbia0080787a/Silent%20Night%20%28Holy%20Night%29%20-%20Phil%20Reed%20-%20Gruber.mp3",
+    "length": 182,
+    "series": "Phil Reed",
+    "title": "Silent Night (Holy Night)",
+    "date": "1948",
+    "item": "https://archive.org/details/78_silent-night-holy-night_phil-reed-gruber_gbia0080787a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGlocoatWax.mp3",
+    "length": 16.06,
+    "series": "A word from our sponsor",
+    "title": "Glo-Coat Wax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_underneath-the-mistletoe_mickey-carter-and-the-riff-tones-simpkins_gbia0060719b/Underneath%20the%20Mistletoe%20-%20Mickey%20Carter%20and%20the%20Riff-Tones.mp3",
+    "length": 139,
+    "series": "Mickey Carter and the Riff-Tones",
+    "title": "Underneath the Mistletoe",
+    "date": "1950",
+    "item": "https://archive.org/details/78_underneath-the-mistletoe_mickey-carter-and-the-riff-tones-simpkins_gbia0060719b"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dick-edwards-the-peter-pan-chorus-and-orchestra-john_gbia0203787a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20DICK%20EDWARDS.mp3",
+    "length": 181.62,
+    "series": "Dick Edwards",
+    "title": "Rudolph The Red Nosed Reindeer",
+    "date": "1952",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dick-edwards-the-peter-pan-chorus-and-orchestra-john_gbia0203787a"
+   },
+   {
+    "src": "https://archive.org/download/78_sleigh-ride_laura-leslie-the-peter-pan-orchestra-parish-anderson-vicky-kasen_gbia0322414a/SLEIGH%20RIDE%20-%20LAURA%20LESLIE%20-%20the%20Peter%20Pan%20Orchestra.mp3",
+    "length": 115.37,
+    "series": "Laura Leslie",
+    "title": "Sleigh Ride",
+    "item": "https://archive.org/details/78_sleigh-ride_laura-leslie-the-peter-pan-orchestra-parish-anderson-vicky-kasen_gbia0322414a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-on-tannenbaum_ken-griffin_gbia0323731a/JINGLE%20BELLS%3B%20ON%20TANNENBAUM%20-%20KEN%20GRIFFIN.mp3",
+    "length": 313.96,
+    "series": "Ken Griffin",
+    "title": "Jingle Bells; On Tannenbaum",
+    "item": "https://archive.org/details/78_jingle-bells-on-tannenbaum_ken-griffin_gbia0323731a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCheverolet.mp3",
+    "length": 67.99,
+    "series": "A word from our sponsor",
+    "title": "Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_something-barked-on-christmas-morning_ricky-zahnd-the-blue-jeaners-tony-mottola-orc_gbia3025759b/SOMETHING%20BARKED%20ON%20CHRISTMAS%20MORNING%20-%20RICKY%20ZAHND.mp3",
+    "length": 163.64,
+    "series": "Ricky Zahnd",
+    "title": "Something Barked On Christmas Morning",
+    "item": "https://archive.org/details/78_something-barked-on-christmas-morning_ricky-zahnd-the-blue-jeaners-tony-mottola-orc_gbia3025759b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingling-the-bells_frank-signorelli-and-his-quintet-frank-cheech-signorelli-phil_gbia0164832b/JINGLING%20THE%20BELLS%20-%20Frank%20Signorelli%20and%20His%20Quintet.mp3",
+    "length": 180.57,
+    "series": "Frank Signorelli and His Quintet",
+    "title": "Jingling The Bells",
+    "date": "1946",
+    "item": "https://archive.org/details/78_jingling-the-bells_frank-signorelli-and-his-quintet-frank-cheech-signorelli-phil_gbia0164832b"
+   },
+   {
+    "src": "https://archive.org/download/78_im-gonna-hand-up-mommys-stocking_bobby-sabatino-and-the-charles-kenny-orchestra-n_gbia0005291a/I%27m%20Gonna%20-%20Bobby%20Sabatino%20and%20The%20Charles%20Kenny%20Orchestra.mp3",
+    "length": 175,
+    "series": "Bobby Sabatino and The Charles Kenny Orchestra",
+    "title": "I'm Gonna Hang Up Mommy's Stocking",
+    "date": "1953",
+    "item": "https://archive.org/details/78_im-gonna-hand-up-mommys-stocking_bobby-sabatino-and-the-charles-kenny-orchestra-n_gbia0005291a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_the-ravens-jimmy-ricks-j-mohr-f-gruber_gbia0322042a/SILENT%20NIGHT%20-%20THE%20RAVENS%20-%20Jimmy%20Ricks%20-%20J.%20Mohr.mp3",
+    "length": 176.06,
+    "series": "The Ravens",
+    "title": "Silent Night",
+    "date": "1948",
+    "item": "https://archive.org/details/78_silent-night_the-ravens-jimmy-ricks-j-mohr-f-gruber_gbia0322042a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWingCigarettes.mp3",
+    "length": 32.99,
+    "series": "A word from our sponsor",
+    "title": "Wing Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_ticha-noc-silent-night_gbia0018213a/Ticha%20Noc%20%28Silent%20Night%29.mp3",
+    "length": 165.89,
+    "series": "Unknown artist",
+    "title": "Ticha Noc (Silent Night)",
+    "item": "https://archive.org/details/78_ticha-noc-silent-night_gbia0018213a"
+   },
+   {
+    "src": "https://archive.org/download/78_glade-jul-dejlige-jul_otte-svendsen-m-statsradiofoniens-underholdningsorkester-c_gbia0124058a/Glade%20jul%2C%20dejlige%20jul%20-%20Otte%20Svendsen%20m.%20Statsradiofoniens%20underholdningsorkester.mp3",
+    "length": 173.41,
+    "series": "Otte Svendsen m. Statsradiofoniens underholdningsorkester",
+    "title": "Glade jul, dejlige jul",
+    "item": "https://archive.org/details/78_glade-jul-dejlige-jul_otte-svendsen-m-statsradiofoniens-underholdningsorkester-c_gbia0124058a"
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fidelis_salvation-army-territorial-staff-band_gbia3011732b/ADESTE%20FIDELIS%20-%20SALVATION%20ARMY%20TERRITORIAL%20STAFF%20BAND.mp3",
+    "length": 203.48,
+    "series": "Salvation Army Territorial Staff Band",
+    "title": "Adeste Fidelis",
+    "item": "https://archive.org/details/78_adeste-fidelis_salvation-army-territorial-staff-band_gbia3011732b"
+   },
+   {
+    "src": "https://archive.org/download/78_all-around-the-xmas-tree_mark-warnow-dick-todd-hit-parade-orch-and-chorus-klein-st_gbia0014551a/All%20Around%20the%20Xmas%20Tree%20-%20Mark%20Warnow%20-%20Dick%20Todd.mp3",
+    "length": 185,
+    "series": "Mark Warnow",
+    "title": "All Around the Xmas Tree",
+    "date": "1945",
+    "item": "https://archive.org/details/78_all-around-the-xmas-tree_mark-warnow-dick-todd-hit-parade-orch-and-chorus-klein-st_gbia0014551a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnchorHocking.mp3",
+    "length": 44.85,
+    "series": "A word from our sponsor",
+    "title": "Anchor Hocking",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_herb-kern-lloyd-sloop-warren-arey_gbia0056767b/Silent%20Night%20-%20Herb%20Kern%20-%20Lloyd%20Sloop%20-%20Warren%20Arey.mp3",
+    "length": 181,
+    "series": "Herb Kern",
+    "title": "Silent Night",
+    "date": "1947",
+    "item": "https://archive.org/details/78_silent-night_herb-kern-lloyd-sloop-warren-arey_gbia0056767b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-christmas-tree-jingle-bells-silent-night_the-robin-hood-caroleers-tannenbaum_gbia0534679b/O%20CHRISTMAS%20TREE%3B%20JINGLE%20BELLS%3B%20-%20The%20Robin%20Hood%20Caroleers.mp3",
+    "length": 153,
+    "series": "The Robin Hood Caroleers",
+    "title": "O Christmas Tree; Jingle Bells; Silent Night",
+    "item": "https://archive.org/details/78_o-christmas-tree-jingle-bells-silent-night_the-robin-hood-caroleers-tannenbaum_gbia0534679b"
+   },
+   {
+    "src": "https://archive.org/download/78_little-town-in-ould-county-down_frank-connors-carlo-sanders-pascoe_gbia0042539a/Little%20Town%20in%20Ould%20County%20Down%20-%20Frank%20Connors.mp3",
+    "length": 184,
+    "series": "Frank Connors",
+    "title": "Little Town in Ould County Down",
+    "date": "1944",
+    "item": "https://archive.org/details/78_little-town-in-ould-county-down_frank-connors-carlo-sanders-pascoe_gbia0042539a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-little-boys-letter-to-santa-claus_jimmie-selph-fowler-arnold-blanchard_gbia0005796b/The%20Little%20Boy%27s%20Letter%20to%20Santa%20Claus%20-%20Jimmie%20Selph.mp3",
+    "length": 191,
+    "series": "Jimmie Selph",
+    "title": "The Little Boy's Letter to Santa Claus",
+    "date": "1947",
+    "item": "https://archive.org/details/78_the-little-boys-letter-to-santa-claus_jimmie-selph-fowler-arnold-blanchard_gbia0005796b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PEPSI.MP3",
+    "length": 42.47,
+    "series": "A word from our sponsor",
+    "title": "Pepsi",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_betty-lou-the-voice-of-tommy-riggs_gbia0218542a/SILENT%20NIGHT%20-%20BETTY%20LOU%20-%20The%20Voice%20of%20Tommy%20Riggs.mp3",
+    "length": 173.74,
+    "series": "Betty Lou",
+    "title": "Silent Night",
+    "date": "1948",
+    "item": "https://archive.org/details/78_silent-night_betty-lou-the-voice-of-tommy-riggs_gbia0218542a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful_the-sandpiper-chorus-mitchell-miller_gbia0533732a/o%20come%2C%20all%20ye%20faithful%20-%20The%20Sandpiper%20Chorus.mp3",
+    "length": 91,
+    "series": "The Sandpiper Chorus",
+    "title": "O Come, All Ye Faithful",
+    "date": "1949",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful_the-sandpiper-chorus-mitchell-miller_gbia0533732a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-christmas-song_monica-lewis-ray-bloch-and-his-orchestra-torme-wells_gbia0014394b/The%20Christmas%20Song%20-%20Monica%20Lewis%20-%20Ray%20Bloch%20and%20His%20Orchestra.mp3",
+    "length": 187,
+    "series": "Monica Lewis",
+    "title": "The Christmas Song",
+    "date": "1947",
+    "item": "https://archive.org/details/78_the-christmas-song_monica-lewis-ray-bloch-and-his-orchestra-torme-wells_gbia0014394b"
+   },
+   {
+    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_danny-oneil-ruby-newman-styne-cahn_gbia0012903b/Let%20It%20Snow%21%20Let%20It%20Snow%21%20Let%20It%20Snow%21%20-%20Danny%20O%27Neil.mp3",
+    "length": 156,
+    "series": "Danny O'Neil",
+    "title": "Let It Snow! Let It Snow! Let It Snow!",
+    "date": "1945",
+    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_danny-oneil-ruby-newman-styne-cahn_gbia0012903b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAjax.mp3",
+    "length": 40.3,
+    "series": "A word from our sponsor",
+    "title": "Ajax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-adeste-fideles_the-caroleers_gbia0006854b/Jingle%20Bells%3B%20Adeste%20Fideles%20-%20The%20Caroleers.mp3",
+    "length": 206.85,
+    "series": "The Caroleers",
+    "title": "Jingle Bells; Adeste Fideles",
+    "date": "1949",
+    "item": "https://archive.org/details/78_jingle-bells-adeste-fideles_the-caroleers_gbia0006854b"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-o-christmas-tree_robert-rheims_gbia0285488b/It%20Came%20Upon%20A%20Midnight%20Clear%3B%20O%20Christmas%20-%20ROBERT%20RHEIMS.mp3",
+    "length": 171.17,
+    "series": "Robert Rheims",
+    "title": "It Came Upon A Midnight Clear; O Christmas Tree",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-o-christmas-tree_robert-rheims_gbia0285488b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_country-dance-band_gbia0006954a/Jingle%20Bells%20-%20Country%20Dance%20Band.mp3",
+    "length": 203,
+    "series": "Country Dance Band",
+    "title": "Jingle Bells",
+    "date": "1948",
+    "item": "https://archive.org/details/78_jingle-bells_country-dance-band_gbia0006954a"
+   },
+   {
+    "src": "https://archive.org/download/78_skaters-waltz_grady-hester-and-his-texans_gbia0007241b/Skater%27s%20Waltz%20-%20Grady%20Hester%20and%20his%20Texans.mp3",
+    "length": 153,
+    "series": "Grady Hester and his Texans",
+    "title": "Skaters' Waltz",
+    "date": "1949",
+    "item": "https://archive.org/details/78_skaters-waltz_grady-hester-and-his-texans_gbia0007241b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Chesterfield Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_its-gonna-be-a-lonely-christmas_the-orioles-rose-sprung_gbia0260708a/%28IT%27S%20GONNA%20BE%20A%29%20LONELY%20CHRISTMAS%20-%20THE%20ORIOLES.mp3",
+    "length": 204.91,
+    "series": "The Orioles",
+    "title": "(It's Gonna Be A) Lonely Christmas",
+    "date": "1949",
+    "item": "https://archive.org/details/78_its-gonna-be-a-lonely-christmas_the-orioles-rose-sprung_gbia0260708a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-dont-want-to-be-alone-for-christmas_marian-caruso-mac-mcguire-menaker-donofrio-ru_gbia0564382b/I%20DON%27T%20WANT%20TO%20BE%20ALONE%20FOR%20-%20MARIAN%20CARUSO%20%26%20MAC%20McGUIRE.mp3",
+    "length": 164,
+    "series": "MARIAN CARUSO & MAC McGUIRE",
+    "title": "I Don't Want to Be Alone for Christmas",
+    "date": "1952",
+    "item": "https://archive.org/details/78_i-dont-want-to-be-alone-for-christmas_marian-caruso-mac-mcguire-menaker-donofrio-ru_gbia0564382b"
+   },
+   {
+    "src": "https://archive.org/download/78_dzwon-dzwon-jingle-bells_st-jaworski-chorem-arfa_gbia3028368a/DZWON%2C%20DZWON%20%28Jingle%20Bells%29%20-%20ST.%20JAWORSKI.mp3",
+    "length": 183.85,
+    "series": "St. Jaworski",
+    "title": "DZWON, DZWON (Jingle Bells)",
+    "item": "https://archive.org/details/78_dzwon-dzwon-jingle-bells_st-jaworski-chorem-arfa_gbia3028368a"
+   },
+   {
+    "src": "https://archive.org/download/78_ill-be-home-for-christmas_sid-peltyn-and-his-orchestra-gannon-kent-ram_gbia0375530a/I%27LL%20BE%20HOME%20FOR%20CHRISTMAS%20-%20SID%20PELTYN%20and%20his%20ORCHESTRA.mp3",
+    "length": 178.31,
+    "series": "SID PELTYN and his ORCHESTRA",
+    "title": "I'Ll Be Home For Christmas",
+    "date": "1943",
+    "item": "https://archive.org/details/78_ill-be-home-for-christmas_sid-peltyn-and-his-orchestra-gannon-kent-ram_gbia0375530a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCrestToothpaste.mp3",
+    "length": 61.97,
+    "series": "A word from our sponsor",
+    "title": "Crest Toothpaste",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_biale-gody---white-christmas_vivian-bazan-irving-berlin_gbia0002418a/Biale%20Gody%20-%20White%20Christmas%20-%20Vivian%20Bazan.mp3",
+    "length": 169,
+    "series": "Vivian Bazan",
+    "title": "Biale Gody - White Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_biale-gody---white-christmas_vivian-bazan-irving-berlin_gbia0002418a"
+   },
+   {
+    "src": "https://archive.org/download/78_carol---noel-silent-night_stamford-high-school-a-cappella-choir-gruber-wilhousky-w_gbia0001195b/Carol%20-%20Noel%3B%20Silent%20Night%20-%20Stamford%20High%20School%20A%20Cappella%20Choir.mp3",
+    "length": 184,
+    "series": "Stamford High School A Cappella Choir",
+    "title": "Carol - Noel; Silent Night",
+    "date": "1950",
+    "item": "https://archive.org/details/78_carol---noel-silent-night_stamford-high-school-a-cappella-choir-gruber-wilhousky-w_gbia0001195b"
+   },
+   {
+    "src": "https://archive.org/download/78_det-kimer-nu-til-julefest_einar-nrby-palle-alsfelt-c-balle-grundtvig_gbia7026139a/Det%20kimer%20nu%20til%20julefest%20-%20Einar%20N%C3%B8rby%20-%20Palle%20Alsfelt.mp3",
+    "length": 193.62,
+    "series": "Einar Nørby",
+    "title": "Det kimer nu til julefest",
+    "item": "https://archive.org/details/78_det-kimer-nu-til-julefest_einar-nrby-palle-alsfelt-c-balle-grundtvig_gbia7026139a"
+   },
+   {
+    "src": "https://archive.org/download/78_here-comes-santa-claus_del-wood_gbia0056735b/Here%20Comes%20Santa%20Claus%20-%20Del%20Wood.mp3",
+    "length": 126.44,
+    "series": "Del Wood",
+    "title": "Here Comes Santa Claus",
+    "date": "1954",
+    "item": "https://archive.org/details/78_here-comes-santa-claus_del-wood_gbia0056735b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BRISKTOOTHPASTE.mp3",
+    "length": 34.51,
+    "series": "A word from our sponsor",
+    "title": "Brisk Toothpaste",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_glej-zvezdice-bozje-twinkling-christmas-stars-prisla-je-noc-the-holy-night-came/1695-3.mp3",
+    "length": 252,
+    "series": "Anonymous",
+    "title": "Glej zvezdice božje (Twinkling Christmas Stars) - Prišla je noč (The Holy Night Came)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_glej-zvezdice-bozje-twinkling-christmas-stars-prisla-je-noc-the-holy-night-came"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-polka/1099-18.mp3",
+    "length": 139,
+    "series": "Habat, Eddie",
+    "title": "Santa Claus Polka",
+    "date": "1951",
+    "item": "https://archive.org/details/78_santa-claus-polka"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_glenn-davis-irving-berlin_gbia0378582a/WHITE%20CHRISTMAS%20-%20GLENN%20DAVIS%20-%20Irving%20Berlin.mp3",
+    "length": 171.35,
+    "series": "Glenn Davis",
+    "title": "White Christmas",
+    "item": "https://archive.org/details/78_white-christmas_glenn-davis-irving-berlin_gbia0378582a"
+   },
+   {
+    "src": "https://archive.org/download/78_good-king-wenceslas-tannenbaum-deck-the-hall_sonora-choristers-eugene-mott_gbia0071973/01%20-%20Adeste%20Fideles%20%28O%20Come%2C%20All%20Ye%20Faithfu%20-%20Sonora%20Choristers.mp3",
+    "length": 188,
+    "series": "Sonora Choristers",
+    "title": "Adeste Fideles (O Come, All Ye Faithful)",
+    "date": "1945",
+    "item": "https://archive.org/details/78_good-king-wenceslas-tannenbaum-deck-the-hall_sonora-choristers-eugene-mott_gbia0071973"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/FITCH.MP3",
+    "length": 123.67,
+    "series": "A word from our sponsor",
+    "title": "Fitch Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_glade-jul-dejlige-jul_louis-preils-radioorkester-b-j-ingemann_gbia7011044a/Glade%20Jul%2C%20dejlige%20Jul%20-%20Louis%20Preils%20Radioorkester.mp3",
+    "length": 180.48,
+    "series": "Louis Preils Radioorkester",
+    "title": "Glade Jul, dejlige Jul",
+    "item": "https://archive.org/details/78_glade-jul-dejlige-jul_louis-preils-radioorkester-b-j-ingemann_gbia7011044a"
+   },
+   {
+    "src": "https://archive.org/download/78_slumber-beloved-concl-from-christmas-oratorio_thomas-marjorie-london-symph/C_3935_2EA_13337-1.mp3",
+    "length": 252,
+    "series": "Thomas, Marjorie",
+    "title": "Slumber, Beloved - concl. (from \"Christmas Oratorio\")",
+    "date": "1948",
+    "item": "https://archive.org/details/78_slumber-beloved-concl-from-christmas-oratorio_thomas-marjorie-london-symph"
+   },
+   {
+    "src": "https://archive.org/download/78_deck-the-halls-with-boughs-of-holly-joy-to-the-world_johnny-kay-the-caroleers-vicky_gbia0533781b/DECK%20THE%20HALLS%20WITH%20BOUGHS%20OF%20HOLLY%3B%20JOY%20TO%20T.mp3",
+    "length": 138.1,
+    "series": "Johnny Kay",
+    "title": "Deck The Halls With Boughs Of Holly; Joy To The World",
+    "item": "https://archive.org/details/78_deck-the-halls-with-boughs-of-holly-joy-to-the-world_johnny-kay-the-caroleers-vicky_gbia0533781b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_margaret-daum_gbia0533372b/O%2C%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20MARGARET%20DAUM.mp3",
+    "length": 122.7,
+    "series": "Margaret Daum",
+    "title": "O, Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_margaret-daum_gbia0533372b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
+    "length": 86.85,
+    "series": "A word from our sponsor",
+    "title": "Sal Hepatica",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289367b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO%20%28Formerly%20Rambler%20Trio%29.mp3",
+    "length": 173.29,
+    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO (Formerly Rambler Trio)",
+    "title": "Guitar Jingle Bells",
+    "date": "1947",
+    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289367b"
+   },
+   {
+    "src": "https://archive.org/download/78_det-kimer-nu-til-julefest_elsa-sigfuss-johs-viggo-pedersen-c-balle-grundtvig_gbia7015906a/DET%20KIMER%20NU%20TIL%20JULEFEST%20-%20ELSA%20SIGFUSS.mp3",
+    "length": 187.79,
+    "series": "Elsa Sigfuss",
+    "title": "Det Kimer Nu Til Julefest",
+    "date": "1941",
+    "item": "https://archive.org/details/78_det-kimer-nu-til-julefest_elsa-sigfuss-johs-viggo-pedersen-c-balle-grundtvig_gbia7015906a"
+   },
+   {
+    "src": "https://archive.org/download/78_cicha-noc-silent-night_polish-flyers-quartet-jan-wojewdka-and-warsaw-polish-orchest_gbia0529687a/CICHA%20NOC%20-%20SILENT%20NIGHT%20-%20Polish%20Flyers%20Quartet.mp3",
+    "length": 164.55,
+    "series": "Polish Flyers Quartet",
+    "title": "Cicha Noc - Silent Night",
+    "item": "https://archive.org/details/78_cicha-noc-silent-night_polish-flyers-quartet-jan-wojewdka-and-warsaw-polish-orchest_gbia0529687a"
+   },
+   {
+    "src": "https://archive.org/download/78_frosty-the-snowman_bud-roman-and-the-toppers-hal-lomen-orchestra-nelson-rollins_gbia0048208a/Frosty%20the%20Snowman%20-%20Bud%20Roman%20and%20The%20Toppers.mp3",
+    "length": 162,
+    "series": "Bud Roman and The Toppers",
+    "title": "Frosty the Snowman",
+    "date": "1952",
+    "item": "https://archive.org/details/78_frosty-the-snowman_bud-roman-and-the-toppers-hal-lomen-orchestra-nelson-rollins_gbia0048208a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHIQUITABANANNA.mp3",
+    "length": 34.75,
+    "series": "A word from our sponsor",
+    "title": "Chiquita Banana",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_1-celesta-wearin-of-the-green-2-celesta-jingle-bells-3-celesta-happy-birthday-4-cel_gbia3044000b/1.%20Celesta-%22WEARIN%27%20OF%20THE%20GREEN%22%3B%202.%20Cel.mp3",
+    "length": 229.14,
+    "series": "Earl Salisbury",
+    "title": "1. Celesta-\"WEARIN' OF THE GREEN\"; 2. Celesta-\"JINGLE BELLS\"; 3. Celesta-\"HAPPY BIRTHDAY\"; 4. Celesta-\"ROCKABYE BABY\"",
+    "item": "https://archive.org/details/78_1-celesta-wearin-of-the-green-2-celesta-jingle-bells-3-celesta-happy-birthday-4-cel_gbia3044000b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful_the-st-margarets-all-boys-choir_gbia0533818b/O%20COME%20ALL%20YE%20FAITHFUL%20-%20THE%20ST.%20MARGARET%27S%20ALL%20BOYS%20CHOIR.mp3",
+    "length": 158.69,
+    "series": "The St. Margaret'S All Boys Choir",
+    "title": "O Come All Ye Faithful",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful_the-st-margarets-all-boys-choir_gbia0533818b"
+   },
+   {
+    "src": "https://archive.org/download/78_1.-wildwood-flower-2.-auld-lang-syne_sonny-osborne-and-his-sunny-mountain-boys_gbia0004168a/1.%20Wildwood%20Fl%20-%20Sonny%20Osborne%20and%20his%20Sunny%20Mountain%20Boys.mp3",
+    "length": 285,
+    "series": "Sonny Osborne and his Sunny Mountain Boys",
+    "title": "1. Wildwood Flower; 2. Auld Lang Syne",
+    "date": "1956",
+    "item": "https://archive.org/details/78_1.-wildwood-flower-2.-auld-lang-syne_sonny-osborne-and-his-sunny-mountain-boys_gbia0004168a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-lucia-i-love-you_enzo-de-mola-lloyd-shaffer-orch-the-satisfiers-quartet-e_gbia0084779b/Santa%20Lucia%20I%20Love%20You%20-%20Enzo%20De%20Mola%20-%20Lloyd%20Shaffer%20Orch..mp3",
+    "length": 179.18,
+    "series": "Enzo De Mola",
+    "title": "Santa Lucia I Love You",
+    "date": "1950",
+    "item": "https://archive.org/details/78_santa-lucia-i-love-you_enzo-de-mola-lloyd-shaffer-orch-the-satisfiers-quartet-e_gbia0084779b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
+    "length": 14.08,
+    "series": "A word from our sponsor",
+    "title": "Colgate Tooth Powder",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-holy-night_lee-richardson-wen-talberts-male-chorus-john-m.-motley_gbia0001205b/Silent%20Night%2C%20Holy%20Night%20-%20Lee%20Richardson.mp3",
+    "length": 196.61,
+    "series": "Lee Richardson",
+    "title": "Silent Night, Holy Night",
+    "date": "1946",
+    "item": "https://archive.org/details/78_silent-night-holy-night_lee-richardson-wen-talberts-male-chorus-john-m.-motley_gbia0001205b"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_donald-dame_gbia0533371a/HARK%2C%20THE%20HERALD%20ANGELS%20SING%20-%20DONALD%20DAME.mp3",
+    "length": 124.36,
+    "series": "Donald Dame",
+    "title": "Hark, The Herald Angels Sing",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_donald-dame_gbia0533371a"
+   },
+   {
+    "src": "https://archive.org/download/78_juletret-1_mogens-lorentzen-ole-willumsen_gbia7005904a/Juletr%C3%A6et%20%281%29%20-%20Mogens%20Lorentzen%20-%20Ole%20Willumsen.mp3",
+    "length": 196.33,
+    "series": "Mogens Lorentzen",
+    "title": "Juletræet (1)",
+    "item": "https://archive.org/details/78_juletret-1_mogens-lorentzen-ole-willumsen_gbia7005904a"
+   },
+   {
+    "src": "https://archive.org/download/78_all-i-want-for-christmas-is-my-two-front-teeth_mike-jay-gardner_gbia0534677b/ALL%20I%20WANT%20FOR%20CHRISTMAS%20IS%20MY%20TWO%20FRONT%20TEETH.mp3",
+    "length": 114.77,
+    "series": "Mike Jay",
+    "title": "All I Want For Christmas Is My Two Front Teeth",
+    "item": "https://archive.org/details/78_all-i-want-for-christmas-is-my-two-front-teeth_mike-jay-gardner_gbia0534677b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercials1957Chevrolet.mp3",
+    "length": 36.48,
+    "series": "A word from our sponsor",
+    "title": "1957 Chevrolet",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful-adeste-fideles_the-trinity-singers_gbia3015671a/O%20Come%20All%20Ye%20Faithful%20%28Adeste%20Fidel%20-%20THE%20TRINITY%20SINGERS.mp3",
+    "length": 172.36,
+    "series": "The Trinity Singers",
+    "title": "O Come All Ye Faithful (Adeste Fideles)",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful-adeste-fideles_the-trinity-singers_gbia3015671a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_jack-russell-and-the-honey-dreamers-irving-berlin_gbia0131293b/WHITE%20CHRISTMAS%20-%20Jack%20Russell%20and%20The%20Honey%20Dreamers.mp3",
+    "length": 183,
+    "series": "Jack Russell and The Honey Dreamers",
+    "title": "White Christmas",
+    "date": "1955",
+    "item": "https://archive.org/details/78_white-christmas_jack-russell-and-the-honey-dreamers-irving-berlin_gbia0131293b"
+   },
+   {
+    "src": "https://archive.org/download/78_shepherds-shake-off-your-drowsy-sleep_godfrey-malcolm-fredrico_gbia0219431b/SHEPHERDS%20SHAKE%20OFF%20YOUR%20DROWSY%20SLEEP%20-%20Godfrey%20Malcolm.mp3",
+    "length": 165.55,
+    "series": "Godfrey Malcolm",
+    "title": "Shepherds Shake Off Your Drowsy Sleep",
+    "item": "https://archive.org/details/78_shepherds-shake-off-your-drowsy-sleep_godfrey-malcolm-fredrico_gbia0219431b"
+   },
+   {
+    "src": "https://archive.org/download/78_id-like-to-find-you-in-my-stocking_kathy-march-lawrence-piano-roll-cook-nick-ken_gbia0433043a/I%27D%20LIKE%20TO%20FIND%20YOU%20IN%20MY%20STOCKING%20-%20KATHY%20MARCH.mp3",
+    "length": 168.65,
+    "series": "Kathy March",
+    "title": "I'd Like to Find You in My Stocking",
+    "date": "1950",
+    "item": "https://archive.org/details/78_id-like-to-find-you-in-my-stocking_kathy-march-lawrence-piano-roll-cook-nick-ken_gbia0433043a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUCKYBEER.mp3",
+    "length": 21.33,
+    "series": "A word from our sponsor",
+    "title": "Lucky Beer",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_dejlig-er-den-himmel-blaa_tono-strygeorkester-j-tscherning-mller-balle-grundtvig_gbia7011043b/Dejlig%20er%20den%20Himmel%20blaa%20-%20TONO%20Strygeorkester.mp3",
+    "length": 142.63,
+    "series": "TONO Strygeorkester",
+    "title": "Dejlig er den Himmel blaa",
+    "item": "https://archive.org/details/78_dejlig-er-den-himmel-blaa_tono-strygeorkester-j-tscherning-mller-balle-grundtvig_gbia7011043b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_irving-kaufman_gbia0533771b/JINGLE%20BELLS%20-%20Irving%20Kaufman.mp3",
+    "length": 98.73,
+    "series": "Irving Kaufman",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_irving-kaufman_gbia0533771b"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_the-ellingtonians-al-hibbler-johnny-hodges-billy-strayhorn-irving-b_gbia0075474a/White%20Christmas%20-%20The%20Ellingtonians%20-%20Al%20Hibbler.mp3",
+    "length": 178,
+    "series": "The Ellingtonians",
+    "title": "White Christmas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_white-christmas_the-ellingtonians-al-hibbler-johnny-hodges-billy-strayhorn-irving-b_gbia0075474a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-christmas-tree_anschuetz_gbia0533596b/O%20CHRISTMAS%20TREE%20-%20ANSCHUETZ.mp3",
+    "length": 77.84,
+    "series": "Anschuetz",
+    "title": "O Christmas Tree",
+    "item": "https://archive.org/details/78_o-christmas-tree_anschuetz_gbia0533596b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoQuinine.mp3",
+    "length": 26.09,
+    "series": "A word from our sponsor",
+    "title": "Bromo Quinine",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-holy-night_the-luton-girls-choir-melachrino-rene-soames-arthur-e-davie_gbia3043144a/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20THE%20LUTON%20GIRLS%20CHOIR.mp3",
+    "length": 191.41,
+    "series": "The Luton Girls Choir",
+    "title": "Silent Night, Holy Night",
+    "date": "1948",
+    "item": "https://archive.org/details/78_silent-night-holy-night_the-luton-girls-choir-melachrino-rene-soames-arthur-e-davie_gbia3043144a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_the-ellingtonians-al-hibbler-irving-berlin_gbia0501479a/WHITE%20CHRISTMAS%20-%20THE%20ELLINGTONIANS%20-%20AL%20HIBBLER.mp3",
+    "length": 183.03,
+    "series": "The Ellingtonians",
+    "title": "White Christmas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_white-christmas_the-ellingtonians-al-hibbler-irving-berlin_gbia0501479a"
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland_lenny-and-judith-lil-wally-and-the-lucky-harmony-boys-orchestra_gbia0082304b/Winter%20Wonderland%20-%20Lenny%20and%20Judith%20-%20Li%27l%20Wally%20And%20The%20Lucky%20Harmony%20Boys%20Orchestra.mp3",
+    "length": 130,
+    "series": "Lenny and Judith",
+    "title": "Winter Wonderland",
+    "date": "1956",
+    "item": "https://archive.org/details/78_winter-wonderland_lenny-and-judith-lil-wally-and-the-lucky-harmony-boys-orchestra_gbia0082304b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel-away-in-the-manger_gbia0195429h/THE%20FIRST%20NOEL%20AWAY%20IN%20THE%20MANGER.mp3",
+    "length": 174.43,
+    "series": "Unknown artist",
+    "title": "The First Noel Away In The Manger",
+    "item": "https://archive.org/details/78_the-first-noel-away-in-the-manger_gbia0195429h"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/JERGENSLOTION.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Jergens Lotion",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_przybywajcie-wierni-o-come-all-ye-faithful_s-jaworski-arfa-choir_gbia3028353a/PRZYBYWAJCIE%20WIERNI%20%28O%20Come%2C%20All%20Ye%20Faithful.mp3",
+    "length": 192.87,
+    "series": "S. Jaworski",
+    "title": "PRZYBYWAJCIE WIERNI (O Come, All Ye Faithful)",
+    "item": "https://archive.org/details/78_przybywajcie-wierni-o-come-all-ye-faithful_s-jaworski-arfa-choir_gbia3028353a"
+   },
+   {
+    "src": "https://archive.org/download/78_we-wish-you-a-merry-christmas_tom-glazer-gene-lowell-chorus-glazer_gbia0092789a/We%20Wish%20you%20a%20Merry%20Christmas%20-%20Tom%20Glazer.mp3",
+    "length": 149.74,
+    "series": "Tom Glazer",
+    "title": "We Wish you a Merry Christmas",
+    "item": "https://archive.org/details/78_we-wish-you-a-merry-christmas_tom-glazer-gene-lowell-chorus-glazer_gbia0092789a"
+   },
+   {
+    "src": "https://archive.org/download/78_because-because-because-hes-santa-claus_galli-sisters-galli-sisters-bobby-worth_gbia0466457a/BECAUSE%21%20BECAUSE%21%20BECAUSE%21%20HE%27S%20SANTA%20CLAU%20-%20GALLI%20SISTERS.mp3",
+    "length": 151.73,
+    "series": "Galli Sisters",
+    "title": "Because! Because! Because! He's Santa Claus",
+    "date": "1950",
+    "item": "https://archive.org/details/78_because-because-because-hes-santa-claus_galli-sisters-galli-sisters-bobby-worth_gbia0466457a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble_gbia0131155a/JINGLE%20BELLS%20-%20Johnny%20Long%20and%20his%20Orchestra.mp3",
+    "length": 169,
+    "series": "Johnny Long and his Orchestra",
+    "title": "Jingle Bells",
+    "date": "1947",
+    "item": "https://archive.org/details/78_jingle-bells_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble_gbia0131155a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PONTIAC.MP3",
+    "length": 27.1,
+    "series": "A word from our sponsor",
+    "title": "Pontiac",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-deck-the-hall_glenn-davis-r-s-willis_gbia0378583b/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR%3B%20DECK%20THE%20HALL%20-%20GLENN%20DAVIS.mp3",
+    "length": 179.09,
+    "series": "Glenn Davis",
+    "title": "It Came Upon A Midnight Clear; Deck The Hall",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-deck-the-hall_glenn-davis-r-s-willis_gbia0378583b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-hellige-nat-nol_frans-andersson-kbenhavns-kammerkor-rich-sterfeldt-ad-ada_gbia7012998a/O%2C%20hellige%20nat%20%28No%C3%ABl%29%20-%20Frans%20Andersson%20-%20K%C3%B8benhavns%20kammerkor.mp3",
+    "length": 245.34,
+    "series": "Frans Andersson",
+    "title": "O, hellige nat (Noël)",
+    "item": "https://archive.org/details/78_o-hellige-nat-nol_frans-andersson-kbenhavns-kammerkor-rich-sterfeldt-ad-ada_gbia7012998a"
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fideles_national-vespers-mixed-choir_gbia0386931a/ADESTE%20FIDELES%20-%20NATIONAL%20VESPERS%20MIXED%20CHOIR.mp3",
+    "length": 180.53,
+    "series": "National Vespers Mixed Choir",
+    "title": "Adeste Fideles",
+    "date": "1958",
+    "item": "https://archive.org/details/78_adeste-fideles_national-vespers-mixed-choir_gbia0386931a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-ye-merry-gentleman_elmer-ihrke_gbia0318153a/O%20COME%20YE%20MERRY%20GENTLEMAN%20-%20Elmer%20Ihrke.mp3",
+    "length": 172.89,
+    "series": "Elmer Ihrke",
+    "title": "O Come Ye Merry Gentleman",
+    "item": "https://archive.org/details/78_o-come-ye-merry-gentleman_elmer-ihrke_gbia0318153a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
+    "length": 49.41,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Health Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_jeff-stoughton-and-his-lake-placid-club-orchestra-larry-murphy_gbia0285326b/JINGLE%20BELLS%20-%20Jeff%20Stoughton%20and%20his%20Lake%20Placid%20Club%20Orchestra.mp3",
+    "length": 181.25,
+    "series": "Jeff Stoughton and his Lake Placid Club Orchestra",
+    "title": "Jingle Bells",
+    "date": "1956",
+    "item": "https://archive.org/details/78_jingle-bells_jeff-stoughton-and-his-lake-placid-club-orchestra-larry-murphy_gbia0285326b"
+   },
+   {
+    "src": "https://archive.org/download/78_du-kre-gamle-julemand_gustav-winckler-george-swenssons-ensemble-louiguy-aase-gjd_gbia0124146b/Du%20k%C3%A6re%20gamle%20julemand%20-%20Gustav%20Winckler.mp3",
+    "length": 172.46,
+    "series": "Gustav Winckler",
+    "title": "Du kære gamle julemand",
+    "item": "https://archive.org/details/78_du-kre-gamle-julemand_gustav-winckler-george-swenssons-ensemble-louiguy-aase-gjd_gbia0124146b"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0006810a/Rudolph%20The%20Red%20Nosed%20Reindeer%20-%20Arizona%20Cliff%20Martin.mp3",
+    "length": 177,
+    "series": "Arizona Cliff Martin",
+    "title": "Rudolph The Red Nosed Reindeer",
+    "date": "1953",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_arizona-cliff-martin-music-hall-orchestra_gbia0006810a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-song_anne-lloyd-the-sandpipers-mitch-miller_gbia0335943b/CHRISTMAS%20SONG%20-%20ANNE%20LLOYD%20-%20THE%20SANDPIPERS.mp3",
+    "length": 96.74,
+    "series": "Anne Lloyd",
+    "title": "Christmas Song",
+    "item": "https://archive.org/details/78_christmas-song_anne-lloyd-the-sandpipers-mitch-miller_gbia0335943b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
+    "length": 14.08,
+    "series": "A word from our sponsor",
+    "title": "Colgate Tooth Powder",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_eros-hear-me-ye-frosty-cold-hearts-_richard-tauber-benzon-grieg-schmidt_gbia0196188b/EROS%20%28%22%20Hear%20me%2C%20ye%20frosty%20cold%20hearts%20%22%29%20-%20RICHARD%20TAUBER.mp3",
+    "length": 171,
+    "series": "Richard Tauber",
+    "title": "EROS (\" Hear me, ye frosty cold hearts \")",
+    "date": "1946",
+    "item": "https://archive.org/details/78_eros-hear-me-ye-frosty-cold-hearts-_richard-tauber-benzon-grieg-schmidt_gbia0196188b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel_godfrey-malcolm-fredrico_gbia0219429d/THE%20FIRST%20NOEL%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 142.83,
+    "series": "Godfrey Malcolm",
+    "title": "The First Noel",
+    "item": "https://archive.org/details/78_the-first-noel_godfrey-malcolm-fredrico_gbia0219429d"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolf-z-czerwonym-nosem-rudolph-the-red-nose-reindeer_regina-kujawa-bernard-witk_gbia0063723a/Rudolf%20Z%20Czerwonym%20Nosem%20%28Rudolph%20The%20Red%20%20-%20Regina%20Kujawa.mp3",
+    "length": 189.46,
+    "series": "Regina Kujawa",
+    "title": "Rudolf Z Czerwonym Nosem (Rudolph The Red Nose Reindeer)",
+    "item": "https://archive.org/details/78_rudolf-z-czerwonym-nosem-rudolph-the-red-nose-reindeer_regina-kujawa-bernard-witk_gbia0063723a"
+   },
+   {
+    "src": "https://archive.org/download/78_den-kvllen-i-santa-cruz_sven-olof-sandberg-charles-wildmans-orkester-payan-hartley_gbia7010930a/Den%20kv%C3%A4llen%20i%20Santa%20Cruz%20-%20Sven-Olof%20Sandberg.mp3",
+    "length": 174.13,
+    "series": "Sven-Olof Sandberg",
+    "title": "Den kvällen i Santa Cruz",
+    "item": "https://archive.org/details/78_den-kvllen-i-santa-cruz_sven-olof-sandberg-charles-wildmans-orkester-payan-hartley_gbia7010930a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzerPlopPlopFizzFizz.mp3",
+    "length": 29.98,
+    "series": "A word from our sponsor",
+    "title": "Alka Seltzer Plop Plop Fizz Fizz",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem-away-in-a-manger-beautiful-savior_godfrey-malcolm-fred_gbia0364274a/O%20Little%20Town%20of%20Bethlehem%3B%20Away%20In%20a%20Ma%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 352.46,
+    "series": "Godfrey Malcolm",
+    "title": "O Little Town of Bethlehem; Away In a Manger; Beautiful Savior",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem-away-in-a-manger-beautiful-savior_godfrey-malcolm-fred_gbia0364274a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_don-baker-don-gabor_gbia8002114/01%20-%20JINGLE%20BELLS%20-%20DON%20BAKER%20-%20Don%20Gabor.mp3",
+    "length": 166.2,
+    "series": "Gillespie",
+    "title": "Christmas Carols",
+    "date": "1947",
+    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_don-baker-don-gabor_gbia8002114"
+   },
+   {
+    "src": "https://archive.org/download/78_away-in-a-manger-hark-the-herald-angels-sing_robert-rheims_gbia0062354a/Away%20In%20a%20Manger%3B%20Hark%21%20The%20Herald%20Angels%20%20-%20Robert%20Rheims.mp3",
+    "length": 177.33,
+    "series": "Robert Rheims",
+    "title": "Away In a Manger; Hark! The Herald Angels Sing",
+    "item": "https://archive.org/details/78_away-in-a-manger-hark-the-herald-angels-sing_robert-rheims_gbia0062354a"
+   },
+   {
+    "src": "https://archive.org/download/78_holly-holly-hollywood_max-hansen-jens-warnys-orkester_gbia0120297b/Holly%20Holly%20Hollywood%20-%20Max%20Hansen%20-%20Jens%20Warnys%20Orkester.mp3",
+    "length": 188,
+    "series": "Max Hansen",
+    "title": "Holly Holly Hollywood",
+    "date": "1940",
+    "item": "https://archive.org/details/78_holly-holly-hollywood_max-hansen-jens-warnys-orkester_gbia0120297b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROITANCIGARS.mp3",
+    "length": 15.56,
+    "series": "A word from our sponsor",
+    "title": "Roi-Tan Cigars",
+    "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
@@ -70367,542 +68169,63 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_noel-coward-fantasy_the-melachrino-orchestra-george-melachrino_gbia7012237a"
    },
    {
-    "src": "https://archive.org/download/78_jo-jo-the-jolly-christmas-tree_al-nobel-jack-purcell-orch-the-martinaires-willet_gbia0478382/01%20-%20JO%20JO%20THE%20JOLLY%20CHRISTMAS%20TREE%20-%20FAYE%20PARKER%20and%20BILLY%20HINDS.mp3",
-    "length": 124.08,
-    "series": "Willett",
-    "title": "Jo Jo The Jolly Christmas Tree",
-    "item": "https://archive.org/details/78_jo-jo-the-jolly-christmas-tree_al-nobel-jack-purcell-orch-the-martinaires-willet_gbia0478382"
+    "src": "https://archive.org/download/78_merry-christmas-songs_gbia0195429a/MERRY%20CHRISTMAS%20SONGS.mp3",
+    "length": 161.59,
+    "series": "Unknown artist",
+    "title": "Merry Christmas Songs",
+    "item": "https://archive.org/details/78_merry-christmas-songs_gbia0195429a"
    },
    {
-    "src": "https://archive.org/download/01-o-holy-night/12%20Sleep%20Precious%20Babe.mp3",
-    "length": 114.21,
-    "series": "George Beverly Shea",
-    "title": "Sleep Precious Babe",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
+    "src": "https://archive.org/download/78_gwiazdor_mad-man-michaels-michaels_gbia0082280a/Gwiazdor%20-%20Mad%20Man%20Michaels%20-%20Michaels.mp3",
+    "length": 204,
+    "series": "Mad Man Michaels",
+    "title": "Gwiazdor",
+    "date": "1955",
+    "item": "https://archive.org/details/78_gwiazdor_mad-man-michaels-michaels_gbia0082280a"
    },
    {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2004%20-%20The%20Christmas%20Song.mp3",
-    "length": 272.48,
-    "series": "Jimmy Smith",
-    "title": "The Christmas Song",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
+    "src": "https://archive.org/download/78_vi-vil-rokke-og-rulle-i-nisseland_radioens-drengekor-sid-merrimans-orkester-sv-aa_gbia0122487b/Vi%20vil%20rokke%20og%20rulle%20i%20nisseland%20-%20Radioens%20drengekor.mp3",
+    "length": 177.5,
+    "series": "Radioens drengekor",
+    "title": "Vi vil rokke og rulle i nisseland",
+    "item": "https://archive.org/details/78_vi-vil-rokke-og-rulle-i-nisseland_radioens-drengekor-sid-merrimans-orkester-sv-aa_gbia0122487b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/STUDEBAKERLARK.mp3",
-    "length": 43.17,
+    "src": "https://archive.org/download/RadioCommercialsShows/HALLOSHAMPOO.mp3",
+    "length": 25.7,
     "series": "A word from our sponsor",
-    "title": "Studebaker Lark",
+    "title": "Halo Shampoo",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Ava%20Maria.mp3",
-    "length": 347.66,
-    "series": "Isaac Stern",
-    "title": "Ava Maria",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
+    "src": "https://archive.org/download/78_silent-night-holy-night_glenn-davis-franz-gruber-joseph-mohr_gbia0378102a/SILENT%20NIGHT%21%20HOLY%20NIGHT%21%20-%20GLENN%20DAVIS%20-%20Franz%20Gruber.mp3",
+    "length": 181.45,
+    "series": "Glenn Davis",
+    "title": "Silent Night! Holy Night!",
+    "item": "https://archive.org/details/78_silent-night-holy-night_glenn-davis-franz-gruber-joseph-mohr_gbia0378102a"
    },
    {
-    "src": "https://archive.org/download/jose-melis-and-his-orchestra-christmas-with-melis-side-1-bronjo-br-1060-stereo-f-eq/Jose%20Melis%20and%20his%20orchestra%20-%20Christmas%20With%20Melis%20-%20side%201%20%20Bronjo%20%20BR%201060%20stereo%20F%20EQ.mp3",
-    "length": 1156,
-    "series": "Jose Melis And His Orchestra",
-    "title": "Christmas With Melis (Side 1)",
-    "date": "1958",
-    "item": "https://archive.org/details/jose-melis-and-his-orchestra-christmas-with-melis-side-1-bronjo-br-1060-stereo-f-eq"
+    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town_glenn-davis-j-fred-coots_gbia0378582b/SANTA%20CLAUS%20IS%20COMING%20TO%20TOWN%20-%20GLENN%20DAVIS.mp3",
+    "length": 174.34,
+    "series": "Glenn Davis",
+    "title": "Santa Claus Is Coming To Town",
+    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town_glenn-davis-j-fred-coots_gbia0378582b"
    },
    {
-    "src": "https://archive.org/download/78_how-lovely-is-christmas_bing-crosby_gbia0534568/01%20-%20HOW%20LOVELY%20IS%20CHRISTMAS%20-%20BING%20CROSBY.mp3",
-    "length": 95,
-    "series": "Bing Crosby",
-    "title": "How Lovely Is Christmas",
-    "item": "https://archive.org/details/78_how-lovely-is-christmas_bing-crosby_gbia0534568"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Have%20yourself%20a%20merry%20little%20christmas.mp3",
-    "length": 155,
-    "series": "Frank Sinatra",
-    "title": "Have yourself a merry little christmas",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LUCKYBEER.mp3",
-    "length": 21.33,
-    "series": "A word from our sponsor",
-    "title": "Lucky Beer",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/06_Christmas_Mountain.mp3",
-    "length": 134,
-    "series": "Monterey Brass",
-    "title": "Christmas Mountain",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
-   },
-   {
-    "src": "https://archive.org/download/78_i-heard-the-bells-on-christmas-day_dick-edwards-peter-pan-orchestra-chorus_gbia0533065b/I%20HEARD%20THE%20BELLS%20ON%20CHRISTMAS%20DAY%20-%20DICK%20EDWARDS.mp3",
-    "length": 136,
-    "series": "Dick Edwards",
-    "title": "I Heard The Bells On Christmas Day",
-    "item": "https://archive.org/details/78_i-heard-the-bells-on-christmas-day_dick-edwards-peter-pan-orchestra-chorus_gbia0533065b"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_the-billy-mayo-quintet-irving-berlin_gbia0431808b/WHITE%20CHRISTMAS%20-%20THE%20BILLY%20MAYO%20QUINTET.mp3",
-    "length": 175.41,
-    "series": "The Billy Mayo Quintet",
-    "title": "White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_white-christmas_the-billy-mayo-quintet-irving-berlin_gbia0431808b"
-   },
-   {
-    "src": "https://archive.org/download/1962-we-wish-you-a-merry-christmas-ray-conniff/01%20-%20Medley%20-%20Jolly%20Old%20St.%20Nicholas%20-%20The%20Little%20Drummer%20Boy.mp3",
-    "length": 293,
-    "series": "Ray Conniff",
-    "title": "Medley: Jolly Old St. Nicholas / The Little Drummer Boy",
-    "date": "1962",
-    "item": "https://archive.org/details/1962-we-wish-you-a-merry-christmas-ray-conniff"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/IRONIZEDYEAST.mp3",
-    "length": 53.55,
-    "series": "A word from our sponsor",
-    "title": "Ironized Yeast",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_song-of-the-christmas-lights_cousin-fuzzy-and-his-cousins-earl-mcnellis_gbia0474803b/Song%20of%20the%20%22CHRISTMAS%20LIGHTS%22%20-%20COUSIN%20FUZZY%20and%20His%20Cousins.mp3",
-    "length": 149.11,
-    "series": "COUSIN FUZZY and His Cousins",
-    "title": "Song of the \"CHRISTMAS LIGHTS\"",
+    "src": "https://archive.org/download/78_ringing-in-a-brand-new-year_billy-ward-and-his-dominoes-billy-ward_gbia0063125a/Ringing%20In%20a%20Brand%20New%20Year%20-%20Billy%20Ward%20And%20His%20Dominoes.mp3",
+    "length": 139,
+    "series": "Billy Ward And His Dominoes",
+    "title": "Ringing In a Brand New Year",
     "date": "1953",
-    "item": "https://archive.org/details/78_song-of-the-christmas-lights_cousin-fuzzy-and-his-cousins-earl-mcnellis_gbia0474803b"
+    "item": "https://archive.org/details/78_ringing-in-a-brand-new-year_billy-ward-and-his-dominoes-billy-ward_gbia0063125a"
    },
    {
-    "src": "https://archive.org/download/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia0192461a/BEST%20LOVED%20CHRISTMAS%20MUSIC%20-%20RAY%20BLOCH%20his%20Choir%20%26%20Orchestra.mp3",
-    "length": 201.07,
-    "series": "RAY BLOCH his Choir & Orchestra",
-    "title": "Best Loved Christmas Music",
-    "date": "1946",
-    "item": "https://archive.org/details/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia0192461a"
-   },
-   {
-    "src": "https://archive.org/download/bill-doggett-12-songs-of-christmas-king-600-mono-side-1-f-eq-nr/Bill%20Doggett%20-%2012%20Songs%20Of%20Christmas%20-%20King%20600%20mono%20side%201%20F%20EQ-nr.mp3",
-    "length": 995,
-    "series": "Bill Doggett",
-    "title": "12 Songs Of Christmas (Side 1)",
-    "date": "1958",
-    "item": "https://archive.org/details/bill-doggett-12-songs-of-christmas-king-600-mono-side-1-f-eq-nr"
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/B2%20-%20The%20star%20carol.mp3",
-    "length": 174.13,
-    "series": "Various",
-    "title": "The star carol",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoQuinine.mp3",
-    "length": 26.09,
-    "series": "A word from our sponsor",
-    "title": "Bromo Quinine",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/living-trio-ill-be-home-for-christmas-rca-camden-cas-2159-stereo-side-1-f-eq/Living%20Trio%20-%20I%27ll%20Be%20Home%20For%20Christmas%20-%20RCA%20Camden%20CAS-2159%20stereo%20side%201%20F%20EQ.mp3",
-    "length": 1064,
-    "series": "Living Trio",
-    "title": "I'll Be Home For Christmas (Side 1)",
-    "date": "1967",
-    "item": "https://archive.org/details/living-trio-ill-be-home-for-christmas-rca-camden-cas-2159-stereo-side-1-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/78_ill-keep-christmas-in-my-heart_alan-mcgill-carmichael-singers-virgil-and-blanche-b_gbia0473837b/I%27LL%20KEEP%20CHRISTMAS%20IN%20MY%20HEART%20-%20ALAN%20McGILL.mp3",
-    "length": 159.41,
-    "series": "Alan McGill",
-    "title": "I'll Keep Christmas In My Heart",
-    "item": "https://archive.org/details/78_ill-keep-christmas-in-my-heart_alan-mcgill-carmichael-singers-virgil-and-blanche-b_gbia0473837b"
-   },
-   {
-    "src": "https://archive.org/download/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas-god-rest-ye-merry-gentleme_gbia0203787b/Deck%20The%20Halls%20With%20Boughs%20of%20Holly%3B%20Good%20%20-%20THE%20CAROLEERS.mp3",
-    "length": 168.14,
-    "series": "The Caroleers",
-    "title": "Deck The Halls With Boughs of Holly; Good King Wencelas; God Rest Ye Merry Gentlemen; Joy To The World.",
-    "date": "1952",
-    "item": "https://archive.org/details/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas-god-rest-ye-merry-gentleme_gbia0203787b"
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/09%20Blue%20Christmas.mp3",
-    "length": 185.39,
-    "series": "The Lennon Sisters",
-    "title": "Blue Christmas",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CARTERSLITTLELIVERPILLS.mp3",
-    "length": 47.62,
-    "series": "A word from our sponsor",
-    "title": "Carter's Little Liver Pills",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/1962-we-wish-you-a-merry-christmas-ray-conniff/05%20-%20The%20Twelve%20Days%20of%20Christmas.mp3",
-    "length": 265,
-    "series": "Ray Conniff",
-    "title": "The Twelve Days of Christmas",
-    "date": "1962",
-    "item": "https://archive.org/details/1962-we-wish-you-a-merry-christmas-ray-conniff"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/It%20Came%20Upon%20a%20Midnight%20Clear.mp3",
-    "length": 178.18,
-    "series": "Eileen Farrell",
-    "title": "It Came Upon a Midnight Clear",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/05.LaVirgenLavaPaales.mp3",
-    "length": 150.1,
-    "series": "Solo: Joseph Crawford",
-    "title": "La Virgen Lava Pañales",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/78_santas-comin_ken-griffin-sauers-gawehn_gbia0025055b/Santa%27s%20Comin%20-%20Ken%20Griffin%20-%20Sauers%20-%20Gawehn.mp3",
-    "length": 164,
-    "series": "Ken Griffin",
-    "title": "Santa's Coming",
-    "item": "https://archive.org/details/78_santas-comin_ken-griffin-sauers-gawehn_gbia0025055b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/QUAKER.MP3",
-    "length": 128.43,
-    "series": "A word from our sponsor",
-    "title": "Quaker",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/08%20It%20Came%20Upon%20A%20Midnight%20Clear.mp3",
-    "length": 139.15,
-    "series": "Chuck Wagon Gang",
-    "title": "It Came Upon A Midnight Clear",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/78_frosty_vido-musso-and-his-sextette-musso_gbia0391154b/FROSTY%20-%20VIDO%20MUSSO%20And%20His%20Sextette%20-%20Musso.mp3",
-    "length": 164.42,
-    "series": "VIDO MUSSO And His Sextette",
-    "title": "Frosty",
-    "date": "1954",
-    "item": "https://archive.org/details/78_frosty_vido-musso-and-his-sextette-musso_gbia0391154b"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/10_The_Christmas_Song___I_Heard_the_Bells_on_Christmas_Day___Christmas_in_Killarney.mp3",
-    "length": 178,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "The Christmas Song / I Heard the Bells on Christmas Day / Christmas in Killarney",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/santa-santa-santa/Santa%2C%20Santa%2C%20Santa.mp3",
-    "length": 159,
-    "series": "Gene Autry",
-    "title": "Santa, Santa, Santa",
-    "date": "1949",
-    "item": "https://archive.org/details/santa-santa-santa"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CAMELCIGARETTES.mp3",
-    "length": 126.01,
-    "series": "A word from our sponsor",
-    "title": "Camel Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/SantaClausComesCalling/Santa%20Claus%20Comes%20Calling.mp3",
-    "length": 105.23,
-    "series": "Voco Orchestra",
-    "title": "Santa Claus Comes Calling",
-    "date": "1949",
-    "item": "https://archive.org/details/SantaClausComesCalling"
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/09%20-%20Silent%20Night%20-%20Marion%20Anderson.mp3",
-    "length": 232.41,
-    "series": "Marion Anderson",
-    "title": "Silent Night",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/1962-we-wish-you-a-merry-christmas-ray-conniff/02%20-%20Medley%20-%20O%20Holy%20Night%20-%20We%20Three%20Kings%20of%20Orient%20Are%20-%20Deck%20the%20Hall%20With%20Boughs%20of%20Holly.mp3",
-    "length": 466,
-    "series": "Ray Conniff",
-    "title": "Medley: O Holy Night / We Three Kings of Orient Are / Deck the Hall With Boughs of Holly",
-    "date": "1962",
-    "item": "https://archive.org/details/1962-we-wish-you-a-merry-christmas-ray-conniff"
-   },
-   {
-    "src": "https://archive.org/download/ferrante-and-teicher-we-wish-you-a-merry-christmas-side-1-united-artist-6536-stereo-f-eq-1/Ferrante%20and%20Teicher%20-%20We%20Wish%20You%20A%20Merry%20Christmas%20-%20side%202%20-%20United%20Artist%206536%20Stereo%20F%20EQ.mp3",
-    "length": 1142,
-    "series": "Ferrante And Teicher",
-    "title": "We Wish You A Merry Christmas (Side 2)",
-    "date": "1966",
-    "item": "https://archive.org/details/ferrante-and-teicher-we-wish-you-a-merry-christmas-side-1-united-artist-6536-stereo-f-eq-1"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
-    "length": 45.51,
-    "series": "A word from our sponsor",
-    "title": "Bubble Up",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_santas-on-his-way_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jacobs_gbia0483044a/SANTA%27S%20ON%20HIS%20WAY%20-%20Bill%20Tabbert%20and%20the%20%22400%22%20Quartet.mp3",
-    "length": 129.91,
-    "series": "Bill Tabbert and the \"400\" Quartet",
-    "title": "Santa'S On His Way",
-    "date": "1951",
-    "item": "https://archive.org/details/78_santas-on-his-way_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jacobs_gbia0483044a"
-   },
-   {
-    "src": "https://archive.org/download/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia8006239/01%20-%201.%20Here%20We%20Come%20A-Caroli%20-%20RAY%20BLOCH%20his%20Choir%20%26%20Orchestra.mp3",
-    "length": 196,
-    "series": "RAY BLOCH his Choir & Orchestra",
-    "title": "Best Loved Christmas Music",
-    "date": "1946",
-    "item": "https://archive.org/details/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia8006239"
-   },
-   {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/05%20In%20The%20Garden.mp3",
-    "length": 141.45,
-    "series": "Chuck Wagon Gang",
-    "title": "In The Garden",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-medley_john-kiley_gbia0285024b/CHRISTMAS%20MEDLEY%20-%20JOHN%20KILEY.mp3",
-    "length": 205.82,
-    "series": "John Kiley",
-    "title": "Christmas Medley",
-    "item": "https://archive.org/details/78_christmas-medley_john-kiley_gbia0285024b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnchorHocking.mp3",
-    "length": 44.85,
-    "series": "A word from our sponsor",
-    "title": "Anchor Hocking",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_country-dance-band_gbia0006954a/Jingle%20Bells%20-%20Country%20Dance%20Band.mp3",
-    "length": 203,
-    "series": "Country Dance Band",
-    "title": "Jingle Bells",
-    "date": "1948",
-    "item": "https://archive.org/details/78_jingle-bells_country-dance-band_gbia0006954a"
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/11%20Campanas%20De%20Navidad%20%28Jingle%20Bells%29.mp3",
-    "length": 205,
-    "series": "Coros De Alberto Herrera",
-    "title": "Campanas De Navidad (Jingle Bells)",
-    "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
-   },
-   {
-    "src": "https://archive.org/download/marian-anderson-christmas-carols-side-1-rca-victor-lm-2613-d-71-ee-f-eq/Marian%20Anderson%20-%20Christmas%20Carols%20-%20side%202%20-%20RCA%20Victor%20LM-2613%20D71EE%20%20F%20EQ.mp3",
-    "length": 1292,
-    "series": "Marian Anderson",
-    "title": "Christmas Carols (Side 2)",
-    "date": "1962",
-    "item": "https://archive.org/details/marian-anderson-christmas-carols-side-1-rca-victor-lm-2613-d-71-ee-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0288546a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
-    "length": 152.44,
-    "series": "Betty Johnson",
-    "title": "I Want Eddie Fisher For Christmas",
-    "date": "1954",
-    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0288546a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
-    "length": 49.1,
-    "series": "A word from our sponsor",
-    "title": "Goodyear Lifeguard Tires",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/13%20-%20Deck%20the%20Halls%20-%20Vic%20Damone.mp3",
-    "length": 116.3,
-    "series": "Vic Damone",
-    "title": "Deck the Halls",
-    "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-carols_joseph-walikis-and-his-accordian_gbia0001738a/Christmas%20Carols%20-%20Joseph%20Walikis%20and%20his%20Accordian-restored.mp3",
-    "length": 233.64,
-    "series": "Joseph Walikis and his Accordian",
-    "title": "Christmas Carols",
-    "item": "https://archive.org/details/78_christmas-carols_joseph-walikis-and-his-accordian_gbia0001738a",
-    "date": "1940"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/06.ChristmasPresentForSallie.mp3",
-    "length": 202.42,
-    "series": "Solo: Hamilton Grandison",
-    "title": "Christmas Present for Sallie",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/09%20%28It%27s%20a%29%20Happy%20Holiday.mp3",
-    "length": 112.66,
-    "series": "The Shells",
-    "title": "(It's a) Happy Holiday",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/MAYFIELDCIGARETTES.mp3",
-    "length": 43.02,
-    "series": "A word from our sponsor",
-    "title": "Mayfield Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_adeste-fideles_national-vespers-mixed-choir_gbia0386931a/ADESTE%20FIDELES%20-%20NATIONAL%20VESPERS%20MIXED%20CHOIR.mp3",
-    "length": 180.53,
-    "series": "National Vespers Mixed Choir",
-    "title": "Adeste Fideles",
-    "date": "1958",
-    "item": "https://archive.org/details/78_adeste-fideles_national-vespers-mixed-choir_gbia0386931a"
-   },
-   {
-    "src": "https://archive.org/download/78_gonna-have-a-merry-xmas_the-nic-nacs_gbia0451811a/GONNA%20HAVE%20A%20MERRY%20XMAS%20-%20THE%20NIC%20NACS.mp3",
-    "length": 178.51,
-    "series": "The Nic Nacs",
-    "title": "Gonna Have a Merry Xmas",
-    "date": "1952",
-    "item": "https://archive.org/details/78_gonna-have-a-merry-xmas_the-nic-nacs_gbia0451811a"
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_liberty-orchestra-irving-berlin_gbia0118458a/White%20Christmas%20-%20Liberty%20Orchestra%20-%20Irving%20Berlin.mp3",
-    "length": 184,
-    "series": "Liberty Orchestra",
-    "title": "White Christmas",
-    "date": "1944",
-    "item": "https://archive.org/details/78_white-christmas_liberty-orchestra-irving-berlin_gbia0118458a"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/13%20Wassell%20Wassell%20All%20Over%20The%20Town.mp3",
-    "length": 61.52,
-    "series": "Norman Luboff Choir",
-    "title": "Wassell, Wassell All Over The Town",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDoublemintGum.mp3",
-    "length": 17.98,
-    "series": "A word from our sponsor",
-    "title": "Doublemint Gum",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/03%20White%20Christmas.mp3",
-    "length": 186,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "White Christmas",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear_elmer-ihrke_gbia0059673a/It%20Came%20upon%20a%20Midnight%20Clear%20-%20Elmer%20Ihrke.mp3",
-    "length": 164,
-    "series": "Elmer Ihrke",
-    "title": "It Came upon a Midnight Clear",
-    "date": "1947",
-    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear_elmer-ihrke_gbia0059673a"
-   },
-   {
-    "src": "https://archive.org/download/78_julemanden_ib-schnberg-arthur-jensen-norma-rhodin-leth-hansen_gbia0125002a/JULEMANDEN%20-%20IB%20SCH%C3%98NBERG%20-%20ARTHUR%20JENSEN.mp3",
-    "length": 153.08,
-    "series": "Ib Schønberg",
-    "title": "Julemanden",
-    "date": "1953",
-    "item": "https://archive.org/details/78_julemanden_ib-schnberg-arthur-jensen-norma-rhodin-leth-hansen_gbia0125002a"
-   },
-   {
-    "src": "https://archive.org/download/78_twas-the-night-before-christmas_jiminy-cricket-c-moore-g-bruns-m-ash_gbia8001523b/%22T%27WAS%20THE%20NIGHT%20BEFORE%20CHRISTMAS%22%20-%20JIMINY%20CRICKET.mp3",
-    "length": 278.26,
-    "series": "Jiminy Cricket",
-    "title": "\"t'was the Night Before Christmas\"",
-    "date": "1956",
-    "item": "https://archive.org/details/78_twas-the-night-before-christmas_jiminy-cricket-c-moore-g-bruns-m-ash_gbia8001523b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceARoni.mp3",
-    "length": 38.06,
-    "series": "A word from our sponsor",
-    "title": "Rice-A-Roni",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_the-ravens-rendition-of-white-christmas_jimmy-ricks-irving-berlin_gbia0321703b/THE%20RAVEN%27S%20RENDITION%20OF%3A%20WHITE%20CHRISTMAS%20-%20Jimmy%20Ricks.mp3",
-    "length": 194.71,
-    "series": "Jimmy Ricks",
-    "title": "The Raven's Rendition Of: White Christmas",
-    "date": "1948",
-    "item": "https://archive.org/details/78_the-ravens-rendition-of-white-christmas_jimmy-ricks-irving-berlin_gbia0321703b"
-   },
-   {
-    "src": "https://archive.org/download/the-ray-conniff-singers-christmas-with-conniff-side-1-columbia-cs-8185-stereo-d-/The%20Ray%20Conniff%20Singers%20-%20Christmas%20With%20Conniff%20-%20side%202%20-%20Columbia%20CS%208185%20stereo%20%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 952,
-    "series": "The Ray Conniff Singers",
-    "title": "Christmas With Conniff (Side 2)",
-    "date": "1959",
-    "item": "https://archive.org/details/the-ray-conniff-singers-christmas-with-conniff-side-1-columbia-cs-8185-stereo-d-"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Wassall%20Wassall%20All%20Over%20Town.mp3",
-    "length": 67.92,
-    "series": "New Christy Minstrels",
-    "title": "Wassall Wassall All Over Town",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer-joy-to-the-world-it-came-upon-a-midnight-clear_to_gbia0176994b/RUDOLPH%2C%20THE%20RED-NOSED%20REIND%20-%20TOPS%20ORCHESTRA%20%26%20CHORISTERS.mp3",
-    "length": 408,
-    "series": "Tops Orchestra & Choristers",
-    "title": "Rudolph, the Red-nosed Reindeer; Joy to the World; It Came Upon a Midnight Clear",
-    "date": "1954",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer-joy-to-the-world-it-came-upon-a-midnight-clear_to_gbia0176994b"
+    "src": "https://archive.org/download/78_p-loftet-sidder-nissen-med-sin-julegrd_nyborg-jensens-piger-sid-merrimans-orkeste_gbia7010590b/P%C3%A5%20loftet%20sidder%20nissen%20med%20sin%20jul%20-%20Nyborg-Jensens%20piger.mp3",
+    "length": 166.67,
+    "series": "Nyborg-Jensens piger",
+    "title": "På loftet sidder nissen med sin julegrød",
+    "item": "https://archive.org/details/78_p-loftet-sidder-nissen-med-sin-julegrd_nyborg-jensens-piger-sid-merrimans-orkeste_gbia7010590b"
    },
    {
     "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsodent.mp3",
@@ -70913,153 +68236,224 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_little-fir-tree_anne-lloyd-mike-stewart-the-sandpipers-barnes-cornelius-mitchell-mi_gbia0534607a/LITTLE%20FIR%20TREE%20-%20ANNE%20LLOYD%20-%20MIKE%20STEWART.mp3",
-    "length": 101,
-    "series": "Anne Lloyd",
-    "title": "Little Fir Tree",
-    "item": "https://archive.org/details/78_little-fir-tree_anne-lloyd-mike-stewart-the-sandpipers-barnes-cornelius-mitchell-mi_gbia0534607a"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/05%20-%20Christmas%20Day.mp3",
-    "length": 108.36,
-    "series": "The Beach Boys",
-    "title": "Christmas Day",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2010%20-%20Greensleves.mp3",
-    "length": 533.11,
-    "series": "Jimmy Smith",
-    "title": "Greensleves",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
-   },
-   {
-    "src": "https://archive.org/download/78_gdy-sie-chrystus-rodzi-when-christ-is-born_sta-jaworski-chr-i-orkiestra-w-dana_gbia0362799b/GDY%20SIE%20CHRYSTUS%20RODZI%20%28When%20Christ%20Is%20Bor%20-%20STA%C5%9A%20JAWORSKI.mp3",
-    "length": 197.9,
-    "series": "Staś Jaworski",
-    "title": "Gdy Sie Chrystus Rodzi (When Christ Is Born)",
+    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289433b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO%20%28Formerly%20Rambler%20Trio%29.mp3",
+    "length": 176.11,
+    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO (Formerly Rambler Trio)",
+    "title": "Guitar Jingle Bells",
     "date": "1947",
-    "item": "https://archive.org/details/78_gdy-sie-chrystus-rodzi-when-christ-is-born_sta-jaworski-chr-i-orkiestra-w-dana_gbia0362799b"
+    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289433b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
-    "length": 36.39,
+    "src": "https://archive.org/download/78_god-rest-ye-merry-gentlemen_godfrey-malcolm-fredrico_gbia0219429e/GOD%20REST%20YE%20MERRY%20GENTLEMEN%20-%20Godfrey%20Malcolm.mp3",
+    "length": 112.9,
+    "series": "Godfrey Malcolm",
+    "title": "God Rest Ye Merry Gentlemen",
+    "item": "https://archive.org/details/78_god-rest-ye-merry-gentlemen_godfrey-malcolm-fredrico_gbia0219429e"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_godfrey-malcolm-fredrico_gbia0219430g/O%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20Godfrey%20Malcolm.mp3",
+    "length": 162,
+    "series": "Godfrey Malcolm",
+    "title": "O Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_godfrey-malcolm-fredrico_gbia0219430g"
+   },
+   {
+    "src": "https://archive.org/download/78_ill-be-home-for-christmas_eddy-howard-and-his-orchestra-eddy-howard-gannon-ram-ken_gbia0006822b/I%27ll%20Be%20Home%20For%20Christmas%20-%20Eddy%20Howard%20and%20his%20Orchestra.mp3",
+    "length": 181,
+    "series": "Eddy Howard and his Orchestra",
+    "title": "I'll Be Home For Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_ill-be-home-for-christmas_eddy-howard-and-his-orchestra-eddy-howard-gannon-ram-ken_gbia0006822b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/WHEATIESCEREAL.mp3",
+    "length": 85.21,
     "series": "A word from our sponsor",
-    "title": "Lux Toilet Soap",
+    "title": "Wheaties",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_communion-hymn-saw-ye-my-saviour_kenny-baker-mary-baker-eddy_gbia8003251/03%20-%20CHRISTMAS%20MORN%20%28Blest%20Christmas%20Morn%29%20-%20KENNY%20BAKER.mp3",
-    "length": 180.41,
-    "series": "Kenny Baker",
-    "title": "Christmas Morn (Blest Christmas Morn)",
-    "item": "https://archive.org/details/78_communion-hymn-saw-ye-my-saviour_kenny-baker-mary-baker-eddy_gbia8003251"
+    "src": "https://archive.org/download/78_glory-to-god-in-the-highest_stamford-high-school-a-cappella-choir-pergolesi-w.-raym_gbia0001195a/Glory%20to%20God%20in%20The%20Highest%20-%20Stamford%20High%20School%20A%20Cappella%20Choir.mp3",
+    "length": 187,
+    "series": "Stamford High School A Cappella Choir",
+    "title": "Glory to God in The Highest",
+    "date": "1950",
+    "item": "https://archive.org/details/78_glory-to-god-in-the-highest_stamford-high-school-a-cappella-choir-pergolesi-w.-raym_gbia0001195a"
    },
    {
-    "src": "https://archive.org/download/78_it-came-upon-the-midnight-clear_national-vespers-mixed-choir_gbia0386931b/IT%20CAME%20UPON%20THE%20MIDNIGHT%20C%20-%20NATIONAL%20VESPERS%20MIXED%20CHOIR.mp3",
-    "length": 194.21,
-    "series": "National Vespers Mixed Choir",
-    "title": "It Came Upon the Midnight Clear",
-    "date": "1958",
-    "item": "https://archive.org/details/78_it-came-upon-the-midnight-clear_national-vespers-mixed-choir_gbia0386931b"
+    "src": "https://archive.org/download/78_boogie-woogie-santa-claus_mabel-scott-leon-rene_gbia0109779b/Boogie%20Woogie%20Santa%20Claus%20-%20Mabel%20Scott%20-%20Leon%20Rene.mp3",
+    "length": 143,
+    "series": "Mabel Scott",
+    "title": "Boogie Woogie Santa Claus",
+    "item": "https://archive.org/details/78_boogie-woogie-santa-claus_mabel-scott-leon-rene_gbia0109779b"
    },
    {
-    "src": "https://archive.org/download/vince-guaraldi-charlie-brown-christmas-mono/01%20O%20Tannenbaum.mp3",
-    "length": 305,
-    "series": "Vince Guaraldi",
-    "title": "O Tannenbaum",
-    "date": "1965",
-    "item": "https://archive.org/details/vince-guaraldi-charlie-brown-christmas-mono"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_leo-watson-vic-dickenson-quintet-vic-dickenson-jellyroll-lipschitz-arv_gbia0061676a/Jingle%20Bells%20-%20Leo%20Watson%20-%20Vic%20Dickenson%20Quintet.mp3",
-    "length": 172,
-    "series": "Leo Watson",
-    "title": "Jingle Bells",
-    "date": "1946",
-    "item": "https://archive.org/details/78_jingle-bells_leo-watson-vic-dickenson-quintet-vic-dickenson-jellyroll-lipschitz-arv_gbia0061676a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzerPlopPlopFizzFizz.mp3",
-    "length": 29.98,
-    "series": "A word from our sponsor",
-    "title": "Alka Seltzer Plop Plop Fizz Fizz",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasinmexico1957lp/02%20Alegre%20Navidad%20%28Merry%20Christmas%29.mp3",
-    "length": 166,
-    "series": "Mariachi Pulido",
-    "title": "Alegre Navidad (Merry Christmas)",
+    "src": "https://archive.org/download/78_jingle-bell-rock_bobby-helms_joe-beal_jim-boothe_gbia10499455_item/Jingle%20Bell%20Rock-Bobby%20Helms.mp3",
+    "length": 130,
+    "series": "Bobby Helms",
+    "title": "Jingle Bell Rock",
     "date": "1957",
-    "item": "https://archive.org/details/christmasinmexico1957lp"
+    "item": "https://archive.org/details/78_jingle-bell-rock_bobby-helms_joe-beal_jim-boothe_gbia10499455_item"
    },
    {
-    "src": "https://archive.org/download/78_jingle-bells-good-king-wenceslas_jerry-wayne_gbia0534397/01%20-%20GOOD%20KING%20WENCESLAS%20-%20JERRY%20WAYNE.mp3",
-    "length": 98,
-    "series": "Jerry Wayne",
-    "title": "Jingle Bells; Good King Wenceslas",
-    "date": "1951",
-    "item": "https://archive.org/details/78_jingle-bells-good-king-wenceslas_jerry-wayne_gbia0534397"
+    "src": "https://archive.org/download/78_sleigh-bells-waltz_lil-wally-and-the-lucky-harmony-boys-orchestra-joe-koldyn-walter_gbia0530220a/SLEIGH%20BELLS%20WALTZ%20-%20LI%27L%20WALLY%20And%20The%20Lucky%20Harmony%20Boys%20Orchestra.mp3",
+    "length": 146,
+    "series": "Li'l Wally And The Lucky Harmony Boys Orchestra",
+    "title": "Sleigh Bells Waltz",
+    "date": "1957",
+    "item": "https://archive.org/details/78_sleigh-bells-waltz_lil-wally-and-the-lucky-harmony-boys-orchestra-joe-koldyn-walter_gbia0530220a"
    },
    {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/White%20christmas.mp3",
-    "length": 204,
-    "series": "Frank Sinatra",
-    "title": "White christmas",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-3-1963/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%203%20%281963%29/Silent%20Night.mp3",
-    "length": 145.35,
-    "series": "Julie Andrews",
-    "title": "Silent Night",
-    "date": "1963",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-3-1963"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzer.mp3",
-    "length": 117.36,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsodent.mp3",
+    "length": 38.53,
     "series": "A word from our sponsor",
-    "title": "Alka Seltzer",
+    "title": "Pepsodent",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_lets-light-the-christmas-tree_ruby-wright-cliff-lash-and-his-orchestra-the-dick-no_gbia0421898a/LET%27S%20LIGHT%20THE%20CHRISTMAS%20TREE%20-%20RUBY%20WRIGHT.mp3",
-    "length": 186.29,
-    "series": "Ruby Wright",
-    "title": "Let's Light The Christmas Tree",
-    "item": "https://archive.org/details/78_lets-light-the-christmas-tree_ruby-wright-cliff-lash-and-his-orchestra-the-dick-no_gbia0421898a"
+    "src": "https://archive.org/download/78_little-town-of-bethlehem_eric-silver_gbia0366718b/LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20ERIC%20SILVER.mp3",
+    "length": 157.58,
+    "series": "Eric Silver",
+    "title": "Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_little-town-of-bethlehem_eric-silver_gbia0366718b"
    },
    {
-    "src": "https://archive.org/download/78_noel-coward-fantasy_the-melachrino-orchestra-george-melachrino_gbia7012237b/NOEL%20COWARD%20FANTASY%20-%20THE%20MELACHRINO%20ORCHESTRA.mp3",
-    "length": 280.68,
-    "series": "The Melachrino Orchestra",
-    "title": "Noel Coward Fantasy",
+    "src": "https://archive.org/download/78_white-christmas_jack-russell-the-honey-dreamers-irving-berlin-vicky-kasen_gbia0203789a/WHITE%20CHRISTMAS%20-%20JACK%20RUSSELL%20-%20The%20Honey%20Dreamers.mp3",
+    "length": 183.82,
+    "series": "Jack Russell",
+    "title": "White Christmas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_white-christmas_jack-russell-the-honey-dreamers-irving-berlin-vicky-kasen_gbia0203789a"
+   },
+   {
+    "src": "https://archive.org/download/78_wilija-u-bartka_bartek-i-kasia-i-ich-wesoly-zespl_gbia0530364a/WILIJA%20U%20BARTKA%20-%20BARTEK%20I%20KASIA%20i%20ich%20Wesoly%20Zesp%C3%B3l.mp3",
+    "length": 188.05,
+    "series": "BARTEK I KASIA i ich Wesoly Zespól",
+    "title": "Wilija U Bartka",
+    "item": "https://archive.org/details/78_wilija-u-bartka_bartek-i-kasia-i-ich-wesoly-zespl_gbia0530364a"
+   },
+   {
+    "src": "https://archive.org/download/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0125578a/JEG%20SAA%20JULEMANDEN%20KYSSE%20MOR%20%28I%20saw%20momm%20-%20RAQUEL%20RASTENNI.mp3",
+    "length": 192,
+    "series": "Raquel Rastenni",
+    "title": "JEG SAA JULEMANDEN KYSSE MOR (I saw mommy kissing Santa Claus)",
     "date": "1953",
-    "item": "https://archive.org/details/78_noel-coward-fantasy_the-melachrino-orchestra-george-melachrino_gbia7012237b"
+    "item": "https://archive.org/details/78_jeg-saa-julemanden-kysse-mor-i-saw-mommy-kissing-santa-claus_raquel-rastenni-harr_gbia0125578a"
    },
    {
-    "src": "https://archive.org/download/78_1-joy-to-the-world-2-good-king-wenceslas-3-angels-we-have-heard-on-high_ray-bl_gbia8003366/01%20-%201.%20Here%20We%20Come%20A-Caroli%20-%20RAY%20BLOCH%20his%20Choir%20%26%20Orchestra.mp3",
-    "length": 199.49,
-    "series": "Ray Bloch His Choir & Orchestra",
-    "title": "Here We Come A-Caroling; 2. The First Noel; 3. God Rest Ye Merry Gentlemen",
+    "src": "https://archive.org/download/RadioCommercialsShows/CONTADINATOMATOPASTE.mp3",
+    "length": 18.06,
+    "series": "A word from our sponsor",
+    "title": "Contadina Tomato Paste",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_kolenda-goralska-mountaineers-carol_s-jaworski-arfa-choir_gbia3028353b/KOLENDA%20GORALSKA%20%28Mountaineer%27s%20Carol%29%20-%20S.%20JAWORSKI.mp3",
+    "length": 198.65,
+    "series": "S. Jaworski",
+    "title": "KOLENDA GORALSKA (Mountaineer's Carol)",
+    "item": "https://archive.org/details/78_kolenda-goralska-mountaineers-carol_s-jaworski-arfa-choir_gbia3028353b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_del-wood_gbia0250154a/JINGLE%20BELLS%20-%20DEL%20WOOD.mp3",
+    "length": 119.59,
+    "series": "Del Wood",
+    "title": "Jingle Bells",
+    "date": "1954",
+    "item": "https://archive.org/details/78_jingle-bells_del-wood_gbia0250154a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-gifts_dotty-evans_gbia0533707b/CHRISTMAS%20GIFTS%20-%20DOTTY%20EVANS.mp3",
+    "length": 83.94,
+    "series": "Dotty Evans",
+    "title": "Christmas Gifts",
+    "item": "https://archive.org/details/78_christmas-gifts_dotty-evans_gbia0533707b"
+   },
+   {
+    "src": "https://archive.org/download/78_1-lets-light-the-christmas-tree-2-marshmallow-world_the-roy-cliffs_gbia0488344b/1.%20LET%27S%20LIGHT%20THE%20CHRISTMAS%20TREE%3B%202.%20MAR%20-%20THE%20ROY-CLIFFS.mp3",
+    "length": 238,
+    "series": "The Roy-Cliffs",
+    "title": "1. Let's Light The Christmas Tree; 2. Marshmallow World",
+    "item": "https://archive.org/details/78_1-lets-light-the-christmas-tree-2-marshmallow-world_the-roy-cliffs_gbia0488344b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/HALEYSMO.MP3",
+    "length": 42.55,
+    "series": "A word from our sponsor",
+    "title": "Haley's M-O",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-a-hippopotamus-for-christmas_vicki-dale-the-peter-pan-orchestra_gbia0000281a/I%20Want%20A%20Hippopotamus%20For%20Christmas%20-%20Vicki%20Dale-restored.mp3",
+    "length": 157.94,
+    "series": "Vicki Dale",
+    "title": "I Want A Hippopotamus For Christmas",
+    "date": "1953",
+    "item": "https://archive.org/details/78_i-want-a-hippopotamus-for-christmas_vicki-dale-the-peter-pan-orchestra_gbia0000281a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-a-beautiful-doll-for-christmas_tony-pastor-and-his-orchestra-tony-pastor-liv_gbia0168499b/I%20WANT%20A%20BEAUTIFUL%20DOLL%20FO%20-%20Tony%20Pastor%20And%20His%20Orchestra.mp3",
+    "length": 198,
+    "series": "Tony Pastor And His Orchestra",
+    "title": "I Want a Beautiful Doll for Christmas",
     "date": "1946",
-    "item": "https://archive.org/details/78_1-joy-to-the-world-2-good-king-wenceslas-3-angels-we-have-heard-on-high_ray-bl_gbia8003366"
+    "item": "https://archive.org/details/78_i-want-a-beautiful-doll-for-christmas_tony-pastor-and-his-orchestra-tony-pastor-liv_gbia0168499b"
    },
    {
-    "src": "https://archive.org/download/78_silent-night-holy-night_beniamino-gigli-praga-gruuber-rinaldo-zamboni_gbia0122574b/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20Beniamino%20Gigli.mp3",
-    "length": 162,
+    "src": "https://archive.org/download/78_we-three-kings-of-orient-are_godfrey-malcolm-fredrico_gbia0219429c/WE%20THREE%20KINGS%20OF%20ORIENT%20ARE%20-%20Godfrey%20Malcolm.mp3",
+    "length": 104.26,
+    "series": "Godfrey Malcolm",
+    "title": "We Three Kings Of Orient Are",
+    "item": "https://archive.org/details/78_we-three-kings-of-orient-are_godfrey-malcolm-fredrico_gbia0219429c"
+   },
+   {
+    "src": "https://archive.org/download/78_julestemning-i-del_operasanger-ved-det-kgl-teater-otte-svendsen-medlemmer-af-rad_gbia7002968a/Julestemning%20I%20del%20-%20Operasanger%20ved%20%22Det%20kgl.%20Teater%22%20OTTE%20SVENDSEN.mp3",
+    "length": 262.93,
+    "series": "Operasanger ved \"Det kgl. Teater\" OTTE SVENDSEN",
+    "title": "Julestemning I del",
+    "item": "https://archive.org/details/78_julestemning-i-del_operasanger-ved-det-kgl-teater-otte-svendsen-medlemmer-af-rad_gbia7002968a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OVALTINE.MP3",
+    "length": 126.24,
+    "series": "A word from our sponsor",
+    "title": "Ovaltine",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fideles-o-come-all-ye-faithful-traditional_beniamino-gigli-rinaldo-zamb_gbia7017636a/ADESTE%20FIDELES%20%28O%20COME%2C%20ALL%20YE%20FAITHFUL%29%20-%20BENIAMINO%20GIGLI.mp3",
+    "length": 166.75,
     "series": "Beniamino Gigli",
-    "title": "Silent Night, Holy Night",
+    "title": "ADESTE FIDELES (O COME, ALL YE FAITHFUL) (Traditional)",
     "date": "1947",
-    "item": "https://archive.org/details/78_silent-night-holy-night_beniamino-gigli-praga-gruuber-rinaldo-zamboni_gbia0122574b"
+    "item": "https://archive.org/details/78_adeste-fideles-o-come-all-ye-faithful-traditional_beniamino-gigli-rinaldo-zamb_gbia7017636a"
+   },
+   {
+    "src": "https://archive.org/download/78_cicha-noc-silent-night_sta-jaworski-chr-i-orkiestra-w-dana_gbia0531365a/CICHA%20NOC%20%28Silent%20Night%29%20-%20STA%C5%9A%20JAWORSKI.mp3",
+    "length": 196,
+    "series": "Staś Jaworski",
+    "title": "CICHA NOC (Silent Night)",
+    "date": "1947",
+    "item": "https://archive.org/details/78_cicha-noc-silent-night_sta-jaworski-chr-i-orkiestra-w-dana_gbia0531365a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-oh-tannenbaum_ken-griffin_gbia0437526a/JINGLE%20BELLS%3B%20OH%20TANNENBAUM%20-%20Ken%20Griffin.mp3",
+    "length": 313.69,
+    "series": "Ken Griffin",
+    "title": "Jingle Bells; Oh Tannenbaum",
+    "item": "https://archive.org/details/78_jingle-bells-oh-tannenbaum_ken-griffin_gbia0437526a"
+   },
+   {
+    "src": "https://archive.org/download/78_come-all-ye-faithful_boy-choristers-st-patricks-cathedral-ny_gbia0533079b/Come%20All%20Ye%20Faithful%20-%20BOY%20CHORISTERS%2C%20ST.%20PATRICK%27S%20CATHEDRAL%2C%20N.Y.mp3",
+    "length": 107.46,
+    "series": "Boy Choristers, St. Patrick'S Cathedral, N.y.",
+    "title": "Come All Ye Faithful",
+    "item": "https://archive.org/details/78_come-all-ye-faithful_boy-choristers-st-patricks-cathedral-ny_gbia0533079b"
    },
    {
     "src": "https://archive.org/download/RadioCommercialsShows/CHIQUITABANANNA.mp3",
@@ -71070,401 +68464,81 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_auld-lang-syne_the-roy-kral-jackie-cain-sextet-jackie-cain-and-roy-kral-kral-obrie_gbia0038150a/Auld%20Lang%20Syne%20-%20The%20Roy%20Kral-Jackie%20Cain%20Sextet.mp3",
-    "length": 164,
-    "series": "The Roy Kral-Jackie Cain Sextet",
-    "title": "Auld Lang Syne",
-    "date": "1949",
-    "item": "https://archive.org/details/78_auld-lang-syne_the-roy-kral-jackie-cain-sextet-jackie-cain-and-roy-kral-kral-obrie_gbia0038150a"
-   },
-   {
-    "src": "https://archive.org/download/78_the-christmas-carol-part-1_bret-morrison-charles-dickens_gbia0366288a/THE%20CHRISTMAS%20CAROL%20%28Part%201%29%20-%20BRET%20MORRISON.mp3",
-    "length": 213.19,
-    "series": "Bret Morrison",
-    "title": "THE CHRISTMAS CAROL (Part 1)",
-    "date": "1953",
-    "item": "https://archive.org/details/78_the-christmas-carol-part-1_bret-morrison-charles-dickens_gbia0366288a"
-   },
-   {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/07%20O%20Come%20All%20Ye%20Faithful.mp3",
-    "length": 158.56,
-    "series": "Chuck Wagon Gang",
-    "title": "O Come, All Ye Faithful (Adeste Fideles)",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/78_merry-christmas-polka-the/1083-15.mp3",
-    "length": 157,
-    "series": "Yankovic, Frank",
-    "title": "Merry Christmas Polka, The",
+    "src": "https://archive.org/download/78_blue-shadow-on-a-white-christmas-tree_eddie-hazelwood-eddie-hazelwood-and-his-carol_gbia0000286b/Blue%20Shadow%20On%20A%20White%20Christmas%20Tree%20-%20Eddie%20Hazelwood-restored.mp3",
+    "length": 172.18,
+    "series": "Eddie Hazelwood",
+    "title": "Blue Shadow On A White Christmas Tree",
     "date": "1951",
-    "item": "https://archive.org/details/78_merry-christmas-polka-the"
+    "item": "https://archive.org/details/78_blue-shadow-on-a-white-christmas-tree_eddie-hazelwood-eddie-hazelwood-and-his-carol_gbia0000286b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
-    "length": 60.33,
-    "series": "A word from our sponsor",
-    "title": "Palmolive Soap",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
+    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_bob-crosby-styne-cahn_gbia0219728a/LET%20IT%20SNOW%3B%20LET%20IT%20SNOW%3B%20LET%20IT%20SNOW%20-%20BOB%20CROSBY.mp3",
+    "length": 182.38,
+    "series": "Bob Crosby",
+    "title": "Let It Snow; Let It Snow; Let It Snow",
+    "date": "1946",
+    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_bob-crosby-styne-cahn_gbia0219728a"
    },
    {
-    "src": "https://archive.org/download/78_merry-christmas-one-all_the-rhythm-kings-isacc-royal-orch-cliff-king_gbia0475076a/MERRY%20CHRISTMAS%20ONE%20%26%20ALL%20-%20THE%20RHYTHM%20KINGS.mp3",
-    "length": 182.64,
-    "series": "The Rhythm Kings",
-    "title": "Merry Christmas One & All",
-    "date": "1950",
-    "item": "https://archive.org/details/78_merry-christmas-one-all_the-rhythm-kings-isacc-royal-orch-cliff-king_gbia0475076a"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/08%20My%20Brother%20Wants%20a%20Doll%20for%20Christmas.mp3",
-    "length": 123.19,
-    "series": "Yolanda White",
-    "title": "My Brother Wants a Doll for Christmas",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/B5.%20It%20Came%20Upon%20a%20Midnight%20Clear-Oh%20Little%20Town%20of%20Bethlehem.mp3",
-    "length": 139.23,
-    "series": "Jerry Fielding",
-    "title": "It Came Upon a Midnight Clear-Oh Little Town of Bethlehem",
-    "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/12%20The%20First%20Noel.mp3",
-    "length": 108.12,
-    "series": "Norman Luboff Choir",
-    "title": "The First Noel",
+    "src": "https://archive.org/download/78_give-me-an-old-fashioned-christmas_eddie-cletro-the-fronteirsmen-carl-m-lertzman_gbia0404442b/GIVE%20ME%20AN%20OLD-FASHIONED%20CHRISTMAS%20-%20EDDIE%20CLETRO.mp3",
+    "length": 119.71,
+    "series": "Eddie Cletro",
+    "title": "Give Me an Old-fashioned Christmas",
     "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
+    "item": "https://archive.org/details/78_give-me-an-old-fashioned-christmas_eddie-cletro-the-fronteirsmen-carl-m-lertzman_gbia0404442b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/NESCAFE.MP3",
-    "length": 32.95,
-    "series": "A word from our sponsor",
-    "title": "Nescafé",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/12_Have_yourself_a_merry_little_Christmas.mp3",
-    "length": 129,
-    "series": "Wayne King & His Orchestra",
-    "title": "Have yourself a merry little Christmas",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/78_this-christmas-will-be-wonderful_glen-moores-quartette-jane-palmer-helen-langlois_gbia0351282a/THIS%20CHRISTMAS%20WILL%20BE%20WONDERFUL%20-%20GLEN%20MOORE%27S%20QUARTETTE.mp3",
-    "length": 161.62,
-    "series": "Glen Moore's Quartette",
-    "title": "This Christmas Will Be Wonderful",
-    "date": "1949",
-    "item": "https://archive.org/details/78_this-christmas-will-be-wonderful_glen-moores-quartette-jane-palmer-helen-langlois_gbia0351282a"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_bobby-nicholas-peter-pan-orchestra-and-chorus-j-fred_gbia0296730a/SANTA%20CLAUS%20IS%20COMIN%27%20TO%20TOWN%20-%20BOBBY%20NICHOLAS.mp3",
-    "length": 123.62,
-    "series": "Bobby Nicholas",
-    "title": "Santa Claus is Comin' to Town",
-    "date": "1959",
-    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_bobby-nicholas-peter-pan-orchestra-and-chorus-j-fred_gbia0296730a"
-   },
-   {
-    "src": "https://archive.org/download/the-new-christy-minstrels-christmas-with-the-christies-side-1-columbia-cs-9356-s/The%20New%20Christy%20Minstrels%20-%20Christmas%20With%20The%20Christies%20-%20side%201%20-%20Columbia%20CS%209356%20stereo%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 950,
-    "series": "The New Christy Minstrels",
-    "title": "Christmas With The Christies (Side 1)",
-    "date": "1967",
-    "item": "https://archive.org/details/the-new-christy-minstrels-christmas-with-the-christies-side-1-columbia-cs-9356-s"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAridDeoderant.mp3",
-    "length": 46.02,
-    "series": "A word from our sponsor",
-    "title": "Arrid Deodorant",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Jingle%20bells.mp3",
-    "length": 157,
-    "series": "Frank Sinatra",
+    "src": "https://archive.org/download/78_jingle-bells-ken-griffin-hammodorgel-ken/16478%20Jingle%20bells.mp3",
+    "length": 128.31,
+    "series": "Ken Griffin",
     "title": "Jingle bells",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
+    "item": "https://archive.org/details/78_jingle-bells-ken-griffin-hammodorgel-ken"
    },
    {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dick-edwards-the-peter-pan-chorus-and-orchestra-john_gbia0341978a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20DICK%20EDWARDS.mp3",
-    "length": 179.58,
-    "series": "Dick Edwards",
-    "title": "Rudolph The Red Nosed Reindeer",
-    "date": "1952",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dick-edwards-the-peter-pan-chorus-and-orchestra-john_gbia0341978a"
+    "src": "https://archive.org/download/RadioCommercialsShows/ENERGINESHOEWHITE.mp3",
+    "length": 26.01,
+    "series": "A word from our sponsor",
+    "title": "Energine Shoe White",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
-    "src": "https://archive.org/download/78_jingle-bells_elmer-ihrke-and-skip-berg_gbia0285342a/JINGLE%20BELLS%20-%20Elmer%20Ihrke%20and%20Skip%20Berg.mp3",
-    "length": 162.79,
-    "series": "Elmer Ihrke and Skip Berg",
-    "title": "Jingle Bells",
-    "date": "1948",
-    "item": "https://archive.org/details/78_jingle-bells_elmer-ihrke-and-skip-berg_gbia0285342a"
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/06_White_Christmas.mp3",
-    "length": 128,
-    "series": "Wayne King & His Orchestra",
+    "src": "https://archive.org/download/78_6142-White-Christmas/6142-White-Christmas.mp3",
+    "length": 150.7,
+    "series": "Gustav Winckler",
     "title": "White Christmas",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
+    "date": "1951",
+    "item": "https://archive.org/details/78_6142-White-Christmas"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/OLGACOAL.MP3",
-    "length": 26.25,
-    "series": "A word from our sponsor",
-    "title": "Olga Coal",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/01%20-%20Little%20Saint%20Nick.mp3",
-    "length": 119.28,
-    "series": "The Beach Boys",
-    "title": "Little Saint Nick",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/78_the-christmas-song_monica-lewis-ray-bloch-and-his-orchestra-torme-wells_gbia0014394b/The%20Christmas%20Song%20-%20Monica%20Lewis%20-%20Ray%20Bloch%20and%20His%20Orchestra.mp3",
-    "length": 187,
-    "series": "Monica Lewis",
-    "title": "The Christmas Song",
-    "date": "1947",
-    "item": "https://archive.org/details/78_the-christmas-song_monica-lewis-ray-bloch-and-his-orchestra-torme-wells_gbia0014394b"
-   },
-   {
-    "src": "https://archive.org/download/78_biae-gody-white-christmas_vivian-bazan-irving-berlin_gbia0531614a/BIA%C5%81E%20GODY%20%28White%20Christmas%29%20-%20Vivian%20Bazan.mp3",
-    "length": 171,
-    "series": "Vivian Bazan",
-    "title": "BIAŁE GODY (White Christmas)",
-    "date": "1947",
-    "item": "https://archive.org/details/78_biae-gody-white-christmas_vivian-bazan-irving-berlin_gbia0531614a"
-   },
-   {
-    "src": "https://archive.org/download/roger-williams-with-the-concert-grand-orchestra-christmas-time-mca-15005-side-1-mono-f-eq/Roger%20Williams%20with%20the%20Concert%20Grand%20Orchestra%20-%20Christmas%20Time%20-%20MCA%2015005%20side%201%20%20mono%20F%20EQ.mp3",
-    "length": 1223,
-    "series": "Roger Williams With The Concert Grand Orchestra",
-    "title": "Christmas Time (Side 1)",
+    "src": "https://archive.org/download/78_it-came-upon-the-midnight-clear-shepherds-christmas-song-i-saw-three-ships-asai_gbia0034356a/It%20Came%20Upon%20the%20Midnight%20Clear%3B%20Shep%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 198.95,
+    "series": "Charles R. Cronham",
+    "title": "It Came Upon the Midnight Clear; Shepherd's Christmas Song; I Saw Three Ships A'Sailing",
     "date": "1960",
-    "item": "https://archive.org/details/roger-williams-with-the-concert-grand-orchestra-christmas-time-mca-15005-side-1-mono-f-eq"
+    "item": "https://archive.org/details/78_it-came-upon-the-midnight-clear-shepherds-christmas-song-i-saw-three-ships-asai_gbia0034356a"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
-    "length": 52.84,
-    "series": "A word from our sponsor",
-    "title": "Popsicle",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nose-reindeer_kathy-march-lawrence-piano-roll-cook-qrs-piano_gbia0433043b/RUDOLPH%2C%20THE%20RED%20NOSE%20REINDEER%20-%20KATHY%20MARCH.mp3",
-    "length": 138.7,
-    "series": "Kathy March",
-    "title": "Rudolph, the Red Nose Reindeer",
-    "date": "1950",
-    "item": "https://archive.org/details/78_rudolph-the-red-nose-reindeer_kathy-march-lawrence-piano-roll-cook-qrs-piano_gbia0433043b"
-   },
-   {
-    "src": "https://archive.org/download/78_slumber-beloved-concl-from-christmas-oratorio_thomas-marjorie-london-symph/C_3935_2EA_13337-1.mp3",
-    "length": 252,
-    "series": "Thomas, Marjorie",
-    "title": "Slumber, Beloved - concl. (from \"Christmas Oratorio\")",
-    "date": "1948",
-    "item": "https://archive.org/details/78_slumber-beloved-concl-from-christmas-oratorio_thomas-marjorie-london-symph"
-   },
-   {
-    "src": "https://archive.org/download/78_8783-Et-barn-er-fodt-i-Bethlehem/8783-Et-barn-er-fodt-i-Bethlehem.mp3",
-    "length": 198.22,
-    "series": "Otte Svendsen",
-    "title": "Et barn er fodt i Bethlehem",
-    "date": "1952",
-    "item": "https://archive.org/details/78_8783-Et-barn-er-fodt-i-Bethlehem"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/O%20Tannenbaum.mp3",
-    "length": 89.03,
-    "series": "Norman Luboff Choir",
-    "title": "O Tannenbaum",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCreamoCigars.mp3",
-    "length": 49.71,
-    "series": "A word from our sponsor",
-    "title": "Creamo Cigars",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Hark%21%20The%20Herald%20Angel%20Sing.mp3",
-    "length": 117.5,
-    "series": "Chet Atkins",
-    "title": "Hark! The Herald Angel Sing",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/09_Christmas_chopsticks.mp3",
-    "length": 136,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Christmas chopsticks",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/78_ill-be-home-for-christmas_sid-peltyn-and-his-orchestra-gannon-kent-ram_gbia0162525a/I%27LL%20BE%20HOME%20FOR%20CHRISTMAS%20-%20Sid%20Peltyn%20and%20his%20Orchestra.mp3",
+    "src": "https://archive.org/download/78_little-town-in-ould-country-down_frank-connors-carlo-sanders-pascoe_gbia0037596a/Little%20Town%20in%20Ould%20Country%20Down%20-%20Frank%20Connors.mp3",
     "length": 181,
-    "series": "Sid Peltyn and his Orchestra",
-    "title": "I'll Be Home for Christmas",
-    "date": "1943",
-    "item": "https://archive.org/details/78_ill-be-home-for-christmas_sid-peltyn-and-his-orchestra-gannon-kent-ram_gbia0162525a"
+    "series": "Frank Connors",
+    "title": "Little Town in Ould Country Down",
+    "date": "1944",
+    "item": "https://archive.org/details/78_little-town-in-ould-country-down_frank-connors-carlo-sanders-pascoe_gbia0037596a"
    },
    {
-    "src": "https://archive.org/download/oldfashionedchri00symp/04_Frosty_the_snowman__Brenda_Lee_.mp3",
-    "length": 142,
-    "series": "Symphonette Society",
-    "title": "Frosty the snowman",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
+    "src": "https://archive.org/download/78_silent-night_the-sandpiper-chorus-mitch-miller_gbia0534262a/SILENT%20NIGHT%20-%20THE%20SANDPIPER%20CHORUS%20-%20MITCH%20MILLER.mp3",
+    "length": 104,
+    "series": "The Sandpiper Chorus",
+    "title": "Silent Night",
+    "date": "1949",
+    "item": "https://archive.org/details/78_silent-night_the-sandpiper-chorus-mitch-miller_gbia0534262a"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAutoLite.mp3",
-    "length": 57.75,
+    "src": "https://archive.org/download/RadioCommercialsShows/MAYFIELDCIGARETTES.mp3",
+    "length": 43.02,
     "series": "A word from our sponsor",
-    "title": "Auto-Lite",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_cedric-wallace-orch-jimmy-holmes-irving-berlin_gbia0415769b/WHITE%20CHRISTMAS%20-%20CEDRIC%20WALLACE%20ORCH.%20-%20JIMMY%20HOLMES.mp3",
-    "length": 192.89,
-    "series": "Cedric Wallace Orch.",
-    "title": "White Christmas",
-    "date": "1951",
-    "item": "https://archive.org/details/78_white-christmas_cedric-wallace-orch-jimmy-holmes-irving-berlin_gbia0415769b"
-   },
-   {
-    "src": "https://archive.org/download/10251-lets-give-santa-claus-a-christmas-mildred-l.-mc-larrin/10251%20Let%27s%20Give%20Santa%20Claus%20a%20Christmas%20Mildred%20L.%20McLarrin.mp3",
-    "length": 176.09,
-    "series": "Marty Roberts",
-    "title": "Let's Give Santa Claus a Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/10251-lets-give-santa-claus-a-christmas-mildred-l.-mc-larrin"
-   },
-   {
-    "src": "https://archive.org/download/78_toyland-jubilee_lenny-herman-quintet-hermanaires-jon-arthur-jan-garber_gbia0399015b/TOYLAND%20JUBILEE%20-%20LENNY%20HERMAN%20QUINTET%20-%20HERMANAIRES.mp3",
-    "length": 169.94,
-    "series": "Lenny Herman Quintet",
-    "title": "Toyland Jubilee",
-    "date": "1951",
-    "item": "https://archive.org/details/78_toyland-jubilee_lenny-herman-quintet-hermanaires-jon-arthur-jan-garber_gbia0399015b"
-   },
-   {
-    "src": "https://archive.org/download/oldfashionedchri00symp/09_I_heard_the_bells_on_Christmas_day__Bing_Crosby_.mp3",
-    "length": 167,
-    "series": "Symphonette Society",
-    "title": "I heard the bells on Christmas day",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsiCola.mp3",
-    "length": 33.38,
-    "series": "A word from our sponsor",
-    "title": "Pepsi Cola",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/hannabarberaxmas/08%20Carol%20of%20the%20Bells.mp3",
-    "length": 108.62,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "Carol of the Bells",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/hannabarberaxmas/09%20O%20Holy%20Night.mp3",
-    "length": 142.58,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "O Holy Night",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/05%20Christmas%20Kisses.mp3",
-    "length": 117.96,
-    "series": "The Bookends",
-    "title": "Christmas Kisses",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble_gbia0131155a/JINGLE%20BELLS%20-%20Johnny%20Long%20and%20his%20Orchestra.mp3",
-    "length": 169,
-    "series": "Johnny Long and his Orchestra",
-    "title": "Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_jingle-bells_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble_gbia0131155a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/RINSO.MP3",
-    "length": 84.67,
-    "series": "A word from our sponsor",
-    "title": "Rinso",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2005%20-%20White%20Christmas.mp3",
-    "length": 171.36,
-    "series": "Jimmy Smith",
-    "title": "White Christmas",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
-   },
-   {
-    "src": "https://archive.org/download/08-gloria-in-excelsis_202510/12%20Medley%20Behold%20That%20Star%20Carol%20Of%20The%20Bells.mp3",
-    "length": 187.01,
-    "series": "Fred Waring And The Pennsylvanians",
-    "title": "Medley: Behold That Star/Carol Of The Bells",
-    "date": "1955",
-    "item": "https://archive.org/details/08-gloria-in-excelsis_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_when-santa-claus-gets-your-letter_johnny-marks-gabby-dixon-and-the-crickets-the-pet_gbia0533973a/WHEN%20SANTA%20CLAUS%20GETS%20YOUR%20LETTER%20-%20Johnny%20Marks.mp3",
-    "length": 102,
-    "series": "Johnny Marks",
-    "title": "When Santa Claus Gets Your Letter",
-    "item": "https://archive.org/details/78_when-santa-claus-gets-your-letter_johnny-marks-gabby-dixon-and-the-crickets-the-pet_gbia0533973a"
-   },
-   {
-    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-a_gbia3011413b/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR%3B%20AWAY%20IN%20A%20M%20-%20THE%20CAROLEERS.mp3",
-    "length": 195.04,
-    "series": "The Caroleers",
-    "title": "It Came Upon A Midnight Clear; Away In A Manger; The First Noel; Hark! The Herald Angels Sing",
-    "date": "1950",
-    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-a_gbia3011413b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LUSTERCREAM.mp3",
-    "length": 50.11,
-    "series": "A word from our sponsor",
-    "title": "Lustre-Creme Shampoo",
+    "title": "Mayfield Cigarettes",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
@@ -71477,387 +68551,105 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_hvid-jul-white-christmas_hedvig-volmer-melodikvintetten-irving-berlin-v-skaarup_gbia0123591a"
    },
    {
-    "src": "https://archive.org/download/hannabarberaxmas/04%20God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
-    "length": 103.82,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "God Rest Ye Merry Gentlemen",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
+    "src": "https://archive.org/download/78_round-and-round-the-christmas-tree_tom-glazer-gene-lowell-chorus-phillip-list_gbia0092789b/Round%20and%20Round%20the%20Christmas%20Tree%20-%20Tom%20Glazer.mp3",
+    "length": 164.33,
+    "series": "Tom Glazer",
+    "title": "Round and Round the Christmas Tree",
+    "item": "https://archive.org/details/78_round-and-round-the-christmas-tree_tom-glazer-gene-lowell-chorus-phillip-list_gbia0092789b"
    },
    {
-    "src": "https://archive.org/download/78_parade-of-the-wooden-soldiers_jessel-elmer-ihrke_gbia0000259a/Parade%20of%20The%20Wooden%20Soldiers%20-%20Jessel%20-%20Elmer%20Ihrke.mp3",
-    "length": 163,
-    "series": "Jessel",
-    "title": "Parade of The Wooden Soldiers",
-    "date": "1948",
-    "item": "https://archive.org/details/78_parade-of-the-wooden-soldiers_jessel-elmer-ihrke_gbia0000259a"
-   },
-   {
-    "src": "https://archive.org/download/78_winter-wonderland_bonnemere-and-his-piano-smith-bernard_gbia0059939b/Winter%20Wonderland%20-%20Bonnemere%20and%20His%20Piano.mp3",
-    "length": 188,
-    "series": "Bonnemere and His Piano",
-    "title": "Winter Wonderland",
-    "date": "1954",
-    "item": "https://archive.org/details/78_winter-wonderland_bonnemere-and-his-piano-smith-bernard_gbia0059939b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsJackBennyDennisDayForTexaco.mp3",
-    "length": 59.64,
-    "series": "A word from our sponsor",
-    "title": "Texaco (with Jack Benny and Dennis Day)",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_the-night-before-christmas-part-i_roy-rogers-and-dale-evans-mitchell-miller_gbia0534128a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20Par%20-%20ROY%20ROGERS%20and%20DALE%20EVANS.mp3",
-    "length": 107.09,
-    "series": "ROY ROGERS and DALE EVANS",
-    "title": "THE NIGHT BEFORE CHRISTMAS Part I",
-    "date": "1954",
-    "item": "https://archive.org/details/78_the-night-before-christmas-part-i_roy-rogers-and-dale-evans-mitchell-miller_gbia0534128a"
-   },
-   {
-    "src": "https://archive.org/download/78_frosty-the-snowman_ray-heatherton-nelson-rollins_gbia0533556b/FROSTY%20THE%20SNOWMAN%20-%20RAY%20HEATHERTON%20-%20Nelson.mp3",
-    "length": 111,
-    "series": "Ray Heatherton",
-    "title": "Frosty the Snowman",
-    "date": "1951",
-    "item": "https://archive.org/details/78_frosty-the-snowman_ray-heatherton-nelson-rollins_gbia0533556b"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/03%20Adeste%20fideles%20%28o%20come%20all%20ye%20faithful%29.mp3",
-    "length": 157,
-    "series": "Frank Sinatra",
-    "title": "Adeste fideles (o come all ye faithful)",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/01TresiRudolphAida/01%20Tresi%20Rudolph%20Aida.mp3",
-    "length": 180,
-    "series": "Tresi RUDOLPH - Sopran",
-    "title": "Tresi Rudolph Aida O-3603",
-    "date": "1942",
-    "item": "https://archive.org/details/01TresiRudolphAida"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/GROVESNOSEDROPS.mp3",
-    "length": 70.71,
-    "series": "A word from our sponsor",
-    "title": "Grove's Nose Drops",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/JoyToTheWorld_201610/Joy%20To%20The%20World.mp3",
-    "length": 91.69,
-    "series": "Uncredited Artist",
-    "title": "Joy To The World",
+    "src": "https://archive.org/download/78_silent-night_ralph-sigwald-horace-heidt-and-his-musical-knights_gbia0271310a/SILENT%20NIGHT%20-%20RALPH%20SIGWALD%20-%20HORACE%20HEIDT%20and%20His%20Musical%20Knights.mp3",
+    "length": 188.62,
+    "series": "Ralph Sigwald",
+    "title": "Silent Night",
     "date": "1949",
-    "item": "https://archive.org/details/JoyToTheWorld_201610"
+    "item": "https://archive.org/details/78_silent-night_ralph-sigwald-horace-heidt-and-his-musical-knights_gbia0271310a"
    },
    {
-    "src": "https://archive.org/download/78_wait-till-after-christmas_john-greer-thomas-greer_gbia0061007a/Wait%20Till%20After%20Christmas%20-%20John%20Greer%20-%20Thomas.mp3",
-    "length": 178,
-    "series": "John Greer",
-    "title": "Wait Till After Christmas",
-    "date": "1954",
-    "item": "https://archive.org/details/78_wait-till-after-christmas_john-greer-thomas-greer_gbia0061007a"
-   },
-   {
-    "src": "https://archive.org/download/78_where-did-my-snowman-go_petula-clark-children-of-dr-barnardos-homes-venis-poser_gbia3026479a/WHERE%20DID%20MY%20SNOWMAN%20GO%20-%20PETULA%20CLARK%20-%20Children%20of%20Dr.%20Barnardo%27s%20Homes.mp3",
-    "length": 138,
-    "series": "Petula Clark",
-    "title": "Where Did My Snowman Go",
-    "date": "1953",
-    "item": "https://archive.org/details/78_where-did-my-snowman-go_petula-clark-children-of-dr-barnardos-homes-venis-poser_gbia3026479a"
-   },
-   {
-    "src": "https://archive.org/download/78_skaters-waltz_grady-hester-and-his-texans_gbia0007241b/Skater%27s%20Waltz%20-%20Grady%20Hester%20and%20his%20Texans.mp3",
-    "length": 153,
-    "series": "Grady Hester and his Texans",
-    "title": "Skaters' Waltz",
-    "date": "1949",
-    "item": "https://archive.org/details/78_skaters-waltz_grady-hester-and-his-texans_gbia0007241b"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
-    "length": 40.72,
-    "series": "A word from our sponsor",
-    "title": "Anacin",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_glade-jul_ulla-katajavuori-gruber-koskimies_gbia7008769a/Glade%20Jul%20-%20Ulla%20Katajavuori%20-%20Gruber%20-%20Koskimies.mp3",
-    "length": 201.29,
-    "series": "Ulla Katajavuori",
-    "title": "Glade Jul",
-    "date": "1949",
-    "item": "https://archive.org/details/78_glade-jul_ulla-katajavuori-gruber-koskimies_gbia7008769a"
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/Hark%20The%20Herald%20Angels%20Sing.mp3",
-    "length": 184.32,
-    "series": "Percy Faith",
-    "title": "Hark The Herald Angels Sing",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Santa%20claus%20is%20comin%27%20to%20town.mp3",
-    "length": 155,
-    "series": "Frank Sinatra",
-    "title": "Santa claus is comin' to town",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/eddie-layton-hammond-organ-music-for-christmas-with-chimes-brass-choir-epic-ln-2/Eddie%20Layton%20-%20%20Hammond%20Organ%20Music%20For%20Christmas%20with%20Chimes%20%26%20Brass%20Choir%20-%20Epic%20LN%2024118%20mono%20%20%20side%202%20%20F%20EQ.mp3",
-    "length": 897,
-    "series": "Eddie Layton",
-    "title": "Hammond Organ Music For Christmas With Chimes & Brass Choir (Side 2)",
-    "date": "1964",
-    "item": "https://archive.org/details/eddie-layton-hammond-organ-music-for-christmas-with-chimes-brass-choir-epic-ln-2"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/COLGATESHAVINGCREAM.mp3",
-    "length": 40.99,
-    "series": "A word from our sponsor",
-    "title": "Colgate Shaving Cream",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/The%20lord%27s%20prayer.mp3",
-    "length": 216,
-    "series": "Frank Sinatra",
-    "title": "The lord's prayer",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/78_scrooge_roye-goodrich-the-holidays-roye-goodrich-the-holidays-schram-reed_gbia0409858b/SCROOGE%20-%20ROYE%20GOODRICH%20-%20THE%20HOLIDAYS%20-%20Roye%20Goodrich.mp3",
-    "length": 142.73,
-    "series": "Roye Goodrich",
-    "title": "Scrooge",
-    "date": "1952",
-    "item": "https://archive.org/details/78_scrooge_roye-goodrich-the-holidays-roye-goodrich-the-holidays-schram-reed_gbia0409858b"
-   },
-   {
-    "src": "https://archive.org/download/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0288519b/YOU%27RE%20ALL%20I%20WANT%20FOR%20CHRISTMAS%20-%20FRANK%20GALLAGHER.mp3",
-    "length": 209.59,
-    "series": "Frank Gallagher",
-    "title": "You'Re All I Want For Christmas",
-    "date": "1948",
-    "item": "https://archive.org/details/78_youre-all-i-want-for-christmas_frank-gallagher-dana-serenaders-glen-moore-seger-el_gbia0288519b"
-   },
-   {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/04%20God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
-    "length": 140,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "God Rest Ye Merry Gentlemen",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGmGuardianMaintenance.mp3",
-    "length": 59.74,
-    "series": "A word from our sponsor",
-    "title": "GM Guardian Maintenance",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/4551-christmas-time-is-a-very-merry-time-bert-haney/4551%20Christmas%20Time%20is%20a%20Very%20Merry%20Time%20Bert%20Haney.mp3",
-    "length": 134.11,
-    "series": "Cactus Pryor",
-    "title": "Christmas Time Is A Very Merry Time",
-    "date": "1949",
-    "item": "https://archive.org/details/4551-christmas-time-is-a-very-merry-time-bert-haney"
-   },
-   {
-    "src": "https://archive.org/download/78_ma-my-toys-are-borken_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jaco_gbia0378646b/MA%21%20MY%20TOYS%20ARE%20BORKEN%20-%20Bill%20Tabbert%20and%20the%20%22400%22%20Quartet.mp3",
-    "length": 146.47,
-    "series": "Bill Tabbert and the \"400\" Quartet",
-    "title": "Ma! My Toys Are Broken",
-    "date": "1951",
-    "item": "https://archive.org/details/78_ma-my-toys-are-borken_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jaco_gbia0378646b"
-   },
-   {
-    "src": "https://archive.org/download/78_jolly-old-st-nicholas_the-knaves-nancy-harrie-vaughn-horton_gbia3015485b/JOLLY%20OLD%20ST.%20NICHOLAS%20-%20THE%20KNAVES%20-%20NANCY%20HARRIE.mp3",
-    "length": 196,
-    "series": "The Knaves",
-    "title": "Jolly Old St. Nicholas",
+    "src": "https://archive.org/download/78_1-joy-to-the-world-2-oh-little-town-of-bethlehem-3-angels-we-have-heard-on-high_gbia0110185b/1.%20Joy%20To%20The%20World%202.%20Oh%2C%20Little%20Tow%20-%20Tempo%27s%20Carolaires.mp3",
+    "length": 148,
+    "series": "Tempo's Carolaires",
+    "title": "1. Joy To The World 2. Oh, Little Town Of Bethlehem 3. Angels We Have Heard On High 4. Oh, Christmas Tree 5. The First Noel",
     "date": "1950",
-    "item": "https://archive.org/details/78_jolly-old-st-nicholas_the-knaves-nancy-harrie-vaughn-horton_gbia3015485b"
+    "item": "https://archive.org/details/78_1-joy-to-the-world-2-oh-little-town-of-bethlehem-3-angels-we-have-heard-on-high_gbia0110185b"
    },
    {
-    "src": "https://archive.org/download/BC_Merry-Christmas_FLAC/11%20Christmas%20in%20Killarney.mp3",
-    "length": 165,
-    "series": "John Scott Trotter & His Orchestra",
-    "title": "Christmas in Killarney",
-    "date": "1945",
-    "item": "https://archive.org/details/BC_Merry-Christmas_FLAC"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/OLDSPICE.MP3",
-    "length": 20.16,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDoublemintGum.mp3",
+    "length": 17.98,
     "series": "A word from our sponsor",
-    "title": "Old Spice",
-    "item": "https://archive.org/details/RadioCommercialsShows",
+    "title": "Doublemint Gum",
+    "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_1-lets-light-the-christmas-tree-2-marshmallow-world_the-roy-cliffs_gbia0488344b/1.%20LET%27S%20LIGHT%20THE%20CHRISTMAS%20TREE%3B%202.%20MAR%20-%20THE%20ROY-CLIFFS.mp3",
-    "length": 238,
-    "series": "The Roy-Cliffs",
-    "title": "1. Let's Light The Christmas Tree; 2. Marshmallow World",
-    "item": "https://archive.org/details/78_1-lets-light-the-christmas-tree-2-marshmallow-world_the-roy-cliffs_gbia0488344b"
+    "src": "https://archive.org/download/78_julens-melodier-ii-del_wivex-strygeorkester-knud-dalgaard_gbia7009069b/Julens%20Melodier%20-%20II.%20Del%20-%20Wivex%27%20Strygeorkester.mp3",
+    "length": 177.94,
+    "series": "Wivex' Strygeorkester",
+    "title": "Julens Melodier - II. Del",
+    "item": "https://archive.org/details/78_julens-melodier-ii-del_wivex-strygeorkester-knud-dalgaard_gbia7009069b"
    },
    {
-    "src": "https://archive.org/download/01-o-holy-night/08%20Silent%20Night.mp3",
-    "length": 176.85,
-    "series": "George Beverly Shea",
-    "title": "Silent Night",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells-adeste-fideles_the-caroleers-vicky-kasen_gbia0331967b/JINGLE%20BELLS%3B%20ADESTE%20FIDELES%20-%20THE%20CAROLEERS.mp3",
-    "length": 205.31,
-    "series": "The Caroleers",
-    "title": "Jingle Bells; Adeste Fideles",
-    "date": "1952",
-    "item": "https://archive.org/details/78_jingle-bells-adeste-fideles_the-caroleers-vicky-kasen_gbia0331967b"
-   },
-   {
-    "src": "https://archive.org/download/78_jingling-the-bells_frank-signorelli-and-his-quintet-frank-cheech-signorelli-phil_gbia0164832b/JINGLING%20THE%20BELLS%20-%20Frank%20Signorelli%20and%20His%20Quintet.mp3",
-    "length": 180.57,
-    "series": "Frank Signorelli and His Quintet",
-    "title": "Jingling The Bells",
-    "date": "1946",
-    "item": "https://archive.org/details/78_jingling-the-bells_frank-signorelli-and-his-quintet-frank-cheech-signorelli-phil_gbia0164832b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/PEPSI.MP3",
-    "length": 42.47,
-    "series": "A word from our sponsor",
-    "title": "Pepsi",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-sleigh-ride_lloyd-glenn-lloyd-glenns-combo_gbia0060585b/Christmas%20Sleigh%20Ride%20-%20Lloyd%20Glenn%20-%20Lloyd%20Glenn%27s%20Combo.mp3",
-    "length": 173,
-    "series": "Lloyd Glenn",
-    "title": "Christmas Sleigh Ride",
-    "date": "1947",
-    "item": "https://archive.org/details/78_christmas-sleigh-ride_lloyd-glenn-lloyd-glenns-combo_gbia0060585b"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_elmer-ihrke_gbia0285342b/SILENT%20NIGHT%20-%20Elmer%20Ihrke.mp3",
-    "length": 167.57,
-    "series": "Elmer Ihrke",
-    "title": "Silent Night",
+    "src": "https://archive.org/download/78_snowman_frank-wojnarowski-i-jego-orkiestra-balwan-ze-sniegu_gbia0063720b/Snowman%20-%20Frank%20Wojnarowski%20i%20jego%20Orkiestra.mp3",
+    "length": 168,
+    "series": "Frank Wojnarowski i jego Orkiestra",
+    "title": "Snowman",
     "date": "1948",
-    "item": "https://archive.org/details/78_silent-night_elmer-ihrke_gbia0285342b"
+    "item": "https://archive.org/details/78_snowman_frank-wojnarowski-i-jego-orkiestra-balwan-ze-sniegu_gbia0063720b"
    },
    {
-    "src": "https://archive.org/download/78_ragtime-cowboy-from-santa-fe_dick-thomas-dick-thomas-fred-gray-johnny-fortis_gbia0381439a/RAGTIME%20COWBOY%20FROM%20SANTA%20FE%20-%20DICK%20THOMAS.mp3",
-    "length": 170.33,
-    "series": "Dick Thomas",
-    "title": "Ragtime Cowboy From Santa Fe",
-    "date": "1945",
-    "item": "https://archive.org/details/78_ragtime-cowboy-from-santa-fe_dick-thomas-dick-thomas-fred-gray-johnny-fortis_gbia0381439a"
+    "src": "https://archive.org/download/78_up-on-the-house-top_the-starbrights_gbia0533784b/UP%20ON%20THE%20HOUSE%20TOP%20-%20THE%20STARBRIGHTS.mp3",
+    "length": 126.74,
+    "series": "The Starbrights",
+    "title": "Up On The House Top",
+    "item": "https://archive.org/details/78_up-on-the-house-top_the-starbrights_gbia0533784b"
    },
    {
-    "src": "https://archive.org/download/78_blue-shadow-on-a-white-christmas-tree_eddie-hazelwood-eddie-hazelwood-and-his-carol_gbia0000286b/Blue%20Shadow%20On%20A%20White%20Christmas%20Tree%20-%20Eddie%20Hazelwood-restored.mp3",
-    "length": 172.18,
-    "series": "Eddie Hazelwood",
-    "title": "Blue Shadow On A White Christmas Tree",
-    "date": "1951",
-    "item": "https://archive.org/details/78_blue-shadow-on-a-white-christmas-tree_eddie-hazelwood-eddie-hazelwood-and-his-carol_gbia0000286b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/ELGINAMERICAN.mp3",
-    "length": 105.57,
-    "series": "A word from our sponsor",
-    "title": "Elgin American",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/1948-christmas-songs-by-sinatra/Silent%20night%2C%20holy%20night.mp3",
-    "length": 197,
-    "series": "Frank Sinatra",
-    "title": "Silent night, holy night",
-    "date": "1948",
-    "item": "https://archive.org/details/1948-christmas-songs-by-sinatra"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/09_Christmas_Night_in_Harlem.mp3",
-    "length": 147,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Christmas Night in Harlem",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/78_its-christmas-every-day-when-youre-in-love_bob-houston-johnny-smith-bobby-hacke_gbia0285747a/IT%27S%20CHRISTMAS%20EVERY%20DAY%20%28When%20You%27re%20in%20Lov%20-%20BOB%20HOUSTON.mp3",
-    "length": 172.78,
-    "series": "Bob Houston",
-    "title": "IT'S CHRISTMAS EVERY DAY (When You're in Love)",
-    "date": "1952",
-    "item": "https://archive.org/details/78_its-christmas-every-day-when-youre-in-love_bob-houston-johnny-smith-bobby-hacke_gbia0285747a"
-   },
-   {
-    "src": "https://archive.org/download/BeachBoys-XmasAlbum-1964/03%20-%20Santa%27s%20Beard.mp3",
-    "length": 116.66,
-    "series": "The Beach Boys",
-    "title": "Santa's Beard",
-    "date": "1964",
-    "item": "https://archive.org/details/BeachBoys-XmasAlbum-1964"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/JELLO1955.mp3",
-    "length": 15.17,
-    "series": "A word from our sponsor",
-    "title": "Jell-O",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-polka/1049-9.mp3",
+    "src": "https://archive.org/download/78_still-night-holy-night_john-mccormack-gerald-moore-douglas-gruber-woodgate_gbia0076973a/Still%20Night%2C%20Holy%20Night%20-%20John%20McCormack.mp3",
     "length": 185,
-    "series": "Frank Yankovic",
-    "title": "Christmas Polka",
-    "date": "1949",
-    "item": "https://archive.org/details/78_christmas-polka"
+    "series": "John McCormack",
+    "title": "Still Night, Holy Night",
+    "date": "1940",
+    "item": "https://archive.org/details/78_still-night-holy-night_john-mccormack-gerald-moore-douglas-gruber-woodgate_gbia0076973a"
    },
    {
-    "src": "https://archive.org/download/78_i-saw-mommy-cha-cha-cha-with-you-know-who_bonnie-sisters-allen-stillman-connors_gbia0060408a/I%20Saw%20Mommy%20Cha%20Cha%20Cha%20with%20You%20Know%20Who%20-%20Bonnie%20Sisters.mp3",
-    "length": 180,
-    "series": "Bonnie Sisters",
-    "title": "I Saw Mommy Cha Cha Cha with You Know Who?",
-    "date": "1956",
-    "item": "https://archive.org/details/78_i-saw-mommy-cha-cha-cha-with-you-know-who_bonnie-sisters-allen-stillman-connors_gbia0060408a"
+    "src": "https://archive.org/download/RadioCommercialsShows/CARTERSLITTLELIVERPILLS.mp3",
+    "length": 47.62,
+    "series": "A word from our sponsor",
+    "title": "Carter's Little Liver Pills",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
    },
    {
-    "src": "https://archive.org/download/78_santa-monica-jump_slim-gaillard-orchestra-gaillard-gaillard-and-brown-dodo-marmaros_gbia0001382b/Santa%20Monica%20Jump%20-%20Slim%20Gaillard%20Orchestra.mp3",
-    "length": 192,
-    "series": "Slim Gaillard Orchestra",
-    "title": "Santa Monica Jump",
-    "date": "1946",
-    "item": "https://archive.org/details/78_santa-monica-jump_slim-gaillard-orchestra-gaillard-gaillard-and-brown-dodo-marmaros_gbia0001382b"
+    "src": "https://archive.org/download/78_white-christmas-part-2_barbara-gussow-david-anderson-irving-berlin-mitchell-miller_gbia0534619b/WHITE%20CHRISTMAS%20-%20Part%202%20-%20BARBARA%20GUSSOW.mp3",
+    "length": 100.28,
+    "series": "Barbara Gussow",
+    "title": "WHITE CHRISTMAS - Part 2",
+    "date": "1952",
+    "item": "https://archive.org/details/78_white-christmas-part-2_barbara-gussow-david-anderson-irving-berlin-mitchell-miller_gbia0534619b"
    },
    {
-    "src": "https://archive.org/download/78_white-christmas_ralph-pedi-irving-berlin_gbia0114446a/White%20Christmas%20-%20Ralph%20Pedi%20-%20Irving%20Berlin.mp3",
-    "length": 173,
-    "series": "Ralph Pedi",
-    "title": "White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_white-christmas_ralph-pedi-irving-berlin_gbia0114446a"
+    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town_johnny-frank-coots-gillespie_gbia0480632a/SANTA%20CLAUS%20IS%20COMING%20TO%20TOWN%20-%20JOHNNY%20FRANK.mp3",
+    "length": 152.93,
+    "series": "Johnny Frank",
+    "title": "Santa Claus is Coming to Town",
+    "date": "1948",
+    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town_johnny-frank-coots-gillespie_gbia0480632a"
+   },
+   {
+    "src": "https://archive.org/download/78_child-in-the-manger_the-kirkintilloch-junior-choir-moira-anderson-meta-macpherson-r_gbia0124746a/CHILD%20IN%20THE%20MANGER%20-%20THE%20KIRKINTILLOCH%20JUNIOR%20CHOIR.mp3",
+    "length": 143,
+    "series": "The Kirkintilloch Junior Choir",
+    "title": "Child In The Manger",
+    "date": "1950",
+    "item": "https://archive.org/details/78_child-in-the-manger_the-kirkintilloch-junior-choir-moira-anderson-meta-macpherson-r_gbia0124746a"
+   },
+   {
+    "src": "https://archive.org/download/78_see-amid-the-winters-snow_john-mccormack-gerald-moore-caswall_gbia0076974b/See%20Amid%20the%20Winter%27s%20Snow%20-%20John%20McCormack.mp3",
+    "length": 179,
+    "series": "John McCormack",
+    "title": "See Amid the Winter's Snow",
+    "date": "1940",
+    "item": "https://archive.org/details/78_see-amid-the-winters-snow_john-mccormack-gerald-moore-caswall_gbia0076974b"
    },
    {
     "src": "https://archive.org/download/RadioCommercialsShows/SIGNALGASOLINE.mp3",
@@ -71868,116 +68660,35 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_all-around-the-xmas-tree_mark-warnow-dick-todd-hit-parade-orch-and-chorus-klein-st_gbia0044303a/All%20Around%20the%20Xmas%20Tree%20-%20Mark%20Warnow%20-%20Dick%20Todd.mp3",
-    "length": 186,
-    "series": "Mark Warnow",
-    "title": "All Around the Xmas Tree",
-    "date": "1945",
-    "item": "https://archive.org/details/78_all-around-the-xmas-tree_mark-warnow-dick-todd-hit-parade-orch-and-chorus-klein-st_gbia0044303a"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/01%20Christmas%20Colors%20Meledy.mp3",
-    "length": 183,
-    "series": "Hollywood Pops Orchestra",
-    "title": "Christmas Colors Meledy",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/haveyourselfmerr00king/10_Silver_bells.mp3",
-    "length": 151,
-    "series": "Wayne King & His Orchestra",
-    "title": "Silver bells",
-    "date": "1963",
-    "item": "https://archive.org/details/haveyourselfmerr00king"
-   },
-   {
-    "src": "https://archive.org/download/christmasbrassso00mont/09_Sleigh_Ride_Gingle_Bells.mp3",
-    "length": 176,
-    "series": "Monterey Brass",
-    "title": "Sleigh Ride/Gingle Bells",
+    "src": "https://archive.org/download/78_angels-from-the-realms-of-glory-good-christian-men-rejoice-angels-from-the-realms_gbia0187403b/Angels%20From%20the%20Realms%20of%20Glory%3B%20Good%20Christian%20Men%20Rejoice%3B%20Angels%20From%20the%20Realms%20of%20Glory.mp3",
+    "length": 140.81,
+    "series": "Unknown artist",
+    "title": "Angels From the Realms of Glory; Good Christian Men Rejoice; Angels From the Realms of Glory",
     "date": "1960",
-    "item": "https://archive.org/details/christmasbrassso00mont"
+    "item": "https://archive.org/details/78_angels-from-the-realms-of-glory-good-christian-men-rejoice-angels-from-the-realms_gbia0187403b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsArmourHotDogs.mp3",
-    "length": 59.17,
-    "series": "A word from our sponsor",
-    "title": "Armour Hot Dogs",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_break-forth-o-beauteous-heavenly-light-away-in-a-manger_charles-r-cronham_gbia0034359b/Break%20Forth%20O%20Beauteous%20Heavenly%20Ligh%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 178.49,
-    "series": "Charles R. Cronham",
-    "title": "Break Forth O Beauteous Heavenly Light; Away in a Manger",
-    "date": "1960",
-    "item": "https://archive.org/details/78_break-forth-o-beauteous-heavenly-light-away-in-a-manger_charles-r-cronham_gbia0034359b"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_the-ravens-jimmy-ricks-j-mohr-f-gruber_gbia0322042a/SILENT%20NIGHT%20-%20THE%20RAVENS%20-%20Jimmy%20Ricks%20-%20J.%20Mohr.mp3",
-    "length": 176.06,
-    "series": "The Ravens",
-    "title": "Silent Night",
+    "src": "https://archive.org/download/78_silent-night-a-christmas-carol_harmonia-symphonic-orchestra-fr-grber-1818_gbia0394712a/SILENT%20NIGHT%20A%20Christmas%20Carol%20-%20Harmonia%20Symphonic%20Orchestra.mp3",
+    "length": 178.27,
+    "series": "Harmonia Symphonic Orchestra",
+    "title": "SILENT NIGHT A Christmas Carol",
     "date": "1948",
-    "item": "https://archive.org/details/78_silent-night_the-ravens-jimmy-ricks-j-mohr-f-gruber_gbia0322042a"
+    "item": "https://archive.org/details/78_silent-night-a-christmas-carol_harmonia-symphonic-orchestra-fr-grber-1818_gbia0394712a"
    },
    {
-    "src": "https://archive.org/download/oldfashionedchri00symp/06_Silver_bells__Wayne_King_.mp3",
-    "length": 149,
-    "series": "Symphonette Society",
-    "title": "Silver bells",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
+    "src": "https://archive.org/download/78_et-barn-er-fodt-i-bethlehem-statsradiofoniens-drengekor-dir-henning/16317%20Et%20barn%20er%20f%C3%B8dt%20i%20Bethlehem.mp3",
+    "length": 189.39,
+    "series": "Statsradiofoniens drengekor",
+    "title": "Et barn er født i Bethlehem",
+    "date": "1943",
+    "item": "https://archive.org/details/78_et-barn-er-fodt-i-bethlehem-statsradiofoniens-drengekor-dir-henning"
    },
    {
-    "src": "https://archive.org/download/78_god-rest-ye-merry-gentlemen-the-citizens-of-chatres_charles-r-cronham_gbia0034360a/God%20Rest%20Ye%20Merry%20Gentlemen%3B%20The%20Citi%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 175.27,
-    "series": "Charles R. Cronham",
-    "title": "God Rest Ye Merry Gentlemen; The Citizens of Chatres",
-    "date": "1960",
-    "item": "https://archive.org/details/78_god-rest-ye-merry-gentlemen-the-citizens-of-chatres_charles-r-cronham_gbia0034360a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/BUDWEISER.mp3",
-    "length": 19.07,
-    "series": "A word from our sponsor",
-    "title": "Budweiser",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_glade-jul_ulla-katajavuori-gruber-koskimies_gbia7005537a/Glade%20Jul%20-%20Ulla%20Katajavuori%20-%20Gruber%20-%20Koskimies.mp3",
-    "length": 204.78,
-    "series": "Ulla Katajavuori",
-    "title": "Glade Jul",
-    "date": "1949",
-    "item": "https://archive.org/details/78_glade-jul_ulla-katajavuori-gruber-koskimies_gbia7005537a"
-   },
-   {
-    "src": "https://archive.org/download/78_hvid-jul-white-christmas_hedvig-volmer-irving-berlin-v-skaarup_gbia7015625a/HVID%20JUL%20%28White%20Christmas%29%20-%20HEDVIG%20VOLMER.mp3",
-    "length": 183.93,
-    "series": "Hedvig Volmer",
-    "title": "HVID JUL (White Christmas)",
-    "date": "1951",
-    "item": "https://archive.org/details/78_hvid-jul-white-christmas_hedvig-volmer-irving-berlin-v-skaarup_gbia7015625a"
-   },
-   {
-    "src": "https://archive.org/download/78_santa-lucia_decapua_gbia0033721a/Santa%20Lucia%20-%20Decapua.mp3",
-    "length": 180.37,
-    "series": "Decapua",
-    "title": "Santa Lucia",
-    "date": "1960",
-    "item": "https://archive.org/details/78_santa-lucia_decapua_gbia0033721a"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_del-wood_gbia0056735a/Jingle%20Bells%20-%20Del%20Wood.mp3",
-    "length": 122.26,
-    "series": "Del Wood",
-    "title": "Jingle Bells",
-    "date": "1954",
-    "item": "https://archive.org/details/78_jingle-bells_del-wood_gbia0056735a"
+    "src": "https://archive.org/download/78_jesus-calls-us-now-the-day-is-over_jack-arthur-vicky-kasen_gbia0012633b/Jesus%20Calls%20Us%3B%20Now%20the%20Day%20is%20Over%20-%20Jack%20Arthur.mp3",
+    "length": 175.4,
+    "series": "Jack Arthur",
+    "title": "Jesus Calls Us; Now the Day is Over",
+    "item": "https://archive.org/details/78_jesus-calls-us-now-the-day-is-over_jack-arthur-vicky-kasen_gbia0012633b"
    },
    {
     "src": "https://archive.org/download/RadioCommercialsShows/BRISKTOOTHPASTE.mp3",
@@ -71988,577 +68699,49 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/hannabarberaxmas/12%20Silent%20Night.mp3",
-    "length": 162.22,
-    "series": "The Hanna-Barbera Organ & Chimes",
-    "title": "Silent Night",
-    "date": "1965",
-    "item": "https://archive.org/details/hannabarberaxmas"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/15%20Hark%20The%20Herald%20Angels%20Sing.mp3",
-    "length": 100.94,
-    "series": "Norman Luboff Choir",
-    "title": "Hark! The Herald Angels Sing",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/lp_echoes-of-christmas_george-feyer/disc1/02.01.%20O%20Tannenbaum%3B%20Deck%20The%20Hall%20With%20Boughts%20Of%20Holly%3B%20God%20Rest%20Ye%20Merry%2C%20Gentlemen%3B%20Winter%20Wonderland%3B%20Santa%20Claus%20Is%20Coming%20To%20Town%3B%20Noel%2C%20Noel%3B%20Tchaikovsky%3A%20Troika%20%28From%20%22The%20Seasons%22%29%3B%20Tchaikovsky%3A%20Dance%20Of%20The%20Sugar%20Plum%20Fairy...mp3",
-    "length": 1094.43,
-    "series": "George Feyer",
-    "title": "Echoes Of Christmas (Side 2)",
-    "date": "1955",
-    "item": "https://archive.org/details/lp_echoes-of-christmas_george-feyer"
-   },
-   {
-    "src": "https://archive.org/download/78_campanelle_julius-larosa-archie-bleyer-u-minucci-a-bleyer_gbia0028045a/Campanelle%20-%20Julius%20Larosa%20-%20Archie%20Bleyer.mp3",
-    "length": 159,
-    "series": "Julius Larosa",
-    "title": "Campanelle",
-    "date": "1954",
-    "item": "https://archive.org/details/78_campanelle_julius-larosa-archie-bleyer-u-minucci-a-bleyer_gbia0028045a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceKrispies.mp3",
-    "length": 58.26,
-    "series": "A word from our sponsor",
-    "title": "Rice Krispies",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/i-saw-mommy-kissing-santa-claus/I%20Saw%20Mommy%20Kissing%20Santa%20Claus.mp3",
-    "length": 149,
-    "series": "Jimmy Boyd",
-    "title": "I Saw Mommy Kissing Santa Claus",
-    "date": "1952",
-    "item": "https://archive.org/details/i-saw-mommy-kissing-santa-claus"
-   },
-   {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/04%20Hark%20The%20Herald%20Angels%20Sing.mp3",
-    "length": 160.5,
-    "series": "Chuck Wagon Gang",
-    "title": "Hark! The Herald Angels Sing",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/lets-give-santa-claus-a-christmas-marty-roberts-1950/10251%20Let%27s%20Give%20Santa%20Claus%20a%20Christmas%20Mildred%20L.%20McLarrin.mp3",
-    "length": 176.09,
-    "series": "Marty Roberts",
-    "title": "Let's Give Santa Claus a Christmas",
-    "date": "1950",
-    "item": "https://archive.org/details/lets-give-santa-claus-a-christmas-marty-roberts-1950"
-   },
-   {
-    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0290929b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO%20%28Formerly%20Rambler%20Trio%29.mp3",
-    "length": 174.34,
-    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO (Formerly Rambler Trio)",
-    "title": "Guitar Jingle Bells",
-    "date": "1947",
-    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0290929b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
-    "length": 47.54,
-    "series": "A word from our sponsor",
-    "title": "Chesterfield Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_i-want-a-boy-friend-for-xmas_mickey-carter-and-the-riff-tones-urbanek-lucas_gbia0060719a/I%20Want%20a%20Boy%20Friend%20for%20Xmas%20-%20Mickey%20Carter%20and%20the%20Riff-Tones.mp3",
-    "length": 170,
-    "series": "Mickey Carter and the Riff-Tones",
-    "title": "I Want a Boy Friend for Xmas",
-    "date": "1950",
-    "item": "https://archive.org/details/78_i-want-a-boy-friend-for-xmas_mickey-carter-and-the-riff-tones-urbanek-lucas_gbia0060719a"
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-in-florida_hack-swain-and-his-music-lon-saxon-and-the-sun-maids-john-a-m_gbia0463277a/CHRISTMAS%20IN%20FLORIDA%20-%20HACK%20SWAIN%20AND%20HIS%20MUSIC.mp3",
-    "length": 154.7,
-    "series": "Hack Swain And His Music",
-    "title": "Christmas In Florida",
-    "item": "https://archive.org/details/78_christmas-in-florida_hack-swain-and-his-music-lon-saxon-and-the-sun-maids-john-a-m_gbia0463277a"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/11%20Whence%20Comes%20The%20Rush%20Of%20Wings.mp3",
-    "length": 61.34,
-    "series": "Norman Luboff Choir",
-    "title": "Whence Comes The Rush Of Wings",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/the-sound-of-christmas-volume-2-vinyl-rip/10%20A%20Dream%20Of%20Toyland.mp3",
-    "length": 259,
-    "series": "Hollywood Pops Orchestra",
-    "title": "A Dream Of Toyland",
-    "date": "1967",
-    "item": "https://archive.org/details/the-sound-of-christmas-volume-2-vinyl-rip"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/WHEATIESCEREAL.mp3",
-    "length": 85.21,
-    "series": "A word from our sponsor",
-    "title": "Wheaties",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_christmas-roses_clark-mcmullen-peters-catsos_gbia0447325a/CHRISTMAS%20ROSES%20-%20CLARK%20%26%20McMULLEN%20-%20Peters.mp3",
-    "length": 167.35,
-    "series": "CLARK & McMULLEN",
-    "title": "Christmas Roses",
-    "date": "1950",
-    "item": "https://archive.org/details/78_christmas-roses_clark-mcmullen-peters-catsos_gbia0447325a"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/07_Santa_Claus_Is_Comin__to_Town.mp3",
-    "length": 133,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Santa Claus Is Comin' to Town",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/03%20Thou%20Didst%20Leave%20Thy%20Throne.mp3",
-    "length": 149.6,
-    "series": "George Beverly Shea",
-    "title": "Thou Did'st Leave Thy Thrown",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00garb/07_Santa_Claus_is_coming_to_town.mp3",
-    "length": 139,
-    "series": "Jan Garber & His Orchestra",
-    "title": "Santa Claus is coming to town",
-    "date": "1960",
-    "item": "https://archive.org/details/christmasdancepa00garb"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/HALEYSMO.MP3",
-    "length": 42.55,
-    "series": "A word from our sponsor",
-    "title": "Haley's M-O",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_sing-a-song-of-christmas_the-smoothies-barry-thomson-ted-cott_gbia0110890a/SING-A-SONG%20OF%20CHRISTMAS%20-%20The%20Smoothies.mp3",
-    "length": 186,
-    "series": "The Smoothies",
-    "title": "Sing-A-Song Of Christmas",
-    "item": "https://archive.org/details/78_sing-a-song-of-christmas_the-smoothies-barry-thomson-ted-cott_gbia0110890a"
-   },
-   {
-    "src": "https://archive.org/download/liberace-a-liberace-christmas_20211106/What%20Child%20Is%20This.mp3",
-    "length": 136.97,
-    "series": "Liberace",
-    "title": "What Child Is This",
-    "date": "1963",
-    "item": "https://archive.org/details/liberace-a-liberace-christmas_20211106"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/Oh%2C%20Little%20Town%20Of%20Bethleham.mp3",
-    "length": 141.14,
-    "series": "Ethel Smith",
-    "title": "Oh, Little Town Of Bethleham",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange/A5%20-%20Hallelujah%20Chorus.mp3",
-    "length": 263.32,
-    "series": "Various",
-    "title": "Hallelujah Chorus",
-    "date": "1959",
-    "item": "https://archive.org/details/a-4-medley-the-first-noel-wassail-wassail-all-over-the-town-hark-the-herald-ange"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsGlocoatWax.mp3",
-    "length": 16.06,
-    "series": "A word from our sponsor",
-    "title": "Glo-Coat Wax",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/christmasdancepa00lani/12_Sleigh_Ride.mp3",
-    "length": 177,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Sleigh Ride",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
-   },
-   {
-    "src": "https://archive.org/download/07-white-christmas/06%20SNOW.mp3",
-    "length": 150.67,
-    "series": "Bing Crosby, Danny Kaye, Rosemary Clooney, Trudy Stevens",
-    "title": "Snow",
-    "date": "1954",
-    "item": "https://archive.org/details/07-white-christmas"
-   },
-   {
-    "src": "https://archive.org/download/jimmy-smith-christmas-cookin/Jimmy%20Smith%20%281928-2005%29%20-%20Christmas%20Cookin_%20%281964-1966%29%20-%2002%20-%20Jingle%20Bells.mp3",
-    "length": 195.11,
-    "series": "Jimmy Smith",
-    "title": "Jingle Bells",
-    "date": "1966",
-    "item": "https://archive.org/details/jimmy-smith-christmas-cookin"
-   },
-   {
-    "src": "https://archive.org/download/01-o-holy-night/11%20Once%20In%20Royal%20Davids%20City.mp3",
-    "length": 120.89,
-    "series": "George Beverly Shea",
-    "title": "Once In Royal David's City",
-    "date": "1964",
-    "item": "https://archive.org/details/01-o-holy-night"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/OVALTINE.MP3",
-    "length": 126.24,
-    "series": "A word from our sponsor",
-    "title": "Ovaltine",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/the-lennon-sisters-noel/08%20Oh%20Holy%20Night.mp3",
-    "length": 130.09,
-    "series": "The Lennon Sisters",
-    "title": "Oh, Holy Night",
-    "date": "1968",
-    "item": "https://archive.org/details/the-lennon-sisters-noel"
-   },
-   {
-    "src": "https://archive.org/download/CALYPSOCHIRSTMAS/10.RounDeGloryManger.mp3",
-    "length": 110.29,
-    "series": "The De Paur Chorus",
-    "title": "Roun' de Glory Manger",
-    "date": "1956",
-    "item": "https://archive.org/details/CALYPSOCHIRSTMAS"
-   },
-   {
-    "src": "https://archive.org/download/chet-atkins-christmas-with_20211107/Winter%20Wonderland.mp3",
-    "length": 170.11,
-    "series": "Chet Atkins",
-    "title": "Winter Wonderland",
-    "date": "1961",
-    "item": "https://archive.org/details/chet-atkins-christmas-with_20211107"
-   },
-   {
-    "src": "https://archive.org/download/paul-mauriat-and-his-orchestra-the-christmas-album-side-1-philips-600-255-stereo-et-stylus-f-eq/Paul%20Mauriat%20and%20his%20orchestra%20-%20The%20Christmas%20Album%20-%20side%202%20Philips%20600-255%20stereo%20ET%20stylus%20F%20EQ.mp3",
-    "length": 939,
-    "series": "Paul Mauriat And His Orchestra",
-    "title": "The Christmas Album (Side 2)",
-    "date": "1967",
-    "item": "https://archive.org/details/paul-mauriat-and-his-orchestra-the-christmas-album-side-1-philips-600-255-stereo-et-stylus-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/HALLOSHAMPOO.mp3",
-    "length": 25.7,
-    "series": "A word from our sponsor",
-    "title": "Halo Shampoo",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_o-come-all-ye-faithful_the-sandpiper-chorus-mitchell-miller_gbia0533732a/o%20come%2C%20all%20ye%20faithful%20-%20The%20Sandpiper%20Chorus.mp3",
-    "length": 91,
-    "series": "The Sandpiper Chorus",
-    "title": "O Come, All Ye Faithful",
-    "date": "1949",
-    "item": "https://archive.org/details/78_o-come-all-ye-faithful_the-sandpiper-chorus-mitchell-miller_gbia0533732a"
-   },
-   {
-    "src": "https://archive.org/download/78_deck-the-hall-we-christians-may-rejoice-today-come-all-ye-shepherds_charles-r-cr_gbia0034358b/Deck%20the%20Hall%3B%20We%20Christians%20May%20rejo%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 199.4,
-    "series": "Charles R. Cronham",
-    "title": "Deck the Hall; We Christians May rejoice Today; Come All Ye Shepherds",
-    "date": "1960",
-    "item": "https://archive.org/details/78_deck-the-hall-we-christians-may-rejoice-today-come-all-ye-shepherds_charles-r-cr_gbia0034358b"
-   },
-   {
-    "src": "https://archive.org/download/78_best-loved-christmas-music_ray-bloch_gbia0559317a/BEST%20LOVED%20CHRISTMAS%20MUSIC%20-%20RAY%20BLOCH.mp3",
-    "length": 185,
-    "series": "Ray Bloch",
-    "title": "Best Loved Christmas Music",
-    "item": "https://archive.org/details/78_best-loved-christmas-music_ray-bloch_gbia0559317a"
-   },
-   {
-    "src": "https://archive.org/download/78_bobby-dawes-christmas-43_gbia0520007a/BOBBY%20DAWES%20CHRISTMAS%20%2743.mp3",
-    "length": 246,
-    "series": "",
-    "title": "Bobby Dawes Christmas '43",
-    "date": "1943",
-    "item": "https://archive.org/details/78_bobby-dawes-christmas-43_gbia0520007a"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
-    "length": 49.41,
-    "series": "A word from our sponsor",
-    "title": "Lifebuoy Health Soap",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night-joy-to-the-world_charles-r-cronham_gbia0034359a/Silent%20Night%3B%20Joy%20to%20the%20World%20-%20Charles%20R.%20Cronham.mp3",
-    "length": 148.27,
-    "series": "Charles R. Cronham",
-    "title": "Silent Night; Joy to the World",
-    "date": "1960",
-    "item": "https://archive.org/details/78_silent-night-joy-to-the-world_charles-r-cronham_gbia0034359a"
-   },
-   {
-    "src": "https://archive.org/download/JV-30446-1950-QmVoMZewBpzgugUGBDd6A4EhBzMJUky9JHaNBUN1gJqinb.mp3/DV521557.mp3",
-    "length": 203.59,
-    "series": "Johnny Otis Orchestra",
-    "title": "Far Away Blues (Far Away Christmas Blues)",
-    "date": "1950",
-    "item": "https://archive.org/details/JV-30446-1950-QmVoMZewBpzgugUGBDd6A4EhBzMJUky9JHaNBUN1gJqinb.mp3"
-   },
-   {
-    "src": "https://archive.org/download/george-melachrino-his-orchestra-christmas-joy-side-1-rca-victor-lpm-2044-mono-d-/George%20Melachrino%20%26%20his%20orchestra%20-%20Christmas%20Joy%20-%20side%201%20-%20RCA%20Victor%20LPM%20-%202044%20%20mono%20%20D71EE%20DC%20Art%20Bass%20Vocal%20Boost-nr.mp3",
-    "length": 1240,
-    "series": "George Melachrino & His Orchestra",
-    "title": "Christmas Joy (Side 1)",
-    "date": "1959",
-    "item": "https://archive.org/details/george-melachrino-his-orchestra-christmas-joy-side-1-rca-victor-lpm-2044-mono-d-"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/02%20Christmasville%2C%20U.S.A..mp3",
-    "length": 109.03,
-    "series": "Jimmy Charles",
-    "title": "Christmasville, U.S.A.",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/NABISCO.MP3",
-    "length": 89.11,
-    "series": "A word from our sponsor",
-    "title": "Nabisco",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_baby-its-cold-outside_lady-sybil-smythe-and-bill-jacoby-johnny-white-trio-frank-l_gbia0208417b/BABY%2C%20IT%27S%20COLD%20OUTSIDE%20-%20LADY%20SYBIL%20SMYTHE%20and%20BILL%20JACOBY.mp3",
-    "length": 166,
-    "series": "LADY SYBIL SMYTHE and BILL JACOBY",
-    "title": "Baby, It's Cold Outside",
-    "date": "1949",
-    "item": "https://archive.org/details/78_baby-its-cold-outside_lady-sybil-smythe-and-bill-jacoby-johnny-white-trio-frank-l_gbia0208417b"
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/03%20We%20Three%20Kings%20Of%20Orient%20Are.mp3",
-    "length": 90.1,
-    "series": "Norman Luboff Choir",
-    "title": "We Three Kings Of Orient Are",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
-    "length": 94.92,
-    "series": "Ethel Smith",
-    "title": "God Rest Ye Merry Gentlemen",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/01WhenChristmasComesAroundEachYear/02%20What%20I%20Want%20for%20Christmas.mp3",
-    "length": 94.2,
-    "series": "Paul Parnes",
-    "title": "That's What I Want for Christmas",
-    "date": "1961",
-    "item": "https://archive.org/details/01WhenChristmasComesAroundEachYear"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/COLGATETOOTHPOWDER.mp3",
-    "length": 14.08,
-    "series": "A word from our sponsor",
-    "title": "Colgate Tooth Powder",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/goodyear-the-great-songs-of-christmas-album-2-1962/Goodyear%20The%20Great%20Songs%20of%20Christmas%20Album%202%20%281962%29/O%20Little%20Town%20of%20Bethlehem.mp3",
-    "length": 101.56,
-    "series": "The Mormon Tabernacle Choir",
-    "title": "O Little Town of Bethlehem",
-    "date": "1962",
-    "item": "https://archive.org/details/goodyear-the-great-songs-of-christmas-album-2-1962"
-   },
-   {
-    "src": "https://archive.org/download/ethel-smith-christmas-music_20211124/It%20Came%20Upon%20The%20Midnight%20Clear.mp3",
-    "length": 155.04,
-    "series": "Ethel Smith",
-    "title": "It Came Upon The Midnight Clear",
-    "date": "1959",
-    "item": "https://archive.org/details/ethel-smith-christmas-music_20211124"
-   },
-   {
-    "src": "https://archive.org/download/78_joy-to-the-world-it-came-upon-the-midnight-clear-hark-the-herald-angels-sing_son_gbia0001237b/Joy%20To%20The%20World%3B%20It%20Came%20Upon%20The%20Midnight%20Clear%3B%20Hark%2C%20The%20Herald%20Angels%20Sing%20-%20Sonora%20Choristers.mp3",
-    "length": 206.84,
-    "series": "Sonora Choristers",
-    "title": "Joy To The World; It Came Upon The Midnight Clear; Hark, The Herald Angels Sing",
-    "date": "1945",
-    "item": "https://archive.org/details/78_joy-to-the-world-it-came-upon-the-midnight-clear-hark-the-herald-angels-sing_son_gbia0001237b"
-   },
-   {
-    "src": "https://archive.org/download/pete-fountain-candy-clarinet-christmas-coral-crl-57487-side-2-mono-f-eq/Pete%20Fountain%20-%20Candy%20Clarinet%20Christmas%20-%20Coral%20CRL%2057487%20side%202%20mono%20F%20EQ.mp3",
-    "length": 871,
-    "series": "Pete Fountain",
-    "title": "Candy Clarinet Christmas (Side 2)",
-    "date": "1967",
-    "item": "https://archive.org/details/pete-fountain-candy-clarinet-christmas-coral-crl-57487-side-2-mono-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/ROLSTONCEREAL.mp3",
-    "length": 35.84,
-    "series": "A word from our sponsor",
-    "title": "Ralston Cereal",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/oldfashionedchri00symp/07_Rudolph__the_red_nosed_reindeer__The_Four_Aces_.mp3",
-    "length": 157,
-    "series": "Symphonette Society",
-    "title": "Rudolph, the red nosed reindeer",
-    "date": "1950",
-    "item": "https://archive.org/details/oldfashionedchri00symp"
-   },
-   {
-    "src": "https://archive.org/download/78_carol-medley-part-1_the-fairey-aviation-works-band-harry-mortimer_gbia3035143a/CAROL%20MEDLEY%20-%20Part%201%20-%20THE%20FAIREY%20AVIATION%20WORKS%20BAND.mp3",
-    "length": 167,
-    "series": "The Fairey Aviation Works Band",
-    "title": "Carol Medley - Part 1",
-    "date": "1952",
-    "item": "https://archive.org/details/78_carol-medley-part-1_the-fairey-aviation-works-band-harry-mortimer_gbia3035143a"
-   },
-   {
-    "src": "https://archive.org/download/78_silent-night_the-caroleers-vicky-kasen_gbia0296730b/SILENT%20NIGHT%20-%20THE%20CAROLEERS%20-%20Vicky%20KAsen.mp3",
-    "length": 115.61,
-    "series": "The Caroleers",
-    "title": "Silent Night",
-    "date": "1959",
-    "item": "https://archive.org/details/78_silent-night_the-caroleers-vicky-kasen_gbia0296730b"
-   },
-   {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dick-edwards-the-peter-pan-chorus-and-orchestra-john_gbia0203787a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20DICK%20EDWARDS.mp3",
-    "length": 181.62,
-    "series": "Dick Edwards",
-    "title": "Rudolph The Red Nosed Reindeer",
-    "date": "1952",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dick-edwards-the-peter-pan-chorus-and-orchestra-john_gbia0203787a"
-   },
-   {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAjax.mp3",
-    "length": 40.3,
-    "series": "A word from our sponsor",
-    "title": "Ajax",
-    "item": "https://archive.org/details/VintageRadioCommercials",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_the-first-nol_mario-lanza-jeff-alexander-choir-ray-sinatra_gbia7034733b/THE%20FIRST%20NO%C3%8BL%20-%20MARIO%20LANZA%20-%20Jeff%20Alexander%20Choir.mp3",
-    "length": 195,
-    "series": "Mario Lanza",
-    "title": "The First Noël",
-    "date": "1951",
-    "item": "https://archive.org/details/78_the-first-nol_mario-lanza-jeff-alexander-choir-ray-sinatra_gbia7034733b"
-   },
-   {
-    "src": "https://archive.org/download/roger-williams-with-the-concert-grand-orchestra-christmas-time-mca-15005-side-1-mono-f-eq/Roger%20Williams%20with%20the%20Concert%20Grand%20Orchestra%20-%20Christmas%20Time%20-%20MCA%2015005%20side%202%20%20mono%20F%20EQ.mp3",
-    "length": 1209,
-    "series": "Roger Williams With The Concert Grand Orchestra",
-    "title": "Christmas Time (Side 2)",
-    "date": "1960",
-    "item": "https://archive.org/details/roger-williams-with-the-concert-grand-orchestra-christmas-time-mca-15005-side-1-mono-f-eq"
-   },
-   {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/01%20Joy%20To%20The%20World.mp3",
-    "length": 122.88,
-    "series": "Chuck Wagon Gang",
-    "title": "Joy To The World",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
-   },
-   {
-    "src": "https://archive.org/download/78_ma-my-toys-are-broken_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jaco_gbia0483044b/MA%21%20MY%20TOYS%20ARE%20BROKEN%20-%20Bill%20Tabbert%20and%20the%20%22400%22%20Quartet.mp3",
-    "length": 151.39,
-    "series": "Bill Tabbert and the \"400\" Quartet",
-    "title": "Ma! My Toys Are Broken",
-    "date": "1951",
-    "item": "https://archive.org/details/78_ma-my-toys-are-broken_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jaco_gbia0483044b"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/POSTUM.MP3",
-    "length": 120.78,
-    "series": "A word from our sponsor",
-    "title": "Postum",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/78_white-christmas_bonnemere-and-his-piano-i-berlin_gbia0059939a/White%20Christmas%20-%20Bonnemere%20and%20His%20Piano.mp3",
-    "length": 158,
-    "series": "Bonnemere and His Piano",
-    "title": "White Christmas",
-    "date": "1954",
-    "item": "https://archive.org/details/78_white-christmas_bonnemere-and-his-piano-i-berlin_gbia0059939a"
-   },
-   {
-    "src": "https://archive.org/download/longlostsixtiesxmas/12%20Christmas%20is%20the%20Time%20to%20Be%20with%20Your%20Baby.mp3",
-    "length": 158.93,
-    "series": "The Orchids",
-    "title": "Christmas is the Time to Be with Your Baby",
-    "date": "1960s",
-    "item": "https://archive.org/details/longlostsixtiesxmas"
-   },
-   {
-    "src": "https://archive.org/download/78_im-gonna-write-a-letter-to-santa-claus_eugenia-regos-eugenia-regos-joseph-koss_gbia0474435a/I%27M%20GONNA%20WRITE%20A%20LETTER%20TO%20SANTA%20CLAUS%20-%20EUGENIA%20REGOS.mp3",
-    "length": 137.11,
-    "series": "Eugenia Regos",
-    "title": "I'm Gonna Write a Letter to Santa Claus",
-    "date": "1953",
-    "item": "https://archive.org/details/78_im-gonna-write-a-letter-to-santa-claus_eugenia-regos-eugenia-regos-joseph-koss_gbia0474435a"
-   },
-   {
-    "src": "https://archive.org/download/living-strings-orchestra-the-spirit-of-christmas-side-1-rca-camden-cas-783-stereo-d-71-ee-f-eq-fb-h/Living%20Strings%20Orchestra%20-%20The%20Spirit%20Of%20Christmas%20-%20side%201%20-%20RCA%20Camden%20CAS%20783%20Stereo%20%20D71EE%20F%20EQ%20FB%20H.mp3",
-    "length": 1312,
-    "series": "Living Strings Orchestra",
-    "title": "The Spirit Of Christmas (Side 1)",
-    "date": "1963",
-    "item": "https://archive.org/details/living-strings-orchestra-the-spirit-of-christmas-side-1-rca-camden-cas-783-stereo-d-71-ee-f-eq-fb-h"
-   },
-   {
-    "src": "https://archive.org/download/RadioCommercialsShows/WINSTONCIGARETTES.mp3",
-    "length": 29.29,
-    "series": "A word from our sponsor",
-    "title": "Winston Cigarettes",
-    "item": "https://archive.org/details/RadioCommercialsShows",
-    "ad": true
-   },
-   {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/06%20Twelve%20Days%20Of%20Christmas.mp3",
-    "length": 214.57,
-    "series": "Norman Luboff Choir",
-    "title": "Twelve Days Of Christmas",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_jingle-bells_jimmy-wilber-and-the-little-band-the-three-jills_gbia0085047b/Jingle%20Bells%20-%20Jimmy%20Wilber%20and%20The%20Little%20Band.mp3",
-    "length": 159,
-    "series": "Jimmy Wilber and The Little Band",
-    "title": "Jingle Bells",
+    "src": "https://archive.org/download/78_nuttin-for-christmas_mike-jay-tepper-bennett_gbia0534676a/NUTTIN%27%20FOR%20CHRISTMAS%20-%20Mike%20Jay%20-%20Tepper.mp3",
+    "length": 149.46,
+    "series": "Mike Jay",
+    "title": "Nuttin' For Christmas",
+    "item": "https://archive.org/details/78_nuttin-for-christmas_mike-jay-tepper-bennett_gbia0534676a"
+   },
+   {
+    "src": "https://archive.org/download/78_hello-new-year-hello_henry-jerome-his-orchestra-dick-judge-haggar-razaf-klickman_gbia0283912a/HELLO%20NEW%20YEAR%2C%20HELLO%20-%20HENRY%20JEROME%20%26%20His%20Orchestra.mp3",
+    "length": 146.74,
+    "series": "Henry Jerome & His Orchestra",
+    "title": "Hello New Year, Hello",
     "date": "1948",
-    "item": "https://archive.org/details/78_jingle-bells_jimmy-wilber-and-the-little-band-the-three-jills_gbia0085047b"
+    "item": "https://archive.org/details/78_hello-new-year-hello_henry-jerome-his-orchestra-dick-judge-haggar-razaf-klickman_gbia0283912a"
+   },
+   {
+    "src": "https://archive.org/download/78_barbaras-carol_barbara-carroll-trio-barbara-carroll-dante-martucci-herb-wasserman_gbia0238253b/BARBARA%27S%20CAROL%20-%20BARBARA%20CARROLL%20TRIO%20-%20Barbara%20Carroll.mp3",
+    "length": 202.56,
+    "series": "Barbara Carroll Trio",
+    "title": "Barbara's Carol",
+    "date": "1950",
+    "item": "https://archive.org/details/78_barbaras-carol_barbara-carroll-trio-barbara-carroll-dante-martucci-herb-wasserman_gbia0238253b"
+   },
+   {
+    "src": "https://archive.org/download/78_night-before-christmas_music-hall-drama-group-and-orchestra_gbia0203790b/Night%20Before%20Christmas%20-%20Music%20Hall%20Drama%20Group%20and%20Orchestra.mp3",
+    "length": 205.42,
+    "series": "Music Hall Drama Group and Orchestra",
+    "title": "Night Before Christmas",
+    "item": "https://archive.org/details/78_night-before-christmas_music-hall-drama-group-and-orchestra_gbia0203790b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/TOPVALUESTAMPS.mp3",
+    "length": 40.44,
+    "series": "A word from our sponsor",
+    "title": "Top Value Stamps",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_julens-melodier-1-del_kai-mortnesens-strygeorkester_gbia0120083a/Julens%20melodier%201.%20del%20-%20Kai%20Mortnesens%20strygeorkester.mp3",
+    "length": 180.78,
+    "series": "Kai Mortnesens strygeorkester",
+    "title": "Julens melodier 1. del",
+    "item": "https://archive.org/details/78_julens-melodier-1-del_kai-mortnesens-strygeorkester_gbia0120083a"
    },
    {
     "src": "https://archive.org/download/78_for-children-a-andante-roumanian-christmas-carols-b-allegro-moderato-and-allegro-fo_gbia0538388a/FOR%20CHILDREN%22%20%28a%29%20Andante%3B%20ROUMANIAN%20CHRIS.mp3",
@@ -72569,18 +68752,791 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_for-children-a-andante-roumanian-christmas-carols-b-allegro-moderato-and-allegro-fo_gbia0538388a"
    },
    {
-    "src": "https://archive.org/download/78_white-christmas_liberty-orchestra-with-singing-irving-berlin_gbia0019669b/White%20Christmas%20-%20Liberty%20Orchestra%20with%20Singing.mp3",
-    "length": 183,
-    "series": "Liberty Orchestra with Singing",
-    "title": "White Christmas",
-    "date": "1942",
-    "item": "https://archive.org/details/78_white-christmas_liberty-orchestra-with-singing-irving-berlin_gbia0019669b"
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-little-town-of-bethlehem_boy-choristers_gbia0001240b/It%20Came%20Upon%20A%20Midnight%20Clear%3B%20Little%20Town%20of%20Bethlehem%20-%20Boy%20Choristers.mp3",
+    "length": 225.26,
+    "series": "Boy Choristers",
+    "title": "It Came Upon A Midnight Clear; Little Town of Bethlehem",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-little-town-of-bethlehem_boy-choristers_gbia0001240b"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/NORTHWESTORIENTAIRLINES.mp3",
-    "length": 50.35,
+    "src": "https://archive.org/download/78_mothers-christmas-tree_fran-mckenna-the-mulcays-jimmy-and-mildred-jewell-barne_gbia0405697b/MOTHER%27S%20CHRISTMAS%20TREE%20-%20FRAN%20McKENNA%20-%20%22THE%20MULCAYS%22%20%28Jimmy%20and%20Mildred%29.mp3",
+    "length": 142.92,
+    "series": "FRAN McKENNA",
+    "title": "Mother's Christmas Tree",
+    "date": "1952",
+    "item": "https://archive.org/details/78_mothers-christmas-tree_fran-mckenna-the-mulcays-jimmy-and-mildred-jewell-barne_gbia0405697b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BRISKTOOTHPASTE.mp3",
+    "length": 34.51,
     "series": "A word from our sponsor",
-    "title": "Northwest Orient Airlines",
+    "title": "Brisk Toothpaste",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_north-pole-town_jeff-stoughton-and-his-lake-placid-club-orchestra-larry-murphy-lew_gbia0285326a/NORTH%20POLE%20TOWN%20-%20Jeff%20Stoughton%20and%20his%20Lake%20Placid%20Club%20Orchestra.mp3",
+    "length": 213.58,
+    "series": "Jeff Stoughton and his Lake Placid Club Orchestra",
+    "title": "North Pole Town",
+    "date": "1956",
+    "item": "https://archive.org/details/78_north-pole-town_jeff-stoughton-and-his-lake-placid-club-orchestra-larry-murphy-lew_gbia0285326a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_kenny-martin-michael-king_gbia0533456a/O%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20KENNY%20MARTIN.mp3",
+    "length": 78.73,
+    "series": "Kenny Martin",
+    "title": "O Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_kenny-martin-michael-king_gbia0533456a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_michael-stewart-john-marks-the-sandpipers-mitchell-m_gbia0001241a/Rudolph%20The%20Red-Nosed%20Reindeer%20-%20Michael%20Stewart.mp3",
+    "length": 199,
+    "series": "Michael Stewart",
+    "title": "Rudolph The Red-Nosed Reindeer",
+    "date": "1950",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_michael-stewart-john-marks-the-sandpipers-mitchell-m_gbia0001241a"
+   },
+   {
+    "src": "https://archive.org/download/78_on-the-atchison-topeka-and-the-santa-fe_kenny-baker-and-his-all-star-orchestra-har_gbia7016631b/On%20the%20Atchison%2C%20%20-%20KENNY%20BAKER%20and%20his%20All%20Star%20Orchestra.mp3",
+    "length": 156.02,
+    "series": "KENNY BAKER and his All Star Orchestra",
+    "title": "On the Atchison, Topeka and the Santa Fe",
+    "item": "https://archive.org/details/78_on-the-atchison-topeka-and-the-santa-fe_kenny-baker-and-his-all-star-orchestra-har_gbia7016631b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDodge.mp3",
+    "length": 62.27,
+    "series": "A word from our sponsor",
+    "title": "Dodge",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_pussycats-christmas-part-1_albert-grobe-gene-lowell-chorus-m-w-brown_gbia7036267a/PUSSYCAT%27S%20CHRISTMAS%20-%20Part%201%20-%20ALBERT%20GROBE.mp3",
+    "length": 186.78,
+    "series": "Albert Grobe",
+    "title": "PUSSYCAT'S CHRISTMAS - Part 1",
+    "item": "https://archive.org/details/78_pussycats-christmas-part-1_albert-grobe-gene-lowell-chorus-m-w-brown_gbia7036267a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful-adeste-fideles_fred-mendelsohn_gbia0544450b/O%20COME%20ALL%20YE%20FAITHFUL%20-%20Adeste%20Fideles%20-%20FRED%20MENDELSOHN.mp3",
+    "length": 170.98,
+    "series": "Fred Mendelsohn",
+    "title": "O COME ALL YE FAITHFUL - Adeste Fideles",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful-adeste-fideles_fred-mendelsohn_gbia0544450b"
+   },
+   {
+    "src": "https://archive.org/download/78_theres-a-christmas-tree-in-heaven_four-aces-al-alberts-max-spickol-bill-borelli-j_gbia0111860a/THERE%27S%20A%20CHRISTMAS%20TREE%20IN%20HEAVEN%20-%20Four%20Aces.mp3",
+    "length": 206.03,
+    "series": "Four Aces",
+    "title": "There'S A Christmas Tree In Heaven",
+    "date": "1951",
+    "item": "https://archive.org/details/78_theres-a-christmas-tree-in-heaven_four-aces-al-alberts-max-spickol-bill-borelli-j_gbia0111860a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_the-tempo-skating-band-lloyd-sullivan-and-tom-memoli-haold-schock_gbia0479275a/JINGLE%20BELLS%20-%20The%20TEMPO%20SKATING%20BAND%20-%20LLOYD%20SULLIVAN%20and%20TOM%20MEMOLI.mp3",
+    "length": 201.72,
+    "series": "The TEMPO SKATING BAND",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_the-tempo-skating-band-lloyd-sullivan-and-tom-memoli-haold-schock_gbia0479275a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GROVESNOSEDROPS.mp3",
+    "length": 70.71,
+    "series": "A word from our sponsor",
+    "title": "Grove's Nose Drops",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland_the-cricketones_gbia0533842a/WINTER%20WONDERLAND%20-%20THE%20CRICKETONES.mp3",
+    "length": 131.97,
+    "series": "The Cricketones",
+    "title": "Winter Wonderland",
+    "item": "https://archive.org/details/78_winter-wonderland_the-cricketones_gbia0533842a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-in-your-heart_luis-russell-and-his-orchestra-lee-richardson-russell-kizer_gbia0475068a/CHRISTMAS%20IN%20YOUR%20HEART%20-%20LUIS%20RUSSELL%20AND%20HIS%20ORCHESTRA.mp3",
+    "length": 184.07,
+    "series": "Luis Russell And His Orchestra",
+    "title": "Christmas In Your Heart",
+    "date": "1946",
+    "item": "https://archive.org/details/78_christmas-in-your-heart_luis-russell-and-his-orchestra-lee-richardson-russell-kizer_gbia0475068a"
+   },
+   {
+    "src": "https://archive.org/download/78_slumber-beloved-part-1-from-christmas-oratorio_thomas-marjorie-london-symph/C_3935_2EA_13336-1.mp3",
+    "length": 259,
+    "series": "Marjorie Thomas",
+    "title": "Slumber, Beloved - part 1 (from \"Christmas Oratorio\")",
+    "date": "1948",
+    "item": "https://archive.org/details/78_slumber-beloved-part-1-from-christmas-oratorio_thomas-marjorie-london-symph"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-medley_herb-kern-lloyd-sloop-warren-arey_gbia0056766b/Christmas%20Medley%20-%20Herb%20Kern%20-%20Lloyd%20Sloop.mp3",
+    "length": 185,
+    "series": "Herb Kern",
+    "title": "Christmas Medley",
+    "date": "1947",
+    "item": "https://archive.org/details/78_christmas-medley_herb-kern-lloyd-sloop-warren-arey_gbia0056766b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceARoni.mp3",
+    "length": 38.06,
+    "series": "A word from our sponsor",
+    "title": "Rice-A-Roni",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_deck-the-hall-we-christians-may-rejoice-today-come-all-ye-shepherds_charles-r-cr_gbia0034358b/Deck%20the%20Hall%3B%20We%20Christians%20May%20rejo%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 199.4,
+    "series": "Charles R. Cronham",
+    "title": "Deck the Hall; We Christians May rejoice Today; Come All Ye Shepherds",
+    "date": "1960",
+    "item": "https://archive.org/details/78_deck-the-hall-we-christians-may-rejoice-today-come-all-ye-shepherds_charles-r-cr_gbia0034358b"
+   },
+   {
+    "src": "https://archive.org/download/78_happy-birthday-gentle-saviour_redd-harper-dale-evans-rogers_gbia3011671b/HAPPY%20BIRTHDAY%2C%20GENTLE%20SAVIOUR%20-%20REDD%20HARPER.mp3",
+    "length": 184,
+    "series": "Redd Harper",
+    "title": "Happy Birthday, Gentle Saviour",
+    "item": "https://archive.org/details/78_happy-birthday-gentle-saviour_redd-harper-dale-evans-rogers_gbia3011671b"
+   },
+   {
+    "src": "https://archive.org/download/78_et-barn-er-fdt-i-bethlehem_medlemmer-af-radiokoret-palle-alsfelt-n-f-s-grundtvi_gbia7005822a/Et%20Barn%20er%20f%C3%B8dt%20i%20Bethlehem%20-%20Medlemmer%20af%20Radiokoret.mp3",
+    "length": 200.37,
+    "series": "Medlemmer af Radiokoret",
+    "title": "Et Barn er født i Bethlehem",
+    "item": "https://archive.org/details/78_et-barn-er-fdt-i-bethlehem_medlemmer-af-radiokoret-palle-alsfelt-n-f-s-grundtvi_gbia7005822a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas_peter-donald-mitch-miller_gbia0534670/01%20-%20THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20PART%20I%20-%20PETER%20DONALD.mp3",
+    "length": 110,
+    "series": "Peter Donald",
+    "title": "The Night Before Christmas",
+    "date": "1949",
+    "item": "https://archive.org/details/78_the-night-before-christmas_peter-donald-mitch-miller_gbia0534670"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzerPlopPlopFizzFizz.mp3",
+    "length": 29.98,
+    "series": "A word from our sponsor",
+    "title": "Alka Seltzer Plop Plop Fizz Fizz",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_sikken-voldsom-trngsel-og-alarm_strygeorkester-og-orgel-operasanger-w-loudrup-jen_gbia7005646b/Sikken%20voldsom%20Tr%C3%A6ngsel%20og%20Alarm%20-%20Strygeorkester%20og%20Orgel.mp3",
+    "length": 168.49,
+    "series": "Strygeorkester og Orgel",
+    "title": "Sikken voldsom Trængsel og Alarm",
+    "item": "https://archive.org/details/78_sikken-voldsom-trngsel-og-alarm_strygeorkester-og-orgel-operasanger-w-loudrup-jen_gbia7005646b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-contented-hour-christmas-dreaming_buddy-clark_gbia0354817a/THE%20CONTENTED%20HOUR%20%28CHRISTMAS%20DREAMING%29%20-%20BUDDY%20CLARK.mp3",
+    "length": 186.41,
+    "series": "Buddy Clark",
+    "title": "The Contented Hour (christmas Dreaming)",
+    "date": "1947",
+    "item": "https://archive.org/details/78_the-contented-hour-christmas-dreaming_buddy-clark_gbia0354817a"
+   },
+   {
+    "src": "https://archive.org/download/78_frosty-the-snowman_ray-heatherton-nelson-rollins_gbia0533556b/FROSTY%20THE%20SNOWMAN%20-%20RAY%20HEATHERTON%20-%20Nelson.mp3",
+    "length": 111,
+    "series": "Ray Heatherton",
+    "title": "Frosty the Snowman",
+    "date": "1951",
+    "item": "https://archive.org/details/78_frosty-the-snowman_ray-heatherton-nelson-rollins_gbia0533556b"
+   },
+   {
+    "src": "https://archive.org/download/78_hell-be-coming-down-the-chimney_enoch-light-and-his-orch.-jack-brown-al-j.-neibirg_gbia0001781a/He%27ll%20Be%20Coming%20Down%20The%20Chimney%20-%20Enoch%20Light%20and%20his%20Orch..mp3",
+    "length": 189,
+    "series": "Enoch Light and his Orchestra",
+    "title": "He'll Be Coming Down The Chimney",
+    "date": "1951",
+    "item": "https://archive.org/details/78_hell-be-coming-down-the-chimney_enoch-light-and-his-orch.-jack-brown-al-j.-neibirg_gbia0001781a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CAMELCIGARETTES.mp3",
+    "length": 126.01,
+    "series": "A word from our sponsor",
+    "title": "Camel Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_jack-russell-and-the-honey-dreamers-irving-berlin_gbia0059405b/White%20Christmas%20-%20Jack%20Russell%20and%20The%20Honey%20Dreamers.mp3",
+    "length": 185.37,
+    "series": "Jack Russell and The Honey Dreamers",
+    "title": "White Christmas",
+    "date": "1952",
+    "item": "https://archive.org/details/78_white-christmas_jack-russell-and-the-honey-dreamers-irving-berlin_gbia0059405b"
+   },
+   {
+    "src": "https://archive.org/download/78_campanelle_julius-larosa-u-minucci-a-bleyer-archie-bleyer_gbia0498387a/%22CAMPANELLE%22%20-%20JULIUS%20LAROSA%20-%20U.%20Minucci.mp3",
+    "length": 158.35,
+    "series": "Julius Larosa",
+    "title": "\"Campanelle\"",
+    "date": "1955",
+    "item": "https://archive.org/details/78_campanelle_julius-larosa-u-minucci-a-bleyer-archie-bleyer_gbia0498387a"
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fidelis_george-wright_gbia0446884b/ADESTE%20FIDELIS%20-%20GEORGE%20WRIGHT.mp3",
+    "length": 179.98,
+    "series": "George Wright",
+    "title": "Adeste Fidelis",
+    "item": "https://archive.org/details/78_adeste-fidelis_george-wright_gbia0446884b"
+   },
+   {
+    "src": "https://archive.org/download/78_santas-surprise_music-hall-drama-group-and-orchestra_gbia0006810b/Santa%27s%20Surprise%20-%20Music%20Hall%20Drama%20Group%20and%20Orchestra.mp3",
+    "length": 192,
+    "series": "Music Hall Drama Group and Orchestra",
+    "title": "Santa's Surprise",
+    "date": "1953",
+    "item": "https://archive.org/details/78_santas-surprise_music-hall-drama-group-and-orchestra_gbia0006810b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceKrispies.mp3",
+    "length": 58.26,
+    "series": "A word from our sponsor",
+    "title": "Rice Krispies",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-ye-merry-gentlemen-adeste-fideles_elmer-ihrke_gbia0542554a/O%20COME%20YE%20MERRY%20GENTLEMEN%20ADESTE%20FIDELES.mp3",
+    "length": 173.99,
+    "series": "Elmer Ihrke",
+    "title": "O Come Ye Merry Gentlemen Adeste Fideles",
+    "item": "https://archive.org/details/78_o-come-ye-merry-gentlemen-adeste-fideles_elmer-ihrke_gbia0542554a"
+   },
+   {
+    "src": "https://archive.org/download/78_1-o-little-town-of-bethlehem-2-away-in-a-manger-3-beautiful-savior_godfrey-mal_gbia0470250a/1.%20O%20Little%20Town%20of%20Bethlehem%20%202.%20Away%20I%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 351.06,
+    "series": "Godfrey Malcolm",
+    "title": "1. O Little Town of Bethlehem 2. Away In a Manger 3. Beautiful Savior",
+    "item": "https://archive.org/details/78_1-o-little-town-of-bethlehem-2-away-in-a-manger-3-beautiful-savior_godfrey-mal_gbia0470250a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_gene-lowell-gordon-michaels_gbia0184632a/JINGLE%20BELLS%20-%20GENE%20LOWELL%20-%20Gordon%20-%20Michaels.mp3",
+    "length": 206.83,
+    "series": "Gene Lowell",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_gene-lowell-gordon-michaels_gbia0184632a"
+   },
+   {
+    "src": "https://archive.org/download/78_merry-christmas-one-all_the-rhythm-kings-isaac-royal-orch-cliff-king_gbia0475076b/MERRY%20CHRISTMAS%20ONE%20%26%20ALL%20-%20THE%20RHYTHM%20KINGS.mp3",
+    "length": 181.85,
+    "series": "The Rhythm Kings",
+    "title": "Merry Christmas One & All",
+    "date": "1950",
+    "item": "https://archive.org/details/78_merry-christmas-one-all_the-rhythm-kings-isaac-royal-orch-cliff-king_gbia0475076b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POSTUM.MP3",
+    "length": 120.78,
+    "series": "A word from our sponsor",
+    "title": "Postum",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_sonny-boys-christmas-blues_sonny-boy-williamson_gbia0057732a/Sonny%20Boy%27s%20Christmas%20Blues%20-%20Sonny%20Boy%20Williamson.mp3",
+    "length": 159,
+    "series": "Sonny Boy Williamson",
+    "title": "Sonny Boy's Christmas Blues",
+    "date": "1951",
+    "item": "https://archive.org/details/78_sonny-boys-christmas-blues_sonny-boy-williamson_gbia0057732a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-holy-night_gbia0249500a/SILENT%20NIGHT%2C%20HOLY%20NIGHT.mp3",
+    "length": 184.49,
+    "series": "Unknown artist",
+    "title": "Silent Night, Holy Night",
+    "item": "https://archive.org/details/78_silent-night-holy-night_gbia0249500a"
+   },
+   {
+    "src": "https://archive.org/download/78_det-kimer-nu-til-julefest_strygeorkester-og-orgel-operasanger-w-loudrup-jensen-c_gbia7011065b/Det%20kimer%20nu%20til%20Julefest%20-%20Strygeorkester%20og%20Orgel.mp3",
+    "length": 187.17,
+    "series": "Strygeorkester og Orgel",
+    "title": "Det kimer nu til Julefest",
+    "item": "https://archive.org/details/78_det-kimer-nu-til-julefest_strygeorkester-og-orgel-operasanger-w-loudrup-jensen-c_gbia7011065b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_harmonia-symphonic-orchestra-fr-grueber_gbia0131212a/SILENT%20NIGHT%20-%20Harmonia%20Symphonic%20Orchestra.mp3",
+    "length": 181,
+    "series": "Harmonia Symphonic Orchestra",
+    "title": "Silent Night",
+    "date": "1948",
+    "item": "https://archive.org/details/78_silent-night_harmonia-symphonic-orchestra-fr-grueber_gbia0131212a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsJackBennyDennisDayForTexaco.mp3",
+    "length": 59.64,
+    "series": "A word from our sponsor",
+    "title": "Texaco (with Jack Benny and Dennis Day)",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_varsity-caroleers-johnny-marks_gbia0366722a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20VARSITY%20CAROLEERS.mp3",
+    "length": 157.91,
+    "series": "Varsity Caroleers",
+    "title": "Rudolph The Red Nosed Reindeer",
+    "date": "1950",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_varsity-caroleers-johnny-marks_gbia0366722a"
+   },
+   {
+    "src": "https://archive.org/download/78_joy-to-the-world-it-came-upon-the-midnight-clear-hark-the-herald-angels-sing_gbia0035629b/Joy%20to%20the%20World%3B%20It%20Came%20Upon%20the%20Midnight%20Clear%3B%20Hark%20the%20Herald%20Angels%20Sing.mp3",
+    "length": 201.26,
+    "series": "Unknown artist",
+    "title": "Joy to the World; It Came Upon the Midnight Clear; Hark the Herald Angels Sing",
+    "item": "https://archive.org/details/78_joy-to-the-world-it-came-upon-the-midnight-clear-hark-the-herald-angels-sing_gbia0035629b"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_gbia0110779a/O%20Little%20Town%20of%20Bethlehem.mp3",
+    "length": 185.7,
+    "series": "Unknown artist",
+    "title": "O Little Town of Bethlehem",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_gbia0110779a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-ravens-rendition-of-silent-night_jimmy-ricks-j-mohr-f-gruber_gbia0321703a/THE%20RAVEN%27S%20RENDITION%20OF%3A%20SILENT%20NIGHT%20-%20Jimmy%20Ricks.mp3",
+    "length": 178.78,
+    "series": "Jimmy Ricks",
+    "title": "The Raven's Rendition Of: Silent Night",
+    "date": "1948",
+    "item": "https://archive.org/details/78_the-ravens-rendition-of-silent-night_jimmy-ricks-j-mohr-f-gruber_gbia0321703a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/WINSTONCIGARETTES.mp3",
+    "length": 29.29,
+    "series": "A word from our sponsor",
+    "title": "Winston Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas-part-ii_peter-donald-mitch-miller-and-orchestra_gbia0534261b/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20PART%20II%20-%20PETER%20DONALD.mp3",
+    "length": 96.09,
+    "series": "Peter Donald",
+    "title": "The Night Before Christmas - Part Ii",
+    "date": "1949",
+    "item": "https://archive.org/details/78_the-night-before-christmas-part-ii_peter-donald-mitch-miller-and-orchestra_gbia0534261b"
+   },
+   {
+    "src": "https://archive.org/download/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j._gbia0005291b/Funny%20Little%20Snow%20Man%20-%20Bobby%20Sabatino%20and%20The%20Charles%20Kenny%20Orchestra.mp3",
+    "length": 186,
+    "series": "Bobby Sabatino and The Charles Kenny Orchestra",
+    "title": "Funny Little Snow Man",
+    "date": "1953",
+    "item": "https://archive.org/details/78_funny-little-snow-man_bobby-sabatino-and-the-charles-kenny-orchestra-nick-kenny-j._gbia0005291b"
+   },
+   {
+    "src": "https://archive.org/download/78_therell-always-be-a-christmas/1049-8.mp3",
+    "length": 163,
+    "series": "Frank Yankovic",
+    "title": "There'll Always Be a Christmas",
+    "date": "1949",
+    "item": "https://archive.org/details/78_therell-always-be-a-christmas"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_phil-brito-ted-dale-orchestra-irving-berlin_gbia0195191a/WHITE%20CHRISTMAS%20-%20PHIL%20BRITO%20-%20Ted%20Dale%20%26%20Orchestra.mp3",
+    "length": 196,
+    "series": "Phil Brito",
+    "title": "White Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_white-christmas_phil-brito-ted-dale-orchestra-irving-berlin_gbia0195191a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
+    "length": 52.84,
+    "series": "A word from our sponsor",
+    "title": "Popsicle",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_for-children-a-allegro-b-molto-tranquillo-c-qausi-adagio-d-allegro-ironico-roumania_gbia0538388b/FOR%20CHILDREN%22%20%28a%29%20Allegro%20%28b%29%20Molto%20Tranqu.mp3",
+    "length": 185,
+    "series": "Gerald Moore",
+    "title": "\"FOR CHILDREN\" (a) Allegro (b) Molto Tranquillo (c) Qausi Adagio (d) Allegro Ironico; ROUMANIAN CHRISTMAS CAROLS (e) Allegretto",
+    "date": "1950",
+    "item": "https://archive.org/details/78_for-children-a-allegro-b-molto-tranquillo-c-qausi-adagio-d-allegro-ironico-roumania_gbia0538388b"
+   },
+   {
+    "src": "https://archive.org/download/78_1-carol-2-i-danced-with-a-mosquito-3-round-dance_max-goberman-liadow_gbia0546115a/1.%20Carol%3B%202.%20I%20Danced%20with%20a%20Mosquito%3B%203.%20R.mp3",
+    "length": 184.53,
+    "series": "Max Goberman",
+    "title": "1. Carol; 2. I Danced with a Mosquito; 3. Round Dance",
+    "item": "https://archive.org/details/78_1-carol-2-i-danced-with-a-mosquito-3-round-dance_max-goberman-liadow_gbia0546115a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_betty-lou-the-voice-of-tommy-riggs_gbia0218542b/JINGLE%20BELLS%20-%20BETTY%20LOU%20-%20The%20Voice%20of%20Tommy%20Riggs.mp3",
+    "length": 152.71,
+    "series": "Betty Lou",
+    "title": "Jingle Bells",
+    "date": "1948",
+    "item": "https://archive.org/details/78_jingle-bells_betty-lou-the-voice-of-tommy-riggs_gbia0218542b"
+   },
+   {
+    "src": "https://archive.org/download/78_baby-its-cold-outside_lady-sybil-smythe-and-bill-jacoby-johnny-white-trio-frank-l_gbia0208417b/BABY%2C%20IT%27S%20COLD%20OUTSIDE%20-%20LADY%20SYBIL%20SMYTHE%20and%20BILL%20JACOBY.mp3",
+    "length": 166,
+    "series": "LADY SYBIL SMYTHE and BILL JACOBY",
+    "title": "Baby, It's Cold Outside",
+    "date": "1949",
+    "item": "https://archive.org/details/78_baby-its-cold-outside_lady-sybil-smythe-and-bill-jacoby-johnny-white-trio-frank-l_gbia0208417b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GOODYEARLIFEGUARDTIRES.mp3",
+    "length": 49.1,
+    "series": "A word from our sponsor",
+    "title": "Goodyear Lifeguard Tires",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_frosty-the-snow-man_pat-omalley-rollins-nelson-the-sandpipers-mitchell-miller-and_gbia0001241b/Frosty%20The%20Snow%20Man%20-%20Pat%20O%27Malley%20-%20Rollins.mp3",
+    "length": 177,
+    "series": "Pat O'Malley",
+    "title": "Frosty The Snow Man",
+    "date": "1950",
+    "item": "https://archive.org/details/78_frosty-the-snow-man_pat-omalley-rollins-nelson-the-sandpipers-mitchell-miller-and_gbia0001241b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_robert-rheims_gbia0006787b/Jingle%20Bells%20-%20Robert%20Rheims.mp3",
+    "length": 169.98,
+    "series": "Robert Rheims",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_robert-rheims_gbia0006787b"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing-joy-to-the-world-the-twelve-days-of-christmas_louis_gbia0459027b/HARK%21%20THE%20HERALD%20ANGELS%20SING%3B%20JOY%20TO%20THE%20W%20-%20Louis%20Garisto.mp3",
+    "length": 347.06,
+    "series": "Louis Garisto",
+    "title": "Hark! The Herald Angels Sing; Joy To The World; The Twelve-Days Of Christmas",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing-joy-to-the-world-the-twelve-days-of-christmas_louis_gbia0459027b"
+   },
+   {
+    "src": "https://archive.org/download/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia0192461a/BEST%20LOVED%20CHRISTMAS%20MUSIC%20-%20RAY%20BLOCH%20his%20Choir%20%26%20Orchestra.mp3",
+    "length": 201.07,
+    "series": "RAY BLOCH his Choir & Orchestra",
+    "title": "Best Loved Christmas Music",
+    "date": "1946",
+    "item": "https://archive.org/details/78_best-loved-christmas-music_ray-bloch-his-choir-orchestra_gbia0192461a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
+    "length": 60.33,
+    "series": "A word from our sponsor",
+    "title": "Palmolive Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_thirty-two-feet-and-eight-little-tails_frankie-stone-the-peter-pan-orchestra-and-ch_gbia0533784a/THIRTY-TWO%20FEET%20AND%20EIGHT%20LITTLE%20TAILS%20-%20FRANKIE%20STONE.mp3",
+    "length": 156.75,
+    "series": "Frankie Stone",
+    "title": "Thirty-Two Feet And Eight Little Tails",
+    "item": "https://archive.org/details/78_thirty-two-feet-and-eight-little-tails_frankie-stone-the-peter-pan-orchestra-and-ch_gbia0533784a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-monica-jump_slim-gaillard-orchestra-gaillard-gaillard-and-brown-dodo-marmaros_gbia0001382b/Santa%20Monica%20Jump%20-%20Slim%20Gaillard%20Orchestra.mp3",
+    "length": 192,
+    "series": "Slim Gaillard Orchestra",
+    "title": "Santa Monica Jump",
+    "date": "1946",
+    "item": "https://archive.org/details/78_santa-monica-jump_slim-gaillard-orchestra-gaillard-gaillard-and-brown-dodo-marmaros_gbia0001382b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_elmer-ihrke_gbia0285342b/SILENT%20NIGHT%20-%20Elmer%20Ihrke.mp3",
+    "length": 167.57,
+    "series": "Elmer Ihrke",
+    "title": "Silent Night",
+    "date": "1948",
+    "item": "https://archive.org/details/78_silent-night_elmer-ihrke_gbia0285342b"
+   },
+   {
+    "src": "https://archive.org/download/78_merry-christmas-polka-the/1083-15.mp3",
+    "length": 157,
+    "series": "Yankovic, Frank",
+    "title": "Merry Christmas Polka, The",
+    "date": "1951",
+    "item": "https://archive.org/details/78_merry-christmas-polka-the"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NESCAFE.MP3",
+    "length": 32.95,
+    "series": "A word from our sponsor",
+    "title": "Nescafé",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_dear-mr-santa_doye-odell-ceelie-burke_gbia0465369a/DEAR%20MR.%20SANTA%20-%20DOYE%20O%27DELL%20-%20Ceelie%20Burke.mp3",
+    "length": 155.97,
+    "series": "Doye O'Dell",
+    "title": "Dear Mr. Santa",
+    "date": "1948",
+    "item": "https://archive.org/details/78_dear-mr-santa_doye-odell-ceelie-burke_gbia0465369a"
+   },
+   {
+    "src": "https://archive.org/download/78_julens-melodier-2-del_kai-mortnesens-strygeorkester_gbia0120083b/Julens%20melodier%202.%20del%20-%20Kai%20Mortnesens%20strygeorkester.mp3",
+    "length": 172.66,
+    "series": "Kai Mortnesens strygeorkester",
+    "title": "Julens melodier 2. del",
+    "item": "https://archive.org/details/78_julens-melodier-2-del_kai-mortnesens-strygeorkester_gbia0120083b"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_johnny-frank-irving-berlin_gbia0366748a/WHITE%20CHRISTMAS%20-%20JOHNNY%20FRANK%20-%20Irving%20-%20Berlin.mp3",
+    "length": 163.49,
+    "series": "Johnny Frank",
+    "title": "White Christmas",
+    "item": "https://archive.org/details/78_white-christmas_johnny-frank-irving-berlin_gbia0366748a"
+   },
+   {
+    "src": "https://archive.org/download/78_dearest-santa_eddy-howard-and-his-orchestra-eddy-howard-boyd-dunn_gbia0069097a/Dearest%20Santa%20-%20Eddy%20Howard%20and%20His%20Orchestra.mp3",
+    "length": 180,
+    "series": "Eddy Howard and His Orchestra",
+    "title": "Dearest Santa",
+    "date": "1947",
+    "item": "https://archive.org/details/78_dearest-santa_eddy-howard-and-his-orchestra-eddy-howard-boyd-dunn_gbia0069097a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OLDSPICE.MP3",
+    "length": 20.16,
+    "series": "A word from our sponsor",
+    "title": "Old Spice",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_this-christmas-night_curt-massey_gbia0285023d/THIS%20CHRISTMAS%20NIGHT%20-%20CURT%20MASSEY.mp3",
+    "length": 159,
+    "series": "Curt Massey",
+    "title": "This Christmas Night",
+    "item": "https://archive.org/details/78_this-christmas-night_curt-massey_gbia0285023d"
+   },
+   {
+    "src": "https://archive.org/download/78_stand-up-for-jesus-away-in-the-manger_jack-arthur-vicky-kasen_gbia0012633a/Stand%20Up%20for%20Jesus%3B%20Away%20in%20the%20Manger%20-%20Jack%20Arthur.mp3",
+    "length": 189.56,
+    "series": "Jack Arthur",
+    "title": "Stand Up for Jesus; Away in the Manger",
+    "item": "https://archive.org/details/78_stand-up-for-jesus-away-in-the-manger_jack-arthur-vicky-kasen_gbia0012633a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-holy-night_margaret-daum_gbia0533372a/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20MARGARET%20DAUM.mp3",
+    "length": 121.5,
+    "series": "Margaret Daum",
+    "title": "Silent Night, Holy Night",
+    "item": "https://archive.org/details/78_silent-night-holy-night_margaret-daum_gbia0533372a"
+   },
+   {
+    "src": "https://archive.org/download/78_here-comes-santa-claus_john-santa-klaus-with-orchestra-autry-haldeman-melka_gbia0006851a/Here%20Comes%20Santa%20Claus%20-%20John%20%28Santa%29%20Klaus%20with%20Orchestra.mp3",
+    "length": 158.72,
+    "series": "John (Santa) Klaus with Orchestra",
+    "title": "Here Comes Santa Claus",
+    "item": "https://archive.org/details/78_here-comes-santa-claus_john-santa-klaus-with-orchestra-autry-haldeman-melka_gbia0006851a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsBromoQuinine.mp3",
+    "length": 26.09,
+    "series": "A word from our sponsor",
+    "title": "Bromo Quinine",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_carol-medley-part-1_the-fairey-aviation-works-band-harry-mortimer_gbia3035143a/CAROL%20MEDLEY%20-%20Part%201%20-%20THE%20FAIREY%20AVIATION%20WORKS%20BAND.mp3",
+    "length": 167,
+    "series": "The Fairey Aviation Works Band",
+    "title": "Carol Medley - Part 1",
+    "date": "1952",
+    "item": "https://archive.org/details/78_carol-medley-part-1_the-fairey-aviation-works-band-harry-mortimer_gbia3035143a"
+   },
+   {
+    "src": "https://archive.org/download/78_1-deck-the-hall-2-away-in-a-manger-3-hark-the-herald-angels-sing_ray-bloch_gbia0433486a/1.%20Deck%20The%20Hall%3B%202.%20Away%20in%20a%20Manger%3B%203.%20Hark%20-%20RAY%20BLOCH.mp3",
+    "length": 179.78,
+    "series": "Ray Bloch",
+    "title": "1. Deck The Hall; 2. Away in a Manger; 3. Hark! The Herald Angels Sing",
+    "date": "1946",
+    "item": "https://archive.org/details/78_1-deck-the-hall-2-away-in-a-manger-3-hark-the-herald-angels-sing_ray-bloch_gbia0433486a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-cha-cha-cha-with-you-know-who_bonnie-sisters-allen-stillman-connors_gbia0060408a/I%20Saw%20Mommy%20Cha%20Cha%20Cha%20with%20You%20Know%20Who%20-%20Bonnie%20Sisters.mp3",
+    "length": 180,
+    "series": "Bonnie Sisters",
+    "title": "I Saw Mommy Cha Cha Cha with You Know Who?",
+    "date": "1956",
+    "item": "https://archive.org/details/78_i-saw-mommy-cha-cha-cha-with-you-know-who_bonnie-sisters-allen-stillman-connors_gbia0060408a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_cliff-holland-beverly-lane-irving-berlin_gbia0368728a/WHITE%20CHRISTMAS%20-%20CLIFF%20HOLLAND%20-%20Beverly%20Lane.mp3",
+    "length": 154.98,
+    "series": "Cliff Holland",
+    "title": "White Christmas",
+    "item": "https://archive.org/details/78_white-christmas_cliff-holland-beverly-lane-irving-berlin_gbia0368728a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAutoLite.mp3",
+    "length": 57.75,
+    "series": "A word from our sponsor",
+    "title": "Auto-Lite",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_gbia0219431h/JINGLE%20BELLS.mp3",
+    "length": 140.83,
+    "series": "Unknown artist",
+    "title": "Jingle Bells",
+    "item": "https://archive.org/details/78_jingle-bells_gbia0219431h"
+   },
+   {
+    "src": "https://archive.org/download/78_1-deck-the-halls-2-hark-the-herald-angels-sing-3-it-came-upon-a-midnight-clear_gbia0110185a/1.%20Deck%20The%20Halls%202.%20Hark%2C%20The%20Herald%20-%20Tempo%27s%20Carolaires.mp3",
+    "length": 152,
+    "series": "Tempo's Carolaires",
+    "title": "1. Deck The Halls 2. Hark, The Herald Angels Sing 3. It Came Upon A Midnight Clear 4. We Three Kings Of Orient Are 5. Jingle Bells",
+    "date": "1950",
+    "item": "https://archive.org/details/78_1-deck-the-halls-2-hark-the-herald-angels-sing-3-it-came-upon-a-midnight-clear_gbia0110185a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_davey-piper-enoch-light-tommy-connor_gbia7035761a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20DAVEY%20PIPER.mp3",
+    "length": 140.82,
+    "series": "Davey Piper",
+    "title": "I Saw Mommy Kissing Santa Claus",
+    "date": "1953",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_davey-piper-enoch-light-tommy-connor_gbia7035761a"
+   },
+   {
+    "src": "https://archive.org/download/78_ma-my-toys-are-broken_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jaco_gbia0483044b/MA%21%20MY%20TOYS%20ARE%20BROKEN%20-%20Bill%20Tabbert%20and%20the%20%22400%22%20Quartet.mp3",
+    "length": 151.39,
+    "series": "Bill Tabbert and the \"400\" Quartet",
+    "title": "Ma! My Toys Are Broken",
+    "date": "1951",
+    "item": "https://archive.org/details/78_ma-my-toys-are-broken_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jaco_gbia0483044b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWhiteKingSoap.mp3",
+    "length": 81.37,
+    "series": "A word from our sponsor",
+    "title": "White King Soap",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_glade-jul_kantele-spilles-af-ulla-katajavuori-gruber-koskimies_gbia7007703a/Glade%20Jul%20-%20Kantele%20spilles%20af%20Ulla%20Katajavuori.mp3",
+    "length": 202.08,
+    "series": "Kantele spilles af Ulla Katajavuori",
+    "title": "Glade Jul",
+    "date": "1949",
+    "item": "https://archive.org/details/78_glade-jul_kantele-spilles-af-ulla-katajavuori-gruber-koskimies_gbia7007703a"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_the-trinity-singers_gbia3015670b/HARK%21%20THE%20HERALD%20ANGELS%20SING%20-%20THE%20TRINITY%20SINGERS.mp3",
+    "length": 166.99,
+    "series": "The Trinity Singers",
+    "title": "Hark! The Herald Angels Sing",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_the-trinity-singers_gbia3015670b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-greeting_gbia0371733a/CHRISTMAS%20GREETING.mp3",
+    "length": 218.93,
+    "series": "",
+    "title": "Christmas Greeting",
+    "date": "1953",
+    "item": "https://archive.org/details/78_christmas-greeting_gbia0371733a"
+   },
+   {
+    "src": "https://archive.org/download/78_my-christmas-song-for-you_hoagy-carmichael-martha-mears-tudor-williams-quartet-carm_gbia0420931a/MY%20CHRISTMAS%20SONG%20FOR%20YOU%20-%20HOAGY%20CARMICHAEL.mp3",
+    "length": 182.71,
+    "series": "Hoagy Carmichael",
+    "title": "My Christmas Song for You",
+    "date": "1945",
+    "item": "https://archive.org/details/78_my-christmas-song-for-you_hoagy-carmichael-martha-mears-tudor-williams-quartet-carm_gbia0420931a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MARCHOFDIMES.mp3",
+    "length": 70.39,
+    "series": "A word from our sponsor",
+    "title": "March Of Dimes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing-away-in-a-manger_elmer-ihrke_gbia0059673b/Hark%20the%20Herald%20Angels%20Sing%3B%20Away%20in%20a%20Mange%20-%20Elmer%20Ihrke.mp3",
+    "length": 172,
+    "series": "Elmer Ihrke",
+    "title": "Hark the Herald Angels Sing; Away in a Manger",
+    "date": "1947",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing-away-in-a-manger_elmer-ihrke_gbia0059673b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-catalina-island-of-romance_eddy-howard-and-his-orchestra-eddy-howard-trio_gbia0007032b/Santa%20Catalina%20%28Island%20of%20%20-%20Eddy%20Howard%20and%20his%20Orchestra.mp3",
+    "length": 192.85,
+    "series": "Eddy Howard and his Orchestra",
+    "title": "Santa Catalina (Island of Romance)",
+    "date": "December 28, 1946",
+    "item": "https://archive.org/details/78_santa-catalina-island-of-romance_eddy-howard-and-his-orchestra-eddy-howard-trio_gbia0007032b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel_gbia0185582b/THE%20FIRST%20NOEL.mp3",
+    "length": 178.35,
+    "series": "Unknown artist",
+    "title": "The First Noel",
+    "item": "https://archive.org/details/78_the-first-noel_gbia0185582b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-noel-little-town-of-bethlehem_ken-griffin_gbia0323731b/THE%20FIRST%20NOEL%3B%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20KEN%20GRIFFIN.mp3",
+    "length": 334.68,
+    "series": "Ken Griffin",
+    "title": "The First Noel; Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_the-first-noel-little-town-of-bethlehem_ken-griffin_gbia0323731b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsRiceKrispies.mp3",
+    "length": 58.26,
+    "series": "A word from our sponsor",
+    "title": "Rice Krispies",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_im-gettin-nuttin-for-christmas_billy-quinn-the-sandpipers-tepper-bennet-mitch-mille_gbia0534579a/I%27M%20GETTIN%27%20NUTTIN%27%20FOR%20CHRISTMAS%20-%20BILLY%20QUINN.mp3",
+    "length": 106.09,
+    "series": "Billy Quinn",
+    "title": "I'M Gettin' Nuttin' For Christmas",
+    "item": "https://archive.org/details/78_im-gettin-nuttin-for-christmas_billy-quinn-the-sandpipers-tepper-bennet-mitch-mille_gbia0534579a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-is-comin-to-town_bobby-nicholas-the-peter-pan-orchestra-and-chorus-j_gbia0331967a/SANTA%20CLAUS%20IS%20COMIN%27%20TO%20TOWN%20-%20BOBBY%20NICHOLAS.mp3",
+    "length": 170.34,
+    "series": "Bobby Nicholas",
+    "title": "Santa Claus Is Comin' To Town",
+    "date": "1952",
+    "item": "https://archive.org/details/78_santa-claus-is-comin-to-town_bobby-nicholas-the-peter-pan-orchestra-and-chorus-j_gbia0331967a"
+   },
+   {
+    "src": "https://archive.org/download/78_lets-light-the-christmas-tree_ruby-wright-cliff-lash-and-his-orchestra-the-dick-no_gbia0421898a/LET%27S%20LIGHT%20THE%20CHRISTMAS%20TREE%20-%20RUBY%20WRIGHT.mp3",
+    "length": 186.29,
+    "series": "Ruby Wright",
+    "title": "Let's Light The Christmas Tree",
+    "item": "https://archive.org/details/78_lets-light-the-christmas-tree_ruby-wright-cliff-lash-and-his-orchestra-the-dick-no_gbia0421898a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_dolph-dixon-the-prom-orchestra-and-chorus-johnny-mar_gbia7035761b/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%20-%20DOLPH%20DIXON.mp3",
+    "length": 181,
+    "series": "Dolph Dixon",
+    "title": "Rudolph the Red Nosed Reindeer",
+    "date": "1953",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_dolph-dixon-the-prom-orchestra-and-chorus-johnny-mar_gbia7035761b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/PONTIAC.MP3",
+    "length": 27.1,
+    "series": "A word from our sponsor",
+    "title": "Pontiac",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
@@ -72593,68 +69549,100 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_holly-holly-hollywood-jens-warnys-orkester-max-hansen"
    },
    {
-    "src": "https://archive.org/download/78_how-i-hate-to-see-xmas-come-around_jimmy-witherspoon_gbia0060588b/How%20I%20Hate%20to%20See%20Xmas%20Come%20Around%20-%20Jimmy%20Witherspoon.mp3",
-    "length": 184,
-    "series": "Jimmy Witherspoon",
-    "title": "How I Hate to See Xmas Come Around",
-    "date": "1950",
-    "item": "https://archive.org/details/78_how-i-hate-to-see-xmas-come-around_jimmy-witherspoon_gbia0060588b"
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful_gbia0533594b/O%20Come%2C%20All%20Ye%20Faithful.mp3",
+    "length": 74.79,
+    "series": "Unknown artist",
+    "title": "O Come, All Ye Faithful",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful_gbia0533594b"
    },
    {
-    "src": "https://archive.org/download/78_min-barndoms-jul_gsta-snoddas-nordgren-william-linds-orkester-k-e-filip-olsson_gbia7015588a/MIN%20BARNDOMS%20JUL%20-%20G%C3%96STA%20%22SNODDAS%22%20NORDGREN.mp3",
-    "length": 184.15,
-    "series": "Gösta \"Snoddas\" Nordgren",
-    "title": "Min Barndoms Jul",
-    "date": "1952",
-    "item": "https://archive.org/details/78_min-barndoms-jul_gsta-snoddas-nordgren-william-linds-orkester-k-e-filip-olsson_gbia7015588a"
+    "src": "https://archive.org/download/78_pedza-sanki-do-kosciola-sleigh-ride_kazio-jarzebowski-orkiestra-w-dana-j-cass_gbia0532131a/PEDZA%20SANKI%20DO%20KOSCIOLA%20%28Sleigh%20Ride%29%20-%20KAZIO%20JARZEBOWSKI.mp3",
+    "length": 185.01,
+    "series": "Kazio Jarzebowski",
+    "title": "PEDZA SANKI DO KOSCIOLA (Sleigh Ride)",
+    "item": "https://archive.org/details/78_pedza-sanki-do-kosciola-sleigh-ride_kazio-jarzebowski-orkiestra-w-dana-j-cass_gbia0532131a"
    },
    {
-    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_ted-black-orchestra-dick-edwards-johnny-marks_gbia0114825a/Rudolph%2C%20The%20Red-Nosed%20Reindeer%20-%20Ted%20Black%20Orchestra.mp3",
-    "length": 172.03,
-    "series": "Ted Black Orchestra",
-    "title": "Rudolph, The Red-Nosed Reindeer",
-    "date": "1949",
-    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_ted-black-orchestra-dick-edwards-johnny-marks_gbia0114825a"
+    "src": "https://archive.org/download/78_come-all-ye-faithful_gbia0533997b/Come%20All%20Ye%20Faithful.mp3",
+    "length": 106.17,
+    "series": "Unknown artist",
+    "title": "Come All Ye Faithful",
+    "item": "https://archive.org/details/78_come-all-ye-faithful_gbia0533997b"
    },
    {
-    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercials1957Chevrolet.mp3",
-    "length": 36.48,
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsPepsodent.mp3",
+    "length": 38.53,
     "series": "A word from our sponsor",
-    "title": "1957 Chevrolet",
+    "title": "Pepsodent",
     "item": "https://archive.org/details/VintageRadioCommercials",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_therell-always-be-a-christmas/1049-8.mp3",
-    "length": 163,
-    "series": "Frank Yankovic",
-    "title": "There'll Always Be a Christmas",
-    "date": "1949",
-    "item": "https://archive.org/details/78_therell-always-be-a-christmas"
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_pat-ello-guild-orchestra-chorus_gbia0180336a/I%20Saw%20Mommy%20Kissing%20Santa%20Claus%20-%20Pat%20Ello.mp3",
+    "length": 129.29,
+    "series": "Pat Ello",
+    "title": "I Saw Mommy Kissing Santa Claus",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_pat-ello-guild-orchestra-chorus_gbia0180336a"
    },
    {
-    "src": "https://archive.org/download/78_campanelle_julius-larosa-u-minucci-a-bleyer-archie-bleyer_gbia0498387a/%22CAMPANELLE%22%20-%20JULIUS%20LAROSA%20-%20U.%20Minucci.mp3",
-    "length": 158.35,
-    "series": "Julius Larosa",
-    "title": "\"Campanelle\"",
-    "date": "1955",
-    "item": "https://archive.org/details/78_campanelle_julius-larosa-u-minucci-a-bleyer-archie-bleyer_gbia0498387a"
+    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_danny-oneil-ruby-newman-styne-cahn_gbia0006178b/Let%20It%20Snow%21%20Let%20It%20Snow%21%20Let%20It%20Snow%21%20-%20Danny%20O%27Neil.mp3",
+    "length": 155.31,
+    "series": "Danny O'Neil",
+    "title": "Let It Snow! Let It Snow! Let It Snow!",
+    "date": "1945",
+    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_danny-oneil-ruby-newman-styne-cahn_gbia0006178b"
    },
    {
-    "src": "https://archive.org/download/78_white-christmas_eddy-howard-and-his-orchestra-eddy-howard-irving-berlin_gbia0006822a/White%20Christmas%20-%20Eddy%20Howard%20and%20his%20Orchestra.mp3",
-    "length": 183,
-    "series": "Eddy Howard and his Orchestra",
-    "title": "White Christmas",
-    "date": "1947",
-    "item": "https://archive.org/details/78_white-christmas_eddy-howard-and-his-orchestra-eddy-howard-irving-berlin_gbia0006822a"
+    "src": "https://archive.org/download/78_what-christmas-is_gen-adkins-the-tune-toppers-gen-adkins_gbia0424385a/WHAT%20CHRISTMAS%20IS%20-%20GEN%20ADKINS%20-%20THE%20TUNE%20TOPPERS.mp3",
+    "length": 137.83,
+    "series": "Gen Adkins",
+    "title": "What Christmas is",
+    "date": "1952",
+    "item": "https://archive.org/details/78_what-christmas-is_gen-adkins-the-tune-toppers-gen-adkins_gbia0424385a"
    },
    {
-    "src": "https://archive.org/download/04-hark-the-herald-angels-sing_202508/03%20The%20First%20Noel.mp3",
-    "length": 129.49,
-    "series": "Chuck Wagon Gang",
-    "title": "The First Noel",
-    "date": "1965",
-    "item": "https://archive.org/details/04-hark-the-herald-angels-sing_202508"
+    "src": "https://archive.org/download/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr/A5.%20Have%20Yourself%20A%20Very%20Merry%20Christmas.mp3",
+    "length": 210.18,
+    "series": "The U.S. Air Force Band and Singing Sergeants",
+    "title": "Have Yourself a Merry Little Christmas",
+    "date": "1967",
+    "item": "https://archive.org/details/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAjax.mp3",
+    "length": 40.3,
+    "series": "A word from our sponsor",
+    "title": "Ajax",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-island_jack-mclean-and-his-orchestra-wayne-gregg-moraine-down-melody-lane_gbia0102720b/Christmas%20Island%20-%20Jack%20McLean%20and%20his%20Orchestra.mp3",
+    "length": 184,
+    "series": "Jack McLean and his Orchestra",
+    "title": "Christmas Island",
+    "item": "https://archive.org/details/78_christmas-island_jack-mclean-and-his-orchestra-wayne-gregg-moraine-down-melody-lane_gbia0102720b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-twelve-days-of-christmas_tom-glazer-h-hopkins-hershy-kay_gbia0180335b/THE%20TWELVE%20DAYS%20OF%20CHRISTMAS%20-%20TOM%20GLAZER.mp3",
+    "length": 230.1,
+    "series": "Tom Glazer",
+    "title": "The Twelve Days Of Christmas",
+    "item": "https://archive.org/details/78_the-twelve-days-of-christmas_tom-glazer-h-hopkins-hershy-kay_gbia0180335b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-sleigh-time-ii-comedy-bits_richard-hoffman_gbia3024038b/I.%20SLEIGH%20TIME%3B%20II.%20COMEDY%20BITS%20-%20Richard%20Hoffman.mp3",
+    "length": 188.43,
+    "series": "Richard Hoffman",
+    "title": "I. Sleigh Time; Ii. Comedy Bits",
+    "item": "https://archive.org/details/78_i-sleigh-time-ii-comedy-bits_richard-hoffman_gbia3024038b"
+   },
+   {
+    "src": "https://archive.org/download/78_oh-christmas-tree-oh-tanenbaum_the-caroleers_gbia0533972b/OH%20CHRISTMAS%20TREE%20%28Oh%20Tanenbaum%29%20-%20THE%20CAROLEERS.mp3",
+    "length": 149.23,
+    "series": "The Caroleers",
+    "title": "OH CHRISTMAS TREE (Oh Tanenbaum)",
+    "item": "https://archive.org/details/78_oh-christmas-tree-oh-tanenbaum_the-caroleers_gbia0533972b"
    },
    {
     "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdamHats.mp3",
@@ -72665,76 +69653,73 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/78_santas-on-his-way_bill-tabbert-400-quartet-joe-lipman-orchestra-jacobs_gbia0027339a/Santa%27s%20on%20His%20Way%20-%20Bill%20Tabbert%20-%20400%20Quartet.mp3",
-    "length": 129,
-    "series": "Bill Tabbert",
-    "title": "Santa's on His Way",
-    "date": "1951",
-    "item": "https://archive.org/details/78_santas-on-his-way_bill-tabbert-400-quartet-joe-lipman-orchestra-jacobs_gbia0027339a"
+    "src": "https://archive.org/download/78_die-matrosen-von-der-santa-isabella-the-sailors-from-the-santa-isabella_bob-martin-_gbia3027819a/DIE%20MATROSEN%20VON%20DER%20SANTA%20ISABELLA%20%28The%20Sail.mp3",
+    "length": 196.58,
+    "series": "Bob Martin",
+    "title": "DIE MATROSEN VON DER SANTA ISABELLA (The Sailors from the \"Santa Isabella\")",
+    "item": "https://archive.org/details/78_die-matrosen-von-der-santa-isabella-the-sailors-from-the-santa-isabella_bob-martin-_gbia3027819a"
    },
    {
-    "src": "https://archive.org/download/06-twelve-days-of-christmas_202510/16%20O%20Tannenbaum.mp3",
-    "length": 86,
-    "series": "Norman Luboff Choir",
-    "title": "O Tannenbaum",
-    "date": "1956",
-    "item": "https://archive.org/details/06-twelve-days-of-christmas_202510"
-   },
-   {
-    "src": "https://archive.org/download/78_dearest-santa_eddy-howard-and-his-orchestra-eddy-howard-boyd-dunn_gbia0069097a/Dearest%20Santa%20-%20Eddy%20Howard%20and%20His%20Orchestra.mp3",
-    "length": 180,
-    "series": "Eddy Howard and His Orchestra",
-    "title": "Dearest Santa",
+    "src": "https://archive.org/download/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0417539a/JINGLE%20BELLS%20-%20JOE%20GUMIN%20And%20His%20Orchestra.mp3",
+    "length": 171.61,
+    "series": "JOE GUMIN And His Orchestra",
+    "title": "Jingle Bells",
     "date": "1947",
-    "item": "https://archive.org/details/78_dearest-santa_eddy-howard-and-his-orchestra-eddy-howard-boyd-dunn_gbia0069097a"
+    "item": "https://archive.org/details/78_jingle-bells_joe-gumin-and-his-orchestra_gbia0417539a"
    },
    {
-    "src": "https://archive.org/download/78_dzisiaj-w-betlejem-today-in-bethlehem_sta-jaworski-gil-bajek-w-dana-afra-ed-sennert_gbia0528055b/DZISIAJ%20W%20BETLEJEM%20%28Today%20in%20Bethlehem%29%20-%20STA%C5%9A%20JAWORSKI.mp3",
-    "length": 144,
-    "series": "Staś Jaworski",
-    "title": "Dzisiaj W Betlejem (Today in Bethlehem)",
-    "date": "1955",
-    "item": "https://archive.org/details/78_dzisiaj-w-betlejem-today-in-bethlehem_sta-jaworski-gil-bajek-w-dana-afra-ed-sennert_gbia0528055b"
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer_hal-phillips_gbia0533822a/RUDOLPH%2C%20THE%20RED-NOSED%20REINDEER%20-%20HAL%20PHILLIPS.mp3",
+    "length": 162.76,
+    "series": "Hal Phillips",
+    "title": "Rudolph, The Red-Nosed Reindeer",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer_hal-phillips_gbia0533822a"
    },
    {
-    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
-    "length": 86.85,
+    "src": "https://archive.org/download/78_jingling-the-bells_frank-signorelli-and-his-quintet-joe-davis-frank-cheech-signor_gbia0165088b/JINGLING%20THE%20BELLS%20-%20Frank%20Signorelli%20and%20His%20Quintet.mp3",
+    "length": 180.48,
+    "series": "Frank Signorelli and His Quintet",
+    "title": "Jingling The Bells",
+    "date": "1946",
+    "item": "https://archive.org/details/78_jingling-the-bells_frank-signorelli-and-his-quintet-joe-davis-frank-cheech-signor_gbia0165088b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/JELLO1955.mp3",
+    "length": 15.17,
     "series": "A word from our sponsor",
-    "title": "Sal Hepatica",
+    "title": "Jell-O",
     "item": "https://archive.org/details/RadioCommercialsShows",
     "ad": true
    },
    {
-    "src": "https://archive.org/download/christmasdancepa00lani/08_Deck_the_Halls_With_Boughs_of_Holly___The_Wassail_Song___Good_King_Wenceslas.mp3",
-    "length": 160,
-    "series": "Lester Lanin & His Orchestra",
-    "title": "Deck the Halls With Boughs of Holly / The Wassail Song / Good King Wenceslas",
-    "date": "1959",
-    "item": "https://archive.org/details/christmasdancepa00lani"
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_zaney-lewis-conner_gbia0534679a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20Zaney%20Lewis.mp3",
+    "length": 120.36,
+    "series": "Zaney Lewis",
+    "title": "I Saw Mommy Kissing Santa Claus",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_zaney-lewis-conner_gbia0534679a"
    },
    {
-    "src": "https://archive.org/download/jerry-fielding-and-his-brass-choir-favorite-christmas-music/A2.%20Winter%20Wonderland-Jingle%20Bells.mp3",
-    "length": 176.98,
-    "series": "Jerry Fielding",
-    "title": "Winter Wonderland-Jingle Bells",
+    "src": "https://archive.org/download/78_silent-night_the-caroleers-vicky-kasen_gbia0296730b/SILENT%20NIGHT%20-%20THE%20CAROLEERS%20-%20Vicky%20KAsen.mp3",
+    "length": 115.61,
+    "series": "The Caroleers",
+    "title": "Silent Night",
     "date": "1959",
-    "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music"
+    "item": "https://archive.org/details/78_silent-night_the-caroleers-vicky-kasen_gbia0296730b"
    },
    {
-    "src": "https://archive.org/download/78_five-christmas-songs_tempos-carolaires_gbia0119025a/FIVE%20CHRISTMAS%20SONGS%20-%20Tempo%27s%20Carolaires.mp3",
-    "length": 151.99,
-    "series": "Tempo's Carolaires",
-    "title": "Five Christmas Songs",
-    "date": "1949",
-    "item": "https://archive.org/details/78_five-christmas-songs_tempos-carolaires_gbia0119025a"
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful_charles-r-cronham_gbia0187401a/O%20COME%20ALL%20YE%20FAITHFUL%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 84.19,
+    "series": "Charles R. Cronham",
+    "title": "O Come All Ye Faithful",
+    "date": "1960",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful_charles-r-cronham_gbia0187401a"
    },
    {
-    "src": "https://archive.org/download/07WhiteChristmas/07%20White%20Christmas.mp3",
-    "length": 159.19,
-    "series": "The Drifters",
-    "title": "White Christmas",
-    "date": "1959",
-    "item": "https://archive.org/details/07WhiteChristmas"
+    "src": "https://archive.org/download/78_ave-maria_igo-gutman-franz-schubert_gbia0118458b/Ave%20Maria%20-%20Igo%20Gutman%20-%20Franz%20Schubert.mp3",
+    "length": 177.75,
+    "series": "Igo Gutman",
+    "title": "Ave Maria",
+    "date": "1944",
+    "item": "https://archive.org/details/78_ave-maria_igo-gutman-franz-schubert_gbia0118458b"
    },
    {
     "src": "https://archive.org/download/RadioCommercialsShows/MARCHOFDIMES.mp3",
@@ -72745,12 +69730,1475 @@ window.STATIONS = [
     "ad": true
    },
    {
-    "src": "https://archive.org/download/christmas-in-new-york-vol-1-and-2/05%20-%20White%20Christmas%20-%20Norman%20Luboff%20Choir.mp3",
-    "length": 141.74,
-    "series": "Norman Luboff Choir",
+    "src": "https://archive.org/download/78_deck-the-halls-with-holly_gbia0533079a/Deck%20The%20Halls%20With%20Holly.mp3",
+    "length": 95.81,
+    "series": "Unknown artist",
+    "title": "Deck The Halls With Holly",
+    "item": "https://archive.org/details/78_deck-the-halls-with-holly_gbia0533079a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-a-boy-friend-for-xmas_mickey-carter-and-the-riff-tones-urbanek-lucas_gbia0060719a/I%20Want%20a%20Boy%20Friend%20for%20Xmas%20-%20Mickey%20Carter%20and%20the%20Riff-Tones.mp3",
+    "length": 170,
+    "series": "Mickey Carter and the Riff-Tones",
+    "title": "I Want a Boy Friend for Xmas",
+    "date": "1950",
+    "item": "https://archive.org/details/78_i-want-a-boy-friend-for-xmas_mickey-carter-and-the-riff-tones-urbanek-lucas_gbia0060719a"
+   },
+   {
+    "src": "https://archive.org/download/78_i-heard-the-bells-on-christmas-day_the-peter-pan-players-peter-pan-orchestra-and-ch_gbia0335942b/I%20HEARD%20THE%20BELLS%20ON%20CHRISTMAS%20DAY%20-%20the%20Peter%20Pan%20Players.mp3",
+    "length": 137.46,
+    "series": "The Peter Pan Players",
+    "title": "I Heard The Bells On Christmas Day",
+    "item": "https://archive.org/details/78_i-heard-the-bells-on-christmas-day_the-peter-pan-players-peter-pan-orchestra-and-ch_gbia0335942b"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-catalina_eddy-howard-and-his-orchestra-eddy-howard-harold-spina_gbia0012729b/Santa%20Catalina%20-%20Eddy%20Howard%20and%20His%20Orchestra.mp3",
+    "length": 192.64,
+    "series": "Eddy Howard and His Orchestra",
+    "title": "Santa Catalina",
+    "date": "December 28, 1946",
+    "item": "https://archive.org/details/78_santa-catalina_eddy-howard-and-his-orchestra-eddy-howard-harold-spina_gbia0012729b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/HALLOSHAMPOO.mp3",
+    "length": 25.7,
+    "series": "A word from our sponsor",
+    "title": "Halo Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-also-it-came-upon-the-midnight-clear_the-sandpiper-chorus-mitchell-mil_gbia0533733/01%20-%20silent%20night%20-%20The%20Sandpiper%20Chorus%20-%20Mitchell%20Miller.mp3",
+    "length": 101,
+    "series": "The Sandpiper Chorus",
+    "title": "SILENT NIGHT also IT CAME UPON THE MIDNIGHT CLEAR",
+    "date": "1949",
+    "item": "https://archive.org/details/78_silent-night-also-it-came-upon-the-midnight-clear_the-sandpiper-chorus-mitchell-mil_gbia0533733"
+   },
+   {
+    "src": "https://archive.org/download/78_cantique-de-noel-christmas-song_martin-walker-sammy-spear-orch-adolphe-adam_gbia0556786b/CANTIQUE%20de%20NOEL%20%28Christmas%20Song%29%20-%20MARTIN%20WALKER.mp3",
+    "length": 154,
+    "series": "Martin Walker",
+    "title": "Cantique de Noel (Christmas Song)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_cantique-de-noel-christmas-song_martin-walker-sammy-spear-orch-adolphe-adam_gbia0556786b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas-part-ii_roy-rogers-and-dale-evans-mitchell-miller_gbia0534128b/THE%20NIGHT%20BEFORE%20CHRISTMAS%20Par%20-%20ROY%20ROGERS%20and%20DALE%20EVANS.mp3",
+    "length": 118.35,
+    "series": "ROY ROGERS and DALE EVANS",
+    "title": "THE NIGHT BEFORE CHRISTMAS Part II",
+    "date": "1954",
+    "item": "https://archive.org/details/78_the-night-before-christmas-part-ii_roy-rogers-and-dale-evans-mitchell-miller_gbia0534128b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_suzy-williams-tommie-connor_gbia0342822a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20SUZY%20WILLIAMS.mp3",
+    "length": 138.89,
+    "series": "Suzy Williams",
+    "title": "I Saw Mommy Kissing Santa Claus",
+    "date": "1953",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_suzy-williams-tommie-connor_gbia0342822a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUXTOILETSOAP.mp3",
+    "length": 36.39,
+    "series": "A word from our sponsor",
+    "title": "Lux Toilet Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_her-komme-jesus-dine-smaa_otte-svendsen-kai-mortensens-strygeorkester-j-a-p-sc_gbia7008196b/Her%20komme%2C%20Jesus%2C%20dine%20smaa%20-%20Otte%20Svendsen.mp3",
+    "length": 188.99,
+    "series": "Otte Svendsen",
+    "title": "Her komme, Jesus, dine smaa",
+    "item": "https://archive.org/details/78_her-komme-jesus-dine-smaa_otte-svendsen-kai-mortensens-strygeorkester-j-a-p-sc_gbia7008196b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_the-mulcays-and-their-electric-harmonicas-jimmy-and-mildred-mulcay-j_gbia0430143a/JINGLE%20BELLS%20-%20THE%20MULCAYS%20and%20their%20Electric%20Harmonicas.mp3",
+    "length": 110.06,
+    "series": "THE MULCAYS and their Electric Harmonicas",
+    "title": "Jingle Bells",
+    "date": "1954",
+    "item": "https://archive.org/details/78_jingle-bells_the-mulcays-and-their-electric-harmonicas-jimmy-and-mildred-mulcay-j_gbia0430143a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-holy-night_alex-paterson-ralph-ford-adolphe-adam_gbia0270459b/%22O%20HOLY%20NIGHT%22%20-%20ALEX%20PATERSON%20-%20RALPH%20FORD.mp3",
+    "length": 197.64,
+    "series": "Alex Paterson",
+    "title": "\"O Holy Night\"",
+    "date": "1950",
+    "item": "https://archive.org/details/78_o-holy-night_alex-paterson-ralph-ford-adolphe-adam_gbia0270459b"
+   },
+   {
+    "src": "https://archive.org/download/78_cicha-noc---koleda-silent-night_stas-jaworski-chor-i-orkiestra-w.-dana_gbia0001813a/Cicha%20Noc%20-%20Koleda%20%28Silent%20Night%29%20-%20Stas%20Jaworski.mp3",
+    "length": 196.27,
+    "series": "Chor I Orkiestra W. Dana",
+    "title": "Cicha Noc - Koleda (Silent Night)",
+    "date": "1947",
+    "item": "https://archive.org/details/78_cicha-noc---koleda-silent-night_stas-jaworski-chor-i-orkiestra-w.-dana_gbia0001813a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROLSTONCEREAL.mp3",
+    "length": 35.84,
+    "series": "A word from our sponsor",
+    "title": "Ralston Cereal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_adeste-fideles-o-come-all-ye-faithful-deck-the-hall_gbia0035629a/Adeste%20Fideles%20%28O%20Come%20All%20Ye%20Faithful%29%3B%20Deck%20the%20Hall.mp3",
+    "length": 297.26,
+    "series": "Unknown artist",
+    "title": "Adeste Fideles (O Come All Ye Faithful); Deck the Hall",
+    "item": "https://archive.org/details/78_adeste-fideles-o-come-all-ye-faithful-deck-the-hall_gbia0035629a"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_herb-kern-lloyd-sloop-warren-arey_gbia0056766a/Hark%20the%20Herald%20Angels%20Sing%20-%20Herb%20Kern%20-%20Lloyd%20Sloop.mp3",
+    "length": 167,
+    "series": "Herb Kern",
+    "title": "Hark the Herald Angels Sing",
+    "date": "1947",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_herb-kern-lloyd-sloop-warren-arey_gbia0056766a"
+   },
+   {
+    "src": "https://archive.org/download/78_carol-of-the-sheep-fold-o-god-our-help_augmented-choir_gbia0362562b/CAROL%20OF%20THE%20SHEEP%20FOLD%20%26%20O%20GOD%20OUR%20HELP%20-%20AUGMENTED%20CHOIR.mp3",
+    "length": 315.1,
+    "series": "Augmented Choir",
+    "title": "Carol of the Sheep Fold & O God Our Help",
+    "date": "1946",
+    "item": "https://archive.org/details/78_carol-of-the-sheep-fold-o-god-our-help_augmented-choir_gbia0362562b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-carols_gbia0034356b/Christmas%20Carols.mp3",
+    "length": 210.6,
+    "series": "Unknown artist",
+    "title": "Christmas Carols",
+    "date": "1960",
+    "item": "https://archive.org/details/78_christmas-carols_gbia0034356b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/MAXWELLHOUSECOFFEE.mp3",
+    "length": 79.13,
+    "series": "A word from our sponsor",
+    "title": "Maxwell House Coffee",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_kris-kringle_jiminy-cricket-m-schwab-c-edwards_gbia8001523a/%22KRIS%20KRINGLE%22%20-%20JIMINY%20CRICKET%20-%20M.%20Schwab.mp3",
+    "length": 187.73,
+    "series": "Jiminy Cricket",
+    "title": "\"Kris Kringle\"",
+    "date": "1956",
+    "item": "https://archive.org/details/78_kris-kringle_jiminy-cricket-m-schwab-c-edwards_gbia8001523a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_cliff-holland-beverly-lane-gruber_gbia0368728b/SILENT%20NIGHT%20-%20CLIFF%20HOLLAND%20-%20Beverly%20Lane.mp3",
+    "length": 174.59,
+    "series": "Cliff Holland",
+    "title": "Silent Night",
+    "item": "https://archive.org/details/78_silent-night_cliff-holland-beverly-lane-gruber_gbia0368728b"
+   },
+   {
+    "src": "https://archive.org/download/78_ting-a-ling-a-jingle-christmas-lullaby/1099-17.mp3",
+    "length": 168,
+    "series": "Habat, Eddie",
+    "title": "Ting-a-Ling-a-Jingle (Christmas Lullaby)",
+    "date": "1951",
+    "item": "https://archive.org/details/78_ting-a-ling-a-jingle-christmas-lullaby"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_jack-owens-eddie-ballantine-and-his-orchestra-berlin_gbia0133266b/WHITE%20CHRISTMAS%20-%20JACK%20OWENS%20-%20Eddie%20Ballantine%20And%20His%20Orchestra.mp3",
+    "length": 186,
+    "series": "Jack Owens",
     "title": "White Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_white-christmas_jack-owens-eddie-ballantine-and-his-orchestra-berlin_gbia0133266b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ELGINAMERICAN.mp3",
+    "length": 105.57,
+    "series": "A word from our sponsor",
+    "title": "Elgin American",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_cicha-noc-silent-night_polish-flyers-quartet-warsaw-polish-orchestra-jan-wojewdka_gbia0529129a/CICHA%20NOC-SILENT%20NIGHT%20-%20Polish%20Flyers%20Quartet.mp3",
+    "length": 166.49,
+    "series": "Polish Flyers Quartet",
+    "title": "Cicha Noc-Silent Night",
+    "item": "https://archive.org/details/78_cicha-noc-silent-night_polish-flyers-quartet-warsaw-polish-orchestra-jan-wojewdka_gbia0529129a"
+   },
+   {
+    "src": "https://archive.org/download/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr/A6.%20What%20Are%20You%20Doing%20New%20Years%20Eve.mp3",
+    "length": 235.52,
+    "series": "The U.S. Air Force Band and Singing Sergeants",
+    "title": "What Are You Doing New Year's Eve?",
     "date": "1967",
-    "item": "https://archive.org/details/christmas-in-new-york-vol-1-and-2"
+    "item": "https://archive.org/details/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr"
+   },
+   {
+    "src": "https://archive.org/download/78_joy-to-the-world_godfrey-malcolm-fredrico_gbia0219430b/JOY%20TO%20THE%20WORLD%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 82.09,
+    "series": "Godfrey Malcolm",
+    "title": "Joy To The World",
+    "item": "https://archive.org/details/78_joy-to-the-world_godfrey-malcolm-fredrico_gbia0219430b"
+   },
+   {
+    "src": "https://archive.org/download/78_bjldeklang-jingle-bell_gustav-winckler-gy-holdorf-george-swenssons-ensemble-ric_gbia0124146a/Bj%C3%A6ldeklang%20%28Jingle%20Bell%29%20-%20Gustav%20Winckler.mp3",
+    "length": 173.16,
+    "series": "Gustav Winckler",
+    "title": "Bjældeklang (Jingle Bell)",
+    "item": "https://archive.org/details/78_bjldeklang-jingle-bell_gustav-winckler-gy-holdorf-george-swenssons-ensemble-ric_gbia0124146a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BLUECOAL.MP3",
+    "length": 22.27,
+    "series": "A word from our sponsor",
+    "title": "Blue Coal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-boogie-woogie_will-bradley-and-his-boogie-woogie-boys-will-bradley-bil_gbia0023170a/Jingle%20Bells%20Boogie%20Woogie%20-%20Will%20Bradley%20and%20his%20Boogie%20Woogie%20Boys.mp3",
+    "length": 168,
+    "series": "Will Bradley and his Boogie Woogie Boys",
+    "title": "Jingle Bells Boogie Woogie",
+    "date": "1944",
+    "item": "https://archive.org/details/78_jingle-bells-boogie-woogie_will-bradley-and-his-boogie-woogie-boys-will-bradley-bil_gbia0023170a"
+   },
+   {
+    "src": "https://archive.org/download/78_nutcracker-suite-part-one_toscanini-and-the-nbc-symphony-orchestra-tchaikovsky_gbia0546793a/NUTCRACKER%20SUITE%20%28Part%20One%29%20-%20Toscanini%20and%20the%20NBC%20Symphony%20Orchestra.mp3",
+    "length": 312.7,
+    "series": "Toscanini and the NBC Symphony Orchestra",
+    "title": "NUTCRACKER SUITE (Part One)",
+    "date": "1945",
+    "item": "https://archive.org/details/78_nutcracker-suite-part-one_toscanini-and-the-nbc-symphony-orchestra-tchaikovsky_gbia0546793a"
+   },
+   {
+    "src": "https://archive.org/download/78_nuttin-for-christmas_lori-ann-the-tinkertones-warren-vincent_gbia0533825a/NUTTIN%27%20for%20Christmas%20-%20LORI%20ANN%20%26%20THE%20TINKERTONES.mp3",
+    "length": 169.19,
+    "series": "Lori Ann & The Tinkertones",
+    "title": "NUTTIN' for Christmas",
+    "item": "https://archive.org/details/78_nuttin-for-christmas_lori-ann-the-tinkertones-warren-vincent_gbia0533825a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-christmas-tree_the-sandpiper-chorus-mitchell-miller_gbia0534258/02%20-%20god%20rest%20ye%20merry%2C%20gentlemen%20-%20Ralph%20Nyland%20and%20The%20Sandpiper%20Chorus.mp3",
+    "length": 104,
+    "series": "The Sandpiper Chorus",
+    "title": "God Rest Ye Merry, Gentlemen",
+    "item": "https://archive.org/details/78_o-christmas-tree_the-sandpiper-chorus-mitchell-miller_gbia0534258"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/CHESTERFIELDCIGARETTES.mp3",
+    "length": 47.54,
+    "series": "A word from our sponsor",
+    "title": "Chesterfield Cigarettes",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-a_gbia3011413b/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR%3B%20AWAY%20IN%20A%20M%20-%20THE%20CAROLEERS.mp3",
+    "length": 195.04,
+    "series": "The Caroleers",
+    "title": "It Came Upon A Midnight Clear; Away In A Manger; The First Noel; Hark! The Herald Angels Sing",
+    "date": "1950",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-a_gbia3011413b"
+   },
+   {
+    "src": "https://archive.org/download/78_du-kaere-gamle-julemand-je-ne-cros-plus-au-pera-noel_svend-nicolaisens-danseorke_gbia0122964a/Du%20kaere%2C%20gamle%20julemand%20-%20Svend%20Nicolaisens%20danseorkester.mp3",
+    "length": 166.17,
+    "series": "Svend Nicolaisens danseorkester",
+    "title": "Du kaere, gamle julemand (Je ne cros plus au Pera Noel)",
+    "item": "https://archive.org/details/78_du-kaere-gamle-julemand-je-ne-cros-plus-au-pera-noel_svend-nicolaisens-danseorke_gbia0122964a"
+   },
+   {
+    "src": "https://archive.org/download/78_santas-on-his-way_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jacobs_gbia0378646a/SANTA%27S%20ON%20HIS%20WAY%20-%20Bill%20Tabbert%20and%20the%20%22400%22%20Quartet.mp3",
+    "length": 122.71,
+    "series": "Bill Tabbert and the \"400\" Quartet",
+    "title": "Santa's on His Way",
+    "date": "1951",
+    "item": "https://archive.org/details/78_santas-on-his-way_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jacobs_gbia0378646a"
+   },
+   {
+    "src": "https://archive.org/download/78_lets-go-home-for-christmas_betty-clooney-margaret-whittenberg-joel-nash_gbia0463302a/LET%27S%20GO%20HOME%20FOR%20CHRISTMAS%20-%20BETTY%20CLOONEY.mp3",
+    "length": 165.33,
+    "series": "Betty Clooney",
+    "title": "Let'S Go Home For Christmas",
+    "date": "1953",
+    "item": "https://archive.org/details/78_lets-go-home-for-christmas_betty-clooney-margaret-whittenberg-joel-nash_gbia0463302a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAlkaSeltzer.mp3",
+    "length": 117.36,
+    "series": "A word from our sponsor",
+    "title": "Alka Seltzer",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_o-come-all-ye-faithful_paul-perry_gbia0281707a/O%20COME%20ALL%20YE%20FAITHFUL%20-%20PAUL%20PERRY.mp3",
+    "length": 148.78,
+    "series": "Paul Perry",
+    "title": "O Come All Ye Faithful",
+    "item": "https://archive.org/details/78_o-come-all-ye-faithful_paul-perry_gbia0281707a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-joy-to-the-world_charles-r-cronham_gbia0034359a/Silent%20Night%3B%20Joy%20to%20the%20World%20-%20Charles%20R.%20Cronham.mp3",
+    "length": 148.27,
+    "series": "Charles R. Cronham",
+    "title": "Silent Night; Joy to the World",
+    "date": "1960",
+    "item": "https://archive.org/details/78_silent-night-joy-to-the-world_charles-r-cronham_gbia0034359a"
+   },
+   {
+    "src": "https://archive.org/download/78_et-barn-er-fdt-i-bethlehem_statsradiofoniens-pigekor-n-f-s-grundtvig-lis-jacobs_gbia7032268a/Et%20Barn%20er%20f%C3%B8dt%20i%20Bethlehem%20-%20Statsradiofoniens%20Pigekor.mp3",
+    "length": 168.58,
+    "series": "Statsradiofoniens Pigekor",
+    "title": "Et Barn er født i Bethlehem",
+    "item": "https://archive.org/details/78_et-barn-er-fdt-i-bethlehem_statsradiofoniens-pigekor-n-f-s-grundtvig-lis-jacobs_gbia7032268a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-chopsticks-twas-a-night-before-christmas_bobby-burns-peter-pan-orchestra_gbia0433372b/CHRISTMAS%20CHOPSTICKS%20TWAS%20A%20NIGHT%20BEFORE%20CHR%20-%20BOBBY%20BURNS.mp3",
+    "length": 160.05,
+    "series": "Bobby Burns",
+    "title": "Christmas Chopsticks Twas A Night Before Christmas",
+    "item": "https://archive.org/details/78_christmas-chopsticks-twas-a-night-before-christmas_bobby-burns-peter-pan-orchestra_gbia0433372b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/JELLO1955.mp3",
+    "length": 15.17,
+    "series": "A word from our sponsor",
+    "title": "Jell-O",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_im-gettin-nuttin-for-christmas-jolly-old-st-nicholas_tepper-bennett-bobby-stewart-t_gbia0533785/02%20-%20JOLLY%20OLD%20ST.%20NICHOLAS%20-%20THE%20PETER%20PAN%20CAROLEERS.mp3",
+    "length": 103,
+    "series": "Tepper",
+    "title": "Jolly Old St. Nicholas",
+    "item": "https://archive.org/details/78_im-gettin-nuttin-for-christmas-jolly-old-st-nicholas_tepper-bennett-bobby-stewart-t_gbia0533785"
+   },
+   {
+    "src": "https://archive.org/download/78_bobby-dawes-christmas-43_gbia0520007a/BOBBY%20DAWES%20CHRISTMAS%20%2743.mp3",
+    "length": 246,
+    "series": "",
+    "title": "Bobby Dawes Christmas '43",
+    "date": "1943",
+    "item": "https://archive.org/details/78_bobby-dawes-christmas-43_gbia0520007a"
+   },
+   {
+    "src": "https://archive.org/download/78_bobbys-christmas-song_bobby-gregory-and-his-cactus-cowboys-bobby-gregory-scott-swa_gbia0263080a/BOBBY%27S%20CHRISTMAS%20SONG%20-%20BOBBY%20GREGORY%20and%20His%20Cactus%20Cowboys.mp3",
+    "length": 131.88,
+    "series": "BOBBY GREGORY and His Cactus Cowboys",
+    "title": "Bobby's Christmas Song",
+    "date": "1949",
+    "item": "https://archive.org/details/78_bobbys-christmas-song_bobby-gregory-and-his-cactus-cowboys-bobby-gregory-scott-swa_gbia0263080a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_the-cricket-choral-group_gbia0533841a/WHITE%20CHRISTMAS%20-%20The%20CRICKET%20Choral%20Group.mp3",
+    "length": 132.07,
+    "series": "The CRICKET Choral Group",
+    "title": "White Christmas",
+    "item": "https://archive.org/details/78_white-christmas_the-cricket-choral-group_gbia0533841a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POPCICLE.MP3",
+    "length": 52.84,
+    "series": "A word from our sponsor",
+    "title": "Popsicle",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_i-saw-mommy-kissing-santa-claus_anne-lloyd-the-sandpipers-mitchell-miller-connor_gbia0335944a/I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%20-%20ANNE%20LLOYD.mp3",
+    "length": 106.82,
+    "series": "Anne Lloyd",
+    "title": "I Saw Mommy Kissing Santa Claus",
+    "item": "https://archive.org/details/78_i-saw-mommy-kissing-santa-claus_anne-lloyd-the-sandpipers-mitchell-miller-connor_gbia0335944a"
+   },
+   {
+    "src": "https://archive.org/download/78_frosty-the-snow-man_dick-edwards-the-peter-pan-chorus-and-orchestra-vicky-kasen-nel_gbia0006809a/Frosty%20The%20Snow%20Man%20-%20Dick%20Edwards%20-%20The%20Peter%20Pan%20Chorus%20and%20Orchestra.mp3",
+    "length": 168,
+    "series": "Dick Edwards",
+    "title": "Frosty The Snow Man",
+    "date": "1950",
+    "item": "https://archive.org/details/78_frosty-the-snow-man_dick-edwards-the-peter-pan-chorus-and-orchestra-vicky-kasen-nel_gbia0006809a"
+   },
+   {
+    "src": "https://archive.org/download/78_barn-jesus-i-en-krybbe-l_otte-svendsen-kai-mortensens-strygeorkester-niels-w-gade_gbia7008189b/Barn%20Jesus%20i%20en%20krybbe%20l%C3%A5%20-%20OTTE%20SVENDSEN.mp3",
+    "length": 154.64,
+    "series": "Otte Svendsen",
+    "title": "Barn Jesus i en krybbe lå",
+    "item": "https://archive.org/details/78_barn-jesus-i-en-krybbe-l_otte-svendsen-kai-mortensens-strygeorkester-niels-w-gade_gbia7008189b"
+   },
+   {
+    "src": "https://archive.org/download/78_bjldeklang-jingle-bells_gustav-winckler-gy-holdorf-george-swenssons-ensemble-ri_gbia0125622a/Bj%C3%A6ldeklang%20%28Jingle%20Bells%29%20-%20Gustav%20Winckler.mp3",
+    "length": 178.03,
+    "series": "Gustav Winckler",
+    "title": "Bjældeklang (Jingle Bells)",
+    "item": "https://archive.org/details/78_bjldeklang-jingle-bells_gustav-winckler-gy-holdorf-george-swenssons-ensemble-ri_gbia0125622a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAdamHats.mp3",
+    "length": 72.35,
+    "series": "A word from our sponsor",
+    "title": "Adam Hats",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_santa-lucia_joe-venuti-herb-kern-larry-breen-vincent-terri-charlotte-laughton-tinsl_gbia0085911a/Santa%20Lucia%20-%20Joe%20Venuti%20-%20Herb%20Kern%20-%20Larry%20Breen.mp3",
+    "length": 186.42,
+    "series": "Joe Venuti",
+    "title": "Santa Lucia",
+    "date": "1948",
+    "item": "https://archive.org/details/78_santa-lucia_joe-venuti-herb-kern-larry-breen-vincent-terri-charlotte-laughton-tinsl_gbia0085911a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-holy-night-oh-little-town-of-bethlehem-god-rest-ye-merry-gentlemen_gbia0035628b/Silent%20Night%2C%20Holy%20Night%3B%20Oh%20Little%20Town%20of%20Bethlehem%3B%20God%20Rest%20Ye%20Merry%20Gentlemen.mp3",
+    "length": 383,
+    "series": "",
+    "title": "Silent Night, Holy Night; Oh Little Town of Bethlehem; God Rest Ye Merry Gentlemen",
+    "date": "1956",
+    "item": "https://archive.org/details/78_silent-night-holy-night-oh-little-town-of-bethlehem-god-rest-ye-merry-gentlemen_gbia0035628b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas_the-music-hall-drama-group_gbia0321743b/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20THE%20MUSIC%20HALL%20DRAMA%20GROUP.mp3",
+    "length": 204.89,
+    "series": "The Music Hall Drama Group",
+    "title": "The Night Before Christmas",
+    "item": "https://archive.org/details/78_the-night-before-christmas_the-music-hall-drama-group_gbia0321743b"
+   },
+   {
+    "src": "https://archive.org/download/78_let-it-snow-let-it-snow-let-it-snow_bob-crosby-and-orchestra-bob-crosby-styne-cah_gbia0077492a/Let%20It%20Snow%3B%20Let%20It%20Snow%3B%20Let%20I%20-%20Bob%20Crosby%20and%20Orchestra.mp3",
+    "length": 182,
+    "series": "Bob Crosby and Orchestra",
+    "title": "Let It Snow; Let It Snow; Let It Snow",
+    "date": "1946",
+    "item": "https://archive.org/details/78_let-it-snow-let-it-snow-let-it-snow_bob-crosby-and-orchestra-bob-crosby-styne-cah_gbia0077492a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/QUAKER.MP3",
+    "length": 128.43,
+    "series": "A word from our sponsor",
+    "title": "Quaker",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_wait-till-after-christmas_john-greer-thomas-greer_gbia0061007a/Wait%20Till%20After%20Christmas%20-%20John%20Greer%20-%20Thomas.mp3",
+    "length": 178,
+    "series": "John Greer",
+    "title": "Wait Till After Christmas",
+    "date": "1954",
+    "item": "https://archive.org/details/78_wait-till-after-christmas_john-greer-thomas-greer_gbia0061007a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-chopsticks-twas-the-night-before-christmas_fred-heider-bobby-burns-pet_gbia0000281b/Christmas%20Chopsticks%20%28%27Twas%20The%20Night%20Before%20Christmas%29%20-%20Fred%20Heider.mp3",
+    "length": 166,
+    "series": "Fred Heider",
+    "title": "Christmas Chopsticks ('Twas The Night Before Christmas)",
+    "date": "1953",
+    "item": "https://archive.org/details/78_christmas-chopsticks-twas-the-night-before-christmas_fred-heider-bobby-burns-pet_gbia0000281b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_harold-goodfellow-and-his-good-fellows_gbia0025275b/Jingle%20Bells%20-%20Harold%20Goodfellow%20and%20His%20Good%20Fellows.mp3",
+    "length": 193,
+    "series": "Harold Goodfellow and His Good Fellows",
+    "title": "Jingle Bells",
+    "date": "1951",
+    "item": "https://archive.org/details/78_jingle-bells_harold-goodfellow-and-his-good-fellows_gbia0025275b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-o-little-town-of-bethlehem_the-caroleers_gbia0006854a/Silent%20Night%3B%20O%20Little%20Town%20of%20Bethlehem%20-%20The%20Caroleers.mp3",
+    "length": 203,
+    "series": "The Caroleers",
+    "title": "Silent Night; O Little Town of Bethlehem",
+    "date": "1949",
+    "item": "https://archive.org/details/78_silent-night-o-little-town-of-bethlehem_the-caroleers_gbia0006854a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GEMBLADES.mp3",
+    "length": 14.23,
+    "series": "A word from our sponsor",
+    "title": "Gem Razor Blades",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_parade-of-the-wooden-soldiers_jessel-elmer-ihrke_gbia0000259a/Parade%20of%20The%20Wooden%20Soldiers%20-%20Jessel%20-%20Elmer%20Ihrke.mp3",
+    "length": 163,
+    "series": "Jessel",
+    "title": "Parade of The Wooden Soldiers",
+    "date": "1948",
+    "item": "https://archive.org/details/78_parade-of-the-wooden-soldiers_jessel-elmer-ihrke_gbia0000259a"
+   },
+   {
+    "src": "https://archive.org/download/78_ma-my-toys-are-borken_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jaco_gbia0378646b/MA%21%20MY%20TOYS%20ARE%20BORKEN%20-%20Bill%20Tabbert%20and%20the%20%22400%22%20Quartet.mp3",
+    "length": 146.47,
+    "series": "Bill Tabbert and the \"400\" Quartet",
+    "title": "Ma! My Toys Are Broken",
+    "date": "1951",
+    "item": "https://archive.org/details/78_ma-my-toys-are-borken_bill-tabbert-and-the-400-quartet-joe-lipman-orchestra-jaco_gbia0378646b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-be-bop-santa-claus_babs-gonzalez-lloyd-williams_gbia0052890a/The%20Be-Bop%20Santa%20Claus%20-%20Babs%20Gonzalez%20-%20Lloyd%20Williams.mp3",
+    "length": 203,
+    "series": "Babs Gonzalez",
+    "title": "The Be-Bop Santa Claus",
+    "date": "1957",
+    "item": "https://archive.org/details/78_the-be-bop-santa-claus_babs-gonzalez-lloyd-williams_gbia0052890a"
+   },
+   {
+    "src": "https://archive.org/download/78_hjt-fra-trets-grnne-top_strygeorkester-og-orgel-operasanger-w-loudrup-jensen-e_gbia7005646a/H%C3%B8jt%20fra%20Tr%C3%A6ets%20gr%C3%B8nne%20Top%20-%20Strygeorkester%20og%20Orgel.mp3",
+    "length": 135.03,
+    "series": "Strygeorkester og Orgel",
+    "title": "Højt fra Træets grønne Top",
+    "item": "https://archive.org/details/78_hjt-fra-trets-grnne-top_strygeorkester-og-orgel-operasanger-w-loudrup-jensen-e_gbia7005646a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/SALHAPATICA.mp3",
+    "length": 86.85,
+    "series": "A word from our sponsor",
+    "title": "Sal Hepatica",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-christmas-bell_eddie-dean-the-frontiersmen-marian-hall-e-dean-hal-sother_gbia0473785a/THE%20FIRST%20CHRISTMAS%20BELL%20-%20EDDIE%20DEAN%20-%20THE%20FRONTIERSMEN.mp3",
+    "length": 171.55,
+    "series": "Eddie Dean",
+    "title": "The First Christmas Bell",
+    "date": "1955",
+    "item": "https://archive.org/details/78_the-first-christmas-bell_eddie-dean-the-frontiersmen-marian-hall-e-dean-hal-sother_gbia0473785a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_glenn-davis-lewis-h-redner_gbia0378580b/O%20LITTLE%20TOWN%20OF%20BETHLEHEM%20-%20GLENN%20DAVIS.mp3",
+    "length": 159.81,
+    "series": "Glenn Davis",
+    "title": "O Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_glenn-davis-lewis-h-redner_gbia0378580b"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells-good-king-wenceslas_jerry-wayne_gbia0534397/01%20-%20GOOD%20KING%20WENCESLAS%20-%20JERRY%20WAYNE.mp3",
+    "length": 98,
+    "series": "Jerry Wayne",
+    "title": "Jingle Bells; Good King Wenceslas",
+    "date": "1951",
+    "item": "https://archive.org/details/78_jingle-bells-good-king-wenceslas_jerry-wayne_gbia0534397"
+   },
+   {
+    "src": "https://archive.org/download/78_the-drummer-boy_the-cricketone-childrens-chorus_gbia0533824a/THE%20DRUMMER%20BOY%20-%20The%20Cricketone%20Children%27s%20Chorus.mp3",
+    "length": 158.95,
+    "series": "The Cricketone Children's Chorus",
+    "title": "The Drummer Boy",
+    "item": "https://archive.org/details/78_the-drummer-boy_the-cricketone-childrens-chorus_gbia0533824a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsAnacin.mp3",
+    "length": 40.72,
+    "series": "A word from our sponsor",
+    "title": "Anacin",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_twas-the-night-before-christmas_gbia0219431g/%27TWAS%20THE%20NIGHT%20BEFORE%20CHRISTMAS.mp3",
+    "length": 201.17,
+    "series": "Unknown artist",
+    "title": "'Twas The Night Before Christmas",
+    "item": "https://archive.org/details/78_twas-the-night-before-christmas_gbia0219431g"
+   },
+   {
+    "src": "https://archive.org/download/78_great-christmas-part-2_errol-garner-garner_gbia0062402/01%20-%20Great%20Christmas%20-%20Part%201%20-%20Errol%20Garner%20-%20Garner.mp3",
+    "length": 139,
+    "series": "Errol Garner",
+    "title": "Great Christmas - Part 1; Great Christmas - Part 2",
+    "date": "1949",
+    "item": "https://archive.org/details/78_great-christmas-part-2_errol-garner-garner_gbia0062402"
+   },
+   {
+    "src": "https://archive.org/download/78_julens-melodier_kai-mortensens-strygeorkester_gbia7011289a/Julens%20melodier%20-%20Kai%20Mortensens%20strygeorkester.mp3",
+    "length": 179.17,
+    "series": "Kai Mortensens strygeorkester",
+    "title": "Julens melodier",
+    "item": "https://archive.org/details/78_julens-melodier_kai-mortensens-strygeorkester_gbia7011289a"
+   },
+   {
+    "src": "https://archive.org/download/78_frosty-the-snowman_arizona-cliff-martin-music-hall-orchestra_gbia0203790a/Frosty%20The%20Snowman%20-%20Arizona%20Cliff%20Martin.mp3",
+    "length": 158.16,
+    "series": "Arizona Cliff Martin",
+    "title": "Frosty The Snowman",
+    "item": "https://archive.org/details/78_frosty-the-snowman_arizona-cliff-martin-music-hall-orchestra_gbia0203790a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/STURDYDOGFOOD.mp3",
+    "length": 19.54,
+    "series": "A word from our sponsor",
+    "title": "Sturdy Dog Food",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_glade-jul-dejlige-jul_otte-svendsen-al-mortensens-strygeorkester-b-s-ingemann_gbia0120130a/Glade%20Jul%2C%20dejlige%20Jul%20-%20Otte%20Svendsen%20-%20al%20Mortensens%20Strygeorkester.mp3",
+    "length": 190.34,
+    "series": "Otte Svendsen",
+    "title": "Glade Jul, dejlige Jul",
+    "item": "https://archive.org/details/78_glade-jul-dejlige-jul_otte-svendsen-al-mortensens-strygeorkester-b-s-ingemann_gbia0120130a"
+   },
+   {
+    "src": "https://archive.org/download/78_santa-claus-is-coming-to-town_gbia0195429c/SANTA%20CLAUS%20IS%20COMING%20TO%20TOWN.mp3",
+    "length": 146.77,
+    "series": "Unknown artist",
+    "title": "Santa Claus Is Coming To Town",
+    "item": "https://archive.org/details/78_santa-claus-is-coming-to-town_gbia0195429c"
+   },
+   {
+    "src": "https://archive.org/download/78_the-santa-claus-crave_elzadie-robinson-bob-call_gbia3019267a/THE%20SANTA%20CLAUS%20CRAVE%20-%20Elzadie%20Robinson.mp3",
+    "length": 206,
+    "series": "Elzadie Robinson",
+    "title": "The Santa Claus Crave",
+    "date": "1950",
+    "item": "https://archive.org/details/78_the-santa-claus-crave_elzadie-robinson-bob-call_gbia3019267a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-coventry-carol_master-billy-neely-gerald-moore-moore_gbia0553501a/THE%20COVENTRY%20CAROL%20-%20MASTER%20BILLY%20NEELY%20-%20Gerald%20Moore.mp3",
+    "length": 186,
+    "series": "Master Billy Neely",
+    "title": "The Coventry Carol",
+    "date": "1952",
+    "item": "https://archive.org/details/78_the-coventry-carol_master-billy-neely-gerald-moore-moore_gbia0553501a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWingCigarettes.mp3",
+    "length": 32.99,
+    "series": "A word from our sponsor",
+    "title": "Wing Cigarettes",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-holy-night_beniamino-gigli-praga-grber-rinaldo-zamboni_gbia7017636b/SILENT%20NIGHT%2C%20HOLY%20NIGHT%20-%20BENIAMINO%20GIGLI.mp3",
+    "length": 154.39,
+    "series": "Beniamino Gigli",
+    "title": "Silent Night, Holy Night",
+    "date": "1947",
+    "item": "https://archive.org/details/78_silent-night-holy-night_beniamino-gigli-praga-grber-rinaldo-zamboni_gbia7017636b"
+   },
+   {
+    "src": "https://archive.org/download/78_pussycats-christmas_gene-lowell-chorus-m-w-brown_gbia0340996a/PUSSYCAT%27S%20CHRISTMAS%20-%20Gene%20Lowell%20Chorus.mp3",
+    "length": 183.22,
+    "series": "Gene Lowell Chorus",
+    "title": "Pussycat's Christmas",
+    "item": "https://archive.org/details/78_pussycats-christmas_gene-lowell-chorus-m-w-brown_gbia0340996a"
+   },
+   {
+    "src": "https://archive.org/download/78_rudolph-the-red-nosed-reindeer-i-saw-mommy-kissing-santa-claus-white-christmas_gbia0330601a/RUDOLPH%20THE%20RED%20NOSED%20REINDEER%3B%20I%20SAW%20MOMMY%20KISSING%20SANTA%20CLAUS%3B%20WHITE%20CHRISTMAS.mp3",
+    "length": 400.68,
+    "series": "Unknown artist",
+    "title": "Rudolph The Red Nosed Reindeer; I Saw Mommy Kissing Santa Claus; White Christmas",
+    "item": "https://archive.org/details/78_rudolph-the-red-nosed-reindeer-i-saw-mommy-kissing-santa-claus-white-christmas_gbia0330601a"
+   },
+   {
+    "src": "https://archive.org/download/78_...title-songs_mark-warnow-and-his-hit-parade-orchestra_gbia0001208b/Title%20Songs%20-%20Mark%20Warnow%20and%20his%20Hit%20Parade%20Orchestra.mp3",
+    "length": 179,
+    "series": "Mark Warnow and his Hit Parade Orchestra",
+    "title": "Happy Little Songs",
+    "date": "1945",
+    "item": "https://archive.org/details/78_...title-songs_mark-warnow-and-his-hit-parade-orchestra_gbia0001208b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/JELLO1955.mp3",
+    "length": 15.17,
+    "series": "A word from our sponsor",
+    "title": "Jell-O",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_five-christmas-songs_tempos-carolaires_gbia0119025a/FIVE%20CHRISTMAS%20SONGS%20-%20Tempo%27s%20Carolaires.mp3",
+    "length": 151.99,
+    "series": "Tempo's Carolaires",
+    "title": "Five Christmas Songs",
+    "date": "1949",
+    "item": "https://archive.org/details/78_five-christmas-songs_tempos-carolaires_gbia0119025a"
+   },
+   {
+    "src": "https://archive.org/download/78_frosty_stan-getz-orchestra-stan-getz-jimmy-rainey-al-haig-chas-perry-allan-eagar-c_gbia0064498b/Frosty%20-%20Stan%20Getz%20Orchestra%20-%20Stan%20Getz.mp3",
+    "length": 191,
+    "series": "Stan Getz Orchestra",
+    "title": "Frosty",
+    "date": "1948",
+    "item": "https://archive.org/details/78_frosty_stan-getz-orchestra-stan-getz-jimmy-rainey-al-haig-chas-perry-allan-eagar-c_gbia0064498b"
+   },
+   {
+    "src": "https://archive.org/download/78_karelsk-vuggevise_ulla-katajavuori-w-hannikainen_gbia7005537b/Karelsk%20Vuggevise%20-%20Ulla%20Katajavuori%20-%20W.%20Hannikainen.mp3",
+    "length": 149.38,
+    "series": "Ulla Katajavuori",
+    "title": "Karelsk Vuggevise",
+    "date": "1949",
+    "item": "https://archive.org/details/78_karelsk-vuggevise_ulla-katajavuori-w-hannikainen_gbia7005537b"
+   },
+   {
+    "src": "https://archive.org/download/78_pujarska_bohu-hank-miean-sbor-bratislavskho-rozhlasu-symfonick-orchestr-brati_gbia0185132a/PUJARSKA%20-%20BOHU%C5%A0%20HAN%C3%81K%20-%20mie%C5%A1an%C3%BD%20sbor%20bratislavsk%C3%A9ho%20rozhlasu.mp3",
+    "length": 213.26,
+    "series": "Bohuš Hanák",
+    "title": "Pujarska",
+    "date": "1947",
+    "item": "https://archive.org/details/78_pujarska_bohu-hank-miean-sbor-bratislavskho-rozhlasu-symfonick-orchestr-brati_gbia0185132a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsJackBennyDennisDayForTexaco.mp3",
+    "length": 59.64,
+    "series": "A word from our sponsor",
+    "title": "Texaco (with Jack Benny and Dennis Day)",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas-god-rest-ye-merry-gentleme_gbia0001238b/Deck%20The%20Halls%20With%20Boughs%20of%20Holly%3B%20Good%20King%20Wencelas%3B%20God%20Rest%20Ye%20Merry%20Gentlemen%3B%20Joy%20to%20The%20World%20-%20The%20Caroleers.mp3",
+    "length": 171.35,
+    "series": "The Caroleers",
+    "title": "Deck The Halls With Boughs of Holly; Good King Wencelas; God Rest Ye Merry Gentlemen; Joy to The World",
+    "date": "1952",
+    "item": "https://archive.org/details/78_deck-the-halls-with-boughs-of-holly-good-king-wencelas-god-rest-ye-merry-gentleme_gbia0001238b"
+   },
+   {
+    "src": "https://archive.org/download/78_lets-go-home-for-christmas_betty-clooney-margaret-whittenberg-joel-nash_gbia0463301a/LET%27S%20GO%20HOME%20FOR%20CHRISTMAS%20-%20BETTY%20CLOONEY.mp3",
+    "length": 165.55,
+    "series": "Betty Clooney",
+    "title": "Let's Go Home for Christmas",
+    "date": "1953",
+    "item": "https://archive.org/details/78_lets-go-home-for-christmas_betty-clooney-margaret-whittenberg-joel-nash_gbia0463301a"
+   },
+   {
+    "src": "https://archive.org/download/78_tom-glazer-sings-olden-ballads_tom-glazer_gbia8005793/01%20-%20TWELVE%20DAYS%20OF%20CHRISTMAS%20-%20TOM%20GLAZER.mp3",
+    "length": 173,
+    "series": "Tom Glazer",
+    "title": "Twelve Days Of Christmas",
+    "item": "https://archive.org/details/78_tom-glazer-sings-olden-ballads_tom-glazer_gbia8005793"
+   },
+   {
+    "src": "https://archive.org/download/78_twinkle-twinkle-little-star-jingle-bells_gbia0419591b/TWINKLE%20TWINKLE%20LITTLE%20STAR%3B%20JINGLE%20BELLS.mp3",
+    "length": 221.95,
+    "series": "Unknown artist",
+    "title": "Twinkle Twinkle Little Star; Jingle Bells",
+    "item": "https://archive.org/details/78_twinkle-twinkle-little-star-jingle-bells_gbia0419591b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/GEMBLADES.mp3",
+    "length": 14.23,
+    "series": "A word from our sponsor",
+    "title": "Gem Razor Blades",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0288546a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
+    "length": 152.44,
+    "series": "Betty Johnson",
+    "title": "I Want Eddie Fisher For Christmas",
+    "date": "1954",
+    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0288546a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_ralph-pedi-irving-berlin_gbia0114315a/White%20Christmas%20-%20Ralph%20Pedi%20-%20Irving%20Berlin.mp3",
+    "length": 171.3,
+    "series": "Ralph Pedi",
+    "title": "White Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_white-christmas_ralph-pedi-irving-berlin_gbia0114315a"
+   },
+   {
+    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289578b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO%20%28Formerly%20Rambler%20Trio%29.mp3",
+    "length": 171.53,
+    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO (Formerly Rambler Trio)",
+    "title": "Guitar Jingle Bells",
+    "date": "1947",
+    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0289578b"
+   },
+   {
+    "src": "https://archive.org/download/78_noel-coward-fantasy_the-melachrino-orchestra-george-melachrino_gbia7012237b/NOEL%20COWARD%20FANTASY%20-%20THE%20MELACHRINO%20ORCHESTRA.mp3",
+    "length": 280.68,
+    "series": "The Melachrino Orchestra",
+    "title": "Noel Coward Fantasy",
+    "date": "1953",
+    "item": "https://archive.org/details/78_noel-coward-fantasy_the-melachrino-orchestra-george-melachrino_gbia7012237b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
+    "length": 45.51,
+    "series": "A word from our sponsor",
+    "title": "Bubble Up",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_a-cowboys-christmas-song_leon-mcauliffe-and-his-western-swing-band-jimmy-hall-mcau_gbia0182244b/A%20COWBOY%27S%20CHRISTMAS%20SONG%20-%20LEON%20McAULIFFE%20AND%20HIS%20WESTERN%20SWING%20BAND.mp3",
+    "length": 190.58,
+    "series": "LEON McAULIFFE AND HIS WESTERN SWING BAND",
+    "title": "A Cowboy'S Christmas Song",
+    "date": "1947",
+    "item": "https://archive.org/details/78_a-cowboys-christmas-song_leon-mcauliffe-and-his-western-swing-band-jimmy-hall-mcau_gbia0182244b"
+   },
+   {
+    "src": "https://archive.org/download/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr/A4.%20What%20Child%20Is%20This.mp3",
+    "length": 134.22,
+    "series": "The U.S. Air Force Band and Singing Sergeants",
+    "title": "What Child Is This",
+    "date": "1967",
+    "item": "https://archive.org/details/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr"
+   },
+   {
+    "src": "https://archive.org/download/78_1-hark-the-herald-angels-sing-2-it-came-upon-a-midnight-clear-3-shepherds-shak_gbia0470250b/1.%20Hark%20The%20Herald%20Angels%20Sing%20%202.%20It%20Ca%20-%20GODFREY%20MALCOLM.mp3",
+    "length": 353.98,
+    "series": "Godfrey Malcolm",
+    "title": "1. Hark The Herald Angels Sing 2. It Came Upon a Midnight Clear 3. Shepherds Shake Off Your Drowsy Sleep",
+    "item": "https://archive.org/details/78_1-hark-the-herald-angels-sing-2-it-came-upon-a-midnight-clear-3-shepherds-shak_gbia0470250b"
+   },
+   {
+    "src": "https://archive.org/download/78_det-kimer-nu-til-julefest_medlemmer-af-radiokoret-palle-alsfelt-c-blle-n-f-s-gr_gbia7005814b/Det%20kimer%20nu%20til%20Julefest%20-%20Medlemmer%20af%20Radiokoret.mp3",
+    "length": 183.42,
+    "series": "Medlemmer af Radiokoret",
+    "title": "Det kimer nu til Julefest",
+    "item": "https://archive.org/details/78_det-kimer-nu-til-julefest_medlemmer-af-radiokoret-palle-alsfelt-c-blle-n-f-s-gr_gbia7005814b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OLDSPICE.MP3",
+    "length": 20.16,
+    "series": "A word from our sponsor",
+    "title": "Old Spice",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-chopsticks/1083-16.mp3",
+    "length": 165,
+    "series": "Yankovic, Frank",
+    "title": "Christmas Chopsticks",
+    "date": "1951",
+    "item": "https://archive.org/details/78_christmas-chopsticks"
+   },
+   {
+    "src": "https://archive.org/download/78_twas-the-night-before-christmas-part-1_merrill-laub_gbia0533484a/TWAS%20THE%20NIGHT%20BEFORE%20CHRISTMAS-Part%201%20-%20MERRILL%20LAUB.mp3",
+    "length": 98.46,
+    "series": "Merrill Laub",
+    "title": "'TWAS THE NIGHT BEFORE CHRISTMAS-Part 1",
+    "item": "https://archive.org/details/78_twas-the-night-before-christmas-part-1_merrill-laub_gbia0533484a"
+   },
+   {
+    "src": "https://archive.org/download/78_the-mistletoe-song_jack-owens-sam-cowling-eddie-ballantine-and-his-orchestra-owens_gbia0133266a/THE%20MISTLETOE%20SONG%20-%20JACK%20OWENS%20-%20SAM%20COWLING.mp3",
+    "length": 177,
+    "series": "Jack Owens",
+    "title": "The Mistletoe Song",
+    "date": "1947",
+    "item": "https://archive.org/details/78_the-mistletoe-song_jack-owens-sam-cowling-eddie-ballantine-and-his-orchestra-owens_gbia0133266a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night-o-come-all-ye-faithful-joy-to-the-world_godfrey-malcolm-fredrico_gbia0548258a/SILENT%20NIGHT%3B%20O%20COME%20ALL%20YE%20FAITHFUL%3B%20JO.mp3",
+    "length": 388.39,
+    "series": "Godfrey Malcolm",
+    "title": "Silent Night; O Come All Ye Faithful; Joy To The World",
+    "item": "https://archive.org/details/78_silent-night-o-come-all-ye-faithful-joy-to-the-world_godfrey-malcolm-fredrico_gbia0548258a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/FITCH.MP3",
+    "length": 123.67,
+    "series": "A word from our sponsor",
+    "title": "Fitch Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_15461-Silent-night-Holy-Night/15461-Silent-night-Holy-Night.mp3",
+    "length": 181.79,
+    "series": "Mahalia Jackson",
+    "title": "Silent night, Holy Night",
+    "item": "https://archive.org/details/78_15461-Silent-night-Holy-Night"
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland-o-come-all-ye-faithful-hark-the-herald-angels-sing_tops-orch-chor_gbia0547807b/Winter%20Wonderland%3B%20O%2C%20Come%20All%20Y%20-%20Tops%20Orch.%20%26%20Choristers.mp3",
+    "length": 342.03,
+    "series": "Tops Orch. & Choristers",
+    "title": "Winter Wonderland; O, Come All Ye Faithful; Hark The Herald Angels Sing",
+    "item": "https://archive.org/details/78_winter-wonderland-o-come-all-ye-faithful-hark-the-herald-angels-sing_tops-orch-chor_gbia0547807b"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing-o-little-town-of-bethlehem_johnny-kay-the-caroleers-vic_gbia0533781a/HARK%20THE%20HERALD%20ANGELS%20SING%3B%20O%20LITTLE%20TOWN%20OF.mp3",
+    "length": 113.28,
+    "series": "Johnny Kay",
+    "title": "Hark The Herald Angels Sing; O Little Town Of Bethlehem",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing-o-little-town-of-bethlehem_johnny-kay-the-caroleers-vic_gbia0533781a"
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble-berna_gbia0211798b/WINTER%20WONDERLAND%20-%20JOHNNY%20LONG%20and%20his%20Orchestra.mp3",
+    "length": 191.61,
+    "series": "JOHNNY LONG and his Orchestra",
+    "title": "Winter Wonderland",
+    "date": "1947",
+    "item": "https://archive.org/details/78_winter-wonderland_johnny-long-and-his-orchestra-francey-lane-and-the-ensemble-berna_gbia0211798b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/DUPONT.MP3",
+    "length": 127.33,
+    "series": "A word from our sponsor",
+    "title": "Dupont",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_its-gonna-be-a-lonely-christmas_the-orioles-rose-sprung_gbia0466855b/%28IT%27S%20GONNA%20BE%20A%29%20LONELY%20CHRISTMAS%20-%20THE%20ORIOLES.mp3",
+    "length": 205.99,
+    "series": "The Orioles",
+    "title": "(It'S Gonna Be A) Lonely Christmas",
+    "date": "1949",
+    "item": "https://archive.org/details/78_its-gonna-be-a-lonely-christmas_the-orioles-rose-sprung_gbia0466855b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0197493a/I%20WANT%20EDDIE%20FISHER%20FOR%20CHRISTMAS%20-%20Betty%20Johnson.mp3",
+    "length": 152.9,
+    "series": "Betty Johnson",
+    "title": "I Want Eddie Fisher For Christmas",
+    "date": "1954",
+    "item": "https://archive.org/details/78_i-want-eddie-fisher-for-christmas_betty-johnson-joan-javitz-and-phil-springer-jimmy_gbia0197493a"
+   },
+   {
+    "src": "https://archive.org/download/78_joy-to-the-world_ken-griffin-watts_gbia0430427b/JOY%20TO%20THE%20WORLD%20-%20KEN%20GRIFFIN%20-%20WATTS.mp3",
+    "length": 167.1,
+    "series": "Ken Griffin",
+    "title": "Joy To The World",
+    "date": "1950",
+    "item": "https://archive.org/details/78_joy-to-the-world_ken-griffin-watts_gbia0430427b"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-comes-but-once-a-year_henry-jerome-his-orchestra-dick-judge-haggar-raza_gbia0283912b/CHRISTMAS%20COMES%20BUT%20ONCE%20A%20%20-%20HENRY%20JEROME%20%26%20His%20Orchestra.mp3",
+    "length": 180.86,
+    "series": "HENRY JEROME & His Orchestra",
+    "title": "Christmas Comes but Once a Year",
+    "date": "1948",
+    "item": "https://archive.org/details/78_christmas-comes-but-once-a-year_henry-jerome-his-orchestra-dick-judge-haggar-raza_gbia0283912b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/STUDEBAKERLARK.mp3",
+    "length": 43.17,
+    "series": "A word from our sponsor",
+    "title": "Studebaker Lark",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_the-st-margarets-all-boys-choir_gbia0533818a/SILENT%20NIGHT%20-%20THE%20ST.%20MARGARET%27S%20ALL%20BOYS%20CHOIR.mp3",
+    "length": 160.31,
+    "series": "The St. Margaret'S All Boys Choir",
+    "title": "Silent Night",
+    "item": "https://archive.org/details/78_silent-night_the-st-margarets-all-boys-choir_gbia0533818a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem-away-in-a-manger-good-king-wenceslaus_tops-orch-choriste_gbia0547808b/O%20Little%20Town%20Of%20Bethlehem%3B%20Away%20-%20Tops%20Orch.%20%26%20Choristers.mp3",
+    "length": 309.75,
+    "series": "Tops Orch. & Choristers",
+    "title": "O Little Town Of Bethlehem; Away In A Manger; Good King Wenceslaus",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem-away-in-a-manger-good-king-wenceslaus_tops-orch-choriste_gbia0547808b"
+   },
+   {
+    "src": "https://archive.org/download/78_little-town-of-bethlehem-it-came-upon-a-midnight-clear_st-patricks-boys-choir_gbia0475739b/Little%20Town%20of%20Bethlehem%3B%20It%20Ca%20-%20St.%20Patrick%27s%20Boys%20Choir.mp3",
+    "length": 240.76,
+    "series": "St. Patrick's Boys Choir",
+    "title": "Little Town of Bethlehem; It Came Upon A Midnight Clear",
+    "item": "https://archive.org/details/78_little-town-of-bethlehem-it-came-upon-a-midnight-clear_st-patricks-boys-choir_gbia0475739b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-skaters-waltz_continental-musette-orchestra-waldteufel_gbia0009739b/The%20Skaters%20Waltz%20-%20Continental%20Musette%20Orchestra.mp3",
+    "length": 172,
+    "series": "Continental Musette Orchestra",
+    "title": "The Skaters Waltz",
+    "date": "1948",
+    "item": "https://archive.org/details/78_the-skaters-waltz_continental-musette-orchestra-waldteufel_gbia0009739b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LUSTERCREAM.mp3",
+    "length": 50.11,
+    "series": "A word from our sponsor",
+    "title": "Lustre-Creme Shampoo",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_bjldeklang-jingle-bells_gustav-winckler-gy-holdorf-george-swenssons-ensemble-ri_gbia7033837a/Bj%C3%A6ldeklang%20%28Jingle%20Bells%29%20-%20Gustav%20Winckler.mp3",
+    "length": 171.46,
+    "series": "Gy Holdorf",
+    "title": "Bjældeklang (Jingle Bells)",
+    "item": "https://archive.org/details/78_bjldeklang-jingle-bells_gustav-winckler-gy-holdorf-george-swenssons-ensemble-ri_gbia7033837a"
+   },
+   {
+    "src": "https://archive.org/download/78_oh-little-town-of-bethlehem-god-rest-ye-merry-gentleman_the-varsity-caroleers_gbia0366748b/OH%20LITTLE%20TOWN%20OF%20BETHLEHEM%3B%20GOD%20R%20-%20The%20VARSITY%20CAROLEERS.mp3",
+    "length": 184.5,
+    "series": "The VARSITY CAROLEERS",
+    "title": "Oh Little Town Of Bethlehem; God Rest Ye Merry Gentleman",
+    "item": "https://archive.org/details/78_oh-little-town-of-bethlehem-god-rest-ye-merry-gentleman_the-varsity-caroleers_gbia0366748b"
+   },
+   {
+    "src": "https://archive.org/download/78_bog-sie-rodzi_e-boleslawski-polish-army-choir_gbia0060909a/Bog%20Sie%20Rodzi%20-%20E.%20Boleslawski%20-%20Polish%20Army%20Choir.mp3",
+    "length": 194.34,
+    "series": "E. Boleslawski",
+    "title": "Bog Sie Rodzi",
+    "item": "https://archive.org/details/78_bog-sie-rodzi_e-boleslawski-polish-army-choir_gbia0060909a"
+   },
+   {
+    "src": "https://archive.org/download/78_merry-christmas_ken-griffin-eric-gawehn_gbia0025055a/Merry%20Christmas%20-%20Ken%20Griffin%20-%20Eric%20Gawehn.mp3",
+    "length": 165,
+    "series": "Ken Griffin",
+    "title": "Merry Christmas",
+    "item": "https://archive.org/details/78_merry-christmas_ken-griffin-eric-gawehn_gbia0025055a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/POLMOLIVESOAP.mp3",
+    "length": 60.33,
+    "series": "A word from our sponsor",
+    "title": "Palmolive Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_kris-kringle_frank-gallagher-dana-serenaders-and-orch-albert-gamse_gbia0200692a/KRIS%20KRINGLE%20-%20FRANK%20GALLAGHER%20-%20DANA%20SERENADERS%20and%20Orch..mp3",
+    "length": 150.86,
+    "series": "Frank Gallagher",
+    "title": "Kris Kringle",
+    "date": "1948",
+    "item": "https://archive.org/details/78_kris-kringle_frank-gallagher-dana-serenaders-and-orch-albert-gamse_gbia0200692a"
+   },
+   {
+    "src": "https://archive.org/download/78_o-little-town-of-bethlehem_ken-griffin-brooks-redner_gbia0048606a/O%20Little%20Town%20of%20Bethlehem%20-%20Ken%20Griffin.mp3",
+    "length": 180.66,
+    "series": "Ken Griffin",
+    "title": "O Little Town of Bethlehem",
+    "date": "1950",
+    "item": "https://archive.org/details/78_o-little-town-of-bethlehem_ken-griffin-brooks-redner_gbia0048606a"
+   },
+   {
+    "src": "https://archive.org/download/78_little-town-of-bethlehem_elmer-ihrke_gbia0059641b/Little%20Town%20of%20Bethlehem%20-%20Elmer%20Ihrke.mp3",
+    "length": 159.67,
+    "series": "Elmer Ihrke",
+    "title": "Little Town of Bethlehem",
+    "item": "https://archive.org/details/78_little-town-of-bethlehem_elmer-ihrke_gbia0059641b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_paul-peery-gruber_gbia0310859a/SILENT%20NIGHT%20-%20PAUL%20PEERY%20-%20Gruber.mp3",
+    "length": 150.26,
+    "series": "Paul Peery",
+    "title": "Silent Night",
+    "item": "https://archive.org/details/78_silent-night_paul-peery-gruber_gbia0310859a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWildRootCreamOil.mp3",
+    "length": 42.5,
+    "series": "A word from our sponsor",
+    "title": "Wildroot Cream-Oil",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_little-fir-tree_anne-lloyd-mike-stewart-the-sandpipers-barnes-cornelius-mitchell-mi_gbia0534607a/LITTLE%20FIR%20TREE%20-%20ANNE%20LLOYD%20-%20MIKE%20STEWART.mp3",
+    "length": 101,
+    "series": "Anne Lloyd",
+    "title": "Little Fir Tree",
+    "item": "https://archive.org/details/78_little-fir-tree_anne-lloyd-mike-stewart-the-sandpipers-barnes-cornelius-mitchell-mi_gbia0534607a"
+   },
+   {
+    "src": "https://archive.org/download/78_running-bear-oh-carol-go-jimmy-go_bobby-krane-orch.--chorus_gbia0000835a/Running%20Bear%20Oh%2C%20Carol%20Go%2C%20Jimmy%2C%20Go%20-%20Bobby%20Krane%20Orch.%20%26%20Chorus-restored.mp3",
+    "length": 377,
+    "series": "Bobby Krane Orch. & Chorus",
+    "title": "Running Bear; Oh, Carol; Go, Jimmy, Go",
+    "date": "1959",
+    "item": "https://archive.org/details/78_running-bear-oh-carol-go-jimmy-go_bobby-krane-orch.--chorus_gbia0000835a"
+   },
+   {
+    "src": "https://archive.org/download/78_min-barndoms-jul_gsta-snoddas-nordgren-william-linds-orkester-k-e-filip-olsson_gbia7015588a/MIN%20BARNDOMS%20JUL%20-%20G%C3%96STA%20%22SNODDAS%22%20NORDGREN.mp3",
+    "length": 184.15,
+    "series": "Gösta \"Snoddas\" Nordgren",
+    "title": "Min Barndoms Jul",
+    "date": "1952",
+    "item": "https://archive.org/details/78_min-barndoms-jul_gsta-snoddas-nordgren-william-linds-orkester-k-e-filip-olsson_gbia7015588a"
+   },
+   {
+    "src": "https://archive.org/download/78_hark-the-herald-angels-sing_glenn-davis-mendelssohn_gbia0378102b/HARK%21%20THE%20HERALD%20ANGELS%20SING%20-%20GLENN%20DAVIS.mp3",
+    "length": 187.96,
+    "series": "Glenn Davis",
+    "title": "Hark! The Herald Angels Sing",
+    "item": "https://archive.org/details/78_hark-the-herald-angels-sing_glenn-davis-mendelssohn_gbia0378102b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/ROITANCIGARS.mp3",
+    "length": 15.56,
+    "series": "A word from our sponsor",
+    "title": "Roi-Tan Cigars",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_shepherds-shake-off-your-sleep-i-saw-three-ships-come-sailing-in-the-wassail-son_gbia0387165b/SHEPHERDS%21%20SHAKE%20OFF%20YOUR%20SLEEP%3B%20%20-%20THE%20SAINTSBURY%20SINGERS.mp3",
+    "length": 176.74,
+    "series": "The Saintsbury Singers",
+    "title": "Shepherds! Shake Off Your Sleep; I Saw Three Ships Come Sailing In; The Wassail Song",
+    "item": "https://archive.org/details/78_shepherds-shake-off-your-sleep-i-saw-three-ships-come-sailing-in-the-wassail-son_gbia0387165b"
+   },
+   {
+    "src": "https://archive.org/download/78_winter-wonderland_fran-mckenna-the-mulcays-jimmy-and-mildred-dick-smith-felix-b_gbia0405697a/WINTER%20WONDERLAND%20-%20FRAN%20McKENNA%20-%20%22THE%20MULCAYS%22%20%28Jimmy%20and%20Mildred%29.mp3",
+    "length": 142.33,
+    "series": "FRAN McKENNA",
+    "title": "Winter Wonderland",
+    "date": "1952",
+    "item": "https://archive.org/details/78_winter-wonderland_fran-mckenna-the-mulcays-jimmy-and-mildred-dick-smith-felix-b_gbia0405697a"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_cedric-wallace-orch-jimmy-holmes-irving-berlin_gbia0415769b/WHITE%20CHRISTMAS%20-%20CEDRIC%20WALLACE%20ORCH.%20-%20JIMMY%20HOLMES.mp3",
+    "length": 192.89,
+    "series": "Cedric Wallace Orch.",
+    "title": "White Christmas",
+    "date": "1951",
+    "item": "https://archive.org/details/78_white-christmas_cedric-wallace-orch-jimmy-holmes-irving-berlin_gbia0415769b"
+   },
+   {
+    "src": "https://archive.org/download/78_i-want-a-hippopotamus-for-christmas_toby-deane-enoch-light-and-his-orchestra-john-r_gbia0476360a/I%20WANT%20A%20HIPPOPOTAMUS%20FOR%20CHRISTMAS%20-%20TOBY%20DEANE.mp3",
+    "length": 163.87,
+    "series": "Toby Deane",
+    "title": "I Want a Hippopotamus for Christmas",
+    "date": "1953",
+    "item": "https://archive.org/details/78_i-want-a-hippopotamus-for-christmas_toby-deane-enoch-light-and-his-orchestra-john-r_gbia0476360a"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/NESCAFE.MP3",
+    "length": 32.95,
+    "series": "A word from our sponsor",
+    "title": "Nescafé",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr/A2.%20Magic%20Little%20Music%20Box.mp3",
+    "length": 167.65,
+    "series": "The U.S. Air Force Band and Singing Sergeants",
+    "title": "Magic Little Music Box",
+    "date": "1967",
+    "item": "https://archive.org/details/united-states-air-force-band-singing-sergeants-the-united-states-air-force-pr"
+   },
+   {
+    "src": "https://archive.org/download/78_3326-Santa-Maria/3326-Santa-Maria.mp3",
+    "length": 151.12,
+    "series": "Valdemar Davids",
+    "title": "Santa Maria",
+    "date": "1949",
+    "item": "https://archive.org/details/78_3326-Santa-Maria"
+   },
+   {
+    "src": "https://archive.org/download/78_bethlehem-song-santas-sleigh_steve-race_gbia3012692a/Bethlehem%20Song%3B%20Santa%27s%20Sleigh%20-%20STEVE%20RACE.mp3",
+    "length": 199,
+    "series": "Steve Race",
+    "title": "Bethlehem Song; Santa's Sleigh",
+    "item": "https://archive.org/details/78_bethlehem-song-santas-sleigh_steve-race_gbia3012692a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-issue_milwaukee-gas-light-company-quartet_gbia0006828/01%20-%20Traditional%20Christmas%20Carols%20-%20Milwaukee%20Gas%20Light%20Company%20Quartet-restored.mp3",
+    "length": 195.02,
+    "series": "Milwaukee Gas Light Company Quartet",
+    "title": "Christmas Issue",
+    "date": "1957",
+    "item": "https://archive.org/details/78_christmas-issue_milwaukee-gas-light-company-quartet_gbia0006828"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/LIFEBOUYHEALTHSOAP1948.mp3",
+    "length": 49.41,
+    "series": "A word from our sponsor",
+    "title": "Lifebuoy Health Soap",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0118610b/GUITAR%20JINGLE%20BELLS%20-%20Arthur%20%22Guitar%20Boogie%22%20Smith%27s%20Sensational%20Trio%20%28Formerly%20Rambler%20Trio%29.mp3",
+    "length": 172,
+    "series": "Arthur \"Guitar Boogie\" Smith's Sensational Trio",
+    "title": "Guitar Jingle Bells",
+    "date": "1947",
+    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0118610b"
+   },
+   {
+    "src": "https://archive.org/download/78_wishy-washy-wish_dickie-beals-the-sandpipers-mitch-miller_gbia0534579b/WISHY%20WASHY%20WISH%20-%20DICKIE%20BEALS%20-%20THE%20SANDPIPERS.mp3",
+    "length": 98.63,
+    "series": "Dickie Beals",
+    "title": "Wishy Washy Wish",
+    "item": "https://archive.org/details/78_wishy-washy-wish_dickie-beals-the-sandpipers-mitch-miller_gbia0534579b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-first-nowell_the-trinity-singers_gbia3015671b/THE%20FIRST%20NOWELL%20-%20THE%20TRINITY%20SINGERS.mp3",
+    "length": 181.18,
+    "series": "The Trinity Singers",
+    "title": "The First Nowell",
+    "item": "https://archive.org/details/78_the-first-nowell_the-trinity-singers_gbia3015671b"
+   },
+   {
+    "src": "https://archive.org/download/78_come-all-ye-faithful-adeste-fidelis_gbia0264352a/COME%20ALL%20YE%20FAITHFUL%20%28Adeste%20Fidelis%29.mp3",
+    "length": 192.04,
+    "series": "Unknown artist",
+    "title": "COME ALL YE FAITHFUL (Adeste Fidelis)",
+    "item": "https://archive.org/details/78_come-all-ye-faithful-adeste-fidelis_gbia0264352a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsCampbellsSoup.mp3",
+    "length": 68.87,
+    "series": "A word from our sponsor",
+    "title": "Campbell's Soup",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-questions_joe-ward-dave-terry-louie-innis_gbia0010371b/Christmas%20Questions%20-%20Joe%20Ward%20-%20Dave%20Terry.mp3",
+    "length": 134,
+    "series": "Joe Ward",
+    "title": "Christmas Questions",
+    "date": "1955",
+    "item": "https://archive.org/details/78_christmas-questions_joe-ward-dave-terry-louie-innis_gbia0010371b"
+   },
+   {
+    "src": "https://archive.org/download/78_ragtime-cowboy-from-santa-fe_dick-thomas-dick-thomas-fred-gray-johnny-fortis_gbia0381439a/RAGTIME%20COWBOY%20FROM%20SANTA%20FE%20-%20DICK%20THOMAS.mp3",
+    "length": 170.33,
+    "series": "Dick Thomas",
+    "title": "Ragtime Cowboy From Santa Fe",
+    "date": "1945",
+    "item": "https://archive.org/details/78_ragtime-cowboy-from-santa-fe_dick-thomas-dick-thomas-fred-gray-johnny-fortis_gbia0381439a"
+   },
+   {
+    "src": "https://archive.org/download/78_twas-the-night-before-christmas-part-2_merrill-laub_gbia0533484b/TWAS%20THE%20NIGHT%20BEFORE%20CHRISTMAS-Part%202%20-%20MERRILL%20LAUB.mp3",
+    "length": 104.46,
+    "series": "Merrill Laub",
+    "title": "'TWAS THE NIGHT BEFORE CHRISTMAS-Part 2",
+    "item": "https://archive.org/details/78_twas-the-night-before-christmas-part-2_merrill-laub_gbia0533484b"
+   },
+   {
+    "src": "https://archive.org/download/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-a_gbia0435638b/IT%20CAME%20UPON%20A%20MIDNIGHT%20CLEAR%3B%20AWAY%20IN%20A%20M%20-%20THE%20CAROLEERS.mp3",
+    "length": 193.39,
+    "series": "The Caroleers",
+    "title": "It Came Upon A Midnight Clear; Away In A Manger; The First Noel; Hark! The Herald Angels Sing",
+    "date": "1950",
+    "item": "https://archive.org/details/78_it-came-upon-a-midnight-clear-away-in-a-manger-the-first-noel-hark-the-herald-a_gbia0435638b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/BUBBLEUP.MP3",
+    "length": 45.51,
+    "series": "A word from our sponsor",
+    "title": "Bubble Up",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_santas-surprise_guild-platers_gbia0094042a/Santas%20Surprise%20-%20Guild%20Platers.mp3",
+    "length": 192.38,
+    "series": "Guild Players",
+    "title": "Santas Surprise",
+    "item": "https://archive.org/details/78_santas-surprise_guild-platers_gbia0094042a"
+   },
+   {
+    "src": "https://archive.org/download/78_youre-all-i-want-for-christmas-jingle-bells-silver-bells-silent-night_gbia0043220b/You%27re%20All%20I%20Want%20for%20Christmas%3B%20Jingle%20Bells%2C%20Silver%20Bells%3B%20Silent%20Night.mp3",
+    "length": 369.11,
+    "series": "Unknown artist",
+    "title": "You're All I Want for Christmas; Jingle Bells, Silver Bells; Silent Night",
+    "item": "https://archive.org/details/78_youre-all-i-want-for-christmas-jingle-bells-silver-bells-silent-night_gbia0043220b"
+   },
+   {
+    "src": "https://archive.org/download/78_swiety-mikolaj-santa-claus_regina-kujawa-dana-orchestra-gillespie-cootes_gbia3028352a/SWIETY%20MIKOLAJ%20%28Santa%20Claus%29%20-%20REGINA%20KUJAWA.mp3",
+    "length": 143.76,
+    "series": "Regina Kujawa",
+    "title": "SWIETY MIKOLAJ (Santa Claus)",
+    "item": "https://archive.org/details/78_swiety-mikolaj-santa-claus_regina-kujawa-dana-orchestra-gillespie-cootes_gbia3028352a"
+   },
+   {
+    "src": "https://archive.org/download/78_jingle-bells_dick-byron-and-the-sandpiper-chorus-mitch-miller_gbia0534262b/jingle%20bells%20-%20DICK%20BYRON%20AND%20THE%20SANDPIPER%20CHORUS.mp3",
+    "length": 96,
+    "series": "Dick Byron and the Sandpiper Chorus",
+    "title": "Jingle Bells",
+    "date": "1949",
+    "item": "https://archive.org/details/78_jingle-bells_dick-byron-and-the-sandpiper-chorus-mitch-miller_gbia0534262b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/OLGACOAL.MP3",
+    "length": 26.25,
+    "series": "A word from our sponsor",
+    "title": "Olga Coal",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_the-scottish-festivals-of-male-voice-praise-gruber-james-mcroberts_gbia3030358a/SILENT%20NIGHT%20-%20THE%20SCOTTISH%20FESTIVALS%20OF%20MALE%20VOICE%20PRAISE.mp3",
+    "length": 174,
+    "series": "The Scottish Festivals of Male Voice Praise",
+    "title": "Silent Night",
+    "date": "1954",
+    "item": "https://archive.org/details/78_silent-night_the-scottish-festivals-of-male-voice-praise-gruber-james-mcroberts_gbia3030358a"
+   },
+   {
+    "src": "https://archive.org/download/78_frosty_vido-musso-and-his-sextette-musso_gbia0391154b/FROSTY%20-%20VIDO%20MUSSO%20And%20His%20Sextette%20-%20Musso.mp3",
+    "length": 164.42,
+    "series": "VIDO MUSSO And His Sextette",
+    "title": "Frosty",
+    "date": "1954",
+    "item": "https://archive.org/details/78_frosty_vido-musso-and-his-sextette-musso_gbia0391154b"
+   },
+   {
+    "src": "https://archive.org/download/78_18-christmas-carols_the-metropolitan-caroleers-james-polack_gbia0011232b/18%20Christmas%20Carols%20-%20The%20Metropolitan%20Caroleers.mp3",
+    "length": 292,
+    "series": "The Metropolitan Caroleers",
+    "title": "18 Christmas Carols",
+    "date": "1950",
+    "item": "https://archive.org/details/78_18-christmas-carols_the-metropolitan-caroleers-james-polack_gbia0011232b"
+   },
+   {
+    "src": "https://archive.org/download/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0290929b/GUITAR%20JINGLE%20BELLS%20-%20ARTHUR%20%22Guitar%20Boogie%22%20SMITH%27S%20SENSATIONAL%20TRIO%20%28Formerly%20Rambler%20Trio%29.mp3",
+    "length": 174.34,
+    "series": "ARTHUR \"Guitar Boogie\" SMITH'S SENSATIONAL TRIO (Formerly Rambler Trio)",
+    "title": "Guitar Jingle Bells",
+    "date": "1947",
+    "item": "https://archive.org/details/78_guitar-jingle-bells_arthur-guitar-boogie-smiths-sensational-trio-formerly-rambl_gbia0290929b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDoublemintGum.mp3",
+    "length": 17.98,
+    "series": "A word from our sponsor",
+    "title": "Doublemint Gum",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_good-king-wenceslas_harmonia-symphonic-orchestra_gbia0394712b/GOOD%20KING%20WENCESLAS%20-%20Harmonia%20Symphonic%20Orchestra.mp3",
+    "length": 144.53,
+    "series": "Harmonia Symphonic Orchestra",
+    "title": "Good King Wenceslas",
+    "date": "1948",
+    "item": "https://archive.org/details/78_good-king-wenceslas_harmonia-symphonic-orchestra_gbia0394712b"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_sonora-choristers-eugene-mott_gbia0001237a/Silent%20Night%20-%20Sonora%20Choristers%20-%20Eugene%20Mott.mp3",
+    "length": 202,
+    "series": "Sonora Choristers",
+    "title": "Silent Night",
+    "date": "1945",
+    "item": "https://archive.org/details/78_silent-night_sonora-choristers-eugene-mott_gbia0001237a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-time-is-the-best-time-of-the-year_men-of-texas-adams-ward-j-t-adams_gbia0473674a/CHRISTMAS%20TIME%20IS%20THE%20BEST%20TIME%20OF%20THE%20YEAR%20-%20Men%20of%20Texas.mp3",
+    "length": 232.56,
+    "series": "Men of Texas",
+    "title": "Christmas Time is the Best Time of the Year",
+    "date": "1952",
+    "item": "https://archive.org/details/78_christmas-time-is-the-best-time-of-the-year_men-of-texas-adams-ward-j-t-adams_gbia0473674a"
+   },
+   {
+    "src": "https://archive.org/download/78_christmas-morning_angelic-gospel-singers-rev-r-moore_gbia0425735b/CHRISTMAS%20MORNING%20-%20ANGELIC%20GOSPEL%20SINGERS.mp3",
+    "length": 179.93,
+    "series": "Angelic Gospel Singers",
+    "title": "Christmas Morning",
+    "item": "https://archive.org/details/78_christmas-morning_angelic-gospel-singers-rev-r-moore_gbia0425735b"
+   },
+   {
+    "src": "https://archive.org/download/RadioCommercialsShows/COLEMAN.MP3",
+    "length": 41.38,
+    "series": "A word from our sponsor",
+    "title": "Coleman",
+    "item": "https://archive.org/details/RadioCommercialsShows",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_by-the-brook-vania-the-little-town-lullaby_country-grammar-school-in-sw-m-d-calvoco_gbia0552308b/BY%20THE%20BROOK%3B%20VANIA%3B%20THE%20%20-%20COUNTRY%20GRAMMAR%20SCHOOL%20IN%20S.W.mp3",
+    "length": 274,
+    "series": "Country Grammar School in S.w.",
+    "title": "By the Brook; Vania; the Little Town; Lullaby",
+    "date": "1947",
+    "item": "https://archive.org/details/78_by-the-brook-vania-the-little-town-lullaby_country-grammar-school-in-sw-m-d-calvoco_gbia0552308b"
+   },
+   {
+    "src": "https://archive.org/download/78_glade-jul-dejlige-jul_strygeorkester-og-orgel-operasanger-w-loudrup-jensen-ingema_gbia7011065a/Glade%20Jul%2C%20dejlige%20Jul%20-%20Strygeorkester%20og%20Orgel.mp3",
+    "length": 188.97,
+    "series": "Strygeorkester og Orgel",
+    "title": "Glade Jul, dejlige Jul",
+    "item": "https://archive.org/details/78_glade-jul-dejlige-jul_strygeorkester-og-orgel-operasanger-w-loudrup-jensen-ingema_gbia7011065a"
+   },
+   {
+    "src": "https://archive.org/download/78_first-noel-joy-to-the-world_lita-darwin-rex-chorus_gbia0184597b/First%20Noel%3B%20Joy%20To%20The%20World%20-%20Lita%20Darwin.mp3",
+    "length": 193.35,
+    "series": "Lita Darwin",
+    "title": "First Noel; Joy To The World",
+    "item": "https://archive.org/details/78_first-noel-joy-to-the-world_lita-darwin-rex-chorus_gbia0184597b"
+   },
+   {
+    "src": "https://archive.org/download/78_libbey-owens-ford-glass-company_gbia0457279b/LIBBEY-OWENS-FORD%20GLASS%20COMPANY.mp3",
+    "length": 229.7,
+    "series": "Lionel Barrymore",
+    "title": "A Very Special Christmas Message From Libbey - Owens - Ford Glass Company",
+    "date": "1951",
+    "item": "https://archive.org/details/78_libbey-owens-ford-glass-company_gbia0457279b"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsWhiteKingSoap.mp3",
+    "length": 81.37,
+    "series": "A word from our sponsor",
+    "title": "White King Soap",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_four-little-orphans-on-christmas-eve-meet_bernie-knee-the-hi-liters-ernest-bey_gbia0475116b/FOUR%20LITTLE%20ORPHANS%20%28On%20Christmas%20Eve%20Meet%29%20-%20BERNIE%20KNEE.mp3",
+    "length": 176.33,
+    "series": "Bernie Knee",
+    "title": "Four Little Orphans (On Christmas Eve Meet)",
+    "item": "https://archive.org/details/78_four-little-orphans-on-christmas-eve-meet_bernie-knee-the-hi-liters-ernest-bey_gbia0475116b"
+   },
+   {
+    "src": "https://archive.org/download/78_white-christmas_the-billy-mayo-quintet-irving-berlin_gbia0431808b/WHITE%20CHRISTMAS%20-%20THE%20BILLY%20MAYO%20QUINTET.mp3",
+    "length": 175.41,
+    "series": "The Billy Mayo Quintet",
+    "title": "White Christmas",
+    "date": "1947",
+    "item": "https://archive.org/details/78_white-christmas_the-billy-mayo-quintet-irving-berlin_gbia0431808b"
+   },
+   {
+    "src": "https://archive.org/download/78_the-night-before-christmas-part-i_peter-donald-mitch-miller-and-orchestra_gbia0534261a/THE%20NIGHT%20BEFORE%20CHRISTMAS%20-%20PART%20I%20-%20PETER%20DONALD.mp3",
+    "length": 110.85,
+    "series": "Peter Donald",
+    "title": "The Night Before Christmas - Part I",
+    "date": "1949",
+    "item": "https://archive.org/details/78_the-night-before-christmas-part-i_peter-donald-mitch-miller-and-orchestra_gbia0534261a"
+   },
+   {
+    "src": "https://archive.org/download/78_silent-night_godfrey-malcolm-fredrico_gbia0219430a/SILENT%20NIGHT%20-%20Godfrey%20Malcolm%20-%20Fredrico.mp3",
+    "length": 177.54,
+    "series": "Godfrey Malcolm",
+    "title": "Silent Night",
+    "item": "https://archive.org/details/78_silent-night_godfrey-malcolm-fredrico_gbia0219430a"
+   },
+   {
+    "src": "https://archive.org/download/VintageRadioCommercials/VintageCommercialsDodge.mp3",
+    "length": 62.27,
+    "series": "A word from our sponsor",
+    "title": "Dodge",
+    "item": "https://archive.org/details/VintageRadioCommercials",
+    "ad": true
+   },
+   {
+    "src": "https://archive.org/download/78_naar-sol-gaar-ned-i-santa-rosa_sid-merrimans-danseorkester-helge-leonhard-poul-wern_gbia7031085b/Naar%20Sol%20gaar%20ned%20i%20Santa%20Rosa%20-%20Sid%20Merrimans%20Danseorkester.mp3",
+    "length": 184.12,
+    "series": "Sid Merrimans Danseorkester",
+    "title": "Naar Sol gaar ned i Santa Rosa",
+    "item": "https://archive.org/details/78_naar-sol-gaar-ned-i-santa-rosa_sid-merrimans-danseorkester-helge-leonhard-poul-wern_gbia7031085b"
+   },
+   {
+    "src": "https://archive.org/download/78_five-christmas-songs_tempos-carolaires_gbia0119025b/FIVE%20CHRISTMAS%20SONGS%20-%20Tempo%27s%20Carolaires.mp3",
+    "length": 149,
+    "series": "Tempo's Carolaires",
+    "title": "Five Christmas Songs",
+    "date": "1949",
+    "item": "https://archive.org/details/78_five-christmas-songs_tempos-carolaires_gbia0119025b"
    }
   ],
   "season": {
