@@ -911,6 +911,13 @@
             el.addEventListener("pointerup", e => { if (e.pointerType !== "mouse") setTimeout(off, L.hoverMs || 1200); });
           }
         }
+      } else if (type === "play") {
+        // the big Play / Pause button on the now-playing card
+        el.classList.add("hot");
+        const b = el.appendChild(document.createElement("button")); b.type = "button"; b.className = "bk-play" + (L.label ? " pill" : "");
+        b.innerHTML = '<span class="ic" aria-hidden="true"></span>' + (L.label ? '<span class="lb"></span>' : "");
+        b.addEventListener("click", e => { e.stopPropagation(); if (!state.editing) power(); });
+        rec.play = b;
       } else if (type === "menu") {
         // the site menu (art/nav/nav.js): a row of grouped links on computers, a Menu button on phones
         el.classList.add("hot");
@@ -1437,6 +1444,48 @@
   }
   window.addEventListener("popstate", () => { if (location.hash === "#about") openAbout(false); else closeAbout(true); });
   if (location.hash === "#about") setTimeout(() => openAbout(false), 0);
+
+  /* ---------- the welcome card: first visit only ----------
+     Says what the place is, starts the radio with one tap, and points to the other rooms. */
+  function openWelcome() {
+    const box = document.createElement("div"); box.id = "welcome-ov"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.setAttribute("aria-labelledby", "wl-h");
+    const tile = (k, img, title, line) => `<button type="button" class="wl-tile" data-go="${k}"><img src="${img}" alt="" loading="lazy"><span><b>${title}</b><i>${line}</i></span></button>`;
+    box.innerHTML = '<div class="wl-card"><button type="button" class="ab-close wl-x">Close</button>' +
+      '<h1 id="wl-h">Welcome to The Bee\u2019s Knees</h1>' +
+      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and 78 records play around the clock on fourteen stations, with TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
+      '<button type="button" class="wl-start"><span class="ic" aria-hidden="true"></span>Start the radio</button>' +
+      '<div class="wl-tiles">' +
+        tile("listen", "art/cards/chills.webp", "Listen", "14 stations of shows and music") +
+        tile("watch", "art/screen/tv-set.webp", "Watch", "Vintage TV and drive-in movies") +
+        tile("read", "art/rack/covers/Life_1947_11NOV_10.webp", "Read", "Comics, magazines and old ads") +
+        tile("play", "art/postcards/pc-c1910-tea-with-grannie.t.jpg", "Play", "A daily puzzle and postcards to send") +
+      '</div>' +
+      '<p class="wl-foot"><button type="button" class="wl-later">Or look around first</button> \u00b7 <a href="about.html" class="wl-about">Read the whole story</a></p></div>';
+    document.body.appendChild(box); overlayOpen(true);
+    const done = () => { store.set("welcomed", 1); box.remove(); overlayOpen(false); };
+    box.querySelector(".wl-start").addEventListener("click", () => { done(); if (!state.on) power(true); });
+    box.querySelector(".wl-later").addEventListener("click", done);
+    box.querySelector(".wl-x").addEventListener("click", done);
+    box.addEventListener("click", e => { if (e.target === box) done(); });
+    document.addEventListener("keydown", function esc(e) { if (e.key === "Escape" && box.isConnected) { done(); document.removeEventListener("keydown", esc); } });
+    box.querySelector(".wl-about").addEventListener("click", e => { e.preventDefault(); done(); openAbout(); });
+    box.querySelectorAll(".wl-tile").forEach(t => t.addEventListener("click", () => {
+      const k = t.dataset.go; done();
+      if (k === "listen") { if (!state.on) power(true); }
+      else if (k === "watch") location.href = "tv.html";
+      else if (k === "read") openRack("comics");
+      else if (k === "play") openRack("puzzles");
+    }));
+    box.querySelector(".wl-start").focus();
+  }
+  {
+    // read the address now (the radio may change it), decide a moment later once the page is set up
+    const h = location.hash.slice(1), q = location.search;
+    setTimeout(() => {
+      const skip = /[?&](embed|obs|nowelcome)=?/.test(q) || h === "about" || isRack(h) || window.self !== window.top;
+      if (!store.get("welcomed", 0) && !skip) openWelcome();
+    }, 400);
+  }
 
   /* ---------- the comic and magazine racks, opened over the radio ----------
      The rack page itself runs in a frame (comics.html?embed=1), so collections and the reader work just as on the page,
@@ -2011,6 +2060,14 @@
         const v = L.bind === "volume" ? state.vol : state.dial;
         const spin = rec.ok ? rec.img : (rec.look ? rec.look.firstElementChild || rec.look : rec.img || el);
         if (spin) spin.style.transform = `rotate(${a + (b - a) * v}deg)`;
+      } else if (type === "play") {
+        const on = !!state.on;
+        if (rec.play.dataset.on !== String(on)) {
+          rec.play.dataset.on = String(on);
+          rec.play.classList.toggle("on", on);
+          rec.play.setAttribute("aria-label", on ? "Pause the radio" : "Play the radio");
+          const lb = rec.play.querySelector(".lb"); if (lb) lb.textContent = on ? "Pause" : "Play";
+        }
       } else if (type === "guide") {
         renderGuide(rec);
       } else if (type === "ad") {
@@ -2335,7 +2392,7 @@
       autoArmed = false;
       ["pointerdown", "keydown", "touchend"].forEach(ev => document.removeEventListener(ev, go, true));
       if (state.on || state.editing) return;
-      if (e && e.target && e.target.closest && e.target.closest("a[href], .bkc, .bkc-btn, .bkc-peek")) {   // a link or the chat: let it do its own thing
+      if (e && e.target && e.target.closest && e.target.closest("a[href], .bkc, .bkc-btn, .bkc-peek, #welcome-ov")) {   // a link or the chat: let it do its own thing
         autoArmed = true; ["pointerdown", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true)); return;
       }
       power(true);
