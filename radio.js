@@ -1210,7 +1210,10 @@
     }
     let group = null;
     STATIONS.forEach(st => {
-      if (st.group && st.group !== group) { group = st.group; h += `<div class="g-group">${esc(group)}</div>`; }
+      if (st.group && st.group !== group) {
+        const first = group === null; group = st.group;
+        h += `<div class="g-group"><span>${esc(group)}</span>` + (first ? `<span class="g-note">Everything plays from the Internet Archive (archive.org); nothing is hosted here. <a href="about.html#rights" class="g-rights">Rights holders: request a takedown</a></span>` : "") + `</div>`;
+      }
       const sel = state.station === st;
       const n = presence.live ? (presence.counts[st.id] || 0) : 0;
       const cnt = "";   // per-station counts are off; the total sits in the masthead
@@ -1444,6 +1447,12 @@
   }
   window.addEventListener("popstate", () => { if (location.hash === "#about") openAbout(false); else closeAbout(true); });
   if (location.hash === "#about") setTimeout(() => openAbout(false), 0);
+  // "Rights holders" link under the station guide: open the About pop-up at the takedown section
+  document.addEventListener("click", e => {
+    const a = e.target.closest && e.target.closest("a.g-rights"); if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    e.preventDefault(); e.stopPropagation(); openAbout();
+    let tries = 0; const go = () => { const r = document.querySelector("#about-ov #rights"); if (r) r.scrollIntoView({ block: "start" }); else if (tries++ < 40) setTimeout(go, 50); }; setTimeout(go, 30);
+  }, true);
 
   /* ---------- the welcome card: first visit only ----------
      Says what the place is, starts the radio with one tap, and points to the other rooms. */
