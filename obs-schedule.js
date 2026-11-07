@@ -5,14 +5,14 @@
    Times are Pacific, 24-hour ("19:30" is 7:30 PM). Days: sun mon tue wed thu fri sat.
    dates (optional): a single day "12-24", or a range { from: "12-01", to: "12-26" } (month-day).
    A block with dates wins over the everyday weekly blocks, so holidays take over for their days.
-   play: "radio chills", "radio jazzage", "radio laughs" ...   "tv kids", "tv christmas" ...   "drive-in"
+   play: "radio chills", "radio gramophone", "radio laughs" ...   "tv kids", "tv christmas" ...   "drive-in"
    title: what shows on screen when the block begins.
    To change it, edit the lines below (keep the commas and quote marks), save, and refresh the source in OBS. */
 window.STREAM_SCHEDULE = {
   // what plays when no block is on (the first line that fits today wins)
   otherwise: [
     { dates: { from: "11-26", to: "01-06" }, play: "tv christmas", title: "Christmas on The Bee's Knees" },
-    { play: "radio jazzage", title: "The Bee's Knees, live" }
+    { play: "radio gramophone", title: "The Bee's Knees, live" }
   ],
 
   blocks: [
@@ -27,8 +27,8 @@ window.STREAM_SCHEDULE = {
     { dates: "12-24", from: "19:30", to: "23:59", play: "drive-in",        title: "Christmas Eve at the Drive-In: March of the Wooden Soldiers and A Christmas Carol" },
     // Christmas Day: Christmas TV in the morning
     { dates: "12-25", from: "07:00", to: "12:00", play: "tv christmas",    title: "Christmas Morning" },
-    // New Year's Eve: Jazz Age dance records to midnight
-    { dates: "12-31", from: "20:00", to: "23:59", play: "radio jazzage",   title: "New Year's Eve Dance Party" },
+    // New Year's Eve: Gramophone Radio dance records to midnight
+    { dates: "12-31", from: "20:00", to: "23:59", play: "radio gramophone",   title: "New Year's Eve Dance Party" },
 
     /* ---------- every week ---------- */
     { days: ["mon"], from: "19:00", to: "19:30", play: "radio chills",  title: "Monster Monday" },

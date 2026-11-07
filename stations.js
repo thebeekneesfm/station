@@ -3581,11 +3581,11 @@ window.STATIONS = [
   ]
  },
  {
-  "id": "jazzage",
-  "name": "Jazz Age",
+  "id": "gramophone",
+  "name": "Gramophone Radio",
   "group": "Music",
   "music": true,
-  "blurb": "Dance bands, early jazz, blues and parlor songs on records made in 1925 and earlier, old enough to be in the public domain.",
+  "blurb": "Dance bands, early jazz and blues on 78s from 1925 and earlier.",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,

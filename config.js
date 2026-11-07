@@ -22,7 +22,7 @@ window.RADIO_CONFIG = {
   ],
   /* Sponsor-tier members: which station each one sponsors this month.
      Use the station's id (chills, noir, scifi, romance, outwest, laughs, variety,
-     jazzage) and the name to show.
+     gramophone) and the name to show.
      Example:  "chills": "Margaret",  */
   "sponsors": {
   },

@@ -1535,7 +1535,7 @@
     const tile = (k, img, title, line) => `<button type="button" class="wl-tile" data-go="${k}"><img src="${img}" alt="" loading="lazy"><span><b>${title}</b><i>${line}</i></span></button>`;
     box.innerHTML = '<div class="wl-card"><button type="button" class="ab-close wl-x">Close</button>' +
       '<h1 id="wl-h">Welcome to The Bee\u2019s Knees</h1>' +
-      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and Jazz Age 78s play around the clock on eight stations, with a record shelf, TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
+      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and old 78 records play around the clock on eight stations, with a record shelf, TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
       '<button type="button" class="wl-start"><span class="ic" aria-hidden="true"></span>Start the radio</button>' +
       '<div class="wl-tiles">' +
         tile("listen", "art/cards/chills.webp", "Listen", "8 stations and a record shelf") +
