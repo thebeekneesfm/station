@@ -256,6 +256,24 @@
     else if (el.requestFullscreen) el.requestFullscreen().catch(function () {});
     else if (vid.webkitEnterFullscreen) vid.webkitEnterFullscreen();
   });
+  /* Picture in picture: the TV shrinks to a small window that floats over other apps, so the picture and
+     sound keep going when you leave the browser (phones otherwise stop video the moment you switch away).
+     Safari also does this by itself when you leave while a programme is playing. */
+  function inPip() { return document.pictureInPictureElement === vid || vid.webkitPresentationMode === "picture-in-picture"; }
+  try { vid.setAttribute("autopictureinpicture", ""); vid.autoPictureInPicture = true; } catch (e) {}
+  var pipOK = !!(document.pictureInPictureEnabled || (vid.webkitSupportsPresentationMode && vid.webkitSupportsPresentationMode("picture-in-picture")));
+  var ctrl = $(".scr-ctrl");
+  if (pipOK && ctrl) {
+    var pipBtn = document.createElement("button"); pipBtn.type = "button"; pipBtn.className = "scr-pip"; pipBtn.textContent = "Keep watching in a small window";
+    pipBtn.title = "The TV keeps playing in a little window, even when you switch apps";
+    ctrl.appendChild(pipBtn);
+    pipBtn.addEventListener("click", function () {
+      if (!state.sound) { state.sound = true; store.set(MODE + ".sound", true); applySound(); }
+      if (inPip()) { if (document.exitPictureInPicture) document.exitPictureInPicture().catch(function () {}); else vid.webkitSetPresentationMode("inline"); return; }
+      var go2 = function () { if (vid.requestPictureInPicture) vid.requestPictureInPicture().catch(function () {}); else if (vid.webkitSetPresentationMode) vid.webkitSetPresentationMode("picture-in-picture"); };
+      if (vid.paused) { var p = vid.play(); if (p && p.then) p.then(go2, go2); else go2(); } else go2();
+    });
+  }
   // browsers only allow sound after a tap; until then the picture plays silently
   applySound();
 
@@ -287,7 +305,7 @@
   }
   // iPhone full screen is Apple's own player and only follows one video element, so while it is
   // up the next item loads into that same element instead of swapping players
-  function inNativeFull() { return !!(vid.webkitDisplayingFullscreen); }
+  function inNativeFull() { return !!(vid.webkitDisplayingFullscreen) || inPip(); }   // (the floating picture-in-picture window, too)
   [vid, pre].forEach(function (v) {
     v.addEventListener("webkitendfullscreen", function () { setTimeout(function () { tick(true); go(); }, 300); });
   });
@@ -604,7 +622,7 @@
     var n = where(); if (!n) return;
     radioUnder(n);
     var key = (n.item.src || n.item.slate) + "@" + (n.item.start != null ? n.item.start : n.item.startMs);
-    var wantEar = document.hidden && state.sound && !state.bedOn && !!ear && !!ear.dataset.unlocked;
+    var wantEar = document.hidden && state.sound && !state.bedOn && !!ear && !!ear.dataset.unlocked && !inPip();   // the floating window keeps its own picture and sound
     if (wantEar !== !!state.earOn) { state.earOn = wantEar; if (wantEar) { vid.pause(); } else if (ear) { ear.pause(); } applySound(); }
     if (state.earOn) { earPlay(n); }
     else if (n.item.slate) { if (force || key !== lastKey || n.item.slate === "intermission") showSlate(n.item, n); }
