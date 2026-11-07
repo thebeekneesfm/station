@@ -140,6 +140,132 @@ window.DRIVEIN = {
      "src": "https://archive.org/download/TheCorpseVanishes/TheCorpseVanishes_512kb.mp4",
      "length": 3789.65,
      "item": "https://archive.org/details/TheCorpseVanishes"
+    },
+    {
+     "title": "The Most Dangerous Game",
+     "year": 1932,
+     "src": "https://archive.org/download/TheMostDangerousGame/TheMostDangerousGame.mp4",
+     "length": 3753.87,
+     "item": "https://archive.org/details/TheMostDangerousGame"
+    },
+    {
+     "title": "The Vampire Bat",
+     "year": 1933,
+     "src": "https://archive.org/download/TheVampireBat/TheVampireBat.mp4",
+     "length": 3582.3,
+     "item": "https://archive.org/details/TheVampireBat"
+    },
+    {
+     "title": "Silent Night, Bloody Night",
+     "year": 1972,
+     "src": "https://archive.org/download/SilentNightBloodyNight1972/SilentNightWSUncut.mp4",
+     "length": 5103.11,
+     "item": "https://archive.org/details/SilentNightBloodyNight1972"
+    },
+    {
+     "title": "Scared to Death",
+     "year": 1947,
+     "src": "https://archive.org/download/Scared_to_Death/Scared_to_Death.mp4",
+     "length": 4036,
+     "item": "https://archive.org/details/Scared_to_Death"
+    },
+    {
+     "title": "Werewolf of Washington",
+     "year": 1973,
+     "src": "https://archive.org/download/werewolf_washington/werewolf_of_washington_512kb.mp4",
+     "length": 5351.21,
+     "item": "https://archive.org/details/werewolf_washington"
+    },
+    {
+     "title": "Daughter of Horror",
+     "year": 1955,
+     "src": "https://archive.org/download/daughter_of_horror/daughter_of_horror.mp4",
+     "length": 3282.86,
+     "item": "https://archive.org/details/daughter_of_horror"
+    },
+    {
+     "title": "Invisible Ghost",
+     "year": 1941,
+     "src": "https://archive.org/download/TheInvisibleGhost/TheInvisibleGhost.mp4",
+     "length": 3770.59,
+     "item": "https://archive.org/details/TheInvisibleGhost"
+    },
+    {
+     "title": "Bloodlust!",
+     "year": 1961,
+     "src": "https://archive.org/download/Bloodlust.mpeg/Bloodlust.mp4",
+     "length": 4087.22,
+     "item": "https://archive.org/details/Bloodlust.mpeg"
+    },
+    {
+     "title": "Dead Men Walk",
+     "year": 1943,
+     "src": "https://archive.org/download/DeadMenWalk/DeadMenWalk.mp4",
+     "length": 3784.78,
+     "item": "https://archive.org/details/DeadMenWalk"
+    },
+    {
+     "title": "The Ape Man",
+     "year": 1943,
+     "src": "https://archive.org/download/TheApeMan/TheApeMan.mp4",
+     "length": 3819.62,
+     "item": "https://archive.org/details/TheApeMan"
+    },
+    {
+     "title": "Man with Two Lives",
+     "year": 1942,
+     "src": "https://archive.org/download/ManwithTwoLives/ManwithTwoLives.mp4",
+     "length": 3877.27,
+     "item": "https://archive.org/details/ManwithTwoLives"
+    },
+    {
+     "title": "The Devil's Hand",
+     "year": 1961,
+     "src": "https://archive.org/download/DevilsHand720p1962/devilshand720p.mp4",
+     "length": 4265.53,
+     "item": "https://archive.org/details/DevilsHand720p1962"
+    },
+    {
+     "title": "I Bury the Living",
+     "year": 1958,
+     "src": "https://archive.org/download/I_Bury_The_Living/I%20Bury%20the%20Living.mp4",
+     "length": 4618.58,
+     "item": "https://archive.org/details/I_Bury_The_Living"
+    },
+    {
+     "title": "Messiah of Evil",
+     "year": 1973,
+     "src": "https://archive.org/download/MessiahofEvil_avi/Messiah_of_Evil.mp4",
+     "length": 5375.33,
+     "item": "https://archive.org/details/MessiahofEvil_avi"
+    },
+    {
+     "title": "The Mad Monster",
+     "year": 1942,
+     "src": "https://archive.org/download/mad_monster/mad_monster.mp4",
+     "length": 4597.34,
+     "item": "https://archive.org/details/mad_monster"
+    },
+    {
+     "title": "The Monster Maker",
+     "year": 1944,
+     "src": "https://archive.org/download/monster_maker_ipod/the_monster_maker_512kb.mp4",
+     "length": 3736.5,
+     "item": "https://archive.org/details/monster_maker_ipod"
+    },
+    {
+     "title": "The Hunchback of Notre Dame",
+     "year": 1923,
+     "src": "https://archive.org/download/The_Hunchback_of_Notre_Dame/The_Hunchback_of_Notre_Dame_512kb.mp4",
+     "length": 6043.17,
+     "item": "https://archive.org/details/The_Hunchback_of_Notre_Dame"
+    },
+    {
+     "title": "Bride of the Monster",
+     "year": 1955,
+     "src": "https://archive.org/download/bride-of-the-monster-1955/Bride%20Of%20The%20Monster%201955.mp4",
+     "length": 4120.78,
+     "item": "https://archive.org/details/bride-of-the-monster-1955"
     }
    ]
   },
@@ -311,6 +437,272 @@ window.DRIVEIN = {
      "src": "https://archive.org/download/Detour/Detour_512kb.mp4",
      "item": "https://archive.org/details/Detour",
      "length": 4058.32
+    },
+    {
+     "title": "Impact",
+     "year": 1949,
+     "src": "https://archive.org/download/impact/impact_512kb.mp4",
+     "length": 6577.97,
+     "item": "https://archive.org/details/impact"
+    },
+    {
+     "title": "The Fast and the Furious",
+     "year": 1954,
+     "src": "https://archive.org/download/TheFastandtheFuriousJohnIreland1954goofyrip/TheFastandtheFuriousJohnIreland1954goofyrip.mp4",
+     "length": 4356.1,
+     "item": "https://archive.org/details/TheFastandtheFuriousJohnIreland1954goofyrip"
+    },
+    {
+     "title": "Five Minutes to Live",
+     "year": 1961,
+     "src": "https://archive.org/download/Five_Minutes_To_Live.avi/Five_Minutes_to_Live.mp4",
+     "length": 4465.11,
+     "item": "https://archive.org/details/Five_Minutes_To_Live.avi"
+    },
+    {
+     "title": "Please Murder Me",
+     "year": 1956,
+     "src": "https://archive.org/download/Please_Murder_Me_movie/Please_Murder_Me.mp4",
+     "length": 4482.55,
+     "item": "https://archive.org/details/Please_Murder_Me_movie"
+    },
+    {
+     "title": "They Made Me a Criminal",
+     "year": 1939,
+     "src": "https://archive.org/download/They_Made_Me_A_Criminal_1939/they_made_me_a_criminal_1939.mp4",
+     "length": 5472.79,
+     "item": "https://archive.org/details/They_Made_Me_A_Criminal_1939"
+    },
+    {
+     "title": "Dishonored Lady",
+     "year": 1947,
+     "src": "https://archive.org/download/dishonored_lady/dishonored_lady.mp4",
+     "length": 5040.62,
+     "item": "https://archive.org/details/dishonored_lady"
+    },
+    {
+     "title": "The Saint Louis Bank Robbery",
+     "year": 1959,
+     "src": "https://archive.org/download/Saint_Louis_Bank_Robbery/Saint_Louis_Bank_Robbery.mp4",
+     "length": 5326.82,
+     "item": "https://archive.org/details/Saint_Louis_Bank_Robbery"
+    },
+    {
+     "title": "Blonde Ice",
+     "year": 1948,
+     "src": "https://archive.org/download/BlondeIce/BlondeIce.mp4",
+     "length": 4438.45,
+     "item": "https://archive.org/details/BlondeIce"
+    },
+    {
+     "title": "The Man Who Cheated Himself",
+     "year": 1950,
+     "src": "https://archive.org/download/Man_Who_Cheated_Himself/NOIR_DISC_13.mp4",
+     "length": 4792.09,
+     "item": "https://archive.org/details/Man_Who_Cheated_Himself"
+    },
+    {
+     "title": "Flight to Nowhere",
+     "year": 1946,
+     "src": "https://archive.org/download/flight_to_nowhere/flight_to_nowhere.mp4",
+     "length": 4478.02,
+     "item": "https://archive.org/details/flight_to_nowhere"
+    },
+    {
+     "title": "Big Bluff",
+     "year": 1955,
+     "src": "https://archive.org/download/big_bluff/big_bluff.mp4",
+     "length": 4270.42,
+     "item": "https://archive.org/details/big_bluff"
+    },
+    {
+     "title": "Midnight Manhunt",
+     "year": 1945,
+     "src": "https://archive.org/download/Midnight.Manhunt/Midnight_Manhunt_512kb.mp4",
+     "length": 3749.44,
+     "item": "https://archive.org/details/Midnight.Manhunt"
+    },
+    {
+     "title": "Algiers",
+     "year": 1938,
+     "src": "https://archive.org/download/Algiers_/Algiers_512kb.mp4",
+     "length": 5946.54,
+     "item": "https://archive.org/details/Algiers_"
+    },
+    {
+     "title": "The Lady Confesses",
+     "year": 1945,
+     "src": "https://archive.org/download/Lady_Confesses/Lady_Confesses.mp4",
+     "length": 3838.39,
+     "item": "https://archive.org/details/Lady_Confesses"
+    },
+    {
+     "title": "Hollow Triumph",
+     "year": 1948,
+     "src": "https://archive.org/download/hollow-triumph-pnm/Hollow.Triumph.1948.1080p.Bluray.DTS.x264-GCJM.mp4",
+     "length": 4935.25,
+     "item": "https://archive.org/details/hollow-triumph-pnm"
+    },
+    {
+     "title": "They Made Me a Killer",
+     "year": 1946,
+     "src": "https://archive.org/download/TheyMadeMeAKiller/TheyMadeMeAKiller_512kb.mp4",
+     "length": 3859.25,
+     "item": "https://archive.org/details/TheyMadeMeAKiller"
+    },
+    {
+     "title": "I Love Trouble",
+     "year": 1948,
+     "src": "https://archive.org/download/I_Love_Trouble_movie/I_Love_Trouble.mp4",
+     "length": 5661.3,
+     "item": "https://archive.org/details/I_Love_Trouble_movie"
+    },
+    {
+     "title": "Gangster Story",
+     "year": 1960,
+     "src": "https://archive.org/download/GangsterStory/GangsterStoryPresentedByMoviePowder.mp4",
+     "length": 4076.91,
+     "item": "https://archive.org/details/GangsterStory"
+    },
+    {
+     "title": "Cause for Alarm!",
+     "year": 1951,
+     "src": "https://archive.org/download/cause_for_alarm_1951/cause_for_alarm_1951.mp4",
+     "length": 4427.83,
+     "item": "https://archive.org/details/cause_for_alarm_1951"
+    },
+    {
+     "title": "Two Dollar Bettor",
+     "year": 1951,
+     "src": "https://archive.org/download/Two_Dollar_Bettor_movie/Two_Dollar_Bettor.mp4",
+     "length": 4287.96,
+     "item": "https://archive.org/details/Two_Dollar_Bettor_movie"
+    },
+    {
+     "title": "Lady in the Death House",
+     "year": 1944,
+     "src": "https://archive.org/download/lady_in_the_death_house/lady_in_the_death_house.mp4",
+     "length": 3324.5,
+     "item": "https://archive.org/details/lady_in_the_death_house"
+    },
+    {
+     "title": "Parole, Inc.",
+     "year": 1948,
+     "src": "https://archive.org/download/parole_inc/parole_inc.mp4",
+     "length": 4267.66,
+     "item": "https://archive.org/details/parole_inc"
+    },
+    {
+     "title": "Strange Illusion",
+     "year": 1945,
+     "src": "https://archive.org/download/Strange_Illusion/STRANGE_ILLUSION.mp4",
+     "length": 5119.74,
+     "item": "https://archive.org/details/Strange_Illusion"
+    },
+    {
+     "title": "The Bigamist",
+     "year": 1953,
+     "src": "https://archive.org/download/bigamist_the/the_bigamist_512kb.mp4",
+     "length": 4765.96,
+     "item": "https://archive.org/details/bigamist_the"
+    },
+    {
+     "title": "Shoot to Kill",
+     "year": 1947,
+     "src": "https://archive.org/download/Shoot_to_Kill/ShoottoKill.mp4",
+     "length": 3816.65,
+     "item": "https://archive.org/details/Shoot_to_Kill"
+    },
+    {
+     "title": "The Strange Woman",
+     "year": 1946,
+     "src": "https://archive.org/download/Strange_Woman_movie/Strange_Woman_512kb.mp4",
+     "length": 5915.9,
+     "item": "https://archive.org/details/Strange_Woman_movie"
+    },
+    {
+     "title": "Sudden Fear",
+     "year": 1952,
+     "src": "https://archive.org/download/suddenfear1952usafeaturingjoancrawfordjackpalancegloriagrahamefilmnoir/Sudden%20Fear%20%20(1952%2C%20USA)%20Featuring%20Joan%20Crawford%2C%20Jack%20Palance%2C%20Gloria%20Grahame%20%20-%20Film%20Noir.mp4",
+     "length": 6671.81,
+     "item": "https://archive.org/details/suddenfear1952usafeaturingjoancrawfordjackpalancegloriagrahamefilmnoir"
+    },
+    {
+     "title": "Raw Deal",
+     "year": 1948,
+     "src": "https://archive.org/download/rawdeal1948/Raw%20Deal%201948%20-%20Claire%20Trevor%2C%20Dennis%20O-Keefe%2C%20Marsha%20Hunt%2C%20John%20Ireland%2C%20Raymond%20Burr%2C%20Regis%20Toomey_x264.ia.mp4",
+     "length": 4714.92,
+     "item": "https://archive.org/details/rawdeal1948"
+    },
+    {
+     "title": "Railroaded!",
+     "year": 1947,
+     "src": "https://archive.org/download/railroaded1947_202003/Railroaded!%20(1947%2C%20USA)%20Directed%20by%20Anthony%20Mann%20Featuring%20John%20Ireland%20-%20Film%20Noir%20Full%20Movie.mp4",
+     "length": 4324.39,
+     "item": "https://archive.org/details/railroaded1947_202003"
+    },
+    {
+     "title": "T-Men",
+     "year": 1947,
+     "src": "https://archive.org/download/tm994535/tm994535.mp4",
+     "length": 5531.74,
+     "item": "https://archive.org/details/tm994535"
+    },
+    {
+     "title": "Cry Danger",
+     "year": 1951,
+     "src": "https://archive.org/download/cry-danger-1951/Cry%20Danger%201951%20-%20Dick%20Powell%2C%20Rhonda%20Fleming%2C%20Richard%20Erdman%2C%20William%20Conr_x264.ia.mp4",
+     "length": 4737.8,
+     "item": "https://archive.org/details/cry-danger-1951"
+    },
+    {
+     "title": "Witness to Murder",
+     "year": 1954,
+     "src": "https://archive.org/download/witness-to-murder-1954/Witness%20to%20Murder%20(1954)%20Barbara%20Stanwyck%2C%20George%20Sanders%20Gary%20Merrill.ia.mp4",
+     "length": 4920.1,
+     "item": "https://archive.org/details/witness-to-murder-1954"
+    },
+    {
+     "title": "Shield for Murder",
+     "year": 1954,
+     "src": "https://archive.org/download/sfm5464565487/sfm5464565487.mp4",
+     "length": 4897.67,
+     "item": "https://archive.org/details/sfm5464565487"
+    },
+    {
+     "title": "Guilty Bystander",
+     "year": 1950,
+     "src": "https://archive.org/download/Guilty_Bystander_5067/Guilty_Bystander_1950.mp4",
+     "length": 5021.04,
+     "item": "https://archive.org/details/Guilty_Bystander_5067"
+    },
+    {
+     "title": "Dark Mountain",
+     "year": 1944,
+     "src": "https://archive.org/download/Dark_Mountain_1944/Dark_Mountain_1944.mp4",
+     "length": 3386.54,
+     "item": "https://archive.org/details/Dark_Mountain_1944"
+    },
+    {
+     "title": "Crime of Passion",
+     "year": 1957,
+     "src": "https://archive.org/download/crime-of-passion-1957/Crime%20Of%20Passion%201957%20-%20Barbara%20Stanwyck%2C%20Sterling%20Hayden%2C%20Raymond%20Burr%2C%20Fa_x264.ia.mp4",
+     "length": 5158.88,
+     "item": "https://archive.org/details/crime-of-passion-1957"
+    },
+    {
+     "title": "Bury Me Dead",
+     "year": 1947,
+     "src": "https://archive.org/download/bury-me-dead-1947/Bury%20Me%20Dead%20(1947).mp4",
+     "length": 4073.27,
+     "item": "https://archive.org/details/bury-me-dead-1947"
+    },
+    {
+     "title": "The Naked Kiss",
+     "year": 1964,
+     "src": "https://archive.org/download/TheNakedKiss/TheNakedKiss.mp4",
+     "length": 5427.66,
+     "item": "https://archive.org/details/TheNakedKiss"
     }
    ]
   },
@@ -421,6 +813,111 @@ window.DRIVEIN = {
      "src": "https://archive.org/download/plan-9-from-outer-space_202009/Plan%209%20from%20Outer%20Space.mp4",
      "length": 4747.02,
      "item": "https://archive.org/details/plan-9-from-outer-space_202009"
+    },
+    {
+     "title": "Last Woman on Earth",
+     "year": 1960,
+     "src": "https://archive.org/download/last_woman_on_earth/last_woman_on_earth.mp4",
+     "length": 4321.61,
+     "item": "https://archive.org/details/last_woman_on_earth"
+    },
+    {
+     "title": "This Is Not a Test",
+     "year": 1962,
+     "src": "https://archive.org/download/ThisisNotaTest/ThisisNotaTest.mp4",
+     "length": 4331.76,
+     "item": "https://archive.org/details/ThisisNotaTest"
+    },
+    {
+     "title": "The Incredible Petrified World",
+     "year": 1957,
+     "src": "https://archive.org/download/TheIncrediblePetrifiedWorld/TheIncrediblePetrifiedWorld.mp4",
+     "length": 3796.9,
+     "item": "https://archive.org/details/TheIncrediblePetrifiedWorld"
+    },
+    {
+     "title": "Red Planet Mars",
+     "year": 1952,
+     "src": "https://archive.org/download/rpm44589898/rpm44589898.mp4",
+     "length": 5222.84,
+     "item": "https://archive.org/details/rpm44589898"
+    },
+    {
+     "title": "Missile to the Moon",
+     "year": 1958,
+     "src": "https://archive.org/download/missile-to-the-moon-1958_202606/Missile%20to%20the%20Moon%201958.ia.mp4",
+     "length": 4625.86,
+     "item": "https://archive.org/details/missile-to-the-moon-1958_202606"
+    },
+    {
+     "title": "Not of This Earth",
+     "year": 1957,
+     "src": "https://archive.org/download/note57/note57.mp4",
+     "length": 4214.98,
+     "item": "https://archive.org/details/note57"
+    },
+    {
+     "title": "Lost in the Stratosphere",
+     "year": 1934,
+     "src": "https://archive.org/download/lost_in_the_stratosphere/lost_in_the_stratosphere.mp4",
+     "length": 3912.53,
+     "item": "https://archive.org/details/lost_in_the_stratosphere"
+    },
+    {
+     "title": "Mars Needs Women",
+     "year": 1967,
+     "src": "https://archive.org/download/mars-needs-women-1967/Mars%20Needs%20Women%20(1967).mp4",
+     "length": 4929.78,
+     "item": "https://archive.org/details/mars-needs-women-1967"
+    },
+    {
+     "title": "The Wizard of Mars",
+     "year": 1965,
+     "src": "https://archive.org/download/WizardOfMars/TheWizardOfMars1965.mp4",
+     "length": 4627.13,
+     "item": "https://archive.org/details/WizardOfMars"
+    },
+    {
+     "title": "The Cape Canaveral Monsters",
+     "year": 1960,
+     "src": "https://archive.org/download/CapeCanaveralMonsters/Cape%20Canaveral%20Monsters.mp4",
+     "length": 4101.29,
+     "item": "https://archive.org/details/CapeCanaveralMonsters"
+    },
+    {
+     "title": "The Lost Missile",
+     "year": 1958,
+     "src": "https://archive.org/download/TheLostMissile1958/TheLostMissile1958.mp4",
+     "length": 4245.54,
+     "item": "https://archive.org/details/TheLostMissile1958"
+    },
+    {
+     "title": "Invasion of the Star Creatures",
+     "year": 1962,
+     "src": "https://archive.org/download/invasion-of-the-star-creatures-1962_202503/Invasion%20of%20the%20Star%20Creatures%20(1962).mp4",
+     "length": 4163.06,
+     "item": "https://archive.org/details/invasion-of-the-star-creatures-1962_202503"
+    },
+    {
+     "title": "Teenage Monster",
+     "year": 1957,
+     "src": "https://archive.org/download/TeenageMonster/Teenage%20monster.mp4",
+     "length": 3754.4,
+     "item": "https://archive.org/details/TeenageMonster"
+    },
+    {
+     "title": "Prehistoric Women",
+     "year": 1950,
+     "src": "https://archive.org/download/pw6587657/pw6587657.mp4",
+     "length": 4375.13,
+     "item": "https://archive.org/details/pw6587657"
+    },
+    {
+     "title": "Project Moonbase",
+     "year": 1953,
+     "src": "https://archive.org/download/ProjectMoonBase1953_201809/Project%20MoonBase%20(1953).mp4",
+     "length": 3785.32,
+     "item": "https://archive.org/details/ProjectMoonBase1953_201809"
     }
    ]
   },
@@ -560,6 +1057,118 @@ window.DRIVEIN = {
      "src": "https://archive.org/download/HiDiddleDiddle/HiDiddleDiddle1943_512kb.mp4",
      "length": 4378.52,
      "item": "https://archive.org/details/HiDiddleDiddle"
+    },
+    {
+     "title": "Cyrano de Bergerac",
+     "year": 1950,
+     "src": "https://archive.org/download/Cyrano_DeBergerac/Cyrano_De_Bergerac_512kb.mp4",
+     "length": 6772,
+     "item": "https://archive.org/details/Cyrano_DeBergerac"
+    },
+    {
+     "title": "Eternally Yours",
+     "year": 1939,
+     "src": "https://archive.org/download/eternally_yours_ipod/eternally_yours_512kb.mp4",
+     "length": 5351.58,
+     "item": "https://archive.org/details/eternally_yours_ipod"
+    },
+    {
+     "title": "Heartbeat",
+     "year": 1946,
+     "src": "https://archive.org/download/heartbeat/heartbeat_512kb.mp4",
+     "length": 6002.47,
+     "item": "https://archive.org/details/heartbeat"
+    },
+    {
+     "title": "A Farewell to Arms",
+     "year": 1932,
+     "src": "https://archive.org/download/farewell_to_arms/farewell_to_arms.mp4",
+     "length": 4703.38,
+     "item": "https://archive.org/details/farewell_to_arms"
+    },
+    {
+     "title": "Of Human Bondage",
+     "year": 1934,
+     "src": "https://archive.org/download/humanbondage/HUMANBONDAGE.mp4",
+     "length": 4958.02,
+     "item": "https://archive.org/details/humanbondage"
+    },
+    {
+     "title": "Mr. Imperium",
+     "year": 1951,
+     "src": "https://archive.org/download/Mr.Imperium/Mr.Imperium.mp4",
+     "length": 5189.14,
+     "item": "https://archive.org/details/Mr.Imperium"
+    },
+    {
+     "title": "Behind Office Doors",
+     "year": 1931,
+     "src": "https://archive.org/download/BehindOfficeDoors/BehindOfficeDoors.mp4",
+     "length": 4920.14,
+     "item": "https://archive.org/details/BehindOfficeDoors"
+    },
+    {
+     "title": "Millie",
+     "year": 1931,
+     "src": "https://archive.org/download/Millie_992/Millie2028193129.mp4",
+     "length": 5045.14,
+     "item": "https://archive.org/details/Millie_992"
+    },
+    {
+     "title": "Kept Husbands",
+     "year": 1931,
+     "src": "https://archive.org/download/KeptHusbands/KeptHusbands.mp4",
+     "length": 4515.88,
+     "item": "https://archive.org/details/KeptHusbands"
+    },
+    {
+     "title": "The Lady Refuses",
+     "year": 1931,
+     "src": "https://archive.org/download/the_lady_refuses_1931_1080p_bluray/the_lady_refuses_1931_1080p_bluray.ia.mp4",
+     "length": 4297.07,
+     "item": "https://archive.org/details/the_lady_refuses_1931_1080p_bluray"
+    },
+    {
+     "title": "Letter of Introduction",
+     "year": 1938,
+     "src": "https://archive.org/download/LetterofIntroduction/LetterofIntroduction.mp4",
+     "length": 6182.81,
+     "item": "https://archive.org/details/LetterofIntroduction"
+    },
+    {
+     "title": "Rock, Rock, Rock!",
+     "year": 1956,
+     "src": "https://archive.org/download/rock_rock_rock/Rock_Rock_Rock.mp4",
+     "length": 5127.8,
+     "item": "https://archive.org/details/rock_rock_rock"
+    },
+    {
+     "title": "Delightfully Dangerous",
+     "year": 1945,
+     "src": "https://archive.org/download/delightfully_dangerous/delightfully_dangerous.mp4",
+     "length": 5352.74,
+     "item": "https://archive.org/details/delightfully_dangerous"
+    },
+    {
+     "title": "Indiscreet",
+     "year": 1931,
+     "src": "https://archive.org/download/Indiscreet/Indiscreet.mp4",
+     "length": 4475.58,
+     "item": "https://archive.org/details/Indiscreet"
+    },
+    {
+     "title": "A Song for Miss Julie",
+     "year": 1945,
+     "src": "https://archive.org/download/song_for_miss_julie/song_for_miss_julie.mp4",
+     "length": 4031.9,
+     "item": "https://archive.org/details/song_for_miss_julie"
+    },
+    {
+     "title": "Manhattan Love Song",
+     "year": 1934,
+     "src": "https://archive.org/download/ManhattanLoveSong/ManhattanLoveSong.mp4",
+     "length": 4177.17,
+     "item": "https://archive.org/details/ManhattanLoveSong"
     }
    ]
   },
@@ -687,6 +1296,104 @@ window.DRIVEIN = {
      "src": "https://archive.org/download/TheGeneral/The_General_512kb.mp4",
      "length": 4039.15,
      "item": "https://archive.org/details/TheGeneral"
+    },
+    {
+     "title": "Gulliver's Travels",
+     "year": 1939,
+     "src": "https://archive.org/download/gullivers_travels1939/gullivers_travels1939.mp4",
+     "length": 4359.84,
+     "item": "https://archive.org/details/gullivers_travels1939"
+    },
+    {
+     "title": "Speak Easily",
+     "year": 1932,
+     "src": "https://archive.org/download/speak_easily/speak_easily_512kb.mp4",
+     "length": 4858.56,
+     "item": "https://archive.org/details/speak_easily"
+    },
+    {
+     "title": "Parlor, Bedroom and Bath",
+     "year": 1931,
+     "src": "https://archive.org/download/ParlorBedroomandBath/Parlor_Bedroom_and_Bath.mp4",
+     "length": 4350.51,
+     "item": "https://archive.org/details/ParlorBedroomandBath"
+    },
+    {
+     "title": "The Sin of Harold Diddlebock",
+     "year": 1947,
+     "src": "https://archive.org/download/harolddiddlebock/harolddiddlebock_512kb.mp4",
+     "length": 5375.81,
+     "item": "https://archive.org/details/harolddiddlebock"
+    },
+    {
+     "title": "Killer Dill",
+     "year": 1947,
+     "src": "https://archive.org/download/killer_dill/killer_dill.mp4",
+     "length": 4321.51,
+     "item": "https://archive.org/details/killer_dill"
+    },
+    {
+     "title": "Baby Face Morgan",
+     "year": 1942,
+     "src": "https://archive.org/download/babyface_morgan/babyface_morgan_512kb.mp4",
+     "length": 3553.13,
+     "item": "https://archive.org/details/babyface_morgan"
+    },
+    {
+     "title": "His Double Life",
+     "year": 1933,
+     "src": "https://archive.org/download/his_double_life/his_double_life.mp4",
+     "length": 5524.97,
+     "item": "https://archive.org/details/his_double_life"
+    },
+    {
+     "title": "Lonely Wives",
+     "year": 1931,
+     "src": "https://archive.org/download/Lonely_Wives_1931/Lonely_Wives_1931.mp4",
+     "length": 5120.74,
+     "item": "https://archive.org/details/Lonely_Wives_1931"
+    },
+    {
+     "title": "My Dear Secretary",
+     "year": 1948,
+     "src": "https://archive.org/download/my_dear_secretary/my_dear_secretary_512kb.mp4",
+     "length": 5662.12,
+     "item": "https://archive.org/details/my_dear_secretary"
+    },
+    {
+     "title": "Love Laughs at Andy Hardy",
+     "year": 1946,
+     "src": "https://archive.org/download/loveLaughsatAndyHardy/love_laughs_at_andy_hardy_512kb.mp4",
+     "length": 5549.68,
+     "item": "https://archive.org/details/loveLaughsatAndyHardy"
+    },
+    {
+     "title": "Earthworm Tractors",
+     "year": 1936,
+     "src": "https://archive.org/download/earthworm_tractors/earthworm_tractors.mp4",
+     "length": 4112.1,
+     "item": "https://archive.org/details/earthworm_tractors"
+    },
+    {
+     "title": "One Rainy Afternoon",
+     "year": 1936,
+     "src": "https://archive.org/download/OneRainyAfternoon/OneRainyAfternoone.mp4",
+     "length": 4727.89,
+     "item": "https://archive.org/details/OneRainyAfternoon"
+    },
+    {
+     "title": "Fit for a King",
+     "year": 1937,
+     "src": "https://archive.org/download/fit_for_a_king/fit_for_a_king.mp4",
+     "length": 3888.7,
+     "item": "https://archive.org/details/fit_for_a_king"
+    },
+    {
+     "title": "Private Snuffy Smith",
+     "year": 1942,
+     "src": "https://archive.org/download/private_snuffy_smith/private_snuffy_smith.mp4",
+     "length": 3953.33,
+     "item": "https://archive.org/details/private_snuffy_smith"
     }
    ]
   },
@@ -797,6 +1504,97 @@ window.DRIVEIN = {
      "src": "https://archive.org/download/TheBeastOfYuccaFlats1961/TheBeastOfYuccaFlats1961.mp4",
      "length": 3236.44,
      "item": "https://archive.org/details/TheBeastOfYuccaFlats1961"
+    },
+    {
+     "title": "The Magic Sword",
+     "year": 1962,
+     "src": "https://archive.org/download/TheMagicSword/TheMagicSword.mp4",
+     "length": 4812.58,
+     "item": "https://archive.org/details/TheMagicSword"
+    },
+    {
+     "title": "The Eye Creatures",
+     "year": 1965,
+     "src": "https://archive.org/download/The_Eye_Creatures/The_Eye_Creatures_1962.avi.mp4",
+     "length": 4535.9,
+     "item": "https://archive.org/details/The_Eye_Creatures"
+    },
+    {
+     "title": "Eegah",
+     "year": 1962,
+     "src": "https://archive.org/download/Eegah/Eegah.mp4",
+     "length": 5426.49,
+     "item": "https://archive.org/details/Eegah"
+    },
+    {
+     "title": "Curse of the Swamp Creature",
+     "year": 1966,
+     "src": "https://archive.org/download/Curse_of_the_Swamp_Creature/CurseoftheSwampCreature.mp4",
+     "length": 4838.84,
+     "item": "https://archive.org/details/Curse_of_the_Swamp_Creature"
+    },
+    {
+     "title": "The Beach Girls and the Monster",
+     "year": 1965,
+     "src": "https://archive.org/download/TheBeachGirlsAndTheMonster/TheBeachGirlsAndTheMonster.mp4",
+     "length": 3963.6,
+     "item": "https://archive.org/details/TheBeachGirlsAndTheMonster"
+    },
+    {
+     "title": "The Atomic Brain",
+     "year": 1964,
+     "src": "https://archive.org/download/TheAtomicBrain/TheAtomicBrain.mp4",
+     "length": 3892.58,
+     "item": "https://archive.org/details/TheAtomicBrain"
+    },
+    {
+     "title": "Phantom from 10,000 Leagues",
+     "year": 1955,
+     "src": "https://archive.org/download/ThePhantomFrom10000Leagues1955HORROR/The%20Phantom%20from%2010%2C000%20Leagues%20(1955)%20HORROR.mp4",
+     "length": 4804.53,
+     "item": "https://archive.org/details/ThePhantomFrom10000Leagues1955HORROR"
+    },
+    {
+     "title": "Night Tide",
+     "year": 1961,
+     "src": "https://archive.org/download/NightTide1961_4/Night_Tide_1961.mp4",
+     "length": 5116.08,
+     "item": "https://archive.org/details/NightTide1961_4"
+    },
+    {
+     "title": "Manos: The Hands of Fate",
+     "year": 1966,
+     "src": "https://archive.org/download/ManosTheHandsofFate/Manos-TheHandsofFate_512kb.mp4",
+     "length": 4123.18,
+     "item": "https://archive.org/details/ManosTheHandsofFate"
+    },
+    {
+     "title": "The Creeping Terror",
+     "year": 1964,
+     "src": "https://archive.org/download/TheCreepingTerror/TheCreepingTerror.mp4",
+     "length": 4592.65,
+     "item": "https://archive.org/details/TheCreepingTerror"
+    },
+    {
+     "title": "The Navy vs. the Night Monsters",
+     "year": 1966,
+     "src": "https://archive.org/download/the-navy-vs.-the-night-monsters/The%20Navy%20vs.%20the%20Night%20Monsters.ia.mp4",
+     "length": 5101.98,
+     "item": "https://archive.org/details/the-navy-vs.-the-night-monsters"
+    },
+    {
+     "title": "Attack of the Crab Monsters",
+     "year": 1957,
+     "src": "https://archive.org/download/attack-of-the-crab-monsters-1957_202509/Attack%20of%20the%20Crab%20Monsters%201957.mp4",
+     "length": 3771.93,
+     "item": "https://archive.org/details/attack-of-the-crab-monsters-1957_202509"
+    },
+    {
+     "title": "The Wild World of Batwoman",
+     "year": 1966,
+     "src": "https://archive.org/download/the-wild-world-of-batwoman/The%20Wild%20World%20Of%20Batwoman%20(1966).mp4",
+     "length": 3971.81,
+     "item": "https://archive.org/details/the-wild-world-of-batwoman"
     }
    ]
   },
@@ -919,6 +1717,181 @@ window.DRIVEIN = {
      "src": "https://archive.org/download/TooLateForTears1949/Too%20Late%20for%20Tears%20(1949).mp4",
      "length": 5608.27,
      "item": "https://archive.org/details/TooLateForTears1949"
+    },
+    {
+     "title": "Inner Sanctum",
+     "year": 1948,
+     "src": "https://archive.org/download/Inner_Sanctum_movie/Inner_Sanctum.mp4",
+     "length": 3720.97,
+     "item": "https://archive.org/details/Inner_Sanctum_movie"
+    },
+    {
+     "title": "The Green Glove",
+     "year": 1952,
+     "src": "https://archive.org/download/the_green_glove/the_green_glove.mp4",
+     "length": 5328.47,
+     "item": "https://archive.org/details/the_green_glove"
+    },
+    {
+     "title": "Dick Tracy, Detective",
+     "year": 1945,
+     "src": "https://archive.org/download/dick_tracy_detctive/dick_tracy_detective_512kb.mp4",
+     "length": 3660.49,
+     "item": "https://archive.org/details/dick_tracy_detctive"
+    },
+    {
+     "title": "Dick Tracy Meets Gruesome",
+     "year": 1947,
+     "src": "https://archive.org/download/Dick_Tracy_Meets_Gruesome_1947/Dick_Tracy_Meets_Gruesome.mp4",
+     "length": 3918.71,
+     "item": "https://archive.org/details/Dick_Tracy_Meets_Gruesome_1947"
+    },
+    {
+     "title": "Dick Tracy's Dilemma",
+     "year": 1947,
+     "src": "https://archive.org/download/dick_tracys_dilemma/dick_tracys_dilemma.mp4",
+     "length": 3580.48,
+     "item": "https://archive.org/details/dick_tracys_dilemma"
+    },
+    {
+     "title": "Nancy Drew... Reporter",
+     "year": 1939,
+     "src": "https://archive.org/download/nancy_drew_reporter/nancy_drew_reporter_512kb.mp4",
+     "length": 4063.36,
+     "item": "https://archive.org/details/nancy_drew_reporter"
+    },
+    {
+     "title": "One Body Too Many",
+     "year": 1944,
+     "src": "https://archive.org/download/one_body_too_many_ipod/One_Body_Too_Many_512kb.mp4",
+     "length": 4532.86,
+     "item": "https://archive.org/details/one_body_too_many_ipod"
+    },
+    {
+     "title": "The Thirteenth Guest",
+     "year": 1932,
+     "src": "https://archive.org/download/The_Thirteenth_Guest/The_Thirteenth_Guest_512kb.mp4",
+     "length": 4128.96,
+     "item": "https://archive.org/details/The_Thirteenth_Guest"
+    },
+    {
+     "title": "The Dark Hour",
+     "year": 1936,
+     "src": "https://archive.org/download/The.Dark.Hour/The_Dark_Hour_512kb.mp4",
+     "length": 4116.88,
+     "item": "https://archive.org/details/The.Dark.Hour"
+    },
+    {
+     "title": "International Crime",
+     "year": 1938,
+     "src": "https://archive.org/download/InternationalCrime1938/InternationalCrime720p.mp4",
+     "length": 3804.58,
+     "item": "https://archive.org/details/InternationalCrime1938"
+    },
+    {
+     "title": "Double Exposure",
+     "year": 1944,
+     "src": "https://archive.org/download/double_exposure/double_exposure.mp4",
+     "length": 3744.53,
+     "item": "https://archive.org/details/double_exposure"
+    },
+    {
+     "title": "The Death Kiss",
+     "year": 1932,
+     "src": "https://archive.org/download/The_Death_Kiss/The_Death_Kiss.mp4",
+     "length": 4232.7,
+     "item": "https://archive.org/details/The_Death_Kiss"
+    },
+    {
+     "title": "Midnight Phantom",
+     "year": 1935,
+     "src": "https://archive.org/download/midnight_phantom_1935/midnight_phantom_512kb.mp4",
+     "length": 3406.9,
+     "item": "https://archive.org/details/midnight_phantom_1935"
+    },
+    {
+     "title": "A Shriek in the Night",
+     "year": 1933,
+     "src": "https://archive.org/download/A_Shriek_in_the_Night/A_Shriek_in_the_Night.mp4",
+     "length": 3996.59,
+     "item": "https://archive.org/details/A_Shriek_in_the_Night"
+    },
+    {
+     "title": "Murder on the Campus",
+     "year": 1933,
+     "src": "https://archive.org/download/murder_on_the_campus/murder_on_the_campus.mp4",
+     "length": 4164.67,
+     "item": "https://archive.org/details/murder_on_the_campus"
+    },
+    {
+     "title": "The Ghost Walks",
+     "year": 1934,
+     "src": "https://archive.org/download/the_ghost_walks/the_ghost_walks.mp4",
+     "length": 3806.95,
+     "item": "https://archive.org/details/the_ghost_walks"
+    },
+    {
+     "title": "The Panther's Claw",
+     "year": 1942,
+     "src": "https://archive.org/download/panthers_claw/panthers_claw.mp4",
+     "length": 4233.31,
+     "item": "https://archive.org/details/panthers_claw"
+    },
+    {
+     "title": "Seven Doors to Death",
+     "year": 1944,
+     "src": "https://archive.org/download/Seven_Doors_to_Death/Seven_Doors_to_Death.mp4",
+     "length": 3630.1,
+     "item": "https://archive.org/details/Seven_Doors_to_Death"
+    },
+    {
+     "title": "The Missing Corpse",
+     "year": 1945,
+     "src": "https://archive.org/download/missing-corpse-1945-dark-comedy/Missing%20Corpse%20(1945)%20DARK%20COMEDY.mp4",
+     "length": 3694.55,
+     "item": "https://archive.org/details/missing-corpse-1945-dark-comedy"
+    },
+    {
+     "title": "Lady of Burlesque",
+     "year": 1943,
+     "src": "https://archive.org/download/LadyofBurlesque/LadyofBurlesque.mp4",
+     "length": 5414.33,
+     "item": "https://archive.org/details/LadyofBurlesque"
+    },
+    {
+     "title": "Invisible Avenger",
+     "year": 1958,
+     "src": "https://archive.org/download/InvisibleAvenger/InvisibleAvenger.mp4",
+     "length": 3402.8,
+     "item": "https://archive.org/details/InvisibleAvenger"
+    },
+    {
+     "title": "Devil's Cargo",
+     "year": 1948,
+     "src": "https://archive.org/download/Devils_Cargo_1948/Devils_Cargo_1948.mp4",
+     "length": 3732.41,
+     "item": "https://archive.org/details/Devils_Cargo_1948"
+    },
+    {
+     "title": "I'll Name the Murderer",
+     "year": 1936,
+     "src": "https://archive.org/download/ill_name_the_murderer/ill_name_the_murderer.mp4",
+     "length": 4112.14,
+     "item": "https://archive.org/details/ill_name_the_murderer"
+    },
+    {
+     "title": "The Shadow Strikes",
+     "year": 1937,
+     "src": "https://archive.org/download/the_shadow_strikes/shadow_strikes_512kb.mp4",
+     "length": 3700.5,
+     "item": "https://archive.org/details/the_shadow_strikes"
+    },
+    {
+     "title": "House of Secrets",
+     "year": 1936,
+     "src": "https://archive.org/download/house_of_secrets/house_of_secrets.mp4",
+     "length": 4095.05,
+     "item": "https://archive.org/details/house_of_secrets"
     }
    ]
   }
