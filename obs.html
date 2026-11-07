@@ -41,7 +41,6 @@
   .logo { font-size: 92px; line-height: 1; white-space: nowrap; }
   .logo span { color: var(--red); font-size: .5em; }
   .tag { font-style: italic; font-size: 30px; color: var(--ink-2); margin-top: 4px; }
-  .clock { font-size: 72px; font-weight: 700; letter-spacing: .02em; }
 
   /* the station card */
   .card { position: absolute; left: 70px; top: 200px; width: 520px; height: 520px; overflow: hidden; background: var(--paper); box-shadow: 3px 4px 0 rgba(0,0,0,.28); }
@@ -67,7 +66,7 @@
   .next h2 { margin: 0 0 8px; padding-bottom: 4px; font-size: 40px; color: var(--red); border-bottom: 2px solid var(--ink); }
   .next ol { list-style: none; margin: 0; padding: 0; font-size: 30px; line-height: 1.5; }
   .next li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .next li b { color: var(--red); display: inline-block; min-width: 140px; }
+  .next li b { color: var(--red); display: inline-block; min-width: 230px; }
 
   /* tune in */
   .tunein { position: absolute; left: 1210px; top: 760px; width: 640px; height: 200px; padding: 22px 36px; display: flex; flex-direction: column; justify-content: center; transform: rotate(.6deg); }
@@ -137,7 +136,6 @@
 <div id="stage">
   <header class="mast paper">
     <div><div class="logo head">The Bee's Knees<span>.fm</span></div><div class="tag">Carefully curated to relieve you from our current timeline</div></div>
-    <div class="clock" id="clock"></div>
   </header>
   <div class="card" id="card"></div>
   <div class="screen" id="screen"><iframe id="frame" title="Bee's Knees TV" allow="autoplay; fullscreen" src="about:blank"></iframe></div>
@@ -273,6 +271,8 @@
   }, 5000);
 
   /* ---------- the screen ---------- */
+  // "in 25 min": the stream goes out everywhere, so no clock times
+  var soon = function (ms) { var m = Math.max(1, Math.round((ms - Date.now()) / 60000)); return m < 60 ? "in " + m + " min" : "in " + Math.floor(m / 60) + " hr" + (m % 60 ? " " + (m % 60) + " min" : ""); };
   var hm = function (ms) { return new Date(ms).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }); };
   var mmss = function (s) { s = Math.max(0, Math.round(s)); var h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60; return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0"); };
   function card() {
@@ -293,12 +293,11 @@
     var ol = $("next"); ol.textContent = ""; var t = Date.now() + now.left * 1000;
     for (var k = 1; k <= 3 && station.tracks.length > 1; k++) {
       var nx = station.tracks[(now.i + k) % station.tracks.length], li = document.createElement("li"), b = document.createElement("b");
-      b.textContent = hm(t); li.appendChild(b); li.appendChild(document.createTextNode(" " + (nx.series || "") + (nx.title ? ": " + nx.title : ""))); ol.appendChild(li);
+      b.textContent = soon(t); li.appendChild(b); li.appendChild(document.createTextNode(" " + (nx.series || "") + (nx.title ? ": " + nx.title : ""))); ol.appendChild(li);
       t += nx.length * 1000;
     }
   }
   function tick() {
-    $("clock").textContent = hm(Date.now());
     if (mode !== "radio") return paintScreen();
     var now = at(station);
     $("bar").style.width = (100 * now.offset / now.track.length).toFixed(2) + "%";
@@ -320,7 +319,7 @@
     $("title").textContent = txt(d, ".np-title");
     $("date").textContent = txt(d, ".np-date");
     $("left").textContent = txt(d, ".np-left");
-    $("then").textContent = txt(d, ".np-next") || (mode === "drivein" ? txt(d, ".mq-when") : "");
+    $("then").textContent = (txt(d, ".np-next") || (mode === "drivein" ? txt(d, ".mq-when") : "")).replace(/\s*(at\s+)?\d{1,2}:\d{2}\s*(AM|PM|am|pm)?/g, "");
   }
   function showScreen(kind, ch) {
     var url = kind === "tv" ? "tv.html?broadcast=1#" + ch.id : "drive-in.html?broadcast=1";
