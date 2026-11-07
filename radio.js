@@ -1026,8 +1026,10 @@
         rec.guide = { el: g, key: "" };
         g.addEventListener("click", e => {
           if (state.editing) return;
-          if (e.target.closest(".gs-cover")) return;
-          const shelf = e.target.closest(".g-shelf");
+          const cov = e.target.closest(".gs-cover");
+          if (cov && window.RECORDS_PLAY && window.RECORDS_TODAY) { e.preventDefault(); window.RECORDS_PLAY(window.RECORDS_TODAY().picks[+cov.dataset.k]); return; }
+          if (cov) return;
+          const shelf = e.target.closest(".g-shelf, .gs-link");
           if (shelf) { e.preventDefault(); openRack("records"); return; }
           const row = e.target.closest(".g-row"); if (!row) return;
           tuneTo(STATIONS.find(s => s.id === row.dataset.id));
@@ -1333,8 +1335,10 @@
     if (window.RECORDS_TODAY) {
       const T = window.RECORDS_TODAY();
       h += `<div class="g-shelfrow"><a class="g-shelf" href="records.html"><span class="gs-name">The Record Shelf</span>` +
-           `<span class="gs-sub">This week's five albums from the '40s, '50s and '60s. Tap one to play it on Archive.org, or see the whole shelf.</span></a>` +
-           `<span class="gs-covers">` + T.picks.map(r => `<a class="gs-cover" href="${esc(r.item)}" target="_blank" rel="noopener" title="${esc(r.title)}, ${esc(r.artist)}${r.year ? ", " + esc(r.year) : ""}"><img src="${esc(r.cover)}" alt="${esc(r.title)}, ${esc(r.artist)}" loading="lazy"></a>`).join("") + `</span></div>`;
+           `<span class="gs-sub">This week's five albums from the '40s, '50s and '60s. Tap one to play it.</span></a>` +
+           `<span class="gs-covers">` + T.picks.map((r, k) => `<a class="gs-cover" href="${esc(r.item)}" data-k="${k}" title="${esc(r.title)}, ${esc(r.artist)}${r.year ? ", " + esc(r.year) : ""}"><img src="${esc(r.cover)}" alt="${esc(r.title)}, ${esc(r.artist)}" loading="lazy"></a>`).join("") + `</span></div>` +
+           `<div class="gs-why"><b>Why the radio stops at 1925:</b> in the U.S., records made in 1925 or earlier are in the public domain, so they can play on the radio for free. Anything newer needs a broadcasting license the station can't afford yet, so the swing, blues, crooners and rock 'n' roll live on <a class="gs-link" href="records.html">the shelf</a> for now. ` +
+           `<span class="gs-ask">Want a 24/7 music station that plays music up to the 1960s? Every membership and tip goes toward a broadcasting license.</span> <a class="gs-go" href="${esc(CONFIG.tip || "https://ko-fi.com/thebeeskneesfm")}" target="_blank" rel="noopener">Become a member or leave a tip</a></div>`;
     }
     // only touch the page when something in the guide actually changed: rewriting it while someone is
     // flicking past it on a phone stops the scroll dead (that was the "glitch every so often")
@@ -2456,7 +2460,7 @@
   }
 
   /* ---------- go ---------- */
-  window.RADIO = { state, fx, presence, audio, trace };   // handy for poking at it in the browser console
+  window.RADIO = { state, fx, presence, audio, trace, power };   // handy for poking at it in the browser console
   build();
   fit();
   startPresence();

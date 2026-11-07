@@ -1,6 +1,6 @@
 /* THE RECORD SHELF
    records.html shows all of these, with five of them as the week's showcase (also under the radio). Between November 6 and January 6, three of the five are Christmas
-   records ("season": "christmas"). Each cover opens the album's page on Archive.org, where it plays.
+   records ("season": "christmas"). Each cover opens a little player (Archive.org's own) right on the page.
    To add one: copy a line, change the words, put a square cover in art/records/ (about 400 pixels). */
 window.RECORDS = [
  {
@@ -60,13 +60,6 @@ window.RECORDS = [
   "item": "https://archive.org/details/thats-blues-rock-lp-2-mercury-141101"
  },
  {
-  "title": "Original Golden Greats, Vol. 8",
-  "artist": "Fats Domino, Jerry Lee Lewis and friends",
-  "year": "1968",
-  "cover": "art/records/lp-original-golden-greats-vol8-bill-justis-fats-domino-irma-.webp",
-  "item": "https://archive.org/details/lp_original-golden-greats-vol8_bill-justis-fats-domino-irma-thomas-jer"
- },
- {
   "title": "Buddy Holly and the Crickets",
   "artist": "Buddy Holly & the Crickets",
   "year": "1957",
@@ -79,13 +72,6 @@ window.RECORDS = [
   "year": "1960",
   "cover": "art/records/lp-deep-night-the-ray-charles-singers-0.webp",
   "item": "https://archive.org/details/lp_deep-night_the-ray-charles-singers_0"
- },
- {
-  "title": "London by Night",
-  "artist": "Julie London",
-  "year": "1960",
-  "cover": "art/records/lp-london-by-night-julie-london-pete-king-and-his-orchestr-1.webp",
-  "item": "https://archive.org/details/lp_london-by-night_julie-london-pete-king-and-his-orchestr_1"
  },
  {
   "title": "A Taste of Tequila",
@@ -109,25 +95,11 @@ window.RECORDS = [
   "item": "https://archive.org/details/lp_pop-hit-party_various-doris-day-frank-de-vol-and-his"
  },
  {
-  "title": "State Fair",
-  "artist": "Bobby Darin, Pat Boone and Ann-Margret",
-  "year": "1962",
-  "cover": "art/records/lp-rodgers-and-hammersteins-state-fair-pat-boone-bobby-darin.webp",
-  "item": "https://archive.org/details/lp_rodgers-and-hammersteins-state-fair_pat-boone-bobby-darin-pamela-tiffin-ann-ma"
- },
- {
   "title": "The Versatile Brenda Lee",
   "artist": "Brenda Lee",
   "year": "1965",
   "cover": "art/records/lp-the-versatile-brenda-lee-brenda-lee.webp",
   "item": "https://archive.org/details/lp_the-versatile-brenda-lee_brenda-lee"
- },
- {
-  "title": "Reflections",
-  "artist": "The Platters",
-  "year": "1964",
-  "cover": "art/records/lp-reflections-the-platters-1.webp",
-  "item": "https://archive.org/details/lp_reflections_the-platters_1"
  },
  {
   "title": "Murray the K's Holiday Revue, Live from the Brooklyn Fox",
@@ -191,13 +163,6 @@ window.RECORDS = [
   "year": "1964",
   "cover": "art/records/lp-aint-that-good-news-sam-cooke-item.webp",
   "item": "https://archive.org/details/lp_aint-that-good-news_sam-cooke_item"
- },
- {
-  "title": "Murray the K's 1962 Boss Golden Gassers",
-  "artist": "The Shirelles, Etta James and friends",
-  "year": "1962",
-  "cover": "art/records/lp-murray-the-ks-1962-boss-golden-gassers-various-ben-e-king.webp",
-  "item": "https://archive.org/details/lp_murray-the-ks-1962-boss-golden-gassers_various-ben-e-king-chuck-jackson-don-j"
  },
  {
   "title": "The Exciting Connie Francis",
@@ -782,14 +747,6 @@ window.RECORDS = [
   "cover": "art/records/jerry-fielding-and-his-brass-choir-favorite-christmas-music.webp",
   "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music",
   "season": "christmas"
- },
- {
-  "title": "Joyous Noel",
-  "artist": "Perry Como and friends",
-  "year": "1968",
-  "cover": "art/records/lp-joyous-noel-various-blanche-thebom-dennis-day-dorot.webp",
-  "item": "https://archive.org/details/lp_joyous-noel_various-blanche-thebom-dennis-day-dorot",
-  "season": "christmas"
  }
 ];
 
@@ -817,4 +774,58 @@ window.RECORDS_TODAY = function (when) {
   if (christmas && picks.length === 5) picks = [picks[0], picks[3], picks[1], picks[4], picks[2]];
   var mon = new Date(Date.UTC(y, m - 1, d - ((dayNo - 4) % 7 + 7) % 7));
   return { picks: picks, month: m, day: d, weekOf: { month: mon.getUTCMonth() + 1, day: mon.getUTCDate() } };
+};
+
+/* the little player: Archive.org's own embedded player in a pop-up, so the album plays from Archive.org
+   without leaving the page. While it's open the radio pauses, and it picks back up when the player closes. */
+window.RECORDS_PLAY = function (r) {
+  var doc = document, old = doc.getElementById("rp-box");
+  if (old) old.remove();
+  if (!doc.getElementById("rp-css")) {
+    var css = doc.createElement("style"); css.id = "rp-css";
+    css.textContent = [
+      "#rp-box{position:fixed;inset:0;z-index:2000;background:rgba(20,15,10,.72);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) 16px 16px}",
+      "#rp-box .rp-card{position:relative;width:min(560px,100%);max-height:calc(100vh - 32px);overflow:auto;background:url(art/newsprint.jpg) 0 0/640px 640px,#e9e1c9;color:#1f1b17;box-shadow:0 3px 0 rgba(0,0,0,.3),0 18px 40px rgba(0,0,0,.45);padding:18px 18px 16px;font:18px/1.4 'BK Serif',Georgia,serif;box-sizing:border-box}",
+      "#rp-box .rp-top{display:flex;gap:14px;align-items:center;padding-right:70px}",
+      "#rp-box .rp-top img{width:86px;height:86px;object-fit:cover;flex:none;box-shadow:0 2px 0 rgba(0,0,0,.3),0 4px 10px rgba(0,0,0,.25);transform:rotate(-2deg)}",
+      "#rp-box h2{margin:0;padding:0;border:0;word-spacing:normal;font:700 22px/1.2 'BK Serif',Georgia,serif;text-wrap:balance}",
+      "#rp-box .rp-who{margin:3px 0 0;font-style:italic;color:#4a4036;font-size:16px}",
+      "#rp-box iframe{display:block;width:100%;height:340px;border:0;margin-top:14px;background:#111}",
+      "#rp-box .rp-foot{margin:10px 0 0;font-size:15px;color:#4a4036}",
+      "#rp-box .rp-foot a{color:#1f1b17}",
+      "#rp-box .rp-x{position:absolute;top:12px;right:12px;font:700 16px/1 'BK Serif',Georgia,serif;background:#1f1b17;color:#f3ead6;border:0;padding:9px 12px;cursor:pointer}",
+      "#rp-box .rp-x:focus-visible,#rp-box a:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}",
+      "@media (max-width:480px){#rp-box iframe{height:300px}#rp-box .rp-top img{width:64px;height:64px}#rp-box h2{font-size:19px}}"
+    ].join("");
+    doc.head.appendChild(css);
+  }
+  var id = r.item.replace(/^.*\/details\//, "").replace(/[?#].*$/, "");
+  var box = doc.createElement("div"); box.id = "rp-box"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.setAttribute("aria-label", r.title);
+  var card = doc.createElement("div"); card.className = "rp-card";
+  var x = doc.createElement("button"); x.type = "button"; x.className = "rp-x"; x.textContent = "Close";
+  var top = doc.createElement("div"); top.className = "rp-top";
+  var img = doc.createElement("img"); img.src = r.cover; img.alt = "";
+  var t = doc.createElement("div"), h = doc.createElement("h2"), w = doc.createElement("p");
+  h.textContent = r.title; w.className = "rp-who"; w.textContent = r.artist + (r.year ? ", " + r.year : "");
+  t.appendChild(h); t.appendChild(w); top.appendChild(img); top.appendChild(t);
+  var fr = doc.createElement("iframe"); fr.title = r.title + " on Archive.org";
+  fr.allow = "autoplay; fullscreen"; fr.src = "https://archive.org/embed/" + encodeURIComponent(id) + "?playlist=1&autoplay=1";
+  var foot = doc.createElement("p"); foot.className = "rp-foot";
+  foot.appendChild(doc.createTextNode("Playing from the Internet Archive. "));
+  var a = doc.createElement("a"); a.href = r.item; a.target = "_blank"; a.rel = "noopener"; a.textContent = "See the album on Archive.org"; foot.appendChild(a);
+  card.appendChild(x); card.appendChild(top); card.appendChild(fr); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
+  // pause the radio (on this page, or the radio page underneath when the shelf is open over it)
+  var radio = null; try { radio = window.RADIO || (window.top !== window && window.top.RADIO) || null; } catch (e) {}
+  var wasOn = false; try { if (radio && radio.state && radio.state.on && radio.power) { wasOn = true; radio.power(false); } } catch (e) {}
+  var back = doc.activeElement;
+  function close() {
+    fr.src = "about:blank"; box.remove(); doc.removeEventListener("keydown", esc, true);
+    try { if (wasOn && radio && radio.power) radio.power(true); } catch (e) {}
+    try { if (back && back.focus) back.focus(); } catch (e) {}
+  }
+  function esc(e) { if (e.key === "Escape") { e.stopPropagation(); close(); } }
+  x.addEventListener("click", close);
+  box.addEventListener("click", function (e) { if (e.target === box) close(); });
+  doc.addEventListener("keydown", esc, true);
+  x.focus();
 };

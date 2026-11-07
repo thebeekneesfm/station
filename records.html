@@ -133,7 +133,7 @@
 
   <main class="paper">
     <h1>The Record Shelf</h1>
-    <p class="lede">Albums from the 1940s, '50s and '60s, pulled from the stacks at Archive.org. Tap a cover to hear the whole record there.</p>
+    <p class="lede">Albums from the 1940s, '50s and '60s, pulled from the stacks at Archive.org. Tap a cover to play the whole record right here, from Archive.org.</p>
     <h2 class="wk">This week's five</h2>
     <p class="today" id="today">A new five every Monday</p>
 
@@ -150,19 +150,19 @@
       <h2 id="why-h">Why the radio stops at 1925</h2>
       <div class="txt">
         <p>In the U.S., records made in 1925 or earlier are in the public domain, so The Bee's Knees can play them on the radio for free. They play on <a href="index.html#gramophone">Gramophone Radio</a>, channel 08.</p>
-        <p>Anything newer needs a broadcasting license, and the station can't afford one yet. Until then, the swing, blues, crooners and rock 'n' roll live here on the shelf, and you play them straight from Archive.org, where they're kept.</p>
+        <p>Anything newer needs a broadcasting license, and the station can't afford one yet. Until then, the swing, blues, crooners and rock 'n' roll live here on the shelf, and they play straight from Archive.org, where they're kept.</p>
         <p class="radio-link">The old radio shows are still on the air all day and night. <a href="index.html">Go back to the radio</a>.</p>
       </div>
       <div class="help">
-        <p>Want the music back on the radio? Every membership and tip goes toward a broadcasting license.</p>
+        <p>Want a 24/7 music station that plays music up to the 1960s? Every membership and tip goes toward a broadcasting license.</p>
         <a class="go" id="kofi" href="https://ko-fi.com/thebeeskneesfm" target="_blank" rel="noopener">Become a member or leave a tip</a>
         <p class="small2">Archive.org keeps all of these records safe for free. <a href="https://archive.org/donate" target="_blank" rel="noopener">You can donate to them too</a>.</p>
       </div>
     </section>
   </main>
 </div>
-<script src="config.js?v=20261107rs"></script>
-<script src="art/records/records.js?v=3"></script>
+<script src="config.js?v=20261107pp"></script>
+<script src="art/records/records.js?v=5"></script>
 <script>
 (function () {
   "use strict";
@@ -175,8 +175,9 @@
   document.getElementById("today").textContent = "The week of " + months[W.month - 1] + " " + W.day + ". A new five every Monday.";
   function card(r) {
     var li = document.createElement("li"); li.className = "rec";
-    var a = document.createElement("a"); a.href = r.item; a.target = "_blank"; a.rel = "noopener";
-    a.setAttribute("aria-label", r.title + " by " + r.artist + (r.year ? ", " + r.year : "") + ". Opens on Archive.org");
+    var a = document.createElement("a"); a.href = r.item;
+    a.setAttribute("aria-label", "Play " + r.title + " by " + r.artist + (r.year ? ", " + r.year : ""));
+    a.addEventListener("click", function (e) { if (window.RECORDS_PLAY && !e.metaKey && !e.ctrlKey && !e.shiftKey) { e.preventDefault(); window.RECORDS_PLAY(r); } });
     var sl = document.createElement("div"); sl.className = "sleeve";
     var img = document.createElement("img"); img.src = r.cover; img.alt = ""; img.loading = "lazy"; img.width = 420; img.height = 420;
     sl.appendChild(img); a.appendChild(sl);

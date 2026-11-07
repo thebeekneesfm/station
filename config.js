@@ -17,7 +17,7 @@ window.RADIO_CONFIG = {
     "Welcome to The Bee's Knees!",
     "No generative AI here, ever: every picture is real vintage ephemera or drawn by a real artist, and every song and show is a real old recording from the Internet Archive",
     "Become a member at ko-fi.com/thebeeskneesfm: members are thanked by name right here on the ticker, and Sponsor members put their name on a station of their choice for the month",
-    "New: the Record Shelf. Five albums from the '40s, '50s and '60s every week, right under the radio. Tap a cover to play it on Archive.org",
+    "New: the Record Shelf. Five albums from the '40s, '50s and '60s every week, right under the radio. Tap a cover to play it right here",
     "Follow The Bee's Knees on Instagram, TikTok, YouTube and Bluesky",
     "Enjoying the vibes? Consider becoming a member or making a donation at ko-fi.com/thebeeskneesfm",
   ],
