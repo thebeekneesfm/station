@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>The Bee's Knees Drive-In · The Bee's Knees.fm</title>
-<meta name="description" content="A double feature every night at 7:30 Pacific, with cartoons, trailers, serials and the snack-bar intermission, and an afternoon matinee in the daytime. A different theme each night.">
+<meta name="description" content="A double feature every Saturday night at 7:30 Pacific, with a cartoon, trailers, a serial and the snack-bar intermission. A new theme every week.">
 <link rel="preconnect" href="https://archive.org">
 <link rel="canonical" href="https://thebeesknees.fm/drive-in.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The Bee's Knees.fm">
 <meta property="og:title" content="The Bee's Knees Drive-In · The Bee's Knees.fm">
-<meta property="og:description" content="A double feature every night at 7:30 Pacific, with cartoons, trailers, serials and the snack-bar intermission, and an afternoon matinee in the daytime. A different theme each night.">
+<meta property="og:description" content="A double feature every Saturday night at 7:30 Pacific, with a cartoon, trailers, a serial and the snack-bar intermission. A new theme every week.">
 <meta property="og:url" content="https://thebeesknees.fm/drive-in.html">
 <meta property="og:image" content="https://thebeesknees.fm/art/share.jpg?v=2">
 <meta property="og:image:width" content="1200">
@@ -157,6 +157,14 @@
   @media (max-width: 999px) { .stage .marquee { order: -1; margin-bottom: 18px; } }
 
   /* ?broadcast=1: inside the streaming page, only the picture shows, filling the frame */
+  /* Saturdays only: the "see you Saturday" sign over the coming attractions while the lot is closed */
+  .how-new { display: none; } html.sat-only .how-new { display: block; } html.sat-only .how-old { display: none; }
+  .scr-closed { position: absolute; left: 0; right: 0; bottom: 0; z-index: 3; padding: 7% 5% 3.5%; text-align: center; color: var(--cream); background: linear-gradient(rgba(12,9,7,0), rgba(12,9,7,.9) 38%); pointer-events: none; }
+  .scr-closed[hidden] { display: none; }
+  .scr-closed p { margin: 0; }
+  .scr-closed .cl-k { font: italic 400 clamp(14px, 1.9vw, 22px)/1.2 "BK Serif", Georgia, serif; color: #cdbf9f; }
+  .scr-closed .cl-big { font: 400 clamp(28px, 5vw, 62px)/1 "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; color: var(--honey); margin: 6px 0 !important; }
+  .scr-closed .cl-m { font: 400 clamp(14px, 2vw, 24px)/1.3 "BK Serif", Georgia, serif; }
   html.broadcast, html.broadcast body { background: #050403 !important; overflow: hidden !important; height: 100%; margin: 0; }
   html.broadcast body::before { display: none !important; }
   html.broadcast body > *:not(.wrap), html.broadcast .wrap > *:not(.stage), html.broadcast .stage > *:not(.scr) { display: none !important; }
@@ -186,22 +194,28 @@
   <p class="report">Something here that shouldn’t be? Email <span class="email">thebeeskneesfm@gmail.com</span> and it comes off the schedule.</p>
   <h2 class="sec">How the drive-in works</h2>
   <section class="paper how">
-    <div class="how-text">
+    <div class="how-text how-old">
       <p>It runs on a clock, like a real drive-in. Everyone watching sees the same moment, so you join the show wherever it&rsquo;s at.</p>
       <p>Every night has a theme and a new double feature, listed below. The full show starts at the same moment for everyone: 7:30 PM Pacific, which is <b class="how-dusk"></b> where you are. It runs like tonight&rsquo;s program here.</p>
       <p>Before the show there&rsquo;s a matinee, and after the show there&rsquo;s a late show until midnight. Both play more films from that night&rsquo;s theme back to back, so there&rsquo;s always something on the screen.</p>
+      <p><b>After Saturday, November 14, the Drive-In opens on Saturday nights only</b>, with a new theme and double feature every week, starting November 21.</p>
+    </div>
+    <div class="how-text how-new">
+      <p>It runs on a clock, like a real drive-in. Everyone watching sees the same moment, so you join the show wherever it&rsquo;s at.</p>
+      <p>The Drive-In opens on Saturday nights. The show starts at the same moment for everyone: 7:30 PM Pacific, which is <b class="how-dusk"></b> where you are. There&rsquo;s a cartoon, coming attractions, a serial chapter, then a double feature with the snack-bar intermission in between.</p>
+      <p>Every week brings a new theme and a new double feature, listed below. The rest of the week the lot is closed, and the coming attractions play on the screen.</p>
     </div>
     <div class="how-prog">
-      <h3>Tonight&rsquo;s program</h3>
+      <h3 class="program-h">Tonight&rsquo;s program</h3>
       <ol class="program"></ol>
     </div>
   </section>
-  <h2 class="sec">This week at the drive-in</h2>
+  <h2 class="sec week-title">Coming up at the drive-in</h2>
   <section class="paper weekp"><div class="week-head" aria-hidden="true"><span>Night</span><span>Theme</span><span>Double feature</span><span>Show starts</span></div><ul class="week"></ul></section>
 </div>
 <script src="tv.js?v=20261102b"></script>
-<script src="art/screen/drivein-data.js?v=14"></script>
-<script src="art/screen/theater.js?v=44"></script>
+<script src="art/screen/drivein-data.js?v=15"></script>
+<script src="art/screen/theater.js?v=45"></script>
 <script src="config.js?v=20261107pp"></script>
 <script src="ticker.js?v=4"></script>
 <script src="socials.js?v=2"></script>

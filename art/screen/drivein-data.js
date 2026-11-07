@@ -1,8 +1,1631 @@
-/* The Bee's Knees Drive-In: theme-night features (0 = Monday), coming-attraction trailers,
-   snack-bar intermission reels and a serial that runs one chapter a night. All from the Internet Archive.
-   The "season" block is Christmas at the Drive-In (Dec 1-26): it replaces the theme nights, with set double features on the nights listed. Delete a line to drop something; anything flagged by a viewer comes off here. */
+/* The Bee's Knees Drive-In: one double feature every Saturday night (from Nov 21, 2026), with the theme
+   changing every week (themes 0-6 take turns in order; each theme moves on to its next two films each time it
+   comes back). Also coming-attraction trailers, snack-bar intermission reels and a serial that runs one chapter a show.
+   Every feature is meant to be public domain in the US: no studio titles still under copyright, and no foreign films
+   from after 1925 (their US copyrights were restored in 1996). All from the Internet Archive.
+   The "season" block is Christmas at the Drive-In (Dec 1-26): Saturdays plus Christmas Eve and Christmas night
+   (extraNights), each with the set double feature listed under "nights". Delete a line to drop something; anything
+   flagged by a viewer comes off here.
+   oldThemes: the nightly lineup the Drive-In ran until Saturday Nov 14, 2026. Safe to delete after that. */
 window.DRIVEIN = {
  "themes": {
+  "0": {
+   "name": "Monster Night",
+   "films": [
+    {
+     "title": "House on Haunted Hill",
+     "year": 1959,
+     "gain": 0.87,
+     "src": "https://archive.org/download/house_on_haunted_hill_ipod/house_on_haunted_hill_512kb.mp4",
+     "length": 4483.21,
+     "item": "https://archive.org/details/house_on_haunted_hill_ipod"
+    },
+    {
+     "title": "The Last Man on Earth",
+     "year": 1964,
+     "src": "https://archive.org/download/TheLastManOnEarth_72/the_last_man_on_earth.mp4",
+     "length": 5190.26,
+     "item": "https://archive.org/details/TheLastManOnEarth_72"
+    },
+    {
+     "title": "The Phantom of the Opera",
+     "year": 1925,
+     "gain": 0.78,
+     "src": "https://archive.org/download/ThePhantomoftheOpera/Phantom_of_the_Opera_512kb.mp4",
+     "length": 6388.88,
+     "item": "https://archive.org/details/ThePhantomoftheOpera"
+    },
+    {
+     "title": "Indestructible Man",
+     "year": 1956,
+     "src": "https://archive.org/download/indestructible_man/indestructible_man.mp4",
+     "length": 4262.38,
+     "item": "https://archive.org/details/indestructible_man"
+    },
+    {
+     "title": "Carnival of Souls",
+     "year": 1962,
+     "gain": 1,
+     "src": "https://archive.org/download/CarnivalofSouls/CarnivalOfSouls_512kb.mp4",
+     "length": 4979.58,
+     "item": "https://archive.org/details/CarnivalofSouls"
+    },
+    {
+     "title": "Dr. Jekyll and Mr. Hyde",
+     "year": 1920,
+     "src": "https://archive.org/download/Dr.JekyllAndMr.Hyde1920DirectorJohnS.Robertson/Dr-Jekyll-and-Mr-Hyde-v2.mp4",
+     "length": 4956.08,
+     "item": "https://archive.org/details/Dr.JekyllAndMr.Hyde1920DirectorJohnS.Robertson"
+    },
+    {
+     "title": "Attack of the Giant Leeches",
+     "year": 1959,
+     "gain": 0.64,
+     "src": "https://archive.org/download/cco_attackofthegiantleeches/ccoPublicDomainAttack_of_the_Giant_Leeches_512kb.mp4",
+     "length": 3738.95,
+     "item": "https://archive.org/details/cco_attackofthegiantleeches"
+    },
+    {
+     "title": "The Cabinet of Dr. Caligari",
+     "year": 1920,
+     "src": "https://archive.org/download/DasKabinettdesDoktorCaligariTheCabinetofDrCaligari/The_Cabinet_of_Dr._Caligari_512kb.mp4",
+     "length": 3061.46,
+     "item": "https://archive.org/details/DasKabinettdesDoktorCaligariTheCabinetofDrCaligari"
+    },
+    {
+     "title": "Rogue's Tavern",
+     "year": 1936,
+     "gain": 0.67,
+     "src": "https://archive.org/download/rogues_tavern/rogues_tavern_512kb.mp4",
+     "length": 4158.15,
+     "item": "https://archive.org/details/rogues_tavern"
+    },
+    {
+     "title": "The Devil Bat",
+     "year": 1940,
+     "src": "https://archive.org/download/Devil_Bat_movie/Devil_Bat.mp4",
+     "length": 4093.72,
+     "item": "https://archive.org/details/Devil_Bat_movie"
+    },
+    {
+     "title": "Bluebeard",
+     "year": 1944,
+     "gain": 0.46,
+     "src": "https://archive.org/download/Bluebeard/Bluebeard_512kb.mp4",
+     "length": 4238.03,
+     "item": "https://archive.org/details/Bluebeard"
+    },
+    {
+     "title": "Bowery at Midnight",
+     "year": 1942,
+     "src": "https://archive.org/download/Bowery_at_Midnight/Bowery_at_Midnight_1942.mp4",
+     "length": 3695.64,
+     "item": "https://archive.org/details/Bowery_at_Midnight"
+    },
+    {
+     "title": "The Wasp Woman",
+     "year": 1960,
+     "gain": 1,
+     "src": "https://archive.org/download/The_Wasp_Women/The_Wasp_Women_512kb.mp4",
+     "length": 4352.48,
+     "item": "https://archive.org/details/The_Wasp_Women"
+    },
+    {
+     "title": "Dementia 13",
+     "year": 1963,
+     "src": "https://archive.org/download/dementia-13-1963_202312/Dementia%2013%20(1963).mp4",
+     "length": 4496.27,
+     "item": "https://archive.org/details/dementia-13-1963_202312"
+    },
+    {
+     "title": "The Sadist",
+     "year": 1963,
+     "gain": 0.86,
+     "src": "https://archive.org/download/The_Sadist/THE_SADIST_512kb.mp4",
+     "length": 5497.83,
+     "item": "https://archive.org/details/The_Sadist"
+    },
+    {
+     "title": "The Terror",
+     "year": 1963,
+     "gain": 0.99,
+     "src": "https://archive.org/download/TheTerror/TheTerror_512kb.mp4",
+     "length": 4743.1,
+     "item": "https://archive.org/details/TheTerror"
+    },
+    {
+     "title": "The Corpse Vanishes",
+     "year": 1942,
+     "gain": 0.5,
+     "src": "https://archive.org/download/TheCorpseVanishes/TheCorpseVanishes_512kb.mp4",
+     "length": 3789.65,
+     "item": "https://archive.org/details/TheCorpseVanishes"
+    }
+   ]
+  },
+  "1": {
+   "name": "Film Noir Night",
+   "films": [
+    {
+     "title": "The Stranger",
+     "year": 1946,
+     "gain": 0.51,
+     "src": "https://archive.org/download/TheStranger_0/The_Stranger_512kb.mp4",
+     "length": 5472.94,
+     "item": "https://archive.org/details/TheStranger_0"
+    },
+    {
+     "title": "Scarlet Street",
+     "year": 1945,
+     "src": "https://archive.org/download/ScarletStreet/Scarlet_Street_512kb.mp4",
+     "length": 6086.48,
+     "item": "https://archive.org/details/ScarletStreet"
+    },
+    {
+     "title": "Strange Love of Martha Ivers",
+     "year": 1946,
+     "gain": 1,
+     "src": "https://archive.org/download/Martha_Ivers_movie/Strange_Love_Martha_Ivers_512kb.mp4",
+     "length": 6949.15,
+     "item": "https://archive.org/details/Martha_Ivers_movie"
+    },
+    {
+     "title": "The Great Flamarion",
+     "year": 1945,
+     "src": "https://archive.org/download/Great_Flamarion_1945/Great_Flamarion.mp4",
+     "length": 4653.12,
+     "item": "https://archive.org/details/Great_Flamarion_1945"
+    },
+    {
+     "title": "He Walked By Night",
+     "year": 1948,
+     "gain": 0.92,
+     "src": "https://archive.org/download/He_Walked_By_Night.avi/He_Walked_By_Night_512kb.mp4",
+     "length": 4722.93,
+     "item": "https://archive.org/details/He_Walked_By_Night.avi"
+    },
+    {
+     "title": "The Red House",
+     "year": 1947,
+     "gain": 0.47,
+     "src": "https://archive.org/download/TheRedHouse/The_Red_House_512kb.mp4",
+     "length": 6005.07,
+     "item": "https://archive.org/details/TheRedHouse"
+    },
+    {
+     "title": "The Chase",
+     "year": 1946,
+     "gain": 1,
+     "src": "https://archive.org/download/TheChase_/TheChase_512kb.mp4",
+     "length": 5083.11,
+     "item": "https://archive.org/details/TheChase_"
+    },
+    {
+     "title": "Kansas City Confidential",
+     "year": 1952,
+     "gain": 0.36,
+     "src": "https://archive.org/download/kansascityconfidencial/kansascityconfidencial_512kb.mp4",
+     "length": 5941.24,
+     "item": "https://archive.org/details/kansascityconfidencial"
+    },
+    {
+     "title": "Woman on the Run",
+     "year": 1950,
+     "gain": 1,
+     "src": "https://archive.org/download/Woman_on_the_Run/Woman_on_the_Run_512kb.mp4",
+     "length": 4612.31,
+     "item": "https://archive.org/details/Woman_on_the_Run"
+    },
+    {
+     "title": "The Second Woman",
+     "year": 1951,
+     "gain": 0.66,
+     "src": "https://archive.org/download/The_Second_Woman_/The_Second_Woman__512kb.mp4",
+     "length": 5422.85,
+     "item": "https://archive.org/details/The_Second_Woman_"
+    },
+    {
+     "title": "Jigsaw",
+     "year": 1949,
+     "gain": 0.82,
+     "src": "https://archive.org/download/Jigsaw_/Jigsaw_512kb.mp4",
+     "length": 4287,
+     "item": "https://archive.org/details/Jigsaw_"
+    },
+    {
+     "title": "Whistle Stop",
+     "year": 1946,
+     "gain": 0.73,
+     "src": "https://archive.org/download/Whistle_Stop/Whistle_Stop_512kb.mp4",
+     "length": 5055.68,
+     "item": "https://archive.org/details/Whistle_Stop"
+    },
+    {
+     "title": "Port of New York",
+     "year": 1949,
+     "gain": 0.38,
+     "src": "https://archive.org/download/Port_of_New_York/Port_of_New_York_512kb.mp4",
+     "length": 4850.11,
+     "item": "https://archive.org/details/Port_of_New_York"
+    },
+    {
+     "title": "Fear in the Night",
+     "year": 1947,
+     "gain": 1,
+     "src": "https://archive.org/download/Fear_in_the_Night/Fear_in_the_Night_512kb.mp4",
+     "length": 4246.83,
+     "item": "https://archive.org/details/Fear_in_the_Night"
+    },
+    {
+     "title": "The Big Combo",
+     "year": "",
+     "gain": 0.24,
+     "src": "https://archive.org/download/TheBigComboCornellWilde1955BOO/TheBigComboCornellWilde1955BOO_512kb.mp4",
+     "length": 5020.42,
+     "item": "https://archive.org/details/TheBigComboCornellWilde1955BOO"
+    },
+    {
+     "title": "Timetable",
+     "year": 1956,
+     "gain": 0.78,
+     "src": "https://archive.org/download/Timetable1956/Timetable1956.mp4",
+     "length": 4820.85,
+     "item": "https://archive.org/details/Timetable1956"
+    },
+    {
+     "title": "C-Man",
+     "year": 1949,
+     "gain": 1,
+     "src": "https://archive.org/download/C-Man/C-Man_512kb.mp4",
+     "length": 4586.32,
+     "item": "https://archive.org/details/C-Man"
+    },
+    {
+     "title": "Trapped",
+     "year": 1949,
+     "gain": 0.7,
+     "src": "https://archive.org/download/Trapped_/Trapped_512kb.mp4",
+     "length": 4684.66,
+     "item": "https://archive.org/details/Trapped_"
+    },
+    {
+     "title": "Quicksand",
+     "year": 1950,
+     "gain": 1,
+     "src": "https://archive.org/download/quicksand./QUICKSAND_512kb.mp4",
+     "length": 4800.93,
+     "item": "https://archive.org/details/quicksand."
+    },
+    {
+     "title": "The Hoodlum",
+     "year": 1951,
+     "gain": 1,
+     "src": "https://archive.org/download/The_Hoodlum/The_Hoodlum_512kb.mp4",
+     "length": 3707.2,
+     "item": "https://archive.org/details/The_Hoodlum"
+    },
+    {
+     "title": "Detour",
+     "year": 1945,
+     "gain": 1,
+     "src": "https://archive.org/download/Detour/Detour_512kb.mp4",
+     "item": "https://archive.org/details/Detour",
+     "length": 4058.32
+    }
+   ]
+  },
+  "2": {
+   "name": "Sci-Fi Night",
+   "films": [
+    {
+     "title": "Killers From Space",
+     "year": 1954,
+     "gain": 0.89,
+     "src": "https://archive.org/download/Killers_from_space/Killers_from_space_512kb.mp4",
+     "length": 4254.58,
+     "item": "https://archive.org/details/Killers_from_space"
+    },
+    {
+     "title": "Rocketship X-M",
+     "year": 1950,
+     "src": "https://archive.org/download/rocketship.-x-m.-1950/Rocketship%20X-M%20(1950)/mp4/Rocketship.X-M.1950.ia.mp4",
+     "length": 4765.06,
+     "item": "https://archive.org/details/rocketship.-x-m.-1950"
+    },
+    {
+     "title": "Planet Outlaws",
+     "year": 1953,
+     "gain": 0.25,
+     "src": "https://archive.org/download/planet_outlaws_ipod/planet_outlaws_512kb.mp4",
+     "length": 4117.09,
+     "item": "https://archive.org/details/planet_outlaws_ipod"
+    },
+    {
+     "title": "Flight to Mars",
+     "year": 1951,
+     "src": "https://archive.org/download/flight-to-mars-1951/Flight%20to%20Mars%20%281951%29%20Sci-Fi%20Full%20Length%20Film-FSY-dZEolWk.mp4",
+     "length": 4249.21,
+     "item": "https://archive.org/details/flight-to-mars-1951"
+    },
+    {
+     "title": "The Phantom Creeps",
+     "year": 1939,
+     "gain": 0.98,
+     "src": "https://archive.org/download/ThePhantomCreeps/ThePhantomCreeps_512kb.mp4",
+     "length": 4700.1,
+     "item": "https://archive.org/details/ThePhantomCreeps"
+    },
+    {
+     "title": "Cat-Women of the Moon",
+     "year": 1953,
+     "src": "https://archive.org/download/CatWomenOfTheMoon/CatWomenOfTheMoon.mp4",
+     "length": 3818.36,
+     "item": "https://archive.org/details/CatWomenOfTheMoon"
+    },
+    {
+     "title": "The Phantom Planet",
+     "year": 1961,
+     "gain": 0.81,
+     "src": "https://archive.org/download/Phantom_Planet/The_Phantom_Planet_512kb.mp4",
+     "length": 4924.55,
+     "item": "https://archive.org/details/Phantom_Planet"
+    },
+    {
+     "title": "Robot Monster",
+     "year": 1953,
+     "src": "https://archive.org/download/robot-monster-1953/Robot%20Monster%20%281953%29.mp4",
+     "length": 3755.57,
+     "item": "https://archive.org/details/robot-monster-1953"
+    },
+    {
+     "title": "The Yesterday Machine",
+     "year": 1963,
+     "gain": 0.47,
+     "src": "https://archive.org/download/TheYesterdayMachine1963/TheYesterdayMachine1963_512kb.mp4",
+     "length": 4708.7,
+     "item": "https://archive.org/details/TheYesterdayMachine1963"
+    },
+    {
+     "title": "Beyond the Time Barrier",
+     "year": 1960,
+     "src": "https://archive.org/download/beyond.the.-time.-barrier.-1960/Beyond%20the%20Time%20Barrier%20(1960)/mp4/Beyond.the.Time.Barrier.1960.ia.mp4",
+     "length": 4453.62,
+     "item": "https://archive.org/details/beyond.the.-time.-barrier.-1960"
+    },
+    {
+     "title": "Phantom From Space",
+     "year": 1953,
+     "gain": 0.79,
+     "src": "https://archive.org/download/Phantom_From_Space/Phantom_From_Space_512kb.mp4",
+     "length": 4341.67,
+     "item": "https://archive.org/details/Phantom_From_Space"
+    },
+    {
+     "title": "The Amazing Transparent Man",
+     "year": 1960,
+     "src": "https://archive.org/download/TheAmazingTransparentMan1960/the-amazing-transparent-man_512kb.mp4",
+     "length": 3437.71,
+     "item": "https://archive.org/details/TheAmazingTransparentMan1960"
+    },
+    {
+     "title": "Unknown World",
+     "year": 1951,
+     "gain": 0.38,
+     "src": "https://archive.org/download/UnknownWorld/UnknownWorld_512kb.mp4",
+     "length": 4437.37,
+     "item": "https://archive.org/details/UnknownWorld"
+    },
+    {
+     "title": "Plan 9 from Outer Space",
+     "year": 1959,
+     "src": "https://archive.org/download/plan-9-from-outer-space_202009/Plan%209%20from%20Outer%20Space.mp4",
+     "length": 4747.02,
+     "item": "https://archive.org/details/plan-9-from-outer-space_202009"
+    }
+   ]
+  },
+  "3": {
+   "name": "Musical Romance Night",
+   "films": [
+    {
+     "title": "Second Chorus",
+     "year": 1940,
+     "gain": 0.32,
+     "src": "https://archive.org/download/second_chorus_1940/second_chorus_512kb.mp4",
+     "length": 5017.58,
+     "item": "https://archive.org/details/second_chorus_1940"
+    },
+    {
+     "title": "Made for Each Other",
+     "year": 1939,
+     "src": "https://archive.org/download/made_for_each_other_film/made_for_each_other_512kb.mp4",
+     "length": 5429.46,
+     "item": "https://archive.org/details/made_for_each_other_film"
+    },
+    {
+     "title": "Penny Serenade",
+     "year": 1941,
+     "gain": 0.87,
+     "src": "https://archive.org/download/penny_serenade/penny_serenade_512kb.mp4",
+     "length": 7147.21,
+     "item": "https://archive.org/details/penny_serenade"
+    },
+    {
+     "title": "Swing High, Swing Low",
+     "year": 1937,
+     "src": "https://archive.org/download/swinghi_swinglo/swinghi_swinglo_512kb.mp4",
+     "length": 4947.78,
+     "item": "https://archive.org/details/swinghi_swinglo"
+    },
+    {
+     "title": "That Uncertain Feeling",
+     "year": 1941,
+     "gain": 0.95,
+     "src": "https://archive.org/download/ThatUncertainFeeling/ThatUncertainFeeling_512kb.mp4",
+     "length": 4998.09,
+     "item": "https://archive.org/details/ThatUncertainFeeling"
+    },
+    {
+     "title": "Rhythm in the Clouds",
+     "year": 1937,
+     "gain": 0.74,
+     "src": "https://archive.org/download/Rhythm_in_the_Clouds/RhythmintheClouds_512kb.mp4",
+     "length": 3166.99,
+     "item": "https://archive.org/details/Rhythm_in_the_Clouds"
+    },
+    {
+     "title": "A Star Is Born",
+     "year": 1937,
+     "gain": 0.67,
+     "src": "https://archive.org/download/AStarIsBorn1937FullHDMovie/A%20Star%20Is%20Born%20%281937%29%20Full%20HD%20Movie.mp4",
+     "length": 6658.02,
+     "item": "https://archive.org/details/AStarIsBorn1937FullHDMovie"
+    },
+    {
+     "title": "Royal Wedding",
+     "year": 1951,
+     "gain": 0.73,
+     "src": "https://archive.org/download/royal_wedding/royal_wedding_512kb.mp4",
+     "length": 5497.39,
+     "item": "https://archive.org/details/royal_wedding"
+    },
+    {
+     "title": "Love Affair",
+     "year": 1939,
+     "gain": 1,
+     "src": "https://archive.org/download/love-affair-1939-irene-dunne-eng/Love%20Affair%20%281939%29%20Irene%20Dunne%20Eng.mp4",
+     "length": 5190.24,
+     "item": "https://archive.org/details/love-affair-1939-irene-dunne-eng"
+    },
+    {
+     "title": "My Man Godfrey",
+     "year": 1936,
+     "gain": 0.68,
+     "src": "https://archive.org/download/MyManGodfrey1936/MyManGodfrey1936_512kb.mp4",
+     "length": 5687.07,
+     "item": "https://archive.org/details/MyManGodfrey1936"
+    },
+    {
+     "title": "Pot o' Gold",
+     "year": 1941,
+     "gain": 1,
+     "src": "https://archive.org/download/pot_o_gold/pot_o_gold_512kb.mp4",
+     "length": 5130.89,
+     "item": "https://archive.org/details/pot_o_gold"
+    },
+    {
+     "title": "The Animal Kingdom",
+     "year": 1932,
+     "gain": 0.39,
+     "src": "https://archive.org/download/Animal_Kingdom/Animal_Kingdom_512kb.mp4",
+     "length": 5074.37,
+     "item": "https://archive.org/details/Animal_Kingdom"
+    },
+    {
+     "title": "Holiday",
+     "year": 1930,
+     "gain": 0.83,
+     "src": "https://archive.org/download/Holiday1930AnnHardingMaryAstorEdwardEverettHortonRobertAmesHeddaHopper/Holiday.1930.edwardHGriffith.mp4",
+     "length": 5441.68,
+     "item": "https://archive.org/details/Holiday1930AnnHardingMaryAstorEdwardEverettHortonRobertAmesHeddaHopper"
+    },
+    {
+     "title": "Lucky Partners",
+     "year": 1940,
+     "gain": 0.31,
+     "src": "https://archive.org/download/lucky-partners/Lucky_Partners.mp4",
+     "length": 5922.48,
+     "item": "https://archive.org/details/lucky-partners"
+    },
+    {
+     "title": "Make a Wish",
+     "year": 1937,
+     "gain": 1,
+     "src": "https://archive.org/download/Make_A_Wish_1937/Make-A-Wish-1937_1.mp4",
+     "length": 4555.66,
+     "item": "https://archive.org/details/Make_A_Wish_1937"
+    },
+    {
+     "title": "Something to Sing About",
+     "year": 1937,
+     "gain": 1,
+     "src": "https://archive.org/download/SomethingtoSingAbout/SomethingtoSingAbout_512kb.mp4",
+     "length": 5208.44,
+     "item": "https://archive.org/details/SomethingtoSingAbout"
+    },
+    {
+     "title": "Hi Diddle Diddle",
+     "year": 1943,
+     "gain": 0.68,
+     "src": "https://archive.org/download/HiDiddleDiddle/HiDiddleDiddle1943_512kb.mp4",
+     "length": 4378.52,
+     "item": "https://archive.org/details/HiDiddleDiddle"
+    }
+   ]
+  },
+  "4": {
+   "name": "Comedy Night",
+   "films": [
+    {
+     "title": "Charlie Chaplin Festival",
+     "year": 1938,
+     "gain": 1,
+     "src": "https://archive.org/download/charlie_chaplin_film_fest/charlie_chaplin_film_fest_512kb.mp4",
+     "length": 4646.38,
+     "item": "https://archive.org/details/charlie_chaplin_film_fest"
+    },
+    {
+     "title": "Safety Last!",
+     "year": 1923,
+     "src": "https://archive.org/download/SafetyLastHaroldLloyd1923.FullMovieexcellentQuality./Safety%20Last%20-%20Harold%20Lloyd%201923.%20Full%20movie%2Cexcellent%20quality..mp4",
+     "length": 4413.72,
+     "item": "https://archive.org/details/SafetyLastHaroldLloyd1923.FullMovieexcellentQuality."
+    },
+    {
+     "title": "His Girl Friday",
+     "year": 1940,
+     "gain": 1,
+     "src": "https://archive.org/download/his_girl_friday/his_girl_friday_512kb.mp4",
+     "length": 5504.52,
+     "item": "https://archive.org/details/his_girl_friday"
+    },
+    {
+     "title": "Sherlock Jr.",
+     "year": 1924,
+     "src": "https://archive.org/download/sherlockjr1924_201909/Sherlock%20Jr.%20-%20Buster%20Keaton%20%281924%29%20HD%20%5B720p%5D.mp4",
+     "length": 2673.85,
+     "item": "https://archive.org/details/sherlockjr1924_201909"
+    },
+    {
+     "title": "My Favorite Brunette",
+     "year": 1947,
+     "gain": 0.88,
+     "src": "https://archive.org/download/my_favorite_brunette/my_favorite_brunette_512kb.mp4",
+     "length": 5212.47,
+     "item": "https://archive.org/details/my_favorite_brunette"
+    },
+    {
+     "title": "Steamboat Bill, Jr.",
+     "year": 1928,
+     "src": "https://archive.org/download/SteamboatBillJr/Steamboat_Bill.Jr_512kb.mp4",
+     "length": 4147.91,
+     "item": "https://archive.org/details/SteamboatBillJr"
+    },
+    {
+     "title": "The Flying Deuces",
+     "year": 1939,
+     "gain": 0.56,
+     "src": "https://archive.org/download/TheFlyingDeuces/The_Flying_Deuces_512kb.mp4",
+     "length": 4077.61,
+     "item": "https://archive.org/details/TheFlyingDeuces"
+    },
+    {
+     "title": "The Inspector General",
+     "year": 1949,
+     "src": "https://archive.org/download/the_inspector_general/the_inspector_general_512kb.mp4",
+     "length": 6106.3,
+     "item": "https://archive.org/details/the_inspector_general"
+    },
+    {
+     "title": "Behave Yourself",
+     "year": 1951,
+     "gain": 0.55,
+     "src": "https://archive.org/download/behave_yourself_ipod/behave_yourself_512kb.mp4",
+     "length": 4796.76,
+     "item": "https://archive.org/details/behave_yourself_ipod"
+    },
+    {
+     "title": "Father's Little Dividend",
+     "year": 1951,
+     "src": "https://archive.org/download/Fathers_Little_Dividend.avi/Fathers_Little_Dividend.mp4",
+     "length": 4736.88,
+     "item": "https://archive.org/details/Fathers_Little_Dividend.avi"
+    },
+    {
+     "title": "Angel on My Shoulder",
+     "year": 1946,
+     "gain": 1,
+     "src": "https://archive.org/download/angel_on_my_shoulder/angel_on_my_shoulder_512kb.mp4",
+     "length": 6081.28,
+     "item": "https://archive.org/details/angel_on_my_shoulder"
+    },
+    {
+     "title": "Life with Father",
+     "year": 1947,
+     "src": "https://archive.org/download/LifeWithFather/LifeWithFather_512kb.mp4",
+     "length": 7056.92,
+     "item": "https://archive.org/details/LifeWithFather"
+    },
+    {
+     "title": "At War with the Army",
+     "year": 1950,
+     "gain": 1,
+     "src": "https://archive.org/download/AtWarWithTheArmy/AtWarWithTheArmy_512kb.mp4",
+     "length": 5431.44,
+     "item": "https://archive.org/details/AtWarWithTheArmy"
+    },
+    {
+     "title": "Jack and the Beanstalk",
+     "year": 1952,
+     "gain": 0.41,
+     "src": "https://archive.org/download/cco_jackandthebeanstalk/ccoPublicDomainJack_and_the_Beanstalk_512kb.mp4",
+     "length": 4898.37,
+     "item": "https://archive.org/details/cco_jackandthebeanstalk"
+    },
+    {
+     "title": "Girl o' My Dreams",
+     "year": 1934,
+     "gain": 1,
+     "src": "https://archive.org/download/girl_o_my_dreams/girl_o_my_dreams_512kb.mp4",
+     "length": 3770.63,
+     "item": "https://archive.org/details/girl_o_my_dreams"
+    },
+    {
+     "title": "The General",
+     "year": 1927,
+     "gain": 1,
+     "src": "https://archive.org/download/TheGeneral/The_General_512kb.mp4",
+     "length": 4039.15,
+     "item": "https://archive.org/details/TheGeneral"
+    }
+   ]
+  },
+  "5": {
+   "name": "Creature Feature",
+   "films": [
+    {
+     "title": "It's Alive",
+     "year": 1969,
+     "gain": 1,
+     "src": "https://archive.org/download/ItsAlive/ItsAlive_512kb.mp4",
+     "length": 4815.81,
+     "item": "https://archive.org/details/ItsAlive"
+    },
+    {
+     "title": "Night of the Living Dead",
+     "year": 1968,
+     "src": "https://archive.org/download/night_of_the_living_dead_dvd/Night.mp4",
+     "length": 5731.83,
+     "item": "https://archive.org/details/night_of_the_living_dead_dvd"
+    },
+    {
+     "title": "Teenagers From Outer Space",
+     "year": 1959,
+     "gain": 0.63,
+     "src": "https://archive.org/download/TeenagersFromOuterSpace1959/TeenagersFromOuterSpace1959DavidLove.mp4",
+     "length": 5128.95,
+     "item": "https://archive.org/details/TeenagersFromOuterSpace1959"
+    },
+    {
+     "title": "The Little Shop of Horrors",
+     "year": 1960,
+     "src": "https://archive.org/download/TheLittleShopOfHorrors1960_765/TheLittleShopOfHorrors1960.mp4",
+     "length": 4288.49,
+     "item": "https://archive.org/details/TheLittleShopOfHorrors1960_765"
+    },
+    {
+     "title": "The Brain That Wouldn't Die",
+     "year": 1962,
+     "gain": 0.83,
+     "src": "https://archive.org/download/TheBrainThatWouldntDie_165/TheBrainThatWouldNotDie1962.mp4",
+     "length": 4976.97,
+     "item": "https://archive.org/details/TheBrainThatWouldntDie_165"
+    },
+    {
+     "title": "A Bucket of Blood",
+     "year": 1959,
+     "src": "https://archive.org/download/ABucketofBlood/Bucket_1959_512kb.mp4",
+     "length": 3928.19,
+     "item": "https://archive.org/details/ABucketofBlood"
+    },
+    {
+     "title": "Zontar the Thing from Venus",
+     "year": 1966,
+     "gain": 0.86,
+     "src": "https://archive.org/download/Zontar_Thing_From_Venus/Zontar_the_Thing_From_Venus_512kb.mp4",
+     "length": 4818,
+     "item": "https://archive.org/details/Zontar_Thing_From_Venus"
+    },
+    {
+     "title": "The Hideous Sun Demon",
+     "year": 1958,
+     "src": "https://archive.org/download/the.-hideous.-sun.-demon.-1958/The%20Hideous%20Sun%20Demon%20%281958%29/mp4/The.Hideous.Sun.Demon.1958.ia.mp4",
+     "length": 4350.11,
+     "item": "https://archive.org/details/the.-hideous.-sun.-demon.-1958"
+    },
+    {
+     "title": "The Giant Gila Monster",
+     "year": "",
+     "gain": 1,
+     "src": "https://archive.org/download/TheGiantGilaMonster/The_Giant_Gila_Monster.mp4",
+     "length": 4423.05,
+     "item": "https://archive.org/details/TheGiantGilaMonster"
+    },
+    {
+     "title": "Creature from the Haunted Sea",
+     "year": 1961,
+     "src": "https://archive.org/download/CreatureFromTheHauntedSea/CreatureFromTheHauntedSea.mp4",
+     "length": 4473.05,
+     "item": "https://archive.org/details/CreatureFromTheHauntedSea"
+    },
+    {
+     "title": "Beast from Haunted Cave",
+     "year": "",
+     "gain": 1,
+     "src": "https://archive.org/download/BeastFromHauntedCave/BeastFromHauntedCave_512kb.mp4",
+     "length": 4316.01,
+     "item": "https://archive.org/details/BeastFromHauntedCave"
+    },
+    {
+     "title": "Teenage Zombies",
+     "year": 1959,
+     "src": "https://archive.org/download/Teenage_Zombies/Teenage_Zombies.mp4",
+     "length": 4225.06,
+     "item": "https://archive.org/details/Teenage_Zombies"
+    },
+    {
+     "title": "Night of the Blood Beast",
+     "year": 1958,
+     "gain": 1,
+     "src": "https://archive.org/download/NightOfTheBloodBeast1958/NightOfTheBloodBeast1958_512kb.mp4",
+     "length": 3742.67,
+     "item": "https://archive.org/details/NightOfTheBloodBeast1958"
+    },
+    {
+     "title": "The Beast of Yucca Flats",
+     "year": 1961,
+     "src": "https://archive.org/download/TheBeastOfYuccaFlats1961/TheBeastOfYuccaFlats1961.mp4",
+     "length": 3236.44,
+     "item": "https://archive.org/details/TheBeastOfYuccaFlats1961"
+    }
+   ]
+  },
+  "6": {
+   "name": "Mystery Night",
+   "films": [
+    {
+     "title": "Dressed To Kill",
+     "year": 1946,
+     "gain": 0.87,
+     "src": "https://archive.org/download/dressed_to_kill/dressed_to_kill_512kb.mp4",
+     "length": 4290.45,
+     "item": "https://archive.org/details/dressed_to_kill"
+    },
+    {
+     "title": "Charade",
+     "year": 1963,
+     "src": "https://archive.org/download/charade-1963-cary-grant-audrey-hepburn-walter-matthau-1080p-reup/Charade%20(1963)%20Cary%20Grant%2C%20Audrey%20Hepburn%2C%20Walter%20Matthau%2C%20James%20Coburn%2C%20George%20Kennedy%3B%201080p%5D.ia.mp4",
+     "length": 6802.77,
+     "item": "https://archive.org/details/charade-1963-cary-grant-audrey-hepburn-walter-matthau-1080p-reup"
+    },
+    {
+     "title": "Great Guy",
+     "year": 1936,
+     "gain": 0.76,
+     "src": "https://archive.org/download/Great_Guy.avi/Great_Guy_512kb.mp4",
+     "length": 3970.43,
+     "item": "https://archive.org/details/Great_Guy.avi"
+    },
+    {
+     "title": "Beat the Devil",
+     "year": 1953,
+     "src": "https://archive.org/download/BeatTheDevil1953/BeatTheDevil1954.mp4",
+     "length": 5356.82,
+     "item": "https://archive.org/details/BeatTheDevil1953"
+    },
+    {
+     "title": "The File On Thelma Jordan",
+     "year": 1950,
+     "gain": 0.52,
+     "src": "https://archive.org/download/TheFileonThelmaJordanBarbaraStanwyck1950ripHJXvid2/TheFileonThelmaJordanBarbaraStanwyck1950ripHJXvid2_512kb.mp4",
+     "length": 5999.5,
+     "item": "https://archive.org/details/TheFileonThelmaJordanBarbaraStanwyck1950ripHJXvid2"
+    },
+    {
+     "title": "The Amazing Mr. X",
+     "year": 1948,
+     "src": "https://archive.org/download/TheAmazingMr.X1948Avi/The_Amazing_Mr_X.mp4",
+     "length": 4669.39,
+     "item": "https://archive.org/details/TheAmazingMr.X1948Avi"
+    },
+    {
+     "title": "Terror By Night",
+     "year": 1946,
+     "gain": 1,
+     "src": "https://archive.org/download/TerrorByNight1946/TerrorByNight.mp4",
+     "length": 3428.31,
+     "item": "https://archive.org/details/TerrorByNight1946"
+    },
+    {
+     "title": "The Bat",
+     "year": 1959,
+     "src": "https://archive.org/download/The_Bat_Vincent_Price/The_Bat_24fps_512kb.mp4",
+     "length": 4895.91,
+     "item": "https://archive.org/details/The_Bat_Vincent_Price"
+    },
+    {
+     "title": "Fog Island",
+     "year": 1945,
+     "gain": 0.2,
+     "src": "https://archive.org/download/Fog_island_1945/Fog_Island_1945_512kb.mp4",
+     "length": 4115.94,
+     "item": "https://archive.org/details/Fog_island_1945"
+    },
+    {
+     "title": "The Screaming Skull",
+     "year": 1958,
+     "src": "https://archive.org/download/TheScreamingSkull/TheScreamingSkull.mp4",
+     "length": 4041.26,
+     "item": "https://archive.org/details/TheScreamingSkull"
+    },
+    {
+     "title": "The Woman in Green",
+     "year": 1945,
+     "src": "https://archive.org/download/TheWomanInGreen1945/TheWomanInGreen.mp4",
+     "length": 3868.24,
+     "item": "https://archive.org/details/TheWomanInGreen1945"
+    },
+    {
+     "title": "Sherlock Holmes and the Secret Weapon",
+     "year": 1942,
+     "src": "https://archive.org/download/secret_weapon/sherlock_holmes_and_the_secret_weapon.mp4",
+     "length": 4071.27,
+     "item": "https://archive.org/details/secret_weapon"
+    },
+    {
+     "title": "D.O.A.",
+     "year": 1950,
+     "src": "https://archive.org/download/doa_ipod/doa_512kb.mp4",
+     "length": 4989.79,
+     "item": "https://archive.org/details/doa_ipod"
+    },
+    {
+     "title": "The Hitch-Hiker",
+     "year": 1953,
+     "src": "https://archive.org/download/Hitch_Hiker/Hitch-Hiker.mp4",
+     "length": 4247.94,
+     "item": "https://archive.org/details/Hitch_Hiker"
+    },
+    {
+     "title": "Suddenly",
+     "year": 1954,
+     "src": "https://archive.org/download/suddenly/suddenly.mp4",
+     "length": 4533.5,
+     "item": "https://archive.org/details/suddenly"
+    },
+    {
+     "title": "Too Late for Tears",
+     "year": 1949,
+     "src": "https://archive.org/download/TooLateForTears1949/Too%20Late%20for%20Tears%20(1949).mp4",
+     "length": 5608.27,
+     "item": "https://archive.org/details/TooLateForTears1949"
+    }
+   ]
+  }
+ },
+ "trailers": [
+  {
+   "title": "Night of the living dead Trailer",
+   "year": "",
+   "gain": 0.63,
+   "src": "https://archive.org/download/NightOfTheLivingDeadTrailer/NightLivingDeadTrailer_512kb.mp4",
+   "length": 95,
+   "item": "https://archive.org/details/NightOfTheLivingDeadTrailer"
+  },
+  {
+   "title": "REVENGE OF THE CREATURE trailer",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/RevengeOfTheCreatureTrailer/RevengeOfTheCreatureTrailer.mp4",
+   "length": 150.56,
+   "item": "https://archive.org/details/RevengeOfTheCreatureTrailer"
+  },
+  {
+   "title": "FRANKENSTEINtrailer",
+   "year": 1931,
+   "gain": 1,
+   "src": "https://archive.org/download/Frankenstein1931Trailer/Frankenstein1931Trailer.mp4",
+   "length": 100.68,
+   "item": "https://archive.org/details/Frankenstein1931Trailer"
+  },
+  {
+   "title": "The Blob trailer",
+   "year": 1958,
+   "gain": 1,
+   "src": "https://archive.org/download/TheBlobTrailer/The_Blob_trailer_512kb.mp4",
+   "length": 115.52,
+   "item": "https://archive.org/details/TheBlobTrailer"
+  },
+  {
+   "title": "Abbott and Costello Go To Mars trailer",
+   "year": 1953,
+   "gain": 1,
+   "src": "https://archive.org/download/Abbott_and_Costello_Go_To_Mars_trailer/Abbott_and_Costello_Go_To_Mars_trailer_512kb.mp4",
+   "length": 51.87,
+   "item": "https://archive.org/details/Abbott_and_Costello_Go_To_Mars_trailer"
+  },
+  {
+   "title": "Abbott and Costello Meet the Invisible Man trailer",
+   "year": 1951,
+   "gain": 1,
+   "src": "https://archive.org/download/Abbott_and_Costello_Meet_the_Invisible_Man_trailer/Abbott_and_Costello_Meet_the_Invisible_Man_trailer_512kb.mp4",
+   "length": 118.18,
+   "item": "https://archive.org/details/Abbott_and_Costello_Meet_the_Invisible_Man_trailer"
+  },
+  {
+   "title": "BONNIE SCOTLAND trailer",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/BonnieScotlandTrailer/BonnieScotlandTrailer.mp4",
+   "length": 149.44,
+   "item": "https://archive.org/details/BonnieScotlandTrailer"
+  },
+  {
+   "title": "PACK UP YOUR TROUBLES trailer",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/PackUpYourTroublesTrailer/PackUpYourTroublesTrailer.mp4",
+   "length": 125.16,
+   "item": "https://archive.org/details/PackUpYourTroublesTrailer"
+  },
+  {
+   "title": "Abbott and Costello Meet Frankenstein trailer",
+   "year": 1948,
+   "gain": 0.73,
+   "src": "https://archive.org/download/Abbott_and_Costello_Meet_Frankenstein_trailer/Abbott_and_Costello_Meet_Frankenstein_trailer_512kb.mp4",
+   "length": 98.43,
+   "item": "https://archive.org/details/Abbott_and_Costello_Meet_Frankenstein_trailer"
+  },
+  {
+   "title": "The Big Sleep trailer",
+   "year": 1946,
+   "gain": 1,
+   "src": "https://archive.org/download/The_Big_Sleep_trailer/The_Big_Sleep_trailer_512kb.mp4",
+   "length": 112.46,
+   "item": "https://archive.org/details/The_Big_Sleep_trailer"
+  },
+  {
+   "title": "Hold that Ghost trailer",
+   "year": 1941,
+   "gain": 0.85,
+   "src": "https://archive.org/download/Hold_that_Ghost_trailer/Hold_that_Ghost_trailer_512kb.mp4",
+   "length": 100.56,
+   "item": "https://archive.org/details/Hold_that_Ghost_trailer"
+  },
+  {
+   "title": "DEVIL GIRL FROM MARS trailer",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/DevilGirlFromMarsTrailer/DevilGirlFromMarsTrailer.mp4",
+   "length": 106.12,
+   "item": "https://archive.org/details/DevilGirlFromMarsTrailer"
+  },
+  {
+   "title": "SOME LIKE IT HOT trailer",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/SomeLikeItHotTrailer/SomeLikeItHotTrailer.mp4",
+   "length": 139.91,
+   "item": "https://archive.org/details/SomeLikeItHotTrailer"
+  },
+  {
+   "title": "Vertigo theatrical trailer",
+   "year": 1958,
+   "gain": 1,
+   "src": "https://archive.org/download/VertigoTheatricalTrailer/vertigo1958trailer.mp4",
+   "length": 137.96,
+   "item": "https://archive.org/details/VertigoTheatricalTrailer"
+  },
+  {
+   "title": "THE TIME OF THEIR LIVES trailer",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/TheTimeOfTheirLivesTrailer/TheTimeOfTheirLivesTrailer.mp4",
+   "length": 150.88,
+   "item": "https://archive.org/details/TheTimeOfTheirLivesTrailer"
+  },
+  {
+   "title": "The Thin Man trailer",
+   "year": 1934,
+   "gain": 1,
+   "src": "https://archive.org/download/Thin_Man_trailer/The_Thin_Man_trailer_512kb.mp4",
+   "length": 196.96,
+   "item": "https://archive.org/details/Thin_Man_trailer"
+  },
+  {
+   "title": "Love Me Tender",
+   "year": 1956,
+   "gain": 0.31,
+   "src": "https://archive.org/download/1956TheatricalTrailerForFilmloveMeTender/LoveMe-Tender-1956_512kb.mp4",
+   "length": 135.07,
+   "item": "https://archive.org/details/1956TheatricalTrailerForFilmloveMeTender"
+  },
+  {
+   "title": "PLAN 9 FROM OUTER SPACE trailer",
+   "year": "",
+   "gain": 0.38,
+   "src": "https://archive.org/download/Plan9FromOuterSpaceTrailer/Plan9FromOuterSpaceTrailet.mp4",
+   "length": 98.91,
+   "item": "https://archive.org/details/Plan9FromOuterSpaceTrailer"
+  },
+  {
+   "title": "After the Thin Man trailer",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/After_The_Thin_Man_trailer/After_the_Thin_Man_trailer_512kb.mp4",
+   "length": 174.13,
+   "item": "https://archive.org/details/After_The_Thin_Man_trailer"
+  }
+ ],
+ "welcome": [
+  {
+   "title": "Welcome to the Motor-In (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/Drive-inWelcomeBw/Drive-in--WelcomeBw_512kb.mp4",
+   "length": 113.81,
+   "item": "https://archive.org/details/Drive-inWelcomeBw"
+  },
+  {
+   "title": "A Hearty Welcome to Our Drive-In Theatre (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/DriveInWelcomeToTheDriveInNightSky/DriveIn-WelcomeToTheDriveIn-NightSky.mp4",
+   "length": 62.73,
+   "item": "https://archive.org/details/DriveInWelcomeToTheDriveInNightSky"
+  }
+ ],
+ "comingAttractions": [
+  {
+   "title": "Prevues of Coming Attractions: Marquee (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/Drive-inComingAttractions-marquee/Drive-in--ComingAttractions-marquee_512kb.mp4",
+   "length": 15.41,
+   "item": "https://archive.org/details/Drive-inComingAttractions-marquee"
+  },
+  {
+   "title": "Coming Attractions (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/Drive-inComingAttractionsBw/Drive-in--ComingAttractionsBw_512kb.mp4",
+   "length": 4.74,
+   "item": "https://archive.org/details/Drive-inComingAttractionsBw"
+  },
+  {
+   "title": "Prevues of Coming Attractions: Colorsplash (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/DriveIn-PrevuesOfComingAttractions-Colorsplash/DriveIn-PrevuesOfComingAttractions-Colorsplash_512kb.mp4",
+   "length": 12.15,
+   "item": "https://archive.org/details/DriveIn-PrevuesOfComingAttractions-Colorsplash"
+  },
+  {
+   "title": "Coming Attractions: Windmill (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/DriveIn-ComingAttractions-Windmill/DriveIn-ComingAttractions-Windmill_512kb.mp4",
+   "length": 12.61,
+   "item": "https://archive.org/details/DriveIn-ComingAttractions-Windmill"
+  },
+  {
+   "title": "Prevues of Coming Attractions: Passage (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/Drive-inPreviewsOfComingAttractions-passage/Drive-in--PreviewsOfComingAttractions-passage-_512kb.mp4",
+   "length": 12.45,
+   "item": "https://archive.org/details/Drive-inPreviewsOfComingAttractions-passage"
+  },
+  {
+   "title": "Prevues of Coming Attractions: Colorgloss (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.62,
+   "src": "https://archive.org/download/Drive-in--ComingAttractions-colorgloss/Drive-n--ComingAttractions-colorgloss_512kb.mp4",
+   "length": 13.48,
+   "item": "https://archive.org/details/Drive-in--ComingAttractions-colorgloss"
+  }
+ ],
+ "intermission": [
+  {
+   "title": "Snack Bar Mom (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.83,
+   "src": "https://archive.org/download/SnackBarMom/snackbar_mom.mp4",
+   "length": 32.57,
+   "item": "https://archive.org/details/SnackBarMom"
+  },
+  {
+   "title": "Snack Bar Space Animation (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.29,
+   "src": "https://archive.org/download/SnackBarCartoonSpace/snackbar_space_cartoon.mp4",
+   "length": 36.01,
+   "item": "https://archive.org/details/SnackBarCartoonSpace"
+  },
+  {
+   "title": "Intermission 5 B&W (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.36,
+   "src": "https://archive.org/download/Intermission6bw/intermission5_bw.mp4",
+   "length": 53.08,
+   "item": "https://archive.org/details/Intermission6bw"
+  },
+  {
+   "title": "Drive-in: Snack Bar Ad",
+   "year": "",
+   "gain": 0.71,
+   "src": "https://archive.org/download/Drive-inSnackBarAd/DriveIn-SnackBarAd_512kb.mp4",
+   "length": 63,
+   "item": "https://archive.org/details/Drive-inSnackBarAd"
+  },
+  {
+   "title": "Snack Bar Art Deco Animation (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.31,
+   "src": "https://archive.org/download/SnackBarArtDeco/snackbar_art_deco.mp4",
+   "length": 35.54,
+   "item": "https://archive.org/details/SnackBarArtDeco"
+  },
+  {
+   "title": "Snack Bar Circus Animation (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.56,
+   "src": "https://archive.org/download/SnackBarCircus/snackbar_circus.mp4",
+   "length": 30.03,
+   "item": "https://archive.org/details/SnackBarCircus"
+  },
+  {
+   "title": "Intermission 2a (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.4,
+   "src": "https://archive.org/download/Intermission2/intermission2.mp4",
+   "length": 35.03,
+   "item": "https://archive.org/details/Intermission2"
+  },
+  {
+   "title": "Snack Bar Castleberry Barbeque (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.4,
+   "src": "https://archive.org/download/SnackBarCastleberryBarbeque/snackbar_castleberry_barbeque.mp4",
+   "length": 36.52,
+   "item": "https://archive.org/details/SnackBarCastleberryBarbeque"
+  },
+  {
+   "title": "Intermission 3 - Coke Painter (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.44,
+   "src": "https://archive.org/download/Intermission3CokePainter/intermission3_coke_painter.mp4",
+   "length": 56.14,
+   "item": "https://archive.org/details/Intermission3CokePainter"
+  },
+  {
+   "title": "Intermission 1 (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.25,
+   "src": "https://archive.org/download/Intermission1/intermission1.mp4",
+   "length": 37.84,
+   "item": "https://archive.org/details/Intermission1"
+  },
+  {
+   "title": "Drive-In Intermission 10 Minute Countdown Clock",
+   "year": "",
+   "gain": 0.15,
+   "src": "https://archive.org/download/SwampAssDriveInIntermission10MinuteCountdownClock/intermissionclk10minutes_512kb.mp4",
+   "length": 625.01,
+   "item": "https://archive.org/details/SwampAssDriveInIntermission10MinuteCountdownClock"
+  },
+  {
+   "title": "Intermission 4a Circus (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.46,
+   "src": "https://archive.org/download/Intermission4aCircus/intermission4_circus_a.mp4",
+   "length": 29.58,
+   "item": "https://archive.org/details/Intermission4aCircus"
+  },
+  {
+   "title": "Intermission 2b (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.35,
+   "src": "https://archive.org/download/Intermission2b/intermission2b.mp4",
+   "length": 35.03,
+   "item": "https://archive.org/details/Intermission2b"
+  },
+  {
+   "title": "Drive-In Intermission 10 Minute Clock",
+   "year": "",
+   "gain": 0.15,
+   "src": "https://archive.org/download/SwampAssDriveInIntermission10MinuteClock/10_Minute_Intermission_Clock_512kb.mp4",
+   "length": 625.01,
+   "item": "https://archive.org/details/SwampAssDriveInIntermission10MinuteClock"
+  },
+  {
+   "title": "Drive-In Intermission & Snack Bar 10 Minute Countdown Clock",
+   "year": "",
+   "gain": 0.15,
+   "src": "https://archive.org/download/SwampAssDriveInIntermissionSnackBar10MinuteCountdownClock/10minclk101_512kb.mp4",
+   "length": 179.01,
+   "item": "https://archive.org/details/SwampAssDriveInIntermissionSnackBar10MinuteCountdownClock"
+  },
+  {
+   "title": "Intermission 4b Circus (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.33,
+   "src": "https://archive.org/download/Intermission4bCircus/intermission4_circus_b.mp4",
+   "length": 53.15,
+   "item": "https://archive.org/details/Intermission4bCircus"
+  },
+  {
+   "title": "Let's All Go To The Lobby [1957]",
+   "year": 1957,
+   "gain": 0.26,
+   "src": "https://archive.org/download/lets-all-go-to-the-lobby/Let%27s%20all%20go%20to%20The%20Lobby.mp4",
+   "length": 40.98,
+   "item": "https://archive.org/details/lets-all-go-to-the-lobby"
+  }
+ ],
+ "serials": [
+  {
+   "title": "Undersea Kingdom, Chapter 1",
+   "year": 1936,
+   "gain": 0.42,
+   "src": "https://archive.org/download/undersea-kingdom-1936-19360530-ch.-1-beneath-the-ocean-floor/Undersea%20Kingdom%281936%29_19360530%20-%20Ch.%201-Beneath%20the%20Ocean%20Floor.mp4",
+   "length": 1852,
+   "item": "https://archive.org/details/undersea-kingdom-1936-19360530-ch.-1-beneath-the-ocean-floor"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 2",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/UnderseaKingdom2/UK2.mp4",
+   "length": 1150.05,
+   "item": "https://archive.org/details/UnderseaKingdom2"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 3",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/UnderseaKingdom3/UK3.mp4",
+   "length": 1141.64,
+   "item": "https://archive.org/details/UnderseaKingdom3"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 4",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/saigon_christ_hotmail_UK4/UK4.mp4",
+   "length": 1087.59,
+   "item": "https://archive.org/details/saigon_christ_hotmail_UK4"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 5",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/UnderseaKingdom5/UK5.mp4",
+   "length": 1051.55,
+   "item": "https://archive.org/details/UnderseaKingdom5"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 6",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/saigon_christ_hotmail_UK6/UK6.mp4",
+   "length": 999,
+   "item": "https://archive.org/details/saigon_christ_hotmail_UK6"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 7",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/saigon_christ_hotmail_UK7/UK7.mp4",
+   "length": 1042.54,
+   "item": "https://archive.org/details/saigon_christ_hotmail_UK7"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 8",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/saigon_christ_hotmail_UK8/UK8.mp4",
+   "length": 1012.51,
+   "item": "https://archive.org/details/saigon_christ_hotmail_UK8"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 9",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/VTS011_20181219_2215/UK9.mp4",
+   "length": 1009.01,
+   "item": "https://archive.org/details/VTS011_20181219_2215"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 10",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/saigon_christ_hotmail_UK10/UK%2010.mp4",
+   "length": 1049.62,
+   "item": "https://archive.org/details/saigon_christ_hotmail_UK10"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 11",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/saigon_christ_hotmail_UK11/UK%2011.mp4",
+   "length": 1164.66,
+   "item": "https://archive.org/details/saigon_christ_hotmail_UK11"
+  },
+  {
+   "title": "Undersea Kingdom, Chapter 12",
+   "year": 1936,
+   "gain": 1,
+   "src": "https://archive.org/download/saigon_christ_hotmail_UK12/UK%2012.mp4",
+   "length": 1018.08,
+   "item": "https://archive.org/details/saigon_christ_hotmail_UK12"
+  }
+ ],
+ "season": {
+  "from": "12-01",
+  "to": "12-26",
+  "name": "Christmas at the Drive-In",
+  "films": [
+   {
+    "title": "Beyond Tomorrow",
+    "year": 1940,
+    "gain": 0.53,
+    "src": "https://archive.org/download/BeyondTomorrow_750/BeyondTomorrow.mp4",
+    "length": 5035.67,
+    "item": "https://archive.org/details/BeyondTomorrow_750"
+   },
+   {
+    "title": "March of the Wooden Soldiers",
+    "year": 1934,
+    "gain": 1,
+    "src": "https://archive.org/download/BabesInToylandBW/Babes%20In%20Toyland%20B%26W.mp4",
+    "length": 4669.12,
+    "item": "https://archive.org/details/BabesInToylandBW"
+   },
+   {
+    "title": "Christmas Eve",
+    "year": 1947,
+    "gain": 1,
+    "src": "https://archive.org/download/CHRISTMASEVE_201512/CHRISTMASEVE.mp4",
+    "length": 5383.38,
+    "item": "https://archive.org/details/CHRISTMASEVE_201512"
+   },
+   {
+    "title": "Meet John Doe",
+    "year": 1941,
+    "gain": 1,
+    "src": "https://archive.org/download/meet_john_doe/meet_john_doe_512kb.mp4",
+    "length": 7371.17,
+    "item": "https://archive.org/details/meet_john_doe"
+   },
+   {
+    "title": "The Great Rupert",
+    "year": 1950,
+    "gain": 1,
+    "src": "https://archive.org/download/CCMRK/The%20Great%20Rupert%20%281950%29.mp4",
+    "length": 5267,
+    "item": "https://archive.org/details/CCMRK"
+   },
+   {
+    "title": "Santa Claus Conquers the Martians",
+    "year": 1964,
+    "gain": 0.66,
+    "src": "https://archive.org/download/SantaClausConquersTheMartians1964_201310/Santa%20Claus%20Conquers%20the%20Martians%20%281964%29.mp4",
+    "length": 4811.34,
+    "item": "https://archive.org/details/SantaClausConquersTheMartians1964_201310"
+   },
+   {
+    "title": "The Christmas That Almost Wasn't",
+    "year": 1966,
+    "gain": 1,
+    "src": "https://archive.org/download/TheChristmasThatAlmostWasnt1966/The%20Christmas%20That%20Almost%20Wasn%27t%20%281966%29.mp4",
+    "length": 5555.44,
+    "item": "https://archive.org/details/TheChristmasThatAlmostWasnt1966"
+   },
+   {
+    "title": "The Cheaters",
+    "year": 1945,
+    "gain": 0.51,
+    "src": "https://archive.org/download/chtr87744/chtr87744.mp4",
+    "length": 4987.74,
+    "item": "https://archive.org/details/chtr87744"
+   },
+   {
+    "title": "The Lemon Drop Kid",
+    "year": 1951,
+    "gain": 0.54,
+    "src": "https://archive.org/download/TheLemonDropKid1951BobHopeDVDRip/The%20Lemon%20Drop%20Kid%20%20%5B1951%5D%20-%20Bob%20Hope%20-%20DVDRip.mp4",
+    "length": 5484.61,
+    "item": "https://archive.org/details/TheLemonDropKid1951BobHopeDVDRip"
+   },
+   {
+    "title": "It Happened on Fifth Avenue",
+    "year": 1947,
+    "gain": 1,
+    "src": "https://archive.org/download/it-happened-on-fifth-avenue_202412/it%20happened%20on%20fifth%20avenue.mp4",
+    "length": 6891.91,
+    "item": "https://archive.org/details/it-happened-on-fifth-avenue_202412"
+   },
+   {
+    "title": "The Bells of St. Mary's",
+    "year": 1945,
+    "gain": 0.56,
+    "src": "https://archive.org/download/bells-of-st-marys_202203/Bells%20of%20St%20%20Marys.mp4",
+    "length": 7548.88,
+    "item": "https://archive.org/details/bells-of-st-marys_202203"
+   }
+  ],
+  "cartoons": [
+   {
+    "series": "Cartoon",
+    "title": "Donald's Snow Fight (1942)",
+    "date": "1942",
+    "gain": 1,
+    "src": "https://archive.org/download/donaldduckshorts_031/031%20-%20Donald%27s%20Snow%20Fight%201942.mp4",
+    "length": 436.74,
+    "item": "https://archive.org/details/donaldduckshorts_031"
+   },
+   {
+    "series": "Cartoon",
+    "title": "A Christmas Dream (1946)",
+    "date": "1949",
+    "gain": 1,
+    "src": "https://archive.org/download/AChristmasDream1946VnonSen1945ZemanBrosStopMotion/A%20Christmas%20Dream%20%281946%29%20V%C3%A1no%C4%8Dn%C3%AD%20sen%20%281945%29%20Zeman%20Bros%20Stop-Motion.mp4",
+    "length": 523.19,
+    "item": "https://archive.org/details/AChristmasDream1946VnonSen1945ZemanBrosStopMotion"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Casper: Christmas (1952)",
+    "date": "1952",
+    "gain": 1,
+    "src": "https://archive.org/download/christmas-cartoon-casper-the-friendly-ghost-1952/Christmas%20Cartoon%20-%20%20Casper%20the%20Friendly%20Ghost%201952.ia.mp4",
+    "length": 378.35,
+    "item": "https://archive.org/details/christmas-cartoon-casper-the-friendly-ghost-1952"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Christmas Comes But Once a Year (1936)",
+    "date": "1936",
+    "gain": 0.39,
+    "src": "https://archive.org/download/ChristmasComesButOnceAYear/ClaCinOnl_an_ChristmasComesButOnceAYear.mp4",
+    "length": 501.1,
+    "item": "https://archive.org/details/ChristmasComesButOnceAYear"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Jack Frost (1934)",
+    "date": "1934",
+    "gain": 0.96,
+    "src": "https://archive.org/download/JackFrost_/JackFrost_512kb.mp4",
+    "length": 511.39,
+    "item": "https://archive.org/details/JackFrost_"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Rudolph the Red-Nosed Reindeer (1948)",
+    "date": "1948",
+    "gain": 0.28,
+    "src": "https://archive.org/download/RudolphTheRed-nosedReindeer1948/RudolphTheRed-nosedReindeer1948_512kb.mp4",
+    "length": 491.71,
+    "item": "https://archive.org/details/RudolphTheRed-nosedReindeer1948"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Snow Foolin' (1949)",
+    "date": "1949",
+    "gain": 0.37,
+    "src": "https://archive.org/download/SnowFoolin/ClaCinOnl_an_SnowFoolin_512kb.mp4",
+    "length": 355.2,
+    "item": "https://archive.org/details/SnowFoolin"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The Christmas Visitor (1959)",
+    "date": "1959",
+    "gain": 0.24,
+    "src": "https://archive.org/download/TheChristmasVisitor/ClaCinOnl_an_TheChristmasVisitor.mp4",
+    "length": 437.7,
+    "item": "https://archive.org/details/TheChristmasVisitor"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The First Christmas",
+    "date": "",
+    "gain": 1,
+    "src": "https://archive.org/download/TheFirstChristmasCastleFilmsPuppetoon/The%20First%20Christmas%20%20%28Castle%20Films%20Puppetoon%29.mp4",
+    "length": 489.98,
+    "item": "https://archive.org/details/TheFirstChristmasCastleFilmsPuppetoon"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The Little King: Christmas Night (1933)",
+    "date": "1933",
+    "gain": 0.28,
+    "src": "https://archive.org/download/TheLittleKing-ChristmasNight/ClaCinOnl_an_TheLittleKing-ChristmasNight.mp4",
+    "length": 453.91,
+    "item": "https://archive.org/details/TheLittleKing-ChristmasNight"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The Littlest Angel (1950)",
+    "date": "1950",
+    "gain": 1,
+    "src": "https://archive.org/download/TheLittlestAngel1950ClassicChristmasCartoonsForChildren/The%20Littlest%20Angel%201950%20Classic%20Christmas%20Cartoons%20For%20Children.mp4",
+    "length": 834.04,
+    "item": "https://archive.org/details/TheLittlestAngel1950ClassicChristmasCartoonsForChildren"
+   },
+   {
+    "series": "Cartoon",
+    "title": "The Snow Man (1940)",
+    "date": "1940",
+    "gain": 0.96,
+    "src": "https://archive.org/download/TheSnowMan1940/TheSnowMan_512kb.mp4",
+    "length": 424.99,
+    "item": "https://archive.org/details/TheSnowMan1940"
+   },
+   {
+    "series": "Cartoon",
+    "title": "Winter (1930)",
+    "date": "1930",
+    "gain": 1,
+    "src": "https://archive.org/download/Winter_915/SillySymphony-14-Winter1930.mp4",
+    "length": 413.43,
+    "item": "https://archive.org/details/Winter_915"
+   }
+  ],
+  "nights": {
+   "12-05": [
+    "Santa Claus Conquers the Martians",
+    "The Christmas That Almost Wasn't"
+   ],
+   "12-12": [
+    "The Great Rupert",
+    "The Lemon Drop Kid"
+   ],
+   "12-19": [
+    "It Happened on Fifth Avenue",
+    "Meet John Doe"
+   ],
+   "12-24": [
+    "March of the Wooden Soldiers",
+    "Christmas Eve"
+   ],
+   "12-25": [
+    "The Bells of St. Mary's",
+    "Beyond Tomorrow"
+   ],
+   "12-26": [
+    "The Cheaters",
+    "March of the Wooden Soldiers"
+   ]
+  },
+  "extraNights": [
+   "12-24",
+   "12-25"
+  ]
+ },
+ "oldThemes": {
   "0": {
    "name": "Monster Monday",
    "films": [
@@ -988,720 +2611,6 @@ window.DRIVEIN = {
      "length": 5227.49,
      "item": "https://archive.org/details/laura_202003"
     }
-   ]
-  }
- },
- "trailers": [
-  {
-   "title": "Night of the living dead Trailer",
-   "year": "",
-   "gain": 0.63,
-   "src": "https://archive.org/download/NightOfTheLivingDeadTrailer/NightLivingDeadTrailer_512kb.mp4",
-   "length": 95,
-   "item": "https://archive.org/details/NightOfTheLivingDeadTrailer"
-  },
-  {
-   "title": "REVENGE OF THE CREATURE trailer",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/RevengeOfTheCreatureTrailer/RevengeOfTheCreatureTrailer.mp4",
-   "length": 150.56,
-   "item": "https://archive.org/details/RevengeOfTheCreatureTrailer"
-  },
-  {
-   "title": "FRANKENSTEINtrailer",
-   "year": 1931,
-   "gain": 1,
-   "src": "https://archive.org/download/Frankenstein1931Trailer/Frankenstein1931Trailer.mp4",
-   "length": 100.68,
-   "item": "https://archive.org/details/Frankenstein1931Trailer"
-  },
-  {
-   "title": "The Blob trailer",
-   "year": 1958,
-   "gain": 1,
-   "src": "https://archive.org/download/TheBlobTrailer/The_Blob_trailer_512kb.mp4",
-   "length": 115.52,
-   "item": "https://archive.org/details/TheBlobTrailer"
-  },
-  {
-   "title": "Abbott and Costello Go To Mars trailer",
-   "year": 1953,
-   "gain": 1,
-   "src": "https://archive.org/download/Abbott_and_Costello_Go_To_Mars_trailer/Abbott_and_Costello_Go_To_Mars_trailer_512kb.mp4",
-   "length": 51.87,
-   "item": "https://archive.org/details/Abbott_and_Costello_Go_To_Mars_trailer"
-  },
-  {
-   "title": "Abbott and Costello Meet the Invisible Man trailer",
-   "year": 1951,
-   "gain": 1,
-   "src": "https://archive.org/download/Abbott_and_Costello_Meet_the_Invisible_Man_trailer/Abbott_and_Costello_Meet_the_Invisible_Man_trailer_512kb.mp4",
-   "length": 118.18,
-   "item": "https://archive.org/details/Abbott_and_Costello_Meet_the_Invisible_Man_trailer"
-  },
-  {
-   "title": "BONNIE SCOTLAND trailer",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/BonnieScotlandTrailer/BonnieScotlandTrailer.mp4",
-   "length": 149.44,
-   "item": "https://archive.org/details/BonnieScotlandTrailer"
-  },
-  {
-   "title": "PACK UP YOUR TROUBLES trailer",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/PackUpYourTroublesTrailer/PackUpYourTroublesTrailer.mp4",
-   "length": 125.16,
-   "item": "https://archive.org/details/PackUpYourTroublesTrailer"
-  },
-  {
-   "title": "Abbott and Costello Meet Frankenstein trailer",
-   "year": 1948,
-   "gain": 0.73,
-   "src": "https://archive.org/download/Abbott_and_Costello_Meet_Frankenstein_trailer/Abbott_and_Costello_Meet_Frankenstein_trailer_512kb.mp4",
-   "length": 98.43,
-   "item": "https://archive.org/details/Abbott_and_Costello_Meet_Frankenstein_trailer"
-  },
-  {
-   "title": "The Big Sleep trailer",
-   "year": 1946,
-   "gain": 1,
-   "src": "https://archive.org/download/The_Big_Sleep_trailer/The_Big_Sleep_trailer_512kb.mp4",
-   "length": 112.46,
-   "item": "https://archive.org/details/The_Big_Sleep_trailer"
-  },
-  {
-   "title": "Hold that Ghost trailer",
-   "year": 1941,
-   "gain": 0.85,
-   "src": "https://archive.org/download/Hold_that_Ghost_trailer/Hold_that_Ghost_trailer_512kb.mp4",
-   "length": 100.56,
-   "item": "https://archive.org/details/Hold_that_Ghost_trailer"
-  },
-  {
-   "title": "DEVIL GIRL FROM MARS trailer",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/DevilGirlFromMarsTrailer/DevilGirlFromMarsTrailer.mp4",
-   "length": 106.12,
-   "item": "https://archive.org/details/DevilGirlFromMarsTrailer"
-  },
-  {
-   "title": "SOME LIKE IT HOT trailer",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/SomeLikeItHotTrailer/SomeLikeItHotTrailer.mp4",
-   "length": 139.91,
-   "item": "https://archive.org/details/SomeLikeItHotTrailer"
-  },
-  {
-   "title": "Vertigo theatrical trailer",
-   "year": 1958,
-   "gain": 1,
-   "src": "https://archive.org/download/VertigoTheatricalTrailer/vertigo1958trailer.mp4",
-   "length": 137.96,
-   "item": "https://archive.org/details/VertigoTheatricalTrailer"
-  },
-  {
-   "title": "THE TIME OF THEIR LIVES trailer",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/TheTimeOfTheirLivesTrailer/TheTimeOfTheirLivesTrailer.mp4",
-   "length": 150.88,
-   "item": "https://archive.org/details/TheTimeOfTheirLivesTrailer"
-  },
-  {
-   "title": "The Thin Man trailer",
-   "year": 1934,
-   "gain": 1,
-   "src": "https://archive.org/download/Thin_Man_trailer/The_Thin_Man_trailer_512kb.mp4",
-   "length": 196.96,
-   "item": "https://archive.org/details/Thin_Man_trailer"
-  },
-  {
-   "title": "Love Me Tender",
-   "year": 1956,
-   "gain": 0.31,
-   "src": "https://archive.org/download/1956TheatricalTrailerForFilmloveMeTender/LoveMe-Tender-1956_512kb.mp4",
-   "length": 135.07,
-   "item": "https://archive.org/details/1956TheatricalTrailerForFilmloveMeTender"
-  },
-  {
-   "title": "PLAN 9 FROM OUTER SPACE trailer",
-   "year": "",
-   "gain": 0.38,
-   "src": "https://archive.org/download/Plan9FromOuterSpaceTrailer/Plan9FromOuterSpaceTrailet.mp4",
-   "length": 98.91,
-   "item": "https://archive.org/details/Plan9FromOuterSpaceTrailer"
-  },
-  {
-   "title": "After the Thin Man trailer",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/After_The_Thin_Man_trailer/After_the_Thin_Man_trailer_512kb.mp4",
-   "length": 174.13,
-   "item": "https://archive.org/details/After_The_Thin_Man_trailer"
-  }
- ],
- "welcome": [
-  {
-   "title": "Welcome to the Motor-In (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/Drive-inWelcomeBw/Drive-in--WelcomeBw_512kb.mp4",
-   "length": 113.81,
-   "item": "https://archive.org/details/Drive-inWelcomeBw"
-  },
-  {
-   "title": "A Hearty Welcome to Our Drive-In Theatre (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/DriveInWelcomeToTheDriveInNightSky/DriveIn-WelcomeToTheDriveIn-NightSky.mp4",
-   "length": 62.73,
-   "item": "https://archive.org/details/DriveInWelcomeToTheDriveInNightSky"
-  }
- ],
- "comingAttractions": [
-  {
-   "title": "Prevues of Coming Attractions: Marquee (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/Drive-inComingAttractions-marquee/Drive-in--ComingAttractions-marquee_512kb.mp4",
-   "length": 15.41,
-   "item": "https://archive.org/details/Drive-inComingAttractions-marquee"
-  },
-  {
-   "title": "Coming Attractions (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/Drive-inComingAttractionsBw/Drive-in--ComingAttractionsBw_512kb.mp4",
-   "length": 4.74,
-   "item": "https://archive.org/details/Drive-inComingAttractionsBw"
-  },
-  {
-   "title": "Prevues of Coming Attractions: Colorsplash (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/DriveIn-PrevuesOfComingAttractions-Colorsplash/DriveIn-PrevuesOfComingAttractions-Colorsplash_512kb.mp4",
-   "length": 12.15,
-   "item": "https://archive.org/details/DriveIn-PrevuesOfComingAttractions-Colorsplash"
-  },
-  {
-   "title": "Coming Attractions: Windmill (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/DriveIn-ComingAttractions-Windmill/DriveIn-ComingAttractions-Windmill_512kb.mp4",
-   "length": 12.61,
-   "item": "https://archive.org/details/DriveIn-ComingAttractions-Windmill"
-  },
-  {
-   "title": "Prevues of Coming Attractions: Passage (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/Drive-inPreviewsOfComingAttractions-passage/Drive-in--PreviewsOfComingAttractions-passage-_512kb.mp4",
-   "length": 12.45,
-   "item": "https://archive.org/details/Drive-inPreviewsOfComingAttractions-passage"
-  },
-  {
-   "title": "Prevues of Coming Attractions: Colorgloss (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.62,
-   "src": "https://archive.org/download/Drive-in--ComingAttractions-colorgloss/Drive-n--ComingAttractions-colorgloss_512kb.mp4",
-   "length": 13.48,
-   "item": "https://archive.org/details/Drive-in--ComingAttractions-colorgloss"
-  }
- ],
- "intermission": [
-  {
-   "title": "Snack Bar Mom (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.83,
-   "src": "https://archive.org/download/SnackBarMom/snackbar_mom.mp4",
-   "length": 32.57,
-   "item": "https://archive.org/details/SnackBarMom"
-  },
-  {
-   "title": "Snack Bar Space Animation (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.29,
-   "src": "https://archive.org/download/SnackBarCartoonSpace/snackbar_space_cartoon.mp4",
-   "length": 36.01,
-   "item": "https://archive.org/details/SnackBarCartoonSpace"
-  },
-  {
-   "title": "Intermission 5 B&W (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.36,
-   "src": "https://archive.org/download/Intermission6bw/intermission5_bw.mp4",
-   "length": 53.08,
-   "item": "https://archive.org/details/Intermission6bw"
-  },
-  {
-   "title": "Drive-in: Snack Bar Ad",
-   "year": "",
-   "gain": 0.71,
-   "src": "https://archive.org/download/Drive-inSnackBarAd/DriveIn-SnackBarAd_512kb.mp4",
-   "length": 63,
-   "item": "https://archive.org/details/Drive-inSnackBarAd"
-  },
-  {
-   "title": "Snack Bar Art Deco Animation (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.31,
-   "src": "https://archive.org/download/SnackBarArtDeco/snackbar_art_deco.mp4",
-   "length": 35.54,
-   "item": "https://archive.org/details/SnackBarArtDeco"
-  },
-  {
-   "title": "Snack Bar Circus Animation (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.56,
-   "src": "https://archive.org/download/SnackBarCircus/snackbar_circus.mp4",
-   "length": 30.03,
-   "item": "https://archive.org/details/SnackBarCircus"
-  },
-  {
-   "title": "Intermission 2a (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.4,
-   "src": "https://archive.org/download/Intermission2/intermission2.mp4",
-   "length": 35.03,
-   "item": "https://archive.org/details/Intermission2"
-  },
-  {
-   "title": "Snack Bar Castleberry Barbeque (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.4,
-   "src": "https://archive.org/download/SnackBarCastleberryBarbeque/snackbar_castleberry_barbeque.mp4",
-   "length": 36.52,
-   "item": "https://archive.org/details/SnackBarCastleberryBarbeque"
-  },
-  {
-   "title": "Intermission 3 - Coke Painter (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.44,
-   "src": "https://archive.org/download/Intermission3CokePainter/intermission3_coke_painter.mp4",
-   "length": 56.14,
-   "item": "https://archive.org/details/Intermission3CokePainter"
-  },
-  {
-   "title": "Intermission 1 (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.25,
-   "src": "https://archive.org/download/Intermission1/intermission1.mp4",
-   "length": 37.84,
-   "item": "https://archive.org/details/Intermission1"
-  },
-  {
-   "title": "Drive-In Intermission 10 Minute Countdown Clock",
-   "year": "",
-   "gain": 0.15,
-   "src": "https://archive.org/download/SwampAssDriveInIntermission10MinuteCountdownClock/intermissionclk10minutes_512kb.mp4",
-   "length": 625.01,
-   "item": "https://archive.org/details/SwampAssDriveInIntermission10MinuteCountdownClock"
-  },
-  {
-   "title": "Intermission 4a Circus (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.46,
-   "src": "https://archive.org/download/Intermission4aCircus/intermission4_circus_a.mp4",
-   "length": 29.58,
-   "item": "https://archive.org/details/Intermission4aCircus"
-  },
-  {
-   "title": "Intermission 2b (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.35,
-   "src": "https://archive.org/download/Intermission2b/intermission2b.mp4",
-   "length": 35.03,
-   "item": "https://archive.org/details/Intermission2b"
-  },
-  {
-   "title": "Drive-In Intermission 10 Minute Clock",
-   "year": "",
-   "gain": 0.15,
-   "src": "https://archive.org/download/SwampAssDriveInIntermission10MinuteClock/10_Minute_Intermission_Clock_512kb.mp4",
-   "length": 625.01,
-   "item": "https://archive.org/details/SwampAssDriveInIntermission10MinuteClock"
-  },
-  {
-   "title": "Drive-In Intermission & Snack Bar 10 Minute Countdown Clock",
-   "year": "",
-   "gain": 0.15,
-   "src": "https://archive.org/download/SwampAssDriveInIntermissionSnackBar10MinuteCountdownClock/10minclk101_512kb.mp4",
-   "length": 179.01,
-   "item": "https://archive.org/details/SwampAssDriveInIntermissionSnackBar10MinuteCountdownClock"
-  },
-  {
-   "title": "Intermission 4b Circus (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 0.33,
-   "src": "https://archive.org/download/Intermission4bCircus/intermission4_circus_b.mp4",
-   "length": 53.15,
-   "item": "https://archive.org/details/Intermission4bCircus"
-  },
-  {
-   "title": "Let's All Go To The Lobby [1957]",
-   "year": 1957,
-   "gain": 0.26,
-   "src": "https://archive.org/download/lets-all-go-to-the-lobby/Let%27s%20all%20go%20to%20The%20Lobby.mp4",
-   "length": 40.98,
-   "item": "https://archive.org/details/lets-all-go-to-the-lobby"
-  }
- ],
- "serials": [
-  {
-   "title": "Undersea Kingdom, Chapter 1",
-   "year": 1936,
-   "gain": 0.42,
-   "src": "https://archive.org/download/undersea-kingdom-1936-19360530-ch.-1-beneath-the-ocean-floor/Undersea%20Kingdom%281936%29_19360530%20-%20Ch.%201-Beneath%20the%20Ocean%20Floor.mp4",
-   "length": 1852,
-   "item": "https://archive.org/details/undersea-kingdom-1936-19360530-ch.-1-beneath-the-ocean-floor"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 2",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/UnderseaKingdom2/UK2.mp4",
-   "length": 1150.05,
-   "item": "https://archive.org/details/UnderseaKingdom2"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 3",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/UnderseaKingdom3/UK3.mp4",
-   "length": 1141.64,
-   "item": "https://archive.org/details/UnderseaKingdom3"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 4",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/saigon_christ_hotmail_UK4/UK4.mp4",
-   "length": 1087.59,
-   "item": "https://archive.org/details/saigon_christ_hotmail_UK4"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 5",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/UnderseaKingdom5/UK5.mp4",
-   "length": 1051.55,
-   "item": "https://archive.org/details/UnderseaKingdom5"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 6",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/saigon_christ_hotmail_UK6/UK6.mp4",
-   "length": 999,
-   "item": "https://archive.org/details/saigon_christ_hotmail_UK6"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 7",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/saigon_christ_hotmail_UK7/UK7.mp4",
-   "length": 1042.54,
-   "item": "https://archive.org/details/saigon_christ_hotmail_UK7"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 8",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/saigon_christ_hotmail_UK8/UK8.mp4",
-   "length": 1012.51,
-   "item": "https://archive.org/details/saigon_christ_hotmail_UK8"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 9",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/VTS011_20181219_2215/UK9.mp4",
-   "length": 1009.01,
-   "item": "https://archive.org/details/VTS011_20181219_2215"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 10",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/saigon_christ_hotmail_UK10/UK%2010.mp4",
-   "length": 1049.62,
-   "item": "https://archive.org/details/saigon_christ_hotmail_UK10"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 11",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/saigon_christ_hotmail_UK11/UK%2011.mp4",
-   "length": 1164.66,
-   "item": "https://archive.org/details/saigon_christ_hotmail_UK11"
-  },
-  {
-   "title": "Undersea Kingdom, Chapter 12",
-   "year": 1936,
-   "gain": 1,
-   "src": "https://archive.org/download/saigon_christ_hotmail_UK12/UK%2012.mp4",
-   "length": 1018.08,
-   "item": "https://archive.org/details/saigon_christ_hotmail_UK12"
-  }
- ],
- "season": {
-  "from": "12-01",
-  "to": "12-26",
-  "name": "Christmas at the Drive-In",
-  "films": [
-   {
-    "title": "Beyond Tomorrow",
-    "year": 1940,
-    "gain": 0.53,
-    "src": "https://archive.org/download/BeyondTomorrow_750/BeyondTomorrow.mp4",
-    "length": 5035.67,
-    "item": "https://archive.org/details/BeyondTomorrow_750"
-   },
-   {
-    "title": "Scrooge",
-    "year": 1935,
-    "gain": 0.72,
-    "src": "https://archive.org/download/Scrooge_1935/Scrooge_1935_512kb.mp4",
-    "length": 4655.45,
-    "item": "https://archive.org/details/Scrooge_1935"
-   },
-   {
-    "title": "A Christmas Carol",
-    "year": 1951,
-    "gain": 0.98,
-    "src": "https://archive.org/download/acfrma-A_Christmas_Carol_1951/A_Christmas_Carol_1951.mp4",
-    "length": 5281,
-    "item": "https://archive.org/details/acfrma-A_Christmas_Carol_1951"
-   },
-   {
-    "title": "March of the Wooden Soldiers",
-    "year": 1934,
-    "gain": 1,
-    "src": "https://archive.org/download/BabesInToylandBW/Babes%20In%20Toyland%20B%26W.mp4",
-    "length": 4669.12,
-    "item": "https://archive.org/details/BabesInToylandBW"
-   },
-   {
-    "title": "Christmas Eve",
-    "year": 1947,
-    "gain": 1,
-    "src": "https://archive.org/download/CHRISTMASEVE_201512/CHRISTMASEVE.mp4",
-    "length": 5383.38,
-    "item": "https://archive.org/details/CHRISTMASEVE_201512"
-   },
-   {
-    "title": "Meet John Doe",
-    "year": 1941,
-    "gain": 1,
-    "src": "https://archive.org/download/meet_john_doe/meet_john_doe_512kb.mp4",
-    "length": 7371.17,
-    "item": "https://archive.org/details/meet_john_doe"
-   },
-   {
-    "title": "The Great Rupert",
-    "year": 1950,
-    "gain": 1,
-    "src": "https://archive.org/download/CCMRK/The%20Great%20Rupert%20%281950%29.mp4",
-    "length": 5267,
-    "item": "https://archive.org/details/CCMRK"
-   },
-   {
-    "title": "Santa Claus Conquers the Martians",
-    "year": 1964,
-    "gain": 0.66,
-    "src": "https://archive.org/download/SantaClausConquersTheMartians1964_201310/Santa%20Claus%20Conquers%20the%20Martians%20%281964%29.mp4",
-    "length": 4811.34,
-    "item": "https://archive.org/details/SantaClausConquersTheMartians1964_201310"
-   },
-   {
-    "title": "The Holly and the Ivy",
-    "year": 1952,
-    "gain": 0.38,
-    "src": "https://archive.org/download/TheHollyAndTheIvy1952/The%20Holly%20and%20the%20Ivy%20%281952%29.mp4",
-    "length": 4984.52,
-    "item": "https://archive.org/details/TheHollyAndTheIvy1952"
-   },
-   {
-    "title": "The Christmas That Almost Wasn't",
-    "year": 1966,
-    "gain": 1,
-    "src": "https://archive.org/download/TheChristmasThatAlmostWasnt1966/The%20Christmas%20That%20Almost%20Wasn%27t%20%281966%29.mp4",
-    "length": 5555.44,
-    "item": "https://archive.org/details/TheChristmasThatAlmostWasnt1966"
-   },
-   {
-    "title": "The Cheaters",
-    "year": 1945,
-    "gain": 0.51,
-    "src": "https://archive.org/download/chtr87744/chtr87744.mp4",
-    "length": 4987.74,
-    "item": "https://archive.org/details/chtr87744"
-   },
-   {
-    "title": "The Lemon Drop Kid",
-    "year": 1951,
-    "gain": 0.54,
-    "src": "https://archive.org/download/TheLemonDropKid1951BobHopeDVDRip/The%20Lemon%20Drop%20Kid%20%20%5B1951%5D%20-%20Bob%20Hope%20-%20DVDRip.mp4",
-    "length": 5484.61,
-    "item": "https://archive.org/details/TheLemonDropKid1951BobHopeDVDRip"
-   },
-   {
-    "title": "It Happened on Fifth Avenue",
-    "year": 1947,
-    "gain": 1,
-    "src": "https://archive.org/download/it-happened-on-fifth-avenue_202412/it%20happened%20on%20fifth%20avenue.mp4",
-    "length": 6891.91,
-    "item": "https://archive.org/details/it-happened-on-fifth-avenue_202412"
-   },
-   {
-    "title": "The Bells of St. Mary's",
-    "year": 1945,
-    "gain": 0.56,
-    "src": "https://archive.org/download/bells-of-st-marys_202203/Bells%20of%20St%20%20Marys.mp4",
-    "length": 7548.88,
-    "item": "https://archive.org/details/bells-of-st-marys_202203"
-   },
-   {
-    "title": "The Snow Queen",
-    "year": 1959,
-    "gain": 1,
-    "src": "https://archive.org/download/the_snow_queen_1959_animation/snow_queen_us_version_512kb.mp4",
-    "length": 4105.84,
-    "item": "https://archive.org/details/the_snow_queen_1959_animation"
-   }
-  ],
-  "cartoons": [
-   {
-    "series": "Cartoon",
-    "title": "Donald's Snow Fight (1942)",
-    "date": "1942",
-    "gain": 1,
-    "src": "https://archive.org/download/donaldduckshorts_031/031%20-%20Donald%27s%20Snow%20Fight%201942.mp4",
-    "length": 436.74,
-    "item": "https://archive.org/details/donaldduckshorts_031"
-   },
-   {
-    "series": "Cartoon",
-    "title": "A Christmas Dream (1946)",
-    "date": "1949",
-    "gain": 1,
-    "src": "https://archive.org/download/AChristmasDream1946VnonSen1945ZemanBrosStopMotion/A%20Christmas%20Dream%20%281946%29%20V%C3%A1no%C4%8Dn%C3%AD%20sen%20%281945%29%20Zeman%20Bros%20Stop-Motion.mp4",
-    "length": 523.19,
-    "item": "https://archive.org/details/AChristmasDream1946VnonSen1945ZemanBrosStopMotion"
-   },
-   {
-    "series": "Cartoon",
-    "title": "Casper: Christmas (1952)",
-    "date": "1952",
-    "gain": 1,
-    "src": "https://archive.org/download/christmas-cartoon-casper-the-friendly-ghost-1952/Christmas%20Cartoon%20-%20%20Casper%20the%20Friendly%20Ghost%201952.ia.mp4",
-    "length": 378.35,
-    "item": "https://archive.org/details/christmas-cartoon-casper-the-friendly-ghost-1952"
-   },
-   {
-    "series": "Cartoon",
-    "title": "Christmas Comes But Once a Year (1936)",
-    "date": "1936",
-    "gain": 0.39,
-    "src": "https://archive.org/download/ChristmasComesButOnceAYear/ClaCinOnl_an_ChristmasComesButOnceAYear.mp4",
-    "length": 501.1,
-    "item": "https://archive.org/details/ChristmasComesButOnceAYear"
-   },
-   {
-    "series": "Cartoon",
-    "title": "Jack Frost (1934)",
-    "date": "1934",
-    "gain": 0.96,
-    "src": "https://archive.org/download/JackFrost_/JackFrost_512kb.mp4",
-    "length": 511.39,
-    "item": "https://archive.org/details/JackFrost_"
-   },
-   {
-    "series": "Cartoon",
-    "title": "Rudolph the Red-Nosed Reindeer (1948)",
-    "date": "1948",
-    "gain": 0.28,
-    "src": "https://archive.org/download/RudolphTheRed-nosedReindeer1948/RudolphTheRed-nosedReindeer1948_512kb.mp4",
-    "length": 491.71,
-    "item": "https://archive.org/details/RudolphTheRed-nosedReindeer1948"
-   },
-   {
-    "series": "Cartoon",
-    "title": "Snow Foolin' (1949)",
-    "date": "1949",
-    "gain": 0.37,
-    "src": "https://archive.org/download/SnowFoolin/ClaCinOnl_an_SnowFoolin_512kb.mp4",
-    "length": 355.2,
-    "item": "https://archive.org/details/SnowFoolin"
-   },
-   {
-    "series": "Cartoon",
-    "title": "The Christmas Visitor (1959)",
-    "date": "1959",
-    "gain": 0.24,
-    "src": "https://archive.org/download/TheChristmasVisitor/ClaCinOnl_an_TheChristmasVisitor.mp4",
-    "length": 437.7,
-    "item": "https://archive.org/details/TheChristmasVisitor"
-   },
-   {
-    "series": "Cartoon",
-    "title": "The First Christmas",
-    "date": "",
-    "gain": 1,
-    "src": "https://archive.org/download/TheFirstChristmasCastleFilmsPuppetoon/The%20First%20Christmas%20%20%28Castle%20Films%20Puppetoon%29.mp4",
-    "length": 489.98,
-    "item": "https://archive.org/details/TheFirstChristmasCastleFilmsPuppetoon"
-   },
-   {
-    "series": "Cartoon",
-    "title": "The Little King: Christmas Night (1933)",
-    "date": "1933",
-    "gain": 0.28,
-    "src": "https://archive.org/download/TheLittleKing-ChristmasNight/ClaCinOnl_an_TheLittleKing-ChristmasNight.mp4",
-    "length": 453.91,
-    "item": "https://archive.org/details/TheLittleKing-ChristmasNight"
-   },
-   {
-    "series": "Cartoon",
-    "title": "The Littlest Angel (1950)",
-    "date": "1950",
-    "gain": 1,
-    "src": "https://archive.org/download/TheLittlestAngel1950ClassicChristmasCartoonsForChildren/The%20Littlest%20Angel%201950%20Classic%20Christmas%20Cartoons%20For%20Children.mp4",
-    "length": 834.04,
-    "item": "https://archive.org/details/TheLittlestAngel1950ClassicChristmasCartoonsForChildren"
-   },
-   {
-    "series": "Cartoon",
-    "title": "The Snow Man (1940)",
-    "date": "1940",
-    "gain": 0.96,
-    "src": "https://archive.org/download/TheSnowMan1940/TheSnowMan_512kb.mp4",
-    "length": 424.99,
-    "item": "https://archive.org/details/TheSnowMan1940"
-   },
-   {
-    "series": "Cartoon",
-    "title": "Winter (1930)",
-    "date": "1930",
-    "gain": 1,
-    "src": "https://archive.org/download/Winter_915/SillySymphony-14-Winter1930.mp4",
-    "length": 413.43,
-    "item": "https://archive.org/details/Winter_915"
-   }
-  ],
-  "nights": {
-   "12-24": [
-    "March of the Wooden Soldiers",
-    "A Christmas Carol"
-   ],
-   "12-25": [
-    "The Bells of St. Mary's",
-    "Beyond Tomorrow"
    ]
   }
  }

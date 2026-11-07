@@ -95,15 +95,54 @@
   function duskOf(day) { var d = ptDate(day); return ptAt(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate(), SHOW_AT[0], SHOW_AT[1]); }
   function dayIndex(ms) { var d = ptDate(ms); return Math.round((Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()) - Date.UTC(2026, 0, 5)) / 864e5); }  // 2026-01-05 was a Monday
   function seasonOf(ms) { var se = window.DRIVEIN.season; return se && se.films && se.films.length && inSeasonPT(se, ms) ? se : null; }
-  function themeOf(ms) { var DI = window.DRIVEIN, se = seasonOf(ms), wd = (ptDate(ms).getUTCDay() + 6) % 7; return se ? { name: se.name, films: se.films } : (DI.themes[wd] || DI.themes[String(wd)]); }
-  function featuresFor(ms) {     // tonight's two features: rotates weekly through the theme's films (nightly in a season)
+  /* Saturdays only. From November 15, 2026 the Drive-In shows its double feature on Saturday nights
+     (plus any extra nights the Christmas season lists, like Christmas Eve). The rest of the week it's
+     closed: a "see you Saturday" sign with coming attractions playing. The theme changes every week,
+     going round the themes in order, and each theme moves on to its next two films each time it comes
+     back, so with two films a week it's well over a year before anything repeats. */
+  var CUTOVER = Date.UTC(2026, 10, 15, 8, 0);   // midnight Pacific, Sunday Nov 15 2026
+  var FIRST_SAT = 320;                           // dayIndex of Saturday Nov 21 2026, the first show of the rotation
+  function newRules(ms) { return ms >= CUTOVER; }
+  function showNight(ms) {
+    if (!newRules(ms)) return true;
+    if (ptDate(ms).getUTCDay() === 6) return true;
+    var se = seasonOf(ms);
+    return !!(se && se.extraNights && se.extraNights.indexOf(ptMmdd(ms)) >= 0);
+  }
+  function nextShow(ms) {   // the day (Pacific midnight) of the next show, counting tonight if its show isn't over yet
+    var d = ptMidnight(ms);
+    for (var k = 0; k < 400; k++) {
+      if (showNight(d) && (d !== ptMidnight(ms) || ms < lay(nightProgram(d), duskOf(d)).end)) return d;
+      d = nextMidnight(d);
+    }
+    return ptMidnight(ms);
+  }
+  function rotationNo(ms) {   // how many regular (non-Christmas) Saturday shows come before this one
+    var sat = dayIndex(ms); sat += ((5 - sat % 7) % 7 + 7) % 7;   // this week's Saturday
+    var n = 0, base = ptMidnight(ms) - (dayIndex(ms) - FIRST_SAT) * 864e5;
+    for (var i = FIRST_SAT; i < sat; i += 7) if (!seasonOf(base + (i - FIRST_SAT) * 864e5 + 12 * 36e5)) n++;
+    return Math.max(0, n);
+  }
+  function seasonShowNo(ms) {   // which Christmas show this is (0 for the first)
+    var se = seasonOf(ms), n = 0, d = ptMidnight(ms) - 864e5;
+    for (var k = 0; k < 40 && seasonOf(d + 12 * 36e5) === se; k++, d -= 864e5) if (showNight(d + 12 * 36e5)) n++;
+    return n;
+  }
+  function themeList() { var T = window.DRIVEIN.themes, out = []; for (var k = 0; k < 7; k++) if (T[k] || T[String(k)]) out.push(T[k] || T[String(k)]); return out; }
+  function themeOf(ms) {
+    var DI = window.DRIVEIN, se = seasonOf(ms);
+    if (se) return { name: se.name, films: se.films };
+    if (!newRules(ms)) { var wd = (ptDate(ms).getUTCDay() + 6) % 7, OT = DI.oldThemes || DI.themes; return OT[wd] || OT[String(wd)]; }
+    var L = themeList(); return L[rotationNo(ms) % L.length];
+  }
+  function featuresFor(ms) {     // the night's two features
     var th = themeOf(ms), f = th.films, se = seasonOf(ms), wk = Math.floor(dayIndex(ms) / 7);
     if (!f.length) return [];
     if (se) {
       var set = se.nights && se.nights[ptMmdd(ms)];
       if (set) { var picked = set.map(function (t) { return f.find(function (x) { return x.title === t; }); }).filter(Boolean); if (picked.length) return picked; }
-      wk = dayIndex(ms);
-    }
+      wk = newRules(ms) ? seasonShowNo(ms) : dayIndex(ms);
+    } else if (newRules(ms)) wk = Math.floor(rotationNo(ms) / themeList().length);
     return [f[(wk * 2) % f.length], f[(wk * 2 + 1) % f.length]].filter(function (x, i, a) { return a.indexOf(x) === i; });
   }
   function pickFrom(list, seed, n) { return list.length ? shuffle(list, seed).slice(0, n) : []; }
@@ -147,8 +186,34 @@
     while (after < nextMidnight(tomorrow)) { var mm = lay(matinee(tomorrow), after); if (!mm.items.length) break; segs = segs.concat(mm.items); after = mm.end; }
     return segs;
   }
+  // closed: the coming-attractions reels and trailers on a loop, under the "see you Saturday" sign
+  function closedLoop(dayMs) {
+    var DI = window.DRIVEIN, list = [].concat(DI.comingAttractions || [], DI.trailers || []).filter(function (x) { return x.src && x.length > 0; });
+    return shuffle(list, hash("closed" + dayIndex(dayMs))).map(function (x) { return Object.assign({ kind: "trailer", closed: true }, x); });
+  }
+  function fillClosed(dayMs, t0, until) {
+    var out = [], t = t0, loop = closedLoop(dayMs);
+    if (!loop.length) return { items: [], end: until };
+    while (t < until) { var r = lay(loop, t, until); if (!r.items.length) break; out = out.concat(r.items); t = r.end; }
+    return { items: out, end: Math.max(t, until) };
+  }
+  function driveTimelineNew(ms) {
+    var today = ptMidnight(ms), yday = ptMidnight(today - 12 * 36e5), tomorrow = nextMidnight(today), end = nextMidnight(tomorrow);
+    var segs = [], t = today;
+    if (showNight(yday)) { var last = lay(nightProgram(yday), duskOf(yday)); if (last.end > today) { segs = segs.concat(last.items); t = last.end; } }
+    if (showNight(today)) {
+      var dusk = duskOf(today);
+      if (t < dusk) { segs = segs.concat(fillClosed(today, t, dusk).items); t = dusk; }
+      var tonight = lay(nightProgram(today), Math.max(t, dusk)); segs = segs.concat(tonight.items); t = tonight.end;
+    }
+    var midnight = tomorrow;
+    if (t < midnight) { segs = segs.concat(fillClosed(today, t, midnight).items); t = midnight; }
+    if (!showNight(tomorrow)) segs = segs.concat(fillClosed(tomorrow, t, end).items);
+    else { var dk = duskOf(tomorrow); segs = segs.concat(fillClosed(tomorrow, t, dk).items); }
+    return segs;
+  }
   function driveAt(ms) {
-    var segs = driveTimeline(ms);
+    var segs = newRules(ptMidnight(ms)) ? driveTimelineNew(ms) : driveTimeline(ms);
     for (var i = 0; i < segs.length; i++) {
       var s = segs[i], end = s.cutMs || (s.startMs + s.length * 1000);
       if (ms >= s.startMs && ms < end) return { i: i, item: s, offset: (ms - s.startMs) / 1000, left: (end - ms) / 1000, segs: segs };
@@ -164,7 +229,7 @@
       CH.forEach(function (c, k) { c.num = c.num || k + 2; });
       return (this._ch = CH.map(function (c) { return buildChannel(c, ADS); }));
     },
-    tvAt: tvAt, tvNext: tvNext, driveAt: driveAt, themeOf: themeOf, featuresFor: featuresFor, duskOf: duskOf
+    tvAt: tvAt, tvNext: tvNext, driveAt: driveAt, themeOf: themeOf, featuresFor: featuresFor, duskOf: duskOf, showNight: showNight, nextShow: nextShow
   };
   if (MODE !== "tv" && MODE !== "drivein") return;
 
@@ -509,33 +574,60 @@
     window.BK_CHAT_PLACE = "at the Drive-In";
     where = function (ms) { return driveAt(ms || Date.now()); };
     var LABEL = { welcome: "Welcome", cartoon: "A cartoon to start", trailer: "Coming attractions", serial: "Tonight\u2019s serial chapter", intermission: "Intermission", feature: "Feature presentation" };
+    // the "see you Saturday" sign over the coming attractions while the Drive-In is closed
+    document.documentElement.classList.toggle("sat-only", newRules(ptMidnight(Date.now())));
+    var shut = document.createElement("div"); shut.className = "scr-closed"; shut.hidden = true; screen.appendChild(shut);
+    var dayName = function (ms) { return new Date(ms).toLocaleDateString([], { weekday: "long", timeZone: "America/Los_Angeles" }); };
+    var dateName = function (ms) { return new Date(ms).toLocaleDateString([], { weekday: "long", month: "long", day: "numeric", timeZone: "America/Los_Angeles" }); };
+    var localDate = function (ms) { return new Date(ms).toLocaleDateString([], { weekday: "long", month: "long", day: "numeric" }); };   // the showtime's date where the viewer is
+    var whenWords = function (day, now) {   // "tonight", "tomorrow night", "Saturday"
+      var today = ptMidnight(now);
+      return day === today ? "tonight" : day === nextMidnight(today) ? "tomorrow night" : dayName(day + 12 * 36e5);
+    };
     renderInfo = function (n) {
-      var it = n.item, now = Date.now(), dusk = duskOf(now), night = !it.matinee && !(it.slate === "intermission" && it.words && it.words.short);
-      var th = themeOf(now), feats = featuresFor(now);
+      var it = n.item, now = Date.now(), show = nextShow(now), dusk = duskOf(show), closed = !!it.closed;
+      var th = themeOf(show + 12 * 36e5), feats = featuresFor(show + 12 * 36e5);
+      var old = !newRules(ptMidnight(now)), offShow = it.matinee || it.encore || (it.slate === "intermission" && it.words && it.words.short);
       $(".mq-theme").textContent = th.name;
       $(".mq-feats").textContent = feats.map(function (f) { return f.title; }).join("  \u00b7  ");
-      var offShow = it.matinee || it.encore || (it.slate === "intermission" && it.words && it.words.short);
-      window.BK_SHOW_ON = !offShow && now >= dusk;   // the chat opens itself beside the screen during the shared show
-      $(".mq-when").textContent = now < dusk ? "Matinee: more " + th.name.replace(/^the /i, "") + " films until the full show starts at " + hhmm(dusk) + "."
-        : offShow ? "The show\u2019s over for tonight. The late show runs more " + th.name.replace(/^the /i, "") + " films until midnight."
-        : "Tonight\u2019s show is on. It started at " + hhmm(dusk) + ".";
-      $(".np-series").textContent = it.slate ? ({ welcome: "Welcome", intermission: "Intermission", goodnight: "Good night" }[it.slate] || "") : (it.encore ? "Late show" : it.matinee ? "Matinee" : (it.kind === "feature" ? (it.n === 2 ? "Second feature" : "First feature") : LABEL[it.kind] || ""));
+      window.BK_SHOW_ON = !closed && !offShow && now >= duskOf(now);   // the chat opens itself beside the screen during the shared show
+      if (old) {
+        $(".mq-when").textContent = now < duskOf(now) ? "Matinee: more " + th.name.replace(/^the /i, "") + " films until the full show starts at " + hhmm(duskOf(now)) + "."
+          : offShow ? "The show\u2019s over for tonight. The late show runs more " + th.name.replace(/^the /i, "") + " films until midnight."
+          : "Tonight\u2019s show is on. It started at " + hhmm(duskOf(now)) + ".";
+      } else {
+        var w = whenWords(show, now);
+        $(".mq-when").textContent = closed ? (w === "tonight" ? "The Drive-In opens tonight. The show starts at " + hhmm(dusk) + "."
+            : "The Drive-In is closed until " + w + ". The next show starts at " + hhmm(dusk) + " on " + localDate(dusk) + ".")
+          : "Tonight\u2019s show is on. It started at " + hhmm(dusk) + ".";
+      }
+      shut.hidden = !closed;
+      if (closed) {
+        var w2 = whenWords(show, now), key = show + "|" + th.name;
+        if (shut.dataset.key !== key + hhmm(dusk)) {
+          shut.dataset.key = key + hhmm(dusk);
+          shut.innerHTML = '<p class="cl-k">The Bee\u2019s Knees Drive-In</p><p class="cl-big">' + (w2 === "tonight" ? "Tonight at " + esc(hhmm(dusk)) : "See you " + esc(w2) + "!") + '</p><p class="cl-m">' + (w2 === "tonight" ? "" : esc(hhmm(dusk)) + ": ") + esc(th.name) + (feats.length ? ", " + feats.map(function (f) { return esc(f.title); }).join(" &amp; ") : "") + "</p>";
+        }
+      }
+      $(".np-series").textContent = closed ? (it.bumper ? "Coming attractions" : "Coming attractions") : it.slate ? ({ welcome: "Welcome", intermission: "Intermission", goodnight: "Good night" }[it.slate] || "") : (it.encore ? "Late show" : it.matinee ? "Matinee" : (it.kind === "feature" ? (it.n === 2 ? "Second feature" : "First feature") : LABEL[it.kind] || ""));
       var t = $(".np-title"); t.textContent = it.slate ? (it.slate === "welcome" ? th.name : "") : it.title; t.href = it.item || "#";
       $(".np-date").textContent = it.year ? String(it.year) : "";
-      $(".np-left").textContent = mmss(n.left) + " left";
-      var nx = n.segs[n.i + 1]; $(".np-next").textContent = nx ? "Then: " + (nx.slate ? ({ intermission: "Intermission", goodnight: "Good night", welcome: "Welcome" }[nx.slate]) : nx.kind === "intermission" ? "Intermission" : nx.kind === "trailer" ? "Coming attractions" : nx.kind === "welcome" ? "Welcome" : (nx.title || "")) + " at " + hhmm(nx.startMs) : "";
+      $(".np-left").textContent = closed ? "" : mmss(n.left) + " left";
+      var nx = n.segs[n.i + 1];
+      $(".np-next").textContent = closed ? "Next show: " + (whenWords(show, now) === "tonight" ? "tonight" : localDate(dusk)) + " at " + hhmm(dusk)
+        : nx ? "Then: " + (nx.slate ? ({ intermission: "Intermission", goodnight: "Good night", welcome: "Welcome" }[nx.slate]) : nx.closed ? "Good night" : nx.kind === "intermission" ? "Intermission" : nx.kind === "trailer" ? "Coming attractions" : nx.kind === "welcome" ? "Welcome" : (nx.title || "")) + " at " + hhmm(nx.startMs) : "";
       renderWeek(); renderProgram(n);
     };
-    // tonight's lineup, with times, so the shape of a night at the drive-in is plain to see
+    // the next show's lineup, with times, so the shape of a night at the drive-in is plain to see
     var PART = { welcome: "Welcome", cartoon: "A cartoon", trailer: "Coming attractions", serial: "The serial chapter", intermission: "Intermission", goodnight: "Good night" };
     var renderProgram = function (n) {
       var ul = $(".program"); if (!ul) return;
-      var now = Date.now(), today = ptMidnight(now), dusk = duskOf(today);
-      var night = n.segs.filter(function (x) { return !x.matinee && !x.encore && x.startMs >= dusk - 1000 && x.startMs < nextMidnight(today) && !(x.slate === "intermission" && x.words && x.words.short); });
+      var now = Date.now(), day = newRules(ptMidnight(now)) ? nextShow(now) : ptMidnight(now), dusk = duskOf(day);
+      var night = lay(nightProgram(day), dusk).items.filter(function (x) { return !(x.slate === "intermission" && x.words && x.words.short); });
       var rows = [], last = null;
       night.forEach(function (x) {
         var kind = x.slate || x.kind, label = kind === "feature" ? (x.n === 2 ? "Second feature: " : "First feature: ") + x.title + (x.year ? " (" + x.year + ")" : "") : PART[kind] || kind;
-        var end = x.cutMs || x.startMs + x.length * 1000;
+        var end = x.startMs + x.length * 1000;
         if (last && last.kind === kind) { last.end = end; return; }   // two trailers or two intermission reels read as one line
         last = { kind: kind, label: label, start: x.startMs, end: end }; rows.push(last);
       });
@@ -544,13 +636,17 @@
         return '<li' + (st ? ' class="' + st + '"' : "") + '><span class="pg-t">' + hhmm(r.start) + '</span><span class="pg-w">' + esc(r.label) + (st === "now" ? ' <b class="pg-on">Now playing</b>' : "") + "</span></li>";
       }).join("");
       if (ul.dataset.html !== html) { ul.dataset.html = html; ul.innerHTML = html; }
-      var dz = $(".how-dusk"); if (dz) dz.textContent = hhmm(dusk);
+      var h = $(".program-h"); if (h) { var ww = whenWords(day, now); h.textContent = ww === "tonight" ? "Tonight\u2019s program" : "The program, " + (ww === "tomorrow night" ? "tomorrow night" : dateName(day + 12 * 36e5)); }
+      document.querySelectorAll(".how-dusk").forEach(function (dz) { dz.textContent = hhmm(dusk); });
     };
+    // the coming shows: the next six nights the Drive-In is open
     var renderWeek = function () {
-      var w = $(".week"), now = Date.now(), noon0 = ptMidnight(now) + 12 * 36e5; var rows = "";
-      for (var k = 0; k < 7; k++) {
-        var day = noon0 + k * 864e5, th = themeOf(day), f = featuresFor(day);
-        rows += '<li' + (k === 0 ? ' class="today"' : "") + '><span class="wk-day">' + (k === 0 ? "Tonight" : new Date(day).toLocaleDateString([], { weekday: "long", timeZone: "America/Los_Angeles" })) + '</span><span class="wk-theme">' + esc(th.name) + '</span><span class="wk-films">' + f.map(function (x) { return esc(x.title) + (x.year ? " (" + x.year + ")" : ""); }).join(" &amp; ") + '</span><span class="wk-time">' + hhmm(duskOf(day)) + "</span></li>";
+      var w = $(".week"), now = Date.now(), d = newRules(ptMidnight(now)) ? nextShow(now) : ptMidnight(now), rows = "", k = 0;
+      for (var g = 0; g < 120 && k < 6; g++, d = nextMidnight(d)) {
+        if (!showNight(d)) continue;
+        var mid = d + 12 * 36e5, th = themeOf(mid), f = featuresFor(mid), first = k === 0 && d === ptMidnight(now);
+        rows += '<li' + (first ? ' class="today"' : "") + '><span class="wk-day">' + (first ? "Tonight" : esc(new Date(mid).toLocaleDateString([], { weekday: "short", month: "short", day: "numeric", timeZone: "America/Los_Angeles" }))) + '</span><span class="wk-theme">' + esc(th.name) + '</span><span class="wk-films">' + f.map(function (x) { return esc(x.title) + (x.year ? " (" + x.year + ")" : ""); }).join(" &amp; ") + '</span><span class="wk-time">' + esc(hhmm(duskOf(d))) + "</span></li>";
+        k++;
       }
       if (w.dataset.html !== rows) { w.dataset.html = rows; w.innerHTML = rows; }
     };

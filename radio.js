@@ -1765,7 +1765,13 @@
     const it = n.item, th = T.themeOf(ms), dusk = T.duskOf(ms);
     const label = it.slate ? ({ welcome: "Welcome", intermission: "Intermission", goodnight: "Good night" }[it.slate] || "")
       : it.matinee ? "Matinee: " + it.title : it.kind === "feature" ? it.title : ({ cartoon: "A cartoon", trailer: "Coming attractions", serial: "Tonight\u2019s serial", intermission: "Intermission" }[it.kind] || it.title || "");
-    const tag = "The Drive-In \u00b7 " + (label || th.name);
+    // closed (the Drive-In only shows on Saturday nights): name the next show instead of the trailer
+    const nextShowWords = () => {
+      const d = T.nextShow(ms), mid = d + 12 * 36e5, today = new Date(ms).toLocaleDateString("en-US", { timeZone: "America/Los_Angeles" });
+      const when = new Date(mid).toLocaleDateString("en-US", { timeZone: "America/Los_Angeles" }) === today ? "Tonight" : new Date(mid).toLocaleDateString([], { weekday: "long", timeZone: "America/Los_Angeles" });
+      return when + ": " + T.themeOf(mid).name;
+    };
+    const tag = "The Drive-In \u00b7 " + (it.closed && T.nextShow ? nextShowWords() : (label || th.name));
     return { src: it.src || "", offset: n.offset, left: Math.min(n.left, turn / 1000), tag, title: WORDS.tvGuide, href: "drive-in.html", key: "di" + (it.src || it.slate) };
   }
   // what's on every channel and at the drive-in right now, one line each, for the fading lines under the little TV
@@ -1779,7 +1785,11 @@
     });
     if (window.DRIVEIN) {
       const n = T.driveAt(ms);
-      if (n) { const it = n.item; out.push({ t: WORDS.tvNowAt + (it.kind === "feature" ? it.title : T.themeOf(ms).name), href: "drive-in.html" }); }
+      if (n) {
+        const it = n.item;
+        if (it.closed && T.nextShow) { const mid = T.nextShow(ms) + 12 * 36e5; out.push({ t: "Next at the Drive-In: " + T.themeOf(mid).name + ", " + new Date(mid).toLocaleDateString([], { weekday: "long", timeZone: "America/Los_Angeles" }) + " night", href: "drive-in.html" }); }
+        else out.push({ t: WORDS.tvNowAt + (it.kind === "feature" ? it.title : T.themeOf(ms).name), href: "drive-in.html" });
+      }
     }
     return out;
   }
