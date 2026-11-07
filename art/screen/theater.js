@@ -109,9 +109,11 @@
   function pickFrom(list, seed, n) { return list.length ? shuffle(list, seed).slice(0, n) : []; }
   function nightProgram(dayMs) {
     var DI = window.DRIVEIN, th = themeOf(dayMs), feats = featuresFor(dayMs), seed = hash("night" + dayIndex(dayMs)), out = [];
+    pickFrom(DI.welcome || [], seed + 3, 1).forEach(function (w) { out.push(Object.assign({ kind: "welcome" }, w)); });   // a real "welcome to the drive-in" reel opens the night
     out.push(slate("welcome", 20, { theme: th, feats: feats }));
     var se = seasonOf(dayMs);
     pickFrom(se && se.cartoons && se.cartoons.length ? se.cartoons : (window.TV || []), seed, 1).forEach(function (c) { out.push(Object.assign({ kind: "cartoon" }, c)); });
+    pickFrom(DI.comingAttractions || [], seed + 4, 1).forEach(function (b) { out.push(Object.assign({ kind: "trailer", bumper: true }, b)); });   // the "Prevues of Coming Attractions" card before the trailers
     pickFrom(DI.trailers || [], seed + 1, 2).forEach(function (t) { out.push(Object.assign({ kind: "trailer" }, t)); });
     if ((DI.serials || []).length) { var s = DI.serials[dayIndex(dayMs) % DI.serials.length]; out.push(Object.assign({ kind: "serial" }, s)); }
     if (feats[0]) out.push(Object.assign({ kind: "feature", n: 1 }, feats[0]));
@@ -487,7 +489,7 @@
   if (MODE === "drivein") {
     window.BK_CHAT_PLACE = "at the Drive-In";
     where = function (ms) { return driveAt(ms || Date.now()); };
-    var LABEL = { cartoon: "A cartoon to start", trailer: "Coming attractions", serial: "Tonight\u2019s serial chapter", intermission: "Intermission", feature: "Feature presentation" };
+    var LABEL = { welcome: "Welcome", cartoon: "A cartoon to start", trailer: "Coming attractions", serial: "Tonight\u2019s serial chapter", intermission: "Intermission", feature: "Feature presentation" };
     renderInfo = function (n) {
       var it = n.item, now = Date.now(), dusk = duskOf(now), night = !it.matinee && !(it.slate === "intermission" && it.words && it.words.short);
       var th = themeOf(now), feats = featuresFor(now);
@@ -502,7 +504,7 @@
       var t = $(".np-title"); t.textContent = it.slate ? (it.slate === "welcome" ? th.name : "") : it.title; t.href = it.item || "#";
       $(".np-date").textContent = it.year ? String(it.year) : "";
       $(".np-left").textContent = mmss(n.left) + " left";
-      var nx = n.segs[n.i + 1]; $(".np-next").textContent = nx ? "Then: " + (nx.slate ? ({ intermission: "Intermission", goodnight: "Good night", welcome: "Welcome" }[nx.slate]) : nx.kind === "intermission" ? "Intermission" : nx.kind === "trailer" ? "Coming attractions" : (nx.title || "")) + " at " + hhmm(nx.startMs) : "";
+      var nx = n.segs[n.i + 1]; $(".np-next").textContent = nx ? "Then: " + (nx.slate ? ({ intermission: "Intermission", goodnight: "Good night", welcome: "Welcome" }[nx.slate]) : nx.kind === "intermission" ? "Intermission" : nx.kind === "trailer" ? "Coming attractions" : nx.kind === "welcome" ? "Welcome" : (nx.title || "")) + " at " + hhmm(nx.startMs) : "";
       renderWeek(); renderProgram(n);
     };
     // tonight's lineup, with times, so the shape of a night at the drive-in is plain to see

@@ -1145,6 +1145,74 @@ window.DRIVEIN = {
    "item": "https://archive.org/details/After_The_Thin_Man_trailer"
   }
  ],
+ "welcome": [
+  {
+   "title": "Welcome to the Motor-In (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/Drive-inWelcomeBw/Drive-in--WelcomeBw_512kb.mp4",
+   "length": 113.81,
+   "item": "https://archive.org/details/Drive-inWelcomeBw"
+  },
+  {
+   "title": "A Hearty Welcome to Our Drive-In Theatre (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/DriveInWelcomeToTheDriveInNightSky/DriveIn-WelcomeToTheDriveIn-NightSky.mp4",
+   "length": 62.73,
+   "item": "https://archive.org/details/DriveInWelcomeToTheDriveInNightSky"
+  }
+ ],
+ "comingAttractions": [
+  {
+   "title": "Prevues of Coming Attractions: Marquee (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/Drive-inComingAttractions-marquee/Drive-in--ComingAttractions-marquee_512kb.mp4",
+   "length": 15.41,
+   "item": "https://archive.org/details/Drive-inComingAttractions-marquee"
+  },
+  {
+   "title": "Coming Attractions (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/Drive-inComingAttractionsBw/Drive-in--ComingAttractionsBw_512kb.mp4",
+   "length": 4.74,
+   "item": "https://archive.org/details/Drive-inComingAttractionsBw"
+  },
+  {
+   "title": "Prevues of Coming Attractions: Colorsplash (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/DriveIn-PrevuesOfComingAttractions-Colorsplash/DriveIn-PrevuesOfComingAttractions-Colorsplash_512kb.mp4",
+   "length": 12.15,
+   "item": "https://archive.org/details/DriveIn-PrevuesOfComingAttractions-Colorsplash"
+  },
+  {
+   "title": "Coming Attractions: Windmill (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/DriveIn-ComingAttractions-Windmill/DriveIn-ComingAttractions-Windmill_512kb.mp4",
+   "length": 12.61,
+   "item": "https://archive.org/details/DriveIn-ComingAttractions-Windmill"
+  },
+  {
+   "title": "Prevues of Coming Attractions: Passage (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 1,
+   "src": "https://archive.org/download/Drive-inPreviewsOfComingAttractions-passage/Drive-in--PreviewsOfComingAttractions-passage-_512kb.mp4",
+   "length": 12.45,
+   "item": "https://archive.org/details/Drive-inPreviewsOfComingAttractions-passage"
+  },
+  {
+   "title": "Prevues of Coming Attractions: Colorgloss (from Drive-In Movie Ads)",
+   "year": "",
+   "gain": 0.62,
+   "src": "https://archive.org/download/Drive-in--ComingAttractions-colorgloss/Drive-n--ComingAttractions-colorgloss_512kb.mp4",
+   "length": 13.48,
+   "item": "https://archive.org/details/Drive-in--ComingAttractions-colorgloss"
+  }
+ ],
  "intermission": [
   {
    "title": "Snack Bar Mom (from Drive-In Movie Ads)",
