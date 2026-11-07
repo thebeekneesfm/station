@@ -1026,6 +1026,8 @@
         rec.guide = { el: g, key: "" };
         g.addEventListener("click", e => {
           if (state.editing) return;
+          const shelf = e.target.closest(".g-shelf");
+          if (shelf) { e.preventDefault(); openRack("records"); return; }
           const row = e.target.closest(".g-row"); if (!row) return;
           tuneTo(STATIONS.find(s => s.id === row.dataset.id));
         });
@@ -1294,6 +1296,10 @@
         h += `<button type="button" class="g-row g-card${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}: ${esc(cur.track.series)}, ${esc(cur.track.title)}" title="Now: ${esc(cur.track.series)}, ${esc(cur.track.title)}\nNext at ${hhmm(at2)}: ${esc(nx.series)}${nx.title ? ", " + esc(nx.title) : ""}">` +
              `<span class="gc-top"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${sel && state.on ? '<span class="gc-live">On now</span>' : ""}</span>` +
              `<span class="g-now"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}</span></button>`;
+        // after the last music station: the Record Shelf, where the newer albums live until the station can license them
+        if (st.music && STATIONS.indexOf(st) === STATIONS.length - 1 - STATIONS.slice().reverse().findIndex(x => x.music))
+          h += `<a class="g-card g-shelf" href="records.html"><span class="gc-top"><span class="g-num">LP</span><span class="g-name">Record Shelf</span></span>` +
+               `<span class="g-now"><b>Today's five albums</b> from the '40s, '50s and '60s</span></a>`;
         return;
       }
       h += `<button type="button" class="g-row${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}">`;
@@ -1529,10 +1535,10 @@
     const tile = (k, img, title, line) => `<button type="button" class="wl-tile" data-go="${k}"><img src="${img}" alt="" loading="lazy"><span><b>${title}</b><i>${line}</i></span></button>`;
     box.innerHTML = '<div class="wl-card"><button type="button" class="ab-close wl-x">Close</button>' +
       '<h1 id="wl-h">Welcome to The Bee\u2019s Knees</h1>' +
-      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and 78 records play around the clock on thirteen stations, with TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
+      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and Jazz Age 78s play around the clock on eight stations, with a record shelf, TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
       '<button type="button" class="wl-start"><span class="ic" aria-hidden="true"></span>Start the radio</button>' +
       '<div class="wl-tiles">' +
-        tile("listen", "art/cards/chills.webp", "Listen", "13 stations of shows and music") +
+        tile("listen", "art/cards/chills.webp", "Listen", "8 stations and a record shelf") +
         tile("watch", "art/screen/tv-set.webp", "Watch", "Vintage TV and drive-in movies") +
         tile("read", "art/rack/covers/Life_1947_11NOV_10.webp", "Read", "Comics, magazines and old ads") +
         tile("play", "art/postcards/pc-c1910-tea-with-grannie.t.jpg", "Play", "A daily puzzle and postcards to send") +
@@ -1567,8 +1573,8 @@
   /* ---------- the comic and magazine racks, opened over the radio ----------
      The rack page itself runs in a frame (comics.html?embed=1), so collections and the reader work just as on the page,
      and the radio keeps playing underneath. */
-  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads", "guestbook.html": "guestbook", "youtube.html": "youtube", "postcard.html": "postcard", "puzzles.html": "puzzles", "shop.html": "shop" };
-  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads", guestbook: "The guest book", youtube: "The Bee's Knees on YouTube", postcard: "Send a card", puzzles: "The Puzzle Page", shop: "The Bee's Knees shop" }, isRack = k => !!RACK_TITLES[k];
+  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads", "guestbook.html": "guestbook", "youtube.html": "youtube", "postcard.html": "postcard", "puzzles.html": "puzzles", "records.html": "records", "shop.html": "shop" };
+  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads", guestbook: "The guest book", youtube: "The Bee's Knees on YouTube", postcard: "Send a card", records: "The Record Shelf", puzzles: "The Puzzle Page", shop: "The Bee's Knees shop" }, isRack = k => !!RACK_TITLES[k];
   // the site menu asks first: the station's own pages open over the radio, so the music keeps playing
   window.BK_NAV_OPEN = href => {
     if (state.editing) return true;

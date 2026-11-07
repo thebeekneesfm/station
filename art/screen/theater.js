@@ -567,7 +567,7 @@
     if (bedSt && bedSt.id === id) return bedSt;
     var st = (window.STATIONS || []).find(function (x) { return x.id === id; });
     if (!st) {
-      if (!bedLoading && !window.STATIONS) { bedLoading = true; var sc = document.createElement("script"); sc.src = "stations.js?v=20261104c"; sc.onload = function () { tick(true); }; document.head.appendChild(sc); }
+      if (!bedLoading && !window.STATIONS) { bedLoading = true; var sc = document.createElement("script"); sc.src = "stations.js?v=20261107jz"; sc.onload = function () { tick(true); }; document.head.appendChild(sc); }
       return null;
     }
     var t = 0; st._cumB = st.tracks.map(function (tr) { var a = t; t += Number(tr.length) || 0; return a; }); st._totB = t; st._epB = Date.parse(st.epoch || "2026-11-01T00:00:00Z");
