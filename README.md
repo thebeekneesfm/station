@@ -98,14 +98,9 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Romance & Drama | Great love stories and dramas from Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Campbell Playhouse, Mercury Theatre and Columbia Workshop | about 65 hours |
 | Laughs | Jack Benny, Fibber McGee and Molly, Burns and Allen, The Great Gildersleeve, Our Miss Brooks | about 16 hours |
 | Variety | Bing Crosby, Bob Hope, The Chase and Sanborn Hour, Command Performance, Fred Allen, Jimmy Durante, Spike Jones, Martin and Lewis, Jubilee, Dinah Shore, The Railroad Hour | about 45 hours |
-| Jazz Age | Ragtime, hot jazz and dance bands, from the 1910s through the '20s | about 58 hours |
-| Blues | Delta and country blues, 1920s to the '50s | about 3 hours |
-| Swing | Big bands of the 1930s and '40s | about 6 hours |
-| After Hours | Crooners, torch songs and late-night jazz, late '20s to the '50s | about 79 hours |
-| Classical | Opera singers, violinists, pianists and orchestras on 78s, 1900s–1950s. Only complete short pieces, never "part 2" of something | about 6 hours |
-| Hawaiian & Exotica | Steel guitars, island songs and exotica | about 4 hours |
-| Sleepy Time | Slow waltzes and sweet bands, muffled and echoey as if playing in another room No commercials. | about 4 hours |
-| Christmas | Holiday 78s from the 1930s to 1959. Only on the dial from November 15 to January 6 (set by `"season"` in stations.js) | about 20 hours |
+| Gramophone Radio | Dance bands, early jazz and blues on 78s from 1925 and earlier (public domain) | about 23 hours |
+
+Rock 'n' Roll, Blues, Swing, After Hours, Classical, Sleepy Time and Christmas are switched off (`"off": true` in stations.js) until the station has a broadcasting license; their track lists are kept. Their kind of music lives on the Record Shelf (`records.html`, `art/records/records.js`): albums that play on Archive.org, with five showcased each week under the radio.
 
 The shows take turns, so you don't get six Gunsmokes in a row. To add shows or build a new station, open `builder.html`, paste Archive links, tick what you want, and copy the result into `stations.js`.
 

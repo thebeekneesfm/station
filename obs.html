@@ -15,14 +15,14 @@
 
   Settings go after the "?" in the address, joined with "&":
     mode=radio           start on the radio (default), tv or drivein
-    station=swing        the radio station (its id or channel number; default: chills)
+    station=gramophone   the radio station (its id or channel number; default: chills)
     channel=kids         the TV channel, for mode=tv (its id or number; default: the first channel)
-    twitch=yourchannel   let chat change what's on: !tune swing, !tune tv kids, !tune drive-in, and !stations for the list
+    twitch=yourchannel   let chat change what's on: !tune noir, !tune tv kids, !tune drive-in, and !stations for the list
     cooldown=180         seconds after a change before chat can change it again (default 180)
     vote=45              seconds chat has to vote once someone asks for a station (default 45)
     look=overlay         just the small now-playing card, for putting over your own scene
     schedule=1           follow the weekly schedule in obs-schedule.js (switches by itself at each block)
-  Example:  thebeesknees.fm/obs.html?station=swing&twitch=thebeeskneesfm
+  Example:  thebeesknees.fm/obs.html?station=chills&twitch=thebeeskneesfm
   The broadcaster and mods skip the vote and the cooldown.
 -->
 <style>
@@ -156,7 +156,7 @@
     <p>Every station, free and in sync, at <b>thebeesknees.fm</b></p>
   </section>
   <section class="list paper" id="list"><h2 class="head">What's on the dial</h2>
-    <div class="cols"><div class="radio"><h3>Radio <small>!tune swing</small></h3><ol id="stations"></ol></div><div><h3>TV <small>!tune tv kids</small></h3><ol id="channels"></ol></div></div>
+    <div class="cols"><div class="radio"><h3>Radio <small>!tune noir</small></h3><ol id="stations"></ol></div><div><h3>TV <small>!tune tv kids</small></h3><ol id="channels"></ol></div></div>
     <p class="di"><strong>The Drive-In</strong>: <code>!tune drive-in</code> for the picture show</p></section>
   <div class="ticker paper"><div class="run" id="run"></div></div>
   <div class="toast" id="toast"></div>
@@ -164,7 +164,7 @@
 <div class="start" id="start">Click anywhere to start the sound</div>
 <audio id="audio" preload="auto" crossorigin="anonymous"></audio>
 
-<script src="config.js?v=20261106shop"></script>
+<script src="config.js?v=20261107rs"></script>
 <script src="stations.js?v=20261107gr2"></script>
 <script src="art/screen/tv-data.js?v=22"></script>
 <script src="obs-schedule.js?v=5"></script>
@@ -396,7 +396,7 @@
   var COOL = 1000 * (+Q.get("cooldown") || 180), VOTE = 1000 * (+Q.get("vote") || 45);
   var lastChange = 0, votes = null, voteEnd = 0, cands = {};
   if (channel) {
-    $("tunein").innerHTML = '<div class="head">You pick what\u2019s on</div><p>Type <code>!tune swing</code>, <code>!tune tv kids</code> or <code>!tune drive-in</code> in chat. <code>!stations</code> shows the dial. Free at <b>thebeesknees.fm</b></p>';
+    $("tunein").innerHTML = '<div class="head">You pick what\u2019s on</div><p>Type <code>!tune noir</code>, <code>!tune tv kids</code> or <code>!tune drive-in</code> in chat. <code>!stations</code> shows the dial. Free at <b>thebeesknees.fm</b></p>';
     connect();
   }
   function command(user, text, boss) {
