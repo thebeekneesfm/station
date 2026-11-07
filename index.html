@@ -391,6 +391,19 @@
   .menu-box .bkn a, .menu-box .bkn button { font-size: var(--m-size, 22px); }
   .menu-box .bkn-sub a { font-size: calc(var(--m-size, 22px) - 2px); }
   .menu-box .bkm-btn { font-size: var(--m-size, 22px); min-height: 48px; }
+  /* the station list as cards (guide mode "cards"): three across, each with what's on now and next */
+  .guide.g-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px 10px; align-content: start; padding: 0 6px 4px; box-sizing: border-box; }
+  .g-cards .g-group { grid-column: 1 / -1; padding: .2em .2em .1em; font-size: 1.2em; }
+  .g-cards .g-card { display: grid; gap: 3px; align-content: center; height: auto; min-height: 50px; padding: .25em .55em .3em; border: 1px solid rgba(31,27,23,.18); background: rgba(255,250,235,.35); border-radius: 2px; }
+  .g-cards .g-card:hover { background: rgba(255,250,235,.7); border-color: rgba(31,27,23,.4); }
+  .g-cards .g-card.sel { background: rgba(227,169,47,.3); border-color: var(--g-hi); box-shadow: inset 3px 0 0 var(--g-hi); }
+  .gc-top { display: flex; align-items: center; gap: .45em; min-width: 0; }
+  .g-cards .g-num { font-size: .78em; min-width: 1.7em; }
+  .g-cards .g-name { font-size: 1em; }
+  .gc-live { margin-left: auto; font: italic 700 .72em/1 "BK Serif", Georgia, serif; color: var(--g-hi); white-space: nowrap; }
+  .g-cards .g-now { display: block; line-height: 1.35; font-size: .92em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .g-cards .g-now b { font-weight: 700; }
+  .g-cards .g-next { font-size: .74em; color: var(--g-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   #stage { overflow: clip; }
   body { background: transparent !important; }
   #frame { background: transparent; }
@@ -678,7 +691,7 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261106nav"></script>
+<script src="skin.js?v=20261107cards"></script>
 <script src="stations.js?v=20261106b"></script>
 <script src="config.js?v=20261106shop"></script>
 <script src="ads.js?v=20261102b"></script>
@@ -688,8 +701,8 @@
 <script src="art/screen/drivein-data.js?v=13"></script>
 <script src="art/screen/theater.js?v=36"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
-<script src="art/nav/nav.js?v=2"></script>
-<script src="radio.js?v=20261107fix"></script>
+<script src="art/nav/nav.js?v=3"></script>
+<script src="radio.js?v=20261107cards"></script>
 <script src="socials.js?v=2"></script>
 <script src="chat.js?v=20261106nav"></script>
 </body>

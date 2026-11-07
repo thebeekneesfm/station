@@ -946,7 +946,7 @@
         patronRecs.push(rec); paintPatrons(rec);
         if (patronRecs.length === 1) { loadPatrons(); setInterval(loadPatrons, 10 * 60 * 1000); }
       } else if (type === "guide") {
-        const g = document.createElement("div"); g.className = "guide";
+        const g = document.createElement("div"); g.className = "guide" + (L.mode === "cards" ? " g-cards" : "");
         el.appendChild(g); el.classList.add("hot");
         rec.guide = { el: g, key: "" };
         g.addEventListener("click", e => {
@@ -1208,6 +1208,16 @@
       const n = presence.live ? (presence.counts[st.id] || 0) : 0;
       const cnt = "";   // per-station counts are off; the total sits in the masthead
       const cur = at(st, now), next = st.tracks[(cur.i + 1) % st.tracks.length];
+      if (mode === "cards") {
+        // one small card per station: name, what's on now, and what's next
+        let ni = (cur.i + 1) % st.tracks.length, at2 = now + cur.left * 1000, guard = 0;
+        while (st.tracks[ni].ad && guard++ < 5) { at2 += st.tracks[ni].length * 1000; ni = (ni + 1) % st.tracks.length; }
+        const nx = st.tracks[ni];
+        h += `<button type="button" class="g-row g-card${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}: ${esc(cur.track.series)}, ${esc(cur.track.title)}" title="Now: ${esc(cur.track.series)}, ${esc(cur.track.title)}\nNext at ${hhmm(at2)}: ${esc(nx.series)}${nx.title ? ", " + esc(nx.title) : ""}">` +
+             `<span class="gc-top"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${sel && state.on ? '<span class="gc-live">On now</span>' : ""}</span>` +
+             `<span class="g-now"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}</span></button>`;
+        return;
+      }
       h += `<button type="button" class="g-row${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}">`;
       h += `<span class="g-lab"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span><span class="g-count">${esc(cnt)}</span></span>`;
       if (mode === "timeline") {

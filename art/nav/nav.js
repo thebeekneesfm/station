@@ -111,7 +111,7 @@
         });
         // a mouse can just point at the menu; touch and keyboard use the click
         li.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") { clearTimeout(t); show(true); } });
-        li.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") { t = setTimeout(function () { show(false); }, 220); } });
+        li.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") { t = setTimeout(function () { show(false); }, 500); } });
         sub.addEventListener("keydown", function (e) { if (e.key === "Escape") { show(false); btn.focus(); } });
         li.appendChild(btn); li.appendChild(sub);
       }
