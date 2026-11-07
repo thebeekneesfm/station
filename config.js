@@ -21,8 +21,8 @@ window.RADIO_CONFIG = {
     "Enjoying the vibes? Consider becoming a member or making a donation at ko-fi.com/thebeeskneesfm",
   ],
   /* Sponsor-tier members: which station each one sponsors this month.
-     Use the station's id (chills, noir, scifi, romance, outwest, laughs, jazzage,
-     blues, swing, afterhours, classical, hawaiian, sleepy, christmas) and the name to show.
+     Use the station's id (chills, noir, scifi, romance, outwest, laughs, rocknroll,
+     blues, swing, afterhours, classical, sleepy, christmas) and the name to show.
      Example:  "chills": "Margaret",  */
   "sponsors": {
   },
