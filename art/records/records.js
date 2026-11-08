@@ -1112,25 +1112,42 @@ window.RECORDS_TODAY = function (when) {
   return { picks: picks, fresh: fresh, shelf: shelf, month: m, day: d, weekOf: { month: mon.getUTCMonth() + 1, day: mon.getUTCDate() } };
 };
 
-/* the little player: Archive.org's own embedded player in a pop-up, so the album plays from Archive.org
-   without leaving the page. While it's open the radio pauses, and it picks back up when the player closes. */
+/* the little player: the album's tracks, streamed straight from Archive.org, in a pop-up on the page.
+   The track list is part of the pop-up, so it scrolls like the rest of the page on a phone (Archive.org's own
+   embedded player cut the list off). If the track list can't be loaded, it falls back to Archive.org's player.
+   While it's open the radio pauses, and it picks back up when the player closes. */
 window.RECORDS_PLAY = function (r) {
   var doc = document, old = doc.getElementById("rp-box");
-  if (old) old.remove();
+  if (old && old._close) old._close(); else if (old) old.remove();
   if (!doc.getElementById("rp-css")) {
     var css = doc.createElement("style"); css.id = "rp-css";
     css.textContent = [
-      "#rp-box{position:fixed;inset:0;z-index:2000;background:rgba(20,15,10,.72);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) 16px 16px}",
-      "#rp-box .rp-card{position:relative;width:min(620px,100%);max-height:calc(100vh - 32px);overflow:auto;background:url(art/newsprint.jpg) 0 0/640px 640px,#e9e1c9;color:#1f1b17;box-shadow:0 3px 0 rgba(0,0,0,.3),0 18px 40px rgba(0,0,0,.45);padding:18px 18px 16px;font:18px/1.4 'BK Serif',Georgia,serif;box-sizing:border-box}",
+      "#rp-box{position:fixed;inset:0;z-index:2000;background:rgba(20,15,10,.72);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) 16px max(16px,env(safe-area-inset-bottom,0px))}",
+      "#rp-box .rp-card{position:relative;width:min(620px,100%);max-height:calc(100vh - 32px);max-height:calc(100dvh - 32px);overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;background:url(art/newsprint.jpg) 0 0/640px 640px,#e9e1c9;color:#1f1b17;box-shadow:0 3px 0 rgba(0,0,0,.3),0 18px 40px rgba(0,0,0,.45);padding:18px 18px 16px;font:18px/1.4 'BK Serif',Georgia,serif;box-sizing:border-box}",
       "#rp-box .rp-top{display:flex;gap:20px;align-items:flex-end;padding-right:70px}",
       "#rp-box .rp-top img{width:200px;height:200px;object-fit:cover;flex:none;box-shadow:0 2px 0 rgba(0,0,0,.3),0 4px 10px rgba(0,0,0,.25);transform:rotate(-2deg)}",
       "#rp-box h2{margin:0;padding:0;border:0;word-spacing:normal;font:700 24px/1.2 'BK Serif',Georgia,serif;text-wrap:balance}",
       "#rp-box .rp-who{margin:3px 0 0;font-style:italic;color:#4a4036;font-size:16px}",
       "#rp-box iframe{display:block;width:100%;height:300px;border:0;margin-top:14px;background:#111}",
-      "#rp-box .rp-foot{margin:10px 0 0;font-size:15px;color:#4a4036}",
+      "#rp-box .rp-deck{position:sticky;top:-18px;z-index:2;box-shadow:0 6px 10px -6px rgba(0,0,0,.5);margin-top:16px;background:#1f1b17;color:#f3ead6;padding:12px 12px 10px}",
+      "#rp-box .rp-now{margin:0 0 8px;font-size:16px;line-height:1.3;min-height:1.3em}",
+      "#rp-box .rp-now b{font-weight:700}",
+      "#rp-box audio{display:block;width:100%;height:40px}",
+      "#rp-box .rp-tracks{list-style:none;margin:10px 0 0;padding:0;border-top:1px solid rgba(31,27,23,.25)}",
+      "#rp-box .rp-tracks button{display:grid;grid-template-columns:2em 1fr auto;gap:8px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid rgba(31,27,23,.18);padding:10px 4px;font:16px/1.3 'BK Serif',Georgia,serif;color:#1f1b17;cursor:pointer}",
+      "#rp-box .rp-tracks button:hover{background:rgba(31,27,23,.06)}",
+      "#rp-box .rp-tracks .n{color:#6b5f50;font-size:14px}",
+      "#rp-box .rp-tracks .t{min-width:0;overflow-wrap:anywhere}",
+      "#rp-box .rp-tracks .t i{display:block;color:#4a4036;font-size:14px}",
+      "#rp-box .rp-tracks .d{color:#6b5f50;font-size:14px;font-variant-numeric:tabular-nums}",
+      "#rp-box .rp-tracks button[aria-current=true]{background:rgba(227,169,47,.28)}",
+      "#rp-box .rp-tracks button[aria-current=true] .n::before{content:'\\25B6';color:#c8321f}",
+      "#rp-box .rp-tracks button[aria-current=true] .n span{display:none}",
+      "#rp-box .rp-wait{margin:14px 0 0;font-style:italic;color:#4a4036;font-size:16px}",
+      "#rp-box .rp-foot{margin:12px 0 0;font-size:15px;color:#4a4036}",
       "#rp-box .rp-foot a{color:#1f1b17}",
       "#rp-box .rp-x{position:absolute;top:12px;right:12px;font:700 16px/1 'BK Serif',Georgia,serif;background:#1f1b17;color:#f3ead6;border:0;padding:9px 12px;cursor:pointer}",
-      "#rp-box .rp-x:focus-visible,#rp-box a:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}",
+      "#rp-box .rp-x:focus-visible,#rp-box a:focus-visible,#rp-box .rp-tracks button:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}",
       "@media (max-width:480px){#rp-box iframe{height:240px}#rp-box .rp-top{flex-direction:column;align-items:flex-start;gap:12px;padding-right:0}#rp-box .rp-top img{width:min(210px,54vw);height:auto;aspect-ratio:1}#rp-box h2{font-size:20px}}"
     ].join("");
     doc.head.appendChild(css);
@@ -1144,21 +1161,87 @@ window.RECORDS_PLAY = function (r) {
   var t = doc.createElement("div"), h = doc.createElement("h2"), w = doc.createElement("p");
   h.textContent = r.title; w.className = "rp-who"; w.textContent = r.artist + (r.year ? ", " + r.year : "");
   t.appendChild(h); t.appendChild(w); top.appendChild(img); top.appendChild(t);
-  var fr = doc.createElement("iframe"); fr.title = r.title + " on Archive.org";
-  fr.allow = "autoplay; fullscreen"; fr.src = "https://archive.org/embed/" + encodeURIComponent(id) + "?playlist=1&autoplay=1";
+  // the audio element is made (and started) right away, inside the tap, so phones allow it to play
+  var deck = doc.createElement("div"); deck.className = "rp-deck";
+  var now = doc.createElement("p"); now.className = "rp-now"; now.textContent = "Finding the tracks…";
+  var au = doc.createElement("audio"); au.controls = true; au.preload = "auto"; au.setAttribute("playsinline", "");
+  deck.appendChild(now); deck.appendChild(au);
+  var list = doc.createElement("ol"); list.className = "rp-tracks"; list.setAttribute("aria-label", "Tracks");
   var foot = doc.createElement("p"); foot.className = "rp-foot";
   foot.appendChild(doc.createTextNode("Playing from the Internet Archive. "));
   var a = doc.createElement("a"); a.href = r.item; a.target = "_blank"; a.rel = "noopener"; a.textContent = "See the album on Archive.org"; foot.appendChild(a);
-  card.appendChild(x); card.appendChild(top); card.appendChild(fr); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
+  card.appendChild(x); card.appendChild(top); card.appendChild(deck); card.appendChild(list); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
+  try { au.play().catch(function () {}); } catch (e) {}
+  var tracks = [], cur = -1, closed = false;
+  function fmt(s) { s = Math.round(+s || 0); if (!s) return ""; var m = Math.floor(s / 60); return m + ":" + ("0" + (s % 60)).slice(-2); }
+  function len(v) { if (!v) return 0; if (/:/.test(v)) { return String(v).split(":").reduce(function (a, b) { return a * 60 + (+b || 0); }, 0); } return +v || 0; }
+  function pick(k, go) {
+    if (k < 0 || k >= tracks.length) return;
+    cur = k; var tr = tracks[k];
+    au.src = tr.url;
+    now.innerHTML = ""; var b = doc.createElement("b"); b.textContent = tr.title; now.appendChild(b);
+    if (tr.artist && tr.artist !== r.artist && !/various/i.test(tr.artist) && tr.title.indexOf(tr.artist) < 0) now.appendChild(doc.createTextNode(" · " + tr.artist));
+    Array.prototype.forEach.call(list.querySelectorAll("button"), function (bt, i) { bt.setAttribute("aria-current", i === k ? "true" : "false"); });
+    try { if ("mediaSession" in navigator) navigator.mediaSession.metadata = new MediaMetadata({ title: tr.title, artist: tr.artist || r.artist, album: r.title, artwork: [{ src: new URL(r.cover, location.href).href, sizes: "420x420", type: "image/webp" }] }); } catch (e) {}
+    if (go) { var p = au.play(); if (p && p.catch) p.catch(function () {}); }
+  }
+  au.addEventListener("ended", function () { if (cur + 1 < tracks.length) pick(cur + 1, true); });
+  try { if ("mediaSession" in navigator) { navigator.mediaSession.setActionHandler("nexttrack", function () { pick(cur + 1, true); }); navigator.mediaSession.setActionHandler("previoustrack", function () { pick(Math.max(0, cur - 1), true); }); } } catch (e) {}
+  function fallback() {
+    if (closed) return;
+    deck.remove(); list.remove();
+    var fr = doc.createElement("iframe"); fr.title = r.title + " on Archive.org"; fr.allow = "autoplay; fullscreen";
+    fr.src = "https://archive.org/embed/" + encodeURIComponent(id) + "?playlist=1&autoplay=1";
+    card.insertBefore(fr, foot); box._frame = fr;
+  }
+  fetch("https://archive.org/metadata/" + encodeURIComponent(id)).then(function (res) { return res.json(); }).then(function (M) {
+    if (closed) return;
+    var files = (M && M.files) || [], dir = "https://" + (M.d1 || "archive.org") + (M.dir || "");
+    var base = "https://archive.org/download/" + encodeURIComponent(id) + "/";
+    var mp3 = files.filter(function (f) { return /\.mp3$/i.test(f.name) && !/_64kb|_vbr\.m3u|sample/i.test(f.name); });
+    // one file per song: prefer an .mp3 the uploader gave, else the mp3 the Archive made from each original
+    var orig = files.filter(function (f) { return f.source === "original" && /\.(mp3|flac|wav|ogg|m4a|aiff?)$/i.test(f.name); });
+    var seen = {};
+    tracks = [];
+    orig.forEach(function (o) {
+      var stem = o.name.replace(/\.[^.\/]+$/, "");
+      var f = /\.mp3$/i.test(o.name) ? o : mp3.filter(function (m) { return m.original === o.name || m.name.replace(/\.[^.\/]+$/, "") === stem; })[0];
+      if (!f || seen[f.name]) return; seen[f.name] = 1;
+      tracks.push({ f: f, o: o });
+    });
+    if (!tracks.length) mp3.forEach(function (f) { if (!seen[f.name]) { seen[f.name] = 1; tracks.push({ f: f, o: f }); } });
+    tracks = tracks.map(function (x) {
+      var f = x.f, o = x.o, tn = parseInt(o.track || f.track, 10);
+      return { url: base + f.name.split("/").map(encodeURIComponent).join("/"), title: o.title || f.title || o.name.replace(/^.*\//, "").replace(/\.[^.]+$/, "").replace(/[_-]+/g, " "),
+               artist: o.artist || f.artist || o.creator || "", len: len(o.length || f.length), tn: isNaN(tn) ? 9999 : tn, name: o.name };
+    }).sort(function (p, q) { return p.tn - q.tn || p.name.localeCompare(q.name, undefined, { numeric: true }); });
+    if (!tracks.length) return fallback();
+    tracks.forEach(function (tr, k) {
+      var li = doc.createElement("li"), bt = doc.createElement("button"); bt.type = "button";
+      var n = doc.createElement("span"); n.className = "n"; var ns = doc.createElement("span"); ns.textContent = k + 1; n.appendChild(ns);
+      var tt = doc.createElement("span"); tt.className = "t"; tt.textContent = tr.title;
+      if (tr.artist && tr.artist !== r.artist && !/various/i.test(tr.artist) && tr.title.indexOf(tr.artist) < 0) { var ii = doc.createElement("i"); ii.textContent = tr.artist; tt.appendChild(ii); }
+      var dd = doc.createElement("span"); dd.className = "d"; dd.textContent = fmt(tr.len);
+      bt.appendChild(n); bt.appendChild(tt); bt.appendChild(dd);
+      bt.addEventListener("click", function () { pick(k, true); });
+      li.appendChild(bt); list.appendChild(li);
+    });
+    pick(0, true);
+  }).catch(fallback);
   // pause the radio (on this page, or the radio page underneath when the shelf is open over it)
   var radio = null; try { radio = window.RADIO || (window.top !== window && window.top.RADIO) || null; } catch (e) {}
   var wasOn = false; try { if (radio && radio.state && radio.state.on && radio.power) { wasOn = true; radio.power(false); } } catch (e) {}
   var back = doc.activeElement;
   function close() {
-    fr.src = "about:blank"; box.remove(); doc.removeEventListener("keydown", esc, true);
+    if (closed) return; closed = true;
+    try { au.pause(); au.removeAttribute("src"); au.load(); } catch (e) {}
+    if (box._frame) box._frame.src = "about:blank";
+    box.remove(); doc.removeEventListener("keydown", esc, true);
+    try { if ("mediaSession" in navigator) { navigator.mediaSession.setActionHandler("nexttrack", null); navigator.mediaSession.setActionHandler("previoustrack", null); } } catch (e) {}
     try { if (wasOn && radio && radio.power) radio.power(true); } catch (e) {}
     try { if (back && back.focus) back.focus(); } catch (e) {}
   }
+  box._close = close;
   function esc(e) { if (e.key === "Escape") { e.stopPropagation(); close(); } }
   x.addEventListener("click", close);
   box.addEventListener("click", function (e) { if (e.target === box) close(); });
