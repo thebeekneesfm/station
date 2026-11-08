@@ -90,6 +90,9 @@
   .rec h3 { margin: 12px 0 0; font: 700 19px/1.25 "BK Serif", Georgia, serif; text-wrap: balance; }
   .rec a:hover h3 { color: var(--red); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
   .rec .who { margin: 4px 0 0; font-style: italic; font-size: 16px; line-height: 1.35; color: var(--ink-2); }
+  .sleeve { position: relative; }
+  .sleeve .new { position: absolute; z-index: 2; top: 8px; left: -6px; background: var(--red); color: #fff7e6; font: 700 13px/1 "BK Serif", Georgia, serif; padding: 6px 9px 5px; transform: rotate(-4deg); box-shadow: 0 2px 0 rgba(0,0,0,.25); }
+  .shelf.small .sleeve .new { font-size: 11px; padding: 4px 6px 3px; top: 4px; }
   .rec .yr { margin: 2px 0 0; font-size: 15px; color: var(--dim); }
   .play { margin-top: 18px; font-size: 17px; color: var(--ink-2); }
   .why { margin-top: 34px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 10px 30px; align-items: start; }
@@ -162,7 +165,7 @@
   </main>
 </div>
 <script src="config.js?v=20261107pp"></script>
-<script src="art/records/records.js?v=7"></script>
+<script src="art/records/records.js?v=8"></script>
 <script>
 (function () {
   "use strict";
@@ -170,15 +173,17 @@
   // opened over the radio: links back to the radio go to the whole page, not into this little window
   if (document.documentElement.classList.contains("embed")) document.querySelectorAll('a[href^="index.html"]').forEach(function (l) { l.target = "_top"; });
   try { if (window.RADIO_CONFIG && window.RADIO_CONFIG.tip) document.getElementById("kofi").href = window.RADIO_CONFIG.tip; } catch (e) {}
-  var T = window.RECORDS_TODAY(), picks = T.picks, m = T.month, d = T.day, W = T.weekOf;
+  var T = window.RECORDS_TODAY(), picks = T.picks, m = T.month, d = T.day, W = T.weekOf, fresh = T.fresh || [];
+  if (T.shelf) R = T.shelf; // albums with a later "added" date stay hidden until their Monday
   var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-  document.getElementById("today").textContent = "The week of " + months[W.month - 1] + " " + W.day + ". A new five every Monday.";
+  document.getElementById("today").textContent = "The week of " + months[W.month - 1] + " " + W.day + ". " + (fresh.length ? (["", "One album", "Two albums", "Three albums", "Four albums", "Five albums"][fresh.length] || fresh.length + " albums") + " new to the shelf this week." : "A new five every Monday.");
   function card(r) {
     var li = document.createElement("li"); li.className = "rec";
     var a = document.createElement("a"); a.href = r.item;
     a.setAttribute("aria-label", "Play " + r.title + " by " + r.artist + (r.year ? ", " + r.year : ""));
     a.addEventListener("click", function (e) { if (window.RECORDS_PLAY && !e.metaKey && !e.ctrlKey && !e.shiftKey) { e.preventDefault(); window.RECORDS_PLAY(r); } });
     var sl = document.createElement("div"); sl.className = "sleeve";
+    if (fresh.indexOf(r) >= 0) { var nw = document.createElement("span"); nw.className = "new"; nw.textContent = "New this week"; sl.appendChild(nw); a.setAttribute("aria-label", a.getAttribute("aria-label") + ", new this week"); }
     var img = document.createElement("img"); img.src = r.cover; img.alt = ""; img.loading = "lazy"; img.width = 420; img.height = 420;
     sl.appendChild(img); a.appendChild(sl);
     var h = document.createElement("h3"); h.textContent = r.title; a.appendChild(h);

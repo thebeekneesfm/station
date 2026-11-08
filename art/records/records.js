@@ -1,7 +1,10 @@
 /* THE RECORD SHELF
    records.html shows all of these, with five of them as the week's showcase (also under the radio). Between November 6 and January 6, three of the five are Christmas
    records ("season": "christmas"). Each cover opens a little player (Archive.org's own) right on the page.
-   To add one: copy a line, change the words, put a square cover in art/records/ (about 400 pixels). */
+   To add one: copy a line, change the words, put a square cover in art/records/ (about 400 pixels).
+   NEW ALBUMS: give an album an "added" date (a Monday, like "2027-03-01"). It stays off the shelf until that Monday, then it's
+   in that week's five with a "New this week" tag, and stays on the shelf after. Weeks with nothing new go back to the rotation,
+   so line up the next batch before the last "added" date passes. */
 window.RECORDS = [
  {
   "title": "Porgy & Bess",
@@ -747,16 +750,342 @@ window.RECORDS = [
   "cover": "art/records/jerry-fielding-and-his-brass-choir-favorite-christmas-music.webp",
   "item": "https://archive.org/details/jerry-fielding-and-his-brass-choir-favorite-christmas-music",
   "season": "christmas"
- }
+ },
+{
+ "title": "Brasil '65",
+ "artist": "The Sérgio Mendes Trio with Wanda de Sah",
+ "year": "1965",
+ "cover": "art/records/lp-brasil-65-the-srgio-mendes-trio-wanda-s-rosinha-de-v.webp",
+ "item": "https://archive.org/details/lp_brasil-65_the-srgio-mendes-trio-wanda-s-rosinha-de-v",
+ "added": "2027-03-01"
+},
+{
+ "title": "Soulin'",
+ "artist": "Lou Rawls",
+ "year": "1966",
+ "cover": "art/records/lp-soulin-lou-rawls-1.webp",
+ "item": "https://archive.org/details/lp_soulin_lou-rawls_1",
+ "added": "2027-03-01"
+},
+{
+ "title": "Jazz From \"Peter Gunn\"",
+ "artist": "The Joe Wilder Quartet",
+ "year": "1959",
+ "cover": "art/records/lp-jazz-from-peter-gunn-the-joe-wilder-quartet.webp",
+ "item": "https://archive.org/details/lp_jazz-from-peter-gunn_the-joe-wilder-quartet",
+ "added": "2027-03-01"
+},
+{
+ "title": "Born to Sing the Blues",
+ "artist": "Shirley Bassey",
+ "year": "1967",
+ "cover": "art/records/lp-born-to-sing-the-blues-shirley-bassey.webp",
+ "item": "https://archive.org/details/lp_born-to-sing-the-blues_shirley-bassey",
+ "added": "2027-03-01"
+},
+{
+ "title": "Inspector Clouseau (Original Motion Picture Score)",
+ "artist": "Ken Thorne",
+ "year": "1968",
+ "cover": "art/records/lp-inspector-clouseau-original-motion-pict-ken-thorne.webp",
+ "item": "https://archive.org/details/lp_inspector-clouseau-original-motion-pict_ken-thorne",
+ "added": "2027-03-01"
+},
+{
+ "title": "Sonny Rollins Quintet",
+ "artist": "Sonny Rollins with Kenny Dorham",
+ "year": "1954",
+ "cover": "art/records/lp-sonny-rollins-quintet-sonny-rollins-quintet-kenny-dorham.webp",
+ "item": "https://archive.org/details/lp_sonny-rollins-quintet_sonny-rollins-quintet-kenny-dorham",
+ "added": "2027-03-08"
+},
+{
+ "title": "Pops and Prado",
+ "artist": "Pérez Prado and His Orchestra",
+ "year": "1959",
+ "cover": "art/records/lp-pops-and-prado-perez-prado-and-his-orchestra.webp",
+ "item": "https://archive.org/details/lp_pops-and-prado_perez-prado-and-his-orchestra",
+ "added": "2027-03-08"
+},
+{
+ "title": "I Gotta Be Me... This Trip Out",
+ "artist": "Della Reese",
+ "year": "1968",
+ "cover": "art/records/lp-i-gotta-be-methis-trip-out-della-reese-0.webp",
+ "item": "https://archive.org/details/lp_i-gotta-be-methis-trip-out_della-reese_0",
+ "added": "2027-03-08"
+},
+{
+ "title": "Four Tops Live!",
+ "artist": "Four Tops",
+ "year": "1966",
+ "cover": "art/records/lp-four-tops-live-four-tops.webp",
+ "item": "https://archive.org/details/lp_four-tops-live_four-tops",
+ "added": "2027-03-08"
+},
+{
+ "title": "The Umbrellas of Cherbourg",
+ "artist": "Michel Legrand",
+ "year": "1964",
+ "cover": "art/records/lp-the-umbrellas-of-cherbourg-les-parapluies-michel-legrand.webp",
+ "item": "https://archive.org/details/lp_the-umbrellas-of-cherbourg-les-parapluies_michel-legrand",
+ "added": "2027-03-08"
+},
+{
+ "title": "Black Orpheus (Original Soundtrack)",
+ "artist": "Antonio Carlos Jobim & Luiz Bonfá",
+ "year": "1964",
+ "cover": "art/records/lp-the-original-soundtrack-from-the-film-blac-antonio-carlos.webp",
+ "item": "https://archive.org/details/lp_the-original-soundtrack-from-the-film-blac_antonio-carlos-jobim-luiz-bonf",
+ "added": "2027-03-15"
+},
+{
+ "title": "The Soul Man!",
+ "artist": "Bobby Timmons",
+ "year": "1966",
+ "cover": "art/records/lp-the-soul-man-bobby-timmons.webp",
+ "item": "https://archive.org/details/lp_the-soul-man_bobby-timmons",
+ "added": "2027-03-15"
+},
+{
+ "title": "Ballad of the Blues",
+ "artist": "Jo Stafford",
+ "year": "1959",
+ "cover": "art/records/lp-ballad-of-the-blues-jo-stafford-paul-weston-and-his-orche.webp",
+ "item": "https://archive.org/details/lp_ballad-of-the-blues_jo-stafford-paul-weston-and-his-orchest_0",
+ "added": "2027-03-15"
+},
+{
+ "title": "It's Party Time with King Curtis",
+ "artist": "King Curtis",
+ "year": "1962",
+ "cover": "art/records/lp-its-party-time-with-king-curtis-king-curtis.webp",
+ "item": "https://archive.org/details/lp_its-party-time-with-king-curtis_king-curtis",
+ "added": "2027-03-15"
+},
+{
+ "title": "A Gallery of Gershwin",
+ "artist": "The First Modern Piano Quartet",
+ "year": "1958",
+ "cover": "art/records/lp-a-gallery-of-gershwin-the-first-modern-piano-quartet-mann.webp",
+ "item": "https://archive.org/details/lp_a-gallery-of-gershwin_the-first-modern-piano-quartet-manny-albam",
+ "added": "2027-03-15"
+},
+{
+ "title": "In the Brazilian Bag",
+ "artist": "The Sérgio Mendes Trio",
+ "year": "1966",
+ "cover": "art/records/lp-in-the-brazilian-bag-the-srgio-mendes-trio.webp",
+ "item": "https://archive.org/details/lp_in-the-brazilian-bag_the-srgio-mendes-trio",
+ "added": "2027-03-22"
+},
+{
+ "title": "The Saxophones of Sonny Stitt",
+ "artist": "Sonny Stitt",
+ "year": "1958",
+ "cover": "art/records/lp-the-saxophones-of-sonny-stitt-sonny-stitt.webp",
+ "item": "https://archive.org/details/lp_the-saxophones-of-sonny-stitt_sonny-stitt",
+ "added": "2027-03-22"
+},
+{
+ "title": "Gospel Time",
+ "artist": "Ruth Brown",
+ "year": "1962",
+ "cover": "art/records/lp-gospel-time-ruth-brown.webp",
+ "item": "https://archive.org/details/lp_gospel-time_ruth-brown",
+ "added": "2027-03-22"
+},
+{
+ "title": "3,046 People Danced 'Til 4 A.M. to Bill Doggett",
+ "artist": "Bill Doggett and His Combo",
+ "year": "1961",
+ "cover": "art/records/lp-3046-people-danced-til-4-am-to-bill-dog-bill-doggett-comb.webp",
+ "item": "https://archive.org/details/lp_3046-people-danced-til-4-am-to-bill-dog_bill-doggett-combo",
+ "added": "2027-03-22"
+},
+{
+ "title": "Candy's Theme and Other Sweets",
+ "artist": "Hugo Montenegro and His Orchestra",
+ "year": "1965",
+ "cover": "art/records/lp-candys-theme-and-other-sweets-hugo-montenegro-and-his-orc.webp",
+ "item": "https://archive.org/details/lp_candys-theme-and-other-sweets_hugo-montenegro-and-his-orchestra",
+ "added": "2027-03-22"
+},
+{
+ "title": "Afro-Cuban Jazz Suite",
+ "artist": "Machito",
+ "year": "1951",
+ "cover": "art/records/lp-afro-cuban-jazz-suite-machito.webp",
+ "item": "https://archive.org/details/lp_afro-cuban-jazz-suite_machito",
+ "added": "2027-03-29"
+},
+{
+ "title": "Spotlight on Earl Grant",
+ "artist": "Earl Grant",
+ "year": "1965",
+ "cover": "art/records/lp-spotlight-on-earl-grant-earl-grant-0.webp",
+ "item": "https://archive.org/details/lp_spotlight-on-earl-grant_earl-grant_0",
+ "added": "2027-03-29"
+},
+{
+ "title": "Into My Life",
+ "artist": "Chet Baker and the Carmel Strings",
+ "year": "1966",
+ "cover": "art/records/lp-into-my-life-chet-baker-the-carmel-strings.webp",
+ "item": "https://archive.org/details/lp_into-my-life_chet-baker-the-carmel-strings",
+ "added": "2027-03-29"
+},
+{
+ "title": "All the Hits by Dee Dee Sharp",
+ "artist": "Dee Dee Sharp",
+ "year": "1963",
+ "cover": "art/records/lp-all-the-hits-by-dee-dee-sharp-dee-dee-sharp.webp",
+ "item": "https://archive.org/details/lp_all-the-hits-by-dee-dee-sharp_dee-dee-sharp",
+ "added": "2027-03-29"
+},
+{
+ "title": "Sol Madrid (Original Soundtrack)",
+ "artist": "Lalo Schifrin",
+ "year": "1968",
+ "cover": "art/records/lp-sol-madrid-music-from-the-original-soun-lalo-schifrin.webp",
+ "item": "https://archive.org/details/lp_sol-madrid-music-from-the-original-soun_lalo-schifrin",
+ "added": "2027-03-29"
+},
+{
+ "title": "Mambo!",
+ "artist": "Pérez Prado and His Orchestra with Tito Rodríguez",
+ "year": "1958",
+ "cover": "art/records/lp-mambo-perez-prado-and-his-orchestra-tito-rodr.webp",
+ "item": "https://archive.org/details/lp_mambo_perez-prado-and-his-orchestra-tito-rodr",
+ "added": "2027-04-05"
+},
+{
+ "title": "Lou Rawls Live!",
+ "artist": "Lou Rawls",
+ "year": "1966",
+ "cover": "art/records/lp-live-lou-rawls-0.webp",
+ "item": "https://archive.org/details/lp_live_lou-rawls_0",
+ "added": "2027-04-05"
+},
+{
+ "title": "Dirty Dog",
+ "artist": "Kai Winding",
+ "year": "1966",
+ "cover": "art/records/lp-dirty-dog-kai-winding.webp",
+ "item": "https://archive.org/details/lp_dirty-dog_kai-winding",
+ "added": "2027-04-05"
+},
+{
+ "title": "Une Soirée avec Nana Mouskouri",
+ "artist": "Nana Mouskouri et les Athéniens",
+ "year": "1969",
+ "cover": "art/records/lp-une-soire-avec-nana-mouskouri-et-les-athni-nana-mouskouri.webp",
+ "item": "https://archive.org/details/lp_une-soire-avec-nana-mouskouri-et-les-athni_nana-mouskouri-les-athniens",
+ "added": "2027-04-05"
+},
+{
+ "title": "Provocative Percussion Vol. III",
+ "artist": "Enoch Light and the Light Brigade",
+ "year": "1961",
+ "cover": "art/records/lp-provocative-percussion-vol-iii-enoch-light-and-the-light.webp",
+ "item": "https://archive.org/details/lp_provocative-percussion-vol-iii_enoch-light-and-the-light-brigade",
+ "added": "2027-04-05"
+},
+{
+ "title": "Hugh Masekela's Next Album",
+ "artist": "Hugh Masekela",
+ "year": "1966",
+ "cover": "art/records/lp-hugh-masekelas-next-album-hugh-masekela.webp",
+ "item": "https://archive.org/details/lp_hugh-masekelas-next-album_hugh-masekela",
+ "added": "2027-04-12"
+},
+{
+ "title": "Wild, Wonderful Wynona",
+ "artist": "Wynona Carr",
+ "year": "1962",
+ "cover": "art/records/lp-wild-wonderful-wynona-wynona-carr.webp",
+ "item": "https://archive.org/details/lp_wild-wonderful-wynona_wynona-carr",
+ "added": "2027-04-12"
+},
+{
+ "title": "The King of Swing: 1937 Jazz Concert No. 2",
+ "artist": "Benny Goodman and His Orchestra",
+ "year": "1952",
+ "cover": "art/records/lp-the-king-of-swing-complete-1937-jazz-con-benny-goodman-an.webp",
+ "item": "https://archive.org/details/lp_the-king-of-swing-complete-1937-jazz-con_benny-goodman-and-his-orchestra-benny-good",
+ "added": "2027-04-12"
+},
+{
+ "title": "Soul Food",
+ "artist": "Bobby Timmons",
+ "year": "1966",
+ "cover": "art/records/lp-soul-food-bobby-timmons.webp",
+ "item": "https://archive.org/details/lp_soul-food_bobby-timmons",
+ "added": "2027-04-12"
+},
+{
+ "title": "Caterina Valente's Greatest Hits",
+ "artist": "Caterina Valente",
+ "year": "1965",
+ "cover": "art/records/lp-caterina-valentes-greatest-hits-caterina-valente-verner-m.webp",
+ "item": "https://archive.org/details/lp_caterina-valentes-greatest-hits_caterina-valente-verner-muller-und-sein-or",
+ "added": "2027-04-12"
+},
+{
+ "title": "They Call Me Mister Tibbs! (Original Score)",
+ "artist": "Quincy Jones",
+ "year": "1970",
+ "cover": "art/records/lp-they-call-me-mister-tibbs-quincy-jones.webp",
+ "item": "https://archive.org/details/lp_they-call-me-mister-tibbs_quincy-jones",
+ "added": "2027-04-19"
+},
+{
+ "title": "Zungo! Afro Percussion",
+ "artist": "Babatunde Olatunji",
+ "year": "1961",
+ "cover": "art/records/lp-zungo-afro-percussion-babatunde-olatunji.webp",
+ "item": "https://archive.org/details/lp_zungo-afro-percussion_babatunde-olatunji",
+ "added": "2027-04-19"
+},
+{
+ "title": "Josh White at Town Hall",
+ "artist": "Josh White",
+ "year": "1962",
+ "cover": "art/records/lp-josh-white-at-town-hall-josh-white-beverly-white-josh-whi.webp",
+ "item": "https://archive.org/details/lp_josh-white-at-town-hall_josh-white-beverly-white-josh-white-jr-jos",
+ "added": "2027-04-19"
+},
+{
+ "title": "Beautiful Friendship",
+ "artist": "The Three Sounds",
+ "year": "1965",
+ "cover": "art/records/lp-beautiful-friendship-the-three-sounds-0.webp",
+ "item": "https://archive.org/details/lp_beautiful-friendship_the-three-sounds_0",
+ "added": "2027-04-19"
+},
+{
+ "title": "Moon Man",
+ "artist": "Charles Lloyd",
+ "year": "1970",
+ "cover": "art/records/lp-moon-man-charles-lloyd.webp",
+ "item": "https://archive.org/details/lp_moon-man_charles-lloyd",
+ "added": "2027-04-19"
+}
 ];
 
 /* this week's five (the showcase under the radio and at the top of the shelf): the same for everyone,
-   new every Monday by the station's clock (Pacific). Every album comes around before any repeats. */
+   new every Monday by the station's clock (Pacific). Albums "added" this week come first; the rest of the five
+   come from the rotation, where every album on the shelf comes around before any repeats. */
 window.RECORDS_TODAY = function (when) {
   var R = window.RECORDS || [], parts = {}, now = when || new Date();
   try { new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(now).forEach(function (p) { parts[p.type] = p.value; }); } catch (e) {}
   var y = +parts.year || now.getFullYear(), m = +parts.month || now.getMonth() + 1, d = +parts.day || now.getDate();
   var dayNo = Math.floor(Date.UTC(y, m - 1, d) / 864e5), weekNo = Math.floor((dayNo - 4) / 7), md = m * 100 + d, christmas = md >= 1106 || md <= 106;
+  var monNo = dayNo - ((dayNo - 4) % 7 + 7) % 7;
+  function addedNo(r) { var a = /^(\d{4})-(\d{2})-(\d{2})$/.exec(r.added || ""); return a ? Math.floor(Date.UTC(+a[1], +a[2] - 1, +a[3]) / 864e5) : -1; }
+  var shelf = R.filter(function (r) { return addedNo(r) <= dayNo; });
+  var fresh = shelf.filter(function (r) { return addedNo(r) >= monNo; });
+  var older = shelf.filter(function (r) { return fresh.indexOf(r) < 0; });
   function shuffled(list, seed) {
     var a = list.slice(), s = seed >>> 0;
     function r() { s = (s + 0x6D2B79F5) >>> 0; var t = s; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }
@@ -764,16 +1093,23 @@ window.RECORDS_TODAY = function (when) {
     return a;
   }
   function take(list, n, seed) {
-    if (!list.length) return [];
+    if (!list.length || n <= 0) return [];
     var a = shuffled(list, seed), out = [], start = (weekNo * n) % a.length;
     for (var i = 0; i < Math.min(n, a.length); i++) out.push(a[(start + i) % a.length]);
     return out;
   }
-  var xmas = R.filter(function (r) { return r.season === "christmas"; }), rest = R.filter(function (r) { return r.season !== "christmas"; });
-  var picks = christmas ? take(xmas, 3, 1225).concat(take(rest, 2, 1953)) : take(rest, 5, 1953);
-  if (christmas && picks.length === 5) picks = [picks[0], picks[3], picks[1], picks[4], picks[2]];
-  var mon = new Date(Date.UTC(y, m - 1, d - ((dayNo - 4) % 7 + 7) % 7));
-  return { picks: picks, month: m, day: d, weekOf: { month: mon.getUTCMonth() + 1, day: mon.getUTCDate() } };
+  var xmas = older.filter(function (r) { return r.season === "christmas"; }), rest = older.filter(function (r) { return r.season !== "christmas"; });
+  var picks;
+  if (fresh.length) {
+    picks = fresh.slice(0, 5);
+    var nx = christmas ? Math.min(3, 5 - picks.length) : 0;
+    picks = picks.concat(take(xmas, nx, 1225), take(rest, 5 - picks.length - nx, 1953));
+  } else {
+    picks = christmas ? take(xmas, 3, 1225).concat(take(rest, 2, 1953)) : take(rest, 5, 1953);
+    if (christmas && picks.length === 5) picks = [picks[0], picks[3], picks[1], picks[4], picks[2]];
+  }
+  var mon = new Date(monNo * 864e5);
+  return { picks: picks, fresh: fresh, shelf: shelf, month: m, day: d, weekOf: { month: mon.getUTCMonth() + 1, day: mon.getUTCDate() } };
 };
 
 /* the little player: Archive.org's own embedded player in a pop-up, so the album plays from Archive.org

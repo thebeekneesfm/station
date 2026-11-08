@@ -1335,7 +1335,7 @@
     if (window.RECORDS_TODAY) {
       const T = window.RECORDS_TODAY();
       h += `<div class="g-shelfrow"><a class="g-shelf" href="records.html"><span class="gs-name">The Record Shelf</span>` +
-           `<span class="gs-sub">This week's five albums from the '40s, '50s and '60s. Tap one to play it.</span></a>` +
+           `<span class="gs-sub">${T.fresh && T.fresh.length ? "New on the shelf this week! Tap one to play it." : "This week's five albums from the '40s, '50s and '60s. Tap one to play it."}</span></a>` +
            `<span class="gs-covers">` + T.picks.map((r, k) => `<a class="gs-cover" href="${esc(r.item)}" data-k="${k}" title="${esc(r.title)}, ${esc(r.artist)}${r.year ? ", " + esc(r.year) : ""}"><img src="${esc(r.cover)}" alt="${esc(r.title)}, ${esc(r.artist)}" loading="lazy"></a>`).join("") + `</span></div>` +
            `<div class="gs-why"><b>Why the radio stops at 1925:</b> in the U.S., records made in 1925 or earlier are in the public domain, so they can play on the radio for free. Anything newer needs a broadcasting license the station can't afford yet, so the swing, blues, crooners and rock 'n' roll live on <a class="gs-link" href="records.html">the shelf</a> for now. ` +
            `<span class="gs-ask">Want a 24/7 music station that plays music up to the 1960s? Every membership and tip goes toward a broadcasting license.</span> <a class="gs-go" href="${esc(CONFIG.tip || "https://ko-fi.com/thebeeskneesfm")}" target="_blank" rel="noopener">Become a member or leave a tip</a></div>`;
