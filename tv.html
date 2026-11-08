@@ -164,7 +164,8 @@
   /* laptops and desktops: picture on the left sized to the screen, everything you need beside it, no scrolling to find the sound */
   @media (min-width: 1000px) {
     .wrap { max-width: 1440px; padding-right: max(60px, env(safe-area-inset-right, 0px)); padding-left: max(60px, env(safe-area-inset-left, 0px)); }
-    .stage { --sh: clamp(420px, calc(100vh - 200px), 860px); grid-template-columns: minmax(0, calc(var(--sh) * 4 / 3)) 340px !important; justify-content: center; grid-template-rows: auto minmax(0, 1fr); grid-template-areas: "scr np" "scr tuner"; gap: 0 22px !important; height: var(--sh); align-items: stretch; }
+    /* never shorter than 660px, so the channel list beside the picture has room on short laptop screens (the page scrolls a little there) */
+    .stage { --sh: clamp(660px, calc(100vh - 190px), 860px); grid-template-columns: minmax(0, calc(var(--sh) * 4 / 3)) 340px !important; justify-content: center; grid-template-rows: auto minmax(0, 1fr); grid-template-areas: "scr np" "scr tuner"; gap: 0 22px !important; height: var(--sh); align-items: stretch; }
     .scr { grid-area: scr; width: min(100%, calc(var(--sh) * 4 / 3)) !important; height: auto; align-self: center; justify-self: center; }
     .np { grid-area: np; margin-top: 0 !important; grid-template-columns: 1fr !important; gap: 6px; padding: 16px 18px; align-content: start; }
     .np-when { text-align: left !important; }
@@ -179,8 +180,19 @@
     .tuner .ch-step::after { content: "Previous channel"; font: 700 17px/1 "BK Serif", Georgia, serif; }
     .tuner .ch-step[data-step="1"]::after { content: "Next channel"; }
     .tuner .dial { flex-direction: column; overflow-x: hidden; overflow-y: auto; height: 100%; padding: 2px; gap: 6px; }
-    .tuner .ch { padding: 7px 12px; }
-    .tuner .ch-name { font-size: 18px; }
+    .tuner .ch { padding: 8px 12px; }
+    .tuner .ch-name { font-size: 20px; letter-spacing: .03em; }
+  }
+  /* shorter laptop screens: a tighter now-playing panel so more of the list fits */
+  @media (min-width: 1000px) and (max-height: 920px) {
+    .np { padding: 12px 16px; gap: 4px; }
+    .np-ch, .np-left, .np-next { font-size: 16px; }
+    .np-series { font-size: 22px; } .np-title { font-size: 21px; }
+    .np .scr-ctrl { gap: 6px; padding-top: 8px; }
+    .np .scr-ctrl { display: grid; grid-template-columns: 1fr 1fr; }
+    .np .scr-ctrl .scr-vol { grid-column: 1 / -1; }
+    .np .scr-ctrl button { padding: 6px 8px; font-size: 15px; line-height: 1.1; min-height: 36px; }
+    .tuner .ch-step { height: 36px; }
   }
   /* full screen: the little remote along the bottom */
   .scr-fsbar { display: none; }
