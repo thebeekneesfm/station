@@ -269,11 +269,39 @@
       hp.type = "highpass"; hp.frequency.value = 60;
       comp.threshold.value = -30; comp.knee.value = 12; comp.ratio.value = 4; comp.attack.value = 0.01; comp.release.value = 0.4;
       gain.gain.value = 1.8; lim.threshold.value = -3; lim.knee.value = 0; lim.ratio.value = 20; lim.attack.value = 0.002; lim.release.value = 0.1;
-      src.connect(hp); hp.connect(comp); comp.connect(gain); gain.connect(lim); lim.connect(ctx.destination);
+      src.connect(hp); hp.connect(comp); comp.connect(gain); gain.connect(lim);
+      buildRoom(); outLim = lim; routeRoom();
     } catch (e) { ctx = null; }
+  }
+  /* "From another room", the same as on the website: stations with a "room" setting (Gramophone Radio)
+     sound muffled, echoey and a little warbly, like a record playing down the hall */
+  var room = null, outLim = null;
+  function buildRoom() {
+    try {
+      var inp = ctx.createGain(), m1 = ctx.createBiquadFilter(), m2 = ctx.createBiquadFilter(), dry = ctx.createGain(), wet = ctx.createGain(), verb = ctx.createConvolver(), out = ctx.createGain();
+      m1.type = "lowpass"; m1.frequency.value = 1100; m1.Q.value = 0.4; m2.type = "lowpass"; m2.frequency.value = 2400; m2.Q.value = 0.3;
+      var n = Math.floor(ctx.sampleRate * 2.8), buf = ctx.createBuffer(2, n, ctx.sampleRate);
+      for (var c = 0; c < 2; c++) { var d = buf.getChannelData(c); for (var i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 2.6); }
+      verb.buffer = buf; dry.gain.value = 0.62; wet.gain.value = 0.55;
+      var wow = ctx.createDelay(0.05), lfo = ctx.createOscillator(), depth = ctx.createGain();
+      wow.delayTime.value = 0.012; lfo.frequency.value = 0.35; depth.gain.value = 0.0016; lfo.connect(depth); depth.connect(wow.delayTime); lfo.start();
+      inp.connect(m1); m1.connect(m2); m2.connect(dry); m2.connect(verb); verb.connect(wet); dry.connect(wow); wet.connect(wow); wow.connect(out); out.gain.value = 0.9;
+      room = { inp: inp, out: out, m1: m1, wet: wet };
+    } catch (e) { room = null; }
+  }
+  function routeRoom() {
+    if (!ctx || !outLim) return;
+    var want = mode === "radio" && station && station.room ? station.room : null;
+    try { outLim.disconnect(); } catch (e) {}
+    if (room) { try { room.out.disconnect(); } catch (e) {} }
+    if (want && room) {
+      room.m1.frequency.value = want.muffle || 1100; room.wet.gain.value = want.echo != null ? want.echo : 0.55;
+      outLim.connect(room.inp); room.out.connect(ctx.destination);
+    } else outLim.connect(ctx.destination);
   }
   function play() {
     if (mode !== "radio") return;
+    routeRoom();
     var now = at(station), tr = now.track;
     if (broken[tr.src]) { now = nextGood(now); tr = now.track; }
     var seek = function () { try { audio.currentTime = Math.max(0, now.offset); } catch (e) {} start(); };
