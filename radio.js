@@ -542,6 +542,13 @@
     power(false); if (typeof armAutoStart === "function") armAutoStart();
   }
   let lostTimer = 0;
+  /* iPhone and iPad play without the sound-cleaning engine (so music keeps going when you switch apps),
+     so stations with a "phone" folder have their records pre-cleaned there, with the same muffle, echo and
+     click and hiss removal baked in. If a pre-cleaned copy won't load, the original plays instead. */
+  const phoneOff = new Set();
+  function fileFor(st, t) {
+    return APPLE_TOUCH && st && st.phone && t.p && !phoneOff.has(t.src) ? st.phone + t.p + ".m4a" : t.src;
+  }
   const broken = new Set();   // recordings that wouldn't load this visit
   const trace = [];   // last few playback decisions, for troubleshooting in the browser console (RADIO.trace)
   function play(reason) {
@@ -583,7 +590,7 @@
       audio.dataset.src = src;
       newTrackLevel();
       if (fx.dh) fx.dh.port.postMessage({ reset: true });
-      audio.src = src;
+      audio.src = fileFor(st, now.track);
       audio.addEventListener("loadedmetadata", seek, { once: true });
       audio.load();
       if (document.hidden) audio.play().catch(refused);
@@ -610,6 +617,11 @@
     if (!state.on || !state.station) return;
     const src = audio.dataset.src || audio.dataset.failing; if (!src) return;
     const tries = +(audio.dataset.tries || 0);
+    const bad = state.station.tracks.find(t => t.src === src);
+    if (bad && fileFor(state.station, bad) !== src) {      // the pre-cleaned copy failed: use the original
+      phoneOff.add(src); audio.dataset.src = ""; trace.push(new Date().toISOString().slice(11, 19) + " original " + src.split("/").pop().slice(0, 30));
+      setTimeout(play, 300); return;
+    }
     if (tries < 2) {
       audio.dataset.tries = tries + 1; audio.dataset.failing = src; audio.dataset.src = "";
       trace.push(new Date().toISOString().slice(11, 19) + " retry " + (tries + 1) + " " + src.split("/").pop().slice(0, 30));
@@ -687,7 +699,7 @@
     const st = state.station, rem = audio.duration - audio.currentTime;
     if (rem > 30) return;
     const cur = st.tracks.findIndex(t => t.src === audio.dataset.src); if (cur < 0) return;
-    const nx = st.tracks[(cur + 1) % st.tracks.length].src;
+    const nx = fileFor(st, st.tracks[(cur + 1) % st.tracks.length]);
     if (warmed === nx) return;
     warmed = nx; const a = new Audio(); a.preload = "auto"; a.crossOrigin = "anonymous"; a.muted = true; a.src = nx;
   }, 2000);
