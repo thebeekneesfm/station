@@ -1008,11 +1008,11 @@ window.RECORDS = [
  "added": "2027-04-12"
 },
 {
- "title": "The King of Swing: 1937 Jazz Concert No. 2",
- "artist": "Benny Goodman and His Orchestra",
- "year": "1952",
- "cover": "art/records/lp-the-king-of-swing-complete-1937-jazz-con-benny-goodman-an.webp",
- "item": "https://archive.org/details/lp_the-king-of-swing-complete-1937-jazz-con_benny-goodman-and-his-orchestra-benny-good",
+ "title": "The New James",
+ "artist": "Harry James and His Orchestra",
+ "year": "1958",
+ "cover": "art/records/lp-the-new-james-harry-james-and-his-orchestra.webp",
+ "item": "https://archive.org/details/lp_the-new-james_harry-james-and-his-orchestra",
  "added": "2027-04-12"
 },
 {
@@ -1064,11 +1064,11 @@ window.RECORDS = [
  "added": "2027-04-19"
 },
 {
- "title": "Moon Man",
- "artist": "Charles Lloyd",
- "year": "1970",
- "cover": "art/records/lp-moon-man-charles-lloyd.webp",
- "item": "https://archive.org/details/lp_moon-man_charles-lloyd",
+ "title": "Country Meets the Blues",
+ "artist": "The Ramsey Lewis Trio",
+ "year": "1962",
+ "cover": "art/records/lp-country-meets-the-blues-the-ramsey-lewis-trio-0.webp",
+ "item": "https://archive.org/details/lp_country-meets-the-blues_the-ramsey-lewis-trio_0",
  "added": "2027-04-19"
 }
 ];
