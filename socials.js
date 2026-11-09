@@ -6,7 +6,8 @@
     ["Instagram", "https://www.instagram.com/thebeesknees.fm/"],
     ["TikTok", "https://www.tiktok.com/@thebeeskneesfm"],
     ["YouTube", "https://www.youtube.com/@thebeeskneesfm"],
-    ["Bluesky", "https://bsky.app/profile/thebeeskneesfm.bsky.social"]
+    ["Bluesky", "https://bsky.app/profile/thebeeskneesfm.bsky.social"],
+    ["Twitch", "https://www.twitch.tv/thebeeskneesfm"]
   ];
   var root = document.documentElement;
   if (root.classList.contains("embed")) return;   // opened over the radio, which has its own
