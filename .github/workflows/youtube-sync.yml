@@ -1,0 +1,25 @@
+# Once a day, adds any new long videos from the YouTube channel to the site's YouTube page (youtube.js).
+# Shorts are skipped. Free on GitHub. Can also be run by hand from the Actions tab.
+name: YouTube page update
+on:
+  schedule:
+    - cron: "41 13 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the channel for new videos
+        run: python3 scripts/youtube_sync.py
+      - name: Save any changes
+        run: |
+          if git diff --quiet -- youtube.js; then echo "No changes"; exit 0; fi
+          git config user.name "The Bee's Knees.fm"
+          git config user.email "thebeeskneesfm@gmail.com"
+          git add youtube.js
+          git commit -m "YouTube page: add new videos from the channel"
+          git pull --rebase
+          git push
