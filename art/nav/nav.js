@@ -43,8 +43,6 @@
     ".mast:has(.bkn){-webkit-mask:none!important;mask:none!important;overflow:visible!important;position:relative;z-index:20}",
     ".bkn a,.bkn button{font:500 21px/1.2 'BK Serif',Georgia,serif;color:#1f1b17;background:none;border:0;padding:8px 10px;cursor:pointer;text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;min-height:44px;box-sizing:border-box}",
     ".bkn>li>a:hover,.bkn>li>button:hover,.bkn>li>button[aria-expanded=true]{color:#c8321f}",
-    ".bkn .caret{font-size:.6em;transition:transform .15s}",
-    ".bkn button[aria-expanded=true] .caret{transform:rotate(180deg)}",
     ".bkn .cur>a,.bkn .cur>button{color:#c8321f;font-weight:700;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:6px}",
     ".bkn-sub{list-style:none;margin:0;padding:6px 0;position:absolute;left:0;top:100%;z-index:50;min-width:210px;background:#f3ead2;box-shadow:0 3px 0 rgba(0,0,0,.25),0 12px 26px rgba(0,0,0,.3);border-top:3px solid #c8321f}",
     ".bkn-sub[hidden]{display:none}",
@@ -118,7 +116,7 @@
         btn.type = "button"; btn.setAttribute("aria-expanded", "false");
         var id = "bkn-sub-" + gi + "-" + Math.random().toString(36).slice(2, 6);
         btn.setAttribute("aria-controls", id);
-        btn.innerHTML = g.label + ' <span class="caret" aria-hidden="true">▾</span>';
+        btn.textContent = g.label;
         var sub = document.createElement("ul"); sub.className = "bkn-sub"; sub.id = id; sub.hidden = true;
         g.items.forEach(function (it) {
           var l = document.createElement("li"); l.appendChild(makeLink(it[0], it[1], cur)); sub.appendChild(l);
