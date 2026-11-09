@@ -22,6 +22,8 @@
     vote=45              seconds chat has to vote once someone asks for a station (default 45)
     look=overlay         just the small now-playing card, for putting over your own scene
     schedule=1           follow the weekly schedule in obs-schedule.js (switches by itself at each block)
+    ownmusic=1           you play your own music under Home Movies: the site's radio under them is turned off,
+                         and the "Music on the radio" line is left off
   Example:  thebeesknees.fm/obs.html?station=chills&twitch=thebeeskneesfm
   The broadcaster and mods skip the vote and the cooldown.
 -->
@@ -37,7 +39,7 @@
   .head { font-family: "BK Head", "BK Serif", Georgia, serif; font-weight: 400; letter-spacing: .01em; }
 
   /* masthead */
-  .mast { transform: rotate(-.25deg); position: absolute; left: 40px; right: 40px; top: 28px; height: 128px; display: flex; align-items: center; justify-content: space-between; padding: 0 44px; }
+  .mast { transform: rotate(-.25deg); position: absolute; z-index: 3; left: 40px; right: 40px; top: 28px; height: 128px; display: flex; align-items: center; justify-content: space-between; padding: 0 44px; }
   .logo { font-size: 92px; line-height: 1; white-space: nowrap; }
   .logo span { color: var(--red); font-size: .5em; }
   .tag { font-style: italic; font-size: 30px; color: var(--ink-2); margin-top: 4px; }
@@ -91,7 +93,7 @@
   .sm { font-size: 22px; color: var(--ink-2); margin-top: 12px; }
 
   /* ticker */
-  .ticker { position: absolute; left: 0; right: 0; bottom: 30px; height: 70px; overflow: hidden; display: flex; align-items: center; justify-content: center; transform: none; }
+  .ticker { position: absolute; z-index: 3; left: 0; right: 0; bottom: 30px; height: 70px; overflow: hidden; display: flex; align-items: center; justify-content: center; transform: none; }
   .ticker .run { font-size: 32px; padding: 0 60px; text-align: center; white-space: nowrap; transition: opacity .5s ease; width: 100%; overflow: hidden; }
   .ticker .run span { display: inline-block; }
   .ticker .run.crawl { text-align: left; padding: 0; }
@@ -140,7 +142,12 @@
   .scr-mode .tunein { left: 1400px; top: 552px; width: 462px; height: 366px; padding: 24px 30px; }
   .scr-mode .tunein .head { font-size: 34px; }
   .scr-mode .tunein p { font-size: 23px; }
+  /* TV mode: the picture plays inside a 1950s DuMont set cut from a vintage magazine ad (the same set as on the front page) */
+  .tvset { position: absolute; z-index: 2; display: none; pointer-events: none; filter: drop-shadow(6px 8px 0 rgba(0,0,0,.3)); }
+  .tv-mode .tvset { display: block; }
+  .tv-mode .screen { box-shadow: none; }
   .overlay .screen { opacity: 0; }
+  .overlay .tvset { display: none !important; }
 
   /* "Click to start" for setting up in a normal browser (OBS plays on its own) */
   .start { position: fixed; inset: 0; display: none; place-items: center; background: rgba(20,12,8,.65); color: var(--paper); font-size: 40px; cursor: pointer; z-index: 9; }
@@ -166,6 +173,7 @@
     <div class="watch"><div>Watch &amp; listen 24/7, free, at</div><b>thebeesknees.fm</b></div>
   </header>
   <div class="card" id="card"></div>
+  <img class="tvset" id="tvset" alt="">
   <div class="screen" id="screen"><iframe id="frame" title="Bee's Knees TV" allow="autoplay; fullscreen" src="about:blank"></iframe></div>
   <section class="now paper">
     <div class="kicker" id="kicker">Now playing</div>
@@ -201,8 +209,24 @@
   var Q = new URLSearchParams(location.search);
   if (Q.get("look") === "overlay") document.documentElement.classList.add("overlay");
   var CONFIG = window.RADIO_CONFIG || {};
+  var OWN = !!Q.get("ownmusic");
+  /* the TV set the picture plays in (tvset=admiral, bendix or dumont), each cut from a real magazine ad:
+     where the set sits on the 1920 x 1080 stage, and where its screen is */
+  var SETS = {
+    admiral: { src: "art/screen/tv-admiral.webp", set: [234, 166, 952, 800], scr: [404, 213, 718, 545] },  // Admiral 21", LIFE, Nov. 3 1952
+    bendix:  { src: "art/screen/tv-bendix.webp",  set: [-199, 85, 1492, 1178], scr: [260, 206, 849, 693], fill: 1 },  // Bendix console, LIFE, Oct. 5 1953 (big: runs off the left edge and under the ticker)
+    bendixmid: { src: "art/screen/tv-bendix.webp",  set: [-53, 93, 1255, 991], scr: [333, 195, 715, 583], fill: 1 },     // the same, a little smaller, knobs showing
+    dumont:  { src: "art/screen/tv-set.webp",     set: [229, 162, 963, 810], scr: [396, 262, 632, 487] }   // DuMont, from the front page
+  };
+  var SET = SETS[squash0(Q.get("tvset"))] || SETS.bendix;
+  function squash0(x) { return String(x || "").toLowerCase().replace(/[^a-z]/g, ""); }
 
   /* fit the 1920 x 1080 stage to whatever size the source is */
+  (function () {
+    var t = $("tvset"), sc = $("screen"), px = function (v) { return v + "px"; };
+    t.src = SET.src; t.style.left = px(SET.set[0]); t.style.top = px(SET.set[1]); t.style.width = px(SET.set[2]); t.style.height = px(SET.set[3]);
+    sc.dataset.tv = [SET.scr[0], SET.scr[1], SET.scr[2], SET.scr[3]].join(",");
+  })();
   function fit() { var s = Math.min(innerWidth / 1920, innerHeight / 1080); $("stage").style.transform = "scale(" + s + ")"; }
   addEventListener("resize", fit); fit();
 
@@ -376,12 +400,15 @@
     if (!d) return;
     $("series").textContent = txt(d, ".np-series");
     $("title").textContent = txt(d, ".np-title");
-    $("date").textContent = txt(d, ".np-date");
+    var dt = txt(d, ".np-date");
+    // ownmusic=1: you play your own music under Home Movies, so don't name the site's radio record
+    if (OWN) dt = dt.replace(/\.?\s*Music on the radio:.*$/i, "");
+    $("date").textContent = dt;
     $("left").textContent = txt(d, ".np-left");
     $("then").textContent = (txt(d, ".np-next") || (mode === "drivein" ? txt(d, ".mq-when") : "")).replace(/\s*(at\s+)?\d{1,2}:\d{2}\s*(AM|PM|am|pm)?/g, "");
   }
   function showScreen(kind, ch) {
-    var url = kind === "tv" ? "tv.html?broadcast=1#" + ch.id : "drive-in.html?broadcast=1";
+    var url = kind === "tv" ? "tv.html?broadcast=1" + (OWN ? "&ownmusic=1" : "") + (SET.fill ? "&fill=1" : "") + "#" + ch.id : "drive-in.html?broadcast=1";
     var same = frame.dataset.kind === kind;
     frame.dataset.kind = kind;
     if (same && kind === "tv") { try { frame.contentWindow.location.hash = ch.id; } catch (e) { frame.src = url; } }
@@ -391,6 +418,9 @@
   function setMode(x) {
     var was = mode; mode = x.kind;
     document.documentElement.classList.toggle("scr-mode", mode !== "radio");
+    document.documentElement.classList.toggle("tv-mode", mode === "tv");
+    var sc = $("screen"), r = mode === "tv" ? sc.dataset.tv.split(",") : null;
+    ["left", "top", "width", "height"].forEach(function (k, i) { sc.style[k] = r ? r[i] + "px" : ""; });
     if (mode === "radio") {
       if (x.st) station = x.st;
       frame.dataset.kind = ""; frame.src = "about:blank";

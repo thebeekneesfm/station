@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="art/favicon.png?v=2" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png?v=2">
-<script>if (/[?&]broadcast=1\b/.test(location.search)) document.documentElement.classList.add("broadcast");</script>
+<script>if (/[?&]broadcast=1\b/.test(location.search)) document.documentElement.classList.add("broadcast"); if (/[?&]fill=1\b/.test(location.search)) document.documentElement.classList.add("fill");</script>
 <script src="art/backgrounds/backgrounds.js?v=20261101g3"></script>
 <link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
 <style>
@@ -226,7 +226,12 @@
   html.broadcast .wrap, html.broadcast .stage { display: block !important; max-width: none !important; margin: 0 !important; padding: 0 !important; filter: none !important; }
   html.broadcast .stage .scr, html.broadcast .scr { position: fixed !important; inset: 0 !important; width: 100vw !important; height: 100vh !important; aspect-ratio: auto !important; margin: 0 !important; box-shadow: none !important; border-radius: 0 !important; }
   html.broadcast .scr video { object-fit: contain; }
+  html.broadcast.fill .scr video:not(.static) { object-fit: cover; transform: scale(1.07); }
+  /* inside the TV set on the stream, the set's own glass does the shading */
+  html.broadcast.fill .crt { box-shadow: none; background: repeating-linear-gradient(to bottom, rgba(0,0,0,.14) 0 1px, rgba(0,0,0,0) 1px 3px); }
   html.broadcast .scr-fsbar { display: none !important; }
+  /* on the stream the picture sits inside a real TV set, whose own bezel rounds the corners */
+  html.broadcast .crt { border-radius: 0; box-shadow: inset 0 0 5vw 1.5vw rgba(0,0,0,.6); }
 </style>
 </head>
 <body data-mode="tv">
@@ -252,7 +257,7 @@
   <p class="report">Something here that shouldn’t be? Email <span class="email">thebeeskneesfm@gmail.com</span> and it comes off the schedule.</p>
 </div>
 <script src="art/screen/tv-data.js?v=26"></script>
-<script src="art/screen/theater.js?v=46"></script>
+<script src="art/screen/theater.js?v=47"></script>
 <script src="config.js?v=20261107pp"></script>
 <script src="ticker.js?v=4"></script>
 <script src="socials.js?v=3"></script>

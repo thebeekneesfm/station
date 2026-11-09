@@ -703,7 +703,8 @@
     } catch (e) {}
   }
   function radioUnder(n) {
-    var id = MODE === "tv" && typeof cur !== "undefined" && cur && cur.radio;
+    // on the stream with ownmusic=1, the streamer plays their own music instead, so the radio stays off
+    var id = MODE === "tv" && !/[?&]ownmusic=1\b/.test(location.search) && typeof cur !== "undefined" && cur && cur.radio;
     var want = !!(id && n.item.kind === "show");
     var st = want ? bedStation(id) : null;
     var was = state.bedOn; state.bedOn = want;
