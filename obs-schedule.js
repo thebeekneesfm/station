@@ -29,8 +29,9 @@ window.STREAM_SCHEDULE = {
     // New Year's Eve: Gramophone Radio dance records to midnight
     { dates: "12-31", from: "20:00", to: "23:59", play: "radio gramophone", title: "New Year's Eve Dance Party" },
 
-    /* ---------- every week: four streams ---------- */
+    /* ---------- every week: five streams ---------- */
     { days: ["tue"], from: "19:00", to: "21:00", play: "tv newsreels",   title: "Oddities Night" },
+    { days: ["wed"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack" },
     { days: ["thu"], from: "19:00", to: "21:00", play: "radio chills",   title: "Radio Night" },
     { days: ["sat"], from: "19:00", to: "19:30", play: "tv commercials", title: "Saturday at the Drive-In: the show starts at 7:30" },
     { days: ["sat"], from: "19:30", to: "23:00", play: "drive-in",       title: "Saturday at the Drive-In" },

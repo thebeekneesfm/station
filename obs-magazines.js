@@ -1,6 +1,7 @@
 /* THE MAGAZINES FOR THE STREAM
-   What the stream page (obs.html) flips through in magazine mode: the schedule's play: "magazines" (with a radio
-   station after it if you like, "magazines gramophone"), or obs.html?mode=magazines to try it.
+   What the stream page (obs.html) flips through in magazine mode: the schedule's play: "magazines", or
+   obs.html?mode=magazines to try it. It's silent, for playing your own music; to have a station underneath
+   instead, name it after: play: "magazines gramophone".
    Only issues on this list are shown on stream. Each one has to be on the site's magazine rack (art/rack/rack.js),
    which is where its title, date and page count come from, and any pages hidden there are skipped here too.
    To add one: copy a line and change the id (the Archive id, the same as on the rack). To take one off: delete its line.
@@ -16,7 +17,6 @@ window.STREAM_MAGAZINES = {
     "Life_1947_12DEC_01",                  // LIFE, Dec. 1 1947
     "Life_1948_08AUG_16",                  // LIFE, Aug. 16 1948
     "lifemagazinemay51952",                // LIFE, May 5 1952
-    "9EcEAAAAMBAJ",                        // LIFE, Sept. 3 1956
     "v0QEAAAAMBAJ",                        // LIFE, Oct. 17 1960
     "UUgEAAAAMBAJ",                        // LIFE, Oct. 2 1964
     "cosmopolitan-v-125-n-03-1948-09",     // Cosmopolitan, Sept. 1948

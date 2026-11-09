@@ -147,6 +147,30 @@
   .tv-mode .tvset { display: block; }
   .tv-mode .screen { box-shadow: none; }
   .overlay .screen { opacity: 0; }
+  /* Magazine mode: an open magazine on a lamp-lit desk, a page turning every so often, the radio playing underneath */
+  .mag { position: absolute; left: 60px; top: 186px; width: 1300px; height: 731px; display: none; overflow: hidden;
+    background: radial-gradient(ellipse 70% 80% at 50% 42%, #6b4528 0%, #4a2e1a 45%, #2a1910 100%); box-shadow: 0 0 0 10px #1a120c, 5px 7px 0 10px rgba(0,0,0,.28); }
+  .mag::before { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(92deg, rgba(0,0,0,.06) 0 3px, rgba(255,255,255,.02) 3px 9px, rgba(0,0,0,.04) 9px 14px); }
+  .mag-mode .mag { display: block; }
+  .mag-mode .screen { display: none !important; }
+  .book { position: absolute; perspective: 3000px; transition: opacity .8s ease; }
+  .book.gone { opacity: 0; }
+  .pg { position: absolute; top: 0; width: 50%; height: 100%; background: #efe6d0; box-shadow: 0 10px 28px rgba(0,0,0,.45); }
+  .pg.l { left: 0; } .pg.r { left: 50%; }
+  .pg.empty { background: none; box-shadow: none; }
+  .pg img, .leaf img { width: 100%; height: 100%; display: block; object-fit: fill; }
+  .pg.l::after, .pg.r::after { content: ""; position: absolute; top: 0; bottom: 0; width: 18%; pointer-events: none; }
+  .pg.l::after { right: 0; background: linear-gradient(to left, rgba(0,0,0,.32), rgba(0,0,0,0)); }
+  .pg.r::after { left: 0; background: linear-gradient(to right, rgba(0,0,0,.32), rgba(0,0,0,0)); }
+  .pg.empty::after { display: none; }
+  .leaf { position: absolute; left: 50%; top: 0; width: 50%; height: 100%; transform-origin: left center; transform-style: preserve-3d; display: none; z-index: 2; }
+  .leaf.on { display: block; }
+  .leaf.turn { transition: transform 1.4s cubic-bezier(.45,.05,.35,1); transform: rotateY(-180deg); }
+  .leaf .f, .leaf .b { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; background: #efe6d0; }
+  .leaf .b { transform: rotateY(180deg); }
+  .leaf .f::after, .leaf .b::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+  .leaf .f::after { background: linear-gradient(to right, rgba(0,0,0,.3), rgba(0,0,0,0) 22%); }
+  .leaf .b::after { background: linear-gradient(to left, rgba(0,0,0,.3), rgba(0,0,0,0) 22%); }
   .overlay .tvset { display: none !important; }
 
   /* "Click to start" for setting up in a normal browser (OBS plays on its own) */
@@ -174,6 +198,7 @@
   </header>
   <div class="card" id="card"></div>
   <img class="tvset" id="tvset" alt="">
+  <div class="mag" id="mag"><div class="book" id="book"><div class="pg l" id="pgL"></div><div class="pg r" id="pgR"></div><div class="leaf" id="leaf"><div class="f"></div><div class="b"></div></div></div></div>
   <div class="screen" id="screen"><iframe id="frame" title="Bee's Knees TV" allow="autoplay; fullscreen" src="about:blank"></iframe></div>
   <section class="now paper">
     <div class="kicker" id="kicker">Now playing</div>
@@ -200,8 +225,10 @@
 <script src="config.js?v=20261109tk"></script>
 <script src="stations.js?v=20261107dr"></script>
 <script src="art/screen/tv-data.js?v=26"></script>
-<script src="obs-schedule.js?v=8"></script>
+<script src="obs-schedule.js?v=9"></script>
 <script src="ads.js?v=20261102b"></script>
+<script src="art/rack/rack.js?v=6"></script>
+<script src="obs-magazines.js?v=1"></script>
 <script>
 (function () {
   "use strict";
@@ -269,6 +296,8 @@
   function target(q) {
     var t = String(q || "").trim().toLowerCase();
     if (/^(the )?(drive[\s-]?in|movies?|picture show|films?)$/.test(t)) return { kind: "drivein" };
+    var mg = t.match(/^(magazines?|mags|reading|(the )?(magazine )?rack)\b\s*(.*)$/);
+    if (mg) { var ms = mg[4] ? find(mg[4]) : null; return { kind: "mags", st: ms, quiet: !ms }; }
     var m = t.match(/^(tv|television|telly|channel)\b\s*(.*)$/);
     if (m) { var c = m[2] ? findCh(m[2]) : (tvch || CHANNELS[0]); return c ? { kind: "tv", ch: c } : null; }
     m = t.match(/^radio\b\s*(.*)$/);
@@ -277,11 +306,13 @@
     var ch = findCh(t); if (ch) return { kind: "tv", ch: ch };
     return null;
   }
-  var keyOf = function (x) { return x.kind === "radio" ? "radio:" + x.st.id : x.kind === "tv" ? "tv:" + x.ch.id : "drivein"; };
-  var nameOf = function (x) { return x.kind === "radio" ? x.st.name + " on the radio" : x.kind === "tv" ? x.ch.name + " on TV" : "the Drive-In"; };
+  var keyOf = function (x) { return x.kind === "radio" ? "radio:" + x.st.id : x.kind === "tv" ? "tv:" + x.ch.id : x.kind === "mags" ? "mags:" + (x.st ? x.st.id : "quiet") : "drivein"; };
+  var nameOf = function (x) { return x.kind === "radio" ? x.st.name + " on the radio" : x.kind === "tv" ? x.ch.name + " on TV" : x.kind === "mags" ? "the magazine rack" : "the Drive-In"; };
   var station = find(Q.get("station")) || STATIONS[0];
   var tvch = findCh(Q.get("channel")) || CHANNELS[0];
-  var mode = { tv: "tv", drivein: "drivein" }[squash(Q.get("mode"))] || "radio";
+  var mode = { tv: "tv", drivein: "drivein", magazines: "mags", mags: "mags" }[squash(Q.get("mode"))] || "radio";
+  var magQuiet = true;   // magazine mode is silent unless a station is named ("magazines gramophone"): you play your own music
+  var hearing = function () { return mode === "radio" || (mode === "mags" && !magQuiet); };
 
   /* ---------- sound: an even level from record to record, so the stream never jumps ---------- */
   var audio = $("audio"), ctx = null, broken = {};
@@ -315,7 +346,7 @@
   }
   function routeRoom() {
     if (!ctx || !outLim) return;
-    var want = mode === "radio" && station && station.room ? station.room : null;
+    var want = hearing() && station && station.room ? station.room : null;
     try { outLim.disconnect(); } catch (e) {}
     if (room) { try { room.out.disconnect(); } catch (e) {} }
     if (want && room) {
@@ -324,7 +355,7 @@
     } else outLim.connect(ctx.destination);
   }
   function play() {
-    if (mode !== "radio") return;
+    if (!hearing()) return;
     routeRoom();
     var now = at(station), tr = now.track;
     if (broken[tr.src]) { now = nextGood(now); tr = now.track; }
@@ -344,10 +375,10 @@
   }
   $("start").addEventListener("click", function () { $("start").classList.remove("on"); chain(); if (ctx) ctx.resume(); play(); });
   audio.addEventListener("ended", function () { setTimeout(play, 300); });
-  audio.addEventListener("error", function () { if (mode !== "radio" || !audio.getAttribute("src")) return; if (audio.dataset.src) broken[audio.dataset.src] = 1; setTimeout(play, 1500); });
+  audio.addEventListener("error", function () { if (!hearing() || !audio.getAttribute("src")) return; if (audio.dataset.src) broken[audio.dataset.src] = 1; setTimeout(play, 1500); });
   // stay on the same second as the website
   setInterval(function () {
-    if (mode !== "radio") return;
+    if (!hearing()) return;
     var now = at(station);
     if (now.track.src !== audio.dataset.src && !broken[now.track.src]) return play();
     if (!audio.paused && Math.abs(audio.currentTime - now.offset) > 6 && now.track.src === audio.dataset.src) { try { audio.currentTime = now.offset; } catch (e) {} }
@@ -367,6 +398,7 @@
     c.appendChild(img);
   }
   function paint() {
+    if (mode === "mags") return paintMag();
     if (mode !== "radio") return;
     var now = at(station), tr = now.track;
     $("kicker").textContent = "Now playing on " + station.name + ", channel " + station.num;
@@ -381,6 +413,7 @@
     }
   }
   function tick() {
+    if (mode === "mags") return paintMag();
     if (mode !== "radio") return paintScreen();
     var now = at(station);
     $("bar").style.width = (100 * now.offset / now.track.length).toFixed(2) + "%";
@@ -418,6 +451,8 @@
   function setMode(x) {
     var was = mode; mode = x.kind;
     document.documentElement.classList.toggle("scr-mode", mode !== "radio");
+    document.documentElement.classList.toggle("mag-mode", mode === "mags");
+    if (mode !== "mags") stopMags();
     document.documentElement.classList.toggle("tv-mode", mode === "tv");
     var sc = $("screen"), r = mode === "tv" ? sc.dataset.tv.split(",") : null;
     ["left", "top", "width", "height"].forEach(function (k, i) { sc.style[k] = r ? r[i] + "px" : ""; });
@@ -426,6 +461,14 @@
       frame.dataset.kind = ""; frame.src = "about:blank";
       card(); audio.dataset.src = ""; play();
       Q.set("mode", "radio"); Q.set("station", station.id); Q.delete("channel");
+    } else if (mode === "mags") {
+      magQuiet = !x.st; if (x.st) station = x.st;
+      frame.dataset.kind = ""; frame.src = "about:blank";
+      ["series", "title", "date", "left", "then"].forEach(function (k) { $(k).textContent = ""; });
+      audio.dataset.src = "";
+      if (magQuiet) { audio.pause(); audio.removeAttribute("src"); try { audio.load(); } catch (e) {} } else play();
+      startMags();
+      Q.set("mode", "magazines"); if (magQuiet) Q.delete("station"); else Q.set("station", station.id); Q.delete("channel");
     } else {
       audio.pause(); audio.removeAttribute("src"); audio.dataset.src = ""; try { audio.load(); } catch (e) {}
       if (mode === "tv") { tvch = x.ch || tvch; showScreen("tv", tvch); Q.set("mode", "tv"); Q.set("channel", tvch.id); }
@@ -436,20 +479,114 @@
     try { history.replaceState(null, "", "?" + Q.toString()); } catch (e) {}
   }
 
+  /* ---------- Magazine mode: the approved issues in obs-magazines.js, a page turning every few seconds ---------- */
+  var SM = window.STREAM_MAGAZINES || { issues: [] }, FLIP = 1000 * (+Q.get("flip") || SM.flip || 18);
+  var RACKI = {}; (window.RACK || []).forEach(function (sh) { sh.issues.forEach(function (it) { RACKI[it.id] = it; }); });
+  var SKIP = {}; (SM.skip || []).forEach(function (k) { SKIP[k] = 1; });
+  var MAGS = (SM.issues || []).map(function (id) { return RACKI[id]; }).filter(function (it) { return it && it.pages; });
+  var pageUrl = function (id, n) { return "https://archive.org/download/" + encodeURIComponent(id) + "/page/n" + n + "_w800.jpg"; };
+  var mg = null, magT = null, magOrder = [], magK = 0;
+  function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  function nextIssue() {
+    if (!magOrder.length || magK >= magOrder.length) { magOrder = shuffle(MAGS.slice()); magK = 0; }
+    return magOrder[magK++];
+  }
+  function upcoming() { return magK < magOrder.length ? magOrder[magK] : null; }
+  // load a page; the Archive is sometimes slow, so try a couple of times, then give up on that page
+  function loadPage(id, n, cb, tries) {
+    var im = new Image(), done = false; tries = tries || 0;
+    var fail = function () { if (done) return; done = true; if (tries < 2) setTimeout(function () { loadPage(id, n, cb, tries + 1); }, 2500); else cb(null); };
+    var t = setTimeout(fail, 20000);
+    im.onload = function () { if (done) return; done = true; clearTimeout(t); cb(im); };
+    im.onerror = function () { clearTimeout(t); fail(); };
+    im.src = pageUrl(id, n) + (tries ? "#r" + tries : "");
+  }
+  function put(el, im) { el.innerHTML = ""; el.classList.toggle("empty", !im); if (im) { var c = im.cloneNode(); c.alt = ""; el.appendChild(c); } }
+  function fitBook(im) {
+    var r = im ? im.naturalWidth / im.naturalHeight : 0.75; r = Math.max(0.6, Math.min(0.85, r || 0.75));
+    var h = 680, w = Math.round(h * r) * 2, b = $("book");
+    b.style.width = w + "px"; b.style.height = h + "px"; b.style.left = Math.round((1300 - w) / 2) + "px"; b.style.top = Math.round((731 - h) / 2) + "px";
+  }
+  function openIssue() {
+    var it = nextIssue(); if (!it) return;
+    var pages = []; for (var n = 0; n < it.pages; n++) if (!(it.hide && it.hide.indexOf(n) >= 0) && !SKIP[it.id + ":" + n]) pages.push(n);
+    mg = { it: it, pages: pages, s: 0 };
+    $("book").classList.add("gone");
+    loadPage(it.id, pages[0], function (im) {
+      if (!mg || mg.it !== it) return;
+      if (!im) { mg = null; return setTimeout(openIssue, 1500); }   // cover wouldn't load: try another issue
+      fitBook(im); put($("pgL"), null); put($("pgR"), im);
+      $("book").classList.remove("gone"); paintMag();
+      clearTimeout(magT); magT = setTimeout(turn, Math.min(FLIP, 10000));
+    });
+  }
+  // spread s shows pages [2s-1, 2s] of the list (the cover alone on the right at s = 0)
+  function turn() {
+    if (!mg) return;
+    var it = mg.it, P = mg.pages, s = mg.s + 1, iL = 2 * s - 1, iR = 2 * s;
+    if (iL >= P.length) {   // the end: close it, pick up the next one
+      $("book").classList.add("gone"); clearTimeout(magT); magT = setTimeout(function () { mg = null; openIssue(); }, 1200); return;
+    }
+    var got = {}, need = iR < P.length ? 2 : 1;
+    var go = function () {
+      if (!mg || mg.it !== it) return;
+      var L = got.L, R = got.R, leaf = $("leaf"), f = leaf.querySelector(".f"), b = leaf.querySelector(".b");
+      put(f, $("pgR").querySelector("img")); put(b, L);
+      put($("pgR"), R || null);
+      leaf.classList.remove("turn"); leaf.classList.add("on"); void leaf.offsetWidth; leaf.classList.add("turn");
+      setTimeout(function () { put($("pgL"), L); leaf.classList.remove("on", "turn"); }, 1450);
+      mg.s = s; paintMag();
+      clearTimeout(magT); magT = setTimeout(turn, FLIP);
+    };
+    var one = function () { if (--need === 0) go(); };
+    loadPage(it.id, P[iL], function (im) { got.L = im; one(); });
+    if (iR < P.length) loadPage(it.id, P[iR], function (im) { got.R = im; one(); });
+  }
+  function startMags() { if (!MAGS.length) return; if (!mg) openIssue(); }
+  function stopMags() { clearTimeout(magT); mg = null; $("book").classList.add("gone"); }
+  function paintMag() {
+    $("kicker").textContent = "Now reading on The Bee's Knees";
+    if (mg) {
+      var it = mg.it, P = mg.pages, s = mg.s;
+      $("series").textContent = it.title;
+      $("title").textContent = [it.issue, it.date].filter(Boolean).join(", ");
+      var a = s === 0 ? 1 : 2 * s, z = Math.min(2 * s + 1, P.length);
+      $("date").textContent = s === 0 ? "The cover" : "Pages " + a + (z > a ? "\u2013" + z : "") + " of " + P.length;
+      var nx = upcoming(); $("left").textContent = nx ? "Next: " + nx.title + ", " + (nx.date || nx.issue) : "";
+    }
+    $("then").textContent = "";
+    if (hearing() && station.tracks) {
+      var tr = at(station).track;
+      $("then").textContent = "On the record player: " + (tr.title ? "\u201c" + tr.title + "\u201d" : "") + (tr.series ? ", " + tr.series : "");
+    }
+  }
+
   // the ticker: the same announcements as the website
   (function () {
     var run = $("run"), parts = (CONFIG.announcements || []).filter(Boolean), k = 0;
     if (!parts.length) return;
-    // a short line sits still for 9 seconds; a long one crawls across, then the next one comes
-    var show = function () {
-      run.className = "run"; run.innerHTML = ""; var sp = document.createElement("span"); sp.textContent = parts[k % parts.length]; run.appendChild(sp); k++;
-      var room = run.clientWidth - 120, w = sp.scrollWidth, hold = 9000;
-      if (w > room) {
-        run.classList.add("crawl"); var dist = run.clientWidth + w, secs = dist / 140;
-        sp.style.setProperty("--from", run.clientWidth + "px"); sp.style.setProperty("--to", -w + "px");
-        sp.style.animation = "crawl " + secs + "s linear forwards"; hold = secs * 1000;
+    // no scrolling: each line sits still and fades to the next. A line too long for the bar is set a little
+    // smaller, and if it still doesn't fit it's shown in parts, split at its natural breaks (": " and ". ")
+    var queue = [];
+    function pieces(line) {
+      var sp = document.createElement("span"); run.appendChild(sp);
+      var fits = function (t) { sp.textContent = t; return sp.scrollWidth <= run.clientWidth - 120; };
+      var out = [];
+      if (fits(line)) out = [line];
+      else {
+        var bits = line.split(/(?<=[:.])\s+/), cur = "";
+        bits.forEach(function (b) { var t = cur ? cur + " " + b : b; if (fits(t)) cur = t; else { if (cur) out.push(cur); cur = b; } });
+        if (cur) out.push(cur);
       }
-      setTimeout(function () { run.classList.add("fading"); setTimeout(show, 500); }, hold);
+      run.removeChild(sp); return out.map(function (t) { return t.replace(/:$/, ""); });
+    }
+    var show = function () {
+      run.className = "run"; run.innerHTML = "";
+      if (!queue.length) { queue = pieces(parts[k % parts.length]); k++; }
+      var sp = document.createElement("span"); sp.textContent = queue.shift(); run.appendChild(sp);
+      var size = 32; while (sp.scrollWidth > run.clientWidth - 120 && size > 24) { size -= 2; run.style.fontSize = size + "px"; }
+      var hold = Math.max(7000, sp.textContent.length * 85);   // long enough to read
+      setTimeout(function () { run.classList.add("fading"); setTimeout(function () { run.style.fontSize = ""; show(); }, 500); }, hold);
     };
     show();
   })();
@@ -464,7 +601,7 @@
   var listT;
   function showList(ms) { $("list").classList.add("on"); clearTimeout(listT); listT = setTimeout(function () { $("list").classList.remove("on"); }, ms || 15000); }
 
-  function current() { return mode === "radio" ? { kind: "radio", st: station } : mode === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }; }
+  function current() { return mode === "radio" ? { kind: "radio", st: station } : mode === "tv" ? { kind: "tv", ch: tvch } : mode === "mags" ? { kind: "mags", st: magQuiet ? null : station } : { kind: "drivein" }; }
   function tune(x, who) {
     if (!x || keyOf(x) === keyOf(current())) return;
     setMode(x);
@@ -594,6 +731,7 @@
   }
   if (Q.get("test")) { window.bkCommand = command; window.bkBlockNow = blockNow; }   // lets a test page pretend to be chat
   if (mode === "radio") { card(); paint(); tick(); play(); }
+  else if (mode === "mags") { setMode({ kind: "mags", st: find(Q.get("station")) }); }
   else { setMode(mode === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }); tick(); }
   if (SCHED) { followSchedule(true); setInterval(followSchedule, 20000); }
 })();
