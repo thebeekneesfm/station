@@ -41,6 +41,9 @@
   .logo { font-size: 92px; line-height: 1; white-space: nowrap; }
   .logo span { color: var(--red); font-size: .5em; }
   .tag { font-style: italic; font-size: 30px; color: var(--ink-2); margin-top: 4px; }
+  .watch { text-align: right; }
+  .watch div { font-style: italic; font-size: 30px; color: var(--ink-2); }
+  .watch b { display: block; font-size: 46px; line-height: 1.1; color: var(--red); }
 
   /* the station card */
   .card { position: absolute; left: 70px; top: 200px; width: 520px; height: 520px; overflow: hidden; background: var(--paper); box-shadow: 3px 4px 0 rgba(0,0,0,.28); }
@@ -62,21 +65,37 @@
   .left { display: flex; justify-content: space-between; font-size: 30px; margin-top: 12px; color: var(--ink-2); }
 
   /* coming up */
-  .next { position: absolute; left: 70px; top: 760px; width: 1100px; height: 200px; padding: 22px 40px; }
-  .next h2 { margin: 0 0 8px; padding-bottom: 4px; font-size: 40px; color: var(--red); border-bottom: 2px solid var(--ink); }
-  .next ol { list-style: none; margin: 0; padding: 0; font-size: 30px; line-height: 1.5; }
+  .next { position: absolute; left: 70px; top: 756px; width: 1100px; height: 208px; padding: 16px 40px; }
+  .next h2 { margin: 0 0 6px; padding-bottom: 2px; font-size: 36px; line-height: 1.1; color: var(--red); border-bottom: 2px solid var(--ink); }
+  .next ol { list-style: none; margin: 0; padding: 0; font-size: 28px; line-height: 1.42; }
   .next li { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .next li b { color: var(--red); display: inline-block; min-width: 230px; }
 
   /* tune in */
-  .tunein { position: absolute; left: 1210px; top: 760px; width: 640px; height: 200px; padding: 22px 36px; display: flex; flex-direction: column; justify-content: center; transform: rotate(.6deg); }
+  .tunein { position: absolute; z-index: 3; left: 1210px; top: 756px; width: 640px; height: 200px; padding: 22px 36px; display: flex; flex-direction: column; justify-content: center; transform: rotate(.6deg); }
   .tunein .head { font-size: 44px; color: var(--red); }
   .tunein p { margin: 6px 0 0; font-size: 30px; line-height: 1.3; }
   .tunein code { font-family: inherit; font-weight: 700; background: var(--honey); padding: 0 6px; }
+  /* only shown (over the sponsors) for a moment each minute when chat commands are on */
+  #tunein:not(.on) { display: none; }
+
+  /* a word from our sponsors: real vintage print ads from the site, one at a time */
+  .spons { position: absolute; left: 1210px; top: 756px; width: 640px; height: 208px; padding: 14px 24px; display: flex; flex-direction: column; transform: rotate(.5deg); }
+  .spons .sh { font-size: 34px; line-height: 1.05; color: var(--red); border-bottom: 2px solid var(--ink); padding-bottom: 2px; margin-bottom: 10px; }
+  .sbody { flex: 1; min-height: 0; display: flex; gap: 20px; align-items: center; transition: opacity .6s ease; }
+  .sbody.fading { opacity: 0; }
+  .sbody img { height: 100%; max-width: 46%; object-fit: contain; background: #fff; box-shadow: 2px 3px 0 rgba(0,0,0,.25); }
+  .stxt { min-width: 0; }
+  .st { font-size: 30px; line-height: 1.15; font-weight: 700; }
+  .sy { font-size: 26px; font-style: italic; color: var(--ink-2); margin-top: 4px; }
+  .sm { font-size: 22px; color: var(--ink-2); margin-top: 12px; }
 
   /* ticker */
   .ticker { position: absolute; left: 0; right: 0; bottom: 30px; height: 70px; overflow: hidden; display: flex; align-items: center; justify-content: center; transform: none; }
-  .ticker .run { font-size: 32px; padding: 0 60px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: opacity .5s ease; }
+  .ticker .run { font-size: 32px; padding: 0 60px; text-align: center; white-space: nowrap; transition: opacity .5s ease; width: 100%; overflow: hidden; }
+  .ticker .run span { display: inline-block; }
+  .ticker .run.crawl { text-align: left; padding: 0; }
+  @keyframes crawl { from { transform: translateX(var(--from)); } to { transform: translateX(var(--to)); } }
   .ticker .run.fading { opacity: 0; }
 
   /* the station list chat can pick from */
@@ -102,15 +121,23 @@
   .screen iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; pointer-events: none; }
   .scr-mode .screen { display: block; }
   .scr-mode .card, .scr-mode .next, .scr-mode .bar { display: none; }
-  .scr-mode .now { left: 1410px; top: 186px; width: 450px; height: 524px; padding: 28px 32px; }
-  .scr-mode .kicker { font-size: 24px; }
-  .scr-mode .series { font-size: 46px; -webkit-line-clamp: 3; }
-  .scr-mode .title { font-size: 36px; -webkit-line-clamp: 3; margin-top: 8px; }
-  .scr-mode .date { font-size: 24px; }
-  .scr-mode .left { margin-top: auto; flex-direction: column; gap: 6px; font-size: 24px; }
-  .then { font-size: 24px; color: var(--ink-2); margin-top: 10px; display: none; }
+  .scr-mode .now { left: 1400px; top: 184px; width: 462px; height: 346px; padding: 22px 28px; }
+  .scr-mode .kicker { font-size: 22px; }
+  .scr-mode .series { font-size: 42px; -webkit-line-clamp: 2; }
+  .scr-mode .title { font-size: 32px; -webkit-line-clamp: 2; margin-top: 6px; }
+  .scr-mode .date { font-size: 22px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .scr-mode .left { margin-top: auto; font-size: 22px; }
+  .scr-mode .left span + span { display: none; }
+  .scr-mode .spons { left: 1400px; top: 552px; width: 462px; height: 366px; padding: 16px 24px; transform: rotate(-.4deg); }
+  .scr-mode .spons .sh { font-size: 32px; }
+  .scr-mode .sbody { gap: 18px; }
+  .scr-mode .sbody img { max-width: 56%; }
+  .scr-mode .st { font-size: 26px; }
+  .scr-mode .sy { font-size: 22px; }
+  .scr-mode .sm { font-size: 19px; }
+  .then { font-size: 22px; color: var(--ink-2); margin-top: 6px; display: none; }
   .scr-mode .then { display: block; }
-  .scr-mode .tunein { left: 1410px; top: 736px; width: 450px; height: 190px; padding: 16px 26px; }
+  .scr-mode .tunein { left: 1400px; top: 552px; width: 462px; height: 366px; padding: 24px 30px; }
   .scr-mode .tunein .head { font-size: 34px; }
   .scr-mode .tunein p { font-size: 23px; }
   .overlay .screen { opacity: 0; }
@@ -121,7 +148,7 @@
 
   /* look=overlay: just a lower-third card */
   .overlay #stage { background: transparent; }
-  .overlay .mast, .overlay .card, .overlay .next, .overlay .tunein, .overlay .ticker { display: none; }
+  .overlay .mast, .overlay .card, .overlay .next, .overlay .tunein, .overlay .ticker, .overlay .spons { display: none; }
   html.overlay, html.overlay body { background: transparent; }
   .overlay .now { transform: none; left: 40px; top: auto; bottom: 40px; width: 900px; height: auto; padding: 22px 32px; }
   .overlay .series { font-size: 44px; -webkit-line-clamp: 1; }
@@ -136,6 +163,7 @@
 <div id="stage">
   <header class="mast paper">
     <div><div class="logo head">The Bee's Knees<span>.fm</span></div><div class="tag">Carefully curated to relieve you from our current timeline</div></div>
+    <div class="watch"><div>Watch &amp; listen 24/7, free, at</div><b>thebeesknees.fm</b></div>
   </header>
   <div class="card" id="card"></div>
   <div class="screen" id="screen"><iframe id="frame" title="Bee's Knees TV" allow="autoplay; fullscreen" src="about:blank"></iframe></div>
@@ -150,6 +178,8 @@
   </section>
   <section class="next paper"><h2 class="head">Coming up</h2><ol id="next"></ol></section>
   <section class="tunein paper" id="tunein"></section>
+  <section class="spons paper" id="spons"><div class="sh head">A word from our sponsors</div>
+    <div class="sbody" id="sbody"><img id="sImg" alt=""><div class="stxt"><div class="st" id="sT"></div><div class="sy" id="sY"></div><div class="sm">More vintage ads at thebeesknees.fm</div></div></div></section>
   <section class="list paper" id="list"><h2 class="head">What's on the dial</h2>
     <div class="cols"><div class="radio"><h3>Radio <small>!tune noir</small></h3><ol id="stations"></ol></div><div><h3>TV <small>!tune tv kids</small></h3><ol id="channels"></ol></div></div>
     <p class="di"><strong>The Drive-In</strong>: <code>!tune drive-in</code> for the picture show</p></section>
@@ -163,6 +193,7 @@
 <script src="stations.js?v=20261107dr"></script>
 <script src="art/screen/tv-data.js?v=26"></script>
 <script src="obs-schedule.js?v=8"></script>
+<script src="ads.js?v=20261102b"></script>
 <script>
 (function () {
   "use strict";
@@ -351,9 +382,18 @@
   (function () {
     var run = $("run"), parts = (CONFIG.announcements || []).filter(Boolean), k = 0;
     if (!parts.length) return;
-    var show = function () { run.textContent = parts[k % parts.length]; run.classList.remove("fading"); k++; };
+    // a short line sits still for 9 seconds; a long one crawls across, then the next one comes
+    var show = function () {
+      run.className = "run"; run.innerHTML = ""; var sp = document.createElement("span"); sp.textContent = parts[k % parts.length]; run.appendChild(sp); k++;
+      var room = run.clientWidth - 120, w = sp.scrollWidth, hold = 9000;
+      if (w > room) {
+        run.classList.add("crawl"); var dist = run.clientWidth + w, secs = dist / 140;
+        sp.style.setProperty("--from", run.clientWidth + "px"); sp.style.setProperty("--to", -w + "px");
+        sp.style.animation = "crawl " + secs + "s linear forwards"; hold = secs * 1000;
+      }
+      setTimeout(function () { run.classList.add("fading"); setTimeout(show, 500); }, hold);
+    };
     show();
-    setInterval(function () { run.classList.add("fading"); setTimeout(show, 500); }, 9000);
   })();
 
   // the station list (shown when chat asks for it)
@@ -392,13 +432,29 @@
   var COOL = 1000 * (+Q.get("cooldown") || 180), VOTE = 1000 * (+Q.get("vote") || 45);
   var lastChange = 0, votes = null, voteEnd = 0, cands = {};
   // the tune-in box: "keep watching 24/7", taking turns with the chat commands when chat is hooked up
-  var TUNE = [
-    '<div class="head">Want to keep watching 24/7?</div><p>Radio, TV and the Drive-In play around the clock, free, at <b>thebeesknees.fm</b></p>'
-  ];
+  var TUNE = [];
   if (channel) TUNE.push('<div class="head">You pick what\u2019s on</div><p>Type <code>!tune noir</code>, <code>!tune tv kids</code> or <code>!tune drive-in</code> in chat. <code>!stations</code> shows the dial.</p>');
-  var tuneAt = 0;
-  $("tunein").innerHTML = TUNE[0];
-  if (TUNE.length > 1) setInterval(function () { tuneAt = (tuneAt + 1) % TUNE.length; $("tunein").innerHTML = TUNE[tuneAt]; }, 30000);
+  // with chat hooked up, the chat instructions cover the sponsors for 15 seconds out of every minute
+  if (TUNE.length) {
+    document.documentElement.classList.add("chat-on"); $("tunein").innerHTML = TUNE[0];
+    setInterval(function () { $("tunein").classList.add("on"); setTimeout(function () { $("tunein").classList.remove("on"); }, 15000); }, 60000);
+  }
+  // a word from our sponsors: the site's vintage print ads, a new one every 40 seconds (no tobacco, liquor or personal products)
+  (function () {
+    var skip = /cigar|tobacco|whisk|bourbon|beer|\bgin\b|\brum\b|tampax|modess|sanitary|silcot|laxet|deodorant|\bmum\b|new race|shelltox|mortein|insecticide|fly spray/i;
+    var A = (window.ADS || []).filter(function (a) { return a && a.src && !skip.test(a.title); });
+    if (!A.length) { $("spons").style.display = "none"; return; }
+    for (var i = A.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = A[i]; A[i] = A[j]; A[j] = t; }
+    var n = 0, body = $("sbody"), img = $("sImg");
+    function put() {
+      var a = A[n % A.length]; n++;
+      var pre = new Image(); pre.onload = function () {
+        body.classList.add("fading");
+        setTimeout(function () { img.src = a.src; $("sT").textContent = a.title; $("sY").textContent = a.date ? "Print ad, " + a.date : ""; body.classList.remove("fading"); }, 600);
+      }; pre.onerror = function () { put(); }; pre.src = a.src;
+    }
+    put(); setInterval(put, 40000);
+  })();
   if (channel) connect();
   function command(user, text, boss) {
     var m = text.trim().match(/^!(tune|station|stations|channels|list|dial|radio|tv|watch|drive-?in|movies?)\b\s*(.*)$/i); if (!m) return;
