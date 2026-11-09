@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="art/favicon.png?v=2" type="image/png">
 <link rel="apple-touch-icon" href="art/apple-touch-icon.png?v=2">
-<script>if (/[?&]broadcast=1\b/.test(location.search)) document.documentElement.classList.add("broadcast"); if (/[?&]fill=1\b/.test(location.search)) document.documentElement.classList.add("fill");</script>
+<script>if (/[?&]broadcast=1\b/.test(location.search)) document.documentElement.classList.add("broadcast"); if (/[?&]fill=1\b/.test(location.search)) document.documentElement.classList.add("fill"); else if (!/[?&]broadcast=1\b/.test(location.search)) document.documentElement.classList.add("inset");</script>
 <script src="art/backgrounds/backgrounds.js?v=20261101g3"></script>
 <link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
 <style>
@@ -88,6 +88,14 @@
       repeating-linear-gradient(to bottom, rgba(0,0,0,var(--scan, .16)) 0 1px, rgba(0,0,0,0) 1px 3px); }
   @media (max-width: 700px) { .crt { --scan: .07; } }
   .scr:fullscreen .crt { border-radius: 7% / 10%; }
+  /* the picture plays inside a 1953 Bendix set cut from a LIFE ad (the same one as on the stream); full screen drops the set */
+  html.inset .scr:not(:fullscreen) { aspect-ratio: 1092 / 1010 !important; background: transparent; box-shadow: none; }
+  html.inset .scr:not(:fullscreen)::after { content: ""; position: absolute; inset: 0; z-index: 4; pointer-events: none; background: url("art/screen/tv-bendix-front.webp") 0 0 / 100% 100% no-repeat; }
+  html.inset .scr:not(:fullscreen) > video:not(.static), html.inset .scr:not(:fullscreen) > .scr-standby, html.inset .scr:not(:fullscreen) > .scr-slate, html.inset .scr:not(:fullscreen) > .crt { inset: auto; left: 12.36%; top: 11.78%; width: 71.61%; height: 62.97%; }
+  html.inset .scr:not(:fullscreen) > video:not(.static) { object-fit: cover; transform: scale(1.07); }
+  html.inset .scr:not(:fullscreen) > .crt { border-radius: 0; box-shadow: none; background: repeating-linear-gradient(to bottom, rgba(0,0,0,var(--scan, .14)) 0 1px, rgba(0,0,0,0) 1px 3px); }
+  html.inset .scr:not(:fullscreen) .scr-osd { top: 16%; right: 19%; }
+  html.inset .scr { width: min(100%, calc((100vh - 282px) * 1.0812)); }
   .scr-ctrl { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
   .scr-ctrl button { font: 700 19px/1 "BK Serif", Georgia, serif; background: var(--ink); color: var(--paper); border: 0; padding: 12px 18px; cursor: pointer; min-height: 46px; }
   .scr.muted ~ .scr-ctrl .scr-sound, .scr-sound[aria-pressed="false"] { background: var(--red); }
@@ -179,6 +187,8 @@
     /* never shorter than 660px, so the channel list beside the picture has room on short laptop screens (the page scrolls a little there) */
     .stage { --sh: clamp(660px, calc(100vh - 190px), 860px); grid-template-columns: minmax(0, calc(var(--sh) * 4 / 3)) 340px !important; justify-content: center; grid-template-rows: auto minmax(0, 1fr); grid-template-areas: "scr np" "scr tuner"; gap: 0 22px !important; height: var(--sh); align-items: stretch; }
     .scr { grid-area: scr; width: min(100%, calc(var(--sh) * 4 / 3)) !important; height: auto; align-self: center; justify-self: center; }
+    html.inset .stage { grid-template-columns: minmax(0, calc(var(--sh) * 1.0812)) 340px !important; }
+    html.inset .scr { width: min(100%, calc(var(--sh) * 1.0812)) !important; }
     .np { grid-area: np; margin-top: 0 !important; grid-template-columns: 1fr !important; gap: 6px; padding: 16px 18px; align-content: start; }
     .np-when { text-align: left !important; }
     .np-series { font-size: 26px; } .np-title { font-size: 24px; }
