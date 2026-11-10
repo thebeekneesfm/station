@@ -132,11 +132,14 @@
     <div class="row"><span class="who" id="v-who"></span><span class="pos" id="v-pos"></span><a id="v-via" target="_blank" rel="noopener">At the Art Institute of Chicago</a><button id="v-full" type="button">Full screen</button><button id="v-close" type="button">Close</button></div>
   </div>
 </dialog>
-<script src="gallery.js?v=1"></script>
+<script src="gallery.js?v=2"></script>
 <script>
   (function () {
     var ROOMS = window.GALLERY || [];
     var iiif = function (id, w) { return "https://www.artic.edu/iiif/2/" + id + "/full/" + w + ",/0/default.jpg"; };
+    // a copy of each picture is kept on the site (art/gallery), so it shows everywhere, TV browsers included;
+    // the big view then swaps in the museum's sharper one if it loads
+    var local = function (id) { return "art/gallery/" + id + ".webp"; };
     var bar = document.getElementById("rooms"), wall = document.getElementById("wall"), blurb = document.getElementById("blurb");
     var store = { get: function () { try { return localStorage.getItem("otr.gallery.room"); } catch (e) { return null; } }, set: function (v) { try { localStorage.setItem("otr.gallery.room", v); } catch (e) {} } };
     var want = (location.hash || "").slice(1) || store.get();
@@ -153,7 +156,7 @@
         var btn = document.createElement("button"); btn.type = "button"; btn.className = "work";
         btn.setAttribute("aria-label", w.t + " by " + w.a + ", " + w.d + ". Open to see it big.");
         var fr = document.createElement("div"); fr.className = "frame";
-        var img = document.createElement("img"); img.referrerPolicy = "no-referrer"; img.loading = "lazy"; img.alt = w.t; img.src = iiif(w.img, 843);   // 843 wide is the size the museum keeps ready; other sizes are often refused
+        var img = document.createElement("img"); img.referrerPolicy = "no-referrer"; img.loading = "lazy"; img.alt = w.t; img.src = local(w.img);
         img.width = 400; img.height = Math.round(400 / (w.r || 0.8));
         fr.appendChild(img);
         var pl = document.createElement("div"); pl.className = "placard";
@@ -168,10 +171,10 @@
     var dlg = document.getElementById("viewer"), vimg = document.getElementById("v-img");
     function open(i) {
       at = (i + list.length) % list.length; var w = list[at];
-      vimg.src = iiif(w.img, 843); vimg.alt = w.t;
+      vimg.src = local(w.img); vimg.alt = w.t;
       // then the sharper one, once it has loaded
       var hi = new Image(); hi.referrerPolicy = "no-referrer"; hi.onload = function () { if (list[at] === w) vimg.src = hi.src; }; hi.src = iiif(w.img, 1686);
-      [list[(at + 1) % list.length], list[(at - 1 + list.length) % list.length]].forEach(function (n) { if (n) { var im = new Image(); im.referrerPolicy = "no-referrer"; im.src = iiif(n.img, 843); } });
+      [list[(at + 1) % list.length], list[(at - 1 + list.length) % list.length]].forEach(function (n) { if (n) { var im = new Image(); im.src = local(n.img); } });
       var who = document.getElementById("v-who"); who.innerHTML = ""; var b = document.createElement("b"); b.textContent = w.t; who.appendChild(b); who.appendChild(document.createTextNode(", " + w.a + ", " + w.d));
       document.getElementById("v-pos").textContent = (at + 1) + " of " + list.length;
       document.getElementById("v-via").href = "https://www.artic.edu/artworks/" + w.id;
