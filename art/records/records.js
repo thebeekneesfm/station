@@ -1144,17 +1144,24 @@ window.RECORDS_PLAY = function (r) {
       "#rp-box .rp-btns button:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}",
       "#rp-box:not(.mini) .rp-top{padding-right:0;margin-top:44px}",
       // small: a little player in the top right corner, and the page underneath stays usable
-      "#rp-box.mini{inset:auto;top:calc(var(--rp-top,108px) + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));display:block;padding:0;background:none;pointer-events:none;z-index:2600}",
-      "#rp-box.mini .rp-card{pointer-events:auto;width:min(340px,calc(100vw - 24px));max-height:none;overflow:visible;padding:10px 10px 8px;font-size:15px;transform:rotate(.6deg)}",
+      // on the left, out of the way of the site menu, which opens on the right; under the menu when it's open
+      "#rp-box.mini{inset:auto;top:calc(var(--rp-top,108px) + env(safe-area-inset-top,0px));left:max(12px,env(safe-area-inset-left,0px));display:block;padding:0;background:none;pointer-events:none;z-index:1900}",
+      "#rp-box.mini .rp-card{pointer-events:auto;width:min(340px,calc(100vw - 24px));max-height:none;overflow:visible;padding:10px 10px 8px;font-size:15px;transform:rotate(-.6deg)}",
       "#rp-box.mini .rp-top{flex-direction:row;align-items:center;gap:10px;padding-right:96px;margin-top:0}",
       "#rp-box.mini .rp-top img{width:52px;height:52px;transform:rotate(-2deg)}",
       "#rp-box.mini h2{font-size:15px;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}",
       "#rp-box.mini .rp-who{font-size:13px;margin-top:1px}",
       "#rp-box.mini iframe{height:112px;margin-top:8px}",
       "#rp-box.mini .rp-foot{display:none}",
+      // liner notes from Wikipedia, under the player
+      "#rp-box .rp-notes{margin:14px 0 0;padding:12px 14px;background:rgba(255,255,255,.35);border-left:4px solid #c8321f;font-size:16px;line-height:1.5}",
+      "#rp-box .rp-notes b{display:block;font:700 14px/1.2 'BK Serif',Georgia,serif;letter-spacing:.04em;color:#c8321f;margin-bottom:4px}",
+      "#rp-box .rp-notes p{margin:0}",
+      "#rp-box .rp-notes a{color:#1f1b17;font-size:14px}",
+      "#rp-box.mini .rp-notes{display:none}",
       "#rp-box.mini .rp-btns{top:8px;right:8px;gap:4px}#rp-box.mini .rp-btns button{font-size:13px;padding:7px 8px}",
       // phones: along the bottom instead, out of the way of the menu
-      "@media (max-width:640px){#rp-box.mini{top:auto;bottom:max(10px,env(safe-area-inset-bottom,0px));left:max(10px,env(safe-area-inset-left,0px));right:max(10px,env(safe-area-inset-right,0px))}#rp-box.mini .rp-card{width:100%;transform:none}}"
+      "@media (max-width:640px){#rp-box.mini{top:auto;bottom:max(10px,env(safe-area-inset-bottom,0px));left:max(10px,env(safe-area-inset-left,0px));right:auto}#rp-box.mini .rp-card{width:min(320px,calc(100vw - 20px));transform:none}}"
     ].join("");
     doc.head.appendChild(css);
   }
@@ -1175,7 +1182,16 @@ window.RECORDS_PLAY = function (r) {
   var foot = doc.createElement("p"); foot.className = "rp-foot";
   foot.appendChild(doc.createTextNode("Playing from the Internet Archive. "));
   var a = doc.createElement("a"); a.href = r.item; a.target = "_blank"; a.rel = "noopener"; a.textContent = "See the album on Archive.org"; foot.appendChild(a);
-  card.appendChild(btns); card.appendChild(top); card.appendChild(fr); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
+  // liner notes: a few lines from Wikipedia about the album (or the singer or band), in art/records/notes.js
+  var nt = (window.RECORD_NOTES || {})[r.item], notes = null;
+  if (nt && nt.text) {
+    notes = doc.createElement("div"); notes.className = "rp-notes";
+    var nb = doc.createElement("b"); nb.textContent = nt.kind === "album" ? "Liner notes" : "About " + nt.name;
+    var np = doc.createElement("p"); np.textContent = nt.text + " ";
+    var nl = doc.createElement("a"); nl.href = nt.url; nl.target = "_blank"; nl.rel = "noopener"; nl.textContent = "More on Wikipedia";
+    np.appendChild(nl); notes.appendChild(nb); notes.appendChild(np);
+  }
+  card.appendChild(btns); card.appendChild(top); card.appendChild(fr); if (notes) card.appendChild(notes); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
   // pause the radio (on this page, or the radio page underneath when the shelf is open over it)
   var radio = null; try { radio = window.RADIO || (window.top !== window && window.top.RADIO) || null; } catch (e) {}
   var wasOn = false; try { if (radio && radio.state && radio.state.on && radio.power) { wasOn = true; radio.power(false); } } catch (e) {}

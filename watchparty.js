@@ -49,7 +49,7 @@
   }
   // the blocks that run on a given day (holiday blocks replace the weekly ones that overlap them)
   function blocksOn(t) {
-    var L = S.blocks || [];
+    var L = (S.blocks || []).filter(function (b) { return !b.quiet; });   // test blocks stay off the button
     var dated = L.filter(function (b) { return b.dates && onDate(b.dates, t.md) && (!b.days || b.days.indexOf(DAYS[t.day]) >= 0); });
     var weekly = L.filter(function (b) {
       return !b.dates && b.days && b.days.indexOf(DAYS[t.day]) >= 0 &&

@@ -30,6 +30,8 @@ window.STREAM_SCHEDULE = {
     { dates: "12-31", from: "20:00", to: "23:59", play: "radio gramophone", title: "New Year's Eve Dance Party" },
 
     /* ---------- every week: five streams ---------- */
+    // Monday: trying out a second Magazine Rack night. "quiet: true" keeps it off the website's watch-party button
+    { days: ["mon"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack", quiet: true },
     { days: ["tue"], from: "19:00", to: "21:00", play: "tv newsreels",   title: "Oddities Night" },
     { days: ["wed"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack" },
     { days: ["thu"], from: "19:00", to: "21:00", play: "radio chills",   title: "Radio Night" },
