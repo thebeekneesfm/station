@@ -802,7 +802,7 @@
   function mediaSession(st, tr) {
     if (!("mediaSession" in navigator)) return;
     try {
-      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.title, artist: tr.series, album: "The Bee's Knees.fm · " + st.name, artwork: [{ src: new URL("art/apple-touch-icon.png?v=2", location.href).href, sizes: "180x180", type: "image/png" }] });
+      navigator.mediaSession.metadata = new MediaMetadata({ title: tr.title, artist: tr.series, album: "The Bee's Knees.fm · " + st.name, artwork: [{ src: new URL("art/apple-touch-icon.png?v=3", location.href).href, sizes: "180x180", type: "image/png" }] });
       navigator.mediaSession.setActionHandler("nexttrack", () => stepStation(1));
       navigator.mediaSession.setActionHandler("previoustrack", () => stepStation(-1));
       navigator.mediaSession.setActionHandler("play", () => power(true));
