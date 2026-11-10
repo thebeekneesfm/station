@@ -222,9 +222,9 @@
 <div class="start" id="start">Click anywhere to start the sound</div>
 <audio id="audio" preload="auto" crossorigin="anonymous"></audio>
 
-<script src="config.js?v=20261109tk"></script>
+<script src="config.js?v=20261110st"></script>
 <script src="stations.js?v=20261107dr"></script>
-<script src="art/screen/tv-data.js?v=26"></script>
+<script src="art/screen/tv-data.js?v=27"></script>
 <script src="obs-schedule.js?v=9"></script>
 <script src="ads.js?v=20261102b"></script>
 <script src="art/rack/rack.js?v=6"></script>
@@ -563,7 +563,7 @@
 
   // the ticker: the same announcements as the website
   (function () {
-    var run = $("run"), parts = (CONFIG.announcements || []).filter(Boolean), k = 0;
+    var run = $("run"), parts = (CONFIG.streamAnnouncements || CONFIG.announcements || []).filter(Boolean), k = 0;
     if (!parts.length) return;
     // no scrolling: each line sits still and fades to the next. A line too long for the bar is set a little
     // smaller, and if it still doesn't fit it's shown in parts, split at its natural breaks (": " and ". ")

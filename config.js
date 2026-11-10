@@ -21,6 +21,16 @@ window.RADIO_CONFIG = {
     "Follow The Bee's Knees on Instagram, TikTok, YouTube, Bluesky and Twitch",
     "Enjoying the vibes? Consider becoming a member or making a donation at ko-fi.com/thebeeskneesfm",
   ],
+  /* The stream's ticker (obs.html): lines that make sense to someone watching on Twitch, who can't click anything.
+     Same rules: one line in quotes per line, followed by a comma. */
+  "streamAnnouncements": [
+    "Welcome to The Bee's Knees, a little station playing old radio, TV, movies and records",
+    "Everything you see and hear comes from the Internet Archive, free for everyone",
+    "Keep it playing all day, free, at thebeesknees.fm",
+    "Live every Tuesday, Wednesday, Thursday and Saturday night, and Sunday mornings",
+    "Hit follow to know when the next show starts",
+    "Say hello in the chat",
+  ],
   /* Sponsor-tier members: which station each one sponsors this month.
      Use the station's id (chills, noir, scifi, romance, outwest, laughs, variety,
      gramophone) and the name to show.
