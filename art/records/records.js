@@ -1191,6 +1191,11 @@ window.RECORDS_PLAY = function (r) {
     var nl = doc.createElement("a"); nl.href = nt.url; nl.target = "_blank"; nl.rel = "noopener"; nl.textContent = "More on Wikipedia";
     np.appendChild(nl); notes.appendChild(nb); notes.appendChild(np);
   }
+  // TV browsers: the remote scrolls the page, not a box on top of it, so the player sits in the page itself
+  if (window.BK_LITE || (window.top !== window && window.top.BK_LITE)) {
+    box.style.position = "absolute"; box.style.inset = "auto 0 auto 0"; box.style.top = (window.scrollY || 0) + "px"; box.style.minHeight = "100vh";
+    card.style.maxHeight = "none"; card.style.overflow = "visible";
+  }
   card.appendChild(btns); card.appendChild(top); card.appendChild(fr); if (notes) card.appendChild(notes); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
   // pause the radio (on this page, or the radio page underneath when the shelf is open over it)
   var radio = null; try { radio = window.RADIO || (window.top !== window && window.top.RADIO) || null; } catch (e) {}
