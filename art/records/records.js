@@ -1142,10 +1142,10 @@ window.RECORDS_PLAY = function (r) {
       "#rp-box .rp-btns button{font:700 16px/1 'BK Serif',Georgia,serif;background:#1f1b17;color:#f3ead6;border:0;padding:9px 12px;cursor:pointer}",
       "#rp-box .rp-btns .rp-min{background:#c8321f}",
       "#rp-box .rp-btns button:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}",
-      "#rp-box:not(.mini) .rp-top{padding-right:0;margin-top:44px}",
+      "#rp-box:not(.mini) .rp-top{padding-right:0;margin-top:44px;align-items:flex-start}",
       // small: a little player in the top right corner, and the page underneath stays usable
       // on the left, out of the way of the site menu, which opens on the right; under the menu when it's open
-      "#rp-box.mini{inset:auto;top:calc(var(--rp-top,108px) + env(safe-area-inset-top,0px));left:max(12px,env(safe-area-inset-left,0px));display:block;padding:0;background:none;pointer-events:none;z-index:1900}",
+      "#rp-box.mini{inset:auto;bottom:max(16px,env(safe-area-inset-bottom,0px));left:max(16px,env(safe-area-inset-left,0px));display:block;padding:0;background:none;pointer-events:none;z-index:1900}",
       "#rp-box.mini .rp-card{pointer-events:auto;width:min(340px,calc(100vw - 24px));max-height:none;overflow:visible;padding:10px 10px 8px;font-size:15px;transform:rotate(-.6deg)}",
       "#rp-box.mini .rp-top{flex-direction:row;align-items:center;gap:10px;padding-right:96px;margin-top:0}",
       "#rp-box.mini .rp-top img{width:52px;height:52px;transform:rotate(-2deg)}",
@@ -1154,7 +1154,7 @@ window.RECORDS_PLAY = function (r) {
       "#rp-box.mini iframe{height:112px;margin-top:8px}",
       "#rp-box.mini .rp-foot{display:none}",
       // liner notes from Wikipedia, under the player
-      "#rp-box .rp-notes{margin:14px 0 0;padding:12px 14px;background:rgba(255,255,255,.35);border-left:4px solid #c8321f;font-size:16px;line-height:1.5}",
+      "#rp-box .rp-notes{margin:12px 0 0;padding:10px 12px;background:rgba(255,255,255,.35);border-left:4px solid #c8321f;font-size:15px;line-height:1.45;font-style:normal}",
       "#rp-box .rp-notes b{display:block;font:700 14px/1.2 'BK Serif',Georgia,serif;letter-spacing:.04em;color:#c8321f;margin-bottom:4px}",
       "#rp-box .rp-notes p{margin:0}",
       "#rp-box .rp-notes a{color:#1f1b17;font-size:14px}",
@@ -1196,7 +1196,11 @@ window.RECORDS_PLAY = function (r) {
     box.style.position = "absolute"; box.style.inset = "auto 0 auto 0"; box.style.top = (window.scrollY || 0) + "px"; box.style.minHeight = "100vh";
     card.style.maxHeight = "none"; card.style.overflow = "visible";
   }
-  card.appendChild(btns); card.appendChild(top); card.appendChild(fr); if (notes) card.appendChild(notes); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
+  // the liner notes sit beside the cover so they show without scrolling; on phones they go under the player instead,
+  // so the play controls stay near the top of the screen
+  var narrow = false; try { narrow = (doc.defaultView || window).matchMedia("(max-width:480px)").matches; } catch (e) {}
+  if (notes && !narrow) t.appendChild(notes);
+  card.appendChild(btns); card.appendChild(top); card.appendChild(fr); if (notes && narrow) card.appendChild(notes); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
   // pause the radio (on this page, or the radio page underneath when the shelf is open over it)
   var radio = null; try { radio = window.RADIO || (window.top !== window && window.top.RADIO) || null; } catch (e) {}
   var wasOn = false; try { if (radio && radio.state && radio.state.on && radio.power) { wasOn = true; radio.power(false); } } catch (e) {}
@@ -1221,8 +1225,6 @@ window.RECORDS_PLAY = function (r) {
     mn.textContent = on ? "Bigger" : "Keep playing while I look around";
     mn.setAttribute("aria-label", on ? "Make the player bigger" : "Shrink the player to the corner and keep listening");
     x.textContent = on ? "\u00d7" : "Close"; x.setAttribute("aria-label", "Close the player");
-    // on the front page, sit just under the masthead so the site menu stays clear
-    var m = doc.querySelector(".mast, header, .top"); if (m) { var b = m.getBoundingClientRect().bottom; if (b > 0 && b < 260) box.style.setProperty("--rp-top", Math.round(b + 10) + "px"); }
   }
   small(false);
   function esc(e) { if (e.key === "Escape" && !box.classList.contains("mini")) { e.stopPropagation(); close(); } }
