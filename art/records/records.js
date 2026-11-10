@@ -1117,8 +1117,11 @@ window.RECORDS_TODAY = function (when) {
    track list, which scrolls on its own): a shorter frame cut off the bottom of the list on phones, where a
    frame can't be scrolled. While it's open the radio pauses, and it picks back up when the player closes. */
 window.RECORDS_PLAY = function (r) {
+  // opened over the radio (the shelf in a frame): play in the front page itself, so the player keeps going
+  // while the visitor closes the shelf and wanders off to the magazines, the comics and so on
+  try { if (window.top !== window && window.top.RECORDS_PLAY && window.top.document) return window.top.RECORDS_PLAY(r); } catch (e) {}
   var doc = document, old = doc.getElementById("rp-box");
-  if (old) old.remove();
+  if (old && old._close) old._close(true); else if (old) old.remove();
   if (!doc.getElementById("rp-css")) {
     var css = doc.createElement("style"); css.id = "rp-css";
     css.textContent = [
@@ -1133,14 +1136,35 @@ window.RECORDS_PLAY = function (r) {
       "#rp-box .rp-foot a{color:#1f1b17}",
       "#rp-box .rp-x{position:absolute;top:12px;right:12px;font:700 16px/1 'BK Serif',Georgia,serif;background:#1f1b17;color:#f3ead6;border:0;padding:9px 12px;cursor:pointer}",
       "#rp-box .rp-x:focus-visible,#rp-box a:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}",
-      "@media (max-width:480px){#rp-box .rp-top{flex-direction:column;align-items:flex-start;gap:12px;padding-right:0}#rp-box .rp-top img{width:min(210px,54vw);height:auto;aspect-ratio:1}#rp-box h2{font-size:20px}}"
+      "@media (max-width:480px){#rp-box .rp-top{flex-direction:column;align-items:flex-start;gap:12px;padding-right:0}#rp-box .rp-top img{width:min(210px,54vw);height:auto;aspect-ratio:1}#rp-box h2{font-size:20px}}",
+      // the buttons at the top: shrink to the corner, and close
+      "#rp-box .rp-btns{position:absolute;top:12px;right:12px;display:flex;gap:6px}",
+      "#rp-box .rp-btns button{font:700 16px/1 'BK Serif',Georgia,serif;background:#1f1b17;color:#f3ead6;border:0;padding:9px 12px;cursor:pointer}",
+      "#rp-box .rp-btns .rp-min{background:#c8321f}",
+      "#rp-box .rp-btns button:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}",
+      "#rp-box:not(.mini) .rp-top{padding-right:0;margin-top:44px}",
+      // small: a little player in the top right corner, and the page underneath stays usable
+      "#rp-box.mini{inset:auto;top:calc(var(--rp-top,108px) + env(safe-area-inset-top,0px));right:max(12px,env(safe-area-inset-right,0px));display:block;padding:0;background:none;pointer-events:none;z-index:2600}",
+      "#rp-box.mini .rp-card{pointer-events:auto;width:min(340px,calc(100vw - 24px));max-height:none;overflow:visible;padding:10px 10px 8px;font-size:15px;transform:rotate(.6deg)}",
+      "#rp-box.mini .rp-top{flex-direction:row;align-items:center;gap:10px;padding-right:96px;margin-top:0}",
+      "#rp-box.mini .rp-top img{width:52px;height:52px;transform:rotate(-2deg)}",
+      "#rp-box.mini h2{font-size:15px;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}",
+      "#rp-box.mini .rp-who{font-size:13px;margin-top:1px}",
+      "#rp-box.mini iframe{height:112px;margin-top:8px}",
+      "#rp-box.mini .rp-foot{display:none}",
+      "#rp-box.mini .rp-btns{top:8px;right:8px;gap:4px}#rp-box.mini .rp-btns button{font-size:13px;padding:7px 8px}",
+      // phones: along the bottom instead, out of the way of the menu
+      "@media (max-width:640px){#rp-box.mini{top:auto;bottom:max(10px,env(safe-area-inset-bottom,0px));left:max(10px,env(safe-area-inset-left,0px));right:max(10px,env(safe-area-inset-right,0px))}#rp-box.mini .rp-card{width:100%;transform:none}}"
     ].join("");
     doc.head.appendChild(css);
   }
   var id = r.item.replace(/^.*\/details\//, "").replace(/[?#].*$/, "");
   var box = doc.createElement("div"); box.id = "rp-box"; box.setAttribute("role", "dialog"); box.setAttribute("aria-modal", "true"); box.setAttribute("aria-label", r.title);
   var card = doc.createElement("div"); card.className = "rp-card";
-  var x = doc.createElement("button"); x.type = "button"; x.className = "rp-x"; x.textContent = "Close";
+  var btns = doc.createElement("div"); btns.className = "rp-btns";
+  var mn = doc.createElement("button"); mn.type = "button"; mn.className = "rp-min";
+  var x = doc.createElement("button"); x.type = "button"; x.className = "rp-x2"; x.textContent = "Close";
+  btns.appendChild(mn); btns.appendChild(x);
   var top = doc.createElement("div"); top.className = "rp-top";
   var img = doc.createElement("img"); img.src = r.cover; img.alt = "";
   var t = doc.createElement("div"), h = doc.createElement("h2"), w = doc.createElement("p");
@@ -1151,19 +1175,35 @@ window.RECORDS_PLAY = function (r) {
   var foot = doc.createElement("p"); foot.className = "rp-foot";
   foot.appendChild(doc.createTextNode("Playing from the Internet Archive. "));
   var a = doc.createElement("a"); a.href = r.item; a.target = "_blank"; a.rel = "noopener"; a.textContent = "See the album on Archive.org"; foot.appendChild(a);
-  card.appendChild(x); card.appendChild(top); card.appendChild(fr); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
+  card.appendChild(btns); card.appendChild(top); card.appendChild(fr); card.appendChild(foot); box.appendChild(card); doc.body.appendChild(box);
   // pause the radio (on this page, or the radio page underneath when the shelf is open over it)
   var radio = null; try { radio = window.RADIO || (window.top !== window && window.top.RADIO) || null; } catch (e) {}
   var wasOn = false; try { if (radio && radio.state && radio.state.on && radio.power) { wasOn = true; radio.power(false); } } catch (e) {}
+  if (window.RECORDS_WAS_ON) { wasOn = true; window.RECORDS_WAS_ON = false; }
   var back = doc.activeElement;
-  function close() {
+  // a new album replacing this one keeps the radio paused (keep = true)
+  function close(keep) {
     fr.src = "about:blank"; box.remove(); doc.removeEventListener("keydown", esc, true);
-    try { if (wasOn && radio && radio.power) radio.power(true); } catch (e) {}
-    try { if (back && back.focus) back.focus(); } catch (e) {}
+    if (keep === true) { if (wasOn) window.RECORDS_WAS_ON = true; return; }
+    try { if ((wasOn || window.RECORDS_WAS_ON) && radio && radio.power) radio.power(true); } catch (e) {}
+    window.RECORDS_WAS_ON = false;
+    try { if (back && back.focus && !box.classList.contains("mini")) back.focus(); } catch (e) {}
   }
-  function esc(e) { if (e.key === "Escape") { e.stopPropagation(); close(); } }
-  x.addEventListener("click", close);
+  box._close = close;
+  function small(on) {
+    box.classList.toggle("mini", on);
+    box.setAttribute("aria-modal", on ? "false" : "true");
+    mn.textContent = on ? "Bigger" : "Keep playing while I look around";
+    mn.setAttribute("aria-label", on ? "Make the player bigger" : "Shrink the player to the corner and keep listening");
+    x.textContent = on ? "\u00d7" : "Close"; x.setAttribute("aria-label", "Close the player");
+    // on the front page, sit just under the masthead so the site menu stays clear
+    var m = doc.querySelector(".mast, header, .top"); if (m) { var b = m.getBoundingClientRect().bottom; if (b > 0 && b < 260) box.style.setProperty("--rp-top", Math.round(b + 10) + "px"); }
+  }
+  small(false);
+  function esc(e) { if (e.key === "Escape" && !box.classList.contains("mini")) { e.stopPropagation(); close(); } }
+  x.addEventListener("click", function () { close(); });
+  mn.addEventListener("click", function () { small(!box.classList.contains("mini")); });
   box.addEventListener("click", function (e) { if (e.target === box) close(); });
   doc.addEventListener("keydown", esc, true);
-  x.focus();
+  mn.focus();
 };
