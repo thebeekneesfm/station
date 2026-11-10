@@ -1602,8 +1602,8 @@
   /* ---------- the comic and magazine racks, opened over the radio ----------
      The rack page itself runs in a frame (comics.html?embed=1), so collections and the reader work just as on the page,
      and the radio keeps playing underneath. */
-  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads", "guestbook.html": "guestbook", "youtube.html": "youtube", "postcard.html": "postcard", "puzzles.html": "puzzles", "records.html": "records", "shop.html": "shop" };
-  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads", guestbook: "The guest book", youtube: "The Bee's Knees on YouTube", postcard: "Send a card", records: "The Record Shelf", puzzles: "The Puzzle Page", shop: "The Bee's Knees shop" }, isRack = k => !!RACK_TITLES[k];
+  const RACKS = { "comics.html": "comics", "magazines.html": "magazines", "ads.html": "ads", "guestbook.html": "guestbook", "youtube.html": "youtube", "postcard.html": "postcard", "puzzles.html": "puzzles", "records.html": "records", "shop.html": "shop", "gallery.html": "gallery" };
+  const RACK_TITLES = { comics: "The comic rack", magazines: "The magazine rack", ads: "Vintage ads", guestbook: "The guest book", youtube: "The Bee's Knees on YouTube", postcard: "Send a card", records: "The Record Shelf", puzzles: "The Puzzle Page", shop: "The Bee's Knees shop", gallery: "The Gallery" }, isRack = k => !!RACK_TITLES[k];
   // the site menu asks first: the station's own pages open over the radio, so the music keeps playing
   window.BK_NAV_OPEN = href => {
     // TV browsers (Silk on Fire TV and the like) can't scroll a page that's open in a box over the radio
