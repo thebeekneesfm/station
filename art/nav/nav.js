@@ -212,6 +212,20 @@
   /* the station's other pages: fill in every <nav class="links"> */
   function auto() {
     document.querySelectorAll("nav.links[aria-label='Pages']").forEach(function (n) { mount(n, { mode: "auto" }); });
+    mark();
+  }
+  /* the logo (the bee on the radio tower) beside the station name, standing on the header's bottom edge */
+  function mark() {
+    var name = document.querySelector("header.mast a.logo");
+    if (!name || name.parentNode.querySelector(".bk-mark")) return;
+    var st = document.createElement("style");
+    st.textContent = ".mast>div:has(>a.logo){display:flex;align-items:flex-end;gap:14px}" +
+      ".bk-mark{display:block;flex:none;height:64px;width:auto;margin:-14px 0 -14px}" +
+      "@media (max-width:520px){.bk-mark{height:50px;margin-top:-8px}}";
+    document.head.appendChild(st);
+    var img = document.createElement("img");
+    img.className = "bk-mark"; img.src = "art/logo-mark.png"; img.alt = ""; img.width = 48; img.height = 64;
+    name.parentNode.insertBefore(img, name.nextSibling);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", auto); else auto();
 })();
