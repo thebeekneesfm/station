@@ -461,7 +461,7 @@
   function setAmb(name, v) {
     state.amb[name] = Math.max(0, Math.min(1, v));
     store.set("amb", state.amb);
-    if (state.amb[name] > 0 && !state.on) power(true);
+    if (state.amb[name] > 0 && !state.on) power(true, true);
     setAmbience();
     const pct = Math.round(state.amb[name] * 100);
     els.forEach(r => (r.amb || []).forEach(inp => { if (inp.dataset.sound === name && +inp.value !== pct) { inp.value = pct; inp.style.setProperty("--v", pct + "%"); } }));
@@ -757,7 +757,14 @@
 
   function setPhase(p) { state.phase = p; applyVolume(); render(); presenceUpdate(); }
 
-  function power(on) {
+  /* An album from the Record Shelf is playing (records.js sets BK_ALBUM): the radio never comes on by itself then.
+     Turning it on on purpose (a station, the play button) stops the album first. */
+  const albumOn = () => !!(window.BK_ALBUM && window.BK_ALBUM.on);
+  function power(on, auto) {
+    if (on !== false && !(on == null && state.on) && albumOn()) {
+      if (auto) return;
+      try { window.BK_ALBUM.stop(); } catch (e) {}
+    }
     if (ear && !ear.dataset.unlocked && on !== false) {   // phones only let a player make sound later if a tap started it once
       ear.dataset.unlocked = "1"; ear.muted = false; ear.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=";
       const pr = ear.play(); const done = () => { ear.muted = true; ear.dataset.src = ""; };
@@ -791,7 +798,7 @@
     if (!state.on) power(true); else retune();
   }
   function tuneTo(st) { if (!st) return; state.dial = st.dial; if (!state.on) power(true); else retune(); }
-  window.addEventListener("hashchange", () => { const st = STATIONS.find(s => "#" + s.id === location.hash); if (st && st !== state.station) tuneTo(st); });
+  window.addEventListener("hashchange", () => { if (albumOn()) return; const st = STATIONS.find(s => "#" + s.id === location.hash); if (st && st !== state.station) tuneTo(st); });
   function mediaSession(st, tr) {
     if (!("mediaSession" in navigator)) return;
     try {
@@ -1391,7 +1398,7 @@
     const left = state.sleepEnd ? (state.sleepEnd - Date.now()) / 60000 : 0;
     const next = SLEEP_STEPS.find(m => m > left + 0.5) || 0;
     state.sleepEnd = next ? Date.now() + next * 60000 : 0;
-    if (next && !state.on) power(true);
+    if (next && !state.on) power(true, true);
     applyVolume(); render();
   }
   setInterval(() => {
@@ -1637,7 +1644,7 @@
     const box = document.getElementById("rack-ov"); if (!box || box.hidden) return;
     box.hidden = true; overlayOpen(false);
     // a YouTube video switched the radio off: switch it back on now the video is closed
-    if (rackPausedRadio) { rackPausedRadio = false; if (!state.on) power(true); }
+    if (rackPausedRadio) { rackPausedRadio = false; if (!state.on) power(true, true); }
     if (!fromHistory && isRack(location.hash.slice(1))) {
       // opened from a link straight to #shop (or after a refresh): going Back would leave the site, so just tidy the address
       if (box.dataset.pushed) history.back();
@@ -2511,7 +2518,7 @@
       if (!autoArmed) return;
       autoArmed = false;
       ["click", "keydown", "touchend"].forEach(ev => document.removeEventListener(ev, go, true));
-      if (state.on || state.editing) return;
+      if (state.on || state.editing || albumOn()) return;
       if (e && e.target && e.target.closest && e.target.closest("a[href], .bkc, .bkc-btn, .bkc-peek, #welcome-ov, .bk-play")) {   // a link or the chat: let it do its own thing
         autoArmed = true; ["click", "keydown", "touchend"].forEach(ev => document.addEventListener(ev, go, true)); return;
       }

@@ -1203,14 +1203,18 @@ window.RECORDS_PLAY = function (r) {
   if (window.RECORDS_WAS_ON) { wasOn = true; window.RECORDS_WAS_ON = false; }
   var back = doc.activeElement;
   // a new album replacing this one keeps the radio paused (keep = true)
+  // the radio stays off when the album ends or closes: it only comes back on when someone picks a station
   function close(keep) {
     fr.src = "about:blank"; box.remove(); doc.removeEventListener("keydown", esc, true);
-    if (keep === true) { if (wasOn) window.RECORDS_WAS_ON = true; return; }
-    try { if ((wasOn || window.RECORDS_WAS_ON) && radio && radio.power) radio.power(true); } catch (e) {}
+    if (window.BK_ALBUM === album) window.BK_ALBUM = null;
+    if (keep === true) return;
     window.RECORDS_WAS_ON = false;
     try { if (back && back.focus && !box.classList.contains("mini")) back.focus(); } catch (e) {}
   }
   box._close = close;
+  // tells the radio an album is playing: it won't switch itself on, and picking a station stops the album
+  var album = { on: true, stop: function () { close(); } };
+  window.BK_ALBUM = album;
   function small(on) {
     box.classList.toggle("mini", on);
     box.setAttribute("aria-modal", on ? "false" : "true");
