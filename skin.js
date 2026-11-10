@@ -62,6 +62,8 @@ window.SKIN = {
     {"id": "visits", "type": "text", "bind": "visits", "x": 1330, "y": 76, "w": 230, "h": 30, "font": "BK Serif", "size": 18, "color": "#5d5244", "align": "right", "italic": true},
     {"id": "menu", "type": "menu", "x": 470, "y": 30, "w": 860, "h": 56, "size": 22, "mode": "bar"},
     {"id": "clock", "type": "text", "bind": "clock", "x": 1330, "y": 18, "w": 230, "h": 50, "font": "BK Serif", "size": 42, "color": "#1f1b17", "align": "right", "weight": 700},
+    // the bee on the radio tower, standing on the bottom edge of the banner next to the clock
+    {"id": "logo-mark", "src": "art/logo-mark.png", "x": 1246, "y": 18, "w": 78, "h": 104},
     {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 600, "y": 436, "w": 244, "h": 30, "font": "BK Serif", "size": 19, "color": "#5d5244", "align": "right", "italic": true},
     // weather is off for now; delete the two slashes to bring it back
     // {"id": "weather", "type": "weather", "x": 1400, "y": 70, "w": 160, "h": 40, "font": "BK Serif", "size": 26, "color": "#1f1b17", "weight": 700, "align": "right"},
@@ -98,6 +100,7 @@ window.SKIN = {
       {"id": "logo", "src": "art/phone/logo.png", "x": 20, "y": 14, "w": 560, "h": 118, "look": "logo"},
       {"id": "menu", "type": "menu", "x": 380, "y": 122, "w": 200, "h": 48, "size": 22, "mode": "button", "align": "right"},
       {"id": "clock", "type": "text", "bind": "clock", "x": 420, "y": 24, "w": 160, "h": 40, "font": "BK Serif", "size": 30, "color": "#1f1b17", "align": "right", "weight": 700},
+      {"id": "logo-mark", "src": "art/logo-mark.png", "x": 412, "y": 110, "w": 48, "h": 64},
       {"id": "listeners-total", "type": "text", "bind": "listeners.total", "x": 372, "y": 578, "w": 206, "h": 30, "font": "BK Serif", "size": 19, "color": "#5d5244", "align": "right", "italic": true},
       // {"id": "weather", "type": "weather", "x": 440, "y": 136, "w": 140, "h": 36, "font": "BK Serif", "size": 24, "color": "#1f1b17", "weight": 700, "align": "right"},
       {"id": "player", "src": "art/phone/player.png", "x": 12, "y": 248, "w": 576, "h": 372, "look": "paper"},
