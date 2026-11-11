@@ -12,7 +12,6 @@
      Other things to add after the secret (each starts with &):
        &auto=1    requests play without waiting for the DJ to approve them (otherwise they wait in the control panel)
        &fill=1    when nobody has asked for anything, the jukebox picks songs itself
-       &test=1    shows a little box for sending yourself test requests
      While this screen is running, the website's jukebox page is open for requests; close the screen (or switch
      "Taking requests" off in the control panel) and the website page closes.
      The look is the Record Shelf's: wallpaper, newsprint, a card book of jukebox title strips that flips through the
@@ -141,8 +140,6 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
 /* sound-off notice: only shows when a normal browser blocks sound until a click (OBS never does) */
 #tap { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 99; display: none; background: var(--red); color: #fff;
   font: 400 40px/1 "BK Head", serif; padding: 24px 40px; border: 0; cursor: pointer; }
-#test { position: absolute; left: 10px; top: 10px; z-index: 98; background: rgba(0,0,0,.75); padding: 8px; display: none; font: 16px sans-serif; color: #fff; }
-#test input { width: 90px; }
 @media (prefers-reduced-motion: reduce) { .disc .lab, .disc .grv { animation: none; } }
 </style>
 </head>
@@ -175,12 +172,11 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
   </div></div>
 
   <button id="tap" type="button">Click to turn the sound on</button>
-  <div id="test">Test request: album <input id="tn" value="103"> song <input id="ti" value="2"> name <input id="tw" value="Kate"> message <input id="tm" value="This one's for Grandma!" style="width:200px"> <button id="tgo" type="button">Send</button></div>
   <audio id="au" preload="auto"></audio>
 
 <script src="config.js?v=20261110st"></script>
 <script src="art/jukebox/catalog.js?v=2"></script>
-<script src="art/jukebox/jukebox-net.js?v=2"></script>
+<script src="art/jukebox/jukebox-net.js?v=3"></script>
 <script>
 (function () {
   "use strict";
@@ -403,7 +399,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
     hello: function () { share(); }
   }, {}, function (ch) { dj = ch; share(); });
 
-  /* ---------- slow browsing between requests, test box ---------- */
+  /* ---------- slow browsing between requests ---------- */
   var lastTurn = Date.now();
   setInterval(function () {
     if (turning || popping) return;
@@ -411,12 +407,6 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
     if (now) { var p = spreadOf(now.n, now.i); if (p !== cur && Date.now() - lastTurn > 20000) { goTo(p); lastTurn = Date.now(); } return; }
     if (Date.now() - lastTurn > 6500) { browse(); lastTurn = Date.now(); }
   }, 1000);
-  if (Q.get("test") === "1") {
-    $("test").style.display = "block";
-    $("tgo").onclick = function () {
-      request({ id: J.uid(), cid: "test-" + J.uid(), n: +$("tn").value, i: +$("ti").value - 1, name: $("tw").value, msg: $("tm").value }, "web");
-    };
-  }
   paint(); pump();
   window.BKJ_STATE = function () { return { S: S, queue: queue, now: now, cur: cur }; };   // for checking things from the console
 })();

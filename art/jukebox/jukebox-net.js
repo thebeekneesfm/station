@@ -55,10 +55,10 @@
   }
   function code(n, i) { return n + "-" + ("0" + (i + 1)).slice(-2); }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
-  /* names shown on stream: short, plain letters, no links */
+  /* names shown on stream are Twitch usernames: letters, numbers and underscores, 25 at most (an @ in front is dropped) */
   function cleanName(s) {
-    s = String(s || "").replace(/https?:\/\/\S+/gi, "").replace(/[<>{}\[\]\\]/g, "").replace(/\s+/g, " ").trim();
-    return s.slice(0, 24) || "a listener";
+    s = String(s || "").trim().replace(/^@+/, "").replace(/[^A-Za-z0-9_]/g, "");
+    return s.slice(0, 25) || "a listener";
   }
   /* a short message to go with a request: plain words only, no links, 80 letters at most */
   function cleanMsg(s) {

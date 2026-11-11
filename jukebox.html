@@ -90,12 +90,12 @@
 
   <main class="paper">
     <h1>The Jukebox</h1>
-    <p class="lede">Pick a song from the jukebox and hear it played live on Twitch, with your name on screen.</p>
+    <p class="lede">Pick a song from the jukebox and hear it played live on Twitch, with your Twitch username on screen.</p>
     <div class="sign closed" id="sign" aria-live="polite"><b>Checking the jukebox…</b></div>
     <div class="playing" id="playing" hidden></div>
 
     <div class="tools">
-      <label for="name">Your name, as it'll show on stream<input id="name" maxlength="24" autocomplete="nickname" placeholder="Marge"></label>
+      <label for="name">Your Twitch username<input id="name" maxlength="26" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="your_twitch_name"></label>
       <label for="msg" class="wide">A message to show with your song (if you like)<input id="msg" maxlength="80" placeholder="This one's for Grandma!"></label>
       <label for="q">Find a song<input id="q" type="search" placeholder="Song, album or artist"></label>
     </div>
@@ -109,7 +109,7 @@
 
 <script src="config.js?v=20261110st"></script>
 <script src="art/jukebox/catalog.js?v=2"></script>
-<script src="art/jukebox/jukebox-net.js?v=2"></script>
+<script src="art/jukebox/jukebox-net.js?v=3"></script>
 <script>
 (function () {
   "use strict";
@@ -154,8 +154,8 @@
   /* requests */
   document.addEventListener("click", function (e) {
     var b = e.target.closest(".req"); if (!b || b.disabled) return;
-    var name = $("name").value.trim();
-    if (!name) { toast("Type your name at the top first, so the jukebox knows who it's for.", true); $("dlg").close(); $("name").focus(); return; }
+    var name = $("name").value.trim().replace(/^@+/, "");
+    if (!/^[A-Za-z0-9_]{3,25}$/.test(name)) { toast(name ? "That doesn't look like a Twitch username. They're letters, numbers and underscores only." : "Type your Twitch username at the top first, so the jukebox knows who it's for.", true); $("dlg").close(); $("name").focus(); return; }
     if (!open()) return toast("The jukebox isn't taking requests right now.", true);
     var id = J.uid(); pending[id] = true; b.disabled = true; b.textContent = "Sending…";
     J.send(ch, "request", { id: id, cid: cid, n: +b.dataset.n, i: +b.dataset.i, name: name, msg: $("msg").value.trim() });
