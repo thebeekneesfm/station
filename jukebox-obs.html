@@ -176,7 +176,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
 
 <script src="config.js?v=20261110st"></script>
 <script src="art/jukebox/catalog.js?v=2"></script>
-<script src="art/jukebox/jukebox-net.js?v=3"></script>
+<script src="art/jukebox/jukebox-net.js?v=4"></script>
 <script>
 (function () {
   "use strict";
@@ -350,6 +350,8 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
     var reply = function (ok, msg, pos) { J.send(pub, "ack", { id: m.id, cid: m.cid, ok: ok, msg: msg, pos: pos }); };
     if (!S.accepting && from !== "dj") return reply(false, "The jukebox isn't taking requests right now.");
     var f = J.find(m.n, m.i); if (!f) return reply(false, "That song isn't on the jukebox.");
+    if (from !== "dj" && J.rude(m.name)) return reply(false, "That username can't go on screen. Try another one.");
+    if (J.rude(m.msg)) m.msg = "";   // the song still goes in; the message doesn't
     if (from !== "dj") {
       if (queue.some(function (r) { return r.cid && r.cid === m.cid; })) return reply(false, "You already have a song waiting. Once it plays, you can pick another.");
       if (queue.length >= MAXQ) return reply(false, "The line is full. Try again in a few minutes.");

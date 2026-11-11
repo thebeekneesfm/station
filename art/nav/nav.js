@@ -27,7 +27,7 @@
 (function () {
   "use strict";
   var MENU = [
-    { label: "Listen", items: [["The Radio", "index.html"], ["Record Shelf", "records.html"]] },
+    { label: "Listen", items: [["The Radio", "index.html"], ["Record Shelf", "records.html"], ["The Jukebox", "jukebox.html"]] },
     { label: "Watch", items: [["TV", "tv.html"], ["Drive-In", "drive-in.html"], ["YouTube", "youtube.html"]] },
     { label: "Read", items: [["Comics", "comics.html"], ["Magazines", "magazines.html"], ["Vintage Ads", "ads.html"], ["The Gallery", "gallery.html"]] },
     { label: "Play", items: [["Daily Puzzle", "puzzles.html"], ["Send a Card", "postcard.html"]] },

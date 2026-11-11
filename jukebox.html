@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <!-- not on the menu or in search engines yet: remove this line when the jukebox launches -->
-<meta name="robots" content="noindex">
 <title>The Jukebox · The Bee's Knees.fm</title>
 <meta name="description" content="Pick a song from The Bee's Knees jukebox and hear it played live on Twitch.">
 <link rel="icon" href="art/favicon.png?v=3" type="image/png">
@@ -109,7 +108,7 @@
 
 <script src="config.js?v=20261110st"></script>
 <script src="art/jukebox/catalog.js?v=2"></script>
-<script src="art/jukebox/jukebox-net.js?v=3"></script>
+<script src="art/jukebox/jukebox-net.js?v=4"></script>
 <script>
 (function () {
   "use strict";
@@ -156,6 +155,8 @@
     var b = e.target.closest(".req"); if (!b || b.disabled) return;
     var name = $("name").value.trim().replace(/^@+/, "");
     if (!/^[A-Za-z0-9_]{3,25}$/.test(name)) { toast(name ? "That doesn't look like a Twitch username. They're letters, numbers and underscores only." : "Type your Twitch username at the top first, so the jukebox knows who it's for.", true); $("dlg").close(); $("name").focus(); return; }
+    if (J.rude(name)) { toast("That username can't go on screen. Try another one.", true); return; }
+    if (J.rude($("msg").value)) { toast("Please keep your message friendly. It shows up on the stream.", true); return; }
     if (!open()) return toast("The jukebox isn't taking requests right now.", true);
     var id = J.uid(); pending[id] = true; b.disabled = true; b.textContent = "Sending…";
     J.send(ch, "request", { id: id, cid: cid, n: +b.dataset.n, i: +b.dataset.i, name: name, msg: $("msg").value.trim() });
@@ -211,6 +212,6 @@
   setTimeout(function () { if (!booth) paint(); }, 3000);
 })();
 </script>
-<script src="art/nav/nav.js?v=9"></script>
+<script src="art/nav/nav.js?v=10"></script>
 </body>
 </html>

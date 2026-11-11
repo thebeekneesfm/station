@@ -85,7 +85,13 @@
     }
     var title = a.querySelector(".bkw-t"), sub = a.querySelector(".bkw-s");
     a.classList.toggle("live", !!live);
-    if (live) {
+    var juke = live && /jukebox/i.test(live.title);
+    a.href = juke ? "jukebox.html" : TWITCH; if (juke) a.removeAttribute("target"); else a.target = "_blank";
+    if (juke) {
+      title.textContent = "Jukebox Night is live";
+      sub.textContent = "Pick a song and hear it on Twitch";
+      a.setAttribute("aria-label", "Jukebox Night is live: pick a song and hear it played on Twitch.");
+    } else if (live) {
       title.textContent = "Live now on Twitch";
       sub.textContent = live.title + ": come watch together";
       a.setAttribute("aria-label", "Live now on Twitch: " + live.title + ". Opens Twitch.");

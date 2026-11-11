@@ -225,7 +225,7 @@
 <script src="config.js?v=20261110st"></script>
 <script src="stations.js?v=20261107dr"></script>
 <script src="art/screen/tv-data.js?v=27"></script>
-<script src="obs-schedule.js?v=10"></script>
+<script src="obs-schedule.js?v=20261111j"></script>
 <script src="ads.js?v=20261102b"></script>
 <script src="art/rack/rack.js?v=6"></script>
 <script src="obs-magazines.js?v=1"></script>
@@ -724,6 +724,7 @@
   function followSchedule(first) {
     var n = blockNow(); if (n.key === lastBlock) return;
     lastBlock = n.key;
+    if (/^jukebox/i.test(n.b.play || "")) return;   // Jukebox Night runs in its own OBS scene
     var x = target(n.b.play); if (!x) return;
     votes = null; lastChange = Date.now();
     if (keyOf(x) !== keyOf(current())) setMode(x);

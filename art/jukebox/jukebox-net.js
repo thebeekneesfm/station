@@ -65,11 +65,30 @@
     s = String(s || "").replace(/https?:\/\/\S+|www\.\S+|\S+\.(com|net|org|tv|gg|ly|io|me|co)\b\S*/gi, "").replace(/[<>{}\[\]\\]/g, "").replace(/\s+/g, " ").trim();
     return s.slice(0, 80);
   }
+  /* a word filter for names and messages, since on Jukebox Night requests go on screen without anyone checking
+     first. Letters made of numbers or symbols (n1gg, $hit) and doubled letters are read as plain letters.
+     IN: anywhere inside (also catches words run together, as usernames often are). WORD: only as a whole word,
+     because they hide inside ordinary words (grape, raccoon, cocktail, spicy, Dickens, pussycat). */
+  var IN = ["nigg", "niga", "nigr", "faggot", "fagot", "kike", "chink", "retard", "tranny", "wetback", "beaner", "fuck", "shit", "cunt",
+            "whore", "slut", "nazi", "hitler", "kkk", "siegheil", "whitepower", "killyourself", "bitch", "bastard", "motherf"];
+  var WORD = ["fag", "fags", "coon", "coons", "gook", "gooks", "spic", "spics", "jap", "japs", "dyke", "cock", "dick", "pussy", "rape", "raped",
+              "heil", "homo", "porn", "cum", "tits", "ass", "asshole", "kys"];
+  function plain(s) {
+    return String(s || "").toLowerCase().replace(/[0@4]/g, function (c) { return c === "0" ? "o" : "a"; }).replace(/1|!|\|/g, "i")
+      .replace(/3/g, "e").replace(/[5$]/g, "s").replace(/7/g, "t");
+  }
+  function once(s) { return s.replace(/(.)\1+/g, "$1"); }   // "shiiit" -> "shit"
+  function rude(s) {
+    var p = plain(s), joined = p.replace(/[^a-z]/g, ""), j1 = once(joined);
+    // a word as written, or with its doubled letters squeezed (only for longer words, so "kkk" doesn't become "k")
+    if (IN.some(function (w) { return joined.indexOf(w) >= 0 || (once(w).length >= 4 && j1.indexOf(once(w)) >= 0); })) return true;
+    return p.split(/[^a-z]+/).some(function (w) { return w && WORD.some(function (x) { return w === x || once(w) === x; }); });
+  }
   function uid() { return Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4); }
   function fileUrl(album, song) {
     return "https://archive.org/download/" + album.item + "/" + song.f.split("/").map(encodeURIComponent).join("/");
   }
   function time(sec) { sec = Math.max(0, Math.round(sec || 0)); return Math.floor(sec / 60) + ":" + ("0" + sec % 60).slice(-2); }
 
-  window.BKJ = { join: join, send: send, albums: albums, find: find, code: code, esc: esc, cleanName: cleanName, cleanMsg: cleanMsg, uid: uid, fileUrl: fileUrl, time: time, today: today };
+  window.BKJ = { join: join, send: send, albums: albums, find: find, code: code, esc: esc, cleanName: cleanName, cleanMsg: cleanMsg, rude: rude, uid: uid, fileUrl: fileUrl, time: time, today: today };
 })();

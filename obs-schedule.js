@@ -5,7 +5,7 @@
    Times are Pacific, 24-hour ("19:30" is 7:30 PM). Days: sun mon tue wed thu fri sat.
    dates (optional): a single day "12-24", or a range { from: "12-01", to: "12-26" } (month-day).
    A block with dates wins over the everyday weekly blocks, so holidays take over for their days.
-   play: "radio chills", "radio gramophone", "radio laughs" ...   "tv kids", "tv christmas" ...   "drive-in"
+   play: "radio chills", "radio gramophone", "radio laughs" ...   "tv kids", "tv christmas" ...   "drive-in"   "jukebox"
    title: what shows on screen when the block begins.
    To change it, edit the lines below (keep the commas and quote marks), save, and refresh the source in OBS. */
 window.STREAM_SCHEDULE = {
@@ -35,6 +35,9 @@ window.STREAM_SCHEDULE = {
     { days: ["tue"], from: "19:00", to: "21:00", play: "tv newsreels",   title: "Oddities Night" },
     { days: ["wed"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack" },
     { days: ["thu"], from: "19:00", to: "21:00", play: "radio chills",   title: "Radio Night" },
+    // Friday: Jukebox Night. The jukebox is its own OBS scene (jukebox-obs.html), switched to by the scene switcher;
+    // this line puts it on the website's watch-party button, and obs.html leaves "jukebox" alone.
+    { days: ["fri"], from: "19:00", to: "22:00", play: "jukebox",        title: "Jukebox Night" },
     { days: ["sat"], from: "19:00", to: "19:30", play: "tv commercials", title: "Saturday at the Drive-In: the show starts at 7:30" },
     { days: ["sat"], from: "19:30", to: "23:00", play: "drive-in",       title: "Saturday at the Drive-In" },
     { days: ["sun"], from: "10:00", to: "13:00", play: "tv homemovies",  title: "Sunday Drive" }
