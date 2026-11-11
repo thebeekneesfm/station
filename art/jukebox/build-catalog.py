@@ -58,7 +58,8 @@ def album(rec):
     try: md = get_json(f"https://archive.org/metadata/{ident}")
     except Exception as e: return None, f"{ident}: no metadata ({e})"
     files = md.get("files", [])
-    mp3s = [f for f in files if f["name"].lower().endswith(".mp3") and not f["name"].lower().endswith("_64kb.mp3")]
+    # leave out the Archive's low-quality copies and its 30-second previews ("..._sample.mp3")
+    mp3s = [f for f in files if f["name"].lower().endswith(".mp3") and not re.search(r"(_64kb|_sample)\.mp3$", f["name"].lower())]
     songs = []
     # many "lp_" albums also come split into one file per song ("disc1/01.02. Title.mp3"): best of all, use those
     split = [f for f in mp3s if re.match(r"disc\d+/\d+\.\d+\. ", f["name"]) and not re.search(r"\. Side \d", f["name"])]
@@ -96,7 +97,7 @@ def album(rec):
             d = secs(f.get("length"))
             songs.append({"t": clean(f["title"]), "f": f["name"], "s": 0, "d": round(d, 1) if d else None})
         if len(songs) > 30: return None, f"{ident}: {len(songs)} files, looks like more than one album"
-    songs = [x for x in songs if x["t"] not in SKIP]
+    songs = [x for x in songs if x["t"] not in SKIP and not re.search(r"_sample$", x["t"] or "")]
     if not songs: return None, f"{ident}: no songs"
     # songs longer than 8 minutes (whole sides, long medleys, "entire album" tracks) stay off: one request shouldn't take over the night
     songs = [x for x in songs if not (x["d"] and x["d"] > MAXLEN) and "entire album" not in (x["t"] or "").lower()]
