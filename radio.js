@@ -2046,7 +2046,8 @@
     [/\bInstagram\b/g, "https://www.instagram.com/thebeesknees.fm/"],
     [/\bTikTok\b/g, "https://www.tiktok.com/@thebeeskneesfm"],
     [/\bYouTube\b/g, "https://www.youtube.com/@thebeeskneesfm"],
-    [/\bBluesky\b/g, "https://bsky.app/profile/thebeeskneesfm.bsky.social"]
+    [/\bBluesky\b/g, "https://bsky.app/profile/thebeeskneesfm.bsky.social"],
+    [/\bTwitch\b/g, "https://www.twitch.tv/thebeeskneesfm"]
   ];
   function tickLinks(msg) {
     let h = String(msg).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
