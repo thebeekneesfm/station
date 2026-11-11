@@ -49,6 +49,7 @@ SKIP = {
 }
 
 
+MAXLEN = 8 * 60   # seconds
 UNNAMED = re.compile(r"^\s*$|^\s*(untitled|track\s*\d+)\b", re.I)
 
 
@@ -97,6 +98,9 @@ def album(rec):
         if len(songs) > 30: return None, f"{ident}: {len(songs)} files, looks like more than one album"
     songs = [x for x in songs if x["t"] not in SKIP]
     if not songs: return None, f"{ident}: no songs"
+    # songs longer than 8 minutes (whole sides, long medleys, "entire album" tracks) stay off: one request shouldn't take over the night
+    songs = [x for x in songs if not (x["d"] and x["d"] > MAXLEN) and "entire album" not in (x["t"] or "").lower()]
+    if not songs: return None, f"{ident}: every song is over 8 minutes"
     # an album with songs that have no real name ("Untitled", "Track 29") stays off the jukebox entirely
     if any(UNNAMED.match(x["t"] or "") for x in songs): return None, f"{ident}: has untitled songs"
     return {"item": ident, "title": rec["title"], "artist": rec["artist"], "year": rec.get("year", ""),
