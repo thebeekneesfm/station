@@ -49,6 +49,9 @@ SKIP = {
 }
 
 
+UNNAMED = re.compile(r"^\s*$|^\s*(untitled|track\s*\d+)\b", re.I)
+
+
 def album(rec):
     ident = rec["item"].rstrip("/").split("/")[-1]
     try: md = get_json(f"https://archive.org/metadata/{ident}")
@@ -94,6 +97,8 @@ def album(rec):
         if len(songs) > 30: return None, f"{ident}: {len(songs)} files, looks like more than one album"
     songs = [x for x in songs if x["t"] not in SKIP]
     if not songs: return None, f"{ident}: no songs"
+    # an album with songs that have no real name ("Untitled", "Track 29") stays off the jukebox entirely
+    if any(UNNAMED.match(x["t"] or "") for x in songs): return None, f"{ident}: has untitled songs"
     return {"item": ident, "title": rec["title"], "artist": rec["artist"], "year": rec.get("year", ""),
             "cover": rec["cover"], "added": rec.get("added"), "songs": songs}, None
 
@@ -105,7 +110,7 @@ def main():
     old = {}
     if os.path.exists(OUT):   # keep the numbers albums already have
         txt = open(OUT).read()
-        try: old = {a["item"]: a["n"] for a in json.loads(txt[txt.index("["):txt.rindex("]") + 1])}
+        try: old = {a["item"]: a["n"] for a in json.loads(txt[txt.index("window.JUKEBOX = ") + 17:txt.rindex("]") + 1])}
         except Exception: pass
     with ThreadPoolExecutor(8) as ex: results = list(ex.map(album, recs))
     albums, skipped = [], []

@@ -60,11 +60,16 @@
     s = String(s || "").replace(/https?:\/\/\S+/gi, "").replace(/[<>{}\[\]\\]/g, "").replace(/\s+/g, " ").trim();
     return s.slice(0, 24) || "a listener";
   }
+  /* a short message to go with a request: plain words only, no links, 80 letters at most */
+  function cleanMsg(s) {
+    s = String(s || "").replace(/https?:\/\/\S+|www\.\S+|\S+\.(com|net|org|tv|gg|ly|io|me|co)\b\S*/gi, "").replace(/[<>{}\[\]\\]/g, "").replace(/\s+/g, " ").trim();
+    return s.slice(0, 80);
+  }
   function uid() { return Math.random().toString(36).slice(2, 10) + Date.now().toString(36).slice(-4); }
   function fileUrl(album, song) {
     return "https://archive.org/download/" + album.item + "/" + song.f.split("/").map(encodeURIComponent).join("/");
   }
   function time(sec) { sec = Math.max(0, Math.round(sec || 0)); return Math.floor(sec / 60) + ":" + ("0" + sec % 60).slice(-2); }
 
-  window.BKJ = { join: join, send: send, albums: albums, find: find, code: code, esc: esc, cleanName: cleanName, uid: uid, fileUrl: fileUrl, time: time, today: today };
+  window.BKJ = { join: join, send: send, albums: albums, find: find, code: code, esc: esc, cleanName: cleanName, cleanMsg: cleanMsg, uid: uid, fileUrl: fileUrl, time: time, today: today };
 })();

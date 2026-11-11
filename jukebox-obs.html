@@ -19,13 +19,14 @@
      albums, the shelf along the bottom, and Now playing on the right. When a request goes in line, its album pops
      up in the middle with the record spinning. -->
 <link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
+<script src="art/backgrounds/backgrounds.js?v=20261101g3"></script>
 <style>
 :root { --paper: #e9e1c9; --ink: #1f1b17; --ink2: #4a4036; --dim: #6b5f50; --red: #c8321f; --honey: #e3a92f; }
 * { box-sizing: border-box; margin: 0; }
 [hidden] { display: none !important; }
 html, body { width: 1920px; height: 1080px; overflow: hidden; }
 body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, serif;
-  background: linear-gradient(rgba(20,15,10,.25), rgba(20,15,10,.25)), url("art/wallpaper.jpg") 0 0 / 700px repeat, #3f5a46; }
+  background: linear-gradient(var(--wall-shade, rgba(20,15,10,.25)), var(--wall-shade, rgba(20,15,10,.25))), var(--wall-img, url("art/wallpaper.jpg")) 0 0 / var(--wall-size, 700px) repeat, #3f5a46; }
 .paper { background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); box-shadow: 0 3px 0 rgba(0,0,0,.28), 0 14px 30px rgba(0,0,0,.3); }
 
 /* masthead */
@@ -86,8 +87,10 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
 .np .al { margin-top: 4px; font-size: 21px; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .tag { display: inline-block; margin-top: 16px; background: var(--red); color: #fff6e6; font-size: 28px; padding: 8px 18px 10px; transform: rotate(-1.5deg); box-shadow: 0 3px 0 rgba(0,0,0,.25); white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
 .tag.plain { background: var(--ink); }
+.np .msg { display: block; margin-top: 12px; font: italic 23px/1.3 "BK Serif", serif; color: var(--ink2); quotes: none; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.np .msg[hidden] { display: none; }
 .bar { margin-top: 20px; height: 7px; background: #cdbf9f; } .bar i { display: block; height: 100%; width: 0; background: var(--red); }
-.np .nx { margin-top: 22px; border-top: 2px solid var(--ink); padding-top: 10px; }
+.np .nx { margin-top: 18px; border-top: 2px solid var(--ink); padding-top: 10px; }
 .np .nx .lb { font-size: 22px; }
 .np .nx div.q { font-size: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 6px; }
 .np .nx div.q b { color: var(--red); font-family: "DejaVu Sans Condensed", "Arial Narrow", sans-serif; font-size: 19px; margin-right: 12px; }
@@ -132,6 +135,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
 .pcard .cap > div { margin-top: 14px; }
 .pcard .cap .tag { font-size: 34px; margin: 0; }
 .pcard .cap h4 { font: 400 52px/1 "BK Head", serif; text-shadow: 0 3px 10px #000a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pcard .cap q { display: block; margin-top: 14px; font: italic 36px/1.2 "BK Serif", serif; color: #fff6e6; quotes: none; }
 .pcard .cap span { display: block; margin-top: 6px; font-size: 28px; font-style: italic; color: #e7d8b5; }
 
 /* sound-off notice: only shows when a normal browser blocks sound until a click (OBS never does) */
@@ -157,6 +161,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
     <div class="art idle" id="art"><div class="disc"><div class="grv"></div><div class="lab"><img id="lab" alt=""></div><div class="gl"></div></div><img class="cv" id="cov" src="art/logo-mark.png" alt=""></div>
     <h3 id="t">Make your selection</h3><div class="who" id="a"></div><div class="al" id="al"></div>
     <div class="tag plain" id="req" hidden></div>
+    <q class="msg" id="msg" hidden></q>
     <div class="bar"><i id="bar"></i></div>
     <div class="nx"><div class="lb">Up next</div><div id="queue"></div></div>
   </section>
@@ -166,16 +171,16 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
   <div class="pop" id="pop"><div class="pcard">
     <div class="disc"><div class="grv"></div><div class="lab"><img id="plab" alt=""></div><div class="gl"></div></div>
     <img class="cv" id="pcov" alt="">
-    <div class="cap"><div class="tag" id="ptag"></div><div><h4 id="pt"></h4><span id="pa"></span></div></div>
+    <div class="cap"><div class="tag" id="ptag"></div><div><h4 id="pt"></h4><span id="pa"></span><q id="pm" hidden></q></div></div>
   </div></div>
 
   <button id="tap" type="button">Click to turn the sound on</button>
-  <div id="test">Test request: album <input id="tn" value="103"> song <input id="ti" value="2"> name <input id="tw" value="Kate"> <button id="tgo" type="button">Send</button></div>
+  <div id="test">Test request: album <input id="tn" value="103"> song <input id="ti" value="2"> name <input id="tw" value="Kate"> message <input id="tm" value="This one's for Grandma!" style="width:200px"> <button id="tgo" type="button">Send</button></div>
   <audio id="au" preload="auto"></audio>
 
 <script src="config.js?v=20261110st"></script>
 <script src="art/jukebox/catalog.js?v=1"></script>
-<script src="art/jukebox/jukebox-net.js?v=1"></script>
+<script src="art/jukebox/jukebox-net.js?v=2"></script>
 <script>
 (function () {
   "use strict";
@@ -272,11 +277,12 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
           $("al").textContent = f.album.title + (f.album.year ? ", " + f.album.year : "") + "  ·  " + J.code(now.n, now.i);
           var r = $("req"); r.hidden = false; r.className = now.name ? "tag" : "tag plain";
           r.innerHTML = now.name ? "Requested by <b>" + J.esc(now.name) + "</b>" : "The jukebox's pick";
+          $("msg").textContent = now.msg ? "\u201C" + now.msg + "\u201D" : ""; $("msg").hidden = !now.msg;
           art.className = "art out";
         } else {
           $("cov").src = "art/logo-mark.png"; $("lab").removeAttribute("src");
           $("t").textContent = S.accepting ? "Make your selection" : "Requests are closed";
-          $("a").textContent = S.accepting ? "Pick a song at thebeesknees.fm/jukebox" : ""; $("al").textContent = ""; $("req").hidden = true;
+          $("a").textContent = S.accepting ? "Pick a song at thebeesknees.fm/jukebox" : ""; $("al").textContent = ""; $("req").hidden = true; $("msg").hidden = true;
           art.className = "art idle";
         }
       }, now ? 600 : 0);
@@ -297,7 +303,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
     var r = pops.shift(), f = J.find(r.n, r.i); if (!f) return nextPop();
     popping = true;
     $("pcov").src = f.album.cover; $("plab").src = f.album.cover;
-    $("pt").textContent = J.code(r.n, r.i) + "  " + f.song.t; $("pa").textContent = f.album.artist;
+    $("pt").textContent = J.code(r.n, r.i) + "  " + f.song.t; $("pa").textContent = f.album.artist; $("pm").textContent = r.msg ? "\u201C" + r.msg + "\u201D" : ""; $("pm").hidden = !r.msg;
     $("ptag").innerHTML = "Requested by <b>" + J.esc(r.name) + "</b>";
     var p = $("pop"); p.className = "pop"; p.offsetWidth; p.className = "pop on";
     setTimeout(function () {
@@ -311,7 +317,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
   function play(r) {
     var f = J.find(r.n, r.i);
     if (!f) { now = null; return pump(); }
-    now = { id: r.id, n: r.n, i: r.i, name: r.name, started: Date.now() };
+    now = { id: r.id, n: r.n, i: r.i, name: r.name, msg: r.msg || "", started: Date.now() };
     paint(); share();
     if (!popping) goTo(spreadOf(r.n, r.i), function () { lastTurn = Date.now(); });
     var url = J.fileUrl(f.album, f.song), s = f.song.s || 0;
@@ -353,7 +359,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
       if (queue.length >= MAXQ) return reply(false, "The line is full. Try again in a few minutes.");
       if (queue.some(function (r) { return r.n === +m.n && r.i === +m.i; }) || (now && now.n === +m.n && now.i === +m.i)) return reply(false, "Someone already asked for that one. It's coming up!");
     }
-    var r = { id: m.id || J.uid(), n: +m.n, i: +m.i, name: from === "dj" ? (m.name || "") : J.cleanName(m.name), cid: m.cid || "", ok: from === "dj" || S.auto };
+    var r = { id: m.id || J.uid(), n: +m.n, i: +m.i, name: from === "dj" ? (m.name || "") : J.cleanName(m.name), msg: J.cleanMsg(m.msg), cid: m.cid || "", ok: from === "dj" || S.auto };
     queue.push(r); save();
     reply(true, r.ok ? "You're in line!" : "Sent! The DJ will put it on soon.", queue.filter(function (x) { return x.ok; }).indexOf(r) + 1);
     if (r.ok) popup(r);
@@ -408,7 +414,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
   if (Q.get("test") === "1") {
     $("test").style.display = "block";
     $("tgo").onclick = function () {
-      request({ id: J.uid(), cid: "test-" + J.uid(), n: +$("tn").value, i: +$("ti").value - 1, name: $("tw").value }, "web");
+      request({ id: J.uid(), cid: "test-" + J.uid(), n: +$("tn").value, i: +$("ti").value - 1, name: $("tw").value, msg: $("tm").value }, "web");
     };
   }
   paint(); pump();

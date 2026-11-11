@@ -30,6 +30,7 @@
   .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; padding: 7px 0; border-top: 1px solid var(--line); }
   .row:first-child { border-top: 0; }
   .row .who { color: var(--honey); font-size: 13px; }
+  .row .msg { font-style: italic; font-size: 13.5px; color: var(--ink); margin-top: 2px; }
   .row .code { font-family: ui-monospace, Menlo, Consolas, monospace; color: var(--dim); font-size: 13px; margin-right: 4px; }
   .btns { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
   button { font: inherit; font-size: 13.5px; font-weight: 600; border: 0; border-radius: 6px; padding: 6px 10px; cursor: pointer; background: #4a3d34; color: var(--ink); }
@@ -85,7 +86,7 @@
 
 <script src="config.js?v=20261110st"></script>
 <script src="art/jukebox/catalog.js?v=1"></script>
-<script src="art/jukebox/jukebox-net.js?v=1"></script>
+<script src="art/jukebox/jukebox-net.js?v=2"></script>
 <script>
 (function () {
   "use strict";
@@ -97,7 +98,7 @@
   function row(r, buttons) {
     var s = song(r);
     return '<div class="row"><div><span class="code">' + J.code(r.n, r.i) + "</span><b>" + J.esc(s.t) + '</b><div class="meta">' + J.esc(s.a) +
-      (r.name ? ' · <span class="who">for ' + J.esc(r.name) + "</span>" : "") + '</div></div><div class="btns">' + buttons(r) + "</div></div>";
+      (r.name ? ' · <span class="who">for ' + J.esc(r.name) + "</span>" : "") + "</div>" + (r.msg ? '<div class="msg">\u201C' + J.esc(r.msg) + "\u201D</div>" : "") + '</div><div class="btns">' + buttons(r) + "</div></div>";
   }
   function paint() {
     if (!st) return;
