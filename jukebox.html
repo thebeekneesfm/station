@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- not on the menu or in search engines yet: remove this line when the jukebox launches -->
+<meta name="robots" content="noindex">
+<title>The Jukebox · The Bee's Knees.fm</title>
+<meta name="description" content="Pick a song from The Bee's Knees jukebox and hear it played live on Twitch.">
+<link rel="icon" href="art/favicon.png?v=3" type="image/png">
+<link rel="apple-touch-icon" href="art/apple-touch-icon.png?v=3">
+<script src="art/backgrounds/backgrounds.js?v=20261101g3"></script>
+<link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
+<style>
+  /* THE JUKEBOX REQUEST PAGE: browse the jukebox's records and send a request while the jukebox is on (Twitch).
+     The music itself plays on the stream, not here. The page knows the jukebox is on because the stream screen
+     (jukebox-obs.html) announces itself; see art/jukebox/jukebox-net.js. */
+  :root { --paper: #e9e1c9; --ink: #1f1b17; --ink-2: #4a4036; --dim: #6b5f50; --red: #c8321f; --honey: #e3a92f; --green: #2f6b4f; --line: rgba(31,27,23,.22); }
+  html { background: #3f5a46; }
+  body { margin: 0; color: var(--ink); background: transparent; font: 19px/1.55 "BK Serif", Georgia, serif; }
+  body::before { content: ""; position: fixed; inset: 0; z-index: -1;
+    background: linear-gradient(var(--wall-shade, rgba(20,15,10,.22)), var(--wall-shade, rgba(20,15,10,.22))), var(--wall-img, url("art/wallpaper.jpg")) 0 0 / var(--wall-size, 700px) repeat; }
+  .wrap { max-width: 980px; margin: 0 auto; padding-block: 18px 60px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 18px; }
+  .paper { background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); box-shadow: 0 3px 0 rgba(0,0,0,.28), 0 12px 28px rgba(0,0,0,.25); }
+  .mast { padding: 16px 26px 14px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 20px; }
+  .logo { font: 700 clamp(30px, 7.5vw, 48px)/1 "BK Script", "BK Serif", Georgia, serif; color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .logo span { color: var(--red); font-size: .55em; }
+  .links { display: flex; gap: 8px 20px; flex-wrap: wrap; }
+  .back { color: var(--ink); font-size: 19px; text-underline-offset: 4px; text-decoration-thickness: 1px; white-space: nowrap; }
+  main.paper { padding: 26px clamp(16px, 4vw, 40px) 34px; min-width: 0; }
+  h1, h2 { font-family: "BK Script", "BK Serif", Georgia, serif; font-weight: 700; line-height: 1.1; margin: 0; text-wrap: balance; }
+  h1 { font-size: clamp(40px, 8vw, 54px); }
+  h2 { font-size: 28px; }
+  a { color: var(--ink); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  :focus-visible { outline: 3px solid var(--honey); outline-offset: 2px; }
+  .lede { font-size: 21px; margin: 10px 0 0; }
+  /* open / closed sign */
+  .sign { margin-top: 18px; padding: 14px 18px; border: 3px solid var(--ink); display: grid; gap: 4px; background: rgba(255,255,255,.35); }
+  .sign b { font: 400 30px/1.1 "BK Head", serif; letter-spacing: .02em; }
+  .sign.open { border-color: var(--green); } .sign.open b { color: var(--green); }
+  .sign.closed b { color: var(--red); }
+  .sign a.tw { justify-self: start; margin-top: 6px; background: var(--ink); color: #f3ead6; text-decoration: none; padding: 7px 14px; font-weight: 700; }
+  .playing { margin-top: 14px; display: grid; gap: 4px; font-size: 18px; }
+  .playing .code { font-family: "Courier New", monospace; font-weight: 700; }
+  .playing ol { margin: 4px 0 0; padding-left: 1.3em; }
+  /* name and search */
+  .tools { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 18px; }
+  .tools label { display: grid; gap: 4px; font-weight: 700; font-size: 17px; min-width: 0; }
+  .tools input { font: inherit; font-weight: 400; padding: 8px 10px; border: 2px solid var(--ink); background: #fbf6ea; border-radius: 0; min-width: 0; }
+  @media (max-width: 620px) { .tools { grid-template-columns: 1fr; } }
+  /* the albums */
+  .grid { margin-top: 22px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; }
+  .alb { all: unset; cursor: pointer; display: grid; gap: 6px; font-size: 15.5px; line-height: 1.25; }
+  .alb img { width: 100%; aspect-ratio: 1; object-fit: cover; box-shadow: 0 2px 0 rgba(0,0,0,.25), 0 6px 12px rgba(0,0,0,.18); }
+  .alb b { display: block; }
+  .alb span { color: var(--ink-2); font-style: italic; }
+  .alb .no { font-family: "Courier New", monospace; font-weight: 700; color: var(--red); }
+  .alb:focus-visible { outline: 3px solid var(--honey); outline-offset: 3px; }
+  .songs-hit { margin-top: 18px; }
+  /* one album opened */
+  dialog { border: 0; padding: 0; width: min(720px, calc(100vw - 24px)); max-height: calc(100dvh - 40px); background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); color: var(--ink); box-shadow: 0 20px 50px rgba(0,0,0,.5); }
+  dialog::backdrop { background: rgba(20,12,8,.6); }
+  .dlg { padding: 20px clamp(14px, 4vw, 28px) 24px; display: grid; gap: 14px; }
+  .dhead { display: grid; grid-template-columns: 140px 1fr auto; gap: 16px; align-items: start; }
+  .dhead img { width: 140px; height: 140px; object-fit: cover; }
+  .dhead h2 { font-size: 30px; }
+  .dhead p { margin: 4px 0 0; font-style: italic; color: var(--ink-2); }
+  .x { font: inherit; font-size: 17px; border: 2px solid var(--ink); background: transparent; padding: 4px 10px; cursor: pointer; }
+  @media (max-width: 520px) { .dhead { grid-template-columns: 90px 1fr; } .dhead img { width: 90px; height: 90px; } .x { grid-column: 1 / -1; justify-self: end; grid-row: 1; } }
+  .songs { list-style: none; margin: 0; padding: 0; }
+  .songs li { display: grid; grid-template-columns: 64px 1fr auto; gap: 10px; align-items: center; padding: 7px 0; border-top: 1px solid var(--line); }
+  .songs li:first-child { border-top: 0; }
+  .songs .code { font-family: "Courier New", monospace; font-weight: 700; color: var(--red); font-size: 16px; }
+  .songs .len { color: var(--dim); font-size: 15px; margin-left: 6px; }
+  .req { font: inherit; font-size: 16px; font-weight: 700; border: 0; background: var(--red); color: #fff; padding: 6px 12px; cursor: pointer; white-space: nowrap; }
+  .req:disabled { background: #b3a58b; cursor: default; }
+  .toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 50; max-width: min(560px, calc(100vw - 32px));
+    background: var(--ink); color: #f3ead6; padding: 12px 18px; font-size: 18px; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+  .toast.bad { background: var(--red); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="paper mast">
+    <div><a class="logo" href="index.html">The Bee's Knees<span>.fm</span></a></div>
+    <nav class="links" aria-label="Pages"><a class="back" href="index.html">Back to the radio</a> <a class="back" href="records.html">Record Shelf</a> <a class="back" href="tv.html">TV</a></nav>
+  </header>
+
+  <main class="paper">
+    <h1>The Jukebox</h1>
+    <p class="lede">Pick a song from the jukebox and hear it played live on Twitch, with your name on screen.</p>
+    <div class="sign closed" id="sign" aria-live="polite"><b>Checking the jukebox…</b></div>
+    <div class="playing" id="playing" hidden></div>
+
+    <div class="tools">
+      <label for="name">Your name, as it'll show on stream<input id="name" maxlength="24" autocomplete="nickname" placeholder="Marge"></label>
+      <label for="q">Find a song<input id="q" type="search" placeholder="Song, album or artist"></label>
+    </div>
+    <div class="songs-hit" id="hits" hidden></div>
+    <div class="grid" id="grid"></div>
+  </main>
+</div>
+
+<dialog id="dlg" aria-labelledby="dlg-title"><div class="dlg" id="dlg-body"></div></dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="config.js?v=20261110st"></script>
+<script src="art/jukebox/catalog.js?v=1"></script>
+<script src="art/jukebox/jukebox-net.js?v=1"></script>
+<script>
+(function () {
+  "use strict";
+  var J = window.BKJ, A = J.albums(), $ = function (id) { return document.getElementById(id); };
+  var TWITCH = "https://www.twitch.tv/thebeeskneesfm";
+  var ch = null, booth = false, state = null, pending = {}, mine = null;
+  var cid = ""; try { cid = localStorage.getItem("bkj-cid") || ""; if (!cid) { cid = J.uid(); localStorage.setItem("bkj-cid", cid); } } catch (e) { cid = J.uid(); }
+  try { $("name").value = localStorage.getItem("bkj-name") || ""; } catch (e) {}
+  $("name").addEventListener("change", function () { try { localStorage.setItem("bkj-name", this.value.trim()); } catch (e) {} });
+  function open() { return booth && state && state.accepting; }
+
+  /* albums */
+  $("grid").innerHTML = A.map(function (a) {
+    return '<button class="alb" type="button" data-n="' + a.n + '"><img src="' + J.esc(a.cover) + '" alt="" loading="lazy"><span class="no">' + a.n + '</span><b>' + J.esc(a.title) + '</b><span>' + J.esc(a.artist) + "</span></button>";
+  }).join("");
+  $("grid").addEventListener("click", function (e) { var b = e.target.closest(".alb"); if (b) showAlbum(+b.dataset.n); });
+  function songRow(a, i) {
+    var s = a.songs[i];
+    return '<li><span class="code">' + J.code(a.n, i) + '</span><span>' + J.esc(s.t) + (s.d ? '<span class="len">' + J.time(s.d) + "</span>" : "") +
+      '</span><button class="req" type="button" data-n="' + a.n + '" data-i="' + i + '"' + (open() ? "" : " disabled") + ">Request</button></li>";
+  }
+  function showAlbum(n) {
+    var a = A.filter(function (x) { return x.n === n; })[0]; if (!a) return;
+    $("dlg-body").innerHTML = '<div class="dhead"><img src="' + J.esc(a.cover) + '" alt=""><div><h2 id="dlg-title">' + J.esc(a.title) + '</h2><p>' + J.esc(a.artist) + (a.year ? ", " + J.esc(a.year) : "") +
+      '</p><p>Jukebox number ' + a.n + '</p></div><button class="x" type="button" id="x">Close</button></div><ol class="songs">' + a.songs.map(function (s, i) { return songRow(a, i); }).join("") + "</ol>" +
+      (open() ? "" : '<p>Requests open while the jukebox is on, live on Twitch.</p>');
+    $("dlg").showModal();
+    $("x").onclick = function () { $("dlg").close(); };
+  }
+  $("dlg").addEventListener("click", function (e) { if (e.target === this) this.close(); });
+  /* search songs across every album */
+  var ALL = []; A.forEach(function (a) { a.songs.forEach(function (s, i) { ALL.push({ a: a, i: i, hay: (s.t + " " + a.title + " " + a.artist).toLowerCase() }); }); });
+  $("q").addEventListener("input", function () {
+    var q = this.value.trim().toLowerCase();
+    if (q.length < 2) { $("hits").hidden = true; $("grid").hidden = false; return; }
+    var hits = ALL.filter(function (x) { return x.hay.indexOf(q) >= 0; }).slice(0, 60);
+    $("hits").hidden = false; $("grid").hidden = hits.length > 0;
+    $("hits").innerHTML = hits.length ? '<ol class="songs">' + hits.map(function (x) { return songRow(x.a, x.i).replace("</span><button", '<span class="len">' + J.esc(x.a.artist) + "</span></span><button"); }).join("") + "</ol>"
+      : "<p>No songs on the jukebox match that.</p>";
+  });
+
+  /* requests */
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest(".req"); if (!b || b.disabled) return;
+    var name = $("name").value.trim();
+    if (!name) { toast("Type your name at the top first, so the jukebox knows who it's for.", true); $("dlg").close(); $("name").focus(); return; }
+    if (!open()) return toast("The jukebox isn't taking requests right now.", true);
+    var id = J.uid(); pending[id] = true; b.disabled = true; b.textContent = "Sending…";
+    J.send(ch, "request", { id: id, cid: cid, n: +b.dataset.n, i: +b.dataset.i, name: name });
+    setTimeout(function () { if (pending[id]) { delete pending[id]; b.disabled = false; b.textContent = "Request"; toast("The jukebox didn't answer. Try again in a moment.", true); } }, 8000);
+    b.dataset.id = id;
+  });
+  function toast(msg, bad) {
+    var t = $("toast"); t.textContent = msg; t.className = "toast" + (bad ? " bad" : ""); t.hidden = false;
+    clearTimeout(toast.k); toast.k = setTimeout(function () { t.hidden = true; }, 6000);
+  }
+
+  /* the sign, what's playing, and turning the Request buttons on or off */
+  function paint() {
+    var s = $("sign");
+    if (open()) {
+      s.className = "sign open";
+      s.innerHTML = "<b>The jukebox is on!</b><span>Pick a song below and it plays live on Twitch" + (state.waiting ? ", after the DJ puts it on." : ".") + '</span><a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Listen on Twitch</a>';
+    } else if (booth) {
+      s.className = "sign closed";
+      s.innerHTML = "<b>Requests are closed for now</b><span>The jukebox is still playing on Twitch.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Listen on Twitch</a>';
+    } else {
+      s.className = "sign closed";
+      s.innerHTML = "<b>The jukebox is closed</b><span>It opens during Jukebox Night, live on Twitch. You can still look through the records.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Follow on Twitch</a>';
+    }
+    var p = $("playing");
+    if (booth && state && (state.now || state.queue.length)) {
+      var line = function (r) { var f = J.find(r.n, r.i); return f ? '<span class="code">' + J.code(r.n, r.i) + "</span> " + J.esc(f.song.t) + ", " + J.esc(f.album.artist) + (r.name ? " (for " + J.esc(r.name) + ")" : "") : ""; };
+      p.hidden = false;
+      p.innerHTML = (state.now ? "<div><b>Now playing:</b> " + line(state.now) + "</div>" : "") +
+        (state.queue.length ? "<div><b>Up next:</b><ol>" + state.queue.slice(0, 5).map(function (r) { return "<li>" + line(r) + "</li>"; }).join("") + "</ol></div>" : "");
+    } else p.hidden = true;
+    document.querySelectorAll(".req").forEach(function (b) { if (!b.dataset.id) b.disabled = !open(); });
+  }
+  J.join("jukebox", {
+    state: function (m) { state = m; paint(); },
+    ack: function (m) {
+      if (!pending[m.id]) return; delete pending[m.id];
+      var b = document.querySelector('.req[data-id="' + m.id + '"]');
+      if (b) { b.textContent = m.ok ? "Requested" : "Request"; b.disabled = !!m.ok; if (!m.ok) delete b.dataset.id; }
+      toast(m.ok ? (m.msg + (m.pos ? " You're number " + m.pos + " in line." : "")) : m.msg, !m.ok);
+    }
+  }, {
+    key: "web-" + cid, me: { role: "web" },   // Supabase only sends the who's-here list to pages that check in themselves
+    presence: function (ps) {
+      var was = booth; booth = false;
+      Object.keys(ps).forEach(function (k) { (ps[k] || []).forEach(function (x) { if (x.role === "booth") booth = true; }); });
+      if (booth && !was) J.send(ch, "hello", {});
+      if (!booth) state = null;
+      paint();
+    }
+  }, function (c) { ch = c; J.send(ch, "hello", {}); setTimeout(paint, 2500); });
+  setTimeout(function () { if (!booth) paint(); }, 3000);
+})();
+</script>
+<script src="art/nav/nav.js?v=9"></script>
+</body>
+</html>

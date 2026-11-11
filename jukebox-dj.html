@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Jukebox Controls · The Bee's Knees.fm</title>
+<!-- THE JUKEBOX CONTROL PANEL
+     For OBS: View > Docks > Custom Browser Docks. Name it "Jukebox" and give it this address, with the same
+     secret as the stream screen:   https://thebeesknees.fm/jukebox-dj.html?dj=YOUR-SECRET
+     It also works in any browser tab or on a phone. -->
+<style>
+  :root { --bg: #1d1714; --card: #2a221d; --line: #43372f; --ink: #f3ead6; --dim: #b9a98f; --red: #c8321f; --honey: #e3a92f; --green: #6dffc7; color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { padding: 12px max(12px, env(safe-area-inset-right, 0px)) 40px max(12px, env(safe-area-inset-left, 0px)); display: grid; gap: 12px; max-width: 640px; }
+  h1 { font-size: 17px; margin: 0; display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  .dot { font-size: 13px; font-weight: 600; padding: 3px 9px; border-radius: 99px; background: #5a2a20; color: #ffd7cc; white-space: nowrap; }
+  .dot.on { background: #1f4d3b; color: var(--green); }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); margin: 0 0 8px; display: flex; justify-content: space-between; }
+  .sw { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 0; border-top: 1px solid var(--line); }
+  .sw:first-of-type { border-top: 0; }
+  .sw small { display: block; color: var(--dim); font-size: 12.5px; }
+  .sw input { width: 22px; height: 22px; accent-color: var(--honey); flex: none; }
+  .now { display: grid; grid-template-columns: 56px 1fr auto; gap: 10px; align-items: center; }
+  .now img { width: 56px; height: 56px; object-fit: cover; }
+  .now b { display: block; }
+  .now .meta { color: var(--dim); font-size: 13px; }
+  .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; padding: 7px 0; border-top: 1px solid var(--line); }
+  .row:first-child { border-top: 0; }
+  .row .who { color: var(--honey); font-size: 13px; }
+  .row .code { font-family: ui-monospace, Menlo, Consolas, monospace; color: var(--dim); font-size: 13px; margin-right: 4px; }
+  .btns { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+  button { font: inherit; font-size: 13.5px; font-weight: 600; border: 0; border-radius: 6px; padding: 6px 10px; cursor: pointer; background: #4a3d34; color: var(--ink); }
+  button:hover { filter: brightness(1.2); }
+  button:focus-visible, input:focus-visible { outline: 2px solid var(--honey); outline-offset: 2px; }
+  button.go { background: var(--honey); color: #241a10; }
+  button.no { background: #5a2a20; color: #ffd7cc; }
+  button.big { padding: 8px 14px; }
+  .empty { color: var(--dim); font-style: italic; }
+  input[type=search] { width: 100%; font: inherit; padding: 8px 10px; border-radius: 6px; border: 1px solid var(--line); background: #15100d; color: var(--ink); }
+  .results { margin-top: 6px; max-height: 340px; overflow-y: auto; }
+  .vol { display: flex; gap: 10px; align-items: center; }
+  .vol input { flex: 1; accent-color: var(--honey); }
+  .warn { color: #ffb3a3; font-size: 13.5px; }
+  .bar { height: 4px; background: #15100d; border-radius: 2px; margin-top: 6px; grid-column: 1 / -1; overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 0; background: var(--green); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Jukebox controls <span class="dot" id="dot">Looking for the jukebox screen…</span></h1>
+  <p class="warn" id="nosecret" hidden>This address needs your secret on the end: jukebox-dj.html?dj=YOUR-SECRET (the same one as the stream screen).</p>
+
+  <section aria-labelledby="h-now">
+    <h2 id="h-now">Now playing</h2>
+    <div id="now" class="empty">Nothing playing.</div>
+  </section>
+
+  <section aria-labelledby="h-wait">
+    <h2 id="h-wait">Waiting for you <span id="wcount"></span></h2>
+    <div id="wait" class="empty">No requests waiting.</div>
+  </section>
+
+  <section aria-labelledby="h-up">
+    <h2 id="h-up">Up next <span id="ucount"></span></h2>
+    <div id="up" class="empty">Nothing lined up.</div>
+  </section>
+
+  <section aria-labelledby="h-set">
+    <h2 id="h-set">Settings</h2>
+    <label class="sw"><span>Taking requests<small>Off closes the website's request page and says "Requests are closed" on stream.</small></span><input type="checkbox" id="accepting"></label>
+    <label class="sw"><span>Play requests without asking me<small>Off: every request waits here until you approve it.</small></span><input type="checkbox" id="auto"></label>
+    <label class="sw"><span>Jukebox picks when it's quiet<small>Plays a random song when nothing's lined up.</small></span><input type="checkbox" id="fill"></label>
+    <div class="sw"><span>Volume</span><span class="vol" style="flex:1"><input type="range" id="vol" min="0" max="100" value="100" aria-label="Jukebox volume"></span></div>
+  </section>
+
+  <section aria-labelledby="h-add">
+    <h2 id="h-add">Put on a song yourself</h2>
+    <input type="search" id="q" placeholder="Search songs, albums or artists" aria-label="Search the jukebox">
+    <div class="results" id="results"></div>
+  </section>
+</div>
+
+<script src="config.js?v=20261110st"></script>
+<script src="art/jukebox/catalog.js?v=1"></script>
+<script src="art/jukebox/jukebox-net.js?v=1"></script>
+<script>
+(function () {
+  "use strict";
+  var J = window.BKJ, SECRET = (new URLSearchParams(location.search).get("dj") || "").trim();
+  var ch = null, st = null, seen = 0, $ = function (id) { return document.getElementById(id); };
+  if (!SECRET) { $("nosecret").hidden = false; return; }
+  function cmd(c) { J.send(ch, "cmd", c); }
+  function song(r) { var f = J.find(r.n, r.i); return f ? { t: f.song.t, a: f.album.artist, cover: f.album.cover, d: f.song.d } : { t: "(not on the jukebox)", a: "" }; }
+  function row(r, buttons) {
+    var s = song(r);
+    return '<div class="row"><div><span class="code">' + J.code(r.n, r.i) + "</span><b>" + J.esc(s.t) + '</b><div class="meta">' + J.esc(s.a) +
+      (r.name ? ' · <span class="who">for ' + J.esc(r.name) + "</span>" : "") + '</div></div><div class="btns">' + buttons(r) + "</div></div>";
+  }
+  function paint() {
+    if (!st) return;
+    ["accepting", "auto", "fill"].forEach(function (k) { if (document.activeElement !== $(k)) $(k).checked = !!st.s[k]; });
+    if (st.now) {
+      var s = song(st.now);
+      $("now").className = "";
+      $("now").innerHTML = '<div class="now"><img src="' + J.esc(s.cover) + '" alt=""><div><b>' + J.esc(s.t) + '</b><div class="meta">' + J.code(st.now.n, st.now.i) + " · " + J.esc(s.a) +
+        (st.now.name ? ' · <span class="who">for ' + J.esc(st.now.name) + "</span>" : "") + '</div></div><button class="no big" data-c="skip">Skip</button><div class="bar"><i id="pbar"></i></div></div>';
+    } else { $("now").className = "empty"; $("now").textContent = "Nothing playing."; }
+    var w = st.queue.filter(function (r) { return !r.ok; }), u = st.queue.filter(function (r) { return r.ok; });
+    $("wcount").textContent = w.length ? w.length : ""; $("ucount").textContent = u.length ? u.length : "";
+    $("wait").className = w.length ? "" : "empty";
+    $("wait").innerHTML = w.length ? w.map(function (r) { return row(r, function (r) {
+      return '<button class="go" data-c="approve" data-id="' + r.id + '">Approve</button><button data-c="playnow" data-id="' + r.id + '">Play now</button><button class="no" data-c="remove" data-id="' + r.id + '">Remove</button>'; }); }).join("") : "No requests waiting.";
+    $("up").className = u.length ? "" : "empty";
+    $("up").innerHTML = u.length ? u.map(function (r, k) { return row(r, function (r) {
+      return (k ? '<button data-c="up" data-id="' + r.id + '" aria-label="Move up">Up</button>' : "") + '<button data-c="playnow" data-id="' + r.id + '">Play now</button><button class="no" data-c="remove" data-id="' + r.id + '">Remove</button>'; }); }).join("") : "Nothing lined up.";
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-c]"); if (!b) return;
+    var c = { cmd: b.dataset.c }; if (b.dataset.id) c.id = b.dataset.id;
+    if (b.dataset.n) { c.n = +b.dataset.n; c.i = +b.dataset.i; c.name = ""; }
+    cmd(c); b.disabled = true; setTimeout(function () { b.disabled = false; }, 800);
+  });
+  ["accepting", "auto", "fill"].forEach(function (k) { $(k).addEventListener("change", function () { var c = { cmd: "set" }; c[k] = this.checked; cmd(c); }); });
+  $("vol").addEventListener("input", function () { cmd({ cmd: "volume", v: this.value / 100 }); });
+  // search the catalog to queue a song yourself
+  var ALL = []; J.albums().forEach(function (a) { a.songs.forEach(function (s, i) { ALL.push({ n: a.n, i: i, hay: (s.t + " " + a.title + " " + a.artist + " " + J.code(a.n, i)).toLowerCase(), t: s.t, a: a.artist }); }); });
+  $("q").addEventListener("input", function () {
+    var q = this.value.trim().toLowerCase();
+    if (q.length < 2) { $("results").innerHTML = ""; return; }
+    var hits = ALL.filter(function (x) { return x.hay.indexOf(q) >= 0; }).slice(0, 40);
+    $("results").innerHTML = hits.length ? hits.map(function (x) {
+      return '<div class="row"><div><span class="code">' + J.code(x.n, x.i) + "</span><b>" + J.esc(x.t) + '</b><div class="meta">' + J.esc(x.a) + '</div></div><div class="btns"><button class="go" data-c="add" data-n="' + x.n + '" data-i="' + x.i + '">Add</button></div></div>';
+    }).join("") : '<p class="empty">No songs match.</p>';
+  });
+  J.join("jukebox-dj-" + SECRET, {
+    dj: function (m) {
+      st = m; seen = Date.now(); paint();
+      $("dot").textContent = "Jukebox screen is on"; $("dot").className = "dot on";
+    }
+  }, {}, function (c) { ch = c; J.send(ch, "hello", {}); });
+  setInterval(function () {
+    if (ch && (!seen || Date.now() - seen > 25000)) { $("dot").textContent = "Jukebox screen isn't running"; $("dot").className = "dot"; J.send(ch, "hello", {}); }
+    var b = document.getElementById("pbar");
+    if (b && st && st.now) { var s = song(st.now), el = (st.pos || 0) - (J.find(st.now.n, st.now.i).song.s || 0) + (Date.now() - st.at) / 1000; b.style.width = Math.min(100, el / (s.d || 180) * 100) + "%"; }
+  }, 1000);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>The Jukebox (stream screen) · The Bee's Knees.fm</title>
+<!-- THE JUKEBOX STREAM SCREEN
+     An OBS Browser source, 1920 x 1080, with "Control audio via OBS" ticked so the music goes through OBS.
+       https://thebeesknees.fm/jukebox-obs.html?dj=YOUR-SECRET
+     The secret is any long made-up word; use the same one in the control panel's address (jukebox-dj.html?dj=...).
+     Without it the screen still runs and takes requests, but nothing can approve or skip them.
+     Other things to add after the secret (each starts with &):
+       &auto=1    requests play without waiting for the DJ to approve them (otherwise they wait in the control panel)
+       &fill=1    when nobody has asked for anything, the jukebox picks songs itself
+       &test=1    shows a little box for sending yourself test requests
+     While this screen is running, the website's jukebox page is open for requests; close the screen (or switch
+     "Taking requests" off in the control panel) and the website page closes.
+     The look (the drawn cabinet, tubes and panel) is all in the <style> below, so a drawn jukebox can replace it. -->
+<link rel="stylesheet" href="art/fonts/fonts.css?v=20261101s2">
+<style>
+:root {
+  --cab: #3b0d0b; --cab2: #6d1a12; --paper: #fbf6ea; --ink: #1f1b17; --faded: #5d5244;
+  --red: #c8321f; --honey: #e3a92f; --vfd: #6dffc7;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #1c0605; }
+body { font-family: "BK Serif", Georgia, serif; color: var(--paper);
+  background: radial-gradient(ellipse 80% 90% at 50% 40%, var(--cab2), var(--cab) 60%, #1c0605); }
+body::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(100deg, rgba(255,255,255,.05) 0 8%, transparent 14% 86%, rgba(255,255,255,.05) 92%); }
+.marquee { position: absolute; left: 230px; right: 230px; top: -140px; height: 244px; border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: linear-gradient(180deg, #ffd27a, #f08a2a 45%, #b8361a); border: 10px solid #e7e3dc; border-top: 0;
+  box-shadow: 0 0 60px rgba(255,150,60,.55), inset 0 -6px 0 rgba(0,0,0,.25); animation: warm 4s ease-in-out infinite; }
+@keyframes warm { 50% { box-shadow: 0 0 80px rgba(255,170,70,.75), inset 0 -6px 0 rgba(0,0,0,.25); } }
+.marquee-text { position: absolute; left: 0; right: 0; top: 8px; text-align: center; color: #3b0d0b; }
+.marquee-text b { font: 400 46px/1 "BK Head", serif; letter-spacing: .05em; }
+.marquee-text span { display: block; font-style: italic; font-weight: 700; font-size: 24px; margin-top: 2px; }
+.marquee-text.closed b::after { content: ""; }
+.tube { position: absolute; top: 120px; bottom: 300px; width: 54px; border-radius: 27px; overflow: hidden; border: 6px solid #e7e3dc;
+  background: linear-gradient(90deg, rgba(255,255,255,.25), transparent 30%, transparent 70%, rgba(0,0,0,.25)), var(--tc);
+  box-shadow: 0 0 34px var(--tc), inset 0 0 0 4px rgba(255,255,255,.35); }
+.tube.l { left: 70px; --tc: #ff4a3d; } .tube.l2 { left: 140px; --tc: #ffb22e; width: 40px; }
+.tube.r { right: 70px; --tc: #ff4a3d; } .tube.r2 { right: 140px; --tc: #ffb22e; width: 40px; }
+.tube i { position: absolute; left: 50%; bottom: -20px; border-radius: 50%; background: rgba(255,255,255,.75); animation: rise linear infinite; }
+@keyframes rise { to { transform: translateY(-720px); } }
+.frame { position: absolute; left: 230px; top: 112px; width: 1460px; height: 680px; border-radius: 18px;
+  background: linear-gradient(170deg, #fbfaf7, #a8a49c 22%, #f0ede7 46%, #8e8a82 74%, #e2ded7);
+  box-shadow: 0 18px 40px rgba(0,0,0,.6), inset 0 2px 0 rgba(255,255,255,.8); }
+.window { position: absolute; inset: 16px; border-radius: 10px; overflow: hidden; perspective: 2600px;
+  background: radial-gradient(ellipse at 50% 0%, #fff6e0 0%, #d9c9a6 70%); }
+.glass { position: absolute; inset: 16px; border-radius: 10px; pointer-events: none; z-index: 40;
+  background: linear-gradient(118deg, rgba(255,255,255,.22) 0%, rgba(255,255,255,.05) 22%, transparent 34%, transparent 64%, rgba(255,255,255,.1) 76%, transparent 84%);
+  box-shadow: inset 0 0 50px rgba(60,20,0,.45), inset 0 0 0 2px rgba(0,0,0,.25); }
+.spine { position: absolute; left: 50%; top: 0; bottom: 0; width: 18px; margin-left: -9px; z-index: 30;
+  background: linear-gradient(90deg, #8e8a82, #f4f2ee 50%, #8e8a82); box-shadow: 0 0 12px rgba(0,0,0,.4); }
+.side { position: absolute; top: 0; bottom: 0; width: 50%; padding: 18px 26px; display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
+.side.left { left: 0; } .side.right { left: 50%; }
+.leaf { position: absolute; top: 0; bottom: 0; left: 50%; width: 50%; transform-origin: 0 50%; transform-style: preserve-3d; z-index: 20;
+  transition: transform .9s cubic-bezier(.45,.05,.3,1); }
+.leaf.fast { transition-duration: .3s; transition-timing-function: cubic-bezier(.5,0,.6,1); }
+.leaf.turn { transform: rotateY(-180deg); }
+.leaf .side { left: 0; width: 100%; backface-visibility: hidden; background: radial-gradient(ellipse at 50% 0%, #fff6e0 0%, #d9c9a6 70%); }
+.leaf .back { transform: rotateY(180deg); }
+.card { position: relative; display: grid; grid-template-columns: 250px 1fr; gap: 20px; background: var(--paper); color: var(--ink);
+  padding: 10px; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,.25); min-height: 0; overflow: hidden; transition: box-shadow .3s; }
+.card.empty { background: rgba(251,246,234,.35); box-shadow: none; }
+.card img { width: 250px; height: 250px; object-fit: cover; display: block; }
+.card .no { position: absolute; left: 18px; top: 18px; background: var(--ink); color: #fff; font: 700 22px/1 "BK Serif", serif; padding: 5px 9px; }
+.card .t { min-width: 0; display: flex; flex-direction: column; }
+.card h3 { margin: 2px 0 0; font-size: 21px; line-height: 1.1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card .a { font-style: italic; font-size: 16px; color: var(--faded); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 6px; border-bottom: 2px solid var(--red); padding-bottom: 5px; }
+.card ol { list-style: none; margin: 0; padding: 0; font-size: 15.5px; line-height: 1.2; }
+.card.long ol { font-size: 13.5px; line-height: 1.15; }
+.card.longer ol { font-size: 12px; line-height: 1.1; columns: 2; column-gap: 12px; }
+.card li { display: flex; gap: 8px; white-space: nowrap; overflow: hidden; }
+.card li em { font-style: normal; font-weight: 700; color: var(--red); width: 22px; flex: none; text-align: right; }
+.card li span { overflow: hidden; text-overflow: ellipsis; }
+.card.lit { box-shadow: 0 0 0 5px var(--honey), 0 0 40px rgba(255,190,60,.9); }
+.card li.hit { background: var(--honey); font-weight: 700; }
+.card li.hit.blink { animation: blink .45s steps(2) 6; }
+@keyframes blink { 50% { background: transparent; } }
+.panel { position: absolute; left: 230px; right: 230px; top: 818px; height: 236px; border-radius: 16px; padding: 22px 28px;
+  background: linear-gradient(180deg, #f4f2ee, #b9b5ad 40%, #e4e0d9 60%, #9a968e);
+  box-shadow: 0 16px 36px rgba(0,0,0,.6), inset 0 2px 0 rgba(255,255,255,.8); display: grid; grid-template-columns: 1fr 360px; gap: 26px; }
+.vfd { position: relative; background: #06140f; border-radius: 10px; padding: 18px 28px; box-shadow: inset 0 0 22px rgba(0,0,0,.9), inset 0 0 0 3px #222;
+  color: var(--vfd); text-shadow: 0 0 8px rgba(109,255,199,.7); font-family: "Courier New", monospace; display: grid; grid-template-columns: 330px 1fr; gap: 24px; align-items: center; overflow: hidden; }
+.vfd .num { font: 700 70px/1 "Courier New", monospace; letter-spacing: .04em; text-align: center; white-space: nowrap; }
+.vfd .num small { display: block; font-size: 18px; letter-spacing: .3em; color: #3fbf8f; margin-top: 8px; }
+.vfd .info { min-width: 0; font-size: 26px; line-height: 1.35; text-transform: uppercase; }
+.vfd .info div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vfd .info .req { color: var(--honey); text-shadow: 0 0 8px rgba(227,169,47,.7); }
+.vfd .bar { position: absolute; left: 28px; right: 28px; bottom: 12px; height: 4px; background: rgba(109,255,199,.15); }
+.vfd .bar i { display: block; height: 100%; width: 0; background: var(--vfd); box-shadow: 0 0 8px var(--vfd); }
+.queue { background: var(--paper); color: var(--ink); border-radius: 6px; padding: 14px 18px; box-shadow: inset 0 0 0 2px rgba(0,0,0,.15); overflow: hidden; }
+.queue h4 { margin: 0 0 6px; font: 400 26px/1 "BK Head", serif; color: var(--red); letter-spacing: .04em; }
+.queue ol { margin: 0; padding: 0; list-style: none; font-size: 18px; line-height: 1.3; }
+.queue li { display: grid; grid-template-columns: 74px 1fr; padding: 4px 0; border-top: 1px dashed #cdbf9f; }
+.queue li b { font-family: "Courier New", monospace; }
+.queue li span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.queue li i { grid-column: 2; font-size: 15px; color: var(--faded); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.queue .none { font-style: italic; color: var(--faded); font-size: 18px; margin-top: 8px; }
+/* sound-off notice: only shows when a normal browser blocks sound until a click (OBS never does) */
+#tap { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 99; display: none; background: var(--red); color: #fff;
+  font: 400 40px/1 "BK Head", serif; padding: 24px 40px; border: 0; cursor: pointer; }
+#test { position: absolute; left: 10px; bottom: 10px; z-index: 98; background: rgba(0,0,0,.75); padding: 8px; display: none; font: 16px sans-serif; color: #fff; }
+#test input { width: 90px; }
+@media (prefers-reduced-motion: reduce) { .tube i, .marquee { animation: none; } .leaf { transition-duration: .01s; } }
+</style>
+</head>
+<body>
+  <div class="marquee"></div>
+  <div class="marquee-text" id="mq"><b>REQUEST A SONG</b><span>at thebeesknees.fm/jukebox</span></div>
+  <div class="tube l" id="t1"></div><div class="tube l2" id="t2"></div><div class="tube r2" id="t3"></div><div class="tube r" id="t4"></div>
+  <div class="frame"><div class="window" id="win">
+    <div class="side left" id="L"></div><div class="side right" id="R"></div><div class="spine"></div>
+  </div><div class="glass"></div></div>
+  <div class="panel">
+    <div class="vfd"><div class="num" id="num">---<small>SELECTION</small></div>
+      <div class="info" id="info"><div>THE BEE'S KNEES JUKEBOX</div><div>MAKE YOUR SELECTION</div></div><div class="bar"><i id="bar"></i></div></div>
+    <div class="queue"><h4>Up next</h4><ol id="queue"></ol></div>
+  </div>
+  <button id="tap" type="button">Click to turn the sound on</button>
+  <div id="test">Test request: album <input id="tn" value="103"> song <input id="ti" value="2"> name <input id="tw" value="Kate"> <button id="tgo" type="button">Send</button></div>
+  <audio id="au" preload="auto"></audio>
+
+<script src="config.js?v=20261110st"></script>
+<script src="art/jukebox/catalog.js?v=1"></script>
+<script src="art/jukebox/jukebox-net.js?v=1"></script>
+<script>
+(function () {
+  "use strict";
+  var J = window.BKJ, Q = new URLSearchParams(location.search);
+  var SECRET = (Q.get("dj") || "").trim();
+  var MAXQ = 25;
+  var A = J.albums();                                   // albums on the jukebox today, in number order
+  var S = { accepting: true, auto: Q.get("auto") === "1", fill: Q.get("fill") === "1" };
+  var queue = [];        // [{id, n, i, name, cid, ok}] ok = approved by the DJ
+  var now = null;        // {id, n, i, name, started}
+  var pub = null, dj = null;
+  var au = document.getElementById("au");
+
+  // pick up where we left off if OBS reloads the page mid-show
+  try { var saved = JSON.parse(localStorage.getItem("bkj-state") || "null"); if (saved) { queue = saved.queue || []; ["accepting", "auto", "fill"].forEach(function (k) { if (k in (saved.s || {})) S[k] = saved.s[k]; }); } } catch (e) {}
+  if (Q.has("auto")) S.auto = Q.get("auto") === "1";
+  if (Q.has("fill")) S.fill = Q.get("fill") === "1";
+  function save() { try { localStorage.setItem("bkj-state", JSON.stringify({ queue: queue, s: S })); } catch (e) {} }
+
+  /* ---------- the album book ---------- */
+  var L = document.getElementById("L"), R = document.getElementById("R"), win = document.getElementById("win");
+  var SPREADS = Math.max(1, Math.ceil(A.length / 4)), cur = 0, turning = false;
+  function card(k) {
+    var a = A[k];
+    if (!a) return '<div class="card empty"></div>';
+    var cls = a.songs.length > 18 ? " longer" : a.songs.length > 13 ? " long" : "";
+    return '<div class="card' + cls + '" data-n="' + a.n + '"><img src="' + J.esc(a.cover) + '" alt=""><div class="no">' + a.n + '</div><div class="t"><h3>' + J.esc(a.title) +
+      '</h3><div class="a">' + J.esc(a.artist) + (a.year ? ", " + J.esc(a.year) : "") + '</div><ol>' +
+      a.songs.map(function (s, i) { return '<li data-i="' + i + '"><em>' + ("0" + (i + 1)).slice(-2) + '</em><span>' + J.esc(s.t) + '</span></li>'; }).join("") + '</ol></div></div>';
+  }
+  function fill(el, s, half) { el.innerHTML = card(s * 4 + half * 2) + card(s * 4 + half * 2 + 1); }
+  fill(L, 0, 0); fill(R, 0, 1);
+  function turn(to, fast, done) {
+    var leaf = document.createElement("div");
+    leaf.className = "leaf" + (fast ? " fast" : "");
+    leaf.innerHTML = '<div class="side front"></div><div class="side back"></div>';
+    leaf.querySelector(".front").innerHTML = R.innerHTML;
+    leaf.querySelector(".back").innerHTML = card(to * 4) + card(to * 4 + 1);
+    win.appendChild(leaf); fill(R, to, 1);
+    requestAnimationFrame(function () { requestAnimationFrame(function () { leaf.classList.add("turn"); }); });
+    setTimeout(function () { fill(L, to, 0); leaf.remove(); cur = to; mark(); done && done(); }, fast ? 320 : 920);
+  }
+  // riffle to a spread: a few quick page turns, landing on the right one
+  function goTo(s, done) {
+    if (turning) return setTimeout(function () { goTo(s, done); }, 350);
+    if (s === cur) { mark(); return done && done(); }
+    turning = true;
+    var dist = (s - cur + SPREADS) % SPREADS, steps = Math.min(dist, 5), path = [];
+    for (var k = 1; k < steps; k++) path.push((cur + Math.round(dist * k / steps)) % SPREADS);
+    path.push(s);
+    (function next() { if (!path.length) { turning = false; return done && done(); } turn(path.shift(), true, next); })();
+  }
+  function browse() { if (turning) return; turning = true; turn((cur + 1) % SPREADS, false, function () { turning = false; }); }
+  // light up the playing album's card and song wherever it's showing
+  function mark(blink) {
+    win.querySelectorAll(".card.lit").forEach(function (c) { c.classList.remove("lit"); });
+    win.querySelectorAll("li.hit").forEach(function (l) { l.classList.remove("hit", "blink"); });
+    if (!now) return;
+    var c = win.querySelector('.side.left .card[data-n="' + now.n + '"], .side.right .card[data-n="' + now.n + '"]');
+    if (!c) return;
+    c.classList.add("lit");
+    var li = c.querySelector('li[data-i="' + now.i + '"]'); if (li) { li.classList.add("hit"); if (blink) li.classList.add("blink"); }
+  }
+  function spreadOf(n) { for (var k = 0; k < A.length; k++) if (A[k].n === n) return Math.floor(k / 4); return 0; }
+
+  /* ---------- display and queue card ---------- */
+  function paint() {
+    var num = document.getElementById("num"), info = document.getElementById("info");
+    if (now) {
+      var f = J.find(now.n, now.i);
+      num.innerHTML = J.code(now.n, now.i) + "<small>NOW PLAYING</small>";
+      info.innerHTML = "<div>" + J.esc(f.song.t) + "</div><div>" + J.esc(f.album.artist) + "</div><div class='req'>" + (now.name ? "REQUESTED BY " + J.esc(now.name) : "THE JUKEBOX PICKED THIS ONE") + "</div>";
+    } else {
+      num.innerHTML = "---<small>SELECTION</small>";
+      info.innerHTML = "<div>THE BEE'S KNEES JUKEBOX</div><div>" + (S.accepting ? "MAKE YOUR SELECTION" : "REQUESTS ARE CLOSED") + "</div>";
+    }
+    var up = queue.filter(function (r) { return r.ok; });
+    document.getElementById("queue").innerHTML = up.length ? up.slice(0, 3).map(function (r) {
+      var f = J.find(r.n, r.i); return "<li><b>" + J.code(r.n, r.i) + "</b><span>" + J.esc(f ? f.song.t : "") + "</span><i>for " + J.esc(r.name) + "</i></li>";
+    }).join("") : '<div class="none">' + (S.accepting ? "Nothing yet. Pick a song!" : "Requests are closed.") + "</div>";
+    var mq = document.getElementById("mq");
+    mq.innerHTML = S.accepting ? "<b>REQUEST A SONG</b><span>at thebeesknees.fm/jukebox</span>" : "<b>THE BEE'S KNEES JUKEBOX</b><span>Requests are closed for now</span>";
+  }
+
+  /* ---------- playing ---------- */
+  var stopAt = 0, playTimer = null;
+  function play(r) {
+    var f = J.find(r.n, r.i);
+    if (!f) { now = null; return pump(); }
+    now = { id: r.id, n: r.n, i: r.i, name: r.name, started: Date.now() };
+    paint(); share();
+    goTo(spreadOf(r.n), function () { mark(true); });
+    var url = J.fileUrl(f.album, f.song), s = f.song.s || 0;
+    stopAt = f.song.d ? s + f.song.d : 0;
+    au.src = url;
+    au.onloadedmetadata = function () { if (s) try { au.currentTime = s; } catch (e) {} };
+    var p = au.play(); if (p && p.catch) p.catch(function () { document.getElementById("tap").style.display = "block"; });
+  }
+  function finish() { now = null; au.pause(); au.removeAttribute("src"); try { au.load(); } catch (e) {} document.getElementById("bar").style.width = "0"; paint(); share(); setTimeout(pump, 1500); }
+  au.addEventListener("ended", finish);
+  au.addEventListener("error", function () { if (now) setTimeout(finish, 1500); });
+  au.addEventListener("timeupdate", function () {
+    if (!now) return;
+    var f = J.find(now.n, now.i); if (!f) return;
+    var s = f.song.s || 0, d = f.song.d || au.duration || 1;
+    document.getElementById("bar").style.width = Math.min(100, Math.max(0, (au.currentTime - s) / d * 100)) + "%";
+    if (stopAt && au.currentTime >= stopAt - 0.25) finish();   // songs inside a whole LP side stop where the next song begins
+  });
+  document.getElementById("tap").onclick = function () { this.style.display = "none"; au.play(); };
+  // start the next approved song (or, with "fill", one the jukebox picks)
+  function pump() {
+    if (now) return;
+    var k = queue.findIndex(function (r) { return r.ok; });
+    if (k >= 0) { var r = queue.splice(k, 1)[0]; save(); return play(r); }
+    if (S.fill && A.length) {
+      var a = A[Math.floor(Math.random() * A.length)];
+      return play({ id: J.uid(), n: a.n, i: Math.floor(Math.random() * a.songs.length), name: "" });
+    }
+    paint(); share();
+  }
+
+  /* ---------- requests ---------- */
+  function request(m, from) {
+    var reply = function (ok, msg, pos) { J.send(pub, "ack", { id: m.id, cid: m.cid, ok: ok, msg: msg, pos: pos }); };
+    if (!S.accepting && from !== "dj") return reply(false, "The jukebox isn't taking requests right now.");
+    var f = J.find(m.n, m.i); if (!f) return reply(false, "That song isn't on the jukebox.");
+    if (from !== "dj") {
+      if (queue.some(function (r) { return r.cid && r.cid === m.cid; })) return reply(false, "You already have a song waiting. Once it plays, you can pick another.");
+      if (queue.length >= MAXQ) return reply(false, "The line is full. Try again in a few minutes.");
+      if (queue.some(function (r) { return r.n === +m.n && r.i === +m.i; }) || (now && now.n === +m.n && now.i === +m.i)) return reply(false, "Someone already asked for that one. It's coming up!");
+    }
+    var r = { id: m.id || J.uid(), n: +m.n, i: +m.i, name: from === "dj" ? (m.name || "") : J.cleanName(m.name), cid: m.cid || "", ok: from === "dj" || S.auto };
+    queue.push(r); save();
+    reply(true, r.ok ? "You're in line!" : "Sent! The DJ will put it on soon.", queue.filter(function (x) { return x.ok; }).indexOf(r) + 1);
+    paint(); share(); pump();
+  }
+
+  /* ---------- talking to the website and the control panel ---------- */
+  function publicState() {
+    return { accepting: S.accepting, now: now ? { n: now.n, i: now.i, name: now.name } : null,
+      queue: queue.filter(function (r) { return r.ok; }).slice(0, 10).map(function (r) { return { n: r.n, i: r.i, name: r.name }; }),
+      waiting: queue.filter(function (r) { return !r.ok; }).length };
+  }
+  var shareTimer = null;
+  function share() {
+    clearTimeout(shareTimer);
+    shareTimer = setTimeout(function () {
+      J.send(pub, "state", publicState());
+      J.send(dj, "dj", { s: S, now: now, queue: queue, pos: au.currentTime, at: Date.now() });
+    }, 150);
+  }
+  setInterval(share, 10000);
+  J.join("jukebox", {
+    request: function (m) { request(m, "web"); },
+    hello: function () { share(); }
+  }, { key: "booth-" + J.uid(), me: { role: "booth", accepting: S.accepting } }, function (ch) { pub = ch; share(); });
+  if (SECRET) J.join("jukebox-dj-" + SECRET, {
+    cmd: function (c) {
+      var k = queue.findIndex(function (r) { return r.id === c.id; });
+      if (c.cmd === "approve" && k >= 0) { queue[k].ok = true; pump(); }
+      else if (c.cmd === "remove" && k >= 0) queue.splice(k, 1);
+      else if (c.cmd === "playnow" && k >= 0) { var r = queue.splice(k, 1)[0]; r.ok = true; queue.unshift(r); if (now) finish(); else pump(); }
+      else if (c.cmd === "up" && k > 0) { var x = queue.splice(k, 1)[0]; queue.splice(k - 1, 0, x); }
+      else if (c.cmd === "skip") { if (now) finish(); }
+      else if (c.cmd === "add") request({ n: c.n, i: c.i, name: c.name || "", id: J.uid() }, "dj");
+      else if (c.cmd === "set") { ["accepting", "auto", "fill"].forEach(function (key) { if (key in c) S[key] = !!c[key]; });
+        if (S.auto) queue.forEach(function (r) { r.ok = true; }); if (pub) pub.track({ role: "booth", accepting: S.accepting }); pump(); }
+      else if (c.cmd === "clear") queue = [];
+      else if (c.cmd === "volume") au.volume = Math.max(0, Math.min(1, +c.v));
+      save(); paint(); share();
+    },
+    hello: function () { share(); }
+  }, {}, function (ch) { dj = ch; share(); });
+
+  /* ---------- quiet browsing between requests, bubbles, test box ---------- */
+  var lastTurn = Date.now();
+  setInterval(function () {
+    if (turning) return;
+    if (now) { if (spreadOf(now.n) !== cur && Date.now() - lastTurn > 20000) { goTo(spreadOf(now.n)); lastTurn = Date.now(); } return; }
+    if (Date.now() - lastTurn > 6500) { browse(); lastTurn = Date.now(); }
+  }, 1000);
+  ["t1", "t2", "t3", "t4"].forEach(function (id) {
+    var t = document.getElementById(id);
+    for (var k = 0; k < 9; k++) { var b = document.createElement("i"), s = 6 + Math.random() * 10;
+      b.style.cssText = "width:" + s + "px;height:" + s + "px;margin-left:" + (-s / 2 + (Math.random() * 10 - 5)) + "px;animation-duration:" + (3 + Math.random() * 4) + "s;animation-delay:" + (-Math.random() * 7) + "s";
+      t.appendChild(b); }
+  });
+  if (Q.get("test") === "1") {
+    document.getElementById("test").style.display = "block";
+    document.getElementById("tgo").onclick = function () {
+      request({ id: J.uid(), cid: "test-" + J.uid(), n: +document.getElementById("tn").value, i: +document.getElementById("ti").value - 1, name: document.getElementById("tw").value }, "web");
+    };
+  }
+  paint(); pump();
+  window.BKJ_STATE = function () { return { S: S, queue: queue, now: now, cur: cur }; };   // for checking things from the console
+})();
+</script>
+</body>
+</html>
