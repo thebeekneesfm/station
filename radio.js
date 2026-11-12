@@ -180,7 +180,9 @@
       tuneGain = ctx.createGain(); tuneGain.gain.value = 0; tuneGain.connect(ctx.destination);
       loadSound("tuning"); AMB.forEach(n => { if (state.amb[n] > 0) loadSound(n); });
       // a phone call or another app can interrupt the sound: pick it back up afterwards
-      ctx.onstatechange = () => { if (state.on && ctx.state !== "running" && ctx.state !== "closed") ctx.resume().catch(() => {}); };
+      // (on iPhones only while the page is in view: waking the engine from the background makes Safari
+      // interrupt the whole page's sound, and the records stop with it)
+      ctx.onstatechange = () => { if (state.on && ctx.state !== "running" && ctx.state !== "closed" && !(APPLE_TOUCH && document.hidden)) ctx.resume().catch(() => {}); };
     } catch (e) { ctx = null; }
   }
 
@@ -600,11 +602,19 @@
   }
   function waitForNext(now) {
     if (document.hidden) return play("early");
-    audio.pause();
+    mine.pause();
     setPhase("gap");
     lostTimer = setTimeout(play, Math.max(500, now.left * 1000 + 300));
   }
   audio.addEventListener("playing", () => { audio.dataset.tries = ""; audio.dataset.failing = ""; if (state.on && state.station) { if (state.phase !== "playing" && !gate.waiting) fadeIn(); setPhase("playing"); } });
+  /* the radio's own pauses go through mine.pause(); a pause that comes from anywhere else while the radio is on
+     (Safari stopping the sound as you switch apps, a notification) starts the record again where the schedule is */
+  const mine = { at: 0, pause() { this.at = Date.now(); audio.pause(); } };
+  audio.addEventListener("pause", () => {
+    if (!state.on || !state.station || Date.now() - mine.at < 1500 || audio.ended) return;
+    trace.push(new Date().toISOString().slice(11, 19) + " paused from outside, picking up again"); if (trace.length > 30) trace.shift();
+    setTimeout(() => { if (state.on && audio.paused && Date.now() - mine.at > 1500) play("resume"); }, 400);
+  });
   audio.addEventListener("waiting", () => { if (state.phase === "playing") setPhase("next"); });
   audio.addEventListener("ended", () => {
     // finished ahead of the schedule (we skipped its run-out, or started it early): go straight to the next record
@@ -744,6 +754,9 @@
   }
 
   document.addEventListener("visibilitychange", () => {
+    // iPhone and iPad: put the sound engine (dial noise, ambience) to sleep before Safari does, so Safari
+    // has nothing to interrupt and the records (which play outside the engine) carry on in the background
+    if (APPLE_TOUCH && ctx && document.hidden && ctx.state === "running") ctx.suspend().catch(() => {});
     if (ear) {
       if (document.hidden && state.on && state.station) { earSync(true); ear.muted = false; earOn = true; if (fx.ready) fx.master.gain.value = 0; else audio.muted = true; return; }   // only one of the two is ever heard
       if (!document.hidden && earOn) { earOn = false; ear.muted = true; audio.muted = false; applyVolume(); }
@@ -773,7 +786,7 @@
     initAudio();
     if (ctx && ctx.state === "suspended") ctx.resume();
     state.on = on == null ? !state.on : on;
-    if (!state.on) { audio.pause(); if (ear) { ear.pause(); earOn = false; ear.muted = true; } clearTimeout(lostTimer); try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} state.phase = "off"; routeRoom(); applyVolume(); render(); presenceUpdate(); return; }
+    if (!state.on) { mine.pause(); if (ear) { ear.pause(); earOn = false; ear.muted = true; } clearTimeout(lostTimer); try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} state.phase = "off"; routeRoom(); applyVolume(); render(); presenceUpdate(); return; }
     retune(true);
   }
   function retune(force) {
@@ -786,7 +799,7 @@
     if (st && !pageOpen && location.hash !== "#" + st.id) { try { history.replaceState(null, "", "#" + st.id); } catch (e) {} }
     if (!state.on) { render(); return; }
     routeRoom();
-    if (!st) { audio.pause(); clearTimeout(lostTimer); setPhase("between"); return; }
+    if (!st) { mine.pause(); clearTimeout(lostTimer); setPhase("between"); return; }
     play();
   }
   function stepStation(dir) {
