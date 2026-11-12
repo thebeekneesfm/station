@@ -36,7 +36,7 @@ window.STREAM_SCHEDULE = {
     { days: ["mon"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack", quiet: true },
     { days: ["tue"], from: "19:00", to: "21:00", play: "tv newsreels",   title: "Oddities Night" },
     { days: ["wed"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack" },
-    // Thursday: Radio Night till midnight (to fall asleep to), a different station each week
+    // Thursday: Radio Night till midnight (to fall asleep to), a different old-time radio station each week
     { days: ["thu"], from: "19:00", to: "23:59", play: "radio chills",   title: "Radio Night", since: "2026-11-12", rotate: [
         { play: "radio chills",     title: "Radio Night: Chills" },
         { play: "radio noir",       title: "Radio Night: Noir" },
@@ -44,8 +44,7 @@ window.STREAM_SCHEDULE = {
         { play: "radio laughs",     title: "Radio Night: Laughs" },
         { play: "radio romance",    title: "Radio Night: Romance & Drama" },
         { play: "radio variety",    title: "Radio Night: Variety" },
-        { play: "radio outwest",    title: "Radio Night: Out West" },
-        { play: "radio gramophone", title: "Radio Night: Gramophone Radio" }
+        { play: "radio outwest",    title: "Radio Night: Out West" }
       ] },
     // Friday: Jukebox Night. The jukebox is its own OBS scene (jukebox-obs.html), switched to by the scene switcher;
     // this line puts it on the website's watch-party button, and obs.html leaves "jukebox" alone.
