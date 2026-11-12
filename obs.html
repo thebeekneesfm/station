@@ -22,6 +22,9 @@
     vote=45              seconds chat has to vote once someone asks for a station (default 45)
     look=overlay         just the small now-playing card, for putting over your own scene
     schedule=1           follow the weekly schedule in obs-schedule.js (switches by itself at each block)
+    goodbye=Goodbye      with schedule=1: when a scheduled Drive-In night's double feature ends (the "Good night"
+                         card), switch OBS to this scene, so no film gets cut off. Needs this browser source's
+                         "Page permissions" set to "Advanced access to OBS". Leave it out to switch by time instead.
     ownmusic=1           you play your own music under Home Movies: the site's radio under them is turned off,
                          and the "Music on the radio" line is left off
   Example:  thebeesknees.fm/obs.html?station=chills&twitch=thebeeskneesfm
@@ -225,7 +228,7 @@
 <script src="config.js?v=20261111jn"></script>
 <script src="stations.js?v=20261107dr"></script>
 <script src="art/screen/tv-data.js?v=27"></script>
-<script src="obs-schedule.js?v=20261112s"></script>
+<script src="obs-schedule.js?v=20261112d"></script>
 <script src="ads.js?v=20261102b"></script>
 <script src="art/rack/rack.js?v=6"></script>
 <script src="obs-magazines.js?v=1"></script>
@@ -742,7 +745,26 @@
     if (keyOf(x) !== keyOf(current())) setMode(x);
     if (n.b.title) toast((first ? "" : "Now starting: ") + "<b>" + esc(n.b.title) + "</b>", 10000);
   }
-  if (Q.get("test")) { window.bkCommand = command; window.bkBlockNow = blockNow; }   // lets a test page pretend to be chat
+  /* Drive-In nights end when the films do: the moment the night's "Good night" card comes up, the stream switches
+     OBS to the goodbye scene (goodbye=..., needs "Advanced access to OBS" in the source's Page permissions) */
+  var GOODBYE = Q.get("goodbye"), byeDone = {};
+  function goodbyeCheck(force) {
+    if (!GOODBYE || !SCHED || frame.dataset.kind !== "drivein") return null;
+    var n = blockNow(); if (!/^drive/i.test(n.b.play || "")) return null;
+    var T; try { T = frame.contentWindow.THEATER; } catch (e) {} if (!T || !T.driveAt) return null;
+    var now = Date.now(), a = T.driveAt(now); if (!a) return null;
+    // tonight's "Good night" card: started already, less than 20 minutes ago
+    var gn = a.segs.filter(function (x) { return x.slate === "goodnight" && x.startMs <= now && now - x.startMs < 20 * 60e3; })[0];
+    if (!gn) return null;
+    var k = String(gn.startMs); if (byeDone[k] && !force) return "done"; byeDone[k] = 1;
+    var O = window.obsstudio; if (!O || !O.setCurrentScene) return "no OBS access";
+    var go = function () { O.setCurrentScene(GOODBYE); };
+    // only while actually live, so a page reload after the stream has ended can't start it all again
+    if (O.getStatus) O.getStatus(function (st) { if (!st || st.streaming !== false) go(); }); else go();
+    return "switched";
+  }
+  if (GOODBYE) setInterval(goodbyeCheck, 5000);
+  if (Q.get("test")) { window.bkCommand = command; window.bkBlockNow = blockNow; window.bkGoodbye = goodbyeCheck; }   // lets a test page pretend to be chat
   if (mode === "radio") { card(); paint(); tick(); play(); }
   else if (mode === "mags") { setMode({ kind: "mags", st: find(Q.get("station")) }); }
   else { setMode(mode === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }); tick(); }

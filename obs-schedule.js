@@ -21,7 +21,7 @@ window.STREAM_SCHEDULE = {
     /* ---------- Christmas ---------- */
     // December Saturdays: Christmas at the Drive-In (the Drive-In's own Christmas double features)
     { dates: { from: "12-01", to: "12-26" }, days: ["sat"], from: "19:00", to: "19:30", play: "tv christmas", title: "Christmas at the Drive-In starts at 7:30" },
-    { dates: { from: "12-01", to: "12-26" }, days: ["sat"], from: "19:30", to: "23:00", play: "drive-in",     title: "Christmas at the Drive-In" },
+    { dates: { from: "12-01", to: "12-26" }, days: ["sat"], from: "19:30", to: "23:59", play: "drive-in",     title: "Christmas at the Drive-In" },
     // Christmas Eve: Christmas TV all afternoon, then the Drive-In's Christmas Eve double feature
     { dates: "12-24", from: "14:00", to: "19:30", play: "tv christmas", title: "Christmas Eve on Bee's Knees TV" },
     { dates: "12-24", from: "19:30", to: "23:00", play: "drive-in",     title: "Christmas Eve at the Drive-In: March of the Wooden Soldiers and Christmas Eve" },
@@ -50,7 +50,10 @@ window.STREAM_SCHEDULE = {
     // this line puts it on the website's watch-party button, and obs.html leaves "jukebox" alone.
     { days: ["fri"], from: "19:00", to: "23:59", play: "jukebox",        title: "Jukebox Night" },  // till midnight
     { days: ["sat"], from: "19:00", to: "19:30", play: "tv commercials", title: "Saturday at the Drive-In: the show starts at 7:30" },
-    { days: ["sat"], from: "19:30", to: "23:00", play: "drive-in",       title: "Saturday at the Drive-In" },
+    // the Drive-In runs until its double feature is over, which can be after 11 PM or even past midnight: the stream
+    // page switches OBS to the Goodbye scene itself when the "Good night" card comes up (see obs.html, goodbye=)
+    { days: ["sat"], from: "19:30", to: "23:59", play: "drive-in",       title: "Saturday at the Drive-In" },
+    { days: ["sun"], from: "00:00", to: "01:00", play: "drive-in",       quiet: true },   // a late second feature finishes
     { days: ["sun"], from: "10:00", to: "13:00", play: "tv homemovies",  title: "Sunday Drive" }
   ]
 };
