@@ -241,6 +241,26 @@
   var state = { cur: null, src: "", sound: BROADCAST || store.get(MODE + ".sound", false), vol: BROADCAST ? 1 : store.get(MODE + ".vol", 0.8) };
   vid.muted = true; vid.playsInline = true; vid.setAttribute("playsinline", "");
   vid.volume = state.vol;
+  /* Even volume on iPhones and iPads, the way Spelunkr does it: they ignore a page setting a video's volume,
+     so there the picture's sound runs through a volume knob in the browser's sound engine instead, which they
+     do obey. (Safari stops that engine when you leave the page, but by then the picture has stopped too and
+     the plain background player below carries the programme on.) Archive.org allows this (crossOrigin). */
+  var APPLE = /iP(hone|ad|od)/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var knob = null;
+  if (APPLE && !BROADCAST && !window.BK_LITE && (window.AudioContext || window.webkitAudioContext)) vid.crossOrigin = "anonymous";
+  function knobOn() {   // made on the first tap (Safari only starts the engine from a tap)
+    if (knob || vid.crossOrigin !== "anonymous") return;
+    try {
+      var AC = window.AudioContext || window.webkitAudioContext, ac = new AC();
+      var g = ac.createGain(); g.gain.value = 1;
+      ac.createMediaElementSource(vid).connect(g); g.connect(ac.destination);
+      knob = { ac: ac, g: g };
+      var wake = function () { if (!document.hidden && ac.state !== "running" && ac.state !== "closed") ac.resume().catch(function () {}); };
+      vid.addEventListener("play", wake); document.addEventListener("visibilitychange", wake);
+      ["pointerdown", "touchend"].forEach(function (t) { document.addEventListener(t, wake, { passive: true }); });
+      wake(); applySound();
+    } catch (e) { knob = null; }
+  }
   /* Browsers refuse to start a video with sound until the visitor has tapped the page. If that
      happens, play it muted for now and turn the sound back on at the first tap anywhere. */
   function go() {
@@ -256,7 +276,7 @@
     screen.classList.toggle("muted", !on);
   }
   ["pointerdown", "keydown", "touchend"].forEach(function (ev) {
-    document.addEventListener(ev, function (e) { if (state.sound) earUnlock(); if (state.blocked && !soundBtn.contains(e.target)) { state.blocked = false; applySound(); go(); } }, true);
+    document.addEventListener(ev, function (e) { knobOn(); if (state.sound) earUnlock(); if (state.blocked && !soundBtn.contains(e.target)) { state.blocked = false; applySound(); go(); } }, true);
   });
   /* Even volume: every video's loudness was measured ahead of time and stored with it as "gain"
      (1 = full volume, smaller = turned down). Loud commercials and hot transfers get turned down to
@@ -294,7 +314,9 @@
   function applySound() {
     // on a channel with radio underneath, the reels themselves stay silent and the radio carries the sound
     var fade = sleepFade();
-    vid.muted = !state.sound || !!state.blocked || !!state.bedOn || !!state.earOn; vid.volume = state.vol * fade * gainOf(state.src + (state.clipKey != null ? "#" + state.clipKey : "")); if (typeof pre !== "undefined" && pre) pre.muted = true;
+    var lv = state.vol * fade * gainOf(state.src + (state.clipKey != null ? "#" + state.clipKey : ""));
+    vid.muted = !state.sound || !!state.blocked || !!state.bedOn || !!state.earOn; vid.volume = lv;
+    if (knob) { vid.volume = 1; knob.g.gain.setTargetAtTime(lv, knob.ac.currentTime, 0.05); } if (typeof pre !== "undefined" && pre) pre.muted = true;
     if (typeof bedEl !== "undefined" && bedEl) { bedEl.muted = !state.sound || !!state.blocked; bedEl.volume = state.vol * fade * gainOf(bedEl.dataset.src); }
     if (ear) { ear.muted = !state.sound || !state.earOn; ear.volume = state.vol * fade * gainOf(ear.dataset.src); }
     showSleep();
