@@ -7,6 +7,8 @@
    A block with dates wins over the everyday weekly blocks, so holidays take over for their days.
    play: "radio chills", "radio gramophone", "radio laughs" ...   "tv kids", "tv christmas" ...   "drive-in"   "jukebox"
    title: what shows on screen when the block begins.
+   rotate (optional): a list of things to play, one per week in turn, counting from the week of "since"
+   (a date, "2026-11-12"). Each one can have its own title; the block's "play" is ignored.
    To change it, edit the lines below (keep the commas and quote marks), save, and refresh the source in OBS. */
 window.STREAM_SCHEDULE = {
   // what plays when no block is on (the first line that fits today wins)
@@ -34,7 +36,17 @@ window.STREAM_SCHEDULE = {
     { days: ["mon"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack", quiet: true },
     { days: ["tue"], from: "19:00", to: "21:00", play: "tv newsreels",   title: "Oddities Night" },
     { days: ["wed"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack" },
-    { days: ["thu"], from: "19:00", to: "23:59", play: "radio chills",   title: "Radio Night" },   // till midnight, to fall asleep to
+    // Thursday: Radio Night till midnight (to fall asleep to), a different station each week
+    { days: ["thu"], from: "19:00", to: "23:59", play: "radio chills",   title: "Radio Night", since: "2026-11-12", rotate: [
+        { play: "radio chills",     title: "Radio Night: Chills" },
+        { play: "radio noir",       title: "Radio Night: Noir" },
+        { play: "radio scifi",      title: "Radio Night: Sci-Fi" },
+        { play: "radio laughs",     title: "Radio Night: Laughs" },
+        { play: "radio romance",    title: "Radio Night: Romance & Drama" },
+        { play: "radio variety",    title: "Radio Night: Variety" },
+        { play: "radio outwest",    title: "Radio Night: Out West" },
+        { play: "radio gramophone", title: "Radio Night: Gramophone Radio" }
+      ] },
     // Friday: Jukebox Night. The jukebox is its own OBS scene (jukebox-obs.html), switched to by the scene switcher;
     // this line puts it on the website's watch-party button, and obs.html leaves "jukebox" alone.
     { days: ["fri"], from: "19:00", to: "23:59", play: "jukebox",        title: "Jukebox Night" },  // till midnight

@@ -225,7 +225,7 @@
 <script src="config.js?v=20261111jn"></script>
 <script src="stations.js?v=20261107dr"></script>
 <script src="art/screen/tv-data.js?v=27"></script>
-<script src="obs-schedule.js?v=20261112m"></script>
+<script src="obs-schedule.js?v=20261112r"></script>
 <script src="ads.js?v=20261102b"></script>
 <script src="art/rack/rack.js?v=6"></script>
 <script src="obs-magazines.js?v=1"></script>
@@ -709,6 +709,17 @@
   function fits(b, t, timed) {
     return onDate(b.dates, t.md) && (!b.days || b.days.indexOf(t.day) >= 0) && (!timed || (t.hm >= b.from && t.hm < b.to));
   }
+  // a block with "rotate" plays the next thing on its list each week, counting from the week of "since"
+  function dayNo(ms) {   // the date in Los Angeles, as a count of days
+    var p = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" })
+      .formatToParts(new Date(ms)).forEach(function (x) { p[x.type] = x.value; });
+    return Math.round(Date.UTC(+p.year, +p.month - 1, +p.day) / 864e5);
+  }
+  function rotated(b, ms) {
+    var s = (b.since || "2026-01-01").split("-"), from = Math.round(Date.UTC(+s[0], +s[1] - 1, +s[2]) / 864e5);
+    var wk = Math.floor((dayNo(ms) - from) / 7), L = b.rotate, r = L[((wk % L.length) + L.length) % L.length];
+    var o = {}; for (var k in b) o[k] = b[k]; o.play = r.play; if (r.title) o.title = r.title; return o;
+  }
   function blockNow(ms) {
     var t = pacific(ms || Date.now()), L = SCHED.blocks || [];
     // holiday blocks (with dates) win over the weekly ones
@@ -716,6 +727,7 @@
     var b = L.filter(function (x) { return typeof x.dates === "string" && fits(x, t, true); })[0]
       || L.filter(function (x) { return x.dates && typeof x.dates !== "string" && fits(x, t, true); })[0]
       || L.filter(function (x) { return !x.dates && fits(x, t, true); })[0];
+    if (b && b.rotate && b.rotate.length) b = rotated(b, ms || Date.now());
     if (b) return { key: t.md + "|" + b.from + "-" + b.to + "-" + b.play, b: b };
     var O = [].concat(SCHED.otherwise || []), o = O.filter(function (x) { return fits(x, t, false); })[0] || { play: "radio " + STATIONS[0].id };
     return { key: "otherwise|" + o.play, b: o };
