@@ -327,9 +327,31 @@
       hp.type = "highpass"; hp.frequency.value = 60;
       comp.threshold.value = -30; comp.knee.value = 12; comp.ratio.value = 4; comp.attack.value = 0.01; comp.release.value = 0.4;
       gain.gain.value = 1.8; lim.threshold.value = -3; lim.knee.value = 0; lim.ratio.value = 20; lim.attack.value = 0.002; lim.release.value = 0.1;
-      src.connect(hp); hp.connect(comp); comp.connect(gain); gain.connect(lim);
+      var lp = ctx.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 20000; lp.Q.value = 0.5;
+      src.connect(hp); hp.connect(lp); lp.connect(comp); comp.connect(gain); gain.connect(lim);
       buildRoom(); outLim = lim; routeRoom();
+      clean.lp = lp;
+      // the same cleanup as the website's radio: clicks, pops and crackle out, then the hiss turned down
+      // (sound-clean-worklet.js), each station's settings from stations.js. If it can't load, the sound plays as before.
+      if (ctx.audioWorklet) ctx.audioWorklet.addModule("sound-clean-worklet.js?v=1").then(function () {
+        var dc = new AudioWorkletNode(ctx, "declick", { outputChannelCount: [2] }), dh = null;
+        try { dh = new AudioWorkletNode(ctx, "dehiss", { outputChannelCount: [2] }); } catch (e) {}
+        hp.disconnect(); hp.connect(dc);
+        if (dh) { dc.connect(dh); dh.connect(lp); } else dc.connect(lp);
+        clean.dc = dc; clean.dh = dh; cleanUp();
+      }).catch(function () {});
+      cleanUp();
     } catch (e) { ctx = null; }
+  }
+  /* each station's cleanup settings ("sound" in stations.js), worked out exactly as radio.js does */
+  var clean = {};
+  function cleanUp() {
+    if (!ctx || !clean.lp) return;
+    var snd = (station && station.sound) || {};
+    clean.lp.frequency.setTargetAtTime(snd.tone || 9000, ctx.currentTime, 0.1);
+    var amount = Math.max(snd.decrackle || 0, snd.declick != null ? snd.declick : 0.5);
+    if (clean.dc) clean.dc.port.postMessage({ kc: amount ? 8.5 - 5 * Math.min(1, amount) : 999 });
+    if (clean.dh) clean.dh.port.postMessage({ amt: snd.dehiss != null ? snd.dehiss : (station && station.music ? 1 : 0.7) });
   }
   /* "From another room", the same as on the website: stations with a "room" setting (Gramophone Radio)
      sound muffled, echoey and a little warbly, like a record playing down the hall */
@@ -364,7 +386,7 @@
     if (broken[tr.src]) { now = nextGood(now); tr = now.track; }
     var seek = function () { try { audio.currentTime = Math.max(0, now.offset); } catch (e) {} start(); };
     if (audio.dataset.src === tr.src && audio.readyState >= 1) seek();
-    else { audio.dataset.src = tr.src; audio.src = tr.src; audio.addEventListener("loadedmetadata", seek, { once: true }); audio.load(); }
+    else { audio.dataset.src = tr.src; if (clean.dh) clean.dh.port.postMessage({ reset: true }); cleanUp(); audio.src = tr.src; audio.addEventListener("loadedmetadata", seek, { once: true }); audio.load(); }
     paint();
   }
   function nextGood(now) {
@@ -764,7 +786,7 @@
     return "switched";
   }
   if (GOODBYE) setInterval(goodbyeCheck, 5000);
-  if (Q.get("test")) { window.bkCommand = command; window.bkBlockNow = blockNow; window.bkGoodbye = goodbyeCheck; }   // lets a test page pretend to be chat
+  if (Q.get("test")) { window.bkClean = clean; window.bkCommand = command; window.bkBlockNow = blockNow; window.bkGoodbye = goodbyeCheck; }   // lets a test page pretend to be chat
   if (mode === "radio") { card(); paint(); tick(); play(); }
   else if (mode === "mags") { setMode({ kind: "mags", st: find(Q.get("station")) }); }
   else { setMode(mode === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }); tick(); }
