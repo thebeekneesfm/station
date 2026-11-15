@@ -195,15 +195,15 @@
     H = 1 / game.ar;
     var R = rng(hash("tabs" + game.id)); tabs = { h: [], v: [] };
     for (var r = 0; r < game.rows; r++) { tabs.h[r] = []; tabs.v[r] = []; for (var c = 0; c < game.cols; c++) { tabs.h[r][c] = R() < .5 ? 1 : -1; tabs.v[r][c] = R() < .5 ? 1 : -1; } }
-    var src = "https://www.artic.edu/iiif/2/" + game.img + "/full/1686,/0/default.jpg";
+    // our own copy of the painting (art/puzzle/paint/, from the museum's public-domain image), the museum's if ours is missing
+    var src = "art/puzzle/paint/" + game.img + ".jpg", museum = "https://www.artic.edu/iiif/2/" + game.img + "/full/843,/0/default.jpg";
     ghost.src = src; ghost.alt = game.title;
     $("credit").innerHTML = "";
     var a = document.createElement("a"); a.href = "https://www.artic.edu/artworks/" + game.art_id; a.target = "_blank"; a.rel = "noopener";
     a.textContent = game.title + ", " + game.artist + (game.made ? ", " + game.made : "") + " (Art Institute of Chicago, public domain)";
     $("credit").append("This puzzle: ", a);
-    // the museum's big copy first, its standard size if that won't load
     img.onerror = function () {
-      if (img.src.indexOf("/full/843,") < 0) { img.src = src.replace("/full/1686,", "/full/843,"); ghost.src = img.src; }
+      if (img.src.indexOf("artic.edu") < 0) { img.src = museum; ghost.src = museum; }
       else $("status").textContent = "The painting didn't load. Try reloading the page in a minute.";
     };
     img.onload = function () { sb.from("puzzle_pieces").select("k,x,y,placed,placed_by").eq("game", game.id).then(function (res) { build(res.data || []); listen(); if (game.done_at) finished(); }); };
