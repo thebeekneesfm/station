@@ -113,6 +113,9 @@
   .sv .card .meter i { display: block; height: 100%; background: var(--red); width: 0; transition: width .6s; }
   .sv .top { position: absolute; right: 70px; top: 70px; z-index: 8; background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); padding: 14px 20px; font-size: 24px; line-height: 1.35; box-shadow: 0 6px 18px rgba(0,0,0,.4); transform: rotate(1.5deg); min-width: 260px; }
   .sv .top b { display: block; font: 700 30px/1.1 "BK Script", "BK Serif", Georgia, serif; margin-bottom: 4px; }
+  body.bare .sv .card, body.bare .sv .top { display: none !important; }
+  body.bare .sv .scroller { left: 0; top: 0; width: 1920px; height: 1080px; box-shadow: none; }
+  body.bare::before { background: #34503f; }
   .sv .won h2 { font-size: 64px; } .sv .won p { font-size: 30px; }
 </style>
 </head>
@@ -132,7 +135,7 @@
       <button type="button" class="tool" id="zout" aria-label="Zoom out">Zoom &minus;</button>
       <span class="status" id="status" aria-live="polite">Opening the puzzle box&hellip;</span>
     </div>
-    <div class="scroller" id="scroller"><div class="table" id="table"><div class="board" id="board"><img id="ghost" alt="" crossorigin="anonymous" referrerpolicy="no-referrer"></div></div></div>
+    <div class="scroller" id="scroller"><div class="table" id="table"><div class="board" id="board"><img id="ghost" alt="" referrerpolicy="no-referrer"></div></div></div>
     <p class="helpers" id="helpers"></p>
     <p class="credit" id="credit"></p>
   </main>
@@ -158,18 +161,19 @@
 (function () {
   "use strict";
   var $ = function (id) { return document.getElementById(id); };
-  var Q = new URLSearchParams(location.search), STREAM = Q.get("stream") === "1";
+  var Q = new URLSearchParams(location.search), STREAM = Q.get("stream") === "1", BARE = STREAM && Q.get("bare") === "1";
   var store = { get: function (k, d) { try { var v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
                 set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
   var cfg = (window.RADIO_CONFIG || {}).listeners || {};
   var sb = window.supabase.createClient(cfg.url, cfg.key, { realtime: { params: { eventsPerSecond: 10 } } });
   var me = Math.random().toString(36).slice(2, 10);
   var table = $("table"), board = $("board"), ghost = $("ghost"), scroller = $("scroller");
+  if (BARE) document.body.classList.add("bare");
   if (STREAM) { document.body.classList.add("stream"); $("sscroller").appendChild(table); scroller = $("sscroller"); }
 
   var game, img = new Image(), pieces = [], byK = {}, tabs, ch, holding = {}, zoom = store.get("pz.zoom", window.innerWidth < 700 ? 2.5 : 1);
   var X0 = -0.62, X1 = 1.62, MY = 0.36, S = 400, cw, chh, pad, H;   // S: pixels per board-width unit
-  img.crossOrigin = "anonymous"; img.referrerPolicy = "no-referrer";
+  img.referrerPolicy = "no-referrer";   // no crossOrigin: the pieces are only drawn, never read back, so the museum needn't allow it
   var who = $("who"); who.value = store.get("pz.who", "");
   who.addEventListener("change", function () { var v = BKJ.cleanName(who.value); if (BKJ.rude(v)) v = ""; who.value = v; store.set("pz.who", v); });
   function name() { var v = BKJ.cleanName(who.value); return BKJ.rude(v) ? "" : v; }
@@ -197,6 +201,11 @@
     var a = document.createElement("a"); a.href = "https://www.artic.edu/artworks/" + game.art_id; a.target = "_blank"; a.rel = "noopener";
     a.textContent = game.title + ", " + game.artist + (game.made ? ", " + game.made : "") + " (Art Institute of Chicago, public domain)";
     $("credit").append("This puzzle: ", a);
+    // the museum's big copy first, its standard size if that won't load
+    img.onerror = function () {
+      if (img.src.indexOf("/full/843,") < 0) { img.src = src.replace("/full/1686,", "/full/843,"); ghost.src = img.src; }
+      else $("status").textContent = "The painting didn't load. Try reloading the page in a minute.";
+    };
     img.onload = function () { sb.from("puzzle_pieces").select("k,x,y,placed,placed_by").eq("game", game.id).then(function (res) { build(res.data || []); listen(); if (game.done_at) finished(); }); };
     img.src = src;
   }
@@ -336,7 +345,7 @@
     table.appendChild(w);
   }
 
-  var resizeT; window.addEventListener("resize", function () { clearTimeout(resizeT); resizeT = setTimeout(function () { if (game) setZoom(zoom); }, 250); });
+  var resizeT; window.addEventListener("resize", function () { clearTimeout(resizeT); resizeT = setTimeout(function () { if (!game) return; if (STREAM) build(pieces.map(function (p) { return { k: p.k, x: p.x, y: p.y, placed: p.placed, placed_by: p.by }; })); else setZoom(zoom); }, 250); });
   start();
   setInterval(start, 30000);   // picks up the next painting, and nudges the lineup along after a finish
 })();
