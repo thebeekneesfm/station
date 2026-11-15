@@ -1112,7 +1112,7 @@ window.RECORDS_TODAY = function (when) {
   return { picks: picks, fresh: fresh, shelf: shelf, month: m, day: d, weekOf: { month: mon.getUTCMonth() + 1, day: mon.getUTCDate() } };
 };
 
-/* the little player: Archive.org's own embedded player in a pop-up, so the album plays from Archive.org
+/* the little player (now our own, with Archive.org's player only as a fallback): originally Archive.org's own embedded player in a pop-up, so the album plays from Archive.org
    without leaving the page. The player is made tall enough to show the whole thing (its controls plus its
    track list, which scrolls on its own): a shorter frame cut off the bottom of the list on phones, where a
    frame can't be scrolled. While it's open the radio pauses, and it picks back up when the player closes. */
@@ -1152,6 +1152,20 @@ window.RECORDS_PLAY = function (r) {
       "#rp-box.mini h2{font-size:15px;line-height:1.2;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}",
       "#rp-box.mini .rp-who{font-size:13px;margin-top:1px}",
       "#rp-box.mini iframe{height:112px;margin-top:8px}",
+      // our own player: a plain audio element, so it keeps playing with the phone's screen off, and shows on the lock screen
+      "#rp-box .rp-pl{margin-top:14px;background:#1f1b17;color:#f3ead6;padding:12px 12px 10px}",
+      "#rp-box .rp-now{font:700 16px/1.3 'BK Serif',Georgia,serif;min-height:21px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}",
+      "#rp-box .rp-ctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}",
+      "#rp-box .rp-ctl button{font:700 16px/1 'BK Serif',Georgia,serif;background:#f3ead6;color:#1f1b17;border:0;min-width:44px;height:40px;padding:0 10px;cursor:pointer}",
+      "#rp-box .rp-ctl .rp-pp{background:#e3a92f;min-width:64px}",
+      "#rp-box .rp-ctl input{order:5;flex:1 1 100%;min-width:0;margin:2px 0 0;accent-color:#e3a92f}",
+      "#rp-box .rp-tm{margin-left:auto;font-size:13px;color:#cfc4ac;min-width:84px;text-align:right;font-variant-numeric:tabular-nums}",
+      "#rp-box .rp-list{list-style:none;margin:10px 0 0;padding:0;max-height:220px;overflow:auto;-webkit-overflow-scrolling:touch;border-top:1px solid #4a4036}",
+      "#rp-box .rp-list button{display:flex;width:100%;gap:10px;text-align:left;background:none;border:0;border-bottom:1px solid #3a332b;color:#f3ead6;font:15px/1.3 'BK Serif',Georgia,serif;padding:8px 4px;cursor:pointer}",
+      "#rp-box .rp-list button span{color:#a99d85;min-width:22px}",
+      "#rp-box .rp-list button[aria-current=true]{color:#e3a92f;font-weight:700}",
+      "#rp-box .rp-ctl button:focus-visible,#rp-box .rp-list button:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}",
+      "#rp-box.mini .rp-pl{margin-top:8px;padding:8px}#rp-box.mini .rp-list{display:none}#rp-box.mini .rp-now{font-size:14px}#rp-box.mini .rp-ctl button{height:34px;min-width:38px}",
       "#rp-box.mini .rp-foot{display:none}",
       // liner notes from Wikipedia, under the player
       "#rp-box .rp-notes{margin:12px 0 0;padding:10px 12px;background:rgba(255,255,255,.35);border-left:4px solid #c8321f;font-size:15px;line-height:1.45;font-style:normal}",
@@ -1177,8 +1191,82 @@ window.RECORDS_PLAY = function (r) {
   var t = doc.createElement("div"), h = doc.createElement("h2"), w = doc.createElement("p");
   h.textContent = r.title; w.className = "rp-who"; w.textContent = r.artist + (r.year ? ", " + r.year : "");
   t.appendChild(h); t.appendChild(w); top.appendChild(img); top.appendChild(t);
-  var fr = doc.createElement("iframe"); fr.title = r.title + " on Archive.org";
-  fr.allow = "autoplay; fullscreen"; fr.src = "https://archive.org/embed/" + encodeURIComponent(id) + "?playlist=1&autoplay=1";
+  // the player: the album's songs straight from Archive.org in a plain audio element, which phones keep playing
+  // with the screen off (Archive.org's embedded player stops when the screen goes dark). If the song list can't
+  // be fetched, Archive.org's own player is used instead.
+  var fr = doc.createElement("div"); fr.className = "rp-pl";
+  fr.innerHTML = '<div class="rp-now" aria-live="polite">Opening the record\u2026</div><div class="rp-ctl">' +
+    '<button type="button" class="rp-prev" aria-label="Previous song">\u23ee</button><button type="button" class="rp-pp" aria-label="Play">Play</button>' +
+    '<button type="button" class="rp-next" aria-label="Next song">\u23ed</button><input type="range" min="0" max="1000" value="0" aria-label="Where in the song">' +
+    '<span class="rp-tm">0:00</span></div><ol class="rp-list"></ol>';
+  var au = doc.createElement("audio"); au.preload = "auto"; fr.appendChild(au);
+  var nowEl = fr.querySelector(".rp-now"), pp = fr.querySelector(".rp-pp"), bar = fr.querySelector("input"), tm = fr.querySelector(".rp-tm"), list = fr.querySelector(".rp-list");
+  var tracks = [], cur = -1, dragging = false, gone = false;
+  // phones only let sound start from a tap: start a moment of silence now, while the tap still counts, so the same
+  // player may go on to play the album once its song list arrives
+  try { au.src = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA="; var pr = au.play(); if (pr && pr.catch) pr.catch(function () {}); } catch (e) {}
+  function mmss(t) { t = Math.max(0, Math.floor(t || 0)); return Math.floor(t / 60) + ":" + ("0" + t % 60).slice(-2); }
+  function ms() { return (doc.defaultView || window).navigator.mediaSession; }
+  function abs(u) { try { return new URL(u, doc.baseURI).href; } catch (e) { return u; } }
+  function song(i) {
+    if (i < 0 || i >= tracks.length) return;
+    cur = i; au.src = tracks[i].url; var pr = au.play(); if (pr && pr.catch) pr.catch(function () { pp.textContent = "Play"; pp.setAttribute("aria-label", "Play"); });
+    nowEl.textContent = (i + 1) + ". " + tracks[i].title;
+    [].forEach.call(list.querySelectorAll("button"), function (b, j) { b.setAttribute("aria-current", j === i ? "true" : "false"); });
+    try {
+      var M = (doc.defaultView || window).MediaMetadata;
+      if (ms() && M) ms().metadata = new M({ title: tracks[i].title, artist: r.artist, album: r.title, artwork: [{ src: abs(r.cover), sizes: "420x420", type: "image/webp" }] });
+    } catch (e) {}
+  }
+  function shown(playing) { pp.textContent = playing ? "Pause" : "Play"; pp.setAttribute("aria-label", playing ? "Pause" : "Play"); try { if (ms()) ms().playbackState = playing ? "playing" : "paused"; } catch (e) {} }
+  au.addEventListener("play", function () { if (cur >= 0) shown(true); });
+  au.addEventListener("pause", function () { if (cur >= 0) shown(false); });
+  au.addEventListener("ended", function () { if (cur >= 0 && cur < tracks.length - 1) song(cur + 1); else if (cur >= 0) { shown(false); nowEl.textContent = "That's the whole record."; } });
+  au.addEventListener("timeupdate", function () {
+    if (cur < 0) return; var d = au.duration || tracks[cur].len || 0;
+    if (!dragging && d) bar.value = Math.round(au.currentTime / d * 1000);
+    tm.textContent = mmss(au.currentTime) + " / " + mmss(d);
+  });
+  au.addEventListener("error", function () { if (cur >= 0 && au.src && au.src.indexOf("data:") !== 0 && cur < tracks.length - 1) setTimeout(function () { if (!gone) song(cur + 1); }, 1500); });
+  pp.addEventListener("click", function () { if (cur < 0) { if (tracks.length) song(0); return; } if (au.paused) au.play(); else au.pause(); });
+  fr.querySelector(".rp-prev").addEventListener("click", function () { if (au.currentTime > 4 || cur <= 0) au.currentTime = 0; else song(cur - 1); });
+  fr.querySelector(".rp-next").addEventListener("click", function () { song(cur + 1); });
+  bar.addEventListener("input", function () { dragging = true; });
+  bar.addEventListener("change", function () { dragging = false; if (au.duration) au.currentTime = bar.value / 1000 * au.duration; });
+  try {
+    if (ms()) {
+      ms().setActionHandler("play", function () { au.play(); });
+      ms().setActionHandler("pause", function () { au.pause(); });
+      ms().setActionHandler("previoustrack", function () { song(Math.max(0, cur - 1)); });
+      ms().setActionHandler("nexttrack", function () { song(cur + 1); });
+      try { ms().setActionHandler("seekto", function (d) { if (d && d.seekTime != null) au.currentTime = d.seekTime; }); } catch (e) {}
+    }
+  } catch (e) {}
+  function fallback() {
+    if (gone) return;
+    var f2 = doc.createElement("iframe"); f2.title = r.title + " on Archive.org"; f2.allow = "autoplay; fullscreen";
+    f2.src = "https://archive.org/embed/" + encodeURIComponent(id) + "?playlist=1&autoplay=1";
+    try { au.pause(); } catch (e) {} fr.replaceWith(f2); fr = f2;
+  }
+  fetch("https://archive.org/metadata/" + encodeURIComponent(id)).then(function (res) { return res.json(); }).then(function (md) {
+    if (gone) return;
+    var files = (md && md.files) || [], pick = function (fmt) { return files.filter(function (f) { return f.format === fmt && !/_sample\.mp3$/i.test(f.name); }); };
+    var mp3 = pick("VBR MP3"); if (!mp3.length) mp3 = pick("128Kbps MP3"); if (!mp3.length) mp3 = pick("MP3"); if (!mp3.length) mp3 = pick("64Kbps MP3");
+    if (!mp3.length) return fallback();
+    mp3.sort(function (a, b) { return a.name.localeCompare(b.name, undefined, { numeric: true }); });
+    var base = "https://archive.org/download/" + encodeURIComponent(id) + "/";
+    tracks = mp3.map(function (f) {
+      var nm = f.name.replace(/^.*\//, "").replace(/\.mp3$/i, "").replace(/^[\d.\s_-]+/, "").replace(/_/g, " ");
+      var len = String(f.length || ""); len = len.indexOf(":") > 0 ? len.split(":").reduce(function (a, b) { return a * 60 + (+b || 0); }, 0) : +len || 0;
+      return { title: f.title || nm || "Side", url: base + f.name.split("/").map(encodeURIComponent).join("/"), len: len };
+    });
+    tracks.forEach(function (t, i) {
+      var li = doc.createElement("li"), b = doc.createElement("button"); b.type = "button";
+      var n = doc.createElement("span"); n.textContent = i + 1; b.appendChild(n); b.appendChild(doc.createTextNode(t.title + (t.len ? " (" + mmss(t.len) + ")" : "")));
+      b.addEventListener("click", function () { song(i); }); li.appendChild(b); list.appendChild(li);
+    });
+    song(0);
+  }).catch(fallback);
   var foot = doc.createElement("p"); foot.className = "rp-foot";
   foot.appendChild(doc.createTextNode("Playing from the Internet Archive. "));
   var a = doc.createElement("a"); a.href = r.item; a.target = "_blank"; a.rel = "noopener"; a.textContent = "See the album on Archive.org"; foot.appendChild(a);
@@ -1209,7 +1297,10 @@ window.RECORDS_PLAY = function (r) {
   // a new album replacing this one keeps the radio paused (keep = true)
   // the radio stays off when the album ends or closes: it only comes back on when someone picks a station
   function close(keep) {
-    fr.src = "about:blank"; box.remove(); doc.removeEventListener("keydown", esc, true);
+    gone = true; try { au.pause(); au.removeAttribute("src"); au.load(); } catch (e) {}
+    try { if (ms()) { ms().metadata = null; ms().playbackState = "none"; } } catch (e) {}
+    if (fr.tagName === "IFRAME") fr.src = "about:blank";
+    box.remove(); doc.removeEventListener("keydown", esc, true);
     if (window.BK_ALBUM === album) window.BK_ALBUM = null;
     if (keep === true) return;
     window.RECORDS_WAS_ON = false;
