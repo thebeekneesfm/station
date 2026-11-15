@@ -87,6 +87,7 @@
   .pc { position: absolute; z-index: 3; cursor: grab; filter: drop-shadow(0 2px 2px rgba(0,0,0,.55)); touch-action: none; }
   .pc.mine { z-index: 6; cursor: grabbing; filter: drop-shadow(0 8px 10px rgba(0,0,0,.6)); }
   .pc.theirs { z-index: 5; pointer-events: none; filter: drop-shadow(0 6px 8px rgba(0,0,0,.6)); }
+  .pc.joined, .pc.joined.mine, .pc.joined.theirs { filter: none; }   /* shadows would fall across the seams */
   .pc.set { z-index: 2; cursor: default; filter: none; pointer-events: none; }
   .finished .pc { display: none; }
   .tagname { position: absolute; z-index: 7; pointer-events: none; font: 700 13px/1 "BK Serif", Georgia, serif; background: var(--honey); color: var(--ink); padding: 3px 6px; white-space: nowrap; transform: translate(-50%, -130%); }
@@ -242,7 +243,9 @@
     c1 = P(0.70, s * 0.18); c2 = P(0.60, 0); e = P(0.66, 0); g.bezierCurveTo(c1[0], c1[1], c2[0], c2[1], e[0], e[1]);
     g.lineTo(x1, y1);
   }
-  function drawPiece(cv, r, c) {
+  // loose pieces get a light outline; pieces that are joined or placed get none, and their edges are
+  // drawn a hair wider from the painting itself so the seams between them close up
+  function drawPiece(cv, r, c, loose) {
     var dpr = Math.min(2, window.devicePixelRatio || 1), w = cw + pad * 2, h = chh + pad * 2, m = Math.min(cw, chh);
     cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); cv.style.width = w + "px"; cv.style.height = h + "px";
     var g = cv.getContext("2d"); g.scale(dpr, dpr);
@@ -255,18 +258,30 @@
     g.closePath(); g.save(); g.clip();
     var sx = img.naturalWidth / S, sy = img.naturalHeight / (H * S);
     g.drawImage(img, (c * cw - pad) * sx, (r * chh - pad) * sy, w * sx, h * sy, 0, 0, w, h);
-    g.restore(); g.lineWidth = 1; g.strokeStyle = "rgba(255,250,235,.55)"; g.stroke();
+    g.restore();
+    if (loose) { g.lineWidth = 1; g.strokeStyle = "rgba(255,250,235,.55)"; g.stroke(); return; }
+    try {
+      var pat = g.createPattern(img, "no-repeat");
+      pat.setTransform(new DOMMatrix([1 / sx, 0, 0, 1 / sy, -(c * cw - pad), -(r * chh - pad)]));
+      g.lineWidth = 1.6; g.strokeStyle = pat; g.stroke();
+    } catch (e) {}
+  }
+  function look(p) {
+    var loose = !p.placed && group(p).length === 1;
+    if (p.loose !== loose) { drawPiece(p.el, Math.floor(p.k / game.cols), p.k % game.cols, loose); p.loose = loose; }
+    p.el.classList.toggle("joined", !loose && !p.placed);
   }
   function build(data) {
     layout();
     pieces.forEach(function (p) { p.el.remove(); }); pieces = []; byK = {};
     table.querySelectorAll(".tagname,.won").forEach(function (e) { e.remove(); });
     data.forEach(function (d) {
-      var r = Math.floor(d.k / game.cols), c = d.k % game.cols, cv = document.createElement("canvas"); cv.className = "pc"; drawPiece(cv, r, c);
-      var p = { el: cv, k: d.k, x: d.x, y: d.y, placed: d.placed, by: d.placed_by, grp: d.grp == null ? d.k : d.grp };
+      var r = Math.floor(d.k / game.cols), c = d.k % game.cols, cv = document.createElement("canvas"); cv.className = "pc"; drawPiece(cv, r, c, true);
+      var p = { el: cv, k: d.k, x: d.x, y: d.y, placed: d.placed, by: d.placed_by, grp: d.grp == null ? d.k : d.grp, loose: true };
       pieces.push(p); byK[d.k] = p; table.appendChild(cv); put(p);
       if (p.placed) cv.classList.add("set"); else if (!STREAM) grab(p);
     });
+    pieces.forEach(look);
     progress();
   }
   function put(p) { p.el.style.left = (px(p.x) - pad) + "px"; p.el.style.top = (py(p.y) - pad) + "px"; }
@@ -356,6 +371,7 @@
     var p = byK[d.k]; if (!p) return;
     p.x = d.x; p.y = d.y; if (d.grp != null) p.grp = d.grp; put(p);
     if (d.placed && !p.placed) { p.placed = true; p.by = d.placed_by; p.el.classList.add("set"); p.el.classList.remove("theirs"); progress(); }
+    group(p).forEach(look);
   }
 
   // live: other people's drags (broadcast) and every saved move (database changes)
