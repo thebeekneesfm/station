@@ -133,7 +133,7 @@
   </header>
   <main class="paper">
     <h1>The Community Puzzle</h1>
-    <p class="lede">One big jigsaw that everybody works on together, cut from a painting in our Gallery. Every piece you drop in place stays there for good, and you'll see other people's pieces moving as they work. When it's finished, the next painting comes out on its own.</p>
+    <p class="lede">One big jigsaw that everybody works on together, cut from a painting in our Gallery. Pieces that fit click together anywhere on the table, every piece you drop in place stays there for good, and you'll see other people's pieces moving as they work. When it's finished, the next painting comes out on its own.</p>
     <div class="bar">
       <label>Your Twitch username <input id="who" maxlength="25" autocomplete="nickname" placeholder="optional" spellcheck="false"></label>
       <button type="button" class="tool" id="peek" aria-pressed="false">Peek at the picture</button>
@@ -212,13 +212,13 @@
       if (img.src.indexOf("artic.edu") < 0) { img.src = museum; ghost.src = museum; }
       else $("status").textContent = "The painting didn't load. Try reloading the page in a minute.";
     };
-    img.onload = function () { sb.from("puzzle_pieces").select("k,x,y,placed,placed_by").eq("game", game.id).then(function (res) { build(res.data || []); listen(); if (game.done_at) finished(); }); };
+    img.onload = function () { sb.from("puzzle_pieces").select("k,x,y,placed,placed_by,grp").eq("game", game.id).then(function (res) { build(res.data || []); listen(); if (game.done_at) finished(); }); };
     img.src = src;
   }
   function setZoom(z) {
     if (STREAM) return;
     zoom = Math.max(1, Math.min(4, z)); store.set("pz.zoom", zoom);
-    if (game) { var data = pieces.map(function (p) { return { k: p.k, x: p.x, y: p.y, placed: p.placed, placed_by: p.by }; }); build(data); }
+    if (game) { var data = pieces.map(function (p) { return { k: p.k, x: p.x, y: p.y, placed: p.placed, placed_by: p.by, grp: p.grp }; }); build(data); }
   }
   function layout() {
     var vw = scroller.clientWidth, vh = STREAM ? scroller.clientHeight : Math.min(window.innerHeight * .78, 900);
@@ -263,7 +263,7 @@
     table.querySelectorAll(".tagname,.won").forEach(function (e) { e.remove(); });
     data.forEach(function (d) {
       var r = Math.floor(d.k / game.cols), c = d.k % game.cols, cv = document.createElement("canvas"); cv.className = "pc"; drawPiece(cv, r, c);
-      var p = { el: cv, k: d.k, x: d.x, y: d.y, placed: d.placed, by: d.placed_by };
+      var p = { el: cv, k: d.k, x: d.x, y: d.y, placed: d.placed, by: d.placed_by, grp: d.grp == null ? d.k : d.grp };
       pieces.push(p); byK[d.k] = p; table.appendChild(cv); put(p);
       if (p.placed) cv.classList.add("set"); else if (!STREAM) grab(p);
     });
@@ -273,29 +273,55 @@
 
   // drag a piece: others see it move live; on letting go the database decides if it snaps in
   var lastSend = 0;
+  // the pieces clicked together with p (a "group"), p included
+  function group(p) { return pieces.filter(function (q) { return q.grp === p.grp; }); }
   function grab(p) {
     p.el.addEventListener("pointerdown", function (e) {
-      if (p.placed || holding[p.k]) return;
-      e.preventDefault(); p.el.setPointerCapture(e.pointerId); p.el.classList.add("mine");
+      if (p.placed || holding[p.grp]) return;
+      e.preventDefault(); p.el.setPointerCapture(e.pointerId);
+      var gr = group(p), size = gr.length, start = gr.map(function (q) { return [q, q.x - p.x, q.y - p.y]; });
+      gr.forEach(function (q) { q.el.classList.add("mine"); });
+      // keep the whole group on the table
+      var minx = 0, maxx = 0, miny = 0, maxy = 0; start.forEach(function (o) { minx = Math.min(minx, o[1]); maxx = Math.max(maxx, o[1]); miny = Math.min(miny, o[2]); maxy = Math.max(maxy, o[2]); });
       var rect = table.getBoundingClientRect(), offX = e.clientX - rect.left - px(p.x), offY = e.clientY - rect.top - py(p.y);
       function move(ev) {
         var rc = table.getBoundingClientRect();
-        p.x = Math.max(X0, Math.min(X1 - 1 / game.cols, (ev.clientX - rc.left - offX - +table.dataset.ox) / S));
-        p.y = Math.max(-MY, Math.min(H + MY - H / game.rows, (ev.clientY - rc.top - offY - +table.dataset.oy) / S));
-        put(p);
-        var now = Date.now(); if (now - lastSend > 110) { lastSend = now; var c = spot(ev); say("drag", { k: p.k, x: p.x, y: p.y, who: name(), id: me, cx: c[0], cy: c[1] }); }
+        p.x = Math.max(X0 - minx, Math.min(X1 - 1 / game.cols - maxx, (ev.clientX - rc.left - offX - +table.dataset.ox) / S));
+        p.y = Math.max(-MY - miny, Math.min(H + MY - H / game.rows - maxy, (ev.clientY - rc.top - offY - +table.dataset.oy) / S));
+        start.forEach(function (o) { o[0].x = p.x + o[1]; o[0].y = p.y + o[2]; put(o[0]); });
+        var now = Date.now(); if (now - lastSend > 110) { lastSend = now; var c = spot(ev); say("drag", { k: p.k, g: p.grp, x: p.x, y: p.y, who: name(), id: me, cx: c[0], cy: c[1] }); }
       }
       function up() {
         p.el.removeEventListener("pointermove", move); p.el.removeEventListener("pointerup", up); p.el.removeEventListener("pointercancel", up);
-        p.el.classList.remove("mine");
-        say("drop", { k: p.k, id: me });
-        sb.rpc("puzzle_move", { p_game: game.id, p_k: p.k, p_x: p.x, p_y: p.y, p_by: name() || null }).then(function (res) {
-          var d = res.data && res.data[0]; if (d) apply(d);
-          if (d && d.done) { game.done_at = new Date().toISOString(); finished(); }
+        gr.forEach(function (q) { q.el.classList.remove("mine"); });
+        say("drop", { g: p.grp, id: me });
+        sb.rpc("puzzle_drop", { p_game: game.id, p_k: p.k, p_x: p.x, p_y: p.y, p_by: name() || null }).then(function (res) {
+          var rows = res.data || []; if (!rows.length) return;
+          var wasPlaced = p.placed; rows.forEach(apply);
+          // a click when it fits: onto the picture, or onto another piece
+          if ((rows[0].placed && !wasPlaced) || rows.length > size) click(rows[0].placed ? 1 : .8);
+          if (rows[0].done) { game.done_at = new Date().toISOString(); finished(); }
         });
       }
       p.el.addEventListener("pointermove", move); p.el.addEventListener("pointerup", up); p.el.addEventListener("pointercancel", up);
     });
+  }
+  // the click: a tiny "tock" of cardboard on cardboard, made on the spot (no sound file); only on the website, never on stream
+  var actx = null;
+  function click(vol) {
+    if (STREAM) return;
+    try {
+      actx = actx || new (window.AudioContext || window.webkitAudioContext)(); if (actx.state === "suspended") actx.resume();
+      var t = actx.currentTime, n = Math.floor(actx.sampleRate * 0.05), buf = actx.createBuffer(1, n, actx.sampleRate), d = buf.getChannelData(0);
+      for (var i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / n, 6);
+      var src = actx.createBufferSource(); src.buffer = buf;
+      var bp = actx.createBiquadFilter(); bp.type = "bandpass"; bp.frequency.value = 2400 + Math.random() * 500; bp.Q.value = 1.4;
+      var body = actx.createOscillator(); body.type = "sine"; body.frequency.setValueAtTime(420, t); body.frequency.exponentialRampToValueAtTime(160, t + 0.05);
+      var g1 = actx.createGain(), g2 = actx.createGain();
+      g1.gain.value = 0.55 * vol; g2.gain.setValueAtTime(0.18 * vol, t); g2.gain.exponentialRampToValueAtTime(0.001, t + 0.06);
+      src.connect(bp); bp.connect(g1); g1.connect(actx.destination); body.connect(g2); g2.connect(actx.destination);
+      src.start(t); body.start(t); body.stop(t + 0.07);
+    } catch (e) {}
   }
   // where the pointer is, in board units
   function spot(ev) { var rc = table.getBoundingClientRect(); return [(ev.clientX - rc.left - +table.dataset.ox) / S, (ev.clientY - rc.top - +table.dataset.oy) / S]; }
@@ -311,7 +337,7 @@
     table.addEventListener("pointerleave", function () { say("gone", { id: me }); ungone("__me"); });
   }
   // everyone else's pointers: an arrow and their name (or "guest"), in a color of their own
-  var curs = {}, COLORS = ["#c8321f", "#2f5e8a", "#8a3f7a", "#b5651d", "#a33a5b", "#1d3557", "#7a4a12", "#5b3a8a"]   // no greens: they vanish on the green table;
+  var curs = {}, COLORS = ["#c8321f", "#2f5e8a", "#8a3f7a", "#b5651d", "#a33a5b", "#1d3557", "#7a4a12", "#5b3a8a"];   // no greens: they vanish on the green table
   function pointer(d) {
     if (d.cx == null) return;
     var c = curs[d.id];
@@ -328,7 +354,7 @@
   setInterval(function () { var t = Date.now(); Object.keys(curs).forEach(function (id) { if (t - curs[id].t > 8000) ungone(id); }); }, 2000);
   function apply(d) {
     var p = byK[d.k]; if (!p) return;
-    p.x = d.x; p.y = d.y; put(p);
+    p.x = d.x; p.y = d.y; if (d.grp != null) p.grp = d.grp; put(p);
     if (d.placed && !p.placed) { p.placed = true; p.by = d.placed_by; p.el.classList.add("set"); p.el.classList.remove("theirs"); progress(); }
   }
 
@@ -339,11 +365,14 @@
     ch = sb.channel("puzzle-" + game.id, { config: { broadcast: { self: false }, presence: { key: me } } })
       .on("broadcast", { event: "drag" }, function (m) {
         var d = m.payload || {}, p = byK[d.k]; if (!p || p.placed) return;
-        holding[d.k] = Date.now(); p.x = d.x; p.y = d.y; put(p); p.el.classList.add("theirs"); pointer(d);
+        // move the whole group by as much as the piece they're holding moved
+        var dx = d.x - p.x, dy = d.y - p.y; holding[p.grp] = Date.now();
+        group(p).forEach(function (q) { q.x += dx; q.y += dy; put(q); q.el.classList.add("theirs"); });
+        pointer(d);
       })
       .on("broadcast", { event: "cur" }, function (m) { pointer(m.payload || {}); })
       .on("broadcast", { event: "gone" }, function (m) { ungone((m.payload || {}).id); })
-      .on("broadcast", { event: "drop" }, function (m) { var d = m.payload || {}, p = byK[d.k]; delete holding[d.k]; if (p) { p.el.classList.remove("theirs"); tag(p, null); } })
+      .on("broadcast", { event: "drop" }, function (m) { var d = m.payload || {}; delete holding[d.g]; pieces.forEach(function (q) { if (q.grp === d.g) q.el.classList.remove("theirs"); }); })
       .on("postgres_changes", { event: "UPDATE", schema: "public", table: "puzzle_pieces", filter: "game=eq." + game.id }, function (m) { apply(m.new); })
       .on("postgres_changes", { event: "INSERT", schema: "public", table: "puzzle_games" }, function () { setTimeout(start, 1500); })
       .on("presence", { event: "sync" }, function () { people = Object.keys(ch.presenceState()).length; progress(); })
@@ -351,7 +380,7 @@
   }
   var people = 0;
   // someone stopped mid-drag (closed the tab): let the piece go after a few seconds
-  setInterval(function () { var t = Date.now(); Object.keys(holding).forEach(function (k) { if (t - holding[k] > 4000) { delete holding[k]; var p = byK[k]; if (p) { p.el.classList.remove("theirs"); tag(p, null); } } }); }, 1500);
+  setInterval(function () { var t = Date.now(); Object.keys(holding).forEach(function (g) { if (t - holding[g] > 4000) { delete holding[g]; pieces.forEach(function (q) { if (q.grp === +g) q.el.classList.remove("theirs"); }); } }); }, 1500);
   function tag(p, n) {
     if (p.tagEl) { p.tagEl.remove(); p.tagEl = null; }
     if (!n) return;
@@ -382,7 +411,8 @@
     table.appendChild(w);
   }
 
-  var resizeT; window.addEventListener("resize", function () { clearTimeout(resizeT); resizeT = setTimeout(function () { if (!game) return; if (STREAM) build(pieces.map(function (p) { return { k: p.k, x: p.x, y: p.y, placed: p.placed, placed_by: p.by }; })); else setZoom(zoom); }, 250); });
+  var resizeT; window.addEventListener("resize", function () { clearTimeout(resizeT); resizeT = setTimeout(function () { if (!game) return; if (STREAM) build(pieces.map(function (p) { return { k: p.k, x: p.x, y: p.y, placed: p.placed, placed_by: p.by, grp: p.grp }; })); else setZoom(zoom); }, 250); });
+  if (Q.get("test")) window.bkPz = { pieces: function () { return pieces; }, px: px, py: py };
   start();
   setInterval(start, 30000);   // picks up the next painting, and nudges the lineup along after a finish
 })();
