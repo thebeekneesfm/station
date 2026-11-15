@@ -92,6 +92,7 @@
   .tagname { position: absolute; z-index: 7; pointer-events: none; font: 700 13px/1 "BK Serif", Georgia, serif; background: var(--honey); color: var(--ink); padding: 3px 6px; white-space: nowrap; transform: translate(-50%, -130%); }
   /* other people's pointers, each with their name */
   .cur { position: absolute; z-index: 8; pointer-events: none; transition: left .12s linear, top .12s linear; }
+  .cur.self { transition: none; }
   .cur svg { display: block; width: 18px; height: 22px; filter: drop-shadow(1px 2px 1px rgba(0,0,0,.5)); }
   .cur span { position: absolute; left: 14px; top: 16px; font: 700 13px/1 "BK Serif", Georgia, serif; color: #fff8ea; padding: 3px 7px 4px; white-space: nowrap; box-shadow: 1px 2px 0 rgba(0,0,0,.35); }
   .sv .cur svg { width: 30px; height: 36px; } .sv .cur span { left: 24px; top: 28px; font-size: 24px; padding: 4px 10px 6px; }
@@ -300,11 +301,14 @@
   function spot(ev) { var rc = table.getBoundingClientRect(); return [(ev.clientX - rc.left - +table.dataset.ox) / S, (ev.clientY - rc.top - +table.dataset.oy) / S]; }
   if (!STREAM) {
     table.addEventListener("pointermove", function (ev) {
-      if (!game || ev.buttons) return;   // drags send their own messages
+      if (!game) return;
+      // your own name rides along with your pointer too, so you can see how you look to everyone else
+      var me0 = spot(ev); pointer({ id: "__me", who: name() || "guest (add your name above)", cx: me0[0], cy: me0[1], self: true });
+      if (ev.buttons) return;   // drags send their own messages
       var now = Date.now(); if (now - lastSend < 120) return; lastSend = now;
       var c = spot(ev); say("cur", { id: me, who: name(), cx: c[0], cy: c[1] });
     });
-    table.addEventListener("pointerleave", function () { say("gone", { id: me }); });
+    table.addEventListener("pointerleave", function () { say("gone", { id: me }); ungone("__me"); });
   }
   // everyone else's pointers: an arrow and their name (or "guest"), in a color of their own
   var curs = {}, COLORS = ["#c8321f", "#2f5e8a", "#8a3f7a", "#b5651d", "#a33a5b", "#1d3557", "#7a4a12", "#5b3a8a"]   // no greens: they vanish on the green table;
@@ -315,6 +319,7 @@
       var col = COLORS[hash(d.id || "") % COLORS.length], e = document.createElement("div"); e.className = "cur";
       e.innerHTML = '<svg viewBox="0 0 18 22"><path d="M1 1 L1 18 L5.5 13.5 L9 21 L12 19.6 L8.6 12.4 L15 12.4 Z" fill="' + col + '" stroke="#fff8ea" stroke-width="1.4" stroke-linejoin="round"/></svg><span></span>';
       e.querySelector("span").style.background = col; table.appendChild(e); c = curs[d.id] = { el: e };
+      if (d.self) { e.classList.add("self"); e.querySelector("svg").style.visibility = "hidden"; }   // your real pointer is already there
     }
     c.el.querySelector("span").textContent = d.who || "guest";
     c.el.style.left = px(d.cx) + "px"; c.el.style.top = py(d.cy) + "px"; c.t = Date.now();
