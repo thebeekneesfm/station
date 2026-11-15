@@ -90,6 +90,11 @@
   .pc.set { z-index: 2; cursor: default; filter: none; pointer-events: none; }
   .finished .pc { display: none; }
   .tagname { position: absolute; z-index: 7; pointer-events: none; font: 700 13px/1 "BK Serif", Georgia, serif; background: var(--honey); color: var(--ink); padding: 3px 6px; white-space: nowrap; transform: translate(-50%, -130%); }
+  /* other people's pointers, each with their name */
+  .cur { position: absolute; z-index: 8; pointer-events: none; transition: left .12s linear, top .12s linear; }
+  .cur svg { display: block; width: 18px; height: 22px; filter: drop-shadow(1px 2px 1px rgba(0,0,0,.5)); }
+  .cur span { position: absolute; left: 14px; top: 16px; font: 700 13px/1 "BK Serif", Georgia, serif; color: #fff8ea; padding: 3px 7px 4px; white-space: nowrap; box-shadow: 1px 2px 0 rgba(0,0,0,.35); }
+  .sv .cur svg { width: 30px; height: 36px; } .sv .cur span { left: 24px; top: 28px; font-size: 24px; padding: 4px 10px 6px; }
   .credit { font-size: 16px; color: var(--ink-2); margin-top: 10px; }
   .helpers { font-size: 17px; margin-top: 6px; }
   .won { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9; background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); padding: 20px 28px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.5); max-width: 90%; }
@@ -277,7 +282,7 @@
         p.x = Math.max(X0, Math.min(X1 - 1 / game.cols, (ev.clientX - rc.left - offX - +table.dataset.ox) / S));
         p.y = Math.max(-MY, Math.min(H + MY - H / game.rows, (ev.clientY - rc.top - offY - +table.dataset.oy) / S));
         put(p);
-        var now = Date.now(); if (now - lastSend > 110) { lastSend = now; say("drag", { k: p.k, x: p.x, y: p.y, who: name(), id: me }); }
+        var now = Date.now(); if (now - lastSend > 110) { lastSend = now; var c = spot(ev); say("drag", { k: p.k, x: p.x, y: p.y, who: name(), id: me, cx: c[0], cy: c[1] }); }
       }
       function up() {
         p.el.removeEventListener("pointermove", move); p.el.removeEventListener("pointerup", up); p.el.removeEventListener("pointercancel", up);
@@ -291,6 +296,31 @@
       p.el.addEventListener("pointermove", move); p.el.addEventListener("pointerup", up); p.el.addEventListener("pointercancel", up);
     });
   }
+  // where the pointer is, in board units
+  function spot(ev) { var rc = table.getBoundingClientRect(); return [(ev.clientX - rc.left - +table.dataset.ox) / S, (ev.clientY - rc.top - +table.dataset.oy) / S]; }
+  if (!STREAM) {
+    table.addEventListener("pointermove", function (ev) {
+      if (!game || ev.buttons) return;   // drags send their own messages
+      var now = Date.now(); if (now - lastSend < 120) return; lastSend = now;
+      var c = spot(ev); say("cur", { id: me, who: name(), cx: c[0], cy: c[1] });
+    });
+    table.addEventListener("pointerleave", function () { say("gone", { id: me }); });
+  }
+  // everyone else's pointers: an arrow and their name (or "guest"), in a color of their own
+  var curs = {}, COLORS = ["#c8321f", "#2f5e8a", "#8a3f7a", "#b5651d", "#a33a5b", "#1d3557", "#7a4a12", "#5b3a8a"]   // no greens: they vanish on the green table;
+  function pointer(d) {
+    if (d.cx == null) return;
+    var c = curs[d.id];
+    if (!c) {
+      var col = COLORS[hash(d.id || "") % COLORS.length], e = document.createElement("div"); e.className = "cur";
+      e.innerHTML = '<svg viewBox="0 0 18 22"><path d="M1 1 L1 18 L5.5 13.5 L9 21 L12 19.6 L8.6 12.4 L15 12.4 Z" fill="' + col + '" stroke="#fff8ea" stroke-width="1.4" stroke-linejoin="round"/></svg><span></span>';
+      e.querySelector("span").style.background = col; table.appendChild(e); c = curs[d.id] = { el: e };
+    }
+    c.el.querySelector("span").textContent = d.who || "guest";
+    c.el.style.left = px(d.cx) + "px"; c.el.style.top = py(d.cy) + "px"; c.t = Date.now();
+  }
+  function ungone(id) { var c = curs[id]; if (c) { c.el.remove(); delete curs[id]; } }
+  setInterval(function () { var t = Date.now(); Object.keys(curs).forEach(function (id) { if (t - curs[id].t > 8000) ungone(id); }); }, 2000);
   function apply(d) {
     var p = byK[d.k]; if (!p) return;
     p.x = d.x; p.y = d.y; put(p);
@@ -304,8 +334,10 @@
     ch = sb.channel("puzzle-" + game.id, { config: { broadcast: { self: false }, presence: { key: me } } })
       .on("broadcast", { event: "drag" }, function (m) {
         var d = m.payload || {}, p = byK[d.k]; if (!p || p.placed) return;
-        holding[d.k] = Date.now(); p.x = d.x; p.y = d.y; put(p); p.el.classList.add("theirs"); tag(p, d.who);
+        holding[d.k] = Date.now(); p.x = d.x; p.y = d.y; put(p); p.el.classList.add("theirs"); pointer(d);
       })
+      .on("broadcast", { event: "cur" }, function (m) { pointer(m.payload || {}); })
+      .on("broadcast", { event: "gone" }, function (m) { ungone((m.payload || {}).id); })
       .on("broadcast", { event: "drop" }, function (m) { var d = m.payload || {}, p = byK[d.k]; delete holding[d.k]; if (p) { p.el.classList.remove("theirs"); tag(p, null); } })
       .on("postgres_changes", { event: "UPDATE", schema: "public", table: "puzzle_pieces", filter: "game=eq." + game.id }, function (m) { apply(m.new); })
       .on("postgres_changes", { event: "INSERT", schema: "public", table: "puzzle_games" }, function () { setTimeout(start, 1500); })
