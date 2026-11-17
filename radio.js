@@ -1054,6 +1054,17 @@
         rec.patrons = { members: el.querySelector(".pt-m"), tippers: el.querySelector(".pt-t"), key: null };
         patronRecs.push(rec); paintPatrons(rec);
         if (patronRecs.length === 1) { loadPatrons(); setInterval(loadPatrons, 10 * 60 * 1000); }
+      } else if (type === "presets") {
+        // phone: every station as a push-button right under the radio, so nobody has to scroll to find the others
+        el.classList.add("hot", "t-presets");
+        el.innerHTML = '<div class="ps-head"></div><div class="ps-row" role="list"></div>';
+        el.querySelector(".ps-head").textContent = L.title || WORDS.presetsTitle || "Change the station";
+        rec.presets = { row: el.querySelector(".ps-row"), key: "", cur: "" };
+        rec.presets.row.addEventListener("click", e => {
+          if (state.editing) return;
+          const b = e.target.closest(".ps-btn"); if (!b) return;
+          tuneTo(STATIONS.find(s => s.id === b.dataset.id));
+        });
       } else if (type === "guide") {
         const g = document.createElement("div"); g.className = "guide" + (L.mode === "cards" ? " g-cards" : "");
         el.appendChild(g); el.classList.add("hot");
@@ -1301,6 +1312,23 @@
     }
   }
   /* ---------- channel guide ---------- */
+  function renderPresets(rec) {
+    const P = rec.presets, cur = state.station ? state.station.id : "";
+    const key = [cur, state.on, JSON.stringify(presence.counts), presence.live].join("|");
+    if (P.key === key) return;
+    P.key = key;
+    P.row.innerHTML = STATIONS.map(st => {
+      const n = presence.live ? (presence.counts[st.id] || 0) : 0, sel = st.id === cur;
+      const ear = n > 0 ? `<span class="ps-ear" aria-hidden="true"><svg viewBox="0 0 16 20" width="12" height="15"><path d="M3.2 8.2a5 5 0 1 1 10 0c0 2.6-1.9 3.5-3 4.9-.9 1.2-.8 2.4-1.6 3.4-.9 1.1-2.6 1.3-3.6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M6.3 8.3a2 2 0 1 1 3.9.4c-.2.9-1 1.3-1.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>${n}</span>` : "";
+      return `<button type="button" role="listitem" class="ps-btn${sel ? " sel" : ""}${sel && state.on ? " on" : ""}" data-id="${esc(st.id)}" aria-pressed="${sel}" aria-label="Tune to ${esc(st.name)}${n > 0 ? ", " + n + " listening now" : ""}"><span class="ps-name">${esc(st.name)}</span>${ear}</button>`;
+    }).join("");
+    // keep the station you're on in view
+    if (P.cur !== cur) {
+      P.cur = cur;
+      const b = P.row.querySelector(".ps-btn.sel");
+      if (b) P.row.scrollLeft = Math.max(0, b.offsetLeft - (P.row.clientWidth - b.offsetWidth) / 2);
+    }
+  }
   function renderGuide(rec) {
     const L = rec.L, g = rec.guide, now = Date.now();
     const mode = L.mode || "timeline";
@@ -2249,6 +2277,8 @@
         }
       } else if (type === "guide") {
         renderGuide(rec);
+      } else if (type === "presets") {
+        renderPresets(rec);
       } else if (type === "ad") {
         renderAd(rec);
       } else if (type === "funnies") {
