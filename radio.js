@@ -786,12 +786,14 @@
     initAudio();
     if (ctx && ctx.state === "suspended") ctx.resume();
     state.on = on == null ? !state.on : on;
+    store.set("radioOn", state.on);   // the little radio on the other pages (art/radio-mini) carries on from here
     if (!state.on) { mine.pause(); if (ear) { ear.pause(); earOn = false; ear.muted = true; } clearTimeout(lostTimer); try { navigator.mediaSession.playbackState = "paused"; } catch (e) {} state.phase = "off"; routeRoom(); applyVolume(); render(); presenceUpdate(); return; }
     retune(true);
   }
   function retune(force) {
     const st = stationAtDial(state.dial);
     store.set("dial", state.dial);
+    if (st) store.set("radioStation", st.id);
     if (st === state.station && !force) { render(); return; }
     state.station = st;
     // keep an open page's address (#shop, #comics, #about) so a refresh reopens it; otherwise show the station
