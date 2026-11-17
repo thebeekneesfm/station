@@ -187,6 +187,29 @@
   .pz-on.scr-mode .st { font-size: 22px; } .pz-on.scr-mode .sy { font-size: 18px; } .pz-on.scr-mode .sm { display: none; }
   .pz-on.scr-mode .tunein .head { font-size: 26px; } .pz-on.scr-mode .tunein p { font-size: 18px; }
   /* TV mode: the picture plays inside a 1950s DuMont set cut from a vintage magazine ad (the same set as on the front page) */
+  /* TV: what's on runs along the top above the set, the masthead shrinks to a small card at the top right,
+     and the right-hand column is mostly the puzzle and the sponsors */
+  .scr-mode.tv-mode .mast { left: 1180px; right: auto; width: 700px; top: 24px; height: 126px; padding: 0 26px; transform: rotate(.3deg); }
+  .scr-mode.tv-mode .logo { font-size: 60px; }
+  .scr-mode.tv-mode .tag, .scr-mode.tv-mode .watch div { display: none; }
+  .scr-mode.tv-mode .watch b { font-size: 28px; }
+  .scr-mode.tv-mode .now { z-index: 4; left: 40px; top: 24px; width: 1110px; height: 126px; padding: 12px 28px; transform: rotate(-.3deg);
+    display: grid; grid-template-columns: minmax(0, 1fr) 330px; grid-template-rows: auto auto auto; column-gap: 28px; align-content: center; }
+  .scr-mode.tv-mode .kicker { grid-column: 1; grid-row: 1; font-size: 19px; }
+  .scr-mode.tv-mode .series { grid-column: 1; grid-row: 2; font-size: 40px; -webkit-line-clamp: 1; margin-top: 2px; }
+  .scr-mode.tv-mode .title { grid-column: 1; grid-row: 3; font-size: 27px; -webkit-line-clamp: 1; margin-top: 2px; }
+  .scr-mode.tv-mode .date, .scr-mode.tv-mode .then, .scr-mode.tv-mode .left { grid-column: 2; font-size: 20px; text-align: right; margin: 0; -webkit-line-clamp: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
+  .scr-mode.tv-mode .date { grid-row: 1; } .scr-mode.tv-mode .then { grid-row: 2; align-self: center; } .scr-mode.tv-mode .left { grid-row: 3; }
+  .scr-mode.tv-mode .pzc { left: 1180px; top: 176px; width: 700px; height: 470px; padding: 14px 24px; transform: rotate(-.4deg); }
+  .scr-mode.tv-mode .pzc .pzh { font-size: 32px; }
+  .scr-mode.tv-mode .pzc .pzlive { width: 100%; height: 336px; }
+  .scr-mode.tv-mode .pzc .pzs { font-size: 21px; } .scr-mode.tv-mode .pzc .pzu { font-size: 20px; }
+  .scr-mode.tv-mode .spons, .scr-mode.tv-mode .tunein { left: 1180px; top: 668px; width: 700px; height: 290px; padding: 14px 24px; transform: rotate(.4deg); }
+  .scr-mode.tv-mode .spons .sh { font-size: 32px; margin-bottom: 10px; }
+  .scr-mode.tv-mode .sbody img { max-width: 50%; }
+  .scr-mode.tv-mode .st { font-size: 28px; } .scr-mode.tv-mode .sy { font-size: 22px; } .scr-mode.tv-mode .sm { display: block; font-size: 19px; }
+  .scr-mode.tv-mode .tunein .head { font-size: 32px; } .scr-mode.tv-mode .tunein p { font-size: 22px; }
+  html.tv-mode:not(.pz-on) .spons, html.tv-mode:not(.pz-on) .tunein { top: 176px; height: 782px; }
   .tvset { position: absolute; z-index: 2; display: none; pointer-events: none; filter: drop-shadow(6px 8px 0 rgba(0,0,0,.3)); }
   .tv-mode .tvset { display: block; }
   .tv-mode .screen { box-shadow: none; }
@@ -287,7 +310,7 @@
      where the set sits on the 1920 x 1080 stage, and where its screen is */
   var SETS = {
     admiral: { src: "art/screen/tv-admiral.webp", set: [234, 166, 952, 800], scr: [404, 213, 718, 545] },  // Admiral 21", LIFE, Nov. 3 1952
-    bendix:  { src: "art/screen/tv-bendix.webp",  set: [-199, 85, 1492, 1178], scr: [260, 206, 849, 693], fill: 1 },  // Bendix console, LIFE, Oct. 5 1953 (big: runs off the left edge and under the ticker)
+    bendix:  { src: "art/screen/tv-bendix.webp",  set: [-349, 85, 1492, 1178], scr: [110, 206, 849, 693], fill: 1 },  // Bendix console, LIFE, Oct. 5 1953 (big: runs off the left edge and under the ticker)
     bendixmid: { src: "art/screen/tv-bendix.webp",  set: [-53, 93, 1255, 991], scr: [333, 195, 715, 583], fill: 1 },     // the same, a little smaller, knobs showing
     dumont:  { src: "art/screen/tv-set.webp",     set: [229, 162, 963, 810], scr: [396, 262, 632, 487] }   // DuMont, from the front page
   };
