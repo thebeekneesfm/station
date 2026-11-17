@@ -99,6 +99,22 @@
   .sv .cur svg { width: 30px; height: 36px; } .sv .cur span { left: 24px; top: 28px; font-size: 24px; padding: 4px 10px 6px; }
   .credit { font-size: 16px; color: var(--ink-2); margin-top: 10px; }
   .helpers { font-size: 17px; margin-top: 6px; }
+  /* the leaderboard */
+  .lb-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px 36px; }
+  .board-lb h3 { margin: 18px 0 6px; font: 700 24px/1.1 "BK Script", "BK Serif", Georgia, serif; word-spacing: .12em; }
+  .lb { list-style: none; margin: 0; padding: 0; counter-reset: n; }
+  .lb li { counter-increment: n; display: grid; grid-template-columns: 2.2em minmax(0, 1fr) auto; align-items: baseline; gap: 8px; padding: 6px 0; margin: 0; border-bottom: 1px dashed rgba(31,27,23,.3); font-size: 19px; }
+  .lb li::before { content: counter(n) "."; font-weight: 700; color: var(--red); text-align: right; }
+  .lb li:nth-child(-n+3)::before { content: "\2605"; color: #b8860b; font-size: 1.1em; }
+  .lb .nm { font-weight: 700; overflow-wrap: anywhere; }
+  .lb .ct { color: var(--ink-2); font-size: 17px; white-space: nowrap; }
+  .lb li.me .nm { color: var(--red); }
+  .lb-empty { font-style: italic; color: var(--ink-2); }
+  .lb-note { font-size: 16px; color: var(--ink-2); margin-top: 10px; }
+  .fins { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .fin { margin: 0; font-size: 16px; line-height: 1.35; }
+  .fin img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; box-shadow: 2px 3px 0 rgba(0,0,0,.25); margin-bottom: 6px; }
+  .fin b { display: block; font-size: 17px; }
   .won { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 9; background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); padding: 20px 28px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,.5); max-width: 90%; }
   .won h2 { margin: 0; border: 0; padding: 0; font-size: 40px; }
   .won p { margin: 8px 0 0; }
@@ -120,6 +136,7 @@
   .sv .card .meter i { display: block; height: 100%; background: var(--red); width: 0; transition: width .6s; }
   .sv .top { position: absolute; right: 70px; top: 70px; z-index: 8; background: url("art/newsprint.jpg") 0 0 / 640px 640px, var(--paper); padding: 14px 20px; font-size: 24px; line-height: 1.35; box-shadow: 0 6px 18px rgba(0,0,0,.4); transform: rotate(1.5deg); min-width: 260px; }
   .sv .top b { display: block; font: 700 30px/1.1 "BK Script", "BK Serif", Georgia, serif; margin-bottom: 4px; }
+  .sv .top b.st-all { font-size: 24px; margin-top: 10px; }
   body.bare .sv .card, body.bare .sv .top { display: none !important; }
   body.bare .sv .scroller { left: 0; top: 0; width: 1920px; height: 1080px; box-shadow: none; }
   body.bare::before { background: #34503f; }
@@ -145,6 +162,15 @@
     <div class="scroller" id="scroller"><div class="table" id="table"><div class="board" id="board"><img id="ghost" alt="" referrerpolicy="no-referrer"></div></div></div>
     <p class="helpers" id="helpers"></p>
     <p class="credit" id="credit"></p>
+    <section class="board-lb" id="lb" aria-labelledby="lbh" hidden>
+      <h2 id="lbh">The leaderboard</h2>
+      <div class="lb-cols">
+        <div><h3>This puzzle</h3><ol class="lb" id="lbCur"></ol></div>
+        <div><h3>All-time</h3><ol class="lb" id="lbAll"></ol><p class="lb-note">Pieces placed, and how many finished puzzles each person helped with.</p></div>
+      </div>
+      <div id="lbFinWrap" hidden><h3>Finished puzzles</h3><div class="fins" id="lbFin"></div></div>
+      <p class="lb-note">Put your Twitch username in the box above to get on the board. Pieces placed without a name count as "guest" and stay off it.</p>
+    </section>
   </main>
 </div>
 <div class="sv" id="sv">
@@ -415,7 +441,47 @@
     $("spct").textContent = done + " / " + all + " pieces";
     $("smeter").style.width = (all ? 100 * done / all : 0) + "%";
     var st = $("stop"); st.hidden = !top.length;
-    if (top.length) { st.innerHTML = "<b>Top helpers</b>"; top.forEach(function (h) { var d = document.createElement("div"); d.textContent = h[0] + " · " + h[1]; st.appendChild(d); }); }
+    if (top.length) {
+      st.innerHTML = "<b>Top helpers</b>"; top.forEach(function (h) { var d = document.createElement("div"); d.textContent = h[0] + " · " + h[1]; st.appendChild(d); });
+      if (lb.data && lb.data.alltime && lb.data.alltime.length) {
+        var a = document.createElement("b"); a.className = "st-all"; a.textContent = "All-time"; st.appendChild(a);
+        lb.data.alltime.slice(0, 3).forEach(function (h) { var d = document.createElement("div"); d.textContent = h.name + " · " + h.pieces; st.appendChild(d); });
+      }
+    }
+    lbSoon();
+  }
+  /* the leaderboard: this puzzle, all-time and the finished puzzles (puzzle_board() in the database) */
+  var lb = { data: null, t: 0, last: 0 };
+  function lbSoon() { if (Date.now() - lb.last > 8000) { lb.last = Date.now(); loadBoard(); } else { clearTimeout(lb.t); lb.t = setTimeout(function () { lb.last = Date.now(); loadBoard(); }, 8000); } }
+  function loadBoard() {
+    sb.rpc("puzzle_board").then(function (res) { if (res.data) { lb.data = res.data; paintBoard(); } });
+  }
+  function paintBoard() {
+    var d = lb.data; if (!d || STREAM) return;
+    var mine = (name() || "").toLowerCase();
+    var fill = function (el, list, ct) {
+      el.innerHTML = "";
+      list = list.filter(function (h) { return h.name && !BKJ.rude(h.name); });   // never show a rude name, however it got in
+      if (!list.length) { el.innerHTML = '<li class="lb-empty" style="display:block">Nobody yet. Be the first!</li>'; return; }
+      list.forEach(function (h) {
+        var li = document.createElement("li"); if (mine && h.name.toLowerCase() === mine) li.className = "me";
+        var n = document.createElement("span"); n.className = "nm"; n.textContent = h.name;
+        var c = document.createElement("span"); c.className = "ct"; c.textContent = ct(h);
+        li.appendChild(n); li.appendChild(c); el.appendChild(li);
+      });
+    };
+    fill($("lbCur"), d.current || [], function (h) { return h.pieces + (h.pieces === 1 ? " piece" : " pieces"); });
+    fill($("lbAll"), d.alltime || [], function (h) { return h.pieces + " pieces" + (h.puzzles ? " · " + h.puzzles + (h.puzzles === 1 ? " puzzle" : " puzzles") : ""); });
+    var fins = d.finished || [], box = $("lbFin"); $("lbFinWrap").hidden = !fins.length; box.innerHTML = "";
+    fins.forEach(function (f) {
+      var fig = document.createElement("figure"); fig.className = "fin";
+      var im = document.createElement("img"); im.loading = "lazy"; im.alt = f.title + " by " + f.artist; im.src = "art/puzzle/paint/" + f.img + "-small.jpg"; fig.appendChild(im);
+      var cap = document.createElement("figcaption"), t = document.createElement("b"); t.textContent = f.title; cap.appendChild(t);
+      var when = new Date(f.done_at).toLocaleDateString([], { month: "long", day: "numeric" });
+      cap.appendChild(document.createTextNode("Finished " + when + (f.finished_by ? ". Last piece: " + f.finished_by : "") + (f.top ? ". Most pieces: " + f.top : "") + "."));
+      fig.appendChild(cap); box.appendChild(fig);
+    });
+    $("lb").hidden = false;
   }
   function finished() {
     table.classList.add("finished");
@@ -425,12 +491,21 @@
     w.innerHTML = "<h2>Puzzle solved!</h2><p></p><p class='small'>The next painting comes out in about 5 minutes.</p>";
     w.querySelector("p").textContent = top.length ? "Thank you, " + top.map(function (h) { return h[0]; }).join(", ") + " and everyone who helped." : "Thank you to everyone who helped.";
     table.appendChild(w);
+    // who put in the last piece (the database notes it the moment the puzzle is done)
+    sb.from("puzzle_games").select("finished_by").eq("id", game.id).then(function (res) {
+      var by = res.data && res.data[0] && res.data[0].finished_by; if (!by) return;
+      var l = document.createElement("p"); l.className = "last"; l.textContent = "The last piece went in from " + by + "!";
+      w.insertBefore(l, w.querySelector(".small"));
+    });
+    lbSoon();
   }
 
   var resizeT; window.addEventListener("resize", function () { clearTimeout(resizeT); resizeT = setTimeout(function () { if (!game) return; if (STREAM) build(pieces.map(function (p) { return { k: p.k, x: p.x, y: p.y, placed: p.placed, placed_by: p.by, grp: p.grp }; })); else setZoom(zoom); }, 250); });
   if (Q.get("test")) window.bkPz = { pieces: function () { return pieces; }, px: px, py: py };
   start();
-  setInterval(start, 30000);   // picks up the next painting, and nudges the lineup along after a finish
+  setInterval(start, 30000);
+  setInterval(loadBoard, 60000);
+  $("who").addEventListener("change", paintBoard);   // picks up the next painting, and nudges the lineup along after a finish
 })();
 </script>
 <script src="art/nav/nav.js?v=11"></script>
