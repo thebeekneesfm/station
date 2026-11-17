@@ -494,7 +494,8 @@
       if (typeof centerDial === "function") centerDial(cur);   // the buttons got wider: keep the lit one in view
     };
     var eyesTrack = function () { if (eyes.ch && eyes.last !== cur.id) { eyes.last = cur.id; eyes.ch.track({ ch: cur.id }).catch(function () {}); } };
-    (function () {
+    // config.js loads after this file, so wait for the page to finish loading before connecting
+    var eyesStart = function () {
       var c = (window.RADIO_CONFIG || {}).listeners || {};
       if (/[?&]fakewatchers\b/.test(location.search)) { setTimeout(function () { eyes.counts = { sitcoms: 5, unknown: 3, kids: 2, crime: 1 }; paintEyes(); }, 500); return; }
       if (!c.url || !c.key) return;
@@ -513,7 +514,8 @@
       var sc = document.querySelector("script[data-supabase]");
       if (!sc) { sc = document.createElement("script"); sc.dataset.supabase = "1"; sc.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"; document.head.appendChild(sc); }
       sc.addEventListener("load", go);
-    })();
+    };
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", eyesStart); else eyesStart();
     var osd = $(".scr-osd"), osdT = 0;
     var tune = function (c) {
       cur = c; store.set("tv.ch", c.id);
