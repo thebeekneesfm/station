@@ -2168,7 +2168,15 @@
             t.querySelector(".mq-run").style.animationDuration = Math.max(20, key.length * 0.22) + "s";
           }
         }
-        else if (el.firstChild.textContent !== s) { el.firstChild.textContent = s; fitText(rec); }
+        else if (L.bind === "station.listeners" && !s) {
+          // no sponsor line: the little ear and how many are listening to this station right now, at the top of what's playing
+          const t = el.firstChild, n = presence.live && state.station ? (presence.counts[state.station.id] || 0) : 0;
+          if (t.dataset.ear !== String(n)) {
+            t.dataset.ear = String(n);
+            t.innerHTML = n > 0 ? '<span class="np-ear" title="' + (n === 1 ? "1 person" : n + " people") + ' listening now"><svg viewBox="0 0 16 20" width="0.8em" height="1em" aria-hidden="true"><path d="M3.2 8.2a5 5 0 1 1 10 0c0 2.6-1.9 3.5-3 4.9-.9 1.2-.8 2.4-1.6 3.4-.9 1.1-2.6 1.3-3.6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M6.3 8.3a2 2 0 1 1 3.9.4c-.2.9-1 1.3-1.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> ' + n + " listening</span>" : "";
+          }
+        }
+        else if (el.firstChild.textContent !== s) { el.firstChild.dataset.ear = ""; el.firstChild.textContent = s; fitText(rec); }
         // "below": sit just under another text piece's actual words (e.g. the air date under a one- or two-line title)
         if (L.below && !state.editing) {
           const a = els.get(L.below);

@@ -5,6 +5,41 @@
 (function () {
   "use strict";
   var MODE = document.body.dataset.mode;           // "tv" or "drivein"
+  // who's watching: a little eye and a count, kept by a free live connection (the same one the radio's listener count uses)
+  var EYE = '<svg viewBox="0 0 22 14" width="17" height="11" aria-hidden="true"><path d="M1.5 7C4 2.8 7.3 1 11 1s7 1.8 9.5 6c-2.5 4.2-5.8 6-9.5 6S4 11.2 1.5 7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="11" cy="7" r="3" fill="currentColor"/></svg>';
+  function watchers(room, fake, onCounts) {
+    var w = { ch: null, me: Math.random().toString(36).slice(2), last: null, key: null };
+    w.track = function (key) { w.key = key; if (w.ch && w.last !== key) { w.last = key; w.ch.track({ ch: key }).catch(function () {}); } };
+    var start = function () {   // config.js loads after this file, so this waits for the page to finish loading
+      var c = (window.RADIO_CONFIG || {}).listeners || {};
+      if (/[?&]fakewatchers\b/.test(location.search)) { setTimeout(function () { onCounts(fake); }, 500); return; }
+      if (!c.url || !c.key) return;
+      var go = function () {
+        try {
+          var client = window.supabase.createClient(c.url, c.key);
+          w.ch = client.channel(room, { config: { presence: { key: w.me } } });
+          w.ch.on("presence", { event: "sync" }, function () {
+            var st = w.ch.presenceState(), counts = {};
+            Object.keys(st).forEach(function (k) { var l = st[k], p = l[l.length - 1] || {}; if (p.ch) counts[p.ch] = (counts[p.ch] || 0) + 1; });
+            onCounts(counts);
+          }).subscribe(function (status) { if (status === "SUBSCRIBED") { w.last = null; if (w.key) w.track(w.key); } });
+        } catch (e) {}
+      };
+      if (window.supabase && window.supabase.createClient) return go();
+      var sc = document.querySelector("script[data-supabase]");
+      if (!sc) { sc = document.createElement("script"); sc.dataset.supabase = "1"; sc.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"; document.head.appendChild(sc); }
+      sc.addEventListener("load", go);
+    };
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start); else start();
+    return w;
+  }
+  // the count at the top of the now-playing card
+  function paintNpEye(n) {
+    var ne = document.querySelector(".np-eye"); if (!ne) return;
+    if (ne.dataset.n === String(n)) return; ne.dataset.n = String(n);
+    ne.innerHTML = n > 0 ? EYE + "<span>" + n + " watching</span>" : "";
+    ne.title = n > 0 ? (n === 1 ? "1 person watching now" : n + " people watching now") : "";
+  }
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var esc = function (s) { var d = document.createElement("div"); d.textContent = s == null ? "" : s; return d.innerHTML; };
   var store = {
@@ -481,8 +516,7 @@
     window.BK_CHAT_PLACE = function () { return "watching " + cur.name; };
     // who's watching: a little eye and how many are on each channel right now (you included), beside the
     // channel's name on the tuner and in the guide. Uses the same free live connection as the radio's listener count.
-    var eyes = { counts: {}, ch: null, me: Math.random().toString(36).slice(2), last: null };
-    var EYE = '<svg viewBox="0 0 22 14" width="17" height="11" aria-hidden="true"><path d="M1.5 7C4 2.8 7.3 1 11 1s7 1.8 9.5 6c-2.5 4.2-5.8 6-9.5 6S4 11.2 1.5 7z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="11" cy="7" r="3" fill="currentColor"/></svg>';
+    var eyes = { counts: {} };
     var paintEyes = function () {
       document.querySelectorAll(".ch[data-id], .tg-name[data-id]").forEach(function (b) {
         var n = eyes.counts[b.dataset.id] || 0, e = b.querySelector(".eye");
@@ -491,37 +525,18 @@
         var t = n === 1 ? "1 person watching now" : n + " people watching now";
         if (e.dataset.n !== String(n)) { e.dataset.n = n; e.innerHTML = EYE + "<b>" + n + "</b>"; e.title = t; e.setAttribute("aria-label", t); }
       });
+      paintNpEye(eyes.counts[cur.id] || 0);
       if (typeof centerDial === "function") centerDial(cur);   // the buttons got wider: keep the lit one in view
     };
-    var eyesTrack = function () { if (eyes.ch && eyes.last !== cur.id) { eyes.last = cur.id; eyes.ch.track({ ch: cur.id }).catch(function () {}); } };
-    // config.js loads after this file, so wait for the page to finish loading before connecting
-    var eyesStart = function () {
-      var c = (window.RADIO_CONFIG || {}).listeners || {};
-      if (/[?&]fakewatchers\b/.test(location.search)) { setTimeout(function () { eyes.counts = { sitcoms: 5, unknown: 3, kids: 2, crime: 1 }; paintEyes(); }, 500); return; }
-      if (!c.url || !c.key) return;
-      var go = function () {
-        try {
-          var client = window.supabase.createClient(c.url, c.key);
-          eyes.ch = client.channel("tv", { config: { presence: { key: eyes.me } } });
-          eyes.ch.on("presence", { event: "sync" }, function () {
-            var st = eyes.ch.presenceState(), counts = {};
-            Object.keys(st).forEach(function (k) { var l = st[k], p = l[l.length - 1] || {}; if (p.ch) counts[p.ch] = (counts[p.ch] || 0) + 1; });
-            eyes.counts = counts; paintEyes();
-          }).subscribe(function (status) { if (status === "SUBSCRIBED") { eyes.last = null; eyesTrack(); } });
-        } catch (e) {}
-      };
-      if (window.supabase && window.supabase.createClient) return go();
-      var sc = document.querySelector("script[data-supabase]");
-      if (!sc) { sc = document.createElement("script"); sc.dataset.supabase = "1"; sc.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"; document.head.appendChild(sc); }
-      sc.addEventListener("load", go);
-    };
-    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", eyesStart); else eyesStart();
+    var tvWatch = watchers("tv", { sitcoms: 5, unknown: 3, kids: 2, crime: 1 }, function (counts) { eyes.counts = counts; paintEyes(); });
+    var eyesTrack = function () { tvWatch.track(cur.id); };
+    eyesTrack();
     var osd = $(".scr-osd"), osdT = 0;
     var tune = function (c) {
       cur = c; store.set("tv.ch", c.id);
       if (typeof fsName !== "undefined" && fsName) fsName.textContent = c.num + "  " + c.name;
       if (location.hash !== "#" + c.id) history.replaceState(null, "", "#" + c.id);
-      state.src = ""; guideKey = ""; tick(true); eyesTrack();
+      state.src = ""; guideKey = ""; tick(true); eyesTrack(); paintEyes();
       if (osd) {
         osd.innerHTML = "<small>" + esc(c.name) + "</small>"; osd.hidden = false; osd.classList.remove("fade");
         clearTimeout(osdT); osdT = setTimeout(function () { osd.classList.add("fade"); osdT = setTimeout(function () { osd.hidden = true; }, 450); }, 2200);
@@ -627,6 +642,8 @@
   /* ---------------- Drive-in page ---------------- */
   if (MODE === "drivein") {
     window.BK_CHAT_PLACE = "at the Drive-In";
+    // how many cars are in the lot: everyone on the Drive-In page right now
+    watchers("drivein", { drivein: 7 }, function (counts) { paintNpEye(counts.drivein || 0); }).track("drivein");
     where = function (ms) { return driveAt(ms || Date.now()); };
     var LABEL = { welcome: "Welcome", cartoon: "A cartoon to start", trailer: "Coming attractions", serial: "Tonight\u2019s serial chapter", intermission: "Intermission", feature: "Feature presentation" };
     // the "see you Saturday" sign over the coming attractions while the Drive-In is closed
