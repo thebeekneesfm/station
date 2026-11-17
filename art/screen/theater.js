@@ -26,10 +26,10 @@
   function liveChannels(ms) {
     var CH = (window.TVCH || []).filter(function (c) { return c.episodes && c.episodes.length && inSeason(c.season, ms); });
     // a seasonal channel goes first from its "front" date (or as soon as it's on, if it has none), so it's where new viewers land
-    // a seasonal channel's own commercials (the Christmas ones) join the Commercial Break channel while it's on
+    // a seasonal channel's own commercials (the Christmas ones) join every channel's breaks while it's on
     var extra = [];
-    CH.forEach(function (c) { if (c.season && c.ads) c.ads.forEach(function (a) { extra.push(Object.assign({ series: "Commercial" }, a)); }); });
-    if (extra.length) CH = CH.map(function (c) { return c.allAds ? Object.assign({}, c, { episodes: c.episodes.concat(extra) }) : c; });
+    CH.forEach(function (c) { if (c.season && c.ads) c.ads.forEach(function (a) { extra.push(a); }); });
+    if (extra.length) CH = CH.map(function (c) { return Object.assign({}, c, { seasonAds: extra }); });
     var lead = function (c) { return c.season && inSeason({ from: c.season.front || c.season.from, to: c.season.to }, ms); };
     return CH.filter(lead).concat(CH.filter(function (c) { return !lead(c); }).sort(function (a, b) { return (a.num || 0) - (b.num || 0); }));
   }
@@ -46,9 +46,26 @@
       var t0 = 0; out.forEach(function (x) { x.start = t0; t0 += Number(x.length) || 0; });
       return { ch: ch, list: out, total: t0 };
     }
-    // commercials only play on the Commercial Break channel; everywhere else a short station ID sits between shows
-    eps.forEach(function (e) {
+    // a station break between shows, like real TV: one or two vintage commercials, then the station ID.
+    // Each channel deals its commercials from its own shuffled deck, so one doesn't come back until the
+    // whole deck has played; the Christmas channel opens every break with one of its own Christmas ads,
+    // and in season the Christmas ads are shuffled into every channel's deck
+    var pool = ads.concat(ch.seasonAds || []), deck = [], d = 0, round = 0;
+    function deal() {
+      if (d >= deck.length) { deck = shuffle(pool, hash(ch.id + "deck" + round++)); d = 0; }
+      return deck[d++];
+    }
+    eps.forEach(function (e, k) {
       out.push(Object.assign({ kind: "show" }, e));
+      // no commercials in the Home Movies (it's music and family films, not a broadcast, and it's Sleepy Sundays);
+      // between short films (newsreels, under 10 minutes) a commercial only every third break
+      if (!ch.radio && (pool.length || (ch.ads && ch.ads.length))) {
+        var n = (Number(e.length) || 0) < 600 ? (k % 3 === 2 ? 1 : 0) : 1 + (k % 2), used = {};
+        for (var i = 0; i < n; i++) {
+          var a = i === 0 && ch.ads && ch.ads.length ? ch.ads[Math.floor(r() * ch.ads.length)] : (pool.length ? deal() : null);
+          if (!a || used[a.src]) continue; used[a.src] = 1; out.push(Object.assign({ kind: "ad" }, a));
+        }
+      }
       out.push(slate("id", 6, { channel: ch }));
     });
     var t = 0; out.forEach(function (x) { x.start = t; t += Number(x.length) || 0; });
