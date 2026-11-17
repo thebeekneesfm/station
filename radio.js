@@ -1322,7 +1322,7 @@
       const sel = state.station === st;
       const n = presence.live ? (presence.counts[st.id] || 0) : 0;
       const cnt = "";   // the list view keeps its per-station counts off; the cards show the little ear instead
-      // a little ear and how many are tuned in right now (you included), top right of the station's card
+      // a little ear and how many are tuned in right now (you included), right after the station's name
       const ear = n > 0 ? `<span class="gc-ear" title="${n === 1 ? "1 person listening now" : n + " people listening now"}" aria-hidden="true">` +
         `<svg viewBox="0 0 16 20" width="15" height="19"><path d="M3.2 8.2a5 5 0 1 1 10 0c0 2.6-1.9 3.5-3 4.9-.9 1.2-.8 2.4-1.6 3.4-.9 1.1-2.6 1.3-3.6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>` +
         `<path d="M6.3 8.3a2 2 0 1 1 3.9.4c-.2.9-1 1.3-1.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>${n}</span>` : "";
@@ -1333,12 +1333,12 @@
         while (st.tracks[ni].ad && guard++ < 5) { at2 += st.tracks[ni].length * 1000; ni = (ni + 1) % st.tracks.length; }
         const nx = st.tracks[ni];
         h += `<button type="button" class="g-row g-card${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}: ${esc(cur.track.series)}, ${esc(cur.track.title)}${n > 0 ? ". " + n + " listening now" : ""}" title="Now: ${esc(cur.track.series)}, ${esc(cur.track.title)}\nNext at ${hhmm(at2)}: ${esc(nx.series)}${nx.title ? ", " + esc(nx.title) : ""}">` +
-             `<span class="gc-top"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${sel && state.on ? '<span class="gc-live">On now</span>' : ""}${ear}</span>` +
+             `<span class="gc-top"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${ear}${sel && state.on ? '<span class="gc-live">On now</span>' : ""}</span>` +
              `<span class="g-now"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}</span></button>`;
         return;
       }
       h += `<button type="button" class="g-row${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}">`;
-      h += `<span class="g-lab"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span><span class="g-count">${esc(cnt)}</span></span>`;
+      h += `<span class="g-lab"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${ear}<span class="g-count">${esc(cnt)}</span></span>`;
       if (mode === "timeline") {
         h += `<span class="g-line">`;
         if (st.music) {
