@@ -40,6 +40,10 @@
   .intro { padding: 22px clamp(18px, 4vw, 36px) 20px; }
   h1 { margin: 0; font: 700 clamp(40px, 7vw, 54px)/1.1 "BK Script", "BK Serif", Georgia, serif; word-spacing: .18em; text-wrap: balance; }
   .intro p { margin: 10px 0 0; max-width: 70ch; color: var(--ink-2); }
+  /* the station logo beside the shop's name */
+  .intro { display: flex; align-items: center; gap: clamp(14px, 3vw, 30px); }
+  .intro > div { min-width: 0; }
+  .intro-logo { flex: none; width: clamp(84px, 14vw, 150px); height: auto; }
   a:focus-visible, button:focus-visible { outline: 2px solid var(--honey); outline-offset: 3px; }
   /* each ad is a clipping: cream border, a little shadow, a slight tilt that straightens on hover */
   /* newsprint panels: ragged, hand-cut edges instead of ruler-straight ones */
@@ -152,8 +156,11 @@
     <nav class="links" aria-label="Pages"><a href="index.html">Back to the radio</a><a href="tv.html">TV</a><a href="drive-in.html">Drive-In</a><a href="comics.html">Comics</a><a href="magazines.html">Magazines</a><a href="ads.html">Vintage ads</a><a href="about.html">About</a><a href="postcard.html">Send a Card</a><a href="puzzles.html">Daily Puzzle</a><a href="guestbook.html">Guest Book</a><a href="shop.html" aria-current="page">Shop</a></nav>
   </header>
   <section class="paper intro">
-    <h1>The Bee's Knees shop</h1>
-    <p>Mugs, pin buttons and journals made from real vintage ads, pulp covers and antique book art. No generative AI, just the real thing. Every order helps keep the station on the air.</p>
+    <img class="intro-logo" src="art/shop/station-logo.webp" width="180" height="240" alt="The Bee's Knees logo: a bee perched on a radio tower, sending out the signal">
+    <div>
+      <h1>The Bee's Knees shop</h1>
+      <p>Station merch with our hand-drawn bee-on-the-radio-tower logo, plus mugs, pin buttons and journals made from real vintage ads, pulp covers and antique book art. No generative AI, just the real thing. Every order helps keep the station on the air.</p>
+    </div>
   </section>
   <main id="shelves" aria-live="polite"></main>
   <section class="paper note">
@@ -163,7 +170,7 @@
 <button type="button" id="cartBtn" class="btn" hidden>Cart <b id="cartN">0</b></button>
 <div class="sheet" id="pdSheet" role="dialog" aria-modal="true" aria-label="Product" hidden><div class="card"><button type="button" class="x" aria-label="Close">&times;</button><div class="pd"></div></div></div>
 <div class="sheet" id="cartSheet" role="dialog" aria-modal="true" aria-label="Your cart" hidden><div class="card cart"><button type="button" class="x" aria-label="Close">&times;</button><h3>Your cart</h3><div class="lines"></div><div class="tot"><span>Subtotal</span><span class="sum"></span></div><p class="fine">Shipping and any tax are added at checkout.</p><button type="button" class="btn go">Check out</button></div></div>
-<script src="config.js?v=20261116m"></script>
+<script src="config.js?v=20261117s"></script>
 <script src="art/shop/shop.js?v=2"></script>
 <script src="ticker.js?v=4"></script>
 <script src="socials.js?v=3"></script>

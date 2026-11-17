@@ -45,7 +45,7 @@ window.RADIO_CONFIG = {
     "token": "ptkn_0f3fee82-488e-43e7-8820-8fb0f2ea8183",
     "shopUrl": "https://the-bees-knees-byn-shop.fourthwall.com",
     "currency": "USD",
-    "collections": ["mugs", "journals", "buttons"]
+    "collections": ["station-merch", "mugs", "journals", "buttons"]
   },
   "listeners": {
     "url": "https://rjpztitddezmkzeiteaa.supabase.co",
