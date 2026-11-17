@@ -109,6 +109,13 @@
   .info .desc a { color: var(--ink); }
   .opts { display: grid; gap: 6px; margin: 12px 0; }
   .opts label { font-weight: 700; font-size: 17px; }
+  .opts .lab { font-weight: 700; font-size: 17px; }
+  .opts .lab b { font-weight: 400; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 6px; }
+  .swatch { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 6px; min-height: 44px; border: 2px solid rgba(31,27,23,.3); background: var(--cream); color: var(--ink); font: 16px "BK Serif", Georgia, serif; cursor: pointer; }
+  .swatch i { width: 26px; height: 26px; border-radius: 50%; box-shadow: inset 0 0 0 1.5px rgba(31,27,23,.35); }
+  .swatch[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); font-weight: 700; }
+  .thumbs[hidden] { display: none; }
   .opts select { font: 18px "BK Serif", Georgia, serif; padding: 10px; background: var(--cream); border: 2px solid var(--ink); color: var(--ink); min-height: 46px; }
   .buy { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin: 14px 0 6px; }
   .msg { min-height: 1.4em; font-size: 17px; color: var(--ink-2); }
@@ -171,7 +178,7 @@
 <div class="sheet" id="pdSheet" role="dialog" aria-modal="true" aria-label="Product" hidden><div class="card"><button type="button" class="x" aria-label="Close">&times;</button><div class="pd"></div></div></div>
 <div class="sheet" id="cartSheet" role="dialog" aria-modal="true" aria-label="Your cart" hidden><div class="card cart"><button type="button" class="x" aria-label="Close">&times;</button><h3>Your cart</h3><div class="lines"></div><div class="tot"><span>Subtotal</span><span class="sum"></span></div><p class="fine">Shipping and any tax are added at checkout.</p><button type="button" class="btn go">Check out</button></div></div>
 <script src="config.js?v=20261117s"></script>
-<script src="art/shop/shop.js?v=2"></script>
+<script src="art/shop/shop.js?v=3"></script>
 <script src="ticker.js?v=4"></script>
 <script src="socials.js?v=3"></script>
 <script src="art/nav/nav.js?v=11"></script>

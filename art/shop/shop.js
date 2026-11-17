@@ -190,34 +190,77 @@
     var pics = (p.images || []).map(function (i) { return i.transformedUrl || i.url; });
     var vs = p.variants || [];
     var multi = vs.length > 1;
+    // products that come in colors (the shirts): color swatches and a size list, and the pictures follow the color
+    var colorOf = function (v) { return v.attributes && v.attributes.color && v.attributes.color.name; };
+    var sizeOf = function (v) { return v.attributes && v.attributes.size && v.attributes.size.name; };
+    var colors = [], sizes = [], sw = {};
+    vs.forEach(function (v) {
+      var c = colorOf(v), z = sizeOf(v);
+      if (c && colors.indexOf(c) < 0) { colors.push(c); sw[c] = v.attributes.color.swatch || "#ccc"; }
+      if (z && sizes.indexOf(z) < 0) sizes.push(z);
+    });
+    var byColor = colors.length > 1;
+    var picsFor = function (c) {
+      var v = vs.find(function (x) { return colorOf(x) === c && x.images && x.images.length; });
+      return v ? v.images.map(function (i) { return i.transformedUrl || i.url; }) : pics;
+    };
+    var opts = "";
+    if (byColor) {
+      opts = '<div class="opts"><span class="lab" id="pdColLab">Color: <b id="pdColName">' + esc(colors[0]) + '</b></span><div class="swatches" role="group" aria-labelledby="pdColLab">' +
+        colors.map(function (c, i) { return '<button type="button" class="swatch" data-c="' + esc(c) + '" aria-pressed="' + (i ? "false" : "true") + '" title="' + esc(c) + '"><i style="background:' + esc(sw[c]) + '"></i><span>' + esc(c) + "</span></button>"; }).join("") + "</div>" +
+        (sizes.length > 1 ? '<label for="pdSize">Size</label><select id="pdSize">' + sizes.map(function (z) {
+          var v = vs.find(function (x) { return sizeOf(x) === z; });
+          return '<option value="' + esc(z) + '"' + (z === "M" ? " selected" : "") + ">" + esc(z) + (v ? " · " + esc(money(v.unitPrice)) : "") + "</option>"; }).join("") + "</select>" : "") + "</div>";
+    } else if (multi) {
+      opts = '<div class="opts"><label for="pdVar">Choose</label><select id="pdVar">' + vs.map(function (v) { return '<option value="' + esc(v.id) + '">' + esc((v.attributes && v.attributes.description) || v.name) + " · " + esc(money(v.unitPrice)) + "</option>"; }).join("") + "</select></div>";
+    }
     var box = pdSheet.querySelector(".pd");
     box.innerHTML =
-      '<div class="gal"><img class="main" alt="' + esc(p.name) + '" src="' + esc(pics[0] || img(p)) + '">' +
-      (pics.length > 1 ? '<div class="thumbs">' + pics.map(function (u, i) { return '<button type="button" aria-label="Picture ' + (i + 1) + '"' + (i ? "" : ' aria-current="true"') + ' data-u="' + esc(u) + '"><img alt="" loading="lazy" src="' + esc(u) + '"></button>'; }).join("") + "</div>" : "") +
-      '</div><div class="info"><h3>' + esc(p.name) + '</h3><p class="pr">' + esc(priceOf(p)) + "</p>" +
-      (multi ? '<div class="opts"><label for="pdVar">Choose</label><select id="pdVar">' + vs.map(function (v) { return '<option value="' + esc(v.id) + '">' + esc((v.attributes && v.attributes.description) || v.name) + " · " + esc(money(v.unitPrice)) + "</option>"; }).join("") + "</select></div>" : "") +
+      '<div class="gal"><img class="main" alt="' + esc(p.name) + '"><div class="thumbs"></div></div><div class="info"><h3>' + esc(p.name) + '</h3><p class="pr">' + esc(priceOf(p)) + "</p>" + opts +
       '<div class="buy"><button type="button" class="btn add"' + (soldOut(p) ? " disabled" : "") + ">" + (soldOut(p) ? "Sold out" : "Add to cart") + '</button><button type="button" class="btn alt view" hidden>View cart</button></div><div class="msg" role="status"></div>' +
       '<div class="desc">' + clean(p.description) + "</div></div>";
-    var main = box.querySelector(".main"), shown = 0;
-    var all = pics.length ? pics : [img(p)];
+    var main = box.querySelector(".main"), thumbs = box.querySelector(".thumbs"), shown = 0, all = [];
+    var gallery = function (list) {
+      all = list.length ? list : [img(p)]; shown = 0; main.src = all[0];
+      thumbs.innerHTML = all.length > 1 ? all.map(function (u, i) { return '<button type="button" aria-label="Picture ' + (i + 1) + '"' + (i ? "" : ' aria-current="true"') + ' data-u="' + esc(u) + '"><img alt="" loading="lazy" src="' + esc(u) + '"></button>'; }).join("") : "";
+      thumbs.hidden = all.length < 2;
+      thumbs.querySelectorAll("button").forEach(function (t, ti) {
+        t.addEventListener("click", function () {
+          main.src = t.getAttribute("data-u"); shown = ti;
+          thumbs.querySelectorAll("button").forEach(function (o) { o.removeAttribute("aria-current"); });
+          t.setAttribute("aria-current", "true");
+        });
+      });
+    };
+    gallery(byColor ? picsFor(colors[0]) : pics);
     main.title = "Tap to zoom in";
     main.addEventListener("click", function () { openZoom(all, shown, p.name); });
     var zb = document.createElement("button"); zb.type = "button"; zb.className = "zoom-btn"; zb.textContent = "\uD83D\uDD0D Zoom in";
     zb.addEventListener("click", function () { openZoom(all, shown, p.name); });
     main.insertAdjacentElement("afterend", zb);
-    box.querySelectorAll(".thumbs button").forEach(function (t, ti) {
-      t.addEventListener("click", function () {
-        main.src = t.getAttribute("data-u"); shown = ti;
-        box.querySelectorAll(".thumbs button").forEach(function (o) { o.removeAttribute("aria-current"); });
-        t.setAttribute("aria-current", "true");
+    var color = colors[0];
+    box.querySelectorAll(".swatch").forEach(function (b) {
+      b.addEventListener("click", function () {
+        color = b.getAttribute("data-c");
+        box.querySelectorAll(".swatch").forEach(function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+        box.querySelector("#pdColName").textContent = color;
+        gallery(picsFor(color));
       });
     });
+    var chosen = function () {
+      if (byColor) {
+        var zs = box.querySelector("#pdSize"), z = zs ? zs.value : sizes[0];
+        var v = vs.find(function (x) { return colorOf(x) === color && (!z || sizeOf(x) === z); });
+        return v && v.id;
+      }
+      var sel = box.querySelector("#pdVar");
+      return sel ? sel.value : (vs[0] && vs[0].id);
+    };
     var add = box.querySelector(".add"), msg = box.querySelector(".msg"), view = box.querySelector(".view");
     view.addEventListener("click", function () { closeSheet(pdSheet); openCart(); });
     add.addEventListener("click", function () {
-      var sel = box.querySelector("#pdVar");
-      var vid = sel ? sel.value : (vs[0] && vs[0].id);
-      if (!vid) return;
+      var vid = chosen();
+      if (!vid) { msg.textContent = "That color doesn't come in that size. Try another size."; return; }
       add.disabled = true; msg.textContent = "Adding…";
       addToCart(vid, 1).then(function () {
         msg.textContent = "Added to your cart."; view.hidden = false;
