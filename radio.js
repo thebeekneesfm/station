@@ -1130,11 +1130,13 @@
         reactArea = rec;
       } else if (type === "ad") {
         el.classList.add("hot");
-        el.innerHTML = '<div class="ad-img"><img alt=""></div><div class="ad-cap"><span class="ad-title"></span> <a class="ad-via" target="_blank" rel="noopener">via archive.org</a></div>';
+        el.innerHTML = '<div class="ad-img"><img alt=""></div><div class="ad-cap"><span class="ad-title"></span> <a class="ad-via" target="_blank" rel="noopener">via archive.org</a></div>' +
+          '<a class="ad-house" hidden><b class="ah-h"></b><span class="ah-pic"><img alt=""></span><span class="ah-t"></span><span class="ah-go">thebeesknees.fm</span></a>';
         const img = el.querySelector("img");
         img.addEventListener("load", () => { img.style.opacity = 1; });
         el.querySelector(".ad-via").addEventListener("click", e => { if (state.editing) e.preventDefault(); });
-        rec.ad = { img, title: el.querySelector(".ad-title"), via: el.querySelector(".ad-via"), cur: -1 };
+        rec.ad = { img, title: el.querySelector(".ad-title"), via: el.querySelector(".ad-via"), cur: -1, house: el.querySelector(".ad-house") };
+        rec.ad.house.addEventListener("click", e => { if (state.editing) e.preventDefault(); });
         const card = document.createElement("div"); card.className = "tipcard"; card.hidden = true; card.setAttribute("role", "status");
         card.innerHTML = '<div class="tc-wrap"><div class="tc-inner"><div class="tc-kicker"></div><div class="tc-name"></div><div class="tc-msg"></div><div class="tc-thanks"></div><a class="tc-link" target="_blank" rel="noopener"></a></div></div>';
         card.addEventListener("click", e => { if (!e.target.closest("a")) { e.stopPropagation(); card.hidden = true; } });
@@ -1886,8 +1888,23 @@
     const A = window.ADS || [], ad = rec.ad;
     if (!A.length) { rec.el.hidden = true; return; }
     const every = (rec.L.every || 40) * 1000;
-    const k = ((Math.floor((Date.now() - AD_EPOCH) / every) % A.length) + A.length) % A.length;
-    if (ad.cur === k) return;
+    // every fourth spot is one of the station's own house ads (house-ads.js); the rest are vintage ads
+    const slot = Math.floor((Date.now() - AD_EPOCH) / every), H = window.HOUSE_ADS || [];
+    const isHouse = H.length && slot % 4 === 3;
+    const key = isHouse ? "h" + (Math.floor(slot / 4) % H.length) : "a" + ((((slot - Math.floor((slot + 1) / 4)) % A.length) + A.length) % A.length);
+    if (ad.key === key) return;
+    ad.key = key;
+    const hs = ad.house, imgBox = rec.el.querySelector(".ad-img"), cap = rec.el.querySelector(".ad-cap");
+    hs.hidden = !isHouse; imgBox.hidden = !!isHouse; cap.hidden = !!isHouse;
+    if (isHouse) {
+      const h = H[+key.slice(1)];
+      ad.cur = -1;
+      hs.href = h.href; hs.querySelector(".ah-h").textContent = h.head; hs.querySelector(".ah-t").textContent = h.line;
+      const im = hs.querySelector("img"); im.src = h.img; im.alt = "";
+      hs.setAttribute("aria-label", h.head + ". " + h.line);
+      return;
+    }
+    const k = +key.slice(1);
     ad.cur = k;
     const a = A[k];
     ad.img.style.opacity = 0;
