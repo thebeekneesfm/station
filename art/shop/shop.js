@@ -116,16 +116,31 @@
   }
 
   /* ---------- dialogs ---------- */
+  /* opened over the radio (embed=1): tell the radio when a product, the cart or a zoomed picture is open, so its
+     Close button closes that first and goes back to the shop, instead of closing the whole shop */
+  function tellParent() {
+    if (window.parent === window) return;
+    var open = !pdSheet.hidden || !cartSheet.hidden || !!(zoomBox && !zoomBox.hidden);
+    try { window.parent.postMessage({ bk: "inner-open", open: open }, location.origin); } catch (e) {}
+  }
+  window.addEventListener("message", function (e) {
+    if (e.origin !== location.origin || !e.data || e.data.bk !== "close-inner") return;
+    if (zoomBox && !zoomBox.hidden) closeZoom();
+    else if (!cartSheet.hidden) closeSheet(cartSheet);
+    else if (!pdSheet.hidden) closeSheet(pdSheet);
+  });
   function openSheet(s, from) {
     lastFocus = from || document.activeElement;
     s.hidden = false; document.body.style.overflow = "hidden";
     var x = s.querySelector(".x"); if (x) x.focus();
+    tellParent();
   }
   function closeSheet(s) {
     s.hidden = true;
     if (pdSheet.hidden && cartSheet.hidden) document.body.style.overflow = "";
     if (s === pdSheet && location.hash) { try { history.replaceState(null, "", location.pathname + location.search); } catch (e) {} }
     if (lastFocus && lastFocus.focus) lastFocus.focus();
+    tellParent();
   }
   [pdSheet, cartSheet].forEach(function (s) {
     s.addEventListener("click", function (e) { if (e.target === s || e.target.closest(".x")) closeSheet(s); });
@@ -139,7 +154,7 @@
   /* Zoom: the picture full screen. Tap or click to get in close (and drag, or move the mouse, to look around);
      tap again to step back. Arrows, swipe or the side buttons go between pictures. */
   var zoomBox = null, zoomList = [], zoomAt = 0, zoomed = false;
-  function closeZoom() { if (!zoomBox) return; zoomBox.hidden = true; zoomed = false; var m = pdSheet.querySelector(".main"); if (m) m.focus && m.focus(); }
+  function closeZoom() { if (!zoomBox) return; zoomBox.hidden = true; zoomed = false; var m = pdSheet.querySelector(".main"); if (m) m.focus && m.focus(); tellParent(); }
   function showZoom() {
     var im = zoomBox.querySelector("img");
     im.src = zoomList[zoomAt]; zoomed = false; zoomBox.classList.remove("in"); im.style.transformOrigin = "50% 50%";
@@ -181,7 +196,7 @@
       });
     }
     zoomList = list; zoomAt = at || 0; zoomBox.querySelector("img").alt = name || "";
-    showZoom(); zoomBox.hidden = false; zoomBox.querySelector(".zx").focus();
+    showZoom(); zoomBox.hidden = false; zoomBox.querySelector(".zx").focus(); tellParent();
   }
 
   function openProduct(slug, from) {

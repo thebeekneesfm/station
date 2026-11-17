@@ -1644,15 +1644,21 @@
       box.innerHTML = '<div class="rk-card"><button type="button" class="ab-close rk-close">Close</button><iframe title="" allow="fullscreen; web-share; clipboard-write"></iframe></div>';
       document.body.appendChild(box);
       box.addEventListener("click", e => { if (e.target === box) closeRack(); });
-      box.querySelector(".rk-close").addEventListener("click", () => closeRack());
-      document.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) closeRack(); });
+      // a page open over the radio may have something open inside it (a product in the shop): Close closes that first
+      const closeOrBack = () => {
+        const fr = box.querySelector("iframe");
+        if (box.dataset.inner === "1" && fr && fr.contentWindow) { try { fr.contentWindow.postMessage({ bk: "close-inner" }, location.origin); return; } catch (e) {} }
+        closeRack();
+      };
+      box.querySelector(".rk-close").addEventListener("click", closeOrBack);
+      document.addEventListener("keydown", e => { if (e.key === "Escape" && !box.hidden) closeOrBack(); });
     }
     let fr = box.querySelector("iframe");
     if (box.dataset.kind !== kind) {
       // a fresh frame for each rack: changing a frame's address would add a step to the browser's Back history
       box.dataset.kind = kind;
       const nf = document.createElement("iframe"); nf.setAttribute("allow", "fullscreen; web-share; clipboard-write");
-      nf.title = RACK_TITLES[kind]; nf.src = kind + ".html?embed=1";
+      nf.title = RACK_TITLES[kind]; nf.src = kind + ".html?embed=1"; box.dataset.inner = "";
       fr.replaceWith(nf); fr = nf;
     }
     box.setAttribute("aria-label", fr.title);
@@ -1675,6 +1681,7 @@
   // the YouTube page, opened over the radio, says when a video starts: switch the radio off so they don't play over each other
   let rackPausedRadio = false;
   window.addEventListener("message", e => {
+    if (e.origin === location.origin && e.data && e.data.bk === "inner-open") { const b = document.getElementById("rack-ov"); if (b) b.dataset.inner = e.data.open ? "1" : ""; return; }
     if (e.origin !== location.origin || !e.data || e.data.bk !== "video-playing") return;
     if (state.on) { rackPausedRadio = true; power(false); }
   });
