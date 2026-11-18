@@ -32,7 +32,7 @@
     { label: "Read", items: [["Comics", "comics.html"], ["Magazines", "magazines.html"], ["Vintage Ads", "ads.html"], ["The Gallery", "gallery.html"]] },
     { label: "Play", items: [["Daily Puzzle", "puzzles.html"], ["Community Puzzle", "puzzle-together.html"], ["Send a Card", "postcard.html"]] },
     { label: "Shop", href: "shop.html" },
-    { label: "Support", items: [["Become a member", "config.tip"], ["Sign the Guest Book", "guestbook.html"], ["Donate to the Internet Archive", "https://archive.org/donate"]] },
+    { label: "Support", href: "config.tip" },
     { label: "About", href: "about.html" }
   ];
 

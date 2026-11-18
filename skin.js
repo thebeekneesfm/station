@@ -127,8 +127,7 @@ window.SKIN = {
       {"id": "ads-heading", "type": "text", "text": "A word from our sponsors", "x": 12, "y": 2704, "w": 576, "h": 38, "font": "BK Script", "size": 30, "color": "#e3a92f", "align": "center", "uppercase": false, "spacing": 0, "italic": true, "weight": 700},
       {"id": "patrons", "type": "patrons", "x": 20, "y": 3092, "w": 560, "h": 230},
       {"id": "ad", "type": "ad", "every": 40, "x": 20, "y": 2748, "w": 560, "h": 330, "font": "BK Serif", "size": 19, "color": "#cdbf9f", "dim": "#cdbf9f"},
-      {"id": "about-link", "type": "text", "text": "About The Bee's Knees", "href": "about.html", "x": 20, "y": 3342, "w": 270, "h": 36, "font": "BK Serif", "size": 22, "color": "#efe5cc", "align": "left", "weight": 500},
-      {"id": "donate-link", "type": "text", "text": "Donate to the Archive", "href": "https://archive.org/donate", "x": 300, "y": 3342, "w": 280, "h": 36, "font": "BK Serif", "size": 22, "color": "#efe5cc", "align": "right", "weight": 500},
+      {"id": "about-link", "type": "text", "text": "About The Bee's Knees", "href": "about.html", "x": 20, "y": 3342, "w": 560, "h": 36, "font": "BK Serif", "size": 22, "color": "#efe5cc", "align": "center", "weight": 500},
       {"id": "visits", "type": "text", "bind": "visits", "x": 20, "y": 3388, "w": 560, "h": 30, "font": "BK Serif", "size": 20, "color": "#efe5cc", "align": "center", "italic": true},
       {"id": "ticker-strip", "look": "paper", "x": 0, "y": 188, "w": 600, "h": 50},
       {"id": "ticker", "type": "ticker", "show": ["members", "tips", "announcements"], "speed": 60, "x": 12, "y": 188, "w": 576, "h": 50, "font": "BK Serif", "size": 22, "color": "#1f1b17", "uppercase": false, "spacing": 0, "italic": false, "stretch": 80, "weight": 700}
