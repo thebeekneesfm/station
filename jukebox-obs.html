@@ -169,6 +169,11 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
 #tap { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 99; display: none; background: var(--red); color: #fff;
   font: 400 40px/1 "BK Head", serif; padding: 24px 40px; border: 0; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { .disc .lab, .disc .grv { animation: none; } }
+
+/* look=minimal: no masthead or puzzle box; the song book moves up and gets a little bigger, Now Playing runs the full height */
+html.minimal .mast, html.minimal .pzc { display: none !important; }
+html.minimal .book { top: 70px; transform: scale(1.06); transform-origin: 0 0; }
+html.minimal .np { top: 40px; height: 820px; }
 </style>
 </head>
 <body>
@@ -211,6 +216,7 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
 (function () {
   "use strict";
   var J = window.BKJ, Q = new URLSearchParams(location.search), $ = function (id) { return document.getElementById(id); };
+  if (Q.get("look") !== "classic") document.documentElement.classList.add("minimal");   // look=classic: the older layout with the masthead and puzzle box
   var SECRET = (Q.get("dj") || "").trim();
   var MAXQ = 25;
   var A = J.albums();                                   // albums on the jukebox today, in number order

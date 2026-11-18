@@ -21,6 +21,7 @@
     cooldown=180         seconds after a change before chat can change it again (default 180)
     vote=45              seconds chat has to vote once someone asks for a station (default 45)
     look=overlay         just the small now-playing card, for putting over your own scene
+    look=classic         the older, busier layout (masthead, TV cabinet, ticker); the default is the minimal one
     schedule=1           follow the weekly schedule in obs-schedule.js (switches by itself at each block)
     goodbye=Goodbye      with schedule=1: when a scheduled Drive-In night's double feature ends (the "Good night"
                          card), switch OBS to this scene, so no film gets cut off. Needs this browser source's
@@ -255,6 +256,63 @@
   .overlay .kicker { font-size: 22px; }
   .overlay .bar { margin-top: 14px; height: 6px; }
   .overlay .left { font-size: 22px; margin-top: 6px; }
+
+  /* look=minimal: the picture fills the whole height on the left (1440 x 1080, the shape of old TV and film),
+     and a slim column on the right holds the name, what's on, and one card that changes every 40 seconds
+     (the Community Puzzle, a word from our sponsors, and on the radio what's coming up). */
+  html.minimal .ticker, html.minimal .tvset, html.minimal .mast .tag, html.minimal .mast .watch div, html.minimal .left span + span { display: none !important; }
+  html.minimal .screen, html.minimal .mag { left: 0 !important; top: 0 !important; width: 1440px !important; height: 1080px !important; box-shadow: none !important; }
+  html.minimal.tv-mode .screen { left: 28px !important; top: 28px !important; width: 1384px !important; height: 1024px !important; border-radius: 46px / 52px; overflow: hidden;
+    box-shadow: 0 0 0 14px #17100b, 0 0 0 16px rgba(233,225,201,.18), 6px 9px 0 16px rgba(0,0,0,.3) !important; }
+  html.minimal .mag { box-shadow: inset -14px 0 0 #17100b !important; }
+  html.minimal .card { left: 220px; top: 40px; width: 1000px; height: 1000px; box-shadow: 6px 8px 0 rgba(0,0,0,.3); }
+  html.minimal .mast { left: 1464px !important; right: auto !important; width: 432px !important; top: 24px !important; height: 128px !important; padding: 0 26px !important;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 2px; transform: rotate(.3deg) !important; }
+  html.minimal .mast .logo { font-size: 56px !important; }
+  html.minimal .mast .watch { text-align: left; }
+  html.minimal .mast .watch b { font-size: 30px !important; }
+  html.minimal .now { left: 1464px !important; top: 176px !important; width: 432px !important; height: 352px !important; padding: 22px 26px !important; transform: rotate(-.3deg) !important;
+    display: flex !important; flex-direction: column; }
+  html.minimal .now .kicker { font-size: 20px !important; }
+  html.minimal .now .series { font-size: 44px !important; -webkit-line-clamp: 2 !important; margin-top: 6px !important; }
+  html.minimal .now .title { font-size: 30px !important; -webkit-line-clamp: 3 !important; margin-top: 6px !important; }
+  html.minimal .now .date { font-size: 21px !important; -webkit-line-clamp: 1 !important; margin-top: 6px !important; text-align: left !important; }
+  html.minimal .now .then { display: block !important; font-size: 21px !important; margin: auto 0 0 !important; padding: 0 !important; align-self: stretch !important; text-align: left !important; white-space: normal !important; overflow: hidden; display: -webkit-box !important; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  html.minimal .now .bar { display: block !important; margin-top: 10px !important; height: 6px !important; }
+  html.minimal .now .left { font-size: 21px !important; margin-top: 6px !important; text-align: left !important; }
+  html.minimal .pzc, html.minimal .spons, html.minimal .tunein, html.minimal .next { left: 1464px !important; top: 552px !important; width: 432px !important; height: 504px !important;
+    padding: 18px 24px !important; transform: rotate(.4deg) !important; transition: opacity .8s ease; }
+  html.minimal .pzc, html.minimal .spons, html.minimal .next { opacity: 0; }
+  html.minimal.slot-pzc .pzc, html.minimal.slot-spons .spons, html.minimal.slot-next .next { opacity: 1; }
+  html.minimal .tunein { z-index: 4; }
+  html.minimal .next { display: block !important; }
+  html.minimal .pzc .pzh, html.minimal .spons .sh, html.minimal .next h2 { font-size: 32px !important; margin-bottom: 12px !important; }
+  html.minimal .pzc .pzlive { height: 300px !important; width: 100% !important; aspect-ratio: auto !important; }
+  html.minimal .pzc .pzn { display: block !important; font-size: 24px !important; }
+  html.minimal .pzc .pzs { display: block !important; font-size: 20px !important; }
+  html.minimal .pzc .pzu { font-size: 19px !important; }
+  /* a word from our sponsors, as on the front page: the ad clipped out of a magazine, straight on the wallpaper */
+  html.minimal .spons { background: none !important; box-shadow: none !important; transform: none !important; padding: 6px 0 0 !important; }
+  html.minimal .spons .sh { font: italic 700 40px/1.1 "BK Script", "BK Serif", Georgia, serif !important; color: #e3a92f !important; border: 0 !important; text-align: center; margin-bottom: 14px !important;
+    text-shadow: 0 1px 2px rgba(0,0,0,.85), 0 0 6px rgba(0,0,0,.5); }
+  html.minimal .sbody { flex-direction: column; align-items: center !important; justify-content: flex-start; gap: 16px !important; }
+  html.minimal .sbody > img { height: auto !important; max-height: 370px; max-width: 400px !important; flex: 0 1 auto; min-height: 0; transform: rotate(-1.2deg); box-shadow: 2px 3px 0 rgba(0,0,0,.4) !important; background: none !important; }
+  html.minimal .stxt { text-align: center; color: #cdbf9f; text-shadow: 0 1px 2px rgba(0,0,0,.85), 0 0 6px rgba(0,0,0,.5); }
+  html.minimal .st { font-size: 25px !important; font-weight: 400 !important; font-style: italic; } html.minimal .sy { font-size: 19px !important; color: #cdbf9f !important; } html.minimal .sm { display: none !important; }
+  html.minimal .sbody.is-house > img, html.minimal .sbody.is-house .stxt { display: none; }
+  .shouse[hidden] { display: none !important; }
+  html.minimal .shouse { flex: 1; min-height: 0; width: 100%; display: grid; grid-template-rows: auto minmax(0, 1fr) auto auto; justify-items: center; gap: 10px; padding: 18px 22px 16px; text-align: center;
+    background: url("art/newsprint.jpg") 0 0 / 768px 768px, var(--paper); border: 3px double var(--ink); box-shadow: 2px 3px 0 rgba(0,0,0,.35); transform: rotate(.6deg); }
+  html.minimal .shouse .hh { font: 400 36px/1 "BK Head", "BK Serif", Georgia, serif; color: var(--red); text-transform: uppercase; }
+  html.minimal .shouse .hpic { min-height: 0; display: flex; align-items: center; justify-content: center; width: 100%; }
+  html.minimal .shouse .hpic img { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 1px 2px 0 rgba(0,0,0,.3); }
+  html.minimal .shouse .ht { font: italic 21px/1.25 "BK Serif", Georgia, serif; }
+  html.minimal .shouse .hgo { font: 700 22px/1 "BK Serif", Georgia, serif; color: var(--red); }
+  html.minimal .next ol { font-size: 24px; line-height: 1.3; }
+  html.minimal .next li { white-space: normal; margin-bottom: 14px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  html.minimal .next li b { display: block; min-width: 0; font-size: 20px; }
+  html.minimal .toast { left: 720px; top: 60px; }
+  html.minimal .list { right: auto; left: 270px; }
 </style>
 </head>
 <body>
@@ -280,7 +338,8 @@
   <section class="tunein paper" id="tunein"></section>
   <section class="pzc paper" id="pzc" aria-live="polite"></section>
   <section class="spons paper" id="spons"><div class="sh head">A word from our sponsors</div>
-    <div class="sbody" id="sbody"><img id="sImg" alt=""><div class="stxt"><div class="st" id="sT"></div><div class="sy" id="sY"></div><div class="sm">More vintage ads at thebeesknees.fm</div></div></div></section>
+    <div class="sbody" id="sbody"><img id="sImg" alt=""><div class="stxt"><div class="st" id="sT"></div><div class="sy" id="sY"></div><div class="sm">More vintage ads at thebeesknees.fm</div></div>
+      <div class="shouse" id="sHouse" hidden><b class="hh" id="hH"></b><span class="hpic"><img id="hImg" alt=""></span><span class="ht" id="hT"></span><span class="hgo">thebeesknees.fm</span></div></div></section>
   <section class="list paper" id="list"><h2 class="head">What's on the dial</h2>
     <div class="cols"><div class="radio"><h3>Radio <small>!tune noir</small></h3><ol id="stations"></ol></div><div><h3>TV <small>!tune tv kids</small></h3><ol id="channels"></ol></div></div>
     <p class="di"><strong>The Drive-In</strong>: <code>!tune drive-in</code> for the picture show</p></section>
@@ -297,6 +356,7 @@
 <script src="art/screen/homemovies-more.js?v=1"></script>
 <script src="obs-schedule.js?v=20261116m"></script>
 <script src="ads.js?v=20261102b"></script>
+<script src="house-ads.js?v=2"></script>
 <script src="art/rack/rack.js?v=6"></script>
 <script src="obs-magazines.js?v=1"></script>
 <script src="art/puzzle/puzzle-corner.js?v=1"></script>
@@ -306,6 +366,21 @@
   var $ = function (id) { return document.getElementById(id); };
   var Q = new URLSearchParams(location.search);
   if (Q.get("look") === "overlay") document.documentElement.classList.add("overlay");
+  var MINIMAL = !Q.get("look") || Q.get("look") === "minimal";   // the default look; look=classic brings back the old one
+  if (MINIMAL) {
+    document.documentElement.classList.add("minimal");
+    (function () {   // the bottom card on the right takes turns: puzzle, sponsors, and on the radio what's coming up
+      var n = 0, H = document.documentElement;
+      function turn() {
+        var ids = ["pzc", "spons"]; if (!H.classList.contains("scr-mode")) ids.push("next");
+        if (!H.classList.contains("pz-on")) ids.shift();
+        ids.forEach(function (id) { H.classList.remove("slot-" + id); });
+        H.classList.add("slot-" + ids[n++ % ids.length]);
+      }
+      ["pzc", "spons", "next"].forEach(function (id) { H.classList.remove("slot-" + id); });
+      setTimeout(turn, 0); setInterval(turn, 1000 * (+Q.get("turn") || 40));
+    })();
+  }
   var CONFIG = window.RADIO_CONFIG || {};
   var OWN = !!Q.get("ownmusic");
   /* the TV set the picture plays in (tvset=admiral, bendix or dumont), each cut from a real magazine ad:
@@ -597,8 +672,9 @@
   function put(el, im) { el.innerHTML = ""; el.classList.toggle("empty", !im); if (im) { var c = im.cloneNode(); c.alt = ""; el.appendChild(c); } }
   function fitBook(im) {
     var r = im ? im.naturalWidth / im.naturalHeight : 0.75; r = Math.max(0.6, Math.min(0.85, r || 0.75));
-    var h = 680, w = Math.round(h * r) * 2, b = $("book");
-    b.style.width = w + "px"; b.style.height = h + "px"; b.style.left = Math.round((1300 - w) / 2) + "px"; b.style.top = Math.round((731 - h) / 2) + "px";
+    var M = $("mag"), MW = M.clientWidth || 1300, MH = M.clientHeight || 731;
+    var h = Math.min(MH - 51, Math.floor((MW - 60) / (2 * r))), w = Math.round(h * r) * 2, b = $("book");
+    b.style.width = w + "px"; b.style.height = h + "px"; b.style.left = Math.round((MW - w) / 2) + "px"; b.style.top = Math.round((MH - h) / 2) + "px";
   }
   function openIssue() {
     var it = nextIssue(); if (!it) return;
@@ -733,13 +809,20 @@
     var A = (window.ADS || []).filter(function (a) { return a && a.src && !skip.test(a.title); });
     if (!A.length) { $("spons").style.display = "none"; return; }
     for (var i = A.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = A[i]; A[i] = A[j]; A[j] = t; }
-    var n = 0, body = $("sbody"), img = $("sImg");
+    var n = 0, slot = 0, body = $("sbody"), img = $("sImg"), HOUSE = MINIMAL ? (window.HOUSE_ADS || []) : [], hn = 0;
     function put() {
-      var a = A[n % A.length]; n++;
+      // like the front page: every fourth spot is one of the station's own little ads
+      var house = HOUSE.length && slot++ % 4 === 3, h = house ? HOUSE[hn++ % HOUSE.length] : null;
+      var a = house ? null : A[n++ % A.length];
       var pre = new Image(); pre.onload = function () {
         body.classList.add("fading");
-        setTimeout(function () { img.src = a.src; $("sT").textContent = a.title; $("sY").textContent = a.date ? "Print ad, " + a.date : ""; body.classList.remove("fading"); }, 600);
-      }; pre.onerror = function () { put(); }; pre.src = a.src;
+        setTimeout(function () {
+          body.classList.toggle("is-house", !!h); $("sHouse").hidden = !h;
+          if (h) { $("hImg").src = h.img; $("hH").textContent = h.head; $("hT").textContent = h.line; }
+          else { img.src = a.src; $("sT").textContent = a.title; $("sY").textContent = a.date ? "Print ad, " + a.date : ""; }
+          body.classList.remove("fading");
+        }, 600);
+      }; pre.onerror = function () { put(); }; pre.src = h ? h.img : a.src;
     }
     put(); setInterval(put, 40000);
   })();
