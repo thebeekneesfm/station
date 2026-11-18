@@ -43,7 +43,7 @@ window.STREAM_SCHEDULE = {
         { play: "tv variety",       title: "TV Night: Saturday Night Variety" }
       ] },
     { days: ["tue"], from: "19:00", to: "21:00", play: "tv newsreels",   title: "Oddities Night" },
-    { days: ["wed"], from: "19:00", to: "21:00", play: "magazines",      title: "The Magazine Rack" },
+    { days: ["wed"], from: "19:00", to: "21:00", play: "magazines gramophone", title: "The Magazine Rack" },   // with dreamy Gramophone Radio underneath
     // Thursday: Radio Night till midnight (to fall asleep to), a different old-time radio station each week
     { days: ["thu"], from: "19:00", to: "23:59", play: "radio chills",   title: "Radio Night", since: "2026-11-12", rotate: [
         { play: "radio chills",     title: "Radio Night: Chills" },
