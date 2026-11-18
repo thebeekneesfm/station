@@ -21,6 +21,7 @@
     cooldown=180         seconds after a change before chat can change it again (default 180)
     vote=45              seconds chat has to vote once someone asks for a station (default 45)
     look=overlay         just the small now-playing card, for putting over your own scene
+    look=vertical        a 1080 x 1920 version for TikTok LIVE (set that browser source to 1080 x 1920)
     look=classic         the older, busier layout (masthead, TV cabinet, ticker); the default is the minimal one
     schedule=1           follow the weekly schedule in obs-schedule.js (switches by itself at each block)
     goodbye=Goodbye      with schedule=1: when a scheduled Drive-In night's double feature ends (the "Good night"
@@ -313,6 +314,36 @@
   html.minimal .next li b { display: block; min-width: 0; font-size: 20px; }
   html.minimal .toast { left: 720px; top: 60px; }
   html.minimal .list { right: auto; left: 270px; }
+
+  /* look=vertical (TikTok LIVE, 1080 x 1920): TikTok puts its own name bar over the top and the chat over the
+     bottom third, so what's on and the picture sit in the middle, and the name and rotating card go underneath */
+  html.vertical #stage { width: 1080px; height: 1920px; }
+  html.minimal.vertical .now { left: 30px !important; top: 196px !important; width: 1020px !important; height: 250px !important; padding: 20px 32px !important; transform: rotate(-.3deg) !important;
+    display: grid !important; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto auto auto; column-gap: 24px; align-content: center; }
+  html.minimal.vertical .now .kicker { grid-column: 1 / -1; font-size: 24px !important; }
+  html.minimal.vertical .now .series { grid-column: 1 / -1; font-size: 52px !important; -webkit-line-clamp: 1 !important; }
+  html.minimal.vertical .now .title { grid-column: 1; font-size: 34px !important; -webkit-line-clamp: 1 !important; }
+  html.minimal.vertical .now .date { grid-column: 1; font-size: 24px !important; }
+  html.minimal.vertical .now .then { display: none !important; }
+  html.minimal.vertical .now .bar { display: none !important; }
+  html.minimal.vertical .now .left { grid-column: 2; grid-row: 3 / 5; align-self: end; font-size: 26px !important; margin: 0 !important; }
+  html.minimal.vertical .screen, html.minimal.vertical .mag { left: 0 !important; top: 476px !important; width: 1080px !important; height: 810px !important; }
+  html.minimal.vertical.tv-mode .screen { left: 24px !important; top: 488px !important; width: 1032px !important; height: 774px !important; border-radius: 36px / 40px; }
+  html.minimal.vertical .mag { box-shadow: none !important; }
+  html.minimal.vertical .card { left: 165px; top: 486px; width: 750px; height: 750px; }
+  html.minimal.vertical .mast { left: 30px !important; width: 1020px !important; top: 1310px !important; height: 110px !important; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; padding: 0 32px !important; }
+  html.minimal.vertical .mast .logo { font-size: 60px !important; }
+  html.minimal.vertical .mast .watch b { font-size: 36px !important; }
+  html.minimal.vertical .pzc, html.minimal.vertical .spons, html.minimal.vertical .tunein, html.minimal.vertical .next { left: 30px !important; top: 1446px !important; width: 1020px !important; height: 444px !important; }
+  html.minimal.vertical .pzc .pzlive { height: 260px !important; }
+  html.minimal.vertical .sbody { flex-direction: row !important; align-items: center !important; justify-content: center; gap: 28px !important; }
+  html.minimal.vertical .sbody > img { max-height: 340px; max-width: 46% !important; }
+  html.minimal.vertical .stxt { text-align: left; max-width: 46%; }
+  html.minimal.vertical .shouse { grid-template-columns: 44% 1fr; grid-template-rows: auto 1fr auto; column-gap: 24px; text-align: left; justify-items: start; }
+  html.minimal.vertical .shouse .hpic { grid-column: 1; grid-row: 1 / 4; height: 100%; }
+  html.minimal.vertical .next ol { columns: 1; font-size: 28px; }
+  html.minimal.vertical .toast { left: 540px; top: 1300px; }
+  html.minimal.vertical .list { left: 40px; right: auto; top: 480px; width: 1000px; }
 </style>
 </head>
 <body>
@@ -366,7 +397,9 @@
   var $ = function (id) { return document.getElementById(id); };
   var Q = new URLSearchParams(location.search);
   if (Q.get("look") === "overlay") document.documentElement.classList.add("overlay");
-  var MINIMAL = !Q.get("look") || Q.get("look") === "minimal";   // the default look; look=classic brings back the old one
+  var VERTICAL = Q.get("look") === "vertical";   // a 1080 x 1920 phone-shaped version for TikTok LIVE
+  var MINIMAL = !Q.get("look") || Q.get("look") === "minimal" || VERTICAL;   // the default look; look=classic brings back the old one
+  if (VERTICAL) document.documentElement.classList.add("vertical");
   if (MINIMAL) {
     document.documentElement.classList.add("minimal");
     (function () {   // the bottom card on the right takes turns: puzzle, sponsors, and on the radio what's coming up
@@ -400,7 +433,7 @@
     t.src = SET.src; t.style.left = px(SET.set[0]); t.style.top = px(SET.set[1]); t.style.width = px(SET.set[2]); t.style.height = px(SET.set[3]);
     sc.dataset.tv = [SET.scr[0], SET.scr[1], SET.scr[2], SET.scr[3]].join(",");
   })();
-  function fit() { var s = Math.min(innerWidth / 1920, innerHeight / 1080); $("stage").style.transform = "scale(" + s + ")"; }
+  function fit() { var W = VERTICAL ? 1080 : 1920, H = VERTICAL ? 1920 : 1080, s = Math.min(innerWidth / W, innerHeight / H); $("stage").style.transform = "scale(" + s + ")"; }
   addEventListener("resize", fit); fit();
 
   /* ---------- the same schedule as the website, so the stream and the site play the same second ---------- */
