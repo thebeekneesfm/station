@@ -7,6 +7,7 @@ window.YOUTUBE = {
   // ids of videos to keep off the page (the daily update won't add them back)
   hidden: [],
   videos: [
+    { id: "-DZVJvCIKqc", title: "LIVE NO AI Sleep Ambience | Study Ambience | Vintage Music" },
     { id: "jnm7Z2sAhKE", title: "Famous Faces in Vintage Commercials" },
     { id: "pZoEoNJUBOI", title: "Vintage Toy Commercials" },
     { id: "oV4C62H2P48", title: "Vintage Car Commercials" },
