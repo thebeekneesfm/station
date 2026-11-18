@@ -318,15 +318,14 @@
   /* look=vertical (TikTok LIVE, 1080 x 1920): TikTok puts its own name bar over the top and the chat over the
      bottom third, so what's on and the picture sit in the middle, and the name and rotating card go underneath */
   html.vertical #stage { width: 1080px; height: 1920px; }
-  html.minimal.vertical .now { left: 30px !important; top: 196px !important; width: 1020px !important; height: 250px !important; padding: 20px 32px !important; transform: rotate(-.3deg) !important;
-    display: grid !important; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto auto auto; column-gap: 24px; align-content: center; }
-  html.minimal.vertical .now .kicker { grid-column: 1 / -1; font-size: 24px !important; }
-  html.minimal.vertical .now .series { grid-column: 1 / -1; font-size: 52px !important; -webkit-line-clamp: 1 !important; }
-  html.minimal.vertical .now .title { grid-column: 1; font-size: 34px !important; -webkit-line-clamp: 1 !important; }
-  html.minimal.vertical .now .date { grid-column: 1; font-size: 24px !important; }
-  html.minimal.vertical .now .then { display: none !important; }
-  html.minimal.vertical .now .bar { display: none !important; }
-  html.minimal.vertical .now .left { grid-column: 2; grid-row: 3 / 5; align-self: end; font-size: 26px !important; margin: 0 !important; }
+  html.minimal.vertical .now { left: 30px !important; top: 196px !important; width: 1020px !important; height: 250px !important; padding: 22px 34px !important; transform: rotate(-.3deg) !important;
+    display: flex !important; flex-direction: column; justify-content: center; }
+  html.minimal.vertical .now > * { grid-column: auto !important; grid-row: auto !important; text-align: left !important; }
+  html.minimal.vertical .now .kicker { font-size: 26px !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  html.minimal.vertical .now .series { font-size: 58px !important; -webkit-line-clamp: 1 !important; margin-top: 4px !important; }
+  html.minimal.vertical .now .title { font-size: 38px !important; -webkit-line-clamp: 1 !important; margin-top: 4px !important; padding-right: 170px; }
+  html.minimal.vertical .now .date, html.minimal.vertical .now .then, html.minimal.vertical .now .bar { display: none !important; }
+  html.minimal.vertical .now .left { position: absolute; right: 34px; bottom: 26px; font-size: 30px !important; margin: 0 !important; }
   html.minimal.vertical .screen, html.minimal.vertical .mag { left: 0 !important; top: 476px !important; width: 1080px !important; height: 810px !important; }
   html.minimal.vertical.tv-mode .screen { left: 24px !important; top: 488px !important; width: 1032px !important; height: 774px !important; border-radius: 36px / 40px; }
   html.minimal.vertical .mag { box-shadow: none !important; }
@@ -337,8 +336,10 @@
   html.minimal.vertical .pzc, html.minimal.vertical .spons, html.minimal.vertical .tunein, html.minimal.vertical .next { left: 30px !important; top: 1446px !important; width: 1020px !important; height: 444px !important; }
   html.minimal.vertical .pzc .pzlive { height: 260px !important; }
   html.minimal.vertical .sbody { flex-direction: row !important; align-items: center !important; justify-content: center; gap: 28px !important; }
-  html.minimal.vertical .sbody > img { max-height: 340px; max-width: 46% !important; }
-  html.minimal.vertical .stxt { text-align: left; max-width: 46%; }
+  html.minimal.vertical .sbody > img { max-height: 420px; max-width: 50% !important; }
+  html.minimal.vertical .stxt { text-align: left; max-width: 46%; color: #f1e6cc; }
+  html.minimal.vertical .st { font-size: 42px !important; line-height: 1.15 !important; } html.minimal.vertical .sy { font-size: 32px !important; color: #e3d6b8 !important; }
+  html.minimal.vertical .spons .sh { font-size: 60px !important; }
   html.minimal.vertical .shouse { grid-template-columns: 44% 1fr; grid-template-rows: auto 1fr auto; column-gap: 24px; text-align: left; justify-items: start; }
   html.minimal.vertical .shouse .hpic { grid-column: 1; grid-row: 1 / 4; height: 100%; }
   html.minimal.vertical .next ol { columns: 1; font-size: 28px; }
@@ -642,7 +643,7 @@
     $("then").textContent = (txt(d, ".np-next") || (mode === "drivein" ? txt(d, ".mq-when") : "")).replace(/\s*(at\s+)?\d{1,2}:\d{2}\s*(AM|PM|am|pm)?/g, "");
   }
   function showScreen(kind, ch) {
-    var url = kind === "tv" ? "tv.html?broadcast=1" + (OWN ? "&ownmusic=1" : "") + (SET.fill ? "&fill=1" : "") + "#" + ch.id : "drive-in.html?broadcast=1";
+    var url = kind === "tv" ? "tv.html?broadcast=1" + (OWN ? "&ownmusic=1" : "") + (SET.fill && !VERTICAL ? "&fill=1" : "") + "#" + ch.id : "drive-in.html?broadcast=1";
     var same = frame.dataset.kind === kind;
     frame.dataset.kind = kind;
     if (same && kind === "tv") { try { frame.contentWindow.location.hash = ch.id; } catch (e) { frame.src = url; } }
