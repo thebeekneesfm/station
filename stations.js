@@ -3644,8 +3644,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_louise-eloisa_bob-haring-and-his-orchestra-rush-rowell_gbia0018838b"
    },
    {
-    "src": "https://archive.org/download/78_she-loves-me_university-sextette-brown-beda-egen_gbia0010332b/She%20Loves%20Me%20-%20University%20Sextette%20-%20Brown.mp3",
-    "length": 190.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g007-university-sextette-she-loves-me.mp3",
+    "length": 196.8,
     "series": "University Sextette",
     "title": "She Loves Me",
     "date": "1924",
@@ -4252,8 +4252,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_uncle-sam-blues_tudie-wells-f.-h.-henderson-jr.-williams_gbia0007591b"
    },
    {
-    "src": "https://archive.org/download/78_just-a-girl-that-men-forget_clarks-marimba-orchestra-al-dubin-fred-rath-joe-garren_gbia0005333a/Just%20A%20Girl%20That%20Men%20Forget%20-%20Clark%27s%20Marimba%20Orchestra.mp3",
-    "length": 187.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g083-clark-s-marimba-orchestra-just-a-girl-that-men-forget.mp3",
+    "length": 192.9,
     "series": "Clark's Marimba Orchestra",
     "title": "Just A Girl That Men Forget",
     "date": "1923",
@@ -4284,8 +4284,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_a-new-kind-of-man-with-a-new-kind-of-love-for-me-un-hombre-nuevo_varsity-eight_gbia0018836a"
    },
    {
-    "src": "https://archive.org/download/78_where-is-my-wandering-boy-tonight_arthur-hall-and-john-ryan-lowry_gbia0011472b/Where%20Is%20My%20Wandering%20Boy%20Toni%20-%20Arthur%20Hall%20and%20John%20Ryan.mp3",
-    "length": 204.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g087-arthur-hall-and-john-ryan-where-is-my-wandering-boy-tonight.mp3",
+    "length": 210.5,
     "series": "Arthur Hall and John Ryan",
     "title": "Where Is My Wandering Boy Tonight?",
     "date": "1924",
@@ -4452,8 +4452,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_largo_maud-powell-handel-waldmar-liachowsky_gbia0015777b"
    },
    {
-    "src": "https://archive.org/download/78_colombina_banda-de-capodiferro-alfonso-esparza-oteo_gbia0021592a/Colombina%20-%20Banda%20de%20Capodiferro%20-%20Alfonso%20Esparza%20Oteo.mp3",
-    "length": 193.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g108-banda-de-capodiferro-colombina.mp3",
+    "length": 199.6,
     "series": "Banda de Capodiferro",
     "title": "Colombina",
     "date": "1922",
@@ -4548,8 +4548,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_jolly-coppersmith_concert-band-peters_gbia0011313a"
    },
    {
-    "src": "https://archive.org/download/78_knice-and-knifty_willie-eckstine-bargy_gbia0023956a/Knice%20and%20Knifty%20-%20Willie%20Eckstine%20-%20Bargy.mp3",
-    "length": 158.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g120-willie-eckstein-knice-and-knifty.mp3",
+    "length": 163.5,
     "series": "Willie Eckstein",
     "title": "Knice and Knifty",
     "date": "1923",
@@ -4564,8 +4564,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_oh-how-i-miss-you-tonight_puritan-salon-orchestra-benny-davis-joe-burke-mark-fisher_gbia0006910b"
    },
    {
-    "src": "https://archive.org/download/78_devlins-fancy_j.-kimmel_gbia0010137a/Devlins%20Fancy%20-%20J.%20Kimmel.mp3",
-    "length": 179.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g122-j-kimmel-devlins-fancy.mp3",
+    "length": 185.5,
     "series": "J. Kimmel",
     "title": "Devlins Fancy",
     "date": "1924",
@@ -4940,8 +4940,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_yes-sir-thats-my-baby_william-clark-kahn-donaldson_gbia0011450a"
    },
    {
-    "src": "https://archive.org/download/78_come-let-us-dance-the-waltz-of-love_al.-burts-orchestra-armstrong-dyson_gbia0005862b/Come%20Let%20Us%20Dance%20the%20Waltz%20of%20Love%20-%20Al.%20Burt%27s%20Orchestra.mp3",
-    "length": 180.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g169-al-burt-s-orchestra-come-let-us-dance-the-waltz-of-love.mp3",
+    "length": 185.9,
     "series": "Al. Burt's Orchestra",
     "title": "Come Let Us Dance the Waltz of Love",
     "date": "1923",
@@ -5260,8 +5260,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_born-and-bred-in-brooklyn_emerson-dance-orchestra-geo.-m.-cohan_gbia0011288b"
    },
    {
-    "src": "https://archive.org/download/78_the-first-waltz-belongs-to-me_langes-symphonic-dance-orchestra-russell-robinson_gbia0018009a/The%20First%20Waltz%20%28Belon%20-%20Lange%27s%20Symphonic%20Dance%20Orchestra.mp3",
-    "length": 187.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g209-lange-s-symphonic-dance-orchestra-the-first-waltz-belongs-to.mp3",
+    "length": 192.9,
     "series": "Lange's Symphonic Dance Orchestra",
     "title": "The First Waltz (Belongs To Me)",
     "date": "1922",
@@ -5540,8 +5540,8 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_mamma-loves-papa-papa-loves-mamma_manhattan-musicians_gbia0010652a"
    },
    {
-    "src": "https://archive.org/download/78_hot-lips_synco-jazz-band-basse-lange-davis_gbia0009074b/Hot%20Lips%20-%20Synco%20Jazz%20Band%20-%20Basse%20-%20Lange.mp3",
-    "length": 186.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g244-synco-jazz-band-hot-lips.mp3",
+    "length": 192.2,
     "series": "Synco Jazz Band",
     "title": "Hot Lips",
     "date": "1922",
@@ -6140,960 +6140,960 @@ window.STATIONS = [
     "item": "https://archive.org/details/78_guitarre_sasha-culbertson-helen-hamilton-moszkowski_gbia0010557a"
    },
    {
-    "src": "https://archive.org/download/78_born-and-bred-in-brooklyn-over-the-bridge-nacido-y-criado-en-brooklyn_bob-harin_gbia0018849b/Born%20and%20Bred%20in%20Brookl%20-%20Bob%20Haring%27s%20Velvetone%20Orchestra.mp3",
-    "length": 201.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g319-bob-haring-s-velvetone-orchestra-born-and-bred-in-brooklyn-o.mp3",
+    "length": 207.7,
     "series": "Bob Haring's Velvetone Orchestra",
     "title": "Born and Bred in Brooklyn (Over The Bridge) (Nacido Y Criado En Brooklyn)",
     "date": "1923",
     "item": "https://archive.org/details/78_born-and-bred-in-brooklyn-over-the-bridge-nacido-y-criado-en-brooklyn_bob-harin_gbia0018849b"
    },
    {
-    "src": "https://archive.org/download/78_auld-lang-syne_evan-williams-burns_gbia0010547a/Auld%20Lang%20Syne%20-%20Evan%20Williams%20-%20Burns.mp3",
-    "length": 172.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g320-evan-williams-auld-lang-syne.mp3",
+    "length": 177.8,
     "series": "Evan Williams",
     "title": "Auld Lang Syne",
     "date": "1908",
     "item": "https://archive.org/details/78_auld-lang-syne_evan-williams-burns_gbia0010547a"
    },
    {
-    "src": "https://archive.org/download/78_mobile-blues-blues-de-mobile_harings-happy-harmonists-rose-short_gbia0018833a/Mobile%20Blues%20%28Blues%20de%20Mobile%29%20-%20Haring%27s%20Happy%20Harmonists.mp3",
-    "length": 187.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g321-haring-s-happy-harmonists-mobile-blues-blues-de-mobile.mp3",
+    "length": 192.9,
     "series": "Haring's Happy Harmonists",
     "title": "Mobile Blues (Blues de Mobile)",
     "date": "1924",
     "item": "https://archive.org/details/78_mobile-blues-blues-de-mobile_harings-happy-harmonists-rose-short_gbia0018833a"
    },
    {
-    "src": "https://archive.org/download/78_teddy-bear-blues_finzels-arcadia-orchestra-of-detroit-justin-ring-james-h.-jackson_gbia0009867b/Teddy%20Bear%20Blues%20-%20Finzel%27s%20Arcadia%20Orchestra%20of%20Detroit.mp3",
-    "length": 206.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g322-finzel-s-arcadia-orchestra-of-detroit-teddy-bear-blues.mp3",
+    "length": 212.9,
     "series": "Finzel's Arcadia Orchestra of Detroit",
     "title": "Teddy Bear Blues",
     "date": "1922",
     "item": "https://archive.org/details/78_teddy-bear-blues_finzels-arcadia-orchestra-of-detroit-justin-ring-james-h.-jackson_gbia0009867b"
    },
    {
-    "src": "https://archive.org/download/78_souvenir_margaret-lorenzo-drdla_gbia0016169a/Souvenir%20-%20Margaret%20Lorenzo%20-%20Drdla.mp3",
-    "length": 192.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g323-margaret-lorenzo-souvenir.mp3",
+    "length": 198.2,
     "series": "Margaret Lorenzo",
     "title": "Souvenir",
     "date": "1921",
     "item": "https://archive.org/details/78_souvenir_margaret-lorenzo-drdla_gbia0016169a"
    },
    {
-    "src": "https://archive.org/download/78_stop-rest-awhile_yerkes-s.s.-flotilla-orchestra-gilbert-brymn_gbia0012666b/Stop%21%20Rest%20Awhile%20-%20Yerkes%27%20S.S.%20Flotilla%20Orchestra.mp3",
-    "length": 192.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g324-yerkes-s-s-flotilla-orchestra-stop-rest-awhile.mp3",
+    "length": 198.5,
     "series": "Yerkes' S.S. Flotilla Orchestra",
     "title": "Stop! Rest Awhile",
     "date": "1921",
     "item": "https://archive.org/details/78_stop-rest-awhile_yerkes-s.s.-flotilla-orchestra-gilbert-brymn_gbia0012666b"
    },
    {
-    "src": "https://archive.org/download/78_fond-recollections_hans-kindler-david-popper_gbia0006326a/Fond%20Recollections%20-%20Hans%20Kindler%20-%20David%20Popper.mp3",
-    "length": 213.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g325-hans-kindler-fond-recollections.mp3",
+    "length": 220.0,
     "series": "Hans Kindler",
     "title": "Fond Recollections",
     "date": "1919",
     "item": "https://archive.org/details/78_fond-recollections_hans-kindler-david-popper_gbia0006326a"
    },
    {
-    "src": "https://archive.org/download/78_yellow-dog-blues_selvins-orchestra-handy-green_gbia0011266b/Yellow%20Dog%20Blues%20-%20Selvin%27s%20Orchestra%20-%20Handy.mp3",
-    "length": 200.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g326-selvin-s-orchestra-yellow-dog-blues.mp3",
+    "length": 207.0,
     "series": "Selvin's Orchestra",
     "title": "Yellow Dog Blues",
     "date": "1920",
     "item": "https://archive.org/details/78_yellow-dog-blues_selvins-orchestra-handy-green_gbia0011266b"
    },
    {
-    "src": "https://archive.org/download/78_estudiantina-waltz_raymond-c.-ellis-emil-waldteufel_gbia0005899b/Estudiantina%20Waltz%20-%20Raymond%20C.%20Ellis%20-%20Emil%20Waldteufel.mp3",
-    "length": 201.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g327-raymond-c-ellis-estudiantina-waltz.mp3",
+    "length": 207.7,
     "series": "Raymond C. Ellis",
     "title": "Estudiantina Waltz",
     "date": "1920",
     "item": "https://archive.org/details/78_estudiantina-waltz_raymond-c.-ellis-emil-waldteufel_gbia0005899b"
    },
    {
-    "src": "https://archive.org/download/78_tosca--e-lucevan-le-stelle-the-stars-were-shinning-act-3_giovanni-martinelli-pu_gbia0004968a/Tosca-%20E%20lucevan%20le%20stelle%20%28The%20Star%20-%20Giovanni%20Martinelli.mp3",
-    "length": 164.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g328-giovanni-martinelli-tosca-e-lucevan-le-stelle-the-stars-were.mp3",
+    "length": 169.7,
     "series": "Giovanni Martinelli",
     "title": "Tosca- E lucevan le stelle (The Stars Were Shinning) (Act 3)",
     "date": "1914",
     "item": "https://archive.org/details/78_tosca--e-lucevan-le-stelle-the-stars-were-shinning-act-3_giovanni-martinelli-pu_gbia0004968a"
    },
    {
-    "src": "https://archive.org/download/78_yes-we-have-no-bananas_harry-blake-silver-cohn_gbia0010444a/Yes%21%20We%20Have%20No%20Bananas%20-%20Harry%20Blake%20-%20SIlver-restored.mp3",
-    "length": 168.5,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g329-harry-blake-yes-we-have-no-bananas.mp3",
+    "length": 173.7,
     "series": "Harry Blake",
     "title": "Yes! We Have No Bananas",
     "date": "1923",
     "item": "https://archive.org/details/78_yes-we-have-no-bananas_harry-blake-silver-cohn_gbia0010444a"
    },
    {
-    "src": "https://archive.org/download/78_three-oclock-in-the-morning_ferera-and-franchini-terriss-robledo_gbia0018005a/Three%20O%27Clock%20in%20the%20Morning%20-%20Ferera%20and%20Franchini.mp3",
-    "length": 176.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g330-ferera-and-franchini-three-o-clock-in-the-morning.mp3",
+    "length": 182.0,
     "series": "Ferera and Franchini",
     "title": "Three O'Clock in the Morning",
     "date": "1922",
     "item": "https://archive.org/details/78_three-oclock-in-the-morning_ferera-and-franchini-terriss-robledo_gbia0018005a"
    },
    {
-    "src": "https://archive.org/download/78_little-boy-blue-el-ninito-azul_phi-bakers-novelty-orchestra-turk-robinson-britt_gbia0018856a/Little%20Boy%20Blue%20%28El%20Ninito%20-%20Phi%20Baker%27s%20Novelty%20Orchestra.mp3",
-    "length": 167.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g331-phi-baker-s-novelty-orchestra-little-boy-blue-el-ninito-azul.mp3",
+    "length": 172.8,
     "series": "Phi Baker's Novelty Orchestra",
     "title": "Little Boy Blue (El Ninito Azul)",
     "date": "1923",
     "item": "https://archive.org/details/78_little-boy-blue-el-ninito-azul_phi-bakers-novelty-orchestra-turk-robinson-britt_gbia0018856a"
    },
    {
-    "src": "https://archive.org/download/78_the-music-of-the-wedding-chimes_coney-island-jazz-orch.-leslie-wending_gbia0003820a/The%20Music%20of%20The%20Wedding%20Chimes%20-%20Coney%20Island%20Jazz%20Orch..mp3",
-    "length": 194.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g332-coney-island-jazz-orch-the-music-of-the-wedding-chimes.mp3",
+    "length": 201.0,
     "series": "Coney Island Jazz Orch.",
     "title": "The Music of The Wedding Chimes",
     "date": "1919",
     "item": "https://archive.org/details/78_the-music-of-the-wedding-chimes_coney-island-jazz-orch.-leslie-wending_gbia0003820a"
    },
    {
-    "src": "https://archive.org/download/78_my-bonnie-rose_gbia0018321b/My%20Bonnie%20Rose.mp3",
-    "length": 191.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g333-unknown-artist-my-bonnie-rose.mp3",
+    "length": 197.4,
     "series": "Unknown artist",
     "title": "My Bonnie Rose",
     "date": "1905",
     "item": "https://archive.org/details/78_my-bonnie-rose_gbia0018321b"
    },
    {
-    "src": "https://archive.org/download/78_lights-out_american-regimental-band-mccory_gbia0025372a/Lights%20Out%20-%20American%20Regimental%20Band%20-%20McCory.mp3",
-    "length": 188.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g334-american-regimental-band-lights-out.mp3",
+    "length": 194.3,
     "series": "American Regimental Band",
     "title": "Lights Out",
     "date": "1917",
     "item": "https://archive.org/details/78_lights-out_american-regimental-band-mccory_gbia0025372a"
    },
    {
-    "src": "https://archive.org/download/78_dreamy-melody_emerson-dance-orchestra-koehler-magine-naset_gbia0011286b/Dreamy%20Melody%20-%20Emerson%20Dance%20Orchestra%20-%20Koehler.mp3",
-    "length": 180.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g335-emerson-dance-orchestra-dreamy-melody.mp3",
+    "length": 186.6,
     "series": "Emerson Dance Orchestra",
     "title": "Dreamy Melody",
     "date": "1923",
     "item": "https://archive.org/details/78_dreamy-melody_emerson-dance-orchestra-koehler-magine-naset_gbia0011286b"
    },
    {
-    "src": "https://archive.org/download/78_beautiful-ohio_j.-c.-becks-orchestra-mary-earl_gbia0009475a/Beautiful%20Ohio%20-%20J.%20C.%20Beck%27s%20Orchestra%20-%20Mary%20Earl.mp3",
-    "length": 216.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g336-j-c-beck-s-orchestra-beautiful-ohio.mp3",
+    "length": 222.8,
     "series": "J. C. Beck's Orchestra",
     "title": "Beautiful Ohio",
     "date": "1919",
     "item": "https://archive.org/details/78_beautiful-ohio_j.-c.-becks-orchestra-mary-earl_gbia0009475a"
    },
    {
-    "src": "https://archive.org/download/78_bye-bye-baby-adios-chiquitina_bob-haring-and-his-orchestra-motzan-bloom_gbia0018845b/Bye%20Bye%20Baby%20%28Adios%2C%20Chiqui%20-%20Bob%20Haring%20and%20His%20Orchestra.mp3",
-    "length": 166.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g337-bob-haring-and-his-orchestra-bye-bye-baby-adios-chiquitina.mp3",
+    "length": 172.1,
     "series": "Bob Haring and His Orchestra",
     "title": "Bye Bye Baby (Adios, Chiquitina)",
     "date": "1924",
     "item": "https://archive.org/details/78_bye-bye-baby-adios-chiquitina_bob-haring-and-his-orchestra-motzan-bloom_gbia0018845b"
    },
    {
-    "src": "https://archive.org/download/78_just-for-remembrance-bring-me-a-red-red-rose_william-rundle-parish-young-squires_gbia0006037b/Just%20For%20Remembrance%20%28Bring%20Me%20A%20Red%2C%20Red%20-%20William%20Rundle.mp3",
-    "length": 196.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g338-william-rundle-just-for-remembrance-bring-me-a-red-red-rose.mp3",
+    "length": 203.1,
     "series": "William Rundle",
     "title": "Just For Remembrance (Bring Me A Red, Red Rose)",
     "date": "1924",
     "item": "https://archive.org/details/78_just-for-remembrance-bring-me-a-red-red-rose_william-rundle-parish-young-squires_gbia0006037b"
    },
    {
-    "src": "https://archive.org/download/78_i-aint-nobodys-darling_yerkes-musical-bell-hops-robert-king_gbia0011444a/I%20Ain%27t%20Nobody%27s%20Darling%20-%20Yerkes%20Musical%20Bell%20Hops.mp3",
-    "length": 187.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g339-yerkes-musical-bell-hops-i-ain-t-nobody-s-darling.mp3",
+    "length": 193.2,
     "series": "Yerkes Musical Bell Hops",
     "title": "I Ain't Nobody's Darling",
     "date": "1921",
     "item": "https://archive.org/details/78_i-aint-nobodys-darling_yerkes-musical-bell-hops-robert-king_gbia0011444a"
    },
    {
-    "src": "https://archive.org/download/78_innocent-eyes_dales-dance-orchestra-moore-schwartz-coots_gbia0010328b/Innocent%20Eyes%20-%20Dale%27s%20Dance%20Orchestra%20-%20Moore.mp3",
-    "length": 189.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g340-dale-s-dance-orchestra-innocent-eyes.mp3",
+    "length": 195.0,
     "series": "Dale's Dance Orchestra",
     "title": "Innocent Eyes",
     "date": "1924",
     "item": "https://archive.org/details/78_innocent-eyes_dales-dance-orchestra-moore-schwartz-coots_gbia0010328b"
    },
    {
-    "src": "https://archive.org/download/78_lady-luck_arthur-langes-dance-orc-mccarthy-tierney_gbia0018007a/Lady%20Luck%20-%20Arthur%20Lange%27s%20Dance%20Orc.%20-%20McCarthy.mp3",
-    "length": 189.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g341-arthur-lange-s-dance-orc-lady-luck.mp3",
+    "length": 195.3,
     "series": "Arthur Lange's Dance Orc.",
     "title": "Lady Luck",
     "date": "1922",
     "item": "https://archive.org/details/78_lady-luck_arthur-langes-dance-orc-mccarthy-tierney_gbia0018007a"
    },
    {
-    "src": "https://archive.org/download/78_guitarre_jascha-heifetz-moszkowski-andre-benoist-sarasate_gbia0010960a/Guitarre%20-%20Jascha%20Heifetz%20-%20Moszkowski%20-%20Andre%20Benoist.mp3",
-    "length": 192.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g342-jascha-heifetz-guitarre.mp3",
+    "length": 198.4,
     "series": "Jascha Heifetz",
     "title": "Guitarre",
     "date": "1918",
     "item": "https://archive.org/details/78_guitarre_jascha-heifetz-moszkowski-andre-benoist-sarasate_gbia0010960a"
    },
    {
-    "src": "https://archive.org/download/78_foolish-child-nina-tonta_dan-gregory-dance-orchestra-nelson-mcphail-bargy_gbia0018862a/Foolish%20Child%20%28Nina%20Tonta%29%20-%20Dan%20Gregory%20Dance%20Orchestra.mp3",
-    "length": 170.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g343-dan-gregory-dance-orchestra-foolish-child-nina-tonta.mp3",
+    "length": 175.6,
     "series": "Dan Gregory Dance Orchestra",
     "title": "Foolish Child (Nina Tonta)",
     "date": "1923",
     "item": "https://archive.org/details/78_foolish-child-nina-tonta_dan-gregory-dance-orchestra-nelson-mcphail-bargy_gbia0018862a"
    },
    {
-    "src": "https://archive.org/download/78_those-beautiful-eyes-esos-ojos-preciosos_cameo-dance-orchestra-ryan-mcconnell_gbia0018857a/Those%20Beautiful%20Eyes%20%28Esos%20Ojos%20Pr%20-%20Cameo%20Dance%20Orchestra.mp3",
-    "length": 172.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g344-cameo-dance-orchestra-those-beautiful-eyes-esos-ojos-precios.mp3",
+    "length": 178.1,
     "series": "Cameo Dance Orchestra",
     "title": "Those Beautiful Eyes (Esos Ojos Preciosos)",
     "date": "1923",
     "item": "https://archive.org/details/78_those-beautiful-eyes-esos-ojos-preciosos_cameo-dance-orchestra-ryan-mcconnell_gbia0018857a"
    },
    {
-    "src": "https://archive.org/download/78_a-bit-of-pink-and-white-un-poquito-de-color-rosa-y-blanco_velvetone-dance-orchest_gbia0018860a/A%20Bit%20of%20Pink%20and%20White%20%28Un%20Po%20-%20Velvetone%20Dance%20Orchestra.mp3",
-    "length": 203.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g345-velvetone-dance-orchestra-a-bit-of-pink-and-white-un-poquito.mp3",
+    "length": 210.1,
     "series": "Velvetone Dance Orchestra",
     "title": "A Bit of Pink and White (Un Poquito De Color Rosa Y Blanco)",
     "date": "1923",
     "item": "https://archive.org/details/78_a-bit-of-pink-and-white-un-poquito-de-color-rosa-y-blanco_velvetone-dance-orchest_gbia0018860a"
    },
    {
-    "src": "https://archive.org/download/78_haunting-blues_georges-jazz-band-busse_gbia0011312b/Haunting%20Blues%20-%20George%27s%20Jazz%20Band%20-%20Busse.mp3",
-    "length": 183.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g346-george-s-jazz-band-haunting-blues.mp3",
+    "length": 189.4,
     "series": "George's Jazz Band",
     "title": "Haunting Blues",
     "date": "1922",
     "item": "https://archive.org/details/78_haunting-blues_georges-jazz-band-busse_gbia0011312b"
    },
    {
-    "src": "https://archive.org/download/78_if-you-knew-susie-like-i-know-susie_arthur-hall-and-john-ryan-desylva_gbia0011449a/If%20You%20Knew%20Susie%20%28Like%20I%20Know%20-%20Arthur%20Hall%20and%20John%20Ryan.mp3",
-    "length": 170.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g347-arthur-hall-and-john-ryan-if-you-knew-susie-like-i-know-susi.mp3",
+    "length": 175.6,
     "series": "Arthur Hall and John Ryan",
     "title": "If You Knew Susie (Like I Know Susie)",
     "date": "1925",
     "item": "https://archive.org/details/78_if-you-knew-susie-like-i-know-susie_arthur-hall-and-john-ryan-desylva_gbia0011449a"
    },
    {
-    "src": "https://archive.org/download/78_tango_mischa-elman-josef-bonime-i.-albeniz-elman_gbia0010962a/Tango%20-%20Mischa%20Elman%20-%20Josef%20Bonime%20-%20I.%20Albeniz.mp3",
-    "length": 133.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g348-mischa-elman-tango.mp3",
+    "length": 137.4,
     "series": "Mischa Elman",
     "title": "Tango",
     "date": "1919",
     "item": "https://archive.org/details/78_tango_mischa-elman-josef-bonime-i.-albeniz-elman_gbia0010962a"
    },
    {
-    "src": "https://archive.org/download/78_pilgrims-song_feodor-chaliapin-tolstoy-tchaikowsky_gbia0015771a/Pilgrim%27s%20Song%20-%20Feodor%20Chaliapin%20-%20Tolstoy.mp3",
-    "length": 184.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g349-feodor-chaliapin-pilgrim-s-song.mp3",
+    "length": 190.3,
     "series": "Feodor Chaliapin",
     "title": "Pilgrim's Song",
     "date": "1924",
     "item": "https://archive.org/details/78_pilgrims-song_feodor-chaliapin-tolstoy-tchaikowsky_gbia0015771a"
    },
    {
-    "src": "https://archive.org/download/78_chicago-that-todding-town_fred-fisher-the-bar-harbor-society-orchestra_gbia0000978b/Chicago%20%28That%20Todding%20Town%29%20-%20Fred%20Fisher.mp3",
-    "length": 196.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g350-fred-fisher-chicago-that-todding-town.mp3",
+    "length": 202.4,
     "series": "Fred Fisher",
     "title": "Chicago (That Todding Town)",
     "date": "1922",
     "item": "https://archive.org/details/78_chicago-that-todding-town_fred-fisher-the-bar-harbor-society-orchestra_gbia0000978b"
    },
    {
-    "src": "https://archive.org/download/78_rose_selvins-dance-orchestra-seymour-magine-biese_gbia0023544b/Rose%20-%20Selvin%27s%20Dance%20Orchestra%20-%20Seymour.mp3",
-    "length": 203.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g351-selvin-s-dance-orchestra-rose.mp3",
+    "length": 209.8,
     "series": "Selvin's Dance Orchestra",
     "title": "Rose",
     "date": "1921",
     "item": "https://archive.org/details/78_rose_selvins-dance-orchestra-seymour-magine-biese_gbia0023544b"
    },
    {
-    "src": "https://archive.org/download/78_a-perfect-day_alma-gluck-with-orpheus-quartet-carrie-jacobs-bond_gbia0019694b/A%20Perfect%20Day%20-%20Alma%20Gluck%20with%20Orpheus%20Quartet.mp3",
-    "length": 178.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g352-alma-gluck-with-orpheus-quartet-a-perfect-day.mp3",
+    "length": 184.2,
     "series": "Alma Gluck with Orpheus Quartet",
     "title": "A Perfect Day",
     "date": "1916",
     "item": "https://archive.org/details/78_a-perfect-day_alma-gluck-with-orpheus-quartet-carrie-jacobs-bond_gbia0019694b"
    },
    {
-    "src": "https://archive.org/download/78_wholl-take-my-place_don-parker-trio-kiages-fazioli_gbia0003607b/Who%27ll%20Take%20My%20Place%20-%20Don%20Parker%20Trio%20-%20Kiages.mp3",
-    "length": 195.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g353-don-parker-trio-who-ll-take-my-place.mp3",
+    "length": 201.7,
     "series": "Don Parker Trio",
     "title": "Who'll Take My Place",
     "date": "1922",
     "item": "https://archive.org/details/78_wholl-take-my-place_don-parker-trio-kiages-fazioli_gbia0003607b"
    },
    {
-    "src": "https://archive.org/download/78_the-sun-will-soon-be-shining-for-you-sweetheart-of-mine_joseph-knechts-waldorf-a_gbia0011291a/The%20Sun%20%20-%20Joseph%20Knecht%27s%20Waldorf-Astoria%20Dance%20Orchestra.mp3",
-    "length": 176.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g354-joseph-knecht-s-waldorf-astoria-dance-orchestra-the-sun-will.mp3",
+    "length": 182.0,
     "series": "Joseph Knecht's Waldorf-Astoria Dance Orchestra",
     "title": "The Sun Will Soon Be Shining (For You Sweetheart Of Mine)",
     "date": "1921",
     "item": "https://archive.org/details/78_the-sun-will-soon-be-shining-for-you-sweetheart-of-mine_joseph-knechts-waldorf-a_gbia0011291a"
    },
    {
-    "src": "https://archive.org/download/78_the-bird-at-the-waterfall_sibyl-sanderson-fagan-ring-hager_gbia0003316b/The%20Bird%20At%20The%20Waterfall%20-%20Sibyl%20Sanderson%20Fagan.mp3",
-    "length": 199.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g355-sibyl-sanderson-fagan-the-bird-at-the-waterfall.mp3",
+    "length": 205.9,
     "series": "Sibyl Sanderson Fagan",
     "title": "The Bird At The Waterfall",
     "date": "1921",
     "item": "https://archive.org/details/78_the-bird-at-the-waterfall_sibyl-sanderson-fagan-ring-hager_gbia0003316b"
    },
    {
-    "src": "https://archive.org/download/78_when-its-night-time-in-italy-its-wednesday-over-here_n.-m.-l.-dance-orchestra_gbia0010654b/When%20It%27s%20Night%20Time%20in%20Italy%2C%20%20-%20N.%20M.%20L.%20Dance%20Orchestra.mp3",
-    "length": 180.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g356-n-m-l-dance-orchestra-when-it-s-night-time-in-italy-it-s-wed.mp3",
+    "length": 185.8,
     "series": "N. M. L. Dance Orchestra",
     "title": "When It's Night Time in Italy, It's Wednesday Over Here",
     "date": "1923",
     "item": "https://archive.org/details/78_when-its-night-time-in-italy-its-wednesday-over-here_n.-m.-l.-dance-orchestra_gbia0010654b"
    },
    {
-    "src": "https://archive.org/download/78_steal-a-little-kiss-while-dancing_clarks-marimba-orchestra-george-a.-little-ernest_gbia0005333b/Steal%20A%20Little%20Kiss%20While%20Danc%20-%20Clark%27s%20Marimba%20Orchestra.mp3",
-    "length": 173.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g357-clark-s-marimba-orchestra-steal-a-little-kiss-while-dancing.mp3",
+    "length": 178.8,
     "series": "Clark's Marimba Orchestra",
     "title": "Steal A Little Kiss While Dancing",
     "date": "1923",
     "item": "https://archive.org/details/78_steal-a-little-kiss-while-dancing_clarks-marimba-orchestra-george-a.-little-ernest_gbia0005333b"
    },
    {
-    "src": "https://archive.org/download/78_venetian-moon_silvertone-dance-orchestra-golberg--maguire_gbia0003622b/Venetian%20Moon%20-%20Silvertone%20Dance%20Orchestra.mp3",
-    "length": 177.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g358-silvertone-dance-orchestra-venetian-moon.mp3",
+    "length": 182.7,
     "series": "Silvertone Dance Orchestra",
     "title": "Venetian Moon",
     "date": "1920",
     "item": "https://archive.org/details/78_venetian-moon_silvertone-dance-orchestra-golberg--maguire_gbia0003622b"
    },
    {
-    "src": "https://archive.org/download/78_lonesome-mamma-blues_markels-orchestra-billie-brown_gbia0007312b/Lonesome%20Mamma%20Blues%20-%20Markels%20Orchestra.mp3",
-    "length": 198.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g359-markels-orchestra-lonesome-mamma-blues.mp3",
+    "length": 204.2,
     "series": "Markels Orchestra",
     "title": "Lonesome Mamma Blues",
     "date": "1922",
     "item": "https://archive.org/details/78_lonesome-mamma-blues_markels-orchestra-billie-brown_gbia0007312b"
    },
    {
-    "src": "https://archive.org/download/78_salut-damour-loves-greeting_maud-powell-george-falkenstein-elgar_gbia0009818b/Salut%20d%27Amour%20%28Love%27s%20Greeting%29%20-%20Maud%20Powell.mp3",
-    "length": 186.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g360-maud-powell-salut-d-amour-love-s-greeting.mp3",
+    "length": 192.5,
     "series": "Maud Powell",
     "title": "Salut d'Amour (Love's Greeting)",
     "date": "1913",
     "item": "https://archive.org/details/78_salut-damour-loves-greeting_maud-powell-george-falkenstein-elgar_gbia0009818b"
    },
    {
-    "src": "https://archive.org/download/78_amor-rojo-love-red_alvarez-the-castillians_gbia0022590a/Amor%20Rojo%20-%20Love%20Red%20-%20Alvarez%20-%20The%20Castillians.mp3",
-    "length": 186.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g361-alvarez-amor-rojo-love-red.mp3",
+    "length": 191.8,
     "series": "Alvarez",
     "title": "Amor Rojo - Love Red",
     "date": "1923",
     "item": "https://archive.org/details/78_amor-rojo-love-red_alvarez-the-castillians_gbia0022590a"
    },
    {
-    "src": "https://archive.org/download/78_after-youve-said-goodbye_eddie-davis-orch.-l.-t.-kunde-and-robert-e.-lauer_gbia0011114b/After%20You%27ve%20Said%20Goodbye%20-%20Eddie%20Davis%20Orch..mp3",
-    "length": 174.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g362-eddie-davis-orch-after-you-ve-said-goodbye.mp3",
+    "length": 179.5,
     "series": "Eddie Davis Orch.",
     "title": "After You've Said Goodbye",
     "date": "1922",
     "item": "https://archive.org/details/78_after-youve-said-goodbye_eddie-davis-orch.-l.-t.-kunde-and-robert-e.-lauer_gbia0011114b"
    },
    {
-    "src": "https://archive.org/download/78_in-your-big-brown-eyes_california-melodie-syncopators-joe-trent_gbia0010065b/In%20Your%20Big%20Brown%20Eyes%20-%20California%20Melodie%20Syncopators.mp3",
-    "length": 190.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g363-california-melodie-syncopators-in-your-big-brown-eyes.mp3",
+    "length": 196.4,
     "series": "California Melodie Syncopators",
     "title": "In Your Big Brown Eyes",
     "date": "1925",
     "item": "https://archive.org/details/78_in-your-big-brown-eyes_california-melodie-syncopators-joe-trent_gbia0010065b"
    },
    {
-    "src": "https://archive.org/download/78_when-june-comes-along-with-a-song_emerson-dance-orchestra-geo.-m.-cohan_gbia0011288a/When%20June%20Comes%20Along%20with%20a%20Son%20-%20Emerson%20Dance%20Orchestra.mp3",
-    "length": 181.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g364-emerson-dance-orchestra-when-june-comes-along-with-a-song.mp3",
+    "length": 187.6,
     "series": "Emerson Dance Orchestra",
     "title": "When June Comes Along with a Song",
     "date": "1923",
     "item": "https://archive.org/details/78_when-june-comes-along-with-a-song_emerson-dance-orchestra-geo.-m.-cohan_gbia0011288a"
    },
    {
-    "src": "https://archive.org/download/78_yankee-patrol_zon-o-phone-concert-band_gbia0010416a/Yankee%20Patrol%20-%20Zon-o-phone%20Concert%20Band.mp3",
-    "length": 177.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g365-zon-o-phone-concert-band-yankee-patrol.mp3",
+    "length": 182.7,
     "series": "Zon-o-phone Concert Band",
     "title": "Yankee Patrol",
     "date": "1905",
     "item": "https://archive.org/details/78_yankee-patrol_zon-o-phone-concert-band_gbia0010416a"
    },
    {
-    "src": "https://archive.org/download/78_down-among-the-sleep-hills-of-tennessee_bob-harings-velvetone-orchestra-young-lewi_gbia0018013a/Down%20Among%20the%20Sleep%20Hi%20-%20Bob%20Haring%27s%20Velvetone%20Orchestra.mp3",
-    "length": 187.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g366-bob-haring-s-velvetone-orchestra-down-among-the-sleep-hills-.mp3",
+    "length": 193.6,
     "series": "Bob Haring's Velvetone Orchestra",
     "title": "Down Among the Sleep Hills of Tennessee",
     "date": "1923",
     "item": "https://archive.org/details/78_down-among-the-sleep-hills-of-tennessee_bob-harings-velvetone-orchestra-young-lewi_gbia0018013a"
    },
    {
-    "src": "https://archive.org/download/78_o-oh-medley_the-imperial-three-gay--johnson-bridges_gbia0011268a/O%20%28Oh%21%29%20Medley%20-%20The%20Imperial%20Three%20-%20Gay%20.mp3",
-    "length": 211.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g367-the-imperial-three-o-oh-medley.mp3",
+    "length": 217.9,
     "series": "The Imperial Three",
     "title": "O (Oh!) Medley",
     "date": "1920",
     "item": "https://archive.org/details/78_o-oh-medley_the-imperial-three-gay--johnson-bridges_gbia0011268a"
    },
    {
-    "src": "https://archive.org/download/78_cutie_yerkes-s.-s.-flotilla-dance-orch.-rudolf-friml_gbia0006909a/Cutie%20-%20Yerkes%20S.%20S.%20Flotilla%20Dance%20Orch..mp3",
-    "length": 190.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g368-yerkes-s-s-flotilla-dance-orch-cutie.mp3",
+    "length": 196.1,
     "series": "Yerkes S. S. Flotilla Dance Orch.",
     "title": "Cutie",
     "date": "1922",
     "item": "https://archive.org/details/78_cutie_yerkes-s.-s.-flotilla-dance-orch.-rudolf-friml_gbia0006909a"
    },
    {
-    "src": "https://archive.org/download/78_sweetheart-lane_hackel-berge-orchestra-hirsch-mccabe_gbia0008571a/Sweetheart%20Lane%20-%20Hackel-Berge%20Orchestra.mp3",
-    "length": 189.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g369-hackel-berge-orchestra-sweetheart-lane.mp3",
+    "length": 195.7,
     "series": "Hackel-Berge Orchestra",
     "title": "Sweetheart Lane",
     "date": "1923",
     "item": "https://archive.org/details/78_sweetheart-lane_hackel-berge-orchestra-hirsch-mccabe_gbia0008571a"
    },
    {
-    "src": "https://archive.org/download/78_la-marseillaise-_frances-alda-metropolitan-opera-chorus-rouget-de-lisle_gbia0010541a/La%20Marseillaise%20%20-%20Frances%20Alda%20-%20Metropolitan%20Opera%20Chorus.mp3",
-    "length": 198.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g370-frances-alda-la-marseillaise.mp3",
+    "length": 204.8,
     "series": "Frances Alda",
     "title": "La Marseillaise",
     "date": "1917",
     "item": "https://archive.org/details/78_la-marseillaise-_frances-alda-metropolitan-opera-chorus-rouget-de-lisle_gbia0010541a"
    },
    {
-    "src": "https://archive.org/download/78_the-cherry-blossom_patrolman-frank-quinn-j.-muller-jig_gbia0005914a/The%20Cherry%20Blossom%20-%20Patrolman%20Frank%20Quinn.mp3",
-    "length": 186.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g371-patrolman-frank-quinn-the-cherry-blossom.mp3",
+    "length": 191.8,
     "series": "Patrolman Frank Quinn",
     "title": "The Cherry Blossom",
     "date": "1921",
     "item": "https://archive.org/details/78_the-cherry-blossom_patrolman-frank-quinn-j.-muller-jig_gbia0005914a"
    },
    {
-    "src": "https://archive.org/download/78_atta-baby-_thomas-and-west-wm-tracey-halsey-k-mohr_gbia0015132b/Atta%20Baby%20%20-%20Thomas%20and%20West%20-%20Wm.%20Tracey.mp3",
-    "length": 184.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g372-thomas-and-west-atta-baby.mp3",
+    "length": 190.1,
     "series": "Thomas and West",
     "title": "Atta Baby",
     "date": "1922",
     "item": "https://archive.org/details/78_atta-baby-_thomas-and-west-wm-tracey-halsey-k-mohr_gbia0015132b"
    },
    {
-    "src": "https://archive.org/download/78_swingin-down-the-lane_bob-harings-velvetone-orchestra-kahn-jones_gbia0018013b/Swingin%27%20Down%20the%20Lane%20-%20Bob%20Haring%27s%20Velvetone%20Orchestra.mp3",
-    "length": 157.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g373-bob-haring-s-velvetone-orchestra-swingin-down-the-lane.mp3",
+    "length": 162.3,
     "series": "Bob Haring's Velvetone Orchestra",
     "title": "Swingin' Down the Lane",
     "date": "1923",
     "item": "https://archive.org/details/78_swingin-down-the-lane_bob-harings-velvetone-orchestra-kahn-jones_gbia0018013b"
    },
    {
-    "src": "https://archive.org/download/78_arkansas-blues_yerkes-s.s.-flotilla-orchestra-lada-williams_gbia0012666a/Arkansas%20Blues%20-%20Yerkes%27%20S.S.%20Flotilla%20Orchestra.mp3",
-    "length": 179.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g374-yerkes-s-s-flotilla-orchestra-arkansas-blues.mp3",
+    "length": 185.5,
     "series": "Yerkes' S.S. Flotilla Orchestra",
     "title": "Arkansas Blues",
     "date": "1921",
     "item": "https://archive.org/details/78_arkansas-blues_yerkes-s.s.-flotilla-orchestra-lada-williams_gbia0012666a"
    },
    {
-    "src": "https://archive.org/download/78_too-tired-demasiado-cansado_bob-haring-and-his-orchestra-little-sizemore-shay_gbia0018813b/Too%20Tired%20%28Demasiado%20Cansado%29%20-%20Bob%20Haring%20and%20His%20Orchestra.mp3",
-    "length": 190.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g375-bob-haring-and-his-orchestra-too-tired-demasiado-cansado.mp3",
+    "length": 196.4,
     "series": "Bob Haring and His Orchestra",
     "title": "Too Tired (Demasiado Cansado)",
     "date": "1924",
     "item": "https://archive.org/details/78_too-tired-demasiado-cansado_bob-haring-and-his-orchestra-little-sizemore-shay_gbia0018813b"
    },
    {
-    "src": "https://archive.org/download/78_the-swallows-tail_patrolman-frank-quinn-j.-muller-reel_gbia0005914b/The%20Swallow%27s%20Tail%20-%20Patrolman%20Frank%20Quinn.mp3",
-    "length": 194.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g376-patrolman-frank-quinn-the-swallow-s-tail.mp3",
+    "length": 200.6,
     "series": "Patrolman Frank Quinn",
     "title": "The Swallow's Tail",
     "date": "1921",
     "item": "https://archive.org/details/78_the-swallows-tail_patrolman-frank-quinn-j.-muller-reel_gbia0005914b"
    },
    {
-    "src": "https://archive.org/download/78_abandonado_guyons-paradise-orchestra-guillermo-posadas-jules-r.-herbuveaux_gbia0008882b/Abandonado%20-%20Guyon%27s%20Paradise%20Orchestra%20-%20Guillermo%20Posadas.mp3",
-    "length": 200.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g377-guyon-s-paradise-orchestra-abandonado.mp3",
+    "length": 206.2,
     "series": "Guyon's Paradise Orchestra",
     "title": "Abandonado",
     "date": "1923",
     "item": "https://archive.org/details/78_abandonado_guyons-paradise-orchestra-guillermo-posadas-jules-r.-herbuveaux_gbia0008882b"
    },
    {
-    "src": "https://archive.org/download/78_youre-the-one-that-i-want_van-eps-banta-trio-hugo-frey_gbia0006690a/You%27re%20The%20One%20%28That%20I%20Want%29%20-%20Van%20Eps%20Banta%20Trio.mp3",
-    "length": 200.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g378-van-eps-banta-trio-you-re-the-one-that-i-want.mp3",
+    "length": 207.0,
     "series": "Van Eps Banta Trio",
     "title": "You're The One (That I Want)",
     "date": "1919",
     "item": "https://archive.org/details/78_youre-the-one-that-i-want_van-eps-banta-trio-hugo-frey_gbia0006690a"
    },
    {
-    "src": "https://archive.org/download/78_nocturne-complaint_josef-hofmann-hofmann_gbia0009325b/Nocturne%20%28Complaint%29%20-%20Josef%20Hofmann%20-%20Hofmann.mp3",
-    "length": 143.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g379-josef-hofmann-nocturne-complaint.mp3",
+    "length": 148.2,
     "series": "Josef Hofmann",
     "title": "Nocturne (Complaint)",
     "date": "1923",
     "item": "https://archive.org/details/78_nocturne-complaint_josef-hofmann-hofmann_gbia0009325b"
    },
    {
-    "src": "https://archive.org/download/78_broken-hearted-melody_clarks-marimba-orchestra-kahn-and-jones_gbia0009327b/Broken%20Hearted%20Melody%20-%20Clark%27s%20Marimba%20Orchestra.mp3",
-    "length": 185.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g380-clark-s-marimba-orchestra-broken-hearted-melody.mp3",
+    "length": 190.8,
     "series": "Clark's Marimba Orchestra",
     "title": "Broken Hearted Melody",
     "date": "1921",
     "item": "https://archive.org/details/78_broken-hearted-melody_clarks-marimba-orchestra-kahn-and-jones_gbia0009327b"
    },
    {
-    "src": "https://archive.org/download/78_cielito-lindo-beautiful-heaven_imperial-dance-orchestra-c-fernandes_gbia0015121b/Cielito%20Lindo%20%28Beautiful%20Heaven%20-%20Imperial%20Dance%20Orchestra.mp3",
-    "length": 184.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g381-imperial-dance-orchestra-cielito-lindo-beautiful-heaven.mp3",
+    "length": 190.1,
     "series": "Imperial Dance Orchestra",
     "title": "Cielito Lindo (Beautiful Heaven)",
     "date": "1923",
     "item": "https://archive.org/details/78_cielito-lindo-beautiful-heaven_imperial-dance-orchestra-c-fernandes_gbia0015121b"
    },
    {
-    "src": "https://archive.org/download/78_somebody-else-took-you-out-of-my-arms-but-they-cant-take-you-out-of-my-heart-ot_gbia0018852a/Somebody%20Else%20Took%20You%20Out%20%20-%20Jos.%20B.%20Franklin%27s%20Orchestra.mp3",
-    "length": 175.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g382-jos-b-franklin-s-orchestra-somebody-else-took-you-out-of-my-.mp3",
+    "length": 180.6,
     "series": "Jos. B. Franklin's Orchestra",
     "title": "Somebody Else Took You Out of My Arms (But They Can't Take You Out Of My Heart) (Otra Persona te Saco de mis Brazos)",
     "date": "1923",
     "item": "https://archive.org/details/78_somebody-else-took-you-out-of-my-arms-but-they-cant-take-you-out-of-my-heart-ot_gbia0018852a"
    },
    {
-    "src": "https://archive.org/download/78_cut-yourself-a-piece-of-cake_broadway-melody-makers-billy-james_gbia0004336a/Cut%20Yourself%20A%20Piece%20of%20Cake%20-%20Broadway%20Melody%20Makers.mp3",
-    "length": 197.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g383-broadway-melody-makers-cut-yourself-a-piece-of-cake.mp3",
+    "length": 203.4,
     "series": "Broadway Melody Makers",
     "title": "Cut Yourself A Piece of Cake",
     "date": "1923",
     "item": "https://archive.org/details/78_cut-yourself-a-piece-of-cake_broadway-melody-makers-billy-james_gbia0004336a"
    },
    {
-    "src": "https://archive.org/download/78_lonesome-mama-blues_the-california-ramblers-billy-brown_gbia0002729b/Lonesome%20Mama%20Blues%20-%20The%20California%20Ramblers.mp3",
-    "length": 190.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g384-the-california-ramblers-lonesome-mamma-blues.mp3",
+    "length": 196.8,
     "series": "The California Ramblers",
     "title": "Lonesome Mamma Blues",
     "date": "1922",
     "item": "https://archive.org/details/78_lonesome-mama-blues_the-california-ramblers-billy-brown_gbia0002729b"
    },
    {
-    "src": "https://archive.org/download/78_dance-of-the-nightingales_imperial-marimba-band-f.-h.-losey_gbia0011543a/Dance%20of%20the%20Nightingales%20-%20Imperial%20Marimba%20Band.mp3",
-    "length": 210.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g385-imperial-marimba-band-dance-of-the-nightingales.mp3",
+    "length": 217.1,
     "series": "Imperial Marimba Band",
     "title": "Dance of the Nightingales",
     "date": "1923",
     "item": "https://archive.org/details/78_dance-of-the-nightingales_imperial-marimba-band-f.-h.-losey_gbia0011543a"
    },
    {
-    "src": "https://archive.org/download/78_abide-with-me_alma-gluck-louise-homer-h.-f.-lyte-wm.-h.-monk_gbia0012688a/Abide%20with%20Me%20-%20Alma%20Gluck%20-%20Louise%20Homer.mp3",
-    "length": 211.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g386-alma-gluck-abide-with-me.mp3",
+    "length": 218.2,
     "series": "Alma Gluck",
     "title": "Abide with Me",
     "date": "1913",
     "item": "https://archive.org/details/78_abide-with-me_alma-gluck-louise-homer-h.-f.-lyte-wm.-h.-monk_gbia0012688a"
    },
    {
-    "src": "https://archive.org/download/78_in-maytime-i-learned-to-love_taylor-trio-snyder_gbia0011240a/In%20Maytime%20I%20Learned%20To%20Love%20-%20Taylor%20Trio.mp3",
-    "length": 183.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g387-taylor-trio-in-maytime-i-learned-to-love.mp3",
+    "length": 189.4,
     "series": "Taylor Trio",
     "title": "In Maytime I Learned To Love",
     "date": "1922",
     "item": "https://archive.org/details/78_in-maytime-i-learned-to-love_taylor-trio-snyder_gbia0011240a"
    },
    {
-    "src": "https://archive.org/download/78_a-smile-will-go-a-long-way_lanins-arcadians-davis-akst_gbia0006338a/A%20Smile%20Will%20Go%20A%20Long%20Way%20-%20Lanin%27s%20Arcadians.mp3",
-    "length": 177.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g388-lanin-s-arcadians-a-smile-will-go-a-long-long-way.mp3",
+    "length": 182.7,
     "series": "Lanin's Arcadians",
     "title": "A Smile Will Go A Long Long Way",
     "date": "1924",
     "item": "https://archive.org/details/78_a-smile-will-go-a-long-way_lanins-arcadians-davis-akst_gbia0006338a"
    },
    {
-    "src": "https://archive.org/download/78_cavatina_helene-jacoby-raff_gbia0011228b/Cavatina%20-%20Helene%20Jacoby%20-%20Raff.mp3",
-    "length": 189.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g389-helene-jacoby-cavatina.mp3",
+    "length": 195.3,
     "series": "Helene Jacoby",
     "title": "Cavatina",
     "date": "1923",
     "item": "https://archive.org/details/78_cavatina_helene-jacoby-raff_gbia0011228b"
    },
    {
-    "src": "https://archive.org/download/78_oh-what-a-pal-was-mary_joseph-knechts-waldorf-astoria-dance-orchestra-wendling_gbia0002865a/Oh%21%20What%20A%20Pal%20Was%20Mary%20-%20Joseph%20Knecht%27s%20Waldorf%20Astoria%20Dance%20Orchestra.mp3",
-    "length": 195.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g390-joseph-knecht-s-waldorf-astoria-dance-orchestra-oh-what-a-pa.mp3",
+    "length": 201.7,
     "series": "Joseph Knecht's Waldorf Astoria Dance Orchestra",
     "title": "Oh! What A Pal Was Mary",
     "date": "1919",
     "item": "https://archive.org/details/78_oh-what-a-pal-was-mary_joseph-knechts-waldorf-astoria-dance-orchestra-wendling_gbia0002865a"
    },
    {
-    "src": "https://archive.org/download/78_oh-how-i-miss-you-to-night_rae-eleanor-ball-dave-kaplan-benny-davis-joe-burke-mark_gbia0011546b/Oh%2C%20How%20I%20Miss%20You%20To-night%20-%20Rae%20Eleanor%20Ball.mp3",
-    "length": 268.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g391-rae-eleanor-ball-oh-how-i-miss-you-to-night.mp3",
+    "length": 276.5,
     "series": "Rae Eleanor Ball",
     "title": "Oh, How I Miss You To-night",
     "date": "1925",
     "item": "https://archive.org/details/78_oh-how-i-miss-you-to-night_rae-eleanor-ball-dave-kaplan-benny-davis-joe-burke-mark_gbia0011546b"
    },
    {
-    "src": "https://archive.org/download/78_arkansaw-traveler_joe-samuels-and-larry-briers_gbia0011471b/Arkansaw%20Traveler%20-%20Joe%20Samuels%20and%20Larry%20Briers-restored.mp3",
-    "length": 186.7,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g392-joe-samuels-and-larry-briers-arkansaw-traveler.mp3",
+    "length": 192.5,
     "series": "Joe Samuels and Larry Briers",
     "title": "Arkansaw Traveler",
     "date": "1925",
     "item": "https://archive.org/details/78_arkansaw-traveler_joe-samuels-and-larry-briers_gbia0011471b"
    },
    {
-    "src": "https://archive.org/download/78_a-kiss-in-the-dark_clarks-marimba-orchestra-victor-herbert-and-b-g-de-sylva_gbia0015122a/A%20Kiss%20in%20the%20Dark%20-%20Clark%27s%20Marimba%20Orchestra.mp3",
-    "length": 188.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g393-clark-s-marimba-orchestra-a-kiss-in-the-dark.mp3",
+    "length": 194.7,
     "series": "Clark's Marimba Orchestra",
     "title": "A Kiss in the Dark",
     "date": "1923",
     "item": "https://archive.org/details/78_a-kiss-in-the-dark_clarks-marimba-orchestra-victor-herbert-and-b-g-de-sylva_gbia0015122a"
    },
    {
-    "src": "https://archive.org/download/78_i-gave-you-up-just-before-you-threw-me-down_eddie-davis-orchestra-kalmar-ruby-ahler_gbia0016345a/I%20Gave%20You%20up%20Just%20Before%20You%20Thre%20-%20Eddie%20Davis%20Orchestra.mp3",
-    "length": 182.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g394-eddie-davis-orchestra-i-gave-you-up-just-before-you-threw-me.mp3",
+    "length": 188.0,
     "series": "Eddie Davis Orchestra",
     "title": "I Gave You up Just Before You Threw Me Down",
     "date": "1922",
     "item": "https://archive.org/details/78_i-gave-you-up-just-before-you-threw-me-down_eddie-davis-orchestra-kalmar-ruby-ahler_gbia0016345a"
    },
    {
-    "src": "https://archive.org/download/78_oh-baby-dont-say-no-say-maybe_frisco-syncopators-de-sylva-donaldson_gbia0016343a/Oh%20Baby%20%28Don%27t%20Say%20No%2C%20Say%20Maybe%29%20-%20Frisco%20Syncopators.mp3",
-    "length": 176.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g395-frisco-syncopators-oh-baby-don-t-say-no-say-maybe.mp3",
+    "length": 182.3,
     "series": "Frisco Syncopators",
     "title": "Oh Baby (Don't Say No, Say Maybe)",
     "date": "1924",
     "item": "https://archive.org/details/78_oh-baby-dont-say-no-say-maybe_frisco-syncopators-de-sylva-donaldson_gbia0016343a"
    },
    {
-    "src": "https://archive.org/download/78_a-smile-will-go-a-long-way_baileys-lucky-seven-davis-akst_gbia0008528b/A%20Smile%20Will%20Go%20A%20Long%20Way%20-%20Bailey%27s%20Lucky%20Seven.mp3",
-    "length": 167.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g396-bailey-s-lucky-seven-a-smile-will-go-a-long-way.mp3",
+    "length": 173.2,
     "series": "Bailey's Lucky Seven",
     "title": "A Smile Will Go A Long Way",
     "date": "1923",
     "item": "https://archive.org/details/78_a-smile-will-go-a-long-way_baileys-lucky-seven-davis-akst_gbia0008528b"
    },
    {
-    "src": "https://archive.org/download/78_lost-a-wonderful-girl_billy-west-davis-hawley_gbia0015126a/Lost%20%28A%20Wonderful%20Girl%29%20-%20Billy%20West%20-%20Davis.mp3",
-    "length": 177.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g397-billy-west-lost-a-wonderful-girl.mp3",
+    "length": 182.7,
     "series": "Billy West",
     "title": "Lost (A Wonderful Girl)",
     "date": "1922",
     "item": "https://archive.org/details/78_lost-a-wonderful-girl_billy-west-davis-hawley_gbia0015126a"
    },
    {
-    "src": "https://archive.org/download/78_under-the-honeymoon_coney-island-jazz-orch.-hanley--king_gbia0009118a/Under%20The%20Honeymoon%20-%20Coney%20Island%20Jazz%20Orch..mp3",
-    "length": 178.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g398-coney-island-jazz-orch-under-the-honeymoon.mp3",
+    "length": 184.4,
     "series": "Coney Island Jazz Orch.",
     "title": "Under The Honeymoon",
     "date": "1919",
     "item": "https://archive.org/details/78_under-the-honeymoon_coney-island-jazz-orch.-hanley--king_gbia0009118a"
    },
    {
-    "src": "https://archive.org/download/78_honeymoon-time_frisco-syncopators-william-f.-ceasar-and-irving-weill_gbia0006047a/Honeymoon%20Time%20-%20Frisco%20Syncopators%20-%20William%20F.%20Ceasar%20and%20Irving%20Weill.mp3",
-    "length": 201.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g399-frisco-syncopators-honeymoon-time.mp3",
+    "length": 207.7,
     "series": "Frisco Syncopators",
     "title": "Honeymoon Time",
     "date": "1923",
     "item": "https://archive.org/details/78_honeymoon-time_frisco-syncopators-william-f.-ceasar-and-irving-weill_gbia0006047a"
    },
    {
-    "src": "https://archive.org/download/78_take-oh-take-those-lips-away-quitate-oh-quitate-esos-labios_varsity-eight-mccar_gbia0018852b/Take%2C%20Oh%20Take%20Those%20Lips%20Away%20%28Quitate%2C%20Oh%20-%20Varsity%20Eight.mp3",
-    "length": 196.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g400-varsity-eight-take-oh-take-those-lips-away-quitate-oh-quitat.mp3",
+    "length": 202.4,
     "series": "Varsity Eight",
     "title": "Take, Oh Take Those Lips Away (Quitate, Oh Quitate Esos Labios)",
     "date": "1923",
     "item": "https://archive.org/details/78_take-oh-take-those-lips-away-quitate-oh-quitate-esos-labios_varsity-eight-mccar_gbia0018852b"
    },
    {
-    "src": "https://archive.org/download/78_burning-sands_the-broadway-syncopaters-d.-onivas_gbia0004256b/Burning%20Sands%20-%20The%20Broadway%20Syncopaters.mp3",
-    "length": 184.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g401-the-broadway-syncopaters-burning-sands.mp3",
+    "length": 190.4,
     "series": "The Broadway Syncopaters",
     "title": "Burning Sands",
     "date": "1922",
     "item": "https://archive.org/details/78_burning-sands_the-broadway-syncopaters-d.-onivas_gbia0004256b"
    },
    {
-    "src": "https://archive.org/download/78_i-want-to-be-happy-quiero-felicidad_arthur-lange-and-his-orchestra-caesar-youmans_gbia0004935b/I%20Want%20to%20Be%20Happy%20%28Quier%20-%20Arthur%20Lange%20and%20His%20Orchestra.mp3",
-    "length": 165.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g402-arthur-lange-and-his-orchestra-i-want-to-be-happy-quiero-fel.mp3",
+    "length": 171.1,
     "series": "Arthur Lange and His Orchestra",
     "title": "I Want to Be Happy (Quiero felicidad)",
     "date": "1924",
     "item": "https://archive.org/details/78_i-want-to-be-happy-quiero-felicidad_arthur-lange-and-his-orchestra-caesar-youmans_gbia0004935b"
    },
    {
-    "src": "https://archive.org/download/78_daisy-days_selvins-dance-orchestra-kahn-blaufuss-cooke_gbia0017859a/Daisy%20Days%20-%20Selvin%27s%20Dance%20Orchestra%20-%20Kahn.mp3",
-    "length": 215.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g403-selvin-s-dance-orchestra-daisy-days.mp3",
+    "length": 221.8,
     "series": "Selvin's Dance Orchestra",
     "title": "Daisy Days",
     "date": "1921",
     "item": "https://archive.org/details/78_daisy-days_selvins-dance-orchestra-kahn-blaufuss-cooke_gbia0017859a"
    },
    {
-    "src": "https://archive.org/download/78_dont-bring-me-posies_selvins-orchestra-handman-rose_gbia0001135b/Don%27t%20Bring%20Me%20Posies%20-%20Selvin%27s%20Orchestra.mp3",
-    "length": 172.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g404-selvin-s-orchestra-don-t-bring-me-posies.mp3",
+    "length": 178.1,
     "series": "Selvin's Orchestra",
     "title": "Don't Bring Me Posies",
     "date": "1922",
     "item": "https://archive.org/details/78_dont-bring-me-posies_selvins-orchestra-handman-rose_gbia0001135b"
    },
    {
-    "src": "https://archive.org/download/78_easy-goin-mama-la-mama-indulgente_jack-denney-and-his-orchestra-lewis-young-ahle_gbia0018816a/Easy%20Goin%27%20Mama%20%28La%20mama%20i%20-%20Jack%20Denney%20and%20His%20Orchestra.mp3",
-    "length": 191.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g405-jack-denney-and-his-orchestra-easy-goin-mama-la-mama-indulge.mp3",
+    "length": 197.8,
     "series": "Jack Denney and His Orchestra",
     "title": "Easy Goin' Mama (La mama indulgente)",
     "date": "1924",
     "item": "https://archive.org/details/78_easy-goin-mama-la-mama-indulgente_jack-denney-and-his-orchestra-lewis-young-ahle_gbia0018816a"
    },
    {
-    "src": "https://archive.org/download/78_ill-take-her-back-if-she-wants-to-come-back-la-volvere-a-querer-si-quiere-volver_gbia0010562a/I%27ll%20Take%20Her%20Back%20if%20She%20Wants%20to%20Come%20B%20-%20Irving%20Kaufman.mp3",
-    "length": 191.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g406-irving-kaufman-i-ll-take-her-back-if-she-wants-to-come-back-.mp3",
+    "length": 197.8,
     "series": "Irving Kaufman",
     "title": "I'll Take Her Back if She Wants to Come Back (La Volvere a Querer si quiere volver a mi)",
     "date": "1924",
     "item": "https://archive.org/details/78_ill-take-her-back-if-she-wants-to-come-back-la-volvere-a-querer-si-quiere-volver_gbia0010562a"
    },
    {
-    "src": "https://archive.org/download/78_narodni-valcik_gbia0014518a/Narodni%20Valcik.mp3",
-    "length": 188.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g407-unknown-artist-narodni-valcik.mp3",
+    "length": 193.9,
     "series": "Unknown artist",
     "title": "Narodni Valcik",
     "date": "1908",
     "item": "https://archive.org/details/78_narodni-valcik_gbia0014518a"
    },
    {
-    "src": "https://archive.org/download/78_save-the-last-waltz-for-me_max-terrs-orchestra-johnson-austin_gbia0003584a/Save%20The%20Last%20Waltz%20for%20Me%20-%20Max%20Terr%27s%20Orchestra.mp3",
-    "length": 178.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g408-max-terr-s-orchestra-save-the-last-waltz-for-me.mp3",
+    "length": 184.1,
     "series": "Max Terr's Orchestra",
     "title": "Save The Last Waltz for Me",
     "date": "1922",
     "item": "https://archive.org/details/78_save-the-last-waltz-for-me_max-terrs-orchestra-johnson-austin_gbia0003584a"
    },
    {
-    "src": "https://archive.org/download/78_runnin-wild_southern-serenaders-woods-gibbs_gbia0006546a/Runnin%27%20Wild%20-%20Southern%20Serenaders%20-%20Woods.mp3",
-    "length": 174.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g409-southern-serenaders-runnin-wild.mp3",
+    "length": 179.9,
     "series": "Southern Serenaders",
     "title": "Runnin' Wild",
     "date": "1922",
     "item": "https://archive.org/details/78_runnin-wild_southern-serenaders-woods-gibbs_gbia0006546a"
    },
    {
-    "src": "https://archive.org/download/78_old-timers-waltz_selvins-novelty-orchestra-ben-selvin_gbia0025137b/Old%20Timer%27s%20Waltz%20-%20Selvin%27s%20Novelty%20Orchestra.mp3",
-    "length": 203.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g410-selvin-s-novelty-orchestra-old-timer-s-waltz.mp3",
+    "length": 209.8,
     "series": "Selvin's Novelty Orchestra",
     "title": "Old Timer's Waltz",
     "date": "1920",
     "item": "https://archive.org/details/78_old-timers-waltz_selvins-novelty-orchestra-ben-selvin_gbia0025137b"
    },
    {
-    "src": "https://archive.org/download/78_happy-days-will-come_university-dance-orchestra-houser_gbia0004311a/Happy%20Days%20Will%20Come%20-%20University%20Dance%20Orchestra.mp3",
-    "length": 183.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g411-university-dance-orchestra-happy-days-will-come.mp3",
+    "length": 189.4,
     "series": "University Dance Orchestra",
     "title": "Happy Days Will Come",
     "date": "1925",
     "item": "https://archive.org/details/78_happy-days-will-come_university-dance-orchestra-houser_gbia0004311a"
    },
    {
-    "src": "https://archive.org/download/78_ive-got-the-yes-we-have-no-bananas-blues_billy-west-brown--hanley-king_gbia0011452a/I%27ve%20Got%20The%20Yes%20We%20Have%20No%20Bananas%20Blues%20-%20Billy%20West.mp3",
-    "length": 180.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g412-billy-west-i-ve-got-the-yes-we-have-no-bananas-blues.mp3",
+    "length": 186.2,
     "series": "Billy West",
     "title": "I've Got The Yes We Have No Bananas Blues",
     "date": "1922",
     "item": "https://archive.org/details/78_ive-got-the-yes-we-have-no-bananas-blues_billy-west-brown--hanley-king_gbia0011452a"
    },
    {
-    "src": "https://archive.org/download/78_barcarolle_longo-trio-offenbach_gbia0009373a/Barcarolle%20-%20Longo%20Trio%20-%20Offenbach.mp3",
-    "length": 180.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g413-longo-trio-barcarolle.mp3",
+    "length": 185.9,
     "series": "Longo Trio",
     "title": "Barcarolle",
     "date": "1921",
     "item": "https://archive.org/details/78_barcarolle_longo-trio-offenbach_gbia0009373a"
    },
    {
-    "src": "https://archive.org/download/78_evening-chimes-in-the-mountains_standard-band_gbia0014516b/Evening%20Chimes%20in%20the%20Mountains%20-%20Standard%20Band.mp3",
-    "length": 162.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g414-standard-band-evening-chimes-in-the-mountains.mp3",
+    "length": 167.5,
     "series": "Standard Band",
     "title": "Evening Chimes in the Mountains",
     "date": "1901",
     "item": "https://archive.org/details/78_evening-chimes-in-the-mountains_standard-band_gbia0014516b"
    },
    {
-    "src": "https://archive.org/download/78_dream-flowers_imperial-marimba-band-s.-translateur_gbia0011543b/Dream%20Flowers%20-%20Imperial%20Marimba%20Band%20-%20S.%20Translateur.mp3",
-    "length": 266.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g415-imperial-marimba-band-dream-flowers.mp3",
+    "length": 274.6,
     "series": "Imperial Marimba Band",
     "title": "Dream Flowers",
     "date": "1923",
     "item": "https://archive.org/details/78_dream-flowers_imperial-marimba-band-s.-translateur_gbia0011543b"
    },
    {
-    "src": "https://archive.org/download/78_zapateado-the-cobbler_sasha-culbertson-helen-hamilton-sarasate_gbia0010557b/Zapateado%20%28The%20Cobbler%29%20-%20Sasha%20Culbertson.mp3",
-    "length": 192.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g416-sasha-culbertson-zapateado-the-cobbler.mp3",
+    "length": 198.5,
     "series": "Sasha Culbertson",
     "title": "Zapateado (The Cobbler)",
     "date": "1923",
     "item": "https://archive.org/details/78_zapateado-the-cobbler_sasha-culbertson-helen-hamilton-sarasate_gbia0010557b"
    },
    {
-    "src": "https://archive.org/download/78_coral-sea_duane-sawyer--his-novelty-orchestra-brown_gbia0010092a/Coral%20Sea%20-%20Duane%20Sawyer%20%26%20his%20Novelty%20Orchestra.mp3",
-    "length": 163.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g417-duane-sawyer-his-novelty-orchestra-coral-sea.mp3",
+    "length": 168.6,
     "series": "Duane Sawyer & his Novelty Orchestra",
     "title": "Coral Sea",
     "date": "1920",
     "item": "https://archive.org/details/78_coral-sea_duane-sawyer--his-novelty-orchestra-brown_gbia0010092a"
    },
    {
-    "src": "https://archive.org/download/78_minuet_josef-borisoff-i.-paderewski_gbia0011129a/Minuet%20-%20Josef%20Borisoff%20-%20I.%20Paderewski.mp3",
-    "length": 202.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g418-josef-borisoff-minuet.mp3",
+    "length": 208.3,
     "series": "Josef Borisoff",
     "title": "Minuet",
     "date": "1922",
     "item": "https://archive.org/details/78_minuet_josef-borisoff-i.-paderewski_gbia0011129a"
    },
    {
-    "src": "https://archive.org/download/78_old-man-jazz_george-hamilton-greens-novelty-orchestra-gene-quaw_gbia0006891a/Old%20Man%20Jazz%20-%20George%20Hamilton%20Green%27s%20Novelty%20Orchestra.mp3",
-    "length": 200.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g419-george-hamilton-green-s-novelty-orchestra-old-man-jazz.mp3",
+    "length": 206.2,
     "series": "George Hamilton Green's Novelty Orchestra",
     "title": "Old Man Jazz",
     "date": "1920",
     "item": "https://archive.org/details/78_old-man-jazz_george-hamilton-greens-novelty-orchestra-gene-quaw_gbia0006891a"
    },
    {
-    "src": "https://archive.org/download/78_ive-got-the-joys_albert-howard-young-lewis-akst_gbia0016167b/I%27ve%20Got%20the%20Joys%20-%20Albert%20Howard%20-%20Young.mp3",
-    "length": 194.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g420-albert-howard-i-ve-got-the-joys.mp3",
+    "length": 200.6,
     "series": "Albert Howard",
     "title": "I've Got the Joys",
     "date": "1921",
     "item": "https://archive.org/details/78_ive-got-the-joys_albert-howard-young-lewis-akst_gbia0016167b"
    },
    {
-    "src": "https://archive.org/download/78_jealous-zeloso_arthur-lange-and-his-orchestra-malie-finch-little_gbia0018831a/Jealous%20%28Zeloso%29%20-%20Arthur%20Lange%20and%20His%20Orchestra.mp3",
-    "length": 195.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g421-arthur-lange-and-his-orchestra-jealous-zeloso.mp3",
+    "length": 202.0,
     "series": "Arthur Lange and His Orchestra",
     "title": "Jealous (Zeloso)",
     "date": "1924",
     "item": "https://archive.org/details/78_jealous-zeloso_arthur-lange-and-his-orchestra-malie-finch-little_gbia0018831a"
    },
    {
-    "src": "https://archive.org/download/78_juanita_emilio-de-gogorza-mrs.-norton_gbia0010956a/Juanita%20-%20Emilio%20de%20Gogorza%20-%20Mrs.%20Norton.mp3",
-    "length": 205.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g422-emilio-de-gogorza-juanita.mp3",
+    "length": 211.8,
     "series": "Emilio de Gogorza",
     "title": "Juanita",
     "date": "1919",
     "item": "https://archive.org/details/78_juanita_emilio-de-gogorza-mrs.-norton_gbia0010956a"
    },
    {
-    "src": "https://archive.org/download/78_wonderful-one_selvins-dance-orchestra-neilan-grofe-whiteman-terriss_gbia0001147a/Wonderful%20One%20-%20Selvin%27s%20Dance%20Orchestra.mp3",
-    "length": 176.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g423-selvin-s-dance-orchestra-wonderful-one.mp3",
+    "length": 182.3,
     "series": "Selvin's Dance Orchestra",
     "title": "Wonderful One",
     "date": "1923",
     "item": "https://archive.org/details/78_wonderful-one_selvins-dance-orchestra-neilan-grofe-whiteman-terriss_gbia0001147a"
    },
    {
-    "src": "https://archive.org/download/78_absence_erdodys-hotel-pennsylvania-orchestra-alex.-sullivan-harry-rosey_gbia0006747a/Absence%20-%20Erdody%27s%20Hotel%20Pennsylvania%20Orchestra.mp3",
-    "length": 193.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g424-erdody-s-hotel-pennsylvania-orchestra-absence.mp3",
+    "length": 199.2,
     "series": "Erdody's Hotel Pennsylvania Orchestra",
     "title": "Absence",
     "date": "1921",
     "item": "https://archive.org/details/78_absence_erdodys-hotel-pennsylvania-orchestra-alex.-sullivan-harry-rosey_gbia0006747a"
    },
    {
-    "src": "https://archive.org/download/78_i-like-to-do-it_the-merry-melody-men-byron-gay_gbia0002564a/I%20Like%20To%20Do%20IT%20-%20The%20Merry%20Melody%20Men%20-%20Byron%20Gay.mp3",
-    "length": 211.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g425-the-merry-melody-men-i-like-to-do-it.mp3",
+    "length": 218.2,
     "series": "The Merry Melody Men",
     "title": "I Like To Do IT",
     "date": "1920",
     "item": "https://archive.org/details/78_i-like-to-do-it_the-merry-melody-men-byron-gay_gbia0002564a"
    },
    {
-    "src": "https://archive.org/download/78_happy-watchin-all-the-clouds-roll-by-feliz_varsity-eight-frey-bernard-robinson_gbia0018817b/Happy%20%28Watchin%27%20All%20The%20Clouds%20Roll%20By%29%20%28F%20-%20Varsity%20Eight.mp3",
-    "length": 185.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g426-varsity-eight-happy-watchin-all-the-clouds-roll-by-feliz.mp3",
+    "length": 191.1,
     "series": "Varsity Eight",
     "title": "Happy (Watchin' All The Clouds Roll By) (Feliz)",
     "date": "1924",
     "item": "https://archive.org/details/78_happy-watchin-all-the-clouds-roll-by-feliz_varsity-eight-frey-bernard-robinson_gbia0018817b"
    },
    {
-    "src": "https://archive.org/download/78_call-me-back-pal-omine_sam-ash-lawrence-perricone-harold-dixon_gbia0011438b/Call%20Me%20Back%20Pal%20O%27Mine%20-%20Sam%20Ash%20-%20Lawrence%20Perricone.mp3",
-    "length": 205.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g427-sam-ash-call-me-back-pal-o-mine.mp3",
+    "length": 212.3,
     "series": "Sam Ash",
     "title": "Call Me Back Pal O'Mine",
     "date": "1922",
     "item": "https://archive.org/details/78_call-me-back-pal-omine_sam-ash-lawrence-perricone-harold-dixon_gbia0011438b"
    },
    {
-    "src": "https://archive.org/download/78_say-it-while-dancing_knechts-dance-orchestra-benny-davis-and-abner-silver_gbia0015130b/Say%20It%20While%20Dancing%20-%20Knecht%27s%20Dance%20Orchestra.mp3",
-    "length": 185.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g428-knecht-s-dance-orchestra-say-it-while-dancing.mp3",
+    "length": 191.5,
     "series": "Knecht's Dance Orchestra",
     "title": "Say It While Dancing",
     "date": "1922",
     "item": "https://archive.org/details/78_say-it-while-dancing_knechts-dance-orchestra-benny-davis-and-abner-silver_gbia0015130b"
    },
    {
-    "src": "https://archive.org/download/78_blue-danube-waltz_zon-ophone-concert-band-joh-strauss_gbia0026210a/Blue%20Danube%20Waltz%20-%20Zon-ophone%20Concert%20Band.mp3",
-    "length": 158.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g429-zon-ophone-concert-band-blue-danube-waltz.mp3",
+    "length": 163.0,
     "series": "Zon-ophone Concert Band",
     "title": "Blue Danube Waltz",
     "date": "1905",
     "item": "https://archive.org/details/78_blue-danube-waltz_zon-ophone-concert-band-joh-strauss_gbia0026210a"
    },
    {
-    "src": "https://archive.org/download/78_dreamer-of-dreams_hall-and-ryan-gus-kahn-ted-fiorito_gbia0015100a/Dreamer%20of%20Dreams%20-%20Hall%20and%20Ryan%20-%20Gus%20Kahn.mp3",
-    "length": 187.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g430-hall-and-ryan-dreamer-of-dreams.mp3",
+    "length": 193.6,
     "series": "Hall and Ryan",
     "title": "Dreamer of Dreams",
     "date": "1924",
     "item": "https://archive.org/details/78_dreamer-of-dreams_hall-and-ryan-gus-kahn-ted-fiorito_gbia0015100a"
    },
    {
-    "src": "https://archive.org/download/78_beautiful-ohio_fritz-kreisler-mary-earl_gbia0019690a/Beautiful%20Ohio%20-%20Fritz%20Kreisler%20-%20Mary%20Earl.mp3",
-    "length": 201.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g431-fritz-kreisler-beautiful-ohio.mp3",
+    "length": 207.9,
     "series": "Fritz Kreisler",
     "title": "Beautiful Ohio",
     "date": "1919",
     "item": "https://archive.org/details/78_beautiful-ohio_fritz-kreisler-mary-earl_gbia0019690a"
    },
    {
-    "src": "https://archive.org/download/78_i-found-a-four-leaf-clover_joe-gibsons-orchestra-desylva-gershwin_gbia0018011b/I%20Found%20A%20Four%20Leaf%20Clover%20-%20Joe%20Gibson%27s%20Orchestra.mp3",
-    "length": 185.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g432-joe-gibson-s-orchestra-i-found-a-four-leaf-clover.mp3",
+    "length": 191.1,
     "series": "Joe Gibson's Orchestra",
     "title": "I Found A Four Leaf Clover",
     "date": "1922",
     "item": "https://archive.org/details/78_i-found-a-four-leaf-clover_joe-gibsons-orchestra-desylva-gershwin_gbia0018011b"
    },
    {
-    "src": "https://archive.org/download/78_i-dont-want-a-doctor-i-dont-want-a-doctor-all-i-want-is-a-beautiful-girl_irving_gbia0011258b/I%20Don%27t%20Want%20a%20Doctor%2C%20I%20Don%27t%20Want%20a%20Doc%20-%20Irving%20Kaufman.mp3",
-    "length": 186.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g433-irving-kaufman-i-don-t-want-a-doctor-i-don-t-want-a-doctor-a.mp3",
+    "length": 192.7,
     "series": "Irving Kaufman",
     "title": "I Don't Want a Doctor, I Don't Want a Doctor, All I Want Is a Beautiful Girl",
     "date": "1919",
     "item": "https://archive.org/details/78_i-dont-want-a-doctor-i-dont-want-a-doctor-all-i-want-is-a-beautiful-girl_irving_gbia0011258b"
    },
    {
-    "src": "https://archive.org/download/78_a-little-bungalow_newport-society-orchestra-irving-berlin_gbia0006314b/A%20Little%20Bungalow%20-%20Newport%20Society%20Orchestra.mp3",
-    "length": 180.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g434-newport-society-orchestra-a-little-bungalow.mp3",
+    "length": 186.2,
     "series": "Newport Society Orchestra",
     "title": "A Little Bungalow",
     "date": "1925",
     "item": "https://archive.org/details/78_a-little-bungalow_newport-society-orchestra-irving-berlin_gbia0006314b"
    },
    {
-    "src": "https://archive.org/download/78_apple-sauce_broadway-melody-makers-arthur-hall-freed-lyman-arnheim_gbia0011113a/Apple%20Sauce%20-%20Broadway%20Melody%20Makers%20-%20Arthur%20Hall.mp3",
-    "length": 193.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g435-broadway-melody-makers-apple-sauce.mp3",
+    "length": 199.6,
     "series": "Broadway Melody Makers",
     "title": "Apple Sauce",
     "date": "1922",
     "item": "https://archive.org/details/78_apple-sauce_broadway-melody-makers-arthur-hall-freed-lyman-arnheim_gbia0011113a"
    },
    {
-    "src": "https://archive.org/download/78_carnival-of-venice_raymond-c.-ellis-arban_gbia0005899a/Carnival%20of%20Venice%20-%20Raymond%20C.%20Ellis%20-%20Arban.mp3",
-    "length": 172.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g436-raymond-c-ellis-carnival-of-venice.mp3",
+    "length": 178.1,
     "series": "Raymond C. Ellis",
     "title": "Carnival of Venice",
     "date": "1920",
     "item": "https://archive.org/details/78_carnival-of-venice_raymond-c.-ellis-arban_gbia0005899a"
    },
    {
-    "src": "https://archive.org/download/78_rose-of-the-rio-grande_the-biltmore-society-orchestra-clarke-leslie-gorman_gbia0001135a/Rose%20of%20The%20Rio%20Grande%20-%20The%20Biltmore%20Society%20Orchestra.mp3",
-    "length": 183.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g437-the-biltmore-society-orchestra-rose-of-the-rio-grande.mp3",
+    "length": 188.7,
     "series": "The Biltmore Society Orchestra",
     "title": "Rose of The Rio Grande",
     "date": "1922",
     "item": "https://archive.org/details/78_rose-of-the-rio-grande_the-biltmore-society-orchestra-clarke-leslie-gorman_gbia0001135a"
    },
    {
-    "src": "https://archive.org/download/78_oh-by-jingo-oh-by-gee-youre-the-only-girl-for-me_george-hamilton-greens-novel_gbia0011276b/Oh%20by%20Jingo%21%20O%20-%20George%20Hamilton%20Greens%20Novelty%20Orchestra-restored.mp3",
-    "length": 176.0,
+    "src": "https://archive.org/download/thebeesknees-gramophone-another-room/g438-george-hamilton-green-s-novelty-orchestra-oh-by-jingo-oh-by-.mp3",
+    "length": 181.2,
     "series": "George Hamilton Green's Novelty Orchestra",
     "title": "Oh by Jingo! Oh by Gee! (You're The Only Girl For Me)",
     "date": "1920",
