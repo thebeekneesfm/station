@@ -483,8 +483,18 @@
       if (vid.paused) go();
     }
   }
+  /* A picture can also get stuck after it starts: the clock stops moving, or (seen on iPhones) the
+     clock runs but no new frames are drawn and the screen sits black. Either way, reload it and jump
+     back to the right spot; if that doesn't help, giveUp() moves on to fillers like any failed file. */
+  var stuck = { src: "", t: 0, f: -1, since: 0 };
+  function frames() { try { var q = vid.getVideoPlaybackQuality && vid.getVideoPlaybackQuality(); if (q) return q.totalVideoFrames; } catch (e) {} return vid.webkitDecodedFrameCount != null ? vid.webkitDecodedFrameCount : -1; }
   function watchdog() {   // called every second: a video that never got going counts as a failure
-    if (state.src && !state.started && Date.now() - state.loadAt > FILL_AFTER) giveUp();
+    if (state.src && !state.started && Date.now() - state.loadAt > FILL_AFTER) return giveUp();
+    if (!state.src || !state.started || vid.paused || document.hidden || inNativeFull()) { stuck.since = 0; return; }
+    var t = vid.currentTime, f = frames(), now = Date.now();
+    var moving = t > stuck.t + 0.5 && (f < 0 || f > stuck.f);
+    if (stuck.src !== state.src || moving || vid.seeking) { stuck.src = state.src; stuck.t = t; stuck.f = f; stuck.since = now; return; }
+    if (now - stuck.since > 15000) { stuck.since = now; state.started = false; giveUp(); }
   }
   onVid("playing", function () { standby.hidden = true; state.started = true; });
   // if the browser pauses the picture on its own (another tab, the phone locked, a call), pick the

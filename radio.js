@@ -438,7 +438,71 @@
     }
     return out;
   }
+  /* iPhone and iPad: Safari stops the page's sound engine when you swipe away (and waking it from the
+     background stops the records too), so there the rain, fire and storm play as ordinary looping
+     recordings, like the records themselves, and keep going with the screen off. Safari won't let a
+     page set a recording's volume, so each level is mixed into its own copy of the loop (mono, 22 kHz,
+     made once per level) and the player swaps to it where it was. */
+  const PHONE_AMB = APPLE_TOUCH && !window.BK_LITE, phoneAmb = {};
+  const SILENT_WAV = "data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=";
+  function phoneAmbLevel(name) {
+    const top = SKIN.ambienceMax || SKIN.fireMax || 1.9, v = state.on ? state.amb[name] : 0;
+    const L = Math.pow(v, 1.5) * top * state.vol * sleepFade();
+    return Math.round(Math.min(L, 2.5) * 20) / 20;   // in steps, so dragging a slider doesn't remake it every pixel
+  }
+  function wavURL(f32, sr) {
+    const n = f32.length, b = new ArrayBuffer(44 + n * 2), d = new DataView(b);
+    const w = (o, t) => { for (let i = 0; i < t.length; i++) d.setUint8(o + i, t.charCodeAt(i)); };
+    w(0, "RIFF"); d.setUint32(4, 36 + n * 2, true); w(8, "WAVE"); w(12, "fmt "); d.setUint32(16, 16, true);
+    d.setUint16(20, 1, true); d.setUint16(22, 1, true); d.setUint32(24, sr, true); d.setUint32(28, sr * 2, true);
+    d.setUint16(32, 2, true); d.setUint16(34, 16, true); w(36, "data"); d.setUint32(40, n * 2, true);
+    for (let i = 0; i < n; i++) {
+      let x = f32[i]; if (x > 0.8 || x < -0.8) x = Math.sign(x) * (0.8 + 0.2 * Math.tanh((Math.abs(x) - 0.8) / 0.2));   // soft ceiling instead of the limiter
+      d.setInt16(44 + i * 2, Math.max(-1, Math.min(1, x)) * 32767, true);
+    }
+    return URL.createObjectURL(new Blob([b], { type: "audio/wav" }));
+  }
+  function phoneAmbMix(name, level) {
+    const P = phoneAmb[name], buf = sounds[name], SR = 22050;
+    const len = Math.ceil(buf.duration * SR), oc = new OfflineAudioContext(1, len, SR);
+    const src = oc.createBufferSource(), g = oc.createGain(); src.buffer = buf; g.gain.value = level;
+    src.connect(g); g.connect(oc.destination); src.start(0);
+    return oc.startRendering().then(r => {
+      if (P.want !== level) return;   // the slider moved on while this was being made
+      const url = wavURL(r.getChannelData(0), SR), el = P.el, at = P.url ? el.currentTime : Math.random() * buf.duration * 0.8;
+      el.src = url; el.loop = true;
+      el.addEventListener("loadedmetadata", () => { try { el.currentTime = at % (el.duration || 1); } catch (e) {} }, { once: true });
+      el.play().catch(() => {});
+      if (P.url) URL.revokeObjectURL(P.url);
+      P.url = url; P.level = level;
+    });
+  }
+  function setPhoneAmbience() {
+    if (!ctx) initAudio();   // still used to read the recordings
+    if (document.hidden && Object.keys(phoneAmb).every(n => !phoneAmb[n].url)) return;
+    AMB.forEach(name => {
+      const level = phoneAmbLevel(name);
+      let P = phoneAmb[name];
+      if (!P) {
+        if (level <= 0) return;
+        const el = new Audio(); el.preload = "auto"; el.setAttribute("playsinline", "");
+        el.src = SILENT_WAV; el.play().catch(() => {});   // started inside the tap, so Safari lets it play on later
+        P = phoneAmb[name] = { el, level: 0, want: 0, url: "", t: 0 };
+      }
+      if (level <= 0) { P.want = 0; clearTimeout(P.t); if (!P.el.paused) P.el.pause(); return; }
+      if (P.want === level && P.url && !P.el.paused) return;
+      P.want = level;
+      if (P.level === level && P.url) { P.el.play().catch(() => {}); return; }
+      if (document.hidden || P.making === level) return;   // the sleep timer's fade waits until the page is back in view
+      clearTimeout(P.t);
+      P.t = setTimeout(() => {
+        const go = () => { if (P.want !== level) return; P.making = level; phoneAmbMix(name, level).catch(() => {}).then(() => { if (P.making === level) P.making = 0; }); };
+        if (sounds[name]) go(); else { loadSound(name); (soundWaiters[name] = soundWaiters[name] || []).push(go); }
+      }, P.url ? 350 : 0);
+    });
+  }
   function setAmbience() {
+    if (PHONE_AMB) return setPhoneAmbience();
     if (!fx.room) return;
     const R = fx.room, top = SKIN.ambienceMax || SKIN.fireMax || 1.9;
     AMB.forEach(name => {
@@ -533,6 +597,7 @@
   function applyVolume() {
     const v = state.vol * sleepFade();
     if (fx.ready) fx.master.gain.setTargetAtTime(v, ctx.currentTime, 0.3); else { audio.volume = v; if (fx.master) fx.master.gain.setTargetAtTime(v, ctx.currentTime, 0.3); }
+    if (PHONE_AMB) setPhoneAmbience();
     // the tuning sound plays only while changing stations; between songs and on a lost signal it's quiet
     if (!(state.on && state.phase === "warming")) tuningSound(false);
   }
