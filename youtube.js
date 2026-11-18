@@ -7,6 +7,11 @@ window.YOUTUBE = {
   // ids of videos to keep off the page (the daily update won't add them back)
   hidden: [],
   videos: [
+    { id: "jnm7Z2sAhKE", title: "Famous Faces in Vintage Commercials" },
+    { id: "pZoEoNJUBOI", title: "Vintage Toy Commercials" },
+    { id: "oV4C62H2P48", title: "Vintage Car Commercials" },
+    { id: "7OxdFwhRzqQ", title: "Vintage Cereal Commercials" },
+    { id: "RgAPsS3z6kY", title: "Vintage Pet Food Commercials" },
     { id: "5mqOaqCnm4w", title: "Vintage TV 1.5 hours 1950s Dream Kitchens, Coily the Spring & Vintage Newsreels | The Bee’s Knees" },
     { id: "pLTI6KO4uXI", title: "Bing Crosby - Merry Christmas (1945) | Full Album | Christmas Music NO AI" },
     { id: "ab2MBzp3pkI", title: "1940s & '50s Christmas Playlist: Vintage Holiday Swing (1 Hour)" },

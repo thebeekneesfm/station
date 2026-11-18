@@ -23,7 +23,7 @@ def load():
     return head, json.loads(js)
 
 def feed():
-    req = urllib.request.Request(f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}", headers={"User-Agent": "Mozilla/5.0"})
+    req = urllib.request.Request(f"https://www.youtube.com/feeds/videos.xml?channel_id={CHANNEL_ID}", headers={"User-Agent": "TheBeesKneesReference/1.0 (https://thebeesknees.fm)"})
     root = ET.fromstring(urllib.request.urlopen(req, timeout=30).read())
     out = []
     for e in root.findall("a:entry", NS):
