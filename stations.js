@@ -2874,7 +2874,7 @@ window.STATIONS = [
   "name": "Variety",
   "group": "Radio shows",
   "blurb": "Bing Crosby, Bob Hope, Jimmy Durante and the big Saturday-night variety hours: bands, singers, comedy and guest stars.",
-  "card": "art/cards/variety.png",
+  "card": "art/cards/variety.webp",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,
