@@ -225,6 +225,7 @@
     });
   }
   function load() {
+    table.classList.remove("finished");   // a new painting: the last one's "solved" look (pieces hidden, picture shown) comes off
     H = 1 / game.ar;
     var R = rng(hash("tabs" + game.id)); tabs = { h: [], v: [] };
     for (var r = 0; r < game.rows; r++) { tabs.h[r] = []; tabs.v[r] = []; for (var c = 0; c < game.cols; c++) { tabs.h[r][c] = R() < .5 ? 1 : -1; tabs.v[r][c] = R() < .5 ? 1 : -1; } }
