@@ -17,6 +17,8 @@
     mode=radio           start on the radio (default), tv or drivein
     station=gramophone   the radio station (its id or channel number; default: chills)
     channel=kids         the TV channel, for mode=tv (its id or number; default: the first channel)
+    clips=yourchannel    listen to Twitch chat for !clip only: during the Magazine Rack it saves the pages on screen to
+                         thebeesknees.fm/clippings (it can't change what's on; twitch= already includes it)
     twitch=yourchannel   let chat change what's on: !tune noir, !tune tv kids, !tune drive-in, and !stations for the list
     cooldown=180         seconds after a change before chat can change it again (default 180)
     vote=45              seconds chat has to vote once someone asks for a station (default 45)
@@ -860,10 +862,20 @@
     }
     put(); setInterval(put, 40000);
   })();
+  // !clip on its own (clips=channel): chat can save magazine pages but not change what's on
+  var CLIP_ONLY = false, clipCh = (Q.get("clips") || "").toLowerCase().replace(/[^a-z0-9_]/g, "");
+  if (!channel && clipCh) { channel = clipCh; CLIP_ONLY = true; }
+  var CLIPS_ON = !!channel;
+  // during the Magazine Rack, a reminder every few minutes that chat can clip what's on screen
+  if (CLIPS_ON) setInterval(function () {
+    if (mg && !$("book").classList.contains("gone")) toast("Like these pages? Type <b>!clip</b> in chat to save them to <b>thebeesknees.fm/clippings</b>", 9000);
+  }, 1000 * (+Q.get("cliphint") || 240));
   // the Community Puzzle card (puzzle=0 in the address turns it off)
   if (Q.get("puzzle") !== "0" && window.PuzzleCorner) { document.documentElement.classList.add("pz-on"); PuzzleCorner.start($("pzc"), { always: true, live: true }); }
   if (channel) connect();
   function command(user, text, boss) {
+    if (/^!clip\b/i.test(text.trim())) { clip(user); return; }
+    if (CLIP_ONLY) return;
     var m = text.trim().match(/^!(tune|station|stations|channels|list|dial|radio|tv|watch|drive-?in|movies?)\b\s*(.*)$/i); if (!m) return;
     var cmd = m[1].toLowerCase().replace("-", ""), arg = m[2].trim();
     if (cmd === "stations" || cmd === "channels" || cmd === "list" || cmd === "dial" || ((cmd === "tune" || cmd === "station") && !arg)) { showList(); return; }
@@ -886,6 +898,23 @@
     votes = null; lastChange = Date.now();
     var x = cands[best]; cands = {};
     if (best === keyOf(current())) toast("Chat voted to stay on <b>" + esc(nameOf(x)) + "</b>", 5000); else tune(x, "chat");
+  }
+  /* !clip: save the magazine pages on screen to the Clippings page (thebeesknees.fm/clippings).
+     The database only takes issues on the station's own rack, one save per spread, one every 15 seconds. */
+  var clipBusy = false;
+  function clip(user) {
+    if (!mg || !$("book") || $("book").classList.contains("gone")) { toast("<b>!clip</b> saves magazine pages, so it works during the Magazine Rack", 4500); return; }
+    var P = mg.pages, s = mg.s, pages = (s === 0 ? [P[0]] : [P[2 * s - 1], P[2 * s]]).filter(function (n) { return n != null; });
+    var L = CONFIG.listeners || {}; if (!L.url || !pages.length || clipBusy) return;
+    clipBusy = true;
+    fetch(L.url + "/rest/v1/rpc/clip_pages", { method: "POST", headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" },
+      body: JSON.stringify({ p_item: mg.it.id, p_pages: pages, p_by: user, p_source: "chat" }) })
+      .then(function (r) { return r.json(); }).then(function (d) {
+        var st = d && d.status;
+        if (st === "saved") toast("Clipped by <b>" + esc(d.by || user) + "</b>! It\u2019s on <b>thebeesknees.fm/clippings</b>", 6000);
+        else if (st === "already") toast("Already clipped" + (d.by ? " by <b>" + esc(d.by) + "</b>" : "") + ". See it at <b>thebeesknees.fm/clippings</b>", 5000);
+        else if (st === "resting") toast("Scissors are resting. Try <b>!clip</b> again in a few seconds", 4000);
+      }).catch(function () {}).then(function () { clipBusy = false; });
   }
   function connect() {
     var ws = new WebSocket("wss://irc-ws.chat.twitch.tv:443");

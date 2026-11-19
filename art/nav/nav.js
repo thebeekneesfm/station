@@ -29,7 +29,7 @@
   var MENU = [
     { label: "Listen", items: [["The Radio", "index.html"], ["Record Shelf", "records.html"], ["The Jukebox", "jukebox.html"]] },
     { label: "Watch", items: [["TV", "tv.html"], ["Drive-In", "drive-in.html"], ["Subscribe on YouTube", "https://www.youtube.com/@thebeeskneesfm?sub_confirmation=1"]] },
-    { label: "Read", items: [["Comics", "comics.html"], ["Magazines", "magazines.html"], ["Vintage Ads", "ads.html"], ["The Gallery", "gallery.html"]] },
+    { label: "Read", items: [["Comics", "comics.html"], ["Magazines", "magazines.html"], ["Clippings", "clippings.html"], ["Vintage Ads", "ads.html"], ["The Gallery", "gallery.html"]] },
     { label: "Play", items: [["Daily Puzzle", "puzzles.html"], ["Community Puzzle", "puzzle-together.html"], ["Send a Card", "postcard.html"]] },
     { label: "Shop", href: "shop.html" },
     { label: "Support", href: "config.tip" },

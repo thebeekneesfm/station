@@ -222,6 +222,25 @@
     if (opener && opener.focus) opener.focus();
   }
   rd.querySelector(".rd-close").addEventListener("click", function () { close(); });
+  /* Clip this page (magazines only): saves the page or spread on screen to the Clippings page (clippings.html).
+     The station's database only takes issues on our own rack, and each spread once. */
+  if (KIND === "magazines") {
+    var clipB = document.createElement("button"); clipB.type = "button"; clipB.className = "rd-clip"; clipB.textContent = "Clip this page";
+    rd.querySelector(".rd-foot").insertBefore(clipB, rd.querySelector(".rd-foot .src"));
+    var clipReset = 0;
+    clipB.addEventListener("click", function () {
+      var L = (window.RADIO_CONFIG || {}).listeners || {}; if (!cur || !L.url) return;
+      var pages = pagesAt(at).filter(function (n) { return !hidden(cur, n); }); if (!pages.length) return;
+      var who = ""; try { who = JSON.parse(localStorage.getItem("pz.who")) || ""; } catch (e) {}
+      clipB.disabled = true; clipB.textContent = "Clipping\u2026";
+      var say = function (t) { clipB.textContent = t; clearTimeout(clipReset); clipReset = setTimeout(function () { clipB.textContent = "Clip this page"; clipB.disabled = false; }, 3500); };
+      fetch(L.url + "/rest/v1/rpc/clip_pages", { method: "POST", headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" },
+        body: JSON.stringify({ p_item: cur.id, p_pages: pages, p_by: who, p_source: "site" }) })
+        .then(function (r) { return r.json(); })
+        .then(function (d) { var st = d && d.status; say(st === "saved" ? "Saved to Clippings" : st === "already" ? "Already in Clippings" : st === "resting" ? "Busy, try again soon" : "Couldn\u2019t clip that one"); })
+        .catch(function () { say("Couldn\u2019t reach the clippings"); });
+    });
+  }
   rd.querySelector(".rd-prev").addEventListener("click", function () { step(-1); });
   rd.querySelector(".rd-next").addEventListener("click", function () { step(1); });
   rd.querySelector(".rd-in").addEventListener("click", function () { var r = stage.getBoundingClientRect(); zoomAt(s * 1.6, r.left + r.width / 2, r.top + r.height / 2); });
