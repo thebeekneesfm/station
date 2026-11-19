@@ -3584,6 +3584,7 @@ window.STATIONS = [
   "id": "gramophone",
   "name": "Gramophone Radio",
   "group": "Music",
+  "card": "art/cards/gramophone.webp",
   "music": true,
   "blurb": "Dance bands, early jazz and blues on 78s from 1925 and earlier, drifting in from another room.",
   "epoch": "2026-11-01T00:00:00-07:00",
