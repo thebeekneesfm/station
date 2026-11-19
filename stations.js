@@ -2516,7 +2516,7 @@ window.STATIONS = [
   "name": "Laughs",
   "group": "Radio shows",
   "blurb": "Sitcoms and comedy hours.",
-  "card": "art/cards/laughs.png",
+  "card": "art/cards/laughs.mp4",
   "epoch": "2026-11-01T00:00:00-07:00",
   "sound": {
    "level": true,

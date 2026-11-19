@@ -71,6 +71,7 @@
   }
   var opts = {};
   window.PuzzleCorner = {
+    fit: function () { fit(); },   // re-fit the live view when the page moves the card (Radio Night makes it big)
     start: function (card, o) {
       el = card; o = o || {}; opts = o;
       if (o.live) frame();   // start loading the live view right away, while the card is hidden

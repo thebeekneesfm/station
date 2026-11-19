@@ -347,6 +347,28 @@
   html.minimal.vertical .next ol { columns: 1; font-size: 28px; }
   html.minimal.vertical .toast { left: 540px; top: 1300px; }
   html.minimal.vertical .list { left: 40px; right: auto; top: 480px; width: 1000px; }
+
+  /* Radio Night (minimal look, radio): the Community Puzzle fills the top, the station card and a glowing
+     radio-dial sound meter sit underneath, and the right column takes turns between sponsors and what's coming up */
+  .dial { display: none; }
+  html.minimal:not(.scr-mode):not(.vertical) .dial { display: block; position: absolute; left: 270px; top: 834px; width: 1146px; height: 222px; box-sizing: border-box; padding: 12px 17px 0;
+    background: radial-gradient(ellipse at 50% 120%, #4a2c12 0%, #24150a 70%), #1c1008; border-radius: 14px;
+    box-shadow: inset 0 0 0 3px #8a6a3a, inset 0 0 0 7px #2a1a0c, inset 0 10px 30px rgba(0,0,0,.7), 4px 6px 0 rgba(0,0,0,.35); }
+  html.minimal:not(.scr-mode) .dial canvas { display: block; width: 1112px; height: 166px; }
+  html.minimal:not(.scr-mode) .dial-n { display: flex; justify-content: space-between; padding: 2px 14px 0; font: 600 20px/1 "BK Serif", Georgia, serif; color: #d8b56a; letter-spacing: .04em; text-shadow: 0 0 6px rgba(255,170,60,.45); }
+  html.minimal:not(.scr-mode):not(.vertical) .card { left: 24px !important; top: 834px !important; width: 222px !important; height: 222px !important; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc { left: 0 !important; top: 0 !important; width: 1440px !important; height: 810px !important; padding: 0 !important;
+    transform: none !important; opacity: 1 !important; background: none !important; box-shadow: none !important; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzh { display: none !important; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzb { position: absolute; inset: 0; display: block; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzlive { position: absolute !important; inset: 0; width: 1440px !important; height: 810px !important; box-shadow: none !important; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzt { position: absolute; left: 28px; bottom: 22px; display: flex; align-items: baseline; gap: 18px; padding: 12px 22px; max-width: 1300px;
+    background: url("art/newsprint.jpg") 0 0 / 768px 768px, var(--paper); box-shadow: 3px 4px 0 rgba(0,0,0,.3); transform: rotate(-.4deg); }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzn { font-size: 30px !important; white-space: nowrap; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzn::before { content: "Community Puzzle: "; color: var(--red); font-family: "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; font-weight: 400; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzs { font-size: 24px !important; white-space: nowrap; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzm { display: none !important; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzu { font-size: 24px !important; white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -356,6 +378,7 @@
     <div class="watch"><div>Watch &amp; listen 24/7, free, at</div><b>thebeesknees.fm</b></div>
   </header>
   <div class="card" id="card"></div>
+  <div class="dial" id="dial" aria-hidden="true"><canvas id="viz" width="1112" height="186"></canvas><div class="dial-n"><span>55</span><span>60</span><span>70</span><span>80</span><span>100</span><span>120</span><span>140</span><span>160</span></div></div>
   <img class="tvset" id="tvset" alt="">
   <div class="mag" id="mag"><div class="book" id="book"><div class="pg l" id="pgL"></div><div class="pg r" id="pgR"></div><div class="leaf" id="leaf"><div class="f"></div><div class="b"></div></div></div></div>
   <div class="screen" id="screen"><iframe id="frame" title="Bee's Knees TV" allow="autoplay; fullscreen" src="about:blank"></iframe></div>
@@ -384,7 +407,7 @@
 <audio id="audio" preload="auto" crossorigin="anonymous"></audio>
 
 <script src="config.js?v=20261117s"></script>
-<script src="stations.js?v=20261118h"></script>
+<script src="stations.js?v=20261119a"></script>
 <script src="stations-more.js?v=1"></script>
 <script src="art/screen/tv-data.js?v=29"></script>
 <script src="art/screen/homemovies-more.js?v=1"></script>
@@ -393,7 +416,7 @@
 <script src="house-ads.js?v=2"></script>
 <script src="art/rack/rack.js?v=6"></script>
 <script src="obs-magazines.js?v=1"></script>
-<script src="art/puzzle/puzzle-corner.js?v=1"></script>
+<script src="art/puzzle/puzzle-corner.js?v=2"></script>
 <script>
 (function () {
   "use strict";
@@ -408,8 +431,8 @@
     (function () {   // the bottom card on the right takes turns: puzzle, sponsors, and on the radio what's coming up
       var n = 0, H = document.documentElement;
       function turn() {
-        var ids = ["pzc", "spons"]; if (!H.classList.contains("scr-mode")) ids.push("next");
-        if (!H.classList.contains("pz-on")) ids.shift();
+        var radio = !H.classList.contains("scr-mode"), ids = ["pzc", "spons"]; if (radio) ids.push("next");
+        if (!H.classList.contains("pz-on") || (radio && !VERTICAL)) ids.shift();   // the big puzzle is already up on Radio Night
         ids.forEach(function (id) { H.classList.remove("slot-" + id); });
         H.classList.add("slot-" + ids[n++ % ids.length]);
       }
@@ -509,6 +532,7 @@
       var lp = ctx.createBiquadFilter(); lp.type = "lowpass"; lp.frequency.value = 20000; lp.Q.value = 0.5;
       src.connect(hp); hp.connect(lp); lp.connect(comp); comp.connect(gain); gain.connect(lim);
       buildRoom(); outLim = lim; routeRoom();
+      try { viz.an = ctx.createAnalyser(); viz.an.fftSize = 2048; viz.an.smoothingTimeConstant = 0.72; lim.connect(viz.an); } catch (e) {}
       clean.lp = lp;
       // the same cleanup as the website's radio: clicks, pops and crackle out, then the hiss turned down
       // (sound-clean-worklet.js), each station's settings from stations.js. If it can't load, the sound plays as before.
@@ -522,6 +546,45 @@
       cleanUp();
     } catch (e) { ctx = null; }
   }
+  /* the dial: a sound meter like a lit-up radio dial, amber bars for the music's bass to treble, with
+     a slow-falling cap on each. Only drawn on Radio Night (vizdemo=1 in the address fakes the music, for previews). */
+  var viz = { an: null, peaks: [] };
+  (function () {
+    var cv = $("viz"), g = cv.getContext("2d"), N = 44, W = cv.width, Hh = cv.height, data = null, t0 = performance.now(), last = 0, DEMO = Q.get("vizdemo") === "1";
+    function draw(now) {
+      requestAnimationFrame(draw);
+      if (now - last < 33) return; last = now;   // 30 frames a second is plenty
+      if (mode !== "radio" || !document.documentElement.classList.contains("minimal")) return;
+      var lv = [];
+      if (viz.an) {
+        if (!data) data = new Uint8Array(viz.an.frequencyBinCount);
+        viz.an.getByteFrequencyData(data);
+        var nyq = (ctx ? ctx.sampleRate : 48000) / 2, bin = nyq / data.length;
+        for (var i = 0; i < N; i++) {   // bands spaced like a piano, 60 Hz to 9 kHz
+          var f0 = 60 * Math.pow(150, i / N), f1 = 60 * Math.pow(150, (i + 1) / N), a = Math.floor(f0 / bin), b = Math.max(a + 1, Math.ceil(f1 / bin)), m = 0;
+          for (var k = a; k < b && k < data.length; k++) m = Math.max(m, data[k]);
+          lv.push(Math.pow(m / 255, 1.6) * (0.75 + 0.5 * i / N));
+        }
+      }
+      if (DEMO && !lv.some(function (v) { return v > 0.02; })) {
+        var tt = (now - t0) / 1000; lv = [];
+        for (var j = 0; j < N; j++) lv.push(Math.max(0, 0.55 * Math.exp(-j / 16) + 0.25 * Math.sin(tt * 3.1 + j * 0.45) * Math.sin(tt * 1.3 + j * 0.13) + 0.18 * Math.sin(tt * 7 + j)));
+      }
+      g.clearRect(0, 0, W, Hh);
+      var gap = 6, bw = (W - gap * (N - 1)) / N;
+      for (var n = 0; n < N; n++) {
+        var v = Math.min(1, lv[n] || 0), h = Math.max(3, v * (Hh - 14)), x = n * (bw + gap);
+        viz.peaks[n] = Math.max(h, (viz.peaks[n] || 0) - 2.2);
+        var gr = g.createLinearGradient(0, Hh, 0, Hh - h);
+        gr.addColorStop(0, "rgba(255,150,40,.95)"); gr.addColorStop(0.7, "rgba(255,196,90,.95)"); gr.addColorStop(1, "rgba(255,236,170,1)");
+        g.shadowColor = "rgba(255,160,50,.75)"; g.shadowBlur = 14; g.fillStyle = gr;
+        g.fillRect(x, Hh - h, bw, h);
+        g.shadowBlur = 8; g.fillStyle = "rgba(255,226,150,.9)"; g.fillRect(x, Hh - viz.peaks[n] - 5, bw, 3);
+      }
+      g.shadowBlur = 0;
+    }
+    requestAnimationFrame(draw);
+  })();
   /* each station's cleanup settings ("sound" in stations.js), worked out exactly as radio.js does */
   var clean = {};
   function cleanUp() {
@@ -658,6 +721,7 @@
     document.documentElement.classList.toggle("mag-mode", mode === "mags");
     if (mode !== "mags") stopMags();
     document.documentElement.classList.toggle("tv-mode", mode === "tv");
+    if (window.PuzzleCorner && PuzzleCorner.fit) setTimeout(PuzzleCorner.fit, 80);
     var sc = $("screen"), r = mode === "tv" ? sc.dataset.tv.split(",") : null;
     ["left", "top", "width", "height"].forEach(function (k, i) { sc.style[k] = r ? r[i] + "px" : ""; });
     if (mode === "radio") {
