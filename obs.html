@@ -520,7 +520,7 @@
   var hearing = function () { return mode === "radio" || (mode === "mags" && !magQuiet); };
 
   /* ---------- sound: an even level from record to record, so the stream never jumps ---------- */
-  var audio = $("audio"), ctx = null, broken = {};
+  var audio = $("audio"), ctx = null, broken = {}, viz = { an: null, peaks: [] };   // viz: the Radio Night sound meter
   function chain() {
     if (ctx) return;
     try {
@@ -548,7 +548,6 @@
   }
   /* the dial: a sound meter like a lit-up radio dial, amber bars for the music's bass to treble, with
      a slow-falling cap on each. Only drawn on Radio Night (vizdemo=1 in the address fakes the music, for previews). */
-  var viz = { an: null, peaks: [] };
   (function () {
     var cv = $("viz"), g = cv.getContext("2d"), N = 44, W = cv.width, Hh = cv.height, data = null, t0 = performance.now(), last = 0, DEMO = Q.get("vizdemo") === "1";
     function draw(now) {
@@ -620,6 +619,7 @@
       room.m1.frequency.value = want.muffle || 1100; room.wet.gain.value = want.echo != null ? want.echo : 0.55;
       outLim.connect(room.inp); room.out.connect(ctx.destination);
     } else outLim.connect(ctx.destination);
+    if (viz.an) try { outLim.connect(viz.an); } catch (e) {}   // the radio-dial meter listens here too (disconnect() above unplugs it)
   }
   function play() {
     if (!hearing()) return;
