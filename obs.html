@@ -357,18 +357,28 @@
   html.minimal:not(.scr-mode) .dial canvas { display: block; width: 1112px; height: 166px; }
   html.minimal:not(.scr-mode) .dial-n { display: flex; justify-content: space-between; padding: 2px 14px 0; font: 600 20px/1 "BK Serif", Georgia, serif; color: #d8b56a; letter-spacing: .04em; text-shadow: 0 0 6px rgba(255,170,60,.45); }
   html.minimal:not(.scr-mode):not(.vertical) .card { left: 24px !important; top: 834px !important; width: 222px !important; height: 222px !important; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc { left: 0 !important; top: 0 !important; width: 1440px !important; height: 810px !important; padding: 0 !important;
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc { left: 0 !important; top: 0 !important; width: 1440px !important; height: 810px !important; padding: 0 !important;
     transform: none !important; opacity: 1 !important; background: none !important; box-shadow: none !important; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzh { display: none !important; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzb { position: absolute; inset: 0; display: block; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzlive { position: absolute !important; inset: 0; width: 1440px !important; height: 810px !important; box-shadow: none !important; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzt { position: absolute; left: 28px; bottom: 22px; display: flex; align-items: baseline; gap: 18px; padding: 12px 22px; max-width: 1300px;
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzh { display: none !important; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzb { position: absolute; inset: 0; display: block; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzlive { position: absolute !important; inset: 0; width: 1440px !important; height: 810px !important; box-shadow: none !important; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzt { position: absolute; left: 28px; bottom: 22px; display: flex; align-items: baseline; gap: 18px; padding: 12px 22px; max-width: 1300px;
     background: url("art/newsprint.jpg") 0 0 / 768px 768px, var(--paper); box-shadow: 3px 4px 0 rgba(0,0,0,.3); transform: rotate(-.4deg); }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzn { font-size: 30px !important; white-space: nowrap; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzn::before { content: "Community Puzzle: "; color: var(--red); font-family: "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; font-weight: 400; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzs { font-size: 24px !important; white-space: nowrap; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzm { display: none !important; }
-  html.minimal.pz-on:not(.scr-mode):not(.vertical) .pzc .pzu { font-size: 24px !important; white-space: nowrap; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzn { font-size: 30px !important; white-space: nowrap; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzn::before { content: "Community Puzzle: "; color: var(--red); font-family: "BK Head", "BK Serif", Georgia, serif; text-transform: uppercase; font-weight: 400; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzs { font-size: 24px !important; white-space: nowrap; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzm { display: none !important; }
+  html.minimal.pz-on:not(.scr-mode):not(.vertical):not(.film-on) .pzc .pzu { font-size: 24px !important; white-space: nowrap; }
+  /* a silent looping scene from an old public domain film fills the top on stations that have one; the puzzle goes back to taking turns on the right */
+  .film { display: none; }
+  html.minimal.film-on:not(.scr-mode):not(.vertical) .film { display: block; position: absolute; z-index: 0; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
+  .film video { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(.12) contrast(1.05); }
+  .film::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0) 30%); box-shadow: inset 0 0 200px 40px rgba(0,0,0,.7); }
+  .film .fc { position: absolute; left: 30px; top: 22px; z-index: 1; font: italic 20px/1 "BK Serif", Georgia, serif; color: rgba(236,222,190,.6); text-shadow: 0 1px 3px #000; }
+  /* over the film the meter turns into one glowing line, like an oscilloscope, with no box behind it */
+  html.minimal.film-on:not(.scr-mode):not(.vertical) .dial { background: none; box-shadow: none; border-radius: 0; }
+  html.minimal.film-on:not(.scr-mode):not(.vertical) .dial-n { display: none; }
 </style>
 </head>
 <body>
@@ -377,6 +387,7 @@
     <div><div class="logo head">The Bee's Knees<span>.fm</span></div><div class="tag">Carefully curated to relieve you from our current timeline</div></div>
     <div class="watch"><div>Watch &amp; listen 24/7, free, at</div><b>thebeesknees.fm</b></div>
   </header>
+  <div class="film" id="film" aria-hidden="true"><video id="filmv" muted loop playsinline preload="auto"></video><span class="fc" id="filmc"></span></div>
   <div class="card" id="card"></div>
   <div class="dial" id="dial" aria-hidden="true"><canvas id="viz" width="1112" height="186"></canvas><div class="dial-n"><span>55</span><span>60</span><span>70</span><span>80</span><span>100</span><span>120</span><span>140</span><span>160</span></div></div>
   <img class="tvset" id="tvset" alt="">
@@ -432,7 +443,7 @@
       var n = 0, H = document.documentElement;
       function turn() {
         var radio = !H.classList.contains("scr-mode"), ids = ["pzc", "spons"]; if (radio) ids.push("next");
-        if (!H.classList.contains("pz-on") || (radio && !VERTICAL)) ids.shift();   // the big puzzle is already up on Radio Night
+        if (!H.classList.contains("pz-on") || (radio && !VERTICAL && !H.classList.contains("film-on"))) ids.shift();   // the big puzzle is already up on Radio Night
         ids.forEach(function (id) { H.classList.remove("slot-" + id); });
         H.classList.add("slot-" + ids[n++ % ids.length]);
       }
@@ -570,6 +581,7 @@
         for (var j = 0; j < N; j++) lv.push(Math.max(0, 0.55 * Math.exp(-j / 16) + 0.25 * Math.sin(tt * 3.1 + j * 0.45) * Math.sin(tt * 1.3 + j * 0.13) + 0.18 * Math.sin(tt * 7 + j)));
       }
       g.clearRect(0, 0, W, Hh);
+      if (document.documentElement.classList.contains("film-on")) { line(now); return; }
       var gap = 6, bw = (W - gap * (N - 1)) / N;
       for (var n = 0; n < N; n++) {
         var v = Math.min(1, lv[n] || 0), h = Math.max(3, v * (Hh - 14)), x = n * (bw + gap);
@@ -580,6 +592,39 @@
         g.fillRect(x, Hh - h, bw, h);
         g.shadowBlur = 8; g.fillStyle = "rgba(255,226,150,.9)"; g.fillRect(x, Hh - viz.peaks[n] - 5, bw, 3);
       }
+      g.shadowBlur = 0;
+    }
+    var wave = null, sm = null;
+    function line(now) {   // the sound itself, drawn as one smooth glowing line across the meter
+      var M = 160, pts = [];
+      if (viz.an) {
+        if (!wave) wave = new Uint8Array(viz.an.fftSize);
+        viz.an.getByteTimeDomainData(wave);
+        var st = 0; for (var z = 1; z < wave.length / 2; z++) if (wave[z - 1] < 128 && wave[z] >= 128) { st = z; break; }   // start on an upswing so it holds still
+        var span = Math.min(wave.length - st, 1400);
+        for (var i = 0; i < M; i++) pts.push((wave[st + Math.floor(i * span / M)] - 128) / 128);
+      }
+      if (DEMO && !pts.some(function (v) { return Math.abs(v) > 0.02; })) {
+        var tt = (now - t0) / 1000, amp = 0.35 + 0.25 * Math.sin(tt * 1.7) * Math.sin(tt * 0.6); pts = [];
+        for (var j = 0; j < M; j++) pts.push(amp * (Math.sin(j * 0.21 + tt * 9) * 0.6 + Math.sin(j * 0.53 - tt * 5) * 0.3 + Math.sin(j * 1.3 + tt * 13) * 0.15));
+      }
+      if (!pts.length) pts = new Array(M).fill(0);
+      if (!sm || sm.length !== M) sm = new Array(M).fill(0);
+      var mid = Hh / 2;
+      for (var q = 0; q < M; q++) {
+        var edge = Math.sin(Math.PI * q / (M - 1));   // taper to nothing at both ends
+        sm[q] = sm[q] * 0.45 + pts[q] * 0.55 * edge * 2.2;
+      }
+      g.lineJoin = g.lineCap = "round";
+      [[14, "rgba(255,150,40,.35)", 7], [6, "rgba(255,190,90,.8)", 3.5], [0, "rgba(255,240,200,1)", 2]].forEach(function (L) {
+        g.shadowBlur = L[0]; g.shadowColor = "rgba(255,160,50,.9)"; g.strokeStyle = L[1]; g.lineWidth = L[2];
+        g.beginPath();
+        for (var r = 0; r < M; r++) {
+          var x = r * W / (M - 1), y = mid - Math.max(-1, Math.min(1, sm[r])) * (mid - 10);
+          if (!r) g.moveTo(x, y); else { var px = (r - 1) * W / (M - 1), py = mid - Math.max(-1, Math.min(1, sm[r - 1])) * (mid - 10); g.quadraticCurveTo(px, py, (px + x) / 2, (py + y) / 2); }
+        }
+        g.stroke();
+      });
       g.shadowBlur = 0;
     }
     requestAnimationFrame(draw);
@@ -715,12 +760,24 @@
     else if (!same) frame.src = url;
     frame.title = kind === "tv" ? "Bee's Knees TV" : "The Drive-In";
   }
+  /* Radio Night film loops: art/loops/<station>.mp4, silent, 1440 x 810. A station without one keeps the big puzzle. */
+  var FILMS = { noir: { src: "art/loops/noir.mp4", from: "Detour (1945)" } };
+  function film() {
+    var f = MINIMAL && !VERTICAL && mode === "radio" && Q.get("films") !== "0" ? FILMS[station.id] : null, v = $("filmv");
+    document.documentElement.classList.toggle("film-on", !!f);
+    if (!f) { if (v.getAttribute("src")) { v.pause(); v.removeAttribute("src"); try { v.load(); } catch (e) {} } return; }
+    $("filmc").textContent = f.from;
+    if (v.getAttribute("src") !== f.src) { v.src = f.src; }
+    var p = v.play(); if (p && p.catch) p.catch(function () {});
+  }
   function setMode(x) {
     var was = mode; mode = x.kind;
     document.documentElement.classList.toggle("scr-mode", mode !== "radio");
     document.documentElement.classList.toggle("mag-mode", mode === "mags");
     if (mode !== "mags") stopMags();
     document.documentElement.classList.toggle("tv-mode", mode === "tv");
+    if (mode === "radio" && x.st) station = x.st;
+    film();
     if (window.PuzzleCorner && PuzzleCorner.fit) setTimeout(PuzzleCorner.fit, 80);
     var sc = $("screen"), r = mode === "tv" ? sc.dataset.tv.split(",") : null;
     ["left", "top", "width", "height"].forEach(function (k, i) { sc.style[k] = r ? r[i] + "px" : ""; });
@@ -1067,7 +1124,7 @@
   }
   if (GOODBYE) setInterval(goodbyeCheck, 5000);
   if (Q.get("test")) { window.bkClean = clean; window.bkCommand = command; window.bkBlockNow = blockNow; window.bkGoodbye = goodbyeCheck; }   // lets a test page pretend to be chat
-  if (mode === "radio") { card(); paint(); tick(); play(); }
+  if (mode === "radio") { card(); paint(); tick(); play(); film(); }
   else if (mode === "mags") { setMode({ kind: "mags", st: find(Q.get("station")) }); }
   else { setMode(mode === "tv" ? { kind: "tv", ch: tvch } : { kind: "drivein" }); tick(); }
   if (SCHED) { followSchedule(true); setInterval(followSchedule, 20000); }
