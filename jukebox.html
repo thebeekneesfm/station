@@ -78,6 +78,33 @@
   .toast { position: fixed; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 50; max-width: min(560px, calc(100vw - 32px));
     background: var(--ink); color: #f3ead6; padding: 12px 18px; font-size: 18px; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
   .toast.bad { background: var(--red); }
+  /* the records, sorted into crates like the Record Shelf; open one to see its albums */
+  .crates { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px 18px; }
+  .crates li { margin: 0; min-width: 0; }
+  .crate { display: grid; justify-items: center; gap: 4px; width: 100%; padding: 6px 4px 10px; background: none; border: 0; cursor: pointer; color: var(--ink); font: inherit; text-align: center; }
+  .crate .fan { position: relative; display: block; width: 100%; aspect-ratio: 5 / 3.6; }
+  .crate .fan img { position: absolute; top: 6%; left: 50%; width: 58%; height: auto; aspect-ratio: 1; object-fit: cover; background: #d8ceb2;
+    box-shadow: 0 2px 0 rgba(0,0,0,.3), 0 6px 14px rgba(0,0,0,.3); transition: transform .3s ease; }
+  .crate .fan img:nth-child(1) { transform: translateX(-84%) rotate(-8deg); }
+  .crate .fan img:nth-child(2) { transform: translateX(-16%) rotate(7deg); }
+  .crate .fan img:nth-child(3) { transform: translateX(-50%) rotate(-1deg); z-index: 1; }
+  .crate:hover .fan img:nth-child(1), .crate:focus-visible .fan img:nth-child(1) { transform: translateX(-96%) rotate(-12deg); }
+  .crate:hover .fan img:nth-child(2), .crate:focus-visible .fan img:nth-child(2) { transform: translateX(-4%) rotate(11deg); }
+  .crate:hover .fan img:nth-child(3), .crate:focus-visible .fan img:nth-child(3) { transform: translateX(-50%) translateY(-6px) rotate(0); }
+  .crate .nm { margin-top: 6px; font: 700 21px/1.2 "BK Serif", Georgia, serif; text-wrap: balance; }
+  .crate:hover .nm { color: var(--red); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .crate .ct { font-style: italic; font-size: 15px; color: var(--ink-2); }
+  .opened .top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; margin-top: 22px; }
+  .opened h2 { font: 700 24px/1.2 "BK Serif", Georgia, serif; }
+  .backc { background: var(--ink); color: #f3ead6; border: 0; font: 600 17px/1 "BK Serif", Georgia, serif; padding: 11px 15px; min-height: 44px; cursor: pointer; }
+  .backc:hover { background: var(--red); }
+  .others { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 18px; font-size: 16px; }
+  .others button { background: none; border: 0; padding: 4px 0; font: inherit; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .others button:hover { color: var(--red); }
+  @media (max-width: 900px) { .crates { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .crates { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; } .crate .nm { font-size: 17px; } .crate .ct { font-size: 14px; } }
+  @media (prefers-reduced-motion: reduce) { .crate .fan img { transition: none; } }
+  [hidden] { display: none !important; }
 </style>
 </head>
 <body>
@@ -93,13 +120,15 @@
     <div class="sign closed" id="sign" aria-live="polite"><b>Checking the jukebox…</b></div>
     <div class="playing" id="playing" hidden></div>
 
+    <div id="box" hidden>
     <div class="tools">
       <label for="name">Your Twitch username<input id="name" maxlength="26" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="your_twitch_name"></label>
       <label for="msg" class="wide">A message to show with your song (if you like)<input id="msg" maxlength="80" placeholder="This one's for Grandma!"></label>
       <label for="q">Find a song<input id="q" type="search" placeholder="Song, album or artist"></label>
     </div>
     <div class="songs-hit" id="hits" hidden></div>
-    <div class="grid" id="grid"></div>
+    <div id="crates"><ul class="crates" id="crateList" aria-label="Crates of records"></ul><div class="opened" id="opened" hidden><div class="top"><button type="button" class="backc" id="backc">&larr; All the crates</button><h2 id="crateName" tabindex="-1"></h2></div><div class="grid" id="grid"></div><div class="others" id="others"></div></div></div>
+    </div>
   </main>
 </div>
 
@@ -107,7 +136,7 @@
 <div class="toast" id="toast" role="status" hidden></div>
 
 <script src="config.js?v=20261117s"></script>
-<script src="art/jukebox/catalog.js?v=4"></script>
+<script src="art/jukebox/catalog.js?v=5"></script>
 <script src="art/jukebox/jukebox-net.js?v=4"></script>
 <script>
 (function () {
@@ -120,10 +149,31 @@
   $("name").addEventListener("change", function () { try { localStorage.setItem("bkj-name", this.value.trim()); } catch (e) {} });
   function open() { return booth && state && state.accepting; }
 
-  /* albums */
-  $("grid").innerHTML = A.map(function (a) {
-    return '<button class="alb" type="button" data-n="' + a.n + '"><img src="' + J.esc(a.cover) + '" alt="" loading="lazy"><span class="no">' + a.n + '</span><b>' + J.esc(a.title) + '</b><span>' + J.esc(a.artist) + "</span></button>";
+  /* albums, sorted into crates like the Record Shelf */
+  var ORDER = ["Christmas", "Jazz", "Swing & Big Bands", "Crooners & Canaries", "Rock 'n' Roll & Soul", "Blues & Country", "Latin & Bossa Nova", "Movie Music & Lounge", "More Records"];
+  var now = new Date(), md = (now.getMonth() + 1) * 100 + now.getDate(), season = md >= 1106 || md <= 106;
+  var crates = {}; A.forEach(function (a) { var c = a.cat || "More Records"; (crates[c] = crates[c] || []).push(a); });
+  var names = Object.keys(crates).sort(function (a, b) { return (ORDER.indexOf(a) + 99) % 99 - (ORDER.indexOf(b) + 99) % 99; });
+  if (!season) names = names.filter(function (n) { return n !== "Christmas"; }).concat(crates.Christmas ? ["Christmas"] : []);
+  $("crateList").innerHTML = names.map(function (n, k) {
+    var rs = crates[n], pick = [rs[Math.floor(rs.length / 3)], rs[Math.floor(rs.length * 2 / 3)], rs[0]].filter(function (r, i, all) { return r && all.indexOf(r) === i; });
+    return '<li><button class="crate" type="button" data-k="' + k + '" aria-label="' + J.esc(n) + ", " + rs.length + ' albums. Open the crate."><span class="fan">' +
+      pick.map(function (r) { return '<img src="' + J.esc(r.cover) + '" alt="" loading="lazy">'; }).join("") + '</span><span class="nm">' + J.esc(n) + '</span><span class="ct">' + rs.length + (rs.length === 1 ? " album" : " albums") + "</span></button></li>";
   }).join("");
+  function crate(k) {
+    if (k == null) { $("opened").hidden = true; $("crateList").hidden = false; return; }
+    var n = names[k];
+    $("crateName").textContent = n + " (" + crates[n].length + ")";
+    $("grid").innerHTML = crates[n].map(function (a) {
+      return '<button class="alb" type="button" data-n="' + a.n + '"><img src="' + J.esc(a.cover) + '" alt="" loading="lazy"><span class="no">' + a.n + '</span><b>' + J.esc(a.title) + '</b><span>' + J.esc(a.artist) + "</span></button>";
+    }).join("");
+    $("others").innerHTML = names.map(function (x, j) { return j === k ? "" : '<button type="button" data-k="' + j + '">' + J.esc(x) + "</button>"; }).join("");
+    $("crateList").hidden = true; $("opened").hidden = false; $("crateName").focus({ preventScroll: true });
+    var top = $("crates").getBoundingClientRect().top; if (top < 0) window.scrollBy(0, top - 20);
+  }
+  $("crateList").addEventListener("click", function (e) { var b = e.target.closest(".crate"); if (b) crate(+b.dataset.k); });
+  $("others").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) crate(+b.dataset.k); });
+  $("backc").addEventListener("click", function () { var k = names.indexOf($("crateName").textContent.replace(/ \(\d+\)$/, "")); crate(null); var b = $("crateList").querySelectorAll(".crate")[k]; if (b) b.focus(); });
   $("grid").addEventListener("click", function (e) { var b = e.target.closest(".alb"); if (b) showAlbum(+b.dataset.n); });
   function songRow(a, i) {
     var s = a.songs[i];
@@ -143,9 +193,9 @@
   var ALL = []; A.forEach(function (a) { a.songs.forEach(function (s, i) { ALL.push({ a: a, i: i, hay: (s.t + " " + a.title + " " + a.artist).toLowerCase() }); }); });
   $("q").addEventListener("input", function () {
     var q = this.value.trim().toLowerCase();
-    if (q.length < 2) { $("hits").hidden = true; $("grid").hidden = false; return; }
+    if (q.length < 2) { $("hits").hidden = true; $("crates").hidden = false; return; }
     var hits = ALL.filter(function (x) { return x.hay.indexOf(q) >= 0; }).slice(0, 60);
-    $("hits").hidden = false; $("grid").hidden = hits.length > 0;
+    $("hits").hidden = false; $("crates").hidden = hits.length > 0;
     $("hits").innerHTML = hits.length ? '<ol class="songs">' + hits.map(function (x) { return songRow(x.a, x.i).replace("</span><button", '<span class="len">' + J.esc(x.a.artist) + "</span></span><button"); }).join("") + "</ol>"
       : "<p>No songs on the jukebox match that.</p>";
   });
@@ -176,10 +226,10 @@
       s.innerHTML = "<b>The jukebox is on!</b><span>Pick a song below and it plays live on Twitch" + (state.waiting ? ", after the DJ puts it on." : ".") + '</span><a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Listen on Twitch</a>';
     } else if (booth) {
       s.className = "sign closed";
-      s.innerHTML = "<b>Requests are closed for now</b><span>The jukebox is still playing on Twitch.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Listen on Twitch</a>';
+      s.innerHTML = "<b>Requests are closed for now</b><span>The jukebox is still playing on Twitch. The records come back out when requests open again.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Listen on Twitch</a>';
     } else {
       s.className = "sign closed";
-      s.innerHTML = "<b>The jukebox is closed</b><span>It opens during Jukebox Night, live on Twitch. You can still look through the records.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Follow on Twitch</a>';
+      s.innerHTML = "<b>The jukebox is closed</b><span>It opens during Jukebox Night, live on Twitch. The records come out when it does.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Follow on Twitch</a>';
     }
     var p = $("playing");
     if (booth && state && (state.now || state.queue.length)) {
@@ -189,6 +239,9 @@
         (state.queue.length ? "<div><b>Up next:</b><ol>" + state.queue.slice(0, 5).map(function (r) { return "<li>" + line(r) + "</li>"; }).join("") + "</ol></div>" : "");
     } else p.hidden = true;
     document.querySelectorAll(".req").forEach(function (b) { if (!b.dataset.id) b.disabled = !open(); });
+    // the records are only out while the jukebox is taking requests
+    $("box").hidden = !open();
+    if (!open() && $("dlg").open) $("dlg").close();
   }
   J.join("jukebox", {
     state: function (m) { state = m; paint(); },

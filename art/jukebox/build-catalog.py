@@ -105,7 +105,7 @@ def album(rec):
     # an album with songs that have no real name ("Untitled", "Track 29") stays off the jukebox entirely
     if any(UNNAMED.match(x["t"] or "") for x in songs): return None, f"{ident}: has untitled songs"
     return {"item": ident, "title": rec["title"], "artist": rec["artist"], "year": rec.get("year", ""),
-            "cover": rec["cover"], "added": rec.get("added"), "songs": songs}, None
+            "cover": rec["cover"], "added": rec.get("added"), "cat": "Christmas" if rec.get("season") == "christmas" else rec.get("cat"), "songs": songs}, None
 
 
 def main():
