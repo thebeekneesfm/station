@@ -12,6 +12,7 @@
      Other things to add after the secret (each starts with &):
        &auto=1    requests play without waiting for the DJ to approve them (otherwise they wait in the control panel)
        &fill=1    when nobody has asked for anything, the jukebox picks songs itself
+       &each=3    how many songs one person can have waiting at once (3 if left out; each=1 for one at a time)
      While this screen is running, the website's jukebox page is open for requests; close the screen (or switch
      "Taking requests" off in the control panel) and the website page closes.
      The look is the Record Shelf's: wallpaper, newsprint, a card book of jukebox title strips that flips through the
@@ -235,6 +236,7 @@ html:not(.minimal) .tvset { display: none; }
   var SECRET = (Q.get("dj") || "").trim();
   var MAXQ = 25;
   var A = J.albums();                                   // albums on the jukebox today, in number order
+  var EACH = Math.max(1, Math.min(10, parseInt(Q.get("each"), 10) || 3));   // songs one person can have waiting at once
   var S = { accepting: true, auto: Q.get("auto") === "1", fill: Q.get("fill") === "1" };
   var queue = [];        // [{id, n, i, name, cid, ok}] ok = approved by the DJ
   var now = null;        // {id, n, i, name, started}
@@ -407,7 +409,8 @@ html:not(.minimal) .tvset { display: none; }
     if (from !== "dj" && J.rude(m.name)) return reply(false, "That username can't go on screen. Try another one.");
     if (J.rude(m.msg)) m.msg = "";   // the song still goes in; the message doesn't
     if (from !== "dj") {
-      if (queue.some(function (r) { return r.cid && r.cid === m.cid; })) return reply(false, "You already have a song waiting. Once it plays, you can pick another.");
+      // each person can have a few songs waiting at once (each=3 in the address; each=1 goes back to one at a time)
+      if (queue.filter(function (r) { return r.cid && r.cid === m.cid; }).length >= EACH) return reply(false, EACH === 1 ? "You already have a song waiting. Once it plays, you can pick another." : "You already have " + EACH + " songs waiting. Once one plays, you can pick another.");
       if (queue.length >= MAXQ) return reply(false, "The line is full. Try again in a few minutes.");
       if (queue.some(function (r) { return r.n === +m.n && r.i === +m.i; }) || (now && now.n === +m.n && now.i === +m.i)) return reply(false, "Someone already asked for that one. It's coming up!");
     }
