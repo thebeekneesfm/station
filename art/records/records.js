@@ -9,6 +9,7 @@ window.RECORDS = [
  {
   "title": "Porgy & Bess",
   "artist": "Ella Fitzgerald & Louis Armstrong",
+  "cat": "Crooners & Canaries",
   "year": "1959",
   "cover": "art/records/ella-fitzgerald-louis-armstrong-porgy-bess-vinyl-rip.webp",
   "item": "https://archive.org/details/ella-fitzgerald-louis-armstrong-porgy-bess-vinyl-rip"
@@ -16,6 +17,7 @@ window.RECORDS = [
  {
   "title": "Frank Sinatra Conducts the Music of Alec Wilder",
   "artist": "Frank Sinatra",
+  "cat": "Swing & Big Bands",
   "year": "1946",
   "cover": "art/records/lp-frank-sinatra-conducts-the-music-of-ale-frank-sinatra-the.webp",
   "item": "https://archive.org/details/lp_frank-sinatra-conducts-the-music-of-ale_frank-sinatra-the-alec-wilder-octet-ale"
@@ -23,6 +25,7 @@ window.RECORDS = [
  {
   "title": "At the Sands",
   "artist": "Nat King Cole",
+  "cat": "Crooners & Canaries",
   "year": "1966",
   "cover": "art/records/lp-at-the-sands-nat-king-cole.webp",
   "item": "https://archive.org/details/lp_at-the-sands_nat-king-cole"
@@ -30,6 +33,7 @@ window.RECORDS = [
  {
   "title": "The Five Pennies",
   "artist": "Danny Kaye & Louis Armstrong",
+  "cat": "Swing & Big Bands",
   "year": "1959",
   "cover": "art/records/danny-kaye-louis-armstrong-the-five-pennies-vinyl-1959.webp",
   "item": "https://archive.org/details/danny_kaye_louis_armstrong-the_five_pennies-vinyl-1959"
@@ -37,6 +41,7 @@ window.RECORDS = [
  {
   "title": "Count Basie and the Kansas City 7",
   "artist": "Count Basie",
+  "cat": "Swing & Big Bands",
   "year": "1962",
   "cover": "art/records/basie-count-1962-and-the-kansas-city.webp",
   "item": "https://archive.org/details/basie-count-1962-and-the-kansas-city"
@@ -44,6 +49,7 @@ window.RECORDS = [
  {
   "title": "25 Great Country Artists Singing Their Original Hits",
   "artist": "Patsy Cline and friends",
+  "cat": "Blues & Country",
   "year": "1965",
   "cover": "art/records/lp-25-great-country-artists-singing-their-various-cowboy-cop.webp",
   "item": "https://archive.org/details/lp_25-great-country-artists-singing-their_various-cowboy-copas-eddie-dean-fiddlin"
@@ -51,6 +57,7 @@ window.RECORDS = [
  {
   "title": "Elvis' Golden Records",
   "artist": "Elvis Presley",
+  "cat": "Rock 'n' Roll & Soul",
   "year": "1958",
   "cover": "art/records/1958-elvis-golden-records-mono-cd.webp",
   "item": "https://archive.org/details/1958_elvis_golden_records_mono_cd"
@@ -58,6 +65,7 @@ window.RECORDS = [
  {
   "title": "That's Blues Rock",
   "artist": "Chuck Berry and friends",
+  "cat": "Blues & Country",
   "year": "1969",
   "cover": "art/records/thats-blues-rock-lp-2-mercury-141101.webp",
   "item": "https://archive.org/details/thats-blues-rock-lp-2-mercury-141101"
@@ -65,6 +73,7 @@ window.RECORDS = [
  {
   "title": "Buddy Holly and the Crickets",
   "artist": "Buddy Holly & the Crickets",
+  "cat": "Rock 'n' Roll & Soul",
   "year": "1957",
   "cover": "art/records/buddy-holly-coral-epc-94123.webp",
   "item": "https://archive.org/details/buddy-holly-coral-epc-94123"
@@ -72,6 +81,7 @@ window.RECORDS = [
  {
   "title": "Deep Night",
   "artist": "The Ray Charles Singers",
+  "cat": "Crooners & Canaries",
   "year": "1960",
   "cover": "art/records/lp-deep-night-the-ray-charles-singers-0.webp",
   "item": "https://archive.org/details/lp_deep-night_the-ray-charles-singers_0"
@@ -79,6 +89,7 @@ window.RECORDS = [
  {
   "title": "A Taste of Tequila",
   "artist": "The Mariachi Brass featuring Chet Baker",
+  "cat": "Latin & Bossa Nova",
   "year": "1966",
   "cover": "art/records/lp-a-taste-of-tequila-the-mariachi-brass-chet-baker.webp",
   "item": "https://archive.org/details/lp_a-taste-of-tequila_the-mariachi-brass-chet-baker"
@@ -86,6 +97,7 @@ window.RECORDS = [
  {
   "title": "Live in Stockholm, 1960",
   "artist": "Miles Davis & John Coltrane",
+  "cat": "Jazz",
   "year": "1960",
   "cover": "art/records/03-miles-davis-john-coltrane-konserthuset-stockholm-march-22.webp",
   "item": "https://archive.org/details/03-miles-davis-john-coltrane-konserthuset-stockholm-march-22-1960"
@@ -93,6 +105,7 @@ window.RECORDS = [
  {
   "title": "Pop Hit Party",
   "artist": "Doris Day, Tony Bennett and friends",
+  "cat": "Crooners & Canaries",
   "year": "1958",
   "cover": "art/records/lp-pop-hit-party-various-doris-day-frank-de-vol-and-his.webp",
   "item": "https://archive.org/details/lp_pop-hit-party_various-doris-day-frank-de-vol-and-his"
@@ -100,6 +113,7 @@ window.RECORDS = [
  {
   "title": "The Versatile Brenda Lee",
   "artist": "Brenda Lee",
+  "cat": "Crooners & Canaries",
   "year": "1965",
   "cover": "art/records/lp-the-versatile-brenda-lee-brenda-lee.webp",
   "item": "https://archive.org/details/lp_the-versatile-brenda-lee_brenda-lee"
@@ -107,6 +121,7 @@ window.RECORDS = [
  {
   "title": "Murray the K's Holiday Revue, Live from the Brooklyn Fox",
   "artist": "The Ronettes, the Shirelles and friends",
+  "cat": "Rock 'n' Roll & Soul",
   "year": "1963",
   "cover": "art/records/lp-live-from-the-brooklyn-fox-in-his-record-b-various-ben-e-.webp",
   "item": "https://archive.org/details/lp_live-from-the-brooklyn-fox-in-his-record-b_various-ben-e-king-gene-pitney-jan-and-dea"
@@ -114,6 +129,7 @@ window.RECORDS = [
  {
   "title": "A Winter Romance",
   "artist": "Dean Martin",
+  "cat": "Crooners & Canaries",
   "year": "1959",
   "cover": "art/records/baby-its-cold-outside-vocals-instrumental.webp",
   "item": "https://archive.org/details/baby-its-cold-outside-vocals-instrumental"
@@ -121,6 +137,7 @@ window.RECORDS = [
  {
   "title": "Deep in My Heart",
   "artist": "Rosemary Clooney and the film cast",
+  "cat": "Crooners & Canaries",
   "year": "1954",
   "cover": "art/records/lp-deep-in-my-heart-jose-ferrer-merle-oberon-helen-traubel.webp",
   "item": "https://archive.org/details/lp_deep-in-my-heart_jose-ferrer-merle-oberon-helen-traubel"
@@ -128,6 +145,7 @@ window.RECORDS = [
  {
   "title": "The Golden Age of the Dance Bands",
   "artist": "Glenn Miller, Benny Goodman, Tommy Dorsey and Artie Shaw",
+  "cat": "Swing & Big Bands",
   "year": "1958",
   "cover": "art/records/lp-the-golden-age-of-the-dance-bands-the-poll-winners-of-194.webp",
   "item": "https://archive.org/details/lp_the-golden-age-of-the-dance-bands_the-poll-winners-of-1940-glenn-miller-tomm"
@@ -135,6 +153,7 @@ window.RECORDS = [
  {
   "title": "Les and Mary",
   "artist": "Les Paul & Mary Ford",
+  "cat": "Crooners & Canaries",
   "year": "1955",
   "cover": "art/records/les-and-mary-capitol-w-577-side-a.webp",
   "item": "https://archive.org/details/les-and-mary-capitol-w-577-side-a"
@@ -142,6 +161,7 @@ window.RECORDS = [
  {
   "title": "With His Hot and Blue Guitar",
   "artist": "Johnny Cash",
+  "cat": "Blues & Country",
   "year": "1957",
   "cover": "art/records/with-his-hot-and-blue-guitar.webp",
   "item": "https://archive.org/details/with-his-hot-and-blue-guitar"
@@ -149,6 +169,7 @@ window.RECORDS = [
  {
   "title": "I Saw the Light",
   "artist": "Hank Williams",
+  "cat": "Blues & Country",
   "year": "1954",
   "cover": "art/records/02-hank-williams-mgm-ep-608-side-a-message-to-my-mother.webp",
   "item": "https://archive.org/details/02-hank-williams-mgm-ep-608-side-a-message-to-my-mother"
@@ -156,6 +177,7 @@ window.RECORDS = [
  {
   "title": "Sarah Vaughan and Dizzy Gillespie and Other Jazz Stars",
   "artist": "Sarah Vaughan and friends",
+  "cat": "Jazz",
   "year": "1953",
   "cover": "art/records/lp-sarah-vaughan-and-dizzie-gillespie-and-various-floorshow-.webp",
   "item": "https://archive.org/details/lp_sarah-vaughan-and-dizzie-gillespie-and_various-floorshow-culley-orchestra-lock"
@@ -163,6 +185,7 @@ window.RECORDS = [
  {
   "title": "Ain't That Good News",
   "artist": "Sam Cooke",
+  "cat": "Rock 'n' Roll & Soul",
   "year": "1964",
   "cover": "art/records/lp-aint-that-good-news-sam-cooke-item.webp",
   "item": "https://archive.org/details/lp_aint-that-good-news_sam-cooke_item"
@@ -170,6 +193,7 @@ window.RECORDS = [
  {
   "title": "The Exciting Connie Francis",
   "artist": "Connie Francis",
+  "cat": "Crooners & Canaries",
   "year": "1959",
   "cover": "art/records/lp-the-exciting-connie-francis-connie-francis.webp",
   "item": "https://archive.org/details/lp_the-exciting-connie-francis_connie-francis"
@@ -177,6 +201,7 @@ window.RECORDS = [
  {
   "title": "Live in Copenhagen, 1964",
   "artist": "Thelonious Monk",
+  "cat": "Jazz",
   "year": "1964",
   "cover": "art/records/thelonious-monk-tivoli-copenhagen-denmark-2-21-1964.webp",
   "item": "https://archive.org/details/Thelonious-Monk-Tivoli-Copenhagen-Denmark-2-21-1964"
@@ -184,6 +209,7 @@ window.RECORDS = [
  {
   "title": "The Soul of Jazz Percussion",
   "artist": "Art Blakey, Max Roach, Philly Joe Jones and friends",
+  "cat": "Jazz",
   "year": "1962",
   "cover": "art/records/lp-the-soul-of-jazz-percussion-various-albert-heath-art-blak.webp",
   "item": "https://archive.org/details/lp_the-soul-of-jazz-percussion_various-albert-heath-art-blakey-arthur-tay"
@@ -191,6 +217,7 @@ window.RECORDS = [
  {
   "title": "Alabama Concerto",
   "artist": "John Benson Brooks with Cannonball Adderley",
+  "cat": "Jazz",
   "year": "1959",
   "cover": "art/records/lp-alabama-concerto-john-benson-brooks-cannonball-adderley.webp",
   "item": "https://archive.org/details/lp_alabama-concerto_john-benson-brooks-cannonball-adderley"
@@ -198,6 +225,7 @@ window.RECORDS = [
  {
   "title": "Stan Getz, Volume One",
   "artist": "Stan Getz",
+  "cat": "Jazz",
   "year": "1950",
   "cover": "art/records/lp-stan-getz-volume-one-stan-getz-quartet-stan-getz-tenor-sa.webp",
   "item": "https://archive.org/details/lp_stan-getz-volume-one_stan-getz-quartet-stan-getz-tenor-sax-s"
@@ -205,6 +233,7 @@ window.RECORDS = [
  {
   "title": "Encore! More of the Concert Sound of Henry Mancini",
   "artist": "Henry Mancini",
+  "cat": "Movie Music & Lounge",
   "year": "1967",
   "cover": "art/records/lp-encore-more-of-the-concert-sound-of-henry-henry-mancini.webp",
   "item": "https://archive.org/details/lp_encore-more-of-the-concert-sound-of-henry_henry-mancini"
@@ -212,6 +241,7 @@ window.RECORDS = [
  {
   "title": "Perfume Set to Music",
   "artist": "Les Baxter",
+  "cat": "Movie Music & Lounge",
   "year": "1951",
   "cover": "art/records/lp-perfume-set-to-music-harry-revel-les-baxter-dr-samuel-j-h.webp",
   "item": "https://archive.org/details/lp_perfume-set-to-music_harry-revel-les-baxter-dr-samuel-j-hoffman"
@@ -219,6 +249,7 @@ window.RECORDS = [
  {
   "title": "Anita O'Day at Mister Kelly's",
   "artist": "Anita O'Day",
+  "cat": "Jazz",
   "year": "1959",
   "cover": "art/records/lp-anita-o-day-at-mister-kellys-anita-oday.webp",
   "item": "https://archive.org/details/lp_anita-o-day-at-mister-kellys_anita-oday"
@@ -226,6 +257,7 @@ window.RECORDS = [
  {
   "title": "Road Show",
   "artist": "Stan Kenton, June Christy & the Four Freshmen",
+  "cat": "Swing & Big Bands",
   "year": "1959",
   "cover": "art/records/lp-road-show-stan-kenton-and-his-orchestra-june-christy.webp",
   "item": "https://archive.org/details/lp_road-show_stan-kenton-and-his-orchestra-june-christy"
@@ -233,6 +265,7 @@ window.RECORDS = [
  {
   "title": "The End of the World and Other Great Hits",
   "artist": "The Mills Brothers",
+  "cat": "Crooners & Canaries",
   "year": "1963",
   "cover": "art/records/lp-sing-the-end-of-the-world-and-other-gre-the-mills-brother.webp",
   "item": "https://archive.org/details/lp_sing-the-end-of-the-world-and-other-gre_the-mills-brothers"
@@ -240,6 +273,7 @@ window.RECORDS = [
  {
   "title": "Sensational Ink Spots",
   "artist": "The Ink Spots",
+  "cat": "Crooners & Canaries",
   "year": "1961",
   "cover": "art/records/lp-sensational-ink-spots-charlie-owens-sensational-ink-spots.webp",
   "item": "https://archive.org/details/lp_sensational-ink-spots_charlie-owens-sensational-ink-spots"
@@ -247,6 +281,7 @@ window.RECORDS = [
  {
   "title": "Electric Mud",
   "artist": "Muddy Waters",
+  "cat": "Blues & Country",
   "year": "1968",
   "cover": "art/records/muddy-waters-electric-mud-black-cover-indianapolis-pressing-.webp",
   "item": "https://archive.org/details/muddy-waters-electric-mud-black-cover-indianapolis-pressing-mix"
@@ -254,6 +289,7 @@ window.RECORDS = [
  {
   "title": "If You Miss 'Im... I Got 'Im",
   "artist": "John Lee Hooker",
+  "cat": "Blues & Country",
   "year": "1969",
   "cover": "art/records/john-lee-hooker-if-you-missim-i-got-im-bluesway-abc-bls-6038.webp",
   "item": "https://archive.org/details/john-lee-hooker-if-you-missim-i-got-im-bluesway-abc-bls-6038-side-a"
@@ -261,6 +297,7 @@ window.RECORDS = [
  {
   "title": "Blues Is King",
   "artist": "B.B. King",
+  "cat": "Blues & Country",
   "year": "1967",
   "cover": "art/records/blues-is-king.webp",
   "item": "https://archive.org/details/blues-is-king"
@@ -268,6 +305,7 @@ window.RECORDS = [
  {
   "title": "Free Form Patterns",
   "artist": "Lightnin' Hopkins",
+  "cat": "Blues & Country",
   "year": "1968",
   "cover": "art/records/free-form-patterns-1968.webp",
   "item": "https://archive.org/details/free-form-patterns-1968"
@@ -275,6 +313,7 @@ window.RECORDS = [
  {
   "title": "The Corrupt Ones",
   "artist": "Georges Garvarentz, sung by Dusty Springfield",
+  "cat": "Movie Music & Lounge",
   "year": "1967",
   "cover": "art/records/lp-the-corrupt-ones-georges-garvarentz-dusty-springfield.webp",
   "item": "https://archive.org/details/lp_the-corrupt-ones_georges-garvarentz-dusty-springfield"
@@ -282,6 +321,7 @@ window.RECORDS = [
  {
   "title": "The Astrud Gilberto Album",
   "artist": "Astrud Gilberto",
+  "cat": "Latin & Bossa Nova",
   "year": "1965",
   "cover": "art/records/1965-astrud-gilberto-the-astrud-gilberto-album.webp",
   "item": "https://archive.org/details/1965-astrud-gilberto-the-astrud-gilberto-album"
@@ -289,6 +329,7 @@ window.RECORDS = [
  {
   "title": "All American Award Concert",
   "artist": "Lionel Hampton",
+  "cat": "Swing & Big Bands",
   "year": "1955",
   "cover": "art/records/lp-all-american-award-concert-lionel-hampton-and-his-orchest.webp",
   "item": "https://archive.org/details/lp_all-american-award-concert_lionel-hampton-and-his-orchestra"
@@ -296,6 +337,7 @@ window.RECORDS = [
  {
   "title": "At the Stratford Shakespearean Festival",
   "artist": "The Oscar Peterson Trio",
+  "cat": "Jazz",
   "year": "1958",
   "cover": "art/records/lp-at-the-stratford-shakespearean-festival-the-oscar-peterso.webp",
   "item": "https://archive.org/details/lp_at-the-stratford-shakespearean-festival_the-oscar-peterson-trio"
@@ -303,6 +345,7 @@ window.RECORDS = [
  {
   "title": "Jazz Sampler",
   "artist": "Erroll Garner, Art Tatum and friends",
+  "cat": "Jazz",
   "year": "1955",
   "cover": "art/records/lp-jazz-sampler-various-albert-nicholas-art-tatum-art-t.webp",
   "item": "https://archive.org/details/lp_jazz-sampler_various-albert-nicholas-art-tatum-art-t"
@@ -310,6 +353,7 @@ window.RECORDS = [
  {
   "title": "Stranger in Paradise",
   "artist": "Jimmy Smith",
+  "cat": "Jazz",
   "year": "1964",
   "cover": "art/records/lp-stranger-in-paradise-its-a-sin-to-tell-a-don-gardner-trio.webp",
   "item": "https://archive.org/details/lp_stranger-in-paradise-its-a-sin-to-tell-a_don-gardner-trio-jimmy-smith-the-wilson-le"
@@ -317,6 +361,7 @@ window.RECORDS = [
  {
   "title": "Cry Young",
   "artist": "Ahmad Jamal",
+  "cat": "Jazz",
   "year": "1967",
   "cover": "art/records/lp-cry-young-ahmad-jamal-0.webp",
   "item": "https://archive.org/details/lp_cry-young_ahmad-jamal_0"
@@ -324,6 +369,7 @@ window.RECORDS = [
  {
   "title": "Be My Love",
   "artist": "Keely Smith",
+  "cat": "Crooners & Canaries",
   "year": "1959",
   "cover": "art/records/lp-be-my-love-keely-smith.webp",
   "item": "https://archive.org/details/lp_be-my-love_keely-smith"
@@ -331,6 +377,7 @@ window.RECORDS = [
  {
   "title": "Together",
   "artist": "Louis Prima & Keely Smith",
+  "cat": "Swing & Big Bands",
   "year": "1960",
   "cover": "art/records/lp-together-louis-prima-keely-smith.webp",
   "item": "https://archive.org/details/lp_together_louis-prima-keely-smith"
@@ -754,6 +801,7 @@ window.RECORDS = [
 {
  "title": "Brasil '65",
  "artist": "The Sérgio Mendes Trio with Wanda de Sah",
+ "cat": "Latin & Bossa Nova",
  "year": "1965",
  "cover": "art/records/lp-brasil-65-the-srgio-mendes-trio-wanda-s-rosinha-de-v.webp",
  "item": "https://archive.org/details/lp_brasil-65_the-srgio-mendes-trio-wanda-s-rosinha-de-v",
@@ -762,6 +810,7 @@ window.RECORDS = [
 {
  "title": "Soulin'",
  "artist": "Lou Rawls",
+ "cat": "Rock 'n' Roll & Soul",
  "year": "1966",
  "cover": "art/records/lp-soulin-lou-rawls-1.webp",
  "item": "https://archive.org/details/lp_soulin_lou-rawls_1",
@@ -770,6 +819,7 @@ window.RECORDS = [
 {
  "title": "Jazz From \"Peter Gunn\"",
  "artist": "The Joe Wilder Quartet",
+ "cat": "Jazz",
  "year": "1959",
  "cover": "art/records/lp-jazz-from-peter-gunn-the-joe-wilder-quartet.webp",
  "item": "https://archive.org/details/lp_jazz-from-peter-gunn_the-joe-wilder-quartet",
@@ -778,6 +828,7 @@ window.RECORDS = [
 {
  "title": "Born to Sing the Blues",
  "artist": "Shirley Bassey",
+ "cat": "Crooners & Canaries",
  "year": "1967",
  "cover": "art/records/lp-born-to-sing-the-blues-shirley-bassey.webp",
  "item": "https://archive.org/details/lp_born-to-sing-the-blues_shirley-bassey",
@@ -786,6 +837,7 @@ window.RECORDS = [
 {
  "title": "Inspector Clouseau (Original Motion Picture Score)",
  "artist": "Ken Thorne",
+ "cat": "Movie Music & Lounge",
  "year": "1968",
  "cover": "art/records/lp-inspector-clouseau-original-motion-pict-ken-thorne.webp",
  "item": "https://archive.org/details/lp_inspector-clouseau-original-motion-pict_ken-thorne",
@@ -794,6 +846,7 @@ window.RECORDS = [
 {
  "title": "Sonny Rollins Quintet",
  "artist": "Sonny Rollins with Kenny Dorham",
+ "cat": "Jazz",
  "year": "1954",
  "cover": "art/records/lp-sonny-rollins-quintet-sonny-rollins-quintet-kenny-dorham.webp",
  "item": "https://archive.org/details/lp_sonny-rollins-quintet_sonny-rollins-quintet-kenny-dorham",
@@ -802,6 +855,7 @@ window.RECORDS = [
 {
  "title": "Pops and Prado",
  "artist": "Pérez Prado and His Orchestra",
+ "cat": "Latin & Bossa Nova",
  "year": "1959",
  "cover": "art/records/lp-pops-and-prado-perez-prado-and-his-orchestra.webp",
  "item": "https://archive.org/details/lp_pops-and-prado_perez-prado-and-his-orchestra",
@@ -810,6 +864,7 @@ window.RECORDS = [
 {
  "title": "I Gotta Be Me... This Trip Out",
  "artist": "Della Reese",
+ "cat": "Crooners & Canaries",
  "year": "1968",
  "cover": "art/records/lp-i-gotta-be-methis-trip-out-della-reese-0.webp",
  "item": "https://archive.org/details/lp_i-gotta-be-methis-trip-out_della-reese_0",
@@ -818,6 +873,7 @@ window.RECORDS = [
 {
  "title": "Four Tops Live!",
  "artist": "Four Tops",
+ "cat": "Rock 'n' Roll & Soul",
  "year": "1966",
  "cover": "art/records/lp-four-tops-live-four-tops.webp",
  "item": "https://archive.org/details/lp_four-tops-live_four-tops",
@@ -826,6 +882,7 @@ window.RECORDS = [
 {
  "title": "The Umbrellas of Cherbourg",
  "artist": "Michel Legrand",
+ "cat": "Movie Music & Lounge",
  "year": "1964",
  "cover": "art/records/lp-the-umbrellas-of-cherbourg-les-parapluies-michel-legrand.webp",
  "item": "https://archive.org/details/lp_the-umbrellas-of-cherbourg-les-parapluies_michel-legrand",
@@ -834,6 +891,7 @@ window.RECORDS = [
 {
  "title": "Black Orpheus (Original Soundtrack)",
  "artist": "Antonio Carlos Jobim & Luiz Bonfá",
+ "cat": "Latin & Bossa Nova",
  "year": "1964",
  "cover": "art/records/lp-the-original-soundtrack-from-the-film-blac-antonio-carlos.webp",
  "item": "https://archive.org/details/lp_the-original-soundtrack-from-the-film-blac_antonio-carlos-jobim-luiz-bonf",
@@ -842,6 +900,7 @@ window.RECORDS = [
 {
  "title": "The Soul Man!",
  "artist": "Bobby Timmons",
+ "cat": "Jazz",
  "year": "1966",
  "cover": "art/records/lp-the-soul-man-bobby-timmons.webp",
  "item": "https://archive.org/details/lp_the-soul-man_bobby-timmons",
@@ -850,6 +909,7 @@ window.RECORDS = [
 {
  "title": "Ballad of the Blues",
  "artist": "Jo Stafford",
+ "cat": "Crooners & Canaries",
  "year": "1959",
  "cover": "art/records/lp-ballad-of-the-blues-jo-stafford-paul-weston-and-his-orche.webp",
  "item": "https://archive.org/details/lp_ballad-of-the-blues_jo-stafford-paul-weston-and-his-orchest_0",
@@ -858,6 +918,7 @@ window.RECORDS = [
 {
  "title": "It's Party Time with King Curtis",
  "artist": "King Curtis",
+ "cat": "Rock 'n' Roll & Soul",
  "year": "1962",
  "cover": "art/records/lp-its-party-time-with-king-curtis-king-curtis.webp",
  "item": "https://archive.org/details/lp_its-party-time-with-king-curtis_king-curtis",
@@ -866,6 +927,7 @@ window.RECORDS = [
 {
  "title": "A Gallery of Gershwin",
  "artist": "The First Modern Piano Quartet",
+ "cat": "Jazz",
  "year": "1958",
  "cover": "art/records/lp-a-gallery-of-gershwin-the-first-modern-piano-quartet-mann.webp",
  "item": "https://archive.org/details/lp_a-gallery-of-gershwin_the-first-modern-piano-quartet-manny-albam",
@@ -874,6 +936,7 @@ window.RECORDS = [
 {
  "title": "In the Brazilian Bag",
  "artist": "The Sérgio Mendes Trio",
+ "cat": "Latin & Bossa Nova",
  "year": "1966",
  "cover": "art/records/lp-in-the-brazilian-bag-the-srgio-mendes-trio.webp",
  "item": "https://archive.org/details/lp_in-the-brazilian-bag_the-srgio-mendes-trio",
@@ -882,6 +945,7 @@ window.RECORDS = [
 {
  "title": "The Saxophones of Sonny Stitt",
  "artist": "Sonny Stitt",
+ "cat": "Jazz",
  "year": "1958",
  "cover": "art/records/lp-the-saxophones-of-sonny-stitt-sonny-stitt.webp",
  "item": "https://archive.org/details/lp_the-saxophones-of-sonny-stitt_sonny-stitt",
@@ -890,6 +954,7 @@ window.RECORDS = [
 {
  "title": "Gospel Time",
  "artist": "Ruth Brown",
+ "cat": "Rock 'n' Roll & Soul",
  "year": "1962",
  "cover": "art/records/lp-gospel-time-ruth-brown.webp",
  "item": "https://archive.org/details/lp_gospel-time_ruth-brown",
@@ -898,6 +963,7 @@ window.RECORDS = [
 {
  "title": "3,046 People Danced 'Til 4 A.M. to Bill Doggett",
  "artist": "Bill Doggett and His Combo",
+ "cat": "Swing & Big Bands",
  "year": "1961",
  "cover": "art/records/lp-3046-people-danced-til-4-am-to-bill-dog-bill-doggett-comb.webp",
  "item": "https://archive.org/details/lp_3046-people-danced-til-4-am-to-bill-dog_bill-doggett-combo",
@@ -906,6 +972,7 @@ window.RECORDS = [
 {
  "title": "Candy's Theme and Other Sweets",
  "artist": "Hugo Montenegro and His Orchestra",
+ "cat": "Movie Music & Lounge",
  "year": "1965",
  "cover": "art/records/lp-candys-theme-and-other-sweets-hugo-montenegro-and-his-orc.webp",
  "item": "https://archive.org/details/lp_candys-theme-and-other-sweets_hugo-montenegro-and-his-orchestra",
@@ -914,6 +981,7 @@ window.RECORDS = [
 {
  "title": "Afro-Cuban Jazz Suite",
  "artist": "Machito",
+ "cat": "Latin & Bossa Nova",
  "year": "1951",
  "cover": "art/records/lp-afro-cuban-jazz-suite-machito.webp",
  "item": "https://archive.org/details/lp_afro-cuban-jazz-suite_machito",
@@ -922,6 +990,7 @@ window.RECORDS = [
 {
  "title": "Spotlight on Earl Grant",
  "artist": "Earl Grant",
+ "cat": "Crooners & Canaries",
  "year": "1965",
  "cover": "art/records/lp-spotlight-on-earl-grant-earl-grant-0.webp",
  "item": "https://archive.org/details/lp_spotlight-on-earl-grant_earl-grant_0",
@@ -930,6 +999,7 @@ window.RECORDS = [
 {
  "title": "Into My Life",
  "artist": "Chet Baker and the Carmel Strings",
+ "cat": "Crooners & Canaries",
  "year": "1966",
  "cover": "art/records/lp-into-my-life-chet-baker-the-carmel-strings.webp",
  "item": "https://archive.org/details/lp_into-my-life_chet-baker-the-carmel-strings",
@@ -938,6 +1008,7 @@ window.RECORDS = [
 {
  "title": "All the Hits by Dee Dee Sharp",
  "artist": "Dee Dee Sharp",
+ "cat": "Rock 'n' Roll & Soul",
  "year": "1963",
  "cover": "art/records/lp-all-the-hits-by-dee-dee-sharp-dee-dee-sharp.webp",
  "item": "https://archive.org/details/lp_all-the-hits-by-dee-dee-sharp_dee-dee-sharp",
@@ -946,6 +1017,7 @@ window.RECORDS = [
 {
  "title": "Sol Madrid (Original Soundtrack)",
  "artist": "Lalo Schifrin",
+ "cat": "Movie Music & Lounge",
  "year": "1968",
  "cover": "art/records/lp-sol-madrid-music-from-the-original-soun-lalo-schifrin.webp",
  "item": "https://archive.org/details/lp_sol-madrid-music-from-the-original-soun_lalo-schifrin",
@@ -954,6 +1026,7 @@ window.RECORDS = [
 {
  "title": "Mambo!",
  "artist": "Pérez Prado and His Orchestra with Tito Rodríguez",
+ "cat": "Latin & Bossa Nova",
  "year": "1958",
  "cover": "art/records/lp-mambo-perez-prado-and-his-orchestra-tito-rodr.webp",
  "item": "https://archive.org/details/lp_mambo_perez-prado-and-his-orchestra-tito-rodr",
@@ -962,6 +1035,7 @@ window.RECORDS = [
 {
  "title": "Lou Rawls Live!",
  "artist": "Lou Rawls",
+ "cat": "Rock 'n' Roll & Soul",
  "year": "1966",
  "cover": "art/records/lp-live-lou-rawls-0.webp",
  "item": "https://archive.org/details/lp_live_lou-rawls_0",
@@ -970,6 +1044,7 @@ window.RECORDS = [
 {
  "title": "Dirty Dog",
  "artist": "Kai Winding",
+ "cat": "Jazz",
  "year": "1966",
  "cover": "art/records/lp-dirty-dog-kai-winding.webp",
  "item": "https://archive.org/details/lp_dirty-dog_kai-winding",
@@ -978,6 +1053,7 @@ window.RECORDS = [
 {
  "title": "Une Soirée avec Nana Mouskouri",
  "artist": "Nana Mouskouri et les Athéniens",
+ "cat": "Crooners & Canaries",
  "year": "1969",
  "cover": "art/records/lp-une-soire-avec-nana-mouskouri-et-les-athni-nana-mouskouri.webp",
  "item": "https://archive.org/details/lp_une-soire-avec-nana-mouskouri-et-les-athni_nana-mouskouri-les-athniens",
@@ -986,6 +1062,7 @@ window.RECORDS = [
 {
  "title": "Provocative Percussion Vol. III",
  "artist": "Enoch Light and the Light Brigade",
+ "cat": "Movie Music & Lounge",
  "year": "1961",
  "cover": "art/records/lp-provocative-percussion-vol-iii-enoch-light-and-the-light.webp",
  "item": "https://archive.org/details/lp_provocative-percussion-vol-iii_enoch-light-and-the-light-brigade",
@@ -994,6 +1071,7 @@ window.RECORDS = [
 {
  "title": "Hugh Masekela's Next Album",
  "artist": "Hugh Masekela",
+ "cat": "Jazz",
  "year": "1966",
  "cover": "art/records/lp-hugh-masekelas-next-album-hugh-masekela.webp",
  "item": "https://archive.org/details/lp_hugh-masekelas-next-album_hugh-masekela",
@@ -1002,6 +1080,7 @@ window.RECORDS = [
 {
  "title": "Wild, Wonderful Wynona",
  "artist": "Wynona Carr",
+ "cat": "Rock 'n' Roll & Soul",
  "year": "1962",
  "cover": "art/records/lp-wild-wonderful-wynona-wynona-carr.webp",
  "item": "https://archive.org/details/lp_wild-wonderful-wynona_wynona-carr",
@@ -1010,6 +1089,7 @@ window.RECORDS = [
 {
  "title": "The New James",
  "artist": "Harry James and His Orchestra",
+ "cat": "Swing & Big Bands",
  "year": "1958",
  "cover": "art/records/lp-the-new-james-harry-james-and-his-orchestra.webp",
  "item": "https://archive.org/details/lp_the-new-james_harry-james-and-his-orchestra",
@@ -1018,6 +1098,7 @@ window.RECORDS = [
 {
  "title": "Soul Food",
  "artist": "Bobby Timmons",
+ "cat": "Jazz",
  "year": "1966",
  "cover": "art/records/lp-soul-food-bobby-timmons.webp",
  "item": "https://archive.org/details/lp_soul-food_bobby-timmons",
@@ -1026,6 +1107,7 @@ window.RECORDS = [
 {
  "title": "Caterina Valente's Greatest Hits",
  "artist": "Caterina Valente",
+ "cat": "Crooners & Canaries",
  "year": "1965",
  "cover": "art/records/lp-caterina-valentes-greatest-hits-caterina-valente-verner-m.webp",
  "item": "https://archive.org/details/lp_caterina-valentes-greatest-hits_caterina-valente-verner-muller-und-sein-or",
@@ -1034,6 +1116,7 @@ window.RECORDS = [
 {
  "title": "They Call Me Mister Tibbs! (Original Score)",
  "artist": "Quincy Jones",
+ "cat": "Movie Music & Lounge",
  "year": "1970",
  "cover": "art/records/lp-they-call-me-mister-tibbs-quincy-jones.webp",
  "item": "https://archive.org/details/lp_they-call-me-mister-tibbs_quincy-jones",
@@ -1042,6 +1125,7 @@ window.RECORDS = [
 {
  "title": "Zungo! Afro Percussion",
  "artist": "Babatunde Olatunji",
+ "cat": "Latin & Bossa Nova",
  "year": "1961",
  "cover": "art/records/lp-zungo-afro-percussion-babatunde-olatunji.webp",
  "item": "https://archive.org/details/lp_zungo-afro-percussion_babatunde-olatunji",
@@ -1050,6 +1134,7 @@ window.RECORDS = [
 {
  "title": "Josh White at Town Hall",
  "artist": "Josh White",
+ "cat": "Blues & Country",
  "year": "1962",
  "cover": "art/records/lp-josh-white-at-town-hall-josh-white-beverly-white-josh-whi.webp",
  "item": "https://archive.org/details/lp_josh-white-at-town-hall_josh-white-beverly-white-josh-white-jr-jos",
@@ -1058,6 +1143,7 @@ window.RECORDS = [
 {
  "title": "Beautiful Friendship",
  "artist": "The Three Sounds",
+ "cat": "Jazz",
  "year": "1965",
  "cover": "art/records/lp-beautiful-friendship-the-three-sounds-0.webp",
  "item": "https://archive.org/details/lp_beautiful-friendship_the-three-sounds_0",
@@ -1066,6 +1152,7 @@ window.RECORDS = [
 {
  "title": "Country Meets the Blues",
  "artist": "The Ramsey Lewis Trio",
+ "cat": "Jazz",
  "year": "1962",
  "cover": "art/records/lp-country-meets-the-blues-the-ramsey-lewis-trio-0.webp",
  "item": "https://archive.org/details/lp_country-meets-the-blues_the-ramsey-lewis-trio_0",

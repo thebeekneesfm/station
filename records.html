@@ -119,6 +119,36 @@
   @media (max-width: 900px) { .shelf { grid-template-columns: repeat(3, minmax(0, 1fr)); } .why { grid-template-columns: 1fr; } }
   @media (max-width: 560px) { .shelf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 16px; } .rec h3 { font-size: 17px; } .rec .who { font-size: 15px; } }
   @media (prefers-reduced-motion: reduce) { .sleeve::before { transition: none; } }
+  /* the whole shelf, sorted into crates: a fan of three sleeves for each, open one to see its albums */
+  .crates { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px 22px; }
+  .crates li { margin: 0; min-width: 0; }
+  .crate { display: grid; justify-items: center; gap: 4px; width: 100%; padding: 6px 4px 10px; background: none; border: 0; cursor: pointer; color: var(--ink); font: inherit; text-align: center; }
+  .crate .fan { position: relative; display: block; width: 100%; aspect-ratio: 5 / 3.6; }
+  .crate .fan img { position: absolute; top: 6%; left: 50%; width: 58%; height: auto; aspect-ratio: 1; object-fit: cover; background: #d8ceb2;
+    box-shadow: 0 2px 0 rgba(0,0,0,.3), 0 6px 14px rgba(0,0,0,.3); transition: transform .3s ease; }
+  .crate .fan img:nth-child(1) { transform: translateX(-84%) rotate(-8deg); }
+  .crate .fan img:nth-child(2) { transform: translateX(-16%) rotate(7deg); }
+  .crate .fan img:nth-child(3) { transform: translateX(-50%) rotate(-1deg); z-index: 1; }
+  .crate:hover .fan img:nth-child(1), .crate:focus-visible .fan img:nth-child(1) { transform: translateX(-96%) rotate(-12deg); }
+  .crate:hover .fan img:nth-child(2), .crate:focus-visible .fan img:nth-child(2) { transform: translateX(-4%) rotate(11deg); }
+  .crate:hover .fan img:nth-child(3), .crate:focus-visible .fan img:nth-child(3) { transform: translateX(-50%) translateY(-6px) rotate(0); }
+  .crate .nm { margin-top: 6px; font: 700 22px/1.2 "BK Serif", Georgia, serif; text-wrap: balance; }
+  .crate:hover .nm { color: var(--red); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+  .crate .ct { font-style: italic; font-size: 16px; color: var(--ink-2); }
+  .crate:focus-visible { outline: 3px solid var(--honey); outline-offset: 4px; }
+  .opened { margin-top: 22px; }
+  .opened .top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; }
+  .opened h3.sec { margin: 0; }
+  .backc { background: var(--ink); color: #f3ead6; border: 0; font: 600 18px/1 "BK Serif", Georgia, serif; padding: 11px 15px; min-height: 44px; cursor: pointer; box-shadow: 0 3px 0 rgba(0,0,0,.3); }
+  .backc:hover { background: var(--red); }
+  .backc:focus-visible { outline: 3px solid var(--honey); outline-offset: 3px; }
+  .others { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 14px; font-size: 17px; }
+  .others button { background: none; border: 0; padding: 4px 0; font: inherit; color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; cursor: pointer; }
+  .others button:hover { color: var(--red); }
+  .others button:focus-visible { outline: 2px solid var(--honey); outline-offset: 3px; }
+  @media (max-width: 900px) { .crates { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .crates { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; } .crate .nm { font-size: 18px; } .crate .ct { font-size: 14px; } }
+  @media (prefers-reduced-motion: reduce) { .crate .fan img { transition: none; } }
   [hidden] { display: none !important; }
   .embed .mast { display: none; }
   .embed .wrap { padding-top: 12px; }
@@ -166,7 +196,7 @@
 </div>
 <script src="config.js?v=20261117s"></script>
 <script src="art/records/notes.js?v=1"></script>
-<script src="art/records/records.js?v=18"></script>
+<script src="art/records/records.js?v=19"></script>
 <script>
 (function () {
   "use strict";
@@ -194,20 +224,47 @@
   }
   var shelf = document.getElementById("shelf");
   picks.forEach(function (r) { shelf.appendChild(card(r)); });
-  // the whole shelf: Christmas first while it's the season, then everything else, oldest first
+  // the whole shelf, sorted into crates (each album's "cat"; Christmas first while it's the season)
   var md = m * 100 + d, season = md >= 1106 || md <= 106;
   var byYear = function (a, b) { return (parseInt(a.year, 10) || 1960) - (parseInt(b.year, 10) || 1960) || a.title.localeCompare(b.title); };
-  var xm = R.filter(function (r) { return r.season === "christmas"; }).sort(byYear), rest = R.filter(function (r) { return r.season !== "christmas"; }).sort(byYear);
-  var groups = [["Jazz, blues, pop and more", rest], ["Christmas", xm]];
-  if (season) groups.reverse();
+  var ORDER = ["Christmas", "Jazz", "Swing & Big Bands", "Crooners & Canaries", "Rock 'n' Roll & Soul", "Blues & Country", "Latin & Bossa Nova", "Movie Music & Lounge", "More Records"];
+  var crates = {};
+  R.forEach(function (r) { var c = r.season === "christmas" ? "Christmas" : (r.cat || "More Records"); (crates[c] = crates[c] || []).push(r); });
+  var names = Object.keys(crates).sort(function (a, b) { return (ORDER.indexOf(a) + 99) % 99 - (ORDER.indexOf(b) + 99) % 99; });
+  if (!season) names = names.filter(function (n) { return n !== "Christmas"; }).concat(crates.Christmas ? ["Christmas"] : []);
+  names.forEach(function (n) { crates[n].sort(byYear); });
   var box = document.getElementById("sections");
-  groups.forEach(function (g) {
-    if (!g[1].length) return;
-    var h = document.createElement("h3"); h.className = "sec"; h.textContent = g[0] + " (" + g[1].length + ")"; box.appendChild(h);
-    var ul = document.createElement("ul"); ul.className = "shelf small";
-    g[1].forEach(function (r) { ul.appendChild(card(r)); });
-    box.appendChild(ul);
+  var grid = document.createElement("ul"); grid.className = "crates"; grid.setAttribute("aria-label", "Crates of records");
+  var open = document.createElement("div"); open.className = "opened"; open.hidden = true;
+  box.appendChild(grid); box.appendChild(open);
+  var span = function (rs) { var ys = rs.map(function (r) { return parseInt(r.year, 10); }).filter(function (y) { return y > 1900; }); return ys.length ? Math.min.apply(0, ys) + (Math.max.apply(0, ys) > Math.min.apply(0, ys) ? "\u2013" + Math.max.apply(0, ys) : "") : ""; };
+  names.forEach(function (n) {
+    var rs = crates[n], li = document.createElement("li"), b = document.createElement("button");
+    b.type = "button"; b.className = "crate"; b.setAttribute("aria-label", n + ", " + rs.length + " albums. Open the crate.");
+    var fan = document.createElement("span"); fan.className = "fan";
+    [rs[Math.floor(rs.length / 3)], rs[Math.floor(rs.length * 2 / 3)], rs[0]].forEach(function (r, i, all) {
+      if (!r || all.indexOf(r) < i) return; var im = document.createElement("img"); im.src = r.cover; im.alt = ""; im.loading = "lazy"; im.width = 420; im.height = 420; fan.appendChild(im);
+    });
+    b.appendChild(fan);
+    var nm = document.createElement("span"); nm.className = "nm"; nm.textContent = n; b.appendChild(nm);
+    var ct = document.createElement("span"); ct.className = "ct"; ct.textContent = rs.length + (rs.length === 1 ? " album" : " albums") + (span(rs) ? ", " + span(rs) : ""); b.appendChild(ct);
+    b.addEventListener("click", function () { show(n, true); });
+    li.appendChild(b); grid.appendChild(li);
   });
+  function show(n, focus) {
+    if (!n) { open.hidden = true; open.innerHTML = ""; grid.hidden = false; return; }
+    grid.hidden = true; open.hidden = false; open.innerHTML = "";
+    var top = document.createElement("div"); top.className = "top";
+    var bk = document.createElement("button"); bk.type = "button"; bk.className = "backc"; bk.textContent = "\u2190 All the crates";
+    bk.addEventListener("click", function () { var was = n; show(null); var btns = grid.querySelectorAll(".crate"); names.forEach(function (x, i) { if (x === was) btns[i].focus(); }); });
+    var h = document.createElement("h3"); h.className = "sec"; h.tabIndex = -1; h.textContent = n + " (" + crates[n].length + ")";
+    top.appendChild(bk); top.appendChild(h); open.appendChild(top);
+    var ul = document.createElement("ul"); ul.className = "shelf small"; crates[n].forEach(function (r) { ul.appendChild(card(r)); }); open.appendChild(ul);
+    var ot = document.createElement("div"); ot.className = "others"; ot.setAttribute("aria-label", "Other crates");
+    names.forEach(function (x) { if (x === n) return; var o = document.createElement("button"); o.type = "button"; o.textContent = x; o.addEventListener("click", function () { show(x, true); }); ot.appendChild(o); });
+    open.appendChild(ot);
+    if (focus) { h.focus({ preventScroll: true }); var y = box.getBoundingClientRect().top + window.scrollY - 20; if (box.getBoundingClientRect().top < 0) window.scrollTo(0, y); }
+  }
   document.getElementById("count").textContent = R.length + " albums so far, with more on the way.";
 })();
 </script>
