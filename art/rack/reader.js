@@ -227,19 +227,43 @@
   if (KIND === "magazines") {
     var clipB = document.createElement("button"); clipB.type = "button"; clipB.className = "rd-clip"; clipB.textContent = "Clip this page";
     rd.querySelector(".rd-foot").insertBefore(clipB, rd.querySelector(".rd-foot .src"));
-    var clipReset = 0;
-    clipB.addEventListener("click", function () {
-      var L = (window.RADIO_CONFIG || {}).listeners || {}; if (!cur || !L.url) return;
-      var pages = pagesAt(at).filter(function (n) { return !hidden(cur, n); }); if (!pages.length) return;
+    var clipReset = 0, foot = rd.querySelector(".rd-foot");
+    // on a two-page spread, a little menu asks which: the left page, the right page, or both
+    var cst = document.createElement("style");
+    cst.textContent = ".rd-foot{position:relative}.rd-clipm{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);display:flex;gap:6px;padding:8px;background:#241a12;border:2px solid #000;box-shadow:0 6px 18px rgba(0,0,0,.5);z-index:3;white-space:nowrap}" +
+      ".rd-clipm span{align-self:center;color:var(--cream,#f3ead6);font:italic 17px/1 'BK Serif',Georgia,serif;padding:0 6px 0 4px}.rd-clipm button:focus-visible,.rd-clip:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}" +
+      "@media (max-width:560px){.rd-clipm{left:auto;right:8px;transform:none}.rd-clipm span{display:none}}";
+    document.head.appendChild(cst);
+    var menu = document.createElement("div"); menu.className = "rd-clipm"; menu.hidden = true; menu.setAttribute("role", "group"); menu.setAttribute("aria-label", "Which page to clip");
+    menu.innerHTML = '<span>Clip which?</span><button type="button" data-w="l">Left page</button><button type="button" data-w="r">Right page</button><button type="button" data-w="b">Both</button>';
+    foot.appendChild(menu);
+    var shown = function () { return pagesAt(at).filter(function (n) { return !hidden(cur, n); }); };
+    function send(pages) {
+      var L = (window.RADIO_CONFIG || {}).listeners || {}; if (!cur || !L.url || !pages.length) return;
       var who = ""; try { who = JSON.parse(localStorage.getItem("pz.who")) || ""; } catch (e) {}
-      clipB.disabled = true; clipB.textContent = "Clipping\u2026";
+      menu.hidden = true; clipB.disabled = true; clipB.textContent = "Clipping\u2026";
       var say = function (t) { clipB.textContent = t; clearTimeout(clipReset); clipReset = setTimeout(function () { clipB.textContent = "Clip this page"; clipB.disabled = false; }, 3500); };
       fetch(L.url + "/rest/v1/rpc/clip_pages", { method: "POST", headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" },
         body: JSON.stringify({ p_item: cur.id, p_pages: pages, p_by: who, p_source: "site" }) })
         .then(function (r) { return r.json(); })
         .then(function (d) { var st = d && d.status; say(st === "saved" ? "Saved to Clippings" : st === "already" ? "Already in Clippings" : st === "resting" ? "Busy, try again soon" : "Couldn\u2019t clip that one"); })
         .catch(function () { say("Couldn\u2019t reach the clippings"); });
+    }
+    clipB.setAttribute("aria-expanded", "false");
+    clipB.addEventListener("click", function () {
+      var pages = shown(); if (!pages.length) return;
+      if (pages.length < 2) { send(pages); return; }
+      menu.hidden = !menu.hidden; clipB.setAttribute("aria-expanded", String(!menu.hidden));
+      if (!menu.hidden) menu.querySelector("button").focus();
     });
+    menu.addEventListener("click", function (e) {
+      var w = e.target.closest("button"); if (!w) return;
+      var pages = shown(); clipB.setAttribute("aria-expanded", "false");
+      send(w.dataset.w === "l" ? pages.slice(0, 1) : w.dataset.w === "r" ? pages.slice(-1) : pages);
+    });
+    document.addEventListener("click", function (e) { if (!menu.hidden && !menu.contains(e.target) && e.target !== clipB) { menu.hidden = true; clipB.setAttribute("aria-expanded", "false"); } });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !menu.hidden) { e.stopImmediatePropagation(); menu.hidden = true; clipB.focus(); } }, true);
+    ["rd-prev", "rd-next"].forEach(function (c) { rd.querySelector("." + c).addEventListener("click", function () { menu.hidden = true; }); });
   }
   rd.querySelector(".rd-prev").addEventListener("click", function () { step(-1); });
   rd.querySelector(".rd-next").addEventListener("click", function () { step(1); });

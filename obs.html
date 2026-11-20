@@ -989,13 +989,13 @@
   var CLIPS_ON = !!channel;
   // during the Magazine Rack, a reminder every few minutes that chat can clip what's on screen
   if (CLIPS_ON) setInterval(function () {
-    if (mg && !$("book").classList.contains("gone")) toast("Like these pages? Type <b>!clip</b> in chat to save them to <b>thebeesknees.fm/clippings</b>", 9000);
+    if (mg && !$("book").classList.contains("gone")) toast("Like these pages? Type <b>!clip</b> in chat to save them (or <b>!clip left</b> / <b>!clip right</b> for one page) to <b>thebeesknees.fm/clippings</b>", 9000);
   }, 1000 * (+Q.get("cliphint") || 240));
   // the Community Puzzle card (puzzle=0 in the address turns it off)
   if (Q.get("puzzle") !== "0" && window.PuzzleCorner) { document.documentElement.classList.add("pz-on"); PuzzleCorner.start($("pzc"), { always: true, live: true }); }
   if (channel) connect();
   function command(user, text, boss) {
-    if (/^!clip\b/i.test(text.trim())) { clip(user); return; }
+    var cm = text.trim().match(/^!clip\b\s*(\w*)/i); if (cm) { clip(user, cm[1].toLowerCase()); return; }
     if (CLIP_ONLY) return;
     var m = text.trim().match(/^!(tune|station|stations|channels|list|dial|radio|tv|watch|drive-?in|movies?)\b\s*(.*)$/i); if (!m) return;
     var cmd = m[1].toLowerCase().replace("-", ""), arg = m[2].trim();
@@ -1023,9 +1023,10 @@
   /* !clip: save the magazine pages on screen to the Clippings page (thebeesknees.fm/clippings).
      The database only takes issues on the station's own rack, one save per spread, one every 15 seconds. */
   var clipBusy = false;
-  function clip(user) {
+  function clip(user, which) {   // !clip saves both pages; !clip left or !clip right saves just that one
     if (!mg || !$("book") || $("book").classList.contains("gone")) { toast("<b>!clip</b> saves magazine pages, so it works during the Magazine Rack", 4500); return; }
     var P = mg.pages, s = mg.s, pages = (s === 0 ? [P[0]] : [P[2 * s - 1], P[2 * s]]).filter(function (n) { return n != null; });
+    if (pages.length === 2 && /^l/.test(which || "")) pages = pages.slice(0, 1); else if (pages.length === 2 && /^r/.test(which || "")) pages = pages.slice(1);
     var L = CONFIG.listeners || {}; if (!L.url || !pages.length || clipBusy) return;
     clipBusy = true;
     fetch(L.url + "/rest/v1/rpc/clip_pages", { method: "POST", headers: { apikey: L.key, Authorization: "Bearer " + L.key, "Content-Type": "application/json" },
