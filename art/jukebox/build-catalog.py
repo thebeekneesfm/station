@@ -14,7 +14,7 @@ Albums the Archive has no usable song list for are left out, and listed at the e
 Jukebox numbers (101, 102, ...) follow the order of the Record Shelf, and an album keeps its number when
 new ones are added, because the numbers already used are read back from the old catalog first.
 """
-import json, os, re, subprocess, sys, urllib.parse, urllib.request
+import json, os, re, subprocess, sys, urllib.error, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -104,6 +104,12 @@ def album(rec):
     # songs longer than 8 minutes (whole sides, long medleys, "entire album" tracks) stay off: one request shouldn't take over the night
     songs = [x for x in songs if not (x["d"] and x["d"] > MAXLEN) and "entire album" not in (x["t"] or "").lower()]
     if not songs: return None, f"{ident}: every song is over 8 minutes"
+    # some Archive albums can only be borrowed by signed-in members: their files answer 401/403, so the jukebox can't play them
+    probe = songs[len(songs) // 2]["f"]
+    try: urllib.request.urlopen(urllib.request.Request(f"https://archive.org/download/{ident}/" + "/".join(urllib.parse.quote(x) for x in probe.split("/")), method="HEAD", headers=UA), timeout=60)
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403): return None, f"{ident}: borrow-only on the Archive"
+    except Exception: pass
     # an album with songs that have no real name ("Untitled", "Track 29") stays off the jukebox entirely
     if any(UNNAMED.match(x["t"] or "") for x in songs): return None, f"{ident}: has untitled songs"
     return {"item": ident, "title": rec["title"], "artist": rec["artist"], "year": rec.get("year", ""),

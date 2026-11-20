@@ -174,6 +174,12 @@ body { position: relative; color: var(--ink); font-family: "BK Serif", Georgia, 
 html.minimal .mast, html.minimal .pzc { display: none !important; }
 html.minimal .book { top: 70px; transform: scale(1.06); transform-origin: 0 0; }
 html.minimal .np { top: 40px; height: 820px; }
+
+/* the Soundies screen: 1940s dancers with the sound off, on the record shelf (tv=0 turns it off) */
+.tvset { position: absolute; left: 64px; top: 760px; width: 360px; height: 270px; z-index: 6; overflow: hidden; background: #111;
+  box-shadow: 0 3px 0 rgba(0,0,0,.3), 0 12px 24px rgba(0,0,0,.45); }
+.tvset video { width: 100%; height: 100%; object-fit: cover; display: block; filter: contrast(1.08) sepia(.08); }
+html:not(.minimal) .tvset { display: none; }
 </style>
 </head>
 <body>
@@ -197,6 +203,7 @@ html.minimal .np { top: 40px; height: 820px; }
   </section>
 
   <div class="shelf"><div class="row" id="row"></div><div class="ledge"></div></div>
+  <div class="tvset" id="tvset" aria-hidden="true"><video id="tv" muted loop playsinline autoplay preload="auto"></video></div>
   <section class="pzc paper" id="pzc" aria-live="polite"></section>
 
   <div class="pop" id="pop"><div class="pcard">
@@ -209,14 +216,22 @@ html.minimal .np { top: 40px; height: 820px; }
   <audio id="au" preload="auto"></audio>
 
 <script src="config.js?v=20261120a"></script>
-<script src="art/jukebox/catalog.js?v=6"></script>
+<script src="art/jukebox/catalog.js?v=7"></script>
 <script src="art/jukebox/jukebox-net.js?v=5"></script>
 <script src="art/puzzle/puzzle-corner.js?v=2"></script>
 <script>
 (function () {
   "use strict";
   var J = window.BKJ, Q = new URLSearchParams(location.search), $ = function (id) { return document.getElementById(id); };
-  if (Q.get("look") !== "classic") document.documentElement.classList.add("minimal");   // look=classic: the older layout with the masthead and puzzle box
+  if (Q.get("look") !== "classic") document.documentElement.classList.add("minimal");
+  // the Soundies screen: 1940s Soundies, dancing only, sound off. It starts somewhere different each time.
+  (function () {
+    var v = document.getElementById("tv"), box = document.getElementById("tvset");
+    if (Q.get("tv") === "0") { box.hidden = true; return; }
+    v.src = "art/loops/soundies.mp4";
+    v.addEventListener("loadedmetadata", function () { try { v.currentTime = Math.random() * Math.max(0, v.duration - 30); } catch (e) {} }, { once: true });
+    var p = v.play(); if (p && p.catch) p.catch(function () {});
+  })();   // look=classic: the older layout with the masthead and puzzle box
   var SECRET = (Q.get("dj") || "").trim();
   var MAXQ = 25;
   var A = J.albums();                                   // albums on the jukebox today, in number order
@@ -356,9 +371,12 @@ html.minimal .np { top: 40px; height: 820px; }
     stopAt = f.song.d ? s + f.song.d : 0;
     au.src = url;
     au.onloadedmetadata = function () { if (s) try { au.currentTime = s; } catch (e) {} };
-    var p = au.play(); if (p && p.catch) p.catch(function () { $("tap").style.display = "block"; });
+    // the click-for-sound button is only for a browser that blocks sound until someone clicks (OBS never does);
+    // a song that won't load is skipped by the "error" handler below instead
+    var p = au.play(); if (p && p.catch) p.catch(function (e) { if (e && e.name === "NotAllowedError") $("tap").style.display = "block"; });
   }
   function finish() { now = null; au.pause(); au.removeAttribute("src"); try { au.load(); } catch (e) {} $("bar").style.width = "0"; paint(); share(); show(cur); setTimeout(pump, 1500); }
+  au.addEventListener("playing", function () { $("tap").style.display = "none"; });
   au.addEventListener("ended", finish);
   au.addEventListener("error", function () { if (now) setTimeout(finish, 1500); });
   au.addEventListener("timeupdate", function () {

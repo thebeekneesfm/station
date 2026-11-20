@@ -120,38 +120,6 @@
   "item": "https://archive.org/details/lp_groovin-high_erroll-garner-stan-getz"
  },
  {
-  "title": "European Concert",
-  "artist": "The Modern Jazz Quartet",
-  "year": "1960",
-  "cat": "Jazz",
-  "cover": "art/jukebox/covers/lp_european-concert_the-modern-jazz-quartet.webp",
-  "item": "https://archive.org/details/lp_european-concert_the-modern-jazz-quartet"
- },
- {
-  "title": "Lullabies Of Birdland",
-  "artist": "Various, Art Tatum",
-  "year": "1963",
-  "cat": "Jazz",
-  "cover": "art/jukebox/covers/lp_lullabies-of-birdland_various-art-tatum-billy-eckstine-billy_0.webp",
-  "item": "https://archive.org/details/lp_lullabies-of-birdland_various-art-tatum-billy-eckstine-billy_0"
- },
- {
-  "title": "\"Bird\" Symbols",
-  "artist": "Charlie Parker",
-  "year": "1961",
-  "cat": "Jazz",
-  "cover": "art/jukebox/covers/lp_bird-symbols_charlie-parker_0.webp",
-  "item": "https://archive.org/details/lp_bird-symbols_charlie-parker_0"
- },
- {
-  "title": "\"Bucket\"!",
-  "artist": "Jimmy Smith",
-  "year": "1966",
-  "cat": "Jazz",
-  "cover": "art/jukebox/covers/lp_bucket_jimmy-smith.webp",
-  "item": "https://archive.org/details/lp_bucket_jimmy-smith"
- },
- {
   "title": "A Sign Of The Times",
   "artist": "Les Brown And His Band Of Renown",
   "year": "1966",
@@ -288,46 +256,6 @@
   "item": "https://archive.org/details/lp_tricky-trombones_warren-covington-tommy-dorsey-and-his-orch"
  },
  {
-  "title": "The Hits Of Louis & Keely",
-  "artist": "Louis Prima & Keely Smith",
-  "year": "1961",
-  "cat": "Swing & Big Bands",
-  "cover": "art/jukebox/covers/lp_the-hits-of-louis-keely_louis-prima-keely-smith.webp",
-  "item": "https://archive.org/details/lp_the-hits-of-louis-keely_louis-prima-keely-smith"
- },
- {
-  "title": "Sounds Terrific",
-  "artist": "Various, Al Hirt",
-  "year": "1968",
-  "cat": "Swing & Big Bands",
-  "cover": "art/jukebox/covers/lp_sounds-terrific_various-al-hirt-chet-atkins-claus-ogerman.webp",
-  "item": "https://archive.org/details/lp_sounds-terrific_various-al-hirt-chet-atkins-claus-ogerman"
- },
- {
-  "title": "The Wildest!",
-  "artist": "Louis Prima",
-  "year": "1956",
-  "cat": "Swing & Big Bands",
-  "cover": "art/jukebox/covers/lp_the-wildest_louis-prima.webp",
-  "item": "https://archive.org/details/lp_the-wildest_louis-prima"
- },
- {
-  "title": "Miss America Presents A Collector's Album",
-  "artist": "Various, Duke Ellington",
-  "year": "1961",
-  "cat": "Swing & Big Bands",
-  "cover": "art/jukebox/covers/lp_miss-america-presents-a-collectors-albu_various-duke-ellington-jerry-vale-jo-st.webp",
-  "item": "https://archive.org/details/lp_miss-america-presents-a-collectors-albu_various-duke-ellington-jerry-vale-jo-st"
- },
- {
-  "title": "Recapturing The Excitement Of The Jimmy Dorsey Era",
-  "artist": "Bob Eberly, Helen O'Connell",
-  "year": "1961",
-  "cat": "Swing & Big Bands",
-  "cover": "art/jukebox/covers/lp_recapturing-the-excitement-of-the-jimmy_bob-eberly-helen-oconnell-jimmy-dorsey.webp",
-  "item": "https://archive.org/details/lp_recapturing-the-excitement-of-the-jimmy_bob-eberly-helen-oconnell-jimmy-dorsey"
- },
- {
   "title": "Live It Up!",
   "artist": "Johnny Mathis, Nelson Riddle And His Orchestra",
   "year": "1962",
@@ -366,14 +294,6 @@
   "cat": "Crooners & Canaries",
   "cover": "art/jukebox/covers/lp_patti-sings-golden-hits-of-the-boys_patti-page_0.webp",
   "item": "https://archive.org/details/lp_patti-sings-golden-hits-of-the-boys_patti-page_0"
- },
- {
-  "title": "Rodgers And Hammerstein's State Fair",
-  "artist": "Pat Boone, Bobby Darin",
-  "year": "1962",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_rodgers-and-hammersteins-state-fair_pat-boone-bobby-darin-pamela-tiffin-ann-ma.webp",
-  "item": "https://archive.org/details/lp_rodgers-and-hammersteins-state-fair_pat-boone-bobby-darin-pamela-tiffin-ann-ma"
  },
  {
   "title": "The Road To Hong Kong (Original Soundtrack Album)",
@@ -416,94 +336,6 @@
   "item": "https://archive.org/details/lp_paul-whitemans-orchestra-featuring-bix_paul-whiteman-and-his-orchestra-bix-bei"
  },
  {
-  "title": "Sings Days Of Wine And Roses, Moon River, And Other Academy Award Winners",
-  "artist": "Frank Sinatra",
-  "year": "1964",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_sings-days-of-wine-and-roses-moon-river_frank-sinatra_1.webp",
-  "item": "https://archive.org/details/lp_sings-days-of-wine-and-roses-moon-river_frank-sinatra_1"
- },
- {
-  "title": "I Don't Want To Be Hurt Anymore",
-  "artist": "Nat King Cole",
-  "year": "1964",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_i-dont-want-to-be-hurt-anymore_nat-king-cole.webp",
-  "item": "https://archive.org/details/lp_i-dont-want-to-be-hurt-anymore_nat-king-cole"
- },
- {
-  "title": "Ella Fitzgerald Sings the Duke Ellington Song Book",
-  "artist": "Ella Fitzgerald",
-  "year": "1957",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_ella-fitzgerald-sings-the-duke-ellingto_ella-fitzgerald_0.webp",
-  "item": "https://archive.org/details/lp_ella-fitzgerald-sings-the-duke-ellingto_ella-fitzgerald_0"
- },
- {
-  "title": "London By Night",
-  "artist": "Julie London, Pete King And His Orchestra",
-  "year": "1960",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_london-by-night_julie-london-pete-king-and-his-orchestr_1.webp",
-  "item": "https://archive.org/details/lp_london-by-night_julie-london-pete-king-and-his-orchestr_1"
- },
- {
-  "title": "The Beat Of My Heart",
-  "artist": "Tony Bennett",
-  "year": "1957",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_the-beat-of-my-heart_tony-bennett.webp",
-  "item": "https://archive.org/details/lp_the-beat-of-my-heart_tony-bennett"
- },
- {
-  "title": "Brighten The Corner",
-  "artist": "Ella Fitzgerald",
-  "year": "1967",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_brighten-the-corner_ella-fitzgerald.webp",
-  "item": "https://archive.org/details/lp_brighten-the-corner_ella-fitzgerald"
- },
- {
-  "title": "No Count Sarah",
-  "artist": "Sarah Vaughan",
-  "year": "1959",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_no-count-sarah_sarah-vaughan.webp",
-  "item": "https://archive.org/details/lp_no-count-sarah_sarah-vaughan"
- },
- {
-  "title": "Sings The Select Cole Porter",
-  "artist": "Frank Sinatra",
-  "year": "1965",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_sings-the-select-cole-porter_frank-sinatra_0.webp",
-  "item": "https://archive.org/details/lp_sings-the-select-cole-porter_frank-sinatra_0"
- },
- {
-  "title": "Blues Cross Country",
-  "artist": "Peggy Lee",
-  "year": "1962",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_blues-cross-country_peggy-lee.webp",
-  "item": "https://archive.org/details/lp_blues-cross-country_peggy-lee"
- },
- {
-  "title": "The Academy Award Winning Call Me Irresponsible And Other Hit Songs From The Movies",
-  "artist": "Andy Williams",
-  "year": "1964",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_the-academy-award-winning-call-me-irres_andy-williams.webp",
-  "item": "https://archive.org/details/lp_the-academy-award-winning-call-me-irres_andy-williams"
- },
- {
-  "title": "Velvet Mood",
-  "artist": "Billie Holiday",
-  "year": "1956",
-  "cat": "Crooners & Canaries",
-  "cover": "art/jukebox/covers/lp_velvet-mood_billie-holiday.webp",
-  "item": "https://archive.org/details/lp_velvet-mood_billie-holiday"
- },
- {
   "title": "Soul As Sung By",
   "artist": "Otis Redding, Little Joe Curtis",
   "year": "1968",
@@ -536,38 +368,6 @@
   "item": "https://archive.org/details/lp_memphis-portrait_brenda-lee"
  },
  {
-  "title": "The Ventures",
-  "artist": "The Ventures",
-  "year": "1963",
-  "cat": "Rock 'n' Roll & Soul",
-  "cover": "art/jukebox/covers/lp_the-ventures_the-ventures_2.webp",
-  "item": "https://archive.org/details/lp_the-ventures_the-ventures_2"
- },
- {
-  "title": "Reflections",
-  "artist": "The Platters",
-  "year": "1964",
-  "cat": "Rock 'n' Roll & Soul",
-  "cover": "art/jukebox/covers/lp_reflections_the-platters_1.webp",
-  "item": "https://archive.org/details/lp_reflections_the-platters_1"
- },
- {
-  "title": "Murray The K's 1962 Boss Golden Gassers",
-  "artist": "Various, Ben E. King",
-  "year": "1962",
-  "cat": "Rock 'n' Roll & Soul",
-  "cover": "art/jukebox/covers/lp_murray-the-ks-1962-boss-golden-gassers_various-ben-e-king-chuck-jackson-don-j.webp",
-  "item": "https://archive.org/details/lp_murray-the-ks-1962-boss-golden-gassers_various-ben-e-king-chuck-jackson-don-j"
- },
- {
-  "title": "Original Golden Greats Vol.8",
-  "artist": "Bill Justis, Fats Domino",
-  "year": "1968",
-  "cat": "Rock 'n' Roll & Soul",
-  "cover": "art/jukebox/covers/lp_original-golden-greats-vol8_bill-justis-fats-domino-irma-thomas-jer.webp",
-  "item": "https://archive.org/details/lp_original-golden-greats-vol8_bill-justis-fats-domino-irma-thomas-jer"
- },
- {
   "title": "The Old And Great Songs",
   "artist": "Hank Snow, Hank Snow, The Singing Ranger",
   "year": "1964",
@@ -598,38 +398,6 @@
   "cat": "Blues & Country",
   "cover": "art/jukebox/covers/lp_canadian-country-jamboree-vol-ii_various-alberta-slim-bob-king-davey-gib.webp",
   "item": "https://archive.org/details/lp_canadian-country-jamboree-vol-ii_various-alberta-slim-bob-king-davey-gib"
- },
- {
-  "title": "The Bessie Smith Story - Vol.1",
-  "artist": "Bessie Smith, Louis Armstrong",
-  "year": "1951",
-  "cat": "Blues & Country",
-  "cover": "art/jukebox/covers/lp_the-bessie-smith-story-vol1_bessie-smith-louis-armstrong.webp",
-  "item": "https://archive.org/details/lp_the-bessie-smith-story-vol1_bessie-smith-louis-armstrong"
- },
- {
-  "title": "Solo Flights",
-  "artist": "Chet Atkins",
-  "year": "1968",
-  "cat": "Blues & Country",
-  "cover": "art/jukebox/covers/lp_solo-flights_chet-atkins.webp",
-  "item": "https://archive.org/details/lp_solo-flights_chet-atkins"
- },
- {
-  "title": "Sonny Terry And Brownie McGhee",
-  "artist": "Sonny Terry & Brownie McGhee",
-  "year": "1958",
-  "cat": "Blues & Country",
-  "cover": "art/jukebox/covers/lp_sonny-terry-and-brownie-mcghee_sonny-terry-brownie-mcghee.webp",
-  "item": "https://archive.org/details/lp_sonny-terry-and-brownie-mcghee_sonny-terry-brownie-mcghee"
- },
- {
-  "title": "Hawaii's Calling Me",
-  "artist": "Marty Robbins",
-  "year": "1963",
-  "cat": "Blues & Country",
-  "cover": "art/jukebox/covers/lp_hawaiis-calling-me_marty-robbins_1.webp",
-  "item": "https://archive.org/details/lp_hawaiis-calling-me_marty-robbins_1"
  },
  {
   "title": "Music From \"The Adventurers\"",
@@ -694,22 +462,6 @@
   "cat": "Latin & Bossa Nova",
   "cover": "art/jukebox/covers/lp_most-popular-movie-hits-as-styled-by-cu_xavier-cugat-and-his-orchestra.webp",
   "item": "https://archive.org/details/lp_most-popular-movie-hits-as-styled-by-cu_xavier-cugat-and-his-orchestra"
- },
- {
-  "title": "The Shadow Of Your Smile",
-  "artist": "Astrud Gilberto",
-  "year": "1965",
-  "cat": "Latin & Bossa Nova",
-  "cover": "art/jukebox/covers/lp_the-shadow-of-your-smile_astrud-gilberto.webp",
-  "item": "https://archive.org/details/lp_the-shadow-of-your-smile_astrud-gilberto"
- },
- {
-  "title": "Tonight I'll Say A Prayer",
-  "artist": "Eydie Gormé",
-  "year": "1970",
-  "cat": "Latin & Bossa Nova",
-  "cover": "art/jukebox/covers/lp_tonight-ill-say-a-prayer_eydie-gorme_0.webp",
-  "item": "https://archive.org/details/lp_tonight-ill-say-a-prayer_eydie-gorme_0"
  },
  {
   "title": "Contemporary Sound Of Nelson Riddle",
@@ -894,37 +646,5 @@
   "cat": "Movie Music & Lounge",
   "cover": "art/jukebox/covers/lp_the-carpetbaggers-music-from-the-origin_elmer-bernstein_0.webp",
   "item": "https://archive.org/details/lp_the-carpetbaggers-music-from-the-origin_elmer-bernstein_0"
- },
- {
-  "title": "HiFi Variety",
-  "artist": "Various, Arthur Lyman",
-  "year": "1958",
-  "cat": "Movie Music & Lounge",
-  "cover": "art/jukebox/covers/lp_hifi-variety_various-arthur-lyman-billy-may-bruce-pr.webp",
-  "item": "https://archive.org/details/lp_hifi-variety_various-arthur-lyman-billy-may-bruce-pr"
- },
- {
-  "title": "The Best Of Jackie Gleason",
-  "artist": "Jackie Gleason",
-  "year": "1968",
-  "cat": "Movie Music & Lounge",
-  "cover": "art/jukebox/covers/lp_the-best-of-jackie-gleason_jackie-gleason_0.webp",
-  "item": "https://archive.org/details/lp_the-best-of-jackie-gleason_jackie-gleason_0"
- },
- {
-  "title": "Wonderland By Night",
-  "artist": "Bert Kaempfert & His Orchestra",
-  "year": "1960",
-  "cat": "Movie Music & Lounge",
-  "cover": "art/jukebox/covers/lp_wonderland-by-night_bert-kaempfert-his-orchestra_3.webp",
-  "item": "https://archive.org/details/lp_wonderland-by-night_bert-kaempfert-his-orchestra_3"
- },
- {
-  "title": "Latin-Esque",
-  "artist": "Esquivel And His Orchestra",
-  "year": "1962",
-  "cat": "Movie Music & Lounge",
-  "cover": "art/jukebox/covers/lp_latin-esque_esquivel-and-his-orchestra_0.webp",
-  "item": "https://archive.org/details/lp_latin-esque_esquivel-and-his-orchestra_0"
  }
 ]
