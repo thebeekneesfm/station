@@ -440,7 +440,7 @@
   }
   /* iPhone and iPad: Safari stops the page's sound engine when you swipe away (and waking it from the
      background stops the records too), so there the rain, fire and storm play as ordinary looping
-     recordings, like the records themselves, and keep going with the screen off. Safari won't let a
+     recordings. Out of view Safari lets only one recording play, so they rest while you're away. Safari won't let a
      page set a recording's volume, so each level is mixed into its own copy of the loop (mono, 22 kHz,
      made once per level) and the player swaps to it where it was. */
   const PHONE_AMB = APPLE_TOUCH && !window.BK_LITE, phoneAmb = {};
@@ -479,7 +479,9 @@
   }
   function setPhoneAmbience() {
     if (!ctx) initAudio();   // still used to read the recordings
-    if (document.hidden && Object.keys(phoneAmb).every(n => !phoneAmb[n].url)) return;
+    // out of view, Safari only keeps one recording going: the rain and fire rest so the show carries on,
+    // and come back when the page is in view again
+    if (document.hidden) { AMB.forEach(n => { if (phoneAmb[n] && !phoneAmb[n].el.paused) phoneAmb[n].el.pause(); }); return; }
     AMB.forEach(name => {
       const level = phoneAmbLevel(name);
       let P = phoneAmb[name];
@@ -822,6 +824,10 @@
     // iPhone and iPad: put the sound engine (dial noise, ambience) to sleep before Safari does, so Safari
     // has nothing to interrupt and the records (which play outside the engine) carry on in the background
     if (APPLE_TOUCH && ctx && document.hidden && ctx.state === "running") ctx.suspend().catch(() => {});
+    if (PHONE_AMB) {
+      setPhoneAmbience();
+      if (document.hidden && state.on && state.station && audio.paused && (state.phase === "playing" || state.phase === "next")) audio.play().catch(() => {});
+    }
     if (ear) {
       if (document.hidden && state.on && state.station) { earSync(true); ear.muted = false; earOn = true; if (fx.ready) fx.master.gain.value = 0; else audio.muted = true; return; }   // only one of the two is ever heard
       if (!document.hidden && earOn) { earOn = false; ear.muted = true; audio.muted = false; applyVolume(); }
