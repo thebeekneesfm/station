@@ -1312,12 +1312,44 @@ window.RECORDS_PLAY = function (r) {
   window.BK_ALBUM = album;
   function small(on) {
     box.classList.toggle("mini", on);
+    // "keep playing while I look around": get the shelf out of the way so the site's menu can be used
+    if (on) { try { if (window.BK_CLOSE_RACK) window.BK_CLOSE_RACK("records"); } catch (e) {} }
     box.setAttribute("aria-modal", on ? "false" : "true");
     mn.textContent = on ? "Bigger" : "Keep playing while I look around";
     mn.setAttribute("aria-label", on ? "Make the player bigger" : "Shrink the player to the corner and keep listening");
     x.textContent = on ? "\u00d7" : "Close"; x.setAttribute("aria-label", "Close the player");
   }
   small(false);
+  // on a page of its own (the shelf opened straight, not over the radio), the site's menu would leave the page
+  // and stop the record: while an album is playing, the station's pages open over this one instead
+  if (!window.BK_NAV_OPEN || window.BK_NAV_OPEN._shelf) {
+    window.BK_NAV_OPEN = function (href) {
+      if (!window.BK_ALBUM || !window.BK_ALBUM.on || window.top !== window) return false;
+      var m = /^([a-z0-9-]+)\.html$/.exec(String(href).split(/[?#]/)[0].split("/").pop() || "");
+      if (!m || m[1] === "index" || m[1] === "records") return false;
+      var ov = doc.getElementById("pg-ov");
+      if (!ov) {
+        var st = doc.createElement("style");
+        st.textContent = "#pg-ov{position:fixed;inset:0;z-index:1800;background:rgba(20,15,10,.72);padding:max(12px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) 12px max(12px,env(safe-area-inset-left,0px));box-sizing:border-box}" +
+          "#pg-ov iframe{display:block;width:100%;height:100%;border:0;background:#e9e1c9;box-shadow:0 18px 40px rgba(0,0,0,.45)}" +
+          "#pg-ov .pg-x{position:absolute;top:max(22px,calc(env(safe-area-inset-top,0px) + 10px));right:max(22px,calc(env(safe-area-inset-right,0px) + 10px));z-index:1;font:700 16px/1 'BK Serif',Georgia,serif;background:#1f1b17;color:#f3ead6;border:0;padding:9px 12px;cursor:pointer}" +
+          "#pg-ov .pg-x:focus-visible{outline:3px solid #e3a92f;outline-offset:2px}";
+        doc.head.appendChild(st);
+        ov = doc.createElement("div"); ov.id = "pg-ov"; ov.setAttribute("role", "dialog"); ov.setAttribute("aria-modal", "true");
+        ov.innerHTML = '<button type="button" class="pg-x">Close</button><iframe allow="fullscreen; web-share; clipboard-write"></iframe>';
+        doc.body.appendChild(ov);
+        var shut = function () { ov.hidden = true; ov.querySelector("iframe").src = "about:blank"; };
+        ov.querySelector(".pg-x").addEventListener("click", shut);
+        ov.addEventListener("click", function (e) { if (e.target === ov) shut(); });
+        doc.addEventListener("keydown", function (e) { if (e.key === "Escape" && !ov.hidden) shut(); });
+      }
+      var fr2 = ov.querySelector("iframe"); fr2.title = m[1]; fr2.src = m[1] + ".html?embed=1";
+      ov.hidden = false; ov.querySelector(".pg-x").focus();
+      var pb = doc.getElementById("rp-box"); if (pb && !pb.classList.contains("mini")) { var b2 = pb.querySelector(".rp-min"); if (b2) b2.click(); }
+      return true;
+    };
+    window.BK_NAV_OPEN._shelf = true;
+  }
   function esc(e) { if (e.key === "Escape" && !box.classList.contains("mini")) { e.stopPropagation(); close(); } }
   x.addEventListener("click", function () { close(); });
   mn.addEventListener("click", function () { small(!box.classList.contains("mini")); });

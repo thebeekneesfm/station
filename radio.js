@@ -1766,6 +1766,8 @@
     else if (!push && !history.state) box.dataset.pushed = "";
     box.querySelector(".rk-close").focus();
   }
+  // the Record Shelf's player, shrunk to the corner to keep listening, closes the shelf so the menu is right there
+  window.BK_CLOSE_RACK = kind => { const b = document.getElementById("rack-ov"); if (b && !b.hidden && (!kind || b.dataset.kind === kind)) closeRack(); };
   function closeRack(fromHistory) {
     const box = document.getElementById("rack-ov"); if (!box || box.hidden) return;
     box.hidden = true; overlayOpen(false);
