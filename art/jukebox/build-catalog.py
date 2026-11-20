@@ -1,6 +1,7 @@
 """THE JUKEBOX CATALOG
 Builds art/jukebox/catalog.js, the list of every song the jukebox can play, from the albums on the Record Shelf
-(art/records/records.js). Run it again whenever albums are added to the shelf:
+(art/records/records.js) plus the albums kept just for the jukebox (art/jukebox/jukebox-only.json).
+Run it again whenever albums are added to either:
 
     python3 art/jukebox/build-catalog.py
 
@@ -46,6 +47,7 @@ SKIP = {
     "Rock-A-Bye Your Baby With A Dixie Melody",   # lyrics call back to minstrel songs ("Old Black Joe", "Swanee")
     "I'd Rather See A Minstrel Show / Mandy",     # a minstrel-show number
     "The Gypsy In My Soul",                       # "gypsy" is a slur for Roma people
+    "Gypsy Blues",                                # same
 }
 
 
@@ -112,6 +114,9 @@ def main():
     recs = json.loads(subprocess.check_output(
         ["node", "-e", "global.window={};require(process.argv[1]);process.stdout.write(JSON.stringify(window.RECORDS))",
          os.path.join(ROOT, "art/records/records.js")]))
+    # albums just for the jukebox (not on the Record Shelf): art/jukebox/jukebox-only.json, same fields as the shelf
+    extra = os.path.join(HERE, "jukebox-only.json")
+    if os.path.exists(extra): recs += json.load(open(extra))
     old = {}
     if os.path.exists(OUT):   # keep the numbers albums already have
         txt = open(OUT).read()

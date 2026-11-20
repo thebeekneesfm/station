@@ -41,14 +41,15 @@
   }
   function send(ch, event, payload) { if (ch) ch.send({ type: "broadcast", event: event, payload: payload }); }
 
-  /* the date in Los Angeles as "YYYY-MM-DD", so albums appear on the jukebox the same Monday they reach the shelf */
+  /* the date in Los Angeles as "YYYY-MM-DD" */
   function today() {
     var p = {};
     new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", year: "numeric", month: "2-digit", day: "2-digit" })
       .formatToParts(new Date()).forEach(function (x) { p[x.type] = x.value; });
     return p.year + "-" + p.month + "-" + p.day;
   }
-  function albums() { var t = today(); return (window.JUKEBOX || []).filter(function (a) { return !a.added || a.added <= t; }); }
+  // the jukebox has every album from the start; only the Record Shelf saves its new ones for their Monday
+  function albums() { return window.JUKEBOX || []; }
   function find(n, i) {
     var a = albums().filter(function (x) { return x.n === +n; })[0];
     return a && a.songs[i] ? { album: a, song: a.songs[i] } : null;

@@ -104,6 +104,8 @@
   @media (max-width: 900px) { .crates { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 560px) { .crates { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; } .crate .nm { font-size: 17px; } .crate .ct { font-size: 14px; } }
   @media (prefers-reduced-motion: reduce) { .crate .fan img { transition: none; } }
+  .shelf-go { margin: 10px 0 0; padding-top: 10px; border-top: 1px solid var(--line); font-size: 18px; }
+  .shelf-go a { font-weight: 700; color: var(--red); }
   [hidden] { display: none !important; }
 </style>
 </head>
@@ -135,9 +137,9 @@
 <dialog id="dlg" aria-labelledby="dlg-title"><div class="dlg" id="dlg-body"></div></dialog>
 <div class="toast" id="toast" role="status" hidden></div>
 
-<script src="config.js?v=20261117s"></script>
-<script src="art/jukebox/catalog.js?v=5"></script>
-<script src="art/jukebox/jukebox-net.js?v=4"></script>
+<script src="config.js?v=20261120a"></script>
+<script src="art/jukebox/catalog.js?v=6"></script>
+<script src="art/jukebox/jukebox-net.js?v=5"></script>
 <script>
 (function () {
   "use strict";
@@ -226,10 +228,10 @@
       s.innerHTML = "<b>The jukebox is on!</b><span>Pick a song below and it plays live on Twitch" + (state.waiting ? ", after the DJ puts it on." : ".") + '</span><a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Listen on Twitch</a>';
     } else if (booth) {
       s.className = "sign closed";
-      s.innerHTML = "<b>Requests are closed for now</b><span>The jukebox is still playing on Twitch. The records come back out when requests open again.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Listen on Twitch</a>';
+      s.innerHTML = "<b>Requests are closed for now</b><span>The jukebox is still playing on Twitch. The records come back out when requests open again.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Listen on Twitch</a>' + '<p class="shelf-go">Or <a href="records.html">listen to records now on the Record Shelf</a>, whole albums any time.</p>';
     } else {
       s.className = "sign closed";
-      s.innerHTML = "<b>The jukebox is closed</b><span>It opens during Jukebox Night, live on Twitch. The records come out when it does.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Follow on Twitch</a>';
+      s.innerHTML = "<b>The jukebox is closed</b><span>It opens for Jukebox Night, Fridays from 2 PM to midnight Pacific, live on Twitch. The records come out when it does.</span>" + '<a class="tw" href="' + TWITCH + '" target="_blank" rel="noopener">Follow on Twitch</a>' + '<p class="shelf-go">Can\u2019t wait for Jukebox Night? <a href="records.html">Listen to records now on the Record Shelf</a>, whole albums any time.</p>';
     }
     var p = $("playing");
     if (booth && state && (state.now || state.queue.length)) {

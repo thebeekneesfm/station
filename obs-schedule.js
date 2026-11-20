@@ -56,7 +56,7 @@ window.STREAM_SCHEDULE = {
       ] },
     // Friday: Jukebox Night. The jukebox is its own OBS scene (jukebox-obs.html), switched to by the scene switcher;
     // this line puts it on the website's watch-party button, and obs.html leaves "jukebox" alone.
-    { days: ["fri"], from: "19:00", to: "23:59", play: "jukebox",        title: "Jukebox Night" },  // till midnight
+    { days: ["fri"], from: "14:00", to: "23:59", play: "jukebox",        title: "Jukebox Night" },  // 2 PM till midnight
     { days: ["sat"], from: "19:00", to: "19:30", play: "tv newsreels",   title: "Saturday at the Drive-In: the show starts at 7:30" },   // newsreels while the cars pull in
     // the Drive-In runs until its double feature is over, which can be after 11 PM or even past midnight: the stream
     // page switches OBS to the Goodbye scene itself when the "Good night" card comes up (see obs.html, goodbye=)
