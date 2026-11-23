@@ -3,10 +3,15 @@
    who are just watching or listening don't use up the free plan's live connections.
    Messages go through the "chat" edge function (filters, rate limits); they're read from the
    chat table and arrive live over Supabase Realtime. Kate hides messages on guestbook-admin.html.
-   Each page can say where the person is with window.BK_CHAT_PLACE = function () { return "on TV ch 4"; }. */
+   Each page can say where the person is with window.BK_CHAT_PLACE = function () { return "on TV ch 4"; }.
+   A page can have its own room instead of the shared one, set before this file loads:
+     window.BK_CHAT_ROOM = { id: "puzzle", title: "Puzzle chat", button: "Puzzle chat", hint: "Talk strategy", dock: true,
+                             name: function () { return "a default username"; } }
+   Rooms the chat function accepts: "site" (the default) and "puzzle". */
 (function () {
   var C = (window.RADIO_CONFIG || {}).listeners || {};
   if (!C.url || !C.key || !window.fetch) return;
+  var ROOM = window.BK_CHAT_ROOM || {}, RID = ROOM.id || "site", SK = RID === "site" ? "" : "." + RID, LABEL = ROOM.button || "Chat";
   var FN = C.url + "/functions/v1/chat", HDR = { apikey: C.key, Authorization: "Bearer " + C.key };
   var store = {
     get: function (k, d) { try { var v = localStorage.getItem(k); return v == null ? d : v; } catch (e) { return d; } },
@@ -53,16 +58,18 @@
   document.head.appendChild(css);
 
   var btn = document.createElement("button");
-  btn.type = "button"; btn.className = "bkc-btn"; btn.textContent = "Chat"; btn.setAttribute("aria-expanded", "false");
+  btn.type = "button"; btn.className = "bkc-btn"; btn.textContent = LABEL; btn.setAttribute("aria-expanded", "false");
   var box = document.createElement("section");
-  box.className = "bkc"; box.hidden = true; box.setAttribute("aria-label", "Chat");
-  box.innerHTML = '<div class="bkc-head"><span class="bkc-title">The Bee’s Knees chat</span><button type="button" class="bkc-x" aria-label="Close chat">×</button></div>' +
+  box.className = "bkc"; box.hidden = true; box.setAttribute("aria-label", ROOM.title || "Chat");
+  box.innerHTML = '<div class="bkc-head"><span class="bkc-title"></span><button type="button" class="bkc-x" aria-label="Close chat">×</button></div>' +
     '<div class="bkc-log" role="log" aria-live="polite"><p class="bkc-note">Tuning in…</p></div>' +
     '<form class="bkc-form" autocomplete="off"><div class="bkc-name-row"><input class="bkc-name" maxlength="30" placeholder="Username" aria-label="Username"><div class="bkc-cols" role="radiogroup" aria-label="Username color"></div></div>' +
     '<div class="bkc-me" hidden>Chatting as <b></b> · <button type="button">change</button></div>' +
     '<input class="bkc-hp" name="website" tabindex="-1" aria-hidden="true">' +
-    '<div class="bkc-row"><input class="bkc-body" maxlength="300" placeholder="Say something nice" aria-label="Message"><button class="bkc-send" type="submit">Send</button></div>' +
+    '<div class="bkc-row"><input class="bkc-body" maxlength="300" placeholder="" aria-label="Message"><button class="bkc-send" type="submit">Send</button></div>' +
     '<div class="bkc-err" role="alert"></div></form>';
+  box.querySelector(".bkc-title").textContent = ROOM.title || "The Bee\u2019s Knees chat";
+  box.querySelector(".bkc-body").placeholder = ROOM.hint || "Say something nice";
   var peek = document.createElement("div"); peek.className = "bkc-peek off"; peek.hidden = true; peek.setAttribute("aria-hidden", "true");
   function mount() { document.body.appendChild(btn); document.body.appendChild(box); document.body.appendChild(peek); dodge(); poll(true); }
   // the front page has a ticker along the bottom: sit just above it whenever it's on screen
@@ -105,6 +112,7 @@
   }
   function showName() {
     var n = store.get("bk.chatName", "");
+    if (!n && typeof ROOM.name === "function") { try { nameIn.value = ROOM.name() || ""; } catch (x) {} nameRow.hidden = false; me.hidden = true; return; }
     nameIn.value = n;
     nameRow.hidden = !!n; me.hidden = !n; me.querySelector("b").textContent = n;
   }
@@ -116,7 +124,7 @@
   function add(m, force) {
     if (!m || seen[m.id]) return; seen[m.id] = true;
     if (m.id > newest) newest = m.id;
-    if (!box.hidden) store.set("bk.chatSeen", String(Math.max(m.id, seenId())));
+    if (!box.hidden) store.set("bk.chatSeen" + SK, String(Math.max(m.id, seenId())));
     var note = log.querySelector(".bkc-note"); if (note) note.remove();
     var stick = force || nearBottom();
     var p = document.createElement("p"); p.className = "bkc-m"; p.style.margin = "0"; p.dataset.id = m.id;
@@ -133,7 +141,7 @@
   }
   function load(first) {
     var since = new Date(Date.now() - 2 * 864e5).toISOString();
-    return fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body,place,color&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&order=id.desc&limit=80", { headers: HDR })
+    return fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body,place,color&room=eq." + RID + "&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&order=id.desc&limit=80", { headers: HDR })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (list) {
         if (!Array.isArray(list)) return;
@@ -142,14 +150,14 @@
         var oldest = list.length ? list[list.length - 1].id : Infinity;
         log.querySelectorAll(".bkc-m").forEach(function (q) { var id = +q.dataset.id; if (id >= oldest && !keep[id]) { q.remove(); delete seen[id]; } });
         list.reverse().forEach(function (m) { add(m, first); });
-        if (first && !list.length) log.innerHTML = '<p class="bkc-note">It’s quiet in here. Say hello!</p>';
+        if (first && !list.length) log.innerHTML = '<p class="bkc-note">' + (ROOM.empty || "It’s quiet in here. Say hello!") + '</p>';
       }).catch(function () { if (first) log.innerHTML = '<p class="bkc-note">The chat can’t be reached right now. Try again in a bit.</p>'; });
   }
   function live() {
     var go = function () {
       try {
         client = client || window.supabase.createClient(C.url, C.key);
-        chan = client.channel("chat-room").on("postgres_changes", { event: "INSERT", schema: "public", table: "chat" }, function (p) { if (p.new && !p.new.hidden) add(p.new); }).subscribe();
+        chan = client.channel("chat-" + RID).on("postgres_changes", { event: "INSERT", schema: "public", table: "chat", filter: "room=eq." + RID }, function (p) { if (p.new && !p.new.hidden) add(p.new); }).subscribe();
       } catch (e) {}
     };
     if (window.supabase && window.supabase.createClient) return go();
@@ -158,7 +166,7 @@
     sc.addEventListener("load", go);
   }
   // dock beside the page (TV and Drive-In only; the front page keeps its own fixed layout) when the window is wide enough
-  var canDock = !!document.querySelector(".stage .scr");
+  var canDock = !!ROOM.dock || !!document.querySelector(".stage .scr");
   function dock() {
     document.documentElement.classList.toggle("bkc-docked", canDock && !box.hidden && innerWidth >= 1180);
     // on a wide TV/Drive-In page the button becomes a tab on the right edge, so it never covers the channel buttons under the screen
@@ -182,9 +190,9 @@
   /* While the chat is closed: check once a minute for new messages with one small request (no live connection),
      put a count on the button, and let the newest one peek out for a few seconds. */
   var newest = 0, unseen = 0, peekT = 0;
-  function seenId() { return +store.get("bk.chatSeen", "0") || 0; }
-  function markSeen() { if (newest) store.set("bk.chatSeen", String(newest)); unseen = 0; setBadge(); }
-  function setBadge() { btn.textContent = unseen > 0 ? "Chat \u00b7 " + (unseen > 9 ? "9+" : unseen) + " new" : "Chat"; }
+  function seenId() { return +store.get("bk.chatSeen" + SK, "0") || 0; }
+  function markSeen() { if (newest) store.set("bk.chatSeen" + SK, String(newest)); unseen = 0; setBadge(); }
+  function setBadge() { btn.textContent = unseen > 0 ? LABEL + " \u00b7 " + (unseen > 9 ? "9+" : unseen) + " new" : LABEL; }
   function hidePeek() { clearTimeout(peekT); peek.classList.add("off"); peekT = setTimeout(function () { peek.hidden = true; }, 500); }
   function showPeek(m) {
     peek.innerHTML = ""; var b = document.createElement("b"); b.textContent = m.name + ": "; if (COLS[m.color]) b.style.color = COLS[m.color]; peek.appendChild(b);
@@ -196,7 +204,7 @@
   function poll(first) {
     if (document.hidden) return;
     var since = new Date(Date.now() - 864e5).toISOString(), after = Math.max(seenId(), first ? 0 : newest);
-    fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body,color&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&id=gt." + after + "&order=id.desc&limit=20", { headers: HDR })
+    fetch(C.url + "/rest/v1/chat?select=id,created_at,name,body,color&room=eq." + RID + "&hidden=eq.false&created_at=gte." + encodeURIComponent(since) + "&id=gt." + after + "&order=id.desc&limit=20", { headers: HDR })
       .then(function (r) { return r.ok ? r.json() : []; })
       .then(function (list) {
         if (!Array.isArray(list) || !list.length) return;
@@ -235,7 +243,7 @@
     if (!body) { bodyIn.focus(); return; }
     var place = ""; try { place = typeof window.BK_CHAT_PLACE === "function" ? window.BK_CHAT_PLACE() : (window.BK_CHAT_PLACE || ""); } catch (x) {}
     sending = true; err.textContent = "";
-    fetch(FN, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: name, color: myCol, body: body, place: place, website: $(".bkc-hp").value }) })
+    fetch(FN, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: name, color: myCol, body: body, place: place, room: RID, website: $(".bkc-hp").value }) })
       .then(function (r) { return r.json().catch(function () { return {}; }); })
       .then(function (res) {
         if (res && res.ok) { store.set("bk.chatName", name); showName(); bodyIn.value = ""; if (res.message) add(res.message, true); }

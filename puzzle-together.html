@@ -514,5 +514,14 @@
 <script>if (/[?&]stream=1\b/.test(location.search)) window.BK_NO_MINI = true;</script>
 <script src="art/radio-mini/radio-mini.js?v=1"></script>
 <script src="art/nav/nav.js?v=14"></script>
+<script>
+/* Puzzle chat: its own room (not the old site chat), for talking strategy. Off on the OBS view (?stream=1) and when embedded. */
+if (!/[?&]stream=1\b/.test(location.search) && !document.documentElement.classList.contains("embed")) {
+  window.BK_CHAT_ROOM = { id: "puzzle", title: "Puzzle chat", button: "Puzzle chat", hint: "Talk strategy, or just say hi", dock: true,
+    empty: "Nobody\u2019s talking yet. Ask who\u2019s doing the sky, or call dibs on the edges!",
+    name: function () { var w = document.getElementById("who"); return w ? w.value.trim() : ""; } };
+  document.write('<script src="chat.js?v=2"><\/script>');
+}
+</script>
 </body>
 </html>
