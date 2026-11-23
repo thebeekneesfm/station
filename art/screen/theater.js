@@ -787,7 +787,8 @@
   function radioUnder(n) {
     // on the stream with ownmusic=1, the streamer plays their own music instead, so the radio stays off
     var id = MODE === "tv" && !/[?&]ownmusic=1\b/.test(location.search) && typeof cur !== "undefined" && cur && cur.radio;
-    var want = !!(id && n.item.kind === "show");
+    // the music keeps going straight through the station IDs and from one film to the next, so it never stops
+    var want = !!(id && (n.item.kind === "show" || n.item.slate));
     var st = want ? bedStation(id) : null;
     var was = state.bedOn; state.bedOn = want;
     if (was !== want) applySound();
