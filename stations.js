@@ -3581,6 +3581,545 @@ window.STATIONS = [
   ]
  },
  {
+  "id": "madison",
+  "name": "Madison on the Air",
+  "group": "Radio shows",
+  "blurb": "A modern-day makeup influencer is zapped into the Golden Age of Radio: a comedy podcast that rides along with the mysteries, westerns and sci-fi. Contains adult language.",
+  "card": "art/cards/madison.webp",
+  "epoch": "2026-11-24T00:00:00-07:00",
+  "sound": {
+   "level": false,
+   "declick": 0,
+   "decrackle": 0,
+   "dehiss": 0,
+   "tone": 20000
+  },
+  "tracks": [
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/01.%20Dragnet%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1852.42,
+    "series": "Madison on the Air",
+    "title": "Dragnet",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/02.%20Gunsmoke_Madison%20on%20the%20Air.mp3",
+    "length": 1962.06,
+    "series": "Madison on the Air",
+    "title": "Gunsmoke",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: a racial slur (called out in the episode) and crude sexual language."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/03.%20The%20Adventures%20of%20Superman%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2228.74,
+    "series": "Madison on the Air",
+    "title": "The Adventures of Superman",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/04.%20Night%20Beat%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2072.06,
+    "series": "Madison on the Air",
+    "title": "Night Beat",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/05.%20Let%20George%20Do%20It%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1698.01,
+    "series": "Madison on the Air",
+    "title": "Let George Do It",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: jokes about sexual assault, crude language and a word with anti-Roma origins."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/06.%20The%20Adventures%20of%20Sam%20Spade%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1784.79,
+    "series": "Madison on the Air",
+    "title": "The Adventures of Sam Spade",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/07.%20The%20New%20Adventures%20of%20Sherlock%20Holmes%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2161.14,
+    "series": "Madison on the Air",
+    "title": "The New Adventures of Sherlock Holmes",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: crude sexual language and a word with anti-Roma origins."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/08.%20The%20Shadow%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1589.37,
+    "series": "Madison on the Air",
+    "title": "The Shadow",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/09.%20The%20Adventures%20of%20the%20Thin%20Man%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1662.07,
+    "series": "Madison on the Air",
+    "title": "The Adventures of the Thin Man",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/10.%20Rocky%20Jordan%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2355.28,
+    "series": "Madison on the Air",
+    "title": "Rocky Jordan",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/11.%20Casey%2C%20Crime%20Photographer%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2076.58,
+    "series": "Madison on the Air",
+    "title": "Casey, Crime Photographer",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: a mock Mexican accent (called out in the episode)."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/12.%20Dracula%20-%20Stage%2049%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2442.06,
+    "series": "Madison on the Air",
+    "title": "Dracula - Studio 49",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/13.%20Dimension%20X%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2139.3,
+    "series": "Madison on the Air",
+    "title": "Dimension X",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: an ableist slur for little people, used as a running joke."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/14.%20Candy%20Matson%20YUkon%202-8209%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2501.75,
+    "series": "Madison on the Air",
+    "title": "Candy Matson YUkon 2-8209",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/15.%20The%20Saint%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2477.77,
+    "series": "Madison on the Air",
+    "title": "The Saint",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/16.%20Yours%20Truly%20Johnny%20Dollar%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 4623.02,
+    "series": "Madison on the Air",
+    "title": "Yours Truly Johnny Dollar",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/17.%20Green%20Hornet%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2217.72,
+    "series": "Madison on the Air",
+    "title": "Green Hornet",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: stereotyped accents played for laughs."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/18.%20The%20Story%20of%20Doctor%20Kildare%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2144.86,
+    "series": "Madison on the Air",
+    "title": "The Story of Doctor Kildare",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/19.%20The%20New%20Adventures%20of%20Sherlock%20Holmes%202%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2547.25,
+    "series": "Madison on the Air",
+    "title": "The New Adventures of Sherlock Holmes 2",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/20.%20The%20Challenge%20of%20the%20Yukon%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2516.14,
+    "series": "Madison on the Air",
+    "title": "The Challenge of the Yukon",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/21.%20Box%2013%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1804.43,
+    "series": "Madison on the Air",
+    "title": "Box 13",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/22.%20Tales%20of%20the%20Texas%20Rangers%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2137.29,
+    "series": "Madison on the Air",
+    "title": "Tales of the Texas Rangers",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/23.%20The%20Adventures%20of%20Philip%20Marlowe%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2348.36,
+    "series": "Madison on the Air",
+    "title": "The Adventures of Philip Marlowe",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/24.%20War%20of%20the%20Worlds%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2495.56,
+    "series": "Madison on the Air",
+    "title": "War of the Worlds",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/25.%20Defense%20Attorney%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2118.22,
+    "series": "Madison on the Air",
+    "title": "Defense Attorney",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/26.%20Batman%20and%20Robin%2C%20Wonder%20Woman%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2974.09,
+    "series": "Madison on the Air",
+    "title": "Batman and Robin, Wonder Woman",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/27.%20Richard%20Diamond%2C%20Private%20Detective%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2252.51,
+    "series": "Madison on the Air",
+    "title": "Richard Diamond, Private Detective",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/28.%20The%20Wizard%20of%20Oz%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 3135.03,
+    "series": "Madison on the Air",
+    "title": "The Wizard of Oz",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/29.%20X%20Minus%20One%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2068.45,
+    "series": "Madison on the Air",
+    "title": "X Minus One",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/30.%20Dangerous%20Assignment%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2521.05,
+    "series": "Madison on the Air",
+    "title": "Dangerous Assignment",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: stereotyped accents."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/31.%20The%20New%20Adventures%20of%20Sherlock%20Holmes%203%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2277.25,
+    "series": "Madison on the Air",
+    "title": "The New Adventures of Sherlock Holmes 3",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/32.%20The%20Lone%20Ranger%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2454.23,
+    "series": "Madison on the Air",
+    "title": "The Lone Ranger",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: racial slurs and stereotyped accents."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/33.%20Boston%20Blackie%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1740.93,
+    "series": "Madison on the Air",
+    "title": "Boston Blackie",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/34.%20Chandu%2C%20The%20Magician%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2428.87,
+    "series": "Madison on the Air",
+    "title": "Chandu, The Magician",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/35.%20Jeff%20Regan%2C%20Investigator%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2839.3,
+    "series": "Madison on the Air",
+    "title": "Jeff Regan, Investigator",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/36.%20Frankenstein%20-%20My%20Favorite%20Story%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2090.5,
+    "series": "Madison on the Air",
+    "title": "Frankenstein - My Favorite Story",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/37.%20The%20Damon%20Runyon%20Theatre%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2471.97,
+    "series": "Madison on the Air",
+    "title": "The Damon Runyon Theatre",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/38.%20Miracle%20on%2034th%20Street%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 3408.17,
+    "series": "Madison on the Air",
+    "title": "Miracle on 34th Street",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/39.%20Rogue%27s%20Gallery%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2152.12,
+    "series": "Madison on the Air",
+    "title": "Rogue's Gallery",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/40.%20Snow%20White%20and%20the%20Seven%20Dwarfs%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2562.85,
+    "series": "Madison on the Air",
+    "title": "Snow White and the Seven Dwarfs",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/41.%20Archie%20Andrews%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1980.58,
+    "series": "Madison on the Air",
+    "title": "Archie Andrews",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/42.%20The%20Green%20Lama%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2384.95,
+    "series": "Madison on the Air",
+    "title": "The Green Lama",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/43.%20The%20New%20Adventures%20of%20Sherlock%20Holmes%204%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2519.85,
+    "series": "Madison on the Air",
+    "title": "The New Adventures of Sherlock Holmes 4",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/44.%20The%20Casebook%20of%20Gregory%20Hood%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2680.69,
+    "series": "Madison on the Air",
+    "title": "The Casebook of Gregory Hood",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/45.%20Inner%20Sanctum%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2350.58,
+    "series": "Madison on the Air",
+    "title": "Inner Sanctum",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/46.%20Forbidden%20Planet%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 3286.18,
+    "series": "Madison on the Air",
+    "title": "Forbidden Planet",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/47.%20The%20Adventures%20of%20Maisie%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1848.16,
+    "series": "Madison on the Air",
+    "title": "The Adventures of Maisie",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/48.%20The%20Tell-Tale%20Heart%20-%20Inner%20Sanctum%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2154.45,
+    "series": "Madison on the Air",
+    "title": "The Tell-Tale Heart - Inner Sanctum",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/49.%20Have%20Gun%2C%20Will%20Travel%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1673.27,
+    "series": "Madison on the Air",
+    "title": "Have Gun, Will Travel",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: stereotyped accents."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/50.%20It%27s%20a%20Wonderful%20Life%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2887.05,
+    "series": "Madison on the Air",
+    "title": "It's a Wonderful Life",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/51.%20Hot%20Copy%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1899.76,
+    "series": "Madison on the Air",
+    "title": "Hot Copy",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/52.%20Robin%20Hood%20-%20The%20Family%20Theater%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2300.37,
+    "series": "Madison on the Air",
+    "title": "Robin Hood - The Family Theater",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/53.%20The%20Falcon%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2057.56,
+    "series": "Madison on the Air",
+    "title": "The Falcon",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/54.%20Our%20Miss%20Brooks%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 1801.25,
+    "series": "Madison on the Air",
+    "title": "Our Miss Brooks",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/55.%20The%20New%20Adventures%20of%20Sherlock%20Holmes%205%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2421.76,
+    "series": "Madison on the Air",
+    "title": "The New Adventures of Sherlock Holmes 5",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/56.%20Buck%20Rogers%20in%20the%2025th%20Century%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2504.62,
+    "series": "Madison on the Air",
+    "title": "Buck Rogers in the 25th Century",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/57.%20The%20Six%20Shooter%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2275.63,
+    "series": "Madison on the Air",
+    "title": "The Six Shooter",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/58.%20The%20Adventures%20of%20Ellery%20Queen%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2710.15,
+    "series": "Madison on the Air",
+    "title": "The Adventures of Ellery Queen",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/59.%20Bold%20Venture%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2284.77,
+    "series": "Madison on the Air",
+    "title": "Bold Venture",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: stereotyped accents."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/60.%20The%20Birds%20-%20Escape%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2642.44,
+    "series": "Madison on the Air",
+    "title": "The Birds - Escape",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/61.%20The%20Blue%20(Pink)%20Beetle%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2487.43,
+    "series": "Madison on the Air",
+    "title": "The Blue (Pink) Beetle",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/62.%20The%20New%20Adventures%20of%20Nero%20Wolfe%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2662.56,
+    "series": "Madison on the Air",
+    "title": "The New Adventures of Nero Wolfe",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/63.%20The%20Mysterious%20Traveler%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2802.7,
+    "series": "Madison on the Air",
+    "title": "The Mysterious Traveler",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/64.%20Maltese%20Falcon%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 3104.97,
+    "series": "Madison on the Air",
+    "title": "Maltese Falcon",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/65.%20Pride%20%26%20Prejudice%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2753.72,
+    "series": "Madison on the Air",
+    "title": "Pride & Prejudice",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/66.%20The%20Great%20Gildersleeve%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2418.73,
+    "series": "Madison on the Air",
+    "title": "The Great Gildersleeve",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/67.%20The%20New%20Adventures%20of%20Sherlock%20Holmes%206%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2380.3,
+    "series": "Madison on the Air",
+    "title": "The New Adventures of Sherlock Holmes 6",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026",
+    "warning": "Content warning: stereotyped accents."
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/68.%20The%20Day%20the%20Earth%20Stood%20Still%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2715.87,
+    "series": "Madison on the Air",
+    "title": "The Day the Earth Stood Still",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/69.%20Broadway%20is%20My%20Beat%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2808.48,
+    "series": "Madison on the Air",
+    "title": "Broadway is My Beat",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/70.%20Dick%20Tracy%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2458.75,
+    "series": "Madison on the Air",
+    "title": "Dick Tracy",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/71.%20Frontier%20Gentleman%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2216.86,
+    "series": "Madison on the Air",
+    "title": "Frontier Gentleman",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/72.%20The%20Phantom%20of%20the%20Opera%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 3141.72,
+    "series": "Madison on the Air",
+    "title": "The Phantom of the Opera",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   },
+   {
+    "src": "https://archive.org/download/1.-dragnet-mota-2026/73.%20Nick%20Carter%2C%20Master%20Detective%20-%20Madison%20on%20the%20Air.mp3",
+    "length": 2343.18,
+    "series": "Madison on the Air",
+    "title": "Nick Carter, Master Detective",
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
+   }
+  ]
+ },
+ {
   "id": "gramophone",
   "name": "Gramophone Radio",
   "group": "Music",
