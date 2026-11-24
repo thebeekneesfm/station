@@ -198,11 +198,17 @@
   var store = { get: function (k, d) { try { var v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
                 set: function (k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
   var cfg = (window.RADIO_CONFIG || {}).listeners || {};
-  var sb = window.supabase.createClient(cfg.url, cfg.key, { realtime: { params: { eventsPerSecond: 10 } } });
-  var me = Math.random().toString(36).slice(2, 10);
   var table = $("table"), board = $("board"), ghost = $("ghost"), scroller = $("scroller");
   if (BARE) document.body.classList.add("bare");
   if (STREAM) { document.body.classList.add("stream"); $("sscroller").appendChild(table); scroller = $("sscroller"); }
+  // the puzzle lives in Supabase: if its library (cdn.jsdelivr.net) didn't load, say so and stop here (nav, radio and chat still work)
+  if (!window.supabase || !window.supabase.createClient) {
+    console.warn("Community Puzzle: the Supabase library didn't load, so the puzzle is off for now.");
+    $("status").textContent = "The puzzle box can't be reached right now. Try reloading in a minute.";
+    return;
+  }
+  var sb = window.supabase.createClient(cfg.url, cfg.key, { realtime: { params: { eventsPerSecond: 10 } } });
+  var me = Math.random().toString(36).slice(2, 10);
 
   var game, img = new Image(), pieces = [], byK = {}, tabs, ch, holding = {}, zoom = store.get("pz.zoom", window.innerWidth < 700 ? 2.5 : 1);
   var X0 = -0.62, X1 = 1.62, MY = 0.36, S = 400, cw, chh, pad, H;   // S: pixels per board-width unit
