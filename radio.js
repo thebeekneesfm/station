@@ -1351,6 +1351,7 @@
       case "station.blurb": return st ? st.blurb || "" : "";
       case "visits": return visits.n ? WORDS.visits.replace("{n}", String(visits.n).padStart(6, "0").replace(/\B(?=(\d{3})+(?!\d))/g, ",")) : "";
       case "card.credit": return st && st.cardBy ? "Card art by " + st.cardBy : "";
+      case "station.support": return st && st.support && st.support.href ? st.support.text || "Support the show" : "";   // the show's own support page, under its card
       case "clean": return state.clean === false ? WORDS.cleanOff : WORDS.cleanOn;
       case "tip": return CONFIG.tip ? WORDS.tip : "";
       case "ambience": return WORDS["amb_" + state.ambience] || "";
@@ -1687,10 +1688,10 @@
     const tile = (k, img, title, line) => `<button type="button" class="wl-tile" data-go="${k}"><img src="${img}" alt="" loading="lazy"><span><b>${title}</b><i>${line}</i></span></button>`;
     box.innerHTML = '<div class="wl-card"><button type="button" class="ab-close wl-x">Close</button>' +
       '<h1 id="wl-h">Welcome to The Bee\u2019s Knees</h1>' +
-      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and Jazz Age 78s play around the clock on eight stations, with a record shelf of 1940s–60s albums, TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
+      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and Jazz Age 78s play around the clock on nine stations, with a record shelf of 1940s–60s albums, TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
       '<button type="button" class="wl-start"><span class="ic" aria-hidden="true"></span>Start the radio</button>' +
       '<div class="wl-tiles">' +
-        tile("listen", "art/cards/chills.webp", "Listen", "8 stations and a record shelf") +
+        tile("listen", "art/cards/chills.webp", "Listen", "9 stations and a record shelf") +
         tile("watch", "art/screen/tv-set.webp", "Watch", "Vintage TV and drive-in movies") +
         tile("read", "art/rack/covers/Life_1947_11NOV_10.webp", "Read", "Comics, magazines and old ads") +
         tile("play", "art/postcards/pc-c1910-tea-with-grannie.t.jpg", "Play", "A daily puzzle and postcards to send") +
@@ -2327,6 +2328,7 @@
           const href = L.href === "now.item" ? (st ? at(st).track.item || "" : "")
                      : L.href === "tv.item" ? ((whatsOn() || {}).href || "")
                      : L.href === "card.link" ? (st && st.cardLink || "")
+                     : L.href === "station.support" ? (st && st.support && st.support.href || "")
                      : L.href === "config.tip" ? (CONFIG.tip || "") : L.href;
           if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
         }

@@ -6,9 +6,10 @@ README stays the source of truth.
 ## Never on the site
 - **Racist caricature, slurs and dialect.** Whole shows were left out for this (Jack Benny's
   Rochester, Howdy Doody's Chief Thunderthud, Kit Carson's El Toro). Comics are checked page by page
-  before they go on a shelf. **Exception (the Director, November 24, 2026):** an episode with slurs
-  or dialect may air if it carries a `"warning"` (content warning) the listener sees while it plays.
-  First used for Madison on the Air; the Director decides each case at GATE 1.
+  before they go on a shelf. **Exception (the Director, November 24, 2026):** the Director may let
+  an episode with slurs or dialect air, deciding each case at GATE 1. For Madison on the Air (all 73
+  episodes approved) the only notice is the station description, "Contains strong language"; there
+  are no per-episode warnings. A track can still carry a `"warning"` the listener sees while it plays.
 - **TV commercials for diet pills**, and commercials with caricature brand mascots (Aunt Jemima and
   the like). Commercials are checked frame by frame. (Print ads like these are listed as notes by
   the site check, for the Director to decide.)
