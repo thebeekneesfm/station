@@ -1,0 +1,5 @@
+# Archive answers cache and generated reports (the GitHub Action keeps its own copies)
+.cache/
+reports/
+__pycache__/
+.pytest_cache/
