@@ -1,0 +1,83 @@
+# Every morning: checks the site's code and data for problems, and checks a seventh of the Archive
+# files it plays (so the whole catalogue gets checked once a week). On Mondays it also opens every
+# page in a real browser. If anything needs attention it opens (or adds to) one GitHub issue
+# labelled "site-health" with the report; when everything is fine again it closes that issue.
+# Free on GitHub for public repositories. Can also be run by hand from the Actions tab.
+name: Site health check
+on:
+  schedule:
+    - cron: "29 14 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remember Archive answers for a week
+        uses: actions/cache@v4
+        with:
+          path: studio/.cache
+          key: archive-meta-${{ github.run_id }}
+          restore-keys: archive-meta-
+
+      - name: Site check (code, files, lengths, rights, content rules)
+        id: site
+        run: python3 studio/tools/site_check.py --fail-on warn || echo "failed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Archive check (today's seventh of the catalogue)
+        id: archive
+        run: python3 studio/tools/check_archive.py --rotate --fail-on warn || echo "failed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Is it Monday (or a manual run)?
+        id: day
+        run: |
+          if [ "$(date -u +%u)" = "1" ] || [ "${{ github.event_name }}" = "workflow_dispatch" ]; then echo "browser=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Browser check (every page, in Chromium)
+        id: browser
+        if: steps.day.outputs.browser == 'true'
+        run: |
+          npm install --no-save --no-package-lock playwright@1.49.1
+          npx playwright install --with-deps chromium
+          node studio/tools/browser_check.mjs || echo "failed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Keep the reports and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-health-reports
+          path: studio/reports/
+          retention-days: 14
+
+      - name: Open, update or close the site-health issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FAILED: ${{ steps.site.outputs.failed }}${{ steps.archive.outputs.failed }}${{ steps.browser.outputs.failed }}
+        run: |
+          {
+            echo "Automatic check from $(date -u +%Y-%m-%d). Full reports and screenshots: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            echo
+            cat studio/reports/site-check.md
+            echo
+            cat studio/reports/archive-check.md
+            if [ -f studio/reports/browser-check.md ]; then echo; cat studio/reports/browser-check.md; fi
+            echo
+            echo "_To fix: open Claude Code in this repo and ask the House Manager to work through this issue._"
+          } > report.md
+          head -c 60000 report.md > body.md
+          gh label create site-health --color D93F0B --description "Automatic site health check" 2>/dev/null || true
+          NUM=$(gh issue list --label site-health --state open --json number --jq '.[0].number // empty')
+          if [ -n "$FAILED" ]; then
+            if [ -n "$NUM" ]; then gh issue comment "$NUM" --body-file body.md
+            else gh issue create --title "Site health: things need attention" --label site-health --body-file body.md; fi
+          elif [ -n "$NUM" ]; then
+            gh issue comment "$NUM" --body "All clear on $(date -u +%Y-%m-%d). Closing this issue."
+            gh issue close "$NUM"
+          else
+            echo "All clear."
+          fi

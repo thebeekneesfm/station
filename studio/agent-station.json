@@ -1,0 +1,14 @@
+{
+  "_comment": "Room plan for the Agent Station (the cozy house view). Start it with: python agent-station/server/station_server.py --config studio/agent-station.json",
+  "house_name": "The Bee's Knees Studio",
+  "port": 8765,
+  "agents": {
+    "main":             {"name": "House Manager",    "room": "living",   "character": 0},
+    "signal-checker":   {"name": "Signal Checker",   "room": "study",    "character": 2},
+    "site-doctor":      {"name": "Site Doctor",      "room": "workshop", "character": 3},
+    "content-screener": {"name": "Content Screener", "room": "sunroom",  "character": 5},
+    "archive-scout":    {"name": "Archive Scout",    "room": "nook",     "character": 1},
+    "release-manager":  {"name": "Release Manager",  "room": "kitchen",  "character": 4}
+  },
+  "outbox_folders": ["studio/reports", "studio/candidates"]
+}
