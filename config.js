@@ -20,7 +20,7 @@ window.RADIO_CONFIG = {
     "New: the Record Shelf. Five albums from the '40s, '50s and '60s every week, right under the radio. Tap a cover to play it right here",
     "Follow The Bee's Knees on Instagram, TikTok, YouTube, Bluesky and Twitch",
     "Enjoying the vibes? Consider becoming a member or making a donation at ko-fi.com/thebeeskneesfm",
-    "New on the dial: Madison on the Air, channel 8. An influencer lands in radio's Golden Age and riffs on it. Adult language; some episodes carry a content warning",
+    "New on the dial: Madison on the Air, channel 8. An influencer lands in radio's Golden Age and riffs on it. Contains strong language",
   ],
   /* The stream's ticker (obs.html): lines that make sense to someone watching on Twitch, who can't click anything.
      Same rules: one line in quotes per line, followed by a comma. */

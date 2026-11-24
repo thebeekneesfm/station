@@ -1048,7 +1048,9 @@
       if (type === "text") {
         const t = el.appendChild(document.createElement(L.href ? "a" : "div"));
         t.className = "txt";
-        if (L.bind === "now.warning") t.setAttribute("aria-live", "polite");   // screen readers hear a content warning when the show starts
+        if (L.bind === "now.warning" || L.bind === "station.notice") t.setAttribute("aria-live", "polite");   // screen readers hear a content warning when the show (or station) starts
+        if (L.bind === "station.notice") t.setAttribute("role", "note");
+        if (L.bind === "station.socials") { t.addEventListener("click", e => { if (state.editing) e.preventDefault(); }); }   // its links are filled in by render()
         if (L.href) {
           el.classList.add("hot");
           // the station's own pages (tv.html, drive-in.html ...) open in place; anything off-site opens in a new tab
@@ -1340,6 +1342,8 @@
     if (/warning/.test(w)) { const n = state.station ? at(state.station) : null; ok.warning = !!(n && n.track.warning); ok.nowarning = !ok.warning; }   // the current show carries a content warning
     return String(w).split(/\s*,\s*/).some(x => ok[x]);
   }
+  // a station's "socials" list in stations.js: [{"text": "Instagram", "href": "https://..."}]; anything without a name or a web address is skipped
+  function socialsOf(st) { return st && Array.isArray(st.socials) ? st.socials.filter(x => x && x.text && /^https?:\/\//.test(x.href || "")) : []; }
   function textFor(L) {
     const st = state.station, on = state.on;
     const now = st ? at(st) : null;
@@ -1351,6 +1355,9 @@
       case "station.blurb": return st ? st.blurb || "" : "";
       case "visits": return visits.n ? WORDS.visits.replace("{n}", String(visits.n).padStart(6, "0").replace(/\B(?=(\d{3})+(?!\d))/g, ",")) : "";
       case "card.credit": return st && st.cardBy ? "Card art by " + st.cardBy : "";
+      case "station.support": return st && st.support && st.support.href ? st.support.text || "Support the show" : "";   // the show's own support page, under its card
+      case "station.notice": return st && st.notice || "";   // a content notice, shown the whole time the station is tuned
+      case "station.socials": { const s = socialsOf(st); return s.length ? "Follow: " + s.map(x => x.text).join(" · ") : ""; }
       case "clean": return state.clean === false ? WORDS.cleanOff : WORDS.cleanOn;
       case "tip": return CONFIG.tip ? WORDS.tip : "";
       case "ambience": return WORDS["amb_" + state.ambience] || "";
@@ -1687,10 +1694,10 @@
     const tile = (k, img, title, line) => `<button type="button" class="wl-tile" data-go="${k}"><img src="${img}" alt="" loading="lazy"><span><b>${title}</b><i>${line}</i></span></button>`;
     box.innerHTML = '<div class="wl-card"><button type="button" class="ab-close wl-x">Close</button>' +
       '<h1 id="wl-h">Welcome to The Bee\u2019s Knees</h1>' +
-      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and Jazz Age 78s play around the clock on eight stations, with a record shelf of 1940s–60s albums, TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
+      '<p class="wl-lede">A hangout from the golden age: a place to tune in, read, watch and stay a while. Old radio shows and Jazz Age 78s play around the clock on nine stations, with a record shelf of 1940s–60s albums, TV, drive-in movies, comics and magazines from the 1920s to the 1960s. Free, no account, no AI.</p>' +
       '<button type="button" class="wl-start"><span class="ic" aria-hidden="true"></span>Start the radio</button>' +
       '<div class="wl-tiles">' +
-        tile("listen", "art/cards/chills.webp", "Listen", "8 stations and a record shelf") +
+        tile("listen", "art/cards/chills.webp", "Listen", "9 stations and a record shelf") +
         tile("watch", "art/screen/tv-set.webp", "Watch", "Vintage TV and drive-in movies") +
         tile("read", "art/rack/covers/Life_1947_11NOV_10.webp", "Read", "Comics, magazines and old ads") +
         tile("play", "art/postcards/pc-c1910-tea-with-grannie.t.jpg", "Play", "A daily puzzle and postcards to send") +
@@ -2306,6 +2313,23 @@
             t.innerHTML = n > 0 ? '<span class="np-ear" title="' + (n === 1 ? "1 person" : n + " people") + ' listening now"><svg viewBox="0 0 16 20" width="0.8em" height="1em" aria-hidden="true"><path d="M3.2 8.2a5 5 0 1 1 10 0c0 2.6-1.9 3.5-3 4.9-.9 1.2-.8 2.4-1.6 3.4-.9 1.1-2.6 1.3-3.6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/><path d="M6.3 8.3a2 2 0 1 1 3.9.4c-.2.9-1 1.3-1.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg> ' + n + " listening</span>" : "";
           }
         }
+        else if (L.bind === "station.socials") {
+          // the show's own social pages: "Follow: Instagram · YouTube ...", each name its own link (new tab)
+          const t = el.firstChild, st = state.station, list = socialsOf(st), key = JSON.stringify(list);
+          if (t.dataset.soc !== key) {
+            t.dataset.soc = key; t.textContent = ""; el.classList.toggle("hot", list.length > 0);
+            if (list.length) {
+              t.appendChild(document.createTextNode("Follow: "));
+              list.forEach((x, i) => {
+                if (i) t.appendChild(document.createTextNode(" · "));
+                const a = t.appendChild(document.createElement("a"));
+                a.href = x.href; a.textContent = x.text; a.target = "_blank"; a.rel = "noopener";
+                a.setAttribute("aria-label", st.name + " on " + x.text);
+              });
+            }
+            fitText(rec);
+          }
+        }
         else if (el.firstChild.textContent !== s) { el.firstChild.dataset.ear = ""; el.firstChild.textContent = s; fitText(rec); }
         // "below": sit just under another text piece's actual words (e.g. the air date under a one- or two-line title)
         if (L.below && !state.editing) {
@@ -2327,6 +2351,7 @@
           const href = L.href === "now.item" ? (st ? at(st).track.item || "" : "")
                      : L.href === "tv.item" ? ((whatsOn() || {}).href || "")
                      : L.href === "card.link" ? (st && st.cardLink || "")
+                     : L.href === "station.support" ? (st && st.support && st.support.href || "")
                      : L.href === "config.tip" ? (CONFIG.tip || "") : L.href;
           if (el.firstChild.getAttribute("href") !== href) el.firstChild.setAttribute("href", href);
         }

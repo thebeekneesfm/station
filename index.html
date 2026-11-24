@@ -505,6 +505,13 @@
   .lc-blurb { font-size: min(13px, 7.4cqw); }
   .lc-num { font-size: min(22px, 11cqw); }
   [data-id="tv-title"] .txt, [data-id="ads-heading"] .txt, [data-id="tv-watch"] .txt, .ad-cap { text-shadow: 0 1px 2px rgba(0,0,0,.85), 0 0 6px rgba(0,0,0,.5); }
+  /* under the station card (stations with "notice", "support" or "socials" in stations.js): the notice is a little
+     paper label with a red rule, so it reads as a warning on the wall and on the phone's paper alike */
+  [data-id="card-notice"] .txt:not(:empty) { display: flex; align-items: center; justify-content: center; box-sizing: border-box;
+    background: #efe5cc; border: 2px solid #c8321f; border-radius: 3px; padding: 0 6px; }
+  html:not(.phone) [data-id="card-support"] .txt, html:not(.phone) [data-id="card-socials"] .txt { text-shadow: 0 1px 2px rgba(0,0,0,.85), 0 0 6px rgba(0,0,0,.5); }
+  [data-id="card-socials"] .txt, .t-text.hot[data-id="card-socials"]:hover .txt { text-decoration: none; }
+  [data-id="card-socials"] a { color: inherit; text-decoration: underline; text-underline-offset: 3px; pointer-events: auto; }
   .t-video { border-radius: 12px; overflow: hidden; background: #0c0805; }
   .t-video video { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(.1) saturate(.95); }
   /* a tip just came in: a thank-you card drops over the sponsors' ad for 20 seconds */
@@ -781,10 +788,10 @@
   <textarea id="p-out" hidden spellcheck="false" aria-label="Output"></textarea>
 </div>
 
-<script src="skin.js?v=20261124a"></script>
-<script src="stations.js?v=20261124a"></script>
+<script src="skin.js?v=20261124c"></script>
+<script src="stations.js?v=20261124d"></script>
 <script src="stations-more.js?v=1"></script>
-<script src="config.js?v=20261124a"></script>
+<script src="config.js?v=20261124b"></script>
 <script src="ads.js?v=20261102b"></script>
 <script src="house-ads.js?v=2"></script>
 <script src="tv.js?v=20261102b"></script>
@@ -793,11 +800,13 @@
 <script src="art/screen/homemovies-more.js?v=1"></script>
 <script src="art/screen/drivein-data.js?v=17"></script>
 <script src="art/screen/theater.js?v=59"></script>
+<script src="art/screen/drivein-data.js?v=16"></script>
+<script src="art/screen/theater.js?v=61"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
 <script src="art/nav/nav.js?v=14"></script>
 <script src="art/records/notes.js?v=1"></script>
 <script src="art/records/records.js?v=19"></script>
-<script src="radio.js?v=20261124a"></script>
+<script src="radio.js?v=20261124d"></script>
 <script src="socials.js?v=3"></script>
 <script src="obs-schedule.js?v=20261120a"></script>
 <script src="watchparty.js?v=20261111j"></script>
