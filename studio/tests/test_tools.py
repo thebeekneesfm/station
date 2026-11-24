@@ -165,13 +165,15 @@ def test_entry_checks_lengths_duplicates_and_rights():
 def test_content_flags_and_allowlist(tmp_path):
     f = sc.check_content_flags(entries(), allow=set())
     got = {(x.level, x.message.split("'")[1]) for x in f}
-    assert ("WARN", "Lucky Strike: Merry Christmas") in got   # TV commercial
-    assert ("INFO", "Camel Cigarettes") in got                # print ad: a decision
+    assert ("WARN", "Ayds Reducing Candy") in got             # TV commercial
+    assert ("INFO", "Slimming Tablets") in got                # print ad
     assert not any(t == "Dragnet: The Big Smoke" for _, t in got)  # a show title, not an ad
     assert not any(t == "Atwater Kent Radios" for _, t in got)
+    # Tobacco and alcohol ads are allowed (Director, 2026-11-24).
+    assert not any(t in ("Lucky Strike: Merry Christmas", "Camel Cigarettes") for _, t in got)
     allow = tmp_path / "allow.json"
-    allow.write_text(json.dumps({"approved": [{"title": "Camel Cigarettes", "why": "print gallery"}]}))
-    assert not any("Camel" in x.message for x in sc.check_content_flags(entries(), sc.load_allowlist(allow)))
+    allow.write_text(json.dumps({"approved": [{"title": "Slimming Tablets", "why": "print gallery"}]}))
+    assert not any("Slimming" in x.message for x in sc.check_content_flags(entries(), sc.load_allowlist(allow)))
 
 
 def test_site_check_main_writes_reports(tmp_path):
@@ -187,25 +189,25 @@ FILES = [
     {"name": "show01_64kb.mp3", "format": "64Kbps MP3", "length": "1500", "original": "show01.mp3"},
     {"name": "show02_64kb.mp3", "format": "64Kbps MP3", "length": "29:00", "original": "show02.flac"},
     {"name": "show03.mp3", "format": "VBR MP3", "length": "30", "title": "Promo"},
-    {"name": "Whiskey Night.mp3", "format": "VBR MP3", "length": "1700"},
+    {"name": "Slimming Secrets.mp3", "format": "VBR MP3", "length": "1700"},
     {"name": "cover.jpg", "format": "JPEG"},
 ]
 
 
 def test_pick_files_one_per_original():
     names = [f["name"] for f in fm.pick_files(FILES, "audio")]
-    assert names == ["Whiskey Night.mp3", "show01.mp3", "show02_64kb.mp3", "show03.mp3"]
+    assert names == ["Slimming Secrets.mp3", "show01.mp3", "show02_64kb.mp3", "show03.mp3"]
 
 
 def test_build_candidates_flags_and_skips():
     meta = {"metadata": {"title": "The Show", "date": "1950"}, "files": FILES}
     c = fm.build_candidates("ShowSet", meta, already={"ShowSet/show03.mp3"}, today=date(2026, 11, 24))
     by = {x["title"]: x for x in c}
-    assert set(by) == {"Episode One", "show02", "Whiskey Night"}
+    assert set(by) == {"Episode One", "show02", "Slimming Secrets"}
     assert by["Episode One"]["src"] == "https://archive.org/download/ShowSet/show01.mp3"
     assert by["show02"]["length"] == 1740.0 and by["Episode One"]["series"] == "The Show"
     assert any("1950" in f for f in by["Episode One"]["flags"])          # after 1930: rights check
-    assert any("alcohol" in f for f in by["Whiskey Night"]["flags"])
+    assert any("diet pills" in f for f in by["Slimming Secrets"]["flags"])
     rows = fm.as_stations_more_rows(c, "ShowSet")
     assert ["The Show", "Episode One", "1950", "ShowSet", "show01.mp3", 1500.0] in rows
 

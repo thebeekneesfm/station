@@ -17,14 +17,12 @@ the daily GitHub Action will do that.
 |---|---|---|---|
 | ~~Stale script version~~ **fixed** | `puzzles.html` loaded `ads.js?v=1`; other pages use `v=20261102b` | Puzzle visitors could get an old cached copy of the ads | changed to `v=20261102b` in the studio setup pull request |
 | ~~Stale script version~~ **fixed** | `index.html` loaded `house-ads.js?v=1`; `obs.html` uses `v=2` | Radio visitors could get an old copy of the house ads | changed to `v=2` in the studio setup pull request |
-| Tobacco commercials on TV | Christmas channel ads in `art/screen/tv-data.js`: "Lucky Strike: Merry Christmas", "Tareyton: The Tareyton Twosome", "Christmas in Marlboro Country" | The README says tobacco commercials were left out | delete the three lines (or decide they're OK) |
+| ~~Tobacco commercials on TV~~ **decided: kept** | Christmas channel ads in `art/screen/tv-data.js`: "Lucky Strike: Merry Christmas", "Tareyton: The Tareyton Twosome", "Christmas in Marlboro Country" | The README said tobacco commercials were left out | the Director allowed tobacco and alcohol ads on November 24, 2026; README and content rules updated |
 | Pages that fail if a CDN is down | `obs.html`, `jukebox-obs.html`, `puzzle-together.html` stop with "Cannot read properties of undefined (reading 'createClient')" when the Supabase library from cdn.jsdelivr.net doesn't load | A CDN hiccup breaks the whole page instead of just chat/counters | check that the library loaded before using it |
 
 ## Decisions for you
-- **Print ads for tobacco and alcohol** in the ad gallery (`ads.js`): Johnnie Walker, Lucky Strike,
-  Chesterfield, Viceroy, Camel, Pall Mall, Egyptian Deities, Murad, Craven A, Old Crow, Budweiser,
-  Benson and Hedges. The README's rule covers TV commercials. Keep (add to
-  `studio/content-allowlist.json`) or take down?
+- ~~**Print ads for tobacco and alcohol** in the ad gallery (`ads.js`)~~ **decided: kept.** Tobacco
+  and alcohol ads are allowed on TV and in print (the Director, November 24, 2026).
 - **A 4.7-second "Coming Attractions" clip** at the Drive-In (`art/screen/drivein-data.js`): probably
   a title card and fine, but worth a look.
 
