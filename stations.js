@@ -3584,8 +3584,17 @@ window.STATIONS = [
   "id": "madison",
   "name": "Madison on the Air",
   "group": "Radio shows",
-  "blurb": "A modern-day makeup influencer is zapped into the Golden Age of Radio: a comedy podcast that rides along with the mysteries, westerns and sci-fi. Contains adult language.",
+  "blurb": "A modern-day makeup influencer is zapped into the Golden Age of Radio: a comedy podcast that rides along with the mysteries, westerns and sci-fi. Contains strong language.",
   "card": "art/cards/madison.webp",
+  "notice": "Warning: explicit language and strong content",
+  "support": {"text": "Support the show", "href": "https://ko-fi.com/mota"},
+  "socials": [
+   {"text": "Instagram", "href": "https://www.instagram.com/madisonontheair/"},
+   {"text": "Facebook", "href": "https://www.facebook.com/MadisonOnTheAir"},
+   {"text": "YouTube", "href": "https://www.youtube.com/channel/UCihUtNv3jsDXxIweet9yinQ"},
+   {"text": "Bluesky", "href": "https://bsky.app/profile/madisonstandish.bsky.social"},
+   {"text": "X", "href": "https://twitter.com/MadisonontheAir"}
+  ],
   "epoch": "2026-11-24T00:00:00-07:00",
   "sound": {
    "level": false,
@@ -3607,8 +3616,7 @@ window.STATIONS = [
     "length": 1962.06,
     "series": "Madison on the Air",
     "title": "Gunsmoke",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: a racial slur (called out in the episode) and crude sexual language."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/03.%20The%20Adventures%20of%20Superman%20-%20Madison%20on%20the%20Air.mp3",
@@ -3629,8 +3637,7 @@ window.STATIONS = [
     "length": 1698.01,
     "series": "Madison on the Air",
     "title": "Let George Do It",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: jokes about sexual assault, crude language and a word with anti-Roma origins."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/06.%20The%20Adventures%20of%20Sam%20Spade%20-%20Madison%20on%20the%20Air.mp3",
@@ -3644,8 +3651,7 @@ window.STATIONS = [
     "length": 2161.14,
     "series": "Madison on the Air",
     "title": "The New Adventures of Sherlock Holmes",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: crude sexual language and a word with anti-Roma origins."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/08.%20The%20Shadow%20-%20Madison%20on%20the%20Air.mp3",
@@ -3673,8 +3679,7 @@ window.STATIONS = [
     "length": 2076.58,
     "series": "Madison on the Air",
     "title": "Casey, Crime Photographer",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: a mock Mexican accent (called out in the episode)."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/12.%20Dracula%20-%20Stage%2049%20-%20Madison%20on%20the%20Air.mp3",
@@ -3688,8 +3693,7 @@ window.STATIONS = [
     "length": 2139.3,
     "series": "Madison on the Air",
     "title": "Dimension X",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: an ableist slur for little people, used as a running joke."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/14.%20Candy%20Matson%20YUkon%202-8209%20-%20Madison%20on%20the%20Air.mp3",
@@ -3717,8 +3721,7 @@ window.STATIONS = [
     "length": 2217.72,
     "series": "Madison on the Air",
     "title": "Green Hornet",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: stereotyped accents played for laughs."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/18.%20The%20Story%20of%20Doctor%20Kildare%20-%20Madison%20on%20the%20Air.mp3",
@@ -3809,8 +3812,7 @@ window.STATIONS = [
     "length": 2521.05,
     "series": "Madison on the Air",
     "title": "Dangerous Assignment",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: stereotyped accents."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/31.%20The%20New%20Adventures%20of%20Sherlock%20Holmes%203%20-%20Madison%20on%20the%20Air.mp3",
@@ -3824,8 +3826,7 @@ window.STATIONS = [
     "length": 2454.23,
     "series": "Madison on the Air",
     "title": "The Lone Ranger",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: racial slurs and stereotyped accents."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/33.%20Boston%20Blackie%20-%20Madison%20on%20the%20Air.mp3",
@@ -3944,8 +3945,7 @@ window.STATIONS = [
     "length": 1673.27,
     "series": "Madison on the Air",
     "title": "Have Gun, Will Travel",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: stereotyped accents."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/50.%20It%27s%20a%20Wonderful%20Life%20-%20Madison%20on%20the%20Air.mp3",
@@ -4015,8 +4015,7 @@ window.STATIONS = [
     "length": 2284.77,
     "series": "Madison on the Air",
     "title": "Bold Venture",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: stereotyped accents."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/60.%20The%20Birds%20-%20Escape%20-%20Madison%20on%20the%20Air.mp3",
@@ -4072,8 +4071,7 @@ window.STATIONS = [
     "length": 2380.3,
     "series": "Madison on the Air",
     "title": "The New Adventures of Sherlock Holmes 6",
-    "item": "https://archive.org/details/1.-dragnet-mota-2026",
-    "warning": "Content warning: stereotyped accents."
+    "item": "https://archive.org/details/1.-dragnet-mota-2026"
    },
    {
     "src": "https://archive.org/download/1.-dragnet-mota-2026/68.%20The%20Day%20the%20Earth%20Stood%20Still%20-%20Madison%20on%20the%20Air.mp3",
