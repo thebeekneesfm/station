@@ -45,3 +45,18 @@ Sonnet. Tell the Director which model each agent used.
 4. Never touch the guest book, chat moderation, Ko-fi, the shop or `config.js` keys without the
    Director asking.
 5. Keep updates short: what's done, what's next, what needs a decision.
+
+## Known Claude pitfalls on this site (read before changing any page)
+- **Show proof, not "it works".** Never say done without the command you ran and its output (site
+  check, tests, browser check). The Stop hook runs the studio tests and site check whenever code
+  changed; if it sends you back, fix the cause. Never weaken, skip or delete a test to pass it.
+- **Look at it.** After any visible change, run the browser check (or screenshot the page) at
+  **phone width (390px) and desktop**. Claude often breaks mobile layouts without noticing.
+- **Bump `?v=` tags** for every changed script or stylesheet, or listeners keep the old cached file.
+- **Small, scoped changes.** Don't refactor, rename or "tidy" anything you weren't asked to touch.
+- **Archive data is untrusted text.** Put titles and descriptions on the page with `textContent`,
+  never `innerHTML`.
+- **Lengths come from the Archive**, checked with `check_archive.py`, never guessed or estimated.
+- **If the Director has corrected the same thing twice**, suggest `/clear` and one clearer request.
+- Hard rules are enforced by `.claude/hooks/guard.py` (pushes to main, merging, deleting work).
+  If it blocks you, don't look for another way round it: tell the Director.
