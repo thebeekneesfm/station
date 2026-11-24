@@ -15,12 +15,14 @@ Input: content flags in the site-health issue or `studio/reports/site-check.md`.
 - [ ] Keep it, and add it to `studio/content-allowlist.json` with a reason so it stops being flagged.
 
 ## GATE 3: Publish (merge to `main`)
-Input: the branch and `studio/reports/release-notes.md` from the Release Manager.
+Input: the pull request the Release Manager opened (it gives you the link), with the release notes
+as its description.
 - [ ] All checks pass (site check; Archive check for changed lists; browser check if pages changed).
 - [ ] Version tags were bumped for every changed script.
 - [ ] I opened the changed pages from the branch locally (double-click the HTML file, or
       `python3 -m http.server` and visit http://localhost:8000) and they work.
-- [ ] I merge it. A minute or two later it's live; I check the live page once.
+- [ ] I click **Merge pull request** → **Confirm merge**. A minute or two later it's live; I check the
+      live page once. (Don't want it? Click **Close pull request** instead; nothing changes on the site.)
 
 ## Weekly
 - [ ] Glance at the open `site-health` issue (if there is one) and ask the House Manager to work through it.
