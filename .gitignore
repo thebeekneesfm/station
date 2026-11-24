@@ -1,0 +1,3 @@
+# Claude Code personal settings: they contain paths on your computer, so never commit them.
+.claude/settings.local.json
+.claude/settings.local.json.bak
