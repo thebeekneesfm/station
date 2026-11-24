@@ -9,7 +9,7 @@ Checks:
     (GitHub Pages is case-sensitive even when your computer isn't)
   * every Archive audio/video entry has a sensible length, and no station repeats the same file
   * the Gramophone (78s) station only has recordings old enough to be public domain
-  * titles that may break the content rules (tobacco, alcohol, diet pills…) are listed for a look;
+  * titles that may break the content rules (diet pills, caricature mascots) are listed for a look;
     approve them once in studio/content-allowlist.json and they stop being flagged
 
 Exit code 1 if anything is at ERROR level.
@@ -32,11 +32,6 @@ from sitedata import REPO, STUDIO_DIR, load_entries, station_info, tracked_js  #
 
 # Words that suggest an item may break the site's content rules (see studio/CONTENT_RULES.md).
 FLAG_TERMS = {
-    "tobacco": r"\b(cigar\w*|tobacco|smoking|lucky strike|chesterfield|marlboro|winston|kool|pall mall|"
-               r"philip morris|viceroy|tareyton|benson (and|&) hedges|craven a|murad|l&m)\b",
-    "alcohol": r"\b(beer|whisk(e)?y|scotch|bourbon|gin|vodka|rum|brandy|wine|ale|lager|liquor|champagne|cocktails?|"
-               r"schlitz|pabst|budweiser|ballantine|hamm'?s|falstaff|blatz|carling|rheingold|seagram'?s|smirnoff|"
-               r"johnnie walker|old crow)\b",
     "diet pills": r"\b(diet pills?|reducing pills?|slimming|ayds|fat reducer)\b",
     "caricature mascots": r"\b(aunt jemima|rastus|frito bandito|sambo)\b",
 }
@@ -211,8 +206,7 @@ def check_content_flags(entries, allow: set[str] | None = None) -> list[Finding]
                 if tv_ad:
                     level, msg = "WARN", f"TV commercial '{e.title}' breaks the {rule} rule for commercials."
                 elif print_ad:
-                    level, msg = "INFO", (f"Print ad '{e.title}' is {'an' if rule[0] in 'aeiou' else 'a'} {rule} ad. The TV rule leaves these out; "
-                                          f"decide whether print ads follow it too.")
+                    level, msg = "INFO", f"Print ad '{e.title}' may break the {rule} rule."
                 else:
                     level, msg = "WARN", f"'{e.title}' may be a caricature (content rules)."
                 out.append(Finding(level, "content", f"{e.file} → {e.context}",

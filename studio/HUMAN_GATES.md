@@ -13,7 +13,6 @@ Input: `studio/candidates/<item>.json`, screened by the Content Screener.
 Input: content flags in the site-health issue or `studio/reports/site-check.md`.
 - [ ] Take it down (delete the line, or `"hide"` a magazine page), or
 - [ ] Keep it, and add it to `studio/content-allowlist.json` with a reason so it stops being flagged.
-- [ ] Decide once whether print ads for tobacco/alcohol follow the TV commercial rule.
 
 ## GATE 3: Publish (merge to `main`)
 Input: the branch and `studio/reports/release-notes.md` from the Release Manager.

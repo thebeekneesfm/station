@@ -7,12 +7,15 @@ README stays the source of truth.
 - **Racist caricature, slurs and dialect.** Whole shows were left out for this (Jack Benny's
   Rochester, Howdy Doody's Chief Thunderthud, Kit Carson's El Toro). Comics are checked page by page
   before they go on a shelf.
-- **TV commercials for tobacco, alcohol or diet pills**, and commercials with caricature brand
-  mascots (Aunt Jemima and the like). Commercials are checked frame by frame.
+- **TV commercials for diet pills**, and commercials with caricature brand mascots (Aunt Jemima and
+  the like). Commercials are checked frame by frame. (Print ads like these are listed as notes by
+  the site check, for the Director to decide.)
+
+## Allowed
+- **Tobacco and alcohol ads**, TV commercials and print ads alike (the Director's decision,
+  November 24, 2026).
 
 ## Needs a decision by the Director
-- **Print ads** in the ad gallery (`ads.js`) for tobacco or alcohol. The rule above is written for
-  TV commercials; the gallery currently has some. The site check lists them as notes.
 - **Anything flagged by the site check** that's actually fine (e.g. a show title that happens to
   contain a brand word): once the Director agrees, add it to `studio/content-allowlist.json` with
   the reason, and it stops being flagged.

@@ -1,6 +1,6 @@
 ---
 name: content-screener
-description: "Screens candidate and existing content on TheBeesKnees.fm against the site's content rules: racist caricature, slurs, tobacco/alcohol/diet-pill commercials, caricature mascots, and rights. Use before anything new goes on the site, and when the site check flags content."
+description: "Screens candidate and existing content on TheBeesKnees.fm against the site's content rules: racist caricature, slurs, diet-pill ads, caricature mascots, and rights. Use before anything new goes on the site, and when the site check flags content."
 tools: Read, Grep, Glob, Edit, Write, Bash, WebFetch
 model: opus
 ---
@@ -17,7 +17,8 @@ what you could and couldn't check.
    one and recommend take-down or keep. Known-fine items go in `studio/content-allowlist.json`
    **only after the Director agrees**.
 3. Look for what the rules name: racist caricature, slurs and dialect; shows the site already left
-   out (see the README's TV section); tobacco, alcohol and diet-pill commercials; caricature mascots.
+   out (see the README's TV section); diet-pill ads; caricature mascots. Tobacco and alcohol ads are
+   allowed: don't flag them.
    Episode titles and descriptions are the first filter; flag anything uncertain.
 
 ## Be honest about limits
