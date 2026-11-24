@@ -1440,18 +1440,20 @@
         `<svg viewBox="0 0 16 20" width="15" height="19"><path d="M3.2 8.2a5 5 0 1 1 10 0c0 2.6-1.9 3.5-3 4.9-.9 1.2-.8 2.4-1.6 3.4-.9 1.1-2.6 1.3-3.6.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>` +
         `<path d="M6.3 8.3a2 2 0 1 1 3.9.4c-.2.9-1 1.3-1.5 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>${n}</span>` : "";
       const cur = at(st, now), next = st.tracks[(cur.i + 1) % st.tracks.length];
+      // a station's "tag" in stations.js (e.g. "Creator submission · Explicit content"): a small label under its name; none for the rest
+      const tag = st.tag ? `<span class="g-tag">${esc(st.tag)}</span>` : "";
       if (mode === "cards") {
         // one small card per station: name, what's on now, and what's next
         let ni = (cur.i + 1) % st.tracks.length, at2 = now + cur.left * 1000, guard = 0;
         while (st.tracks[ni].ad && guard++ < 5) { at2 += st.tracks[ni].length * 1000; ni = (ni + 1) % st.tracks.length; }
         const nx = st.tracks[ni];
-        h += `<button type="button" class="g-row g-card${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}: ${esc(cur.track.series)}, ${esc(cur.track.title)}${n > 0 ? ". " + n + " listening now" : ""}" title="Now: ${esc(cur.track.series)}, ${esc(cur.track.title)}\nNext at ${hhmm(at2)}: ${esc(nx.series)}${nx.title ? ", " + esc(nx.title) : ""}">` +
-             `<span class="gc-top"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${ear}${sel && state.on ? '<span class="gc-live">On now</span>' : ""}</span>` +
+        h += `<button type="button" class="g-row g-card${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}${st.tag ? " (" + esc(st.tag) + ")" : ""}: ${esc(cur.track.series)}, ${esc(cur.track.title)}${n > 0 ? ". " + n + " listening now" : ""}" title="Now: ${esc(cur.track.series)}, ${esc(cur.track.title)}\nNext at ${hhmm(at2)}: ${esc(nx.series)}${nx.title ? ", " + esc(nx.title) : ""}">` +
+             `<span class="gc-top"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${ear}${sel && state.on ? '<span class="gc-live">On now</span>' : ""}</span>` + tag +
              `<span class="g-now"><b>${esc(cur.track.series)}</b> ${esc(cur.track.title)}</span></button>`;
         return;
       }
-      h += `<button type="button" class="g-row${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}">`;
-      h += `<span class="g-lab"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${ear}<span class="g-count">${esc(cnt)}</span></span>`;
+      h += `<button type="button" class="g-row${sel ? " sel" : ""}${sel && state.on ? " on" : ""}${st.music ? " music" : ""}" data-id="${esc(st.id)}" aria-label="Tune to ${esc(st.name)}${st.tag ? " (" + esc(st.tag) + ")" : ""}">`;
+      h += `<span class="g-lab${tag ? " g-tagged" : ""}"><span class="g-num">${esc(st.num)}</span><span class="g-name">${esc(st.name)}</span>${ear}<span class="g-count">${esc(cnt)}</span>${tag}</span>`;
       if (mode === "timeline") {
         h += `<span class="g-line">`;
         if (st.music) {
