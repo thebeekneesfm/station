@@ -74,8 +74,8 @@ Each piece in `skin.js` has `id`, `x`, `y`, `w`, `h`, and usually `src` (the art
 | `"type": "ad"` | The vintage ad panel. `"every"` is how many seconds each ad stays up. |
 | `"type": "reactbar"` / `"reactfloat"` | The reaction buttons, and the area reactions float up through. |
 | `"type": "tv"` | The cartoon TV. Text pieces can show `"bind": "tv.title"` and link with `"href": "tv.item"`. |
-| `"type": "text", "bind": "…"` | Live text. Binds: `sleep`, `clean`, `tv.title`, `now.series`, `now.title`, `now.date`, `now.remaining`, `station.name`, `station.freq`, `station.blurb`, `station.listeners`, `clock`, `guide` (with `"count": 5`), `status`. Or fixed words with `"text": "…"`. Add `"action"` to make text clickable, like the buttons (`sleep`, `recent`, `clean` and the rest). Add `"href"` to make it a link: a web address, or `"now.item"` for the current show's Archive page. Style with `font`, `size`, `color`, `align`, `lineHeight`, `uppercase`, `spacing`. Long titles shrink to fit. |
-| `"when": "on"` | Only show at certain times: `on`, `off`, `playing`, `warming`, `between` (dial between stations), `lost` (a broken tape), `tuned`. Combine them with commas. |
+| `"type": "text", "bind": "…"` | Live text. Binds: `sleep`, `clean`, `tv.title`, `now.series`, `now.title`, `now.date`, `now.remaining`, `now.warning`, `station.name`, `station.freq`, `station.blurb`, `station.listeners`, `clock`, `guide` (with `"count": 5`), `status`. Or fixed words with `"text": "…"`. Add `"action"` to make text clickable, like the buttons (`sleep`, `recent`, `clean` and the rest). Add `"href"` to make it a link: a web address, or `"now.item"` for the current show's Archive page. Style with `font`, `size`, `color`, `align`, `lineHeight`, `uppercase`, `spacing`. Long titles shrink to fit. |
+| `"when": "on"` | Only show at certain times: `on`, `off`, `playing`, `warming`, `between` (dial between stations), `lost` (a broken tape), `tuned`, `warning` / `nowarning` (the current show does or doesn't have a content warning). Combine them with commas. |
 | `"station": "chills"` | Only show on that station, for example a different dial glow per station. |
 | `"frames": ["art/tube-1.png", "art/tube-2.png"], "fps": 6` | A looping animation, like flickering tubes or a turning record. |
 | `"img": "art/buttons/about.png", "hoverImg": "art/buttons/about-hover.webp"` | On a text piece: shows your drawing instead of the typed words, and plays the animation while someone points at it (or for a moment after a tap on a phone). Same canvas size for both. `"hoverMs": 1500` sets how long it plays after a tap. |
@@ -87,7 +87,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 
 ## Stations
 
-`stations.js` has fifteen stations; Christmas is only on the dial from November 15 to January 6. The guide groups them under **Radio shows** and **Music**:
+`stations.js` has sixteen stations; Christmas is only on the dial from November 15 to January 6. The guide groups them under **Radio shows** and **Music**:
 
 | Station | What's on | Loops every |
 |---|---|---|
@@ -98,6 +98,7 @@ To change the stage size, change `stage.width` and `stage.height`. `"fit": "widt
 | Romance & Drama | Great love stories and dramas from Lux Radio Theatre, Screen Guild Theater, Screen Directors Playhouse, Academy Award Theater, Campbell Playhouse, Mercury Theatre and Columbia Workshop | about 65 hours |
 | Laughs | Jack Benny, Fibber McGee and Molly, Burns and Allen, The Great Gildersleeve, Our Miss Brooks | about 16 hours |
 | Variety | Bing Crosby, Bob Hope, The Chase and Sanborn Hour, Command Performance, Fred Allen, Jimmy Durante, Spike Jones, Martin and Lewis, Jubilee, Dinah Shore, The Railroad Hour | about 45 hours |
+| Madison on the Air | A modern comedy podcast by Chrisi Talyn Saje, aired with the creator's permission: an influencer zapped into the Golden Age of Radio riffs her way through the classic shows. Adult language; 11 episodes carry a content warning (`"warning"` on a track shows it under the title while it plays). Sound cleanup is off, since it's a modern recording | about 48 hours |
 | Gramophone Radio | Dance bands, early jazz and blues on 78s from 1925 and earlier (public domain), heavily cleaned and played as if from another room. It also plays under the Home Movies TV channel, with the same muffled room sound (not on iPhones) | about 23 hours |
 
 Rock 'n' Roll, Blues, Swing, After Hours, Classical, Sleepy Time and Christmas are switched off (`"off": true` in stations.js) until the station has a broadcasting license; their track lists are kept. Their kind of music lives on the Record Shelf (`records.html`, `art/records/records.js`): albums that play on Archive.org, with five showcased each week under the radio.

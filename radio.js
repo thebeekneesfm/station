@@ -1048,6 +1048,7 @@
       if (type === "text") {
         const t = el.appendChild(document.createElement(L.href ? "a" : "div"));
         t.className = "txt";
+        if (L.bind === "now.warning") t.setAttribute("aria-live", "polite");   // screen readers hear a content warning when the show starts
         if (L.href) {
           el.classList.add("hot");
           // the station's own pages (tv.html, drive-in.html ...) open in place; anything off-site opens in a new tab
@@ -1336,6 +1337,7 @@
     const ph = state.phase;
     const ok = { on: state.on, off: !state.on, playing: ph === "playing", warming: ph === "warming",
       between: ph === "between", lost: ph === "lost", tuned: !!state.station && state.on };
+    if (/warning/.test(w)) { const n = state.station ? at(state.station) : null; ok.warning = !!(n && n.track.warning); ok.nowarning = !ok.warning; }   // the current show carries a content warning
     return String(w).split(/\s*,\s*/).some(x => ok[x]);
   }
   function textFor(L) {
@@ -1371,6 +1373,7 @@
         return (music ? WORDS.released : WORDS.aired) + " " + now.track.date;
       }
       case "now.remaining": return now ? mmss(now.left) + " left" : "";
+      case "now.warning": return now ? now.track.warning || "" : "";
       case "guide": {
         if (!st) return "";
         return upcoming(st, L.count || 5).map(u => `${hhmm(u.start)}  ${u.track.series ? u.track.series + " — " : ""}${u.track.title}`).join("\n");
@@ -2307,13 +2310,15 @@
         // "below": sit just under another text piece's actual words (e.g. the air date under a one- or two-line title)
         if (L.below && !state.editing) {
           const a = els.get(L.below);
-          const bkey = a && a.el.firstChild ? a.el.firstChild.textContent + "|" + state.scale + "|" + a.el.firstChild.style.fontSize + "|" + a.el.firstChild.scrollHeight + "|" + (document.fonts ? document.fonts.status : "") : "";   // the height catches a title that rewraps once the web fonts arrive
+          const bkey = a && a.el.firstChild ? a.el.firstChild.textContent + "|" + a.el.style.top + "|" + state.scale + "|" + a.el.firstChild.style.fontSize + "|" + a.el.firstChild.scrollHeight + "|" + (document.fonts ? document.fonts.status : "") : "";   // the height catches a title that rewraps once the web fonts arrive
           if (a && a.el.firstChild && rec.belowKey !== bkey) {
             rec.belowKey = bkey;
             const t = a.el.firstChild, r = document.createRange(); r.selectNodeContents(t);
             const box = r.getBoundingClientRect(), top = a.el.getBoundingClientRect().top;
             const h = Math.min(a.L.h, box.height ? (box.bottom - top) / (state.scale || 1) : a.L.h);
-            const y = Math.round(a.L.y + h + (L.gap || 4));
+            // the piece above may itself sit "below" something; an empty one (no air date) takes no room
+            const ay = parseFloat(a.el.style.top) || a.L.y;
+            const y = Math.round(t.textContent ? ay + h + (L.gap || 4) : ay);
             if (el.style.top !== y + "px") el.style.top = y + "px";
           }
         }

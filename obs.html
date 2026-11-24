@@ -418,7 +418,7 @@
 <audio id="audio" preload="auto" crossorigin="anonymous"></audio>
 
 <script src="config.js?v=20261120a"></script>
-<script src="stations.js?v=20261119c"></script>
+<script src="stations.js?v=20261124a"></script>
 <script src="stations-more.js?v=1"></script>
 <script src="art/screen/tv-data.js?v=29"></script>
 <script src="art/screen/homemovies-more.js?v=1"></script>
@@ -717,6 +717,7 @@
     $("series").textContent = tr.series || "";
     $("title").textContent = tr.title || "";
     $("date").textContent = tr.date ? (station.music ? "Recorded " : "Originally aired ") + tr.date : "";
+    $("then").textContent = tr.warning || ""; $("then").style.display = tr.warning ? "block" : "";   // a content warning, under the air date
     var ol = $("next"); ol.textContent = ""; var t = Date.now() + now.left * 1000;
     for (var k = 1; k <= 3 && station.tracks.length > 1; k++) {
       var nx = station.tracks[(now.i + k) % station.tracks.length], li = document.createElement("li"), b = document.createElement("b");
