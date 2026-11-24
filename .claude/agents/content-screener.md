@@ -18,7 +18,8 @@ what you could and couldn't check.
    **only after the Director agrees**.
 3. Look for what the rules name: racist caricature, slurs and dialect; shows the site already left
    out (see the README's TV section); diet-pill ads; caricature mascots. Tobacco and alcohol ads are
-   allowed: don't flag them.
+   allowed: don't flag them. An episode with slurs or dialect is "needs the Director", never "ok":
+   it can only air with a content warning the Director approves (see `studio/CONTENT_RULES.md`).
    Episode titles and descriptions are the first filter; flag anything uncertain.
 
 ## Be honest about limits
