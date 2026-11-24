@@ -2078,14 +2078,6 @@ window.DRIVEIN = {
    "item": "https://archive.org/details/Drive-inComingAttractions-marquee"
   },
   {
-   "title": "Coming Attractions (from Drive-In Movie Ads)",
-   "year": "",
-   "gain": 1,
-   "src": "https://archive.org/download/Drive-inComingAttractionsBw/Drive-in--ComingAttractionsBw_512kb.mp4",
-   "length": 4.74,
-   "item": "https://archive.org/details/Drive-inComingAttractionsBw"
-  },
-  {
    "title": "Prevues of Coming Attractions: Colorsplash (from Drive-In Movie Ads)",
    "year": "",
    "gain": 1,
