@@ -3587,6 +3587,7 @@ window.STATIONS = [
   "blurb": "A modern-day makeup influencer is zapped into the Golden Age of Radio: a comedy podcast that rides along with the mysteries, westerns and sci-fi. Contains strong language.",
   "card": "art/cards/madison.webp",
   "notice": "Warning: explicit language and strong content",
+  "tag": "Creator submission · Explicit content",
   "support": {"text": "Support the show", "href": "https://ko-fi.com/mota"},
   "socials": [
    {"text": "Instagram", "href": "https://www.instagram.com/madisonontheair/"},

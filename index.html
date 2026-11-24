@@ -449,6 +449,13 @@
   .g-cards .g-now { display: block; line-height: 1.35; font-size: .92em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .g-cards .g-now b { font-weight: 700; }
   .g-cards .g-next { font-size: .74em; color: var(--g-dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* a station's "tag" (stations.js): small print under its name, with a red rule like the card notice */
+  .g-tagged { flex-wrap: wrap; align-content: center; row-gap: .3em; padding-block: .35em; }
+  .g-tagged .g-name { flex: 1 1 0; }
+  .g-tagged .g-tag { flex: 0 0 100%; }
+  .g-tag { display: block; justify-self: start; max-width: 100%; box-sizing: border-box; padding-left: .45em; border-left: 3px solid var(--g-hi, #c8321f);
+    font: italic 700 .68em/1.2 "BK Serif", Georgia, serif; letter-spacing: .01em; color: var(--g-ink, #1f1b17); white-space: normal; text-transform: none; }
+  html.phone .g-tag { font-size: .74em; }
   /* the welcome card (first visit only) */
   #welcome-ov { position: fixed; inset: 0; z-index: 40; background: rgba(10, 8, 6, .82); display: flex; align-items: center; justify-content: center; overflow-y: auto;
     padding: max(12px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px)); }
@@ -789,7 +796,7 @@
 </div>
 
 <script src="skin.js?v=20261124c"></script>
-<script src="stations.js?v=20261124d"></script>
+<script src="stations.js?v=20261124e"></script>
 <script src="stations-more.js?v=1"></script>
 <script src="config.js?v=20261124b"></script>
 <script src="ads.js?v=20261102b"></script>
@@ -799,12 +806,12 @@
 <script src="art/screen/tv-data.js?v=29"></script>
 <script src="art/screen/homemovies-more.js?v=1"></script>
 <script src="art/screen/drivein-data.js?v=16"></script>
-<script src="art/screen/theater.js?v=61"></script>
+<script src="art/screen/theater.js?v=62"></script>
 <script>document.documentElement.style.setProperty("--ground", (window.SKIN.stage.page || window.SKIN.stage.color || "#171310"));</script>
 <script src="art/nav/nav.js?v=14"></script>
 <script src="art/records/notes.js?v=1"></script>
 <script src="art/records/records.js?v=19"></script>
-<script src="radio.js?v=20261124d"></script>
+<script src="radio.js?v=20261124e"></script>
 <script src="socials.js?v=3"></script>
 <script src="obs-schedule.js?v=20261120a"></script>
 <script src="watchparty.js?v=20261111j"></script>

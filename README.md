@@ -113,6 +113,7 @@ Each station has:
 - `sound`: cleanup settings for that station (see below).
 - `warning` (optional, on a track): a content warning shown under the title while that track plays, e.g. `"warning": "Content warning: ..."`. No track uses it right now.
 - `notice` (optional): a content notice shown under the station card the whole time the station is tuned, on computers and phones, e.g. `"notice": "Warning: explicit language and strong content"`. It shows as a small label with a red rule. Leave it out and nothing shows.
+- `tag` (optional): a short label shown under the station's name in the channel guide (the cards on computers, the list on phones) and in the stream page's station list (`obs.html`), and read out by screen readers with the name, e.g. `"tag": "Creator submission · Explicit content"`. Keep it short so it fits on a phone. Leave it out and nothing shows.
 - `support` (optional): a link to the show's own support page, shown under the station card, e.g. `"support": {"text": "Support the show", "href": "https://ko-fi.com/mota"}`. It opens in a new tab. Leave it out and nothing shows.
 - `socials` (optional): the show's own social pages, shown under the card as "Follow: Instagram · YouTube ...", e.g. `"socials": [{"text": "Instagram", "href": "https://www.instagram.com/..."}]`. Each opens in a new tab. Keep it to a handful of short names so it fits on a phone. Leave it out and nothing shows.
 
