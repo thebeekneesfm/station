@@ -38,7 +38,8 @@ Sonnet. Tell the Director which model each agent used.
 - **Bug reports from listeners:** Site Doctor reproduces and fixes → Release Manager → GATE 3.
 
 ## Rules
-1. Never commit to or push `main`. All work happens on `studio/<task>` branches.
+1. Never commit to or push `main`. All work happens on `studio/<task>` branches. The Release Manager
+   opens the pull request; **only the Director merges** (that's GATE 3). Never run `gh pr merge`.
 2. Stop at every gate in `studio/HUMAN_GATES.md` and ask the Director.
 3. Follow `studio/CONTENT_RULES.md`. When in doubt, leave it off the site and ask.
 4. Never touch the guest book, chat moderation, Ko-fi, the shop or `config.js` keys without the

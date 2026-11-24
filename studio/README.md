@@ -46,6 +46,27 @@ studio/
 4. Open Claude Code in the repo (`claude`), and try: *"Run the site check and tell me what needs
    attention."*
 
+## Let the agents open pull requests (once, about 5 minutes)
+The Release Manager can open each pull request for you, so you only press **Merge**. It uses a GitHub
+key that can open pull requests but **can't merge, push or change settings**.
+
+1. **Make the key** on github.com: your profile picture → **Settings** → **Developer settings** →
+   **Personal access tokens** → **Fine-grained tokens** → **Generate new token**.
+   - Name: `Bee's Knees agents (PRs only)`. Expiration: 90 days.
+   - Repository access: **Only select repositories** → `station`.
+   - Repository permissions: **Pull requests: Read and write**; **Contents: Read-only**. Leave everything else as it is.
+   - **Generate token**, then copy it. Don't paste it into Claude or a file.
+2. **Install the GitHub CLI** in a new PowerShell window (not in Claude):
+   `winget install --id GitHub.cli`, then close and reopen PowerShell.
+3. **Sign in with the key**, still in that PowerShell window: `gh auth login` →
+   GitHub.com → HTTPS → "Authenticate Git with your GitHub credentials?" **No** →
+   "Paste an authentication token" → paste it. `gh auth status` should say you're logged in.
+
+That's it. The project's `.claude/settings.json` also blocks the agents from running `gh pr merge`,
+`gh auth`, `gh api` and pushes to `main`, as a second lock. When the key expires, GitHub emails you;
+make a new one the same way. Without the key, the Release Manager gives you a link and you click
+**Create pull request** yourself.
+
 ## Using the tools yourself
 ```bash
 python3 studio/tools/site_check.py                          # offline check, ~10 seconds
