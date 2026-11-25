@@ -80,6 +80,10 @@ Write about the ads as history and oddity, never as if The Bee's Knees were the 
      Couldn't Sell Today", never clickbait lies. **Description:** two lines on what it is, then
      "Watch vintage TV, radio and a Saturday-night Drive-In free at https://thebeesknees.fm", then
      the chapters and credits the tool writes. **Tags:** 8 to 12.
+   - **Save the words as files**, two copies: in the video's folder
+     (`C:/Users/hillk/Videos/Bees Knees YouTube/<publish-date> <slug>/`) as `title.txt`,
+     `description.txt` and `tags.txt` (tags comma-separated, one line), and in the brief on the
+     `social-clips` branch (`"title"`, `"description"`, `"tags"`), which keeps them if the folder is lost.
    - The Content Screener checks every commercial in it, like any other find.
 5. **Scout** enough finds to fill the gaps (usually 5 to 9). For each, write a brief (below), then have
    the **Content Screener** check it. Drop anything marked "remove".

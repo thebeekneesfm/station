@@ -42,8 +42,10 @@ Director uploads them by hand.
 2. Make it: `python studio/tools/make_compilation.py <spec.json>` with `out_dir` set to
    `C:/Users/hillk/Videos/Bees Knees YouTube/<publish-date> <slug>`. It writes `video.mp4`, `thumbnail.jpg`
    and `chapters.txt`. The spec format is at the top of the tool.
-3. Write `upload.txt` in the same folder: the title, then the full description (the Manager's text
-   followed by `chapters.txt`), then the tags on one line, then "Made for kids: No".
+3. Copy the Manager's `title.txt`, `description.txt` and `tags.txt` into the same folder if they
+   aren't there yet, and add `chapters.txt` to the end of `description.txt`, so the Director can
+   paste each one straight into YouTube. The video isn't finished until all six files are there:
+   `video.mp4`, `thumbnail.jpg`, `chapters.txt`, `title.txt`, `description.txt`, `tags.txt`.
 4. **Check:** 1920 x 1080, 10 to 15 minutes, has audio. Look at the thumbnail and at frames from
    three different commercials: labels readable, nothing cut off, no black gaps.
 

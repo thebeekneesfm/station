@@ -43,12 +43,25 @@ Don't ask questions: where you would ask, note it in the review issue instead. F
 review issue is open. The last line of your reply must be: REVIEW ISSUE: <its link>
 "@
 
+$videos = "$env:USERPROFILE\Videos\Bees Knees YouTube"
+$started = Get-Date
 claude -p $prompt --permission-mode auto --model opus *> $log
+$code = $LASTEXITCODE
+# one pop-up per compilation finished during this run; clicking it opens the video's folder
+Get-ChildItem $videos -Directory -ErrorAction SilentlyContinue | Where-Object { $_.CreationTime -ge $started } | ForEach-Object {
+  $video = Join-Path $_.FullName "video.mp4"
+  $titleFile = Join-Path $_.FullName "title.txt"
+  $ready = (Test-Path $video) -and (Test-Path $titleFile)
+  $title = if (Test-Path $titleFile) { Get-Content $titleFile -TotalCount 1 } else { $_.Name }
+  $folder = ([Uri]$_.FullName).AbsoluteUri
+  if ($ready) { Show-Note "Bee's Knees: YouTube video ready" "$title (upload on $($_.Name.Substring(0,10)))" $folder }
+  else { Show-Note "Bee's Knees: YouTube video NOT finished" "$($_.Name) is missing its video or title. Check the review issue." $folder }
+}
 $issue = Select-String -Path $log -Pattern "$repo/issues/\d+" -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -Last 1
-if ($LASTEXITCODE -eq 0 -and $issue) {
+if ($code -eq 0 -and $issue) {
   Show-Note "Bee's Knees: social drafts ready" "Drafts are in Metricool; this week's two YouTube videos are in Videos/Bees Knees YouTube. Open the issue." $issue
 } else {
   & $gh issue create --title "Monday social run failed ($(Get-Date -Format yyyy-MM-dd))" `
-    --body "Claude Code exited with code $LASTEXITCODE and no review issue link. The log is $run\$log on the PC."
+    --body "Claude Code exited with code $code and no review issue link. The log is $run\$log on the PC."
   Show-Note "Bee's Knees: Monday social run failed" "Open the issues page; the log is in station-social-run\studio\reports." "$repo/issues"
 }
