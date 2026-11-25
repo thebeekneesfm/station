@@ -39,3 +39,6 @@ Windows notification pops up with its link when the run finishes), and the draft
 - [ ] Glance at the open `site-health` issue (if there is one) and ask the House Manager to work through it.
 - [ ] Decide on any "needs the Director" items.
 - [ ] Monday: review the social drafts (GATE 4).
+- [ ] Wednesday: approve or drop the items in the "Scouting finds" issue (GATE 1) and tell the House
+      Manager which to add. On January 1 the same for the new public-domain finds, plus that year's
+      wording pull request (GATE 3).

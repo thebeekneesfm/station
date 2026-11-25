@@ -30,6 +30,7 @@ studio/
   tools/make_clip.py       cuts a vertical social clip in the house style (ffmpeg)
   tools/make_compilation.py  builds a 1920x1080 YouTube compilation, thumbnail and chapters (ffmpeg)
   tools/social_monday.ps1  the Monday social run (Windows Task Scheduler starts it)
+  tools/scout_weekly.ps1   the Wednesday scouting run, and with -NewYear the January 1 public-domain run
   tools/browser_check.mjs  opens every page in a real browser; errors, missing files, screenshots
   CONTENT_RULES.md         the site's content standards and rights rules
   HUMAN_GATES.md           your decisions
