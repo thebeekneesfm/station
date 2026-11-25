@@ -66,16 +66,31 @@ Write about the ads as history and oddity, never as if The Bee's Knees were the 
    video, single images or carousels for print); YouTube Shorts 4 (the same clips as TikTok);
    Pinterest 3 (print ads and covers, linking to the matching site page); Bluesky 3. Only fill gaps;
    never add to a day that already has its post on that network.
-4. **Scout** enough finds to fill the gaps (usually 5 to 9). For each, write a brief (below), then have
+4. **Plan two YouTube compilations** (10 to 15 minutes, 1920 x 1080), which the Director uploads by
+   hand on **Tuesday** and **Friday** (they never go into Metricool):
+   - **Tuesday: a theme** (toys, cereal, cars, "dangerous kids' stuff", "ads that shame you",
+     kitchen gadgets, cigarettes and booze, space-age stuff...). About 10 to 15 whole commercials.
+   - **Friday: weird finds**, a grab bag from the Archive's least-watched commercials.
+   - Never repeat a commercial used in an earlier compilation (`posted.tsv`), and don't repeat a theme
+     within 8 weeks. Look at the channel's own past compilations (`youtube.js`) and avoid their themes
+     unless the picks are all new.
+   - Write the compilation brief (`briefs/<monday-date>/yt-<tue|fri>-<slug>.json`): the spec for
+     `make_compilation.py` (see the Video Editor), plus `title`, `description` and `tags`.
+   - **Title:** plain and searchable, a little Gen Z is fine: "Weird 1960s Toy Commercials You
+     Couldn't Sell Today", never clickbait lies. **Description:** two lines on what it is, then
+     "Watch vintage TV, radio and a Saturday-night Drive-In free at https://thebeesknees.fm", then
+     the chapters and credits the tool writes. **Tags:** 8 to 12.
+   - The Content Screener checks every commercial in it, like any other find.
+5. **Scout** enough finds to fill the gaps (usually 5 to 9). For each, write a brief (below), then have
    the **Content Screener** check it. Drop anything marked "remove".
-5. **Hand video briefs to the Video Editor** (agent `video-editor`); print finds too, if they need
+6. **Hand video briefs to the Video Editor** (agent `video-editor`); print finds too, if they need
    close-up crops. It returns public links.
-6. **Make the drafts** in Metricool: `"draft": true`, `"autoPublish": true` (so once the Director
+7. **Make the drafts** in Metricool: `"draft": true`, `"autoPublish": true` (so once the Director
    approves, it goes out by itself), the time from `getBestTimeToPostByNetwork` for that network and
    day (it has no Bluesky data: use Instagram's best time for Bluesky), and the AI flags false (`isAiGenerated`, `isAigc`, `isAiGeneratedContent`): the media is real
    archival footage. One Metricool post per network group, like the existing ones (TikTok + Instagram
    together; YouTube Shorts as its own post with a `youtubeData.title`; Pinterest with its board).
-7. **Log** each draft in `posted.tsv`, push the `social-clips` branch, and **open the review issue**
+8. **Log** each draft and each compilation's commercials in `posted.tsv`, push the `social-clips` branch, and **open the review issue**
    (below). Then stop.
 
 ## A brief (`briefs/<monday-date>/<slug>.json` on the social-clips branch)
@@ -119,6 +134,8 @@ the title "Social drafts for the week of <date>: <n> to review" and a body with:
 1. Last week in 3 to 5 lines (top post and its views, the lesson).
 2. A table: day and time, networks, what it is, the Metricool link (`plannerUrl`), the clip link,
    the Archive source, the Screener's note and any risk.
+   Then **"YouTube uploads (you post these)"**: for Tuesday and Friday, the folder path, the title,
+   the length, and any commercial the Screener flagged.
 3. "How to approve: open each link in Metricool and schedule it, or delete it."
 If there's nothing to fill this week, still open the issue and say so. **The last line of your
 report must be `REVIEW ISSUE: <link>`**: the Monday script reads it to pop up a notification.

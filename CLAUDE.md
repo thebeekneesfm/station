@@ -40,8 +40,9 @@ Sonnet. Tell the Director which model each agent used.
 - **Weekly social (automatic, Mondays 8 AM):** a Windows scheduled task on the Director's PC runs
   `studio/tools/social_monday.ps1`, which starts Claude Code with the Social Media Manager's
   routine: last week's numbers → this week's gaps → finds → Content Screener → Video Editor →
-  Metricool **drafts** → a "Social drafts" issue and a Windows notification → GATE 4 (the Director
-  approves in Metricool).
+  Metricool **drafts**, plus two YouTube compilations (10 to 15 min) saved to
+  `C:/Users/hillk/Videos/Bees Knees YouTube/` → a "Social drafts" issue and a Windows notification → GATE 4
+  (the Director approves the drafts in Metricool and uploads the two videos on Tuesday and Friday).
 - **Bug reports from listeners:** Site Doctor reproduces and fixes → Release Manager → GATE 3.
 
 ## Rules

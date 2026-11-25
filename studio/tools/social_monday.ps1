@@ -46,7 +46,7 @@ review issue is open. The last line of your reply must be: REVIEW ISSUE: <its li
 claude -p $prompt --permission-mode auto --model opus *> $log
 $issue = Select-String -Path $log -Pattern "$repo/issues/\d+" -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -Last 1
 if ($LASTEXITCODE -eq 0 -and $issue) {
-  Show-Note "Bee's Knees: social drafts ready" "This week's drafts are in Metricool. Open the issue to review them." $issue
+  Show-Note "Bee's Knees: social drafts ready" "Drafts are in Metricool; this week's two YouTube videos are in Videos/Bees Knees YouTube. Open the issue." $issue
 } else {
   & $gh issue create --title "Monday social run failed ($(Get-Date -Format yyyy-MM-dd))" `
     --body "Claude Code exited with code $LASTEXITCODE and no review issue link. The log is $run\$log on the PC."

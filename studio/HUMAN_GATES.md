@@ -31,6 +31,8 @@ Windows notification pops up with its link when the run finishes), and the draft
 - [ ] Keep it: schedule it in Metricool (it publishes by itself at its time). Change the caption
       or time first if you like.
 - [ ] Don't want it: delete the draft. Nothing is ever published without this step.
+- [ ] **Tuesday and Friday: upload that day's YouTube video** from `C:/Users/hillk/Videos/Bees Knees YouTube/<date> .../`:
+      `video.mp4`, `thumbnail.jpg`, and the title, description and tags from `upload.txt`.
 - [ ] Close the issue when you're done.
 
 ## Weekly
