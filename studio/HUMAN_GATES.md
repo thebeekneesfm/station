@@ -24,6 +24,16 @@ as its description.
 - [ ] I click **Merge pull request** → **Confirm merge**. A minute or two later it's live; I check the
       live page once. (Don't want it? Click **Close pull request** instead; nothing changes on the site.)
 
+## GATE 4: Approve social posts
+Input: the "Social drafts for the week of ..." issue the Social Media Manager opens on Mondays (a
+Windows notification pops up with its link when the run finishes), and the drafts it made in Metricool.
+- [ ] Open each draft from the issue's links. Watch the clip; read the caption.
+- [ ] Keep it: schedule it in Metricool (it publishes by itself at its time). Change the caption
+      or time first if you like.
+- [ ] Don't want it: delete the draft. Nothing is ever published without this step.
+- [ ] Close the issue when you're done.
+
 ## Weekly
 - [ ] Glance at the open `site-health` issue (if there is one) and ask the House Manager to work through it.
 - [ ] Decide on any "needs the Director" items.
+- [ ] Monday: review the social drafts (GATE 4).

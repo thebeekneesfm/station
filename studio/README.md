@@ -10,6 +10,8 @@ TheBeesKnees.fm healthy and growing:
 | **Archive Scout** | finds more radio, 78s, cartoons, TV, films, comics and magazines that fit a station or channel, in the site's exact data format |
 | **Content Screener** | checks new and flagged content against `CONTENT_RULES.md` |
 | **Release Manager** | bumps version tags, runs every check, writes release notes and the pull request |
+| **Social Media Manager** | every Monday: reads last week's Metricool numbers, finds odd 1920s-1970 Archive gems, writes captions, makes Metricool drafts and a "Social drafts" issue |
+| **Video Editor** | cuts the clips and crops with ffmpeg in the plain house style and puts them on the `social-clips` branch |
 
 The main Claude conversation is the **House Manager**: it runs on the strongest model, gives each
 agent a model that fits the task, and stops at your gates (`HUMAN_GATES.md`). Nothing goes live
@@ -25,6 +27,8 @@ studio/
   tools/site_check.py      offline check: JS syntax, version tags, missing files, lengths, rights, content rules
   tools/check_archive.py   asks the Archive whether every file still exists, with the right length
   tools/find_more.py       searches the Archive and builds ready-to-review entries
+  tools/make_clip.py       cuts a vertical social clip in the house style (ffmpeg)
+  tools/social_monday.ps1  the Monday social run (Windows Task Scheduler starts it)
   tools/browser_check.mjs  opens every page in a real browser; errors, missing files, screenshots
   CONTENT_RULES.md         the site's content standards and rights rules
   HUMAN_GATES.md           your decisions
