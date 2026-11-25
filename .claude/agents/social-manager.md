@@ -24,7 +24,13 @@ the **Video Editor** (who cuts the clips) and the **Content Screener** (who chec
 
 ## What to look for
 - **Era: 1920s to 1970, never later.** After 1970 it's past the station's vibe.
-- **Odd beats famous.** Weird toys, strange gadgets, shame-based hygiene ads, "safe for kids" products
+- **Obscure and weird beats famous, every time.** The goal is "wait, what?" in the first second.
+  At least half of each week's finds come from outside the site's own lists, dug out of the
+  Archive's long tail. `find_more.py` sorts by most downloads, so for the long tail query the
+  Archive directly, fewest downloads first:
+  `curl -s "https://archive.org/advancedsearch.php?q=<words>+AND+mediatype:movies&fl[]=identifier&fl[]=title&fl[]=year&fl[]=downloads&sort[]=downloads+asc&rows=50&output=json"`. Use a big
+  brand (Coca-Cola, Kodak, Pepsi) at most once a week, and only when the ad itself is strange.
+  Weird toys, strange gadgets, shame-based hygiene ads, "safe for kids" products
   that clearly weren't, odd mascots, mail-order ads from the backs of comics, wild magazine pages,
   pulp and paperback covers, home-economics films, unintentionally funny commercials.
 - **Where:**
@@ -83,9 +89,15 @@ Write about the ads as history and oddity, never as if The Bee's Knees were the 
 ```
 - **Label** (the words on screen): what it is and the year, nothing else. "Green Mint mouthwash|TV
   commercial, 1962". No jokes, no emoji on screen.
-- **Caption:** the voice of the posts that worked: a short hook, then the product and year, then
-  "More vintage commercials at thebeesknees.fm" (or the matching page), then up to 5 hashtags.
-  Plain and a little dry. Never "delve", "iconic", "a glimpse into", "step back in time",
+- **Caption voice: Gen Z** (the Director's call, Nov 24, 2026). Write like a 22-year-old who found
+  something unhinged in their grandparents' attic and has to show the group chat: short, deadpan,
+  reacting to how weird it is. Lowercase is fine. Examples of the register:
+  "not the 1953 deodorant ad calling men sissies 💀", "the way this toy would be illegal now",
+  "be so for real, who approved this", "1959 was a lawless time", "no bc why is the baby holding DDT".
+  One slang beat per caption, not five; never explain the joke; no "fellow kids" words that
+  are dated or forced ("on fleek", "yeet", "slay queen"), and nothing that mocks a group of people.
+  Then the product and year (the facts stay exact), then "more at thebeesknees.fm" (or the matching
+  page), then up to 5 hashtags. Never "delve", "iconic", "a glimpse into", "step back in time",
   "nostalgia" or a row of emoji. Bluesky: 300 characters at most. YouTube text starts with
   "Free old time radio, vintage TV and a Saturday-night Drive-In: https://thebeesknees.fm" and ends
   with "#Shorts", like the existing ones.
