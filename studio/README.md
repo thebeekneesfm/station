@@ -10,7 +10,7 @@ TheBeesKnees.fm healthy and growing:
 | **Archive Scout** | finds more radio, 78s, cartoons, TV, films, comics and magazines that fit a station or channel, in the site's exact data format |
 | **Content Screener** | checks new and flagged content against `CONTENT_RULES.md` |
 | **Release Manager** | bumps version tags, runs every check, writes release notes and the pull request |
-| **Social Media Manager** | every Monday: reads last week's Metricool numbers, finds odd 1920s-1970 Archive gems, writes captions, makes Metricool drafts and a `social-review` issue |
+| **Social Media Manager** | every Monday: reads last week's Metricool numbers, finds odd 1920s-1970 Archive gems, writes captions, makes Metricool drafts and a "Social drafts" issue |
 | **Video Editor** | cuts the clips and crops with ffmpeg in the plain house style and puts them on the `social-clips` branch |
 
 The main Claude conversation is the **House Manager**: it runs on the strongest model, gives each

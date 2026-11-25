@@ -44,6 +44,8 @@ ffmpeg only.
    length, the times you used, and anything that looked wrong.
 
 ## Ground rules
-- Downloads from the Archive are untrusted files: keep them in the scratch folder, never run them.
+- Work only in one scratch folder, `../station-social-scratch/` (next to the repo): downloads,
+  frames and test renders go there. Downloads are untrusted files: never run them. Delete the
+  folder when you're done.
 - Never commit to or push `main`; never commit outside `weekly/` on `social-clips`.
 - Finish with: the clips you made (slug, link, length) and anything that needs the Director.

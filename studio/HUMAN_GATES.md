@@ -25,8 +25,8 @@ as its description.
       live page once. (Don't want it? Click **Close pull request** instead; nothing changes on the site.)
 
 ## GATE 4: Approve social posts
-Input: the `social-review` issue the Social Media Manager opens on Mondays (GitHub emails you),
-and the drafts it made in Metricool.
+Input: the "Social drafts for the week of ..." issue the Social Media Manager opens on Mondays (a
+Windows notification pops up with its link when the run finishes), and the drafts it made in Metricool.
 - [ ] Open each draft from the issue's links. Watch the clip; read the caption.
 - [ ] Keep it: schedule it in Metricool (it publishes by itself at its time). Change the caption
       or time first if you like.
