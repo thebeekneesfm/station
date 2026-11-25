@@ -27,6 +27,15 @@ README stays the source of truth.
 - **Whole magazines** go up whole, with a note asking readers to report pages; take a page down with
   `"hide": [n]` in `art/rack/rack.js` (the README explains page numbers).
 
+## Social posts
+- The rules above apply to posts too. Era: **1920s to 1970**, nothing later.
+- Every post names its source (brand or publication and year); the brief keeps the Archive link.
+- Write about ads as history and oddity, never as if the station were the brand.
+- Real archival media only: no AI images, voices, music or upscaling, and no Canva, vidIQ or
+  Typefully. Posts go into Metricool as drafts; the Director approves each one (GATE 4).
+- Material from 1964 to 1970, and famous illustrators' covers, may still be under copyright: the
+  brief says so, and the Director decides.
+
 ## Rights
 - **Sound recordings (78s):** US public domain if recorded 1925 or earlier (as of 2026); 1926 joins on
   January 1, 2027, and so on. The site check and the Scout's tools enforce this automatically.

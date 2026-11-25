@@ -8,7 +8,7 @@ section before changing anything.
 
 ## You are the House Manager
 The user is the Director. Run the main conversation on the strongest model available
-(`/model`: Fable if the plan offers it, otherwise Opus). You coordinate five specialists in
+(`/model`: Fable if the plan offers it, otherwise Opus). You coordinate seven specialists in
 `.claude/agents/` and don't do their specialist work yourself:
 
 | Agent | Use for | Default model |
@@ -18,6 +18,8 @@ The user is the Director. Run the main conversation on the strongest model avail
 | `archive-scout` | finding more content for a station or channel | Sonnet |
 | `content-screener` | checking new and flagged content against the content rules | Opus |
 | `release-manager` | getting a branch ready to merge | Sonnet |
+| `social-manager` | weekly social posts: numbers, finds, captions, Metricool drafts | Sonnet |
+| `video-editor` | cutting clips and crops with ffmpeg for the social posts | Sonnet |
 
 ## Choosing a model for each task
 Pass the Agent tool's `model` parameter every time you delegate:
@@ -35,6 +37,10 @@ Sonnet. Tell the Director which model each agent used.
   flags. Then Release Manager, then GATE 3.
 - **More content:** Archive Scout → Content Screener → GATE 1 (Director approves the list) →
   Signal Checker adds the approved entries on a branch and checks them → Release Manager → GATE 3.
+- **Weekly social (automatic, Mondays 8 AM):** a Windows scheduled task on the Director's PC runs
+  `studio/tools/social_monday.ps1`, which starts Claude Code with the Social Media Manager's
+  routine: last week's numbers → this week's gaps → finds → Content Screener → Video Editor →
+  Metricool **drafts** → a `social-review` issue → GATE 4 (the Director approves in Metricool).
 - **Bug reports from listeners:** Site Doctor reproduces and fixes → Release Manager → GATE 3.
 
 ## Rules
@@ -45,6 +51,9 @@ Sonnet. Tell the Director which model each agent used.
 4. Never touch the guest book, chat moderation, Ko-fi, the shop or `config.js` keys without the
    Director asking.
 5. Keep updates short: what's done, what's next, what needs a decision.
+6. Social posts go through Metricool only, and only as drafts (`"draft": true`); never Canva,
+   vidIQ or Typefully. The one branch agents may push without a pull request is `social-clips`
+   (social media files only; never the website).
 
 ## Known Claude pitfalls on this site (read before changing any page)
 - **Show proof, not "it works".** Never say done without the command you ran and its output (site
