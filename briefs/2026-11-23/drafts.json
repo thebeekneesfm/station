@@ -1,0 +1,53 @@
+[
+ {
+  "slug": "blackflag-1959",
+  "date": "2026-11-26T10:00:00",
+  "networks": [
+   "tiktok"
+  ],
+  "text": "A man in a hammock, a can of insect bomb, and a skull-and-crossbones flag. Black Flag insect bomb, TV commercial, 1959.\n\nMore vintage commercials at thebeesknees.fm\n\n#vintagecommercials #1950s #retroads #oldtv",
+  "media": [
+   "https://raw.githubusercontent.com/thebeekneesfm/station/social-clips/weekly/2026-11-23/blackflag-1959.mp4"
+  ],
+  "mediaAltText": "Black-and-white 1959 cartoon commercial: a man relaxes in a hammock while a can of Black Flag insect bomb clears the flies, ending on the product card.",
+  "tiktokData": {
+   "title": "Black Flag insect bomb, TV commercial, 1959"
+  },
+  "screener": "needs the Director",
+  "screener_note": "Clip is clean (no caricature/mascot/diet). Concern: the ad's slogan 'The only good bug is a dead bug' echoes a slur phrase; an Archive review flags it. Caption was rewritten to NOT lead with the slogan, but the clip (17.2-29.3 s) still shows the slogan flag at ~24.5-27 s. Options: post as is, or drop and swap (e.g. Sani-Flush 1961). Audio and between-sample frames not checked.",
+  "risk": "Post-1930, copyright renewal unknown; slogan-echo question for the Director."
+ },
+ {
+  "slug": "off-1960",
+  "date": "2026-11-28T10:00:00",
+  "networks": [
+   "tiktok"
+  ],
+  "text": "A bare arm covered in bugs, then sprayed. Off! insect repellent, TV commercial, 1960.\n\nMore vintage commercials at thebeesknees.fm\n\n#vintagecommercials #1960s #retroads #oldtv",
+  "media": [
+   "https://raw.githubusercontent.com/thebeekneesfm/station/social-clips/weekly/2026-11-23/off-1960.mp4"
+  ],
+  "mediaAltText": "Black-and-white 1960 commercial: a man in a lab coat demonstrates Off! insect repellent on a bare arm with tiny insects on it.",
+  "tiktokData": {
+   "title": "Off! insect repellent, TV commercial, 1960"
+  },
+  "screener": "needs the Director (copyright only)",
+  "screener_note": "No caricature, mascot or diet issue seen. Caption changed from 'mosquitoes' to 'bugs' since species unconfirmed. Audio not checked.",
+  "risk": "1960 Johnson's Wax ad, copyright renewal unknown (1960 is inside the 1964-70 caution only loosely; Director's call)."
+ },
+ {
+  "slug": "babeetenda-1948",
+  "date": "2026-11-25T10:00:00",
+  "networks": [
+   "bluesky"
+  ],
+  "text": "\"Keep your baby safe from spills.\" The Babee-Tenda folding safety chair, \"approved by child specialists since 1937.\" Magazine ad, Woman's Day, 1948. More vintage print ads at thebeesknees.fm/ads.html",
+  "media": [
+   "https://thebeesknees.fm/art/ads/BabeeTendaSafetyChair1948A.jpg"
+  ],
+  "mediaAltText": "1948 black-and-white magazine ad for the Babee-Tenda folding safety chair: a baby in a low cushioned chair with a tray, headline 'Keep Your Baby Safe from Spills', and a coupon for a free folder.",
+  "screener": "needs the Director (copyright only)",
+  "screener_note": "Content fine. Caption corrected from 'mail-order ad' to 'magazine ad, Woman's Day'. Bluesky: no best-time data in Metricool, 10:00 is a default.",
+  "risk": "(c) 1948 notice, renewal unknown; already on the site's ads page."
+ }
+]
