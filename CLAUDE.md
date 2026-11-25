@@ -43,6 +43,24 @@ Sonnet. Tell the Director which model each agent used.
   Metricool **drafts**, plus two YouTube compilations (10 to 15 min) saved to
   `C:/Users/hillk/Videos/Bees Knees YouTube/` → a "Social drafts" issue and a Windows notification → GATE 4
   (the Director approves the drafts in Metricool and uploads the two videos on Tuesday and Friday).
+- **Weekly scouting (automatic, Wednesdays 9 AM):** a Windows scheduled task runs
+  `studio/tools/scout_weekly.ps1`, which starts Claude Code with this routine:
+  1. Pick 3 areas from: print ads, comics, magazines, TV and commercials, films and cartoons, radio
+     shows, 78s. Skip areas covered by the last 3 "Scouting finds" issues
+     (`gh issue list --state all --search "Scouting finds"`); thinnest areas first.
+  2. Archive Scout (sonnet) finds up to 15 entries per area, oldest and oddest first, with the
+     candidate files in `studio/candidates/`.
+  3. Content Screener (opus) screens every entry.
+  4. Commit only the candidate files to a new branch `studio/scout-<date>` and push it. No site files.
+  5. Open a "Scouting finds for <date>" issue (`gh issue create`, no `--label`): one table row per
+     item (area, title, year, Archive link, Screener verdict, rights note), plus anything that
+     "needs the Director". That's GATE 1; once approved, the usual "More content" steps follow.
+  6. **January 1 (`-NewYear`, a second task):** the same, but the areas are what entered the US public
+     domain that day: 78s recorded in `recording_cutoff_year()` and films, comics, magazines and
+     ads published in `works_cutoff_year()` (both in `studio/tools/site_check.py`; they move by
+     themselves). Also have the Site Doctor (opus) update the year wording in `README.md`,
+     `studio/CONTENT_RULES.md` and `.claude/agents/archive-scout.md` on `studio/public-domain-<year>`;
+     the Release Manager opens that pull request (GATE 3). Link it in the issue.
 - **Bug reports from listeners:** Site Doctor reproduces and fixes → Release Manager → GATE 3.
 
 ## Rules
