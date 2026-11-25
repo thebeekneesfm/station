@@ -34,6 +34,19 @@ ffmpeg only.
   `scale`, saved as `weekly/<monday-date>/<slug>_1.jpg` etc. Look at each one.
 - Never retouch, colourise or "enhance" an image.
 
+## YouTube compilations (Tuesday and Friday)
+These never go to GitHub or Metricool: they're too big (GitHub refuses files over 100 MB), and the
+Director uploads them by hand.
+1. Check each commercial's start and end (frames, as above); most play whole. Labels read
+   "Product · year".
+2. Make it: `python studio/tools/make_compilation.py <spec.json>` with `out_dir` set to
+   `C:/Users/hillk/Videos/Bees Knees YouTube/<publish-date> <slug>`. It writes `video.mp4`, `thumbnail.jpg`
+   and `chapters.txt`. The spec format is at the top of the tool.
+3. Write `upload.txt` in the same folder: the title, then the full description (the Manager's text
+   followed by `chapters.txt`), then the tags on one line, then "Made for kids: No".
+4. **Check:** 1920 x 1080, 10 to 15 minutes, has audio. Look at the thumbnail and at frames from
+   three different commercials: labels readable, nothing cut off, no black gaps.
+
 ## Publishing the files
 1. In `../station-social`: `git add weekly/<monday-date>/` then commit ("Social: <slug> for <date>").
 2. `git push origin social-clips`: never main, never force.

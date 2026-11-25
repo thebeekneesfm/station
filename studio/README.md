@@ -28,6 +28,7 @@ studio/
   tools/check_archive.py   asks the Archive whether every file still exists, with the right length
   tools/find_more.py       searches the Archive and builds ready-to-review entries
   tools/make_clip.py       cuts a vertical social clip in the house style (ffmpeg)
+  tools/make_compilation.py  builds a 1920x1080 YouTube compilation, thumbnail and chapters (ffmpeg)
   tools/social_monday.ps1  the Monday social run (Windows Task Scheduler starts it)
   tools/browser_check.mjs  opens every page in a real browser; errors, missing files, screenshots
   CONTENT_RULES.md         the site's content standards and rights rules
