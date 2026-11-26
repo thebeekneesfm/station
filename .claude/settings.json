@@ -23,6 +23,7 @@
     ],
     "defaultMode": "acceptEdits",
     "allow": [
+      "WebSearch",
       "Bash(git push *)",
       "PowerShell(git push *)",
       "Bash(gh pr create *)",
