@@ -13,7 +13,20 @@
       "Bash(git push origin main:*)",
       "Bash(git push origin HEAD:main:*)",
       "Bash(git push -f:*)",
-      "Bash(git push --force:*)"
+      "Bash(git push --force:*)",
+      "Bash(git push)",
+      "PowerShell(git push)",
+      "Bash(git push origin HEAD)",
+      "PowerShell(git push origin HEAD)",
+      "Bash(git push -u origin HEAD)",
+      "PowerShell(git push -u origin HEAD)"
+    ],
+    "defaultMode": "acceptEdits",
+    "allow": [
+      "Bash(git push *)",
+      "PowerShell(git push *)",
+      "Bash(gh pr create *)",
+      "PowerShell(gh pr create *)"
     ]
   },
   "hooks": {

@@ -30,5 +30,6 @@ def test_allows(command):
 
 def test_files():
     assert verdict("Edit", file_path="/s/station/radio.js", new_string="x") == "allow"
-    assert verdict("Edit", file_path="/s/station/.github/workflows/site-health.yml", new_string="x") == "block"
+    # the owner lets agents edit workflows (2026-11-26); main is locked on GitHub, so a workflow can't push to it
+    assert verdict("Edit", file_path="/s/station/.github/workflows/site-health.yml", new_string="x") == "allow"
     assert verdict("Edit", file_path="C:\\s\\station\\.claude\\settings.json", new_string="{}") == "block"
