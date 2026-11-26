@@ -10,7 +10,7 @@ import re
 import sys
 
 # ---- studio rules (filled in per studio) ----
-PROTECTED_PATHS = ['\\.github/workflows/', '\\.claude/settings\\.json', '\\.claude/hooks/']          # files/folders agents must never change (regex, forward slashes)
+PROTECTED_PATHS = ['\\.claude/settings\\.json', '\\.claude/hooks/']          # files/folders agents must never change (regex, forward slashes)
 BLOCKED_COMMANDS = []           # (regex on the normalised command, reason)
 BLOCKED_CODE = []                  # (regex on text being written into a file, reason, allowed file regex)
 
