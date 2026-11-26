@@ -1,11 +1,11 @@
 """Adds new "Madison on the Air" episodes from its Internet Archive item to the madison station in stations.js.
 
-Runs once a day from .github/workflows/madison-sync.yml. It reads the Archive item's file list, and every
+Runs once a week from .github/workflows/madison-sync.yml. It reads the Archive item's file list, and every
 original .mp3 that starts with an episode number ("74. Some Show - Madison on the Air.mp3") and isn't on the
 station yet is added to the end of the station's track list, with the Archive's length. When anything is added
 it also bumps the stations.js?v= tag on the pages, so browsers fetch the new list.
 It never removes anything. To take an episode off for good, delete its track from stations.js AND put its file
-name in scripts/madison_skip.txt, or the next daily run adds it back.
+name in scripts/madison_skip.txt, or the next weekly run adds it back.
 
   python3 scripts/madison_sync.py [--summary FILE]   check the Archive and add new episodes
   python3 scripts/madison_sync.py --self-test        check this script's own logic (no internet)

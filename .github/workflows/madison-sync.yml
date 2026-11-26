@@ -1,0 +1,28 @@
+# Once a week (Thursdays), adds any new "Madison on the Air" episodes from its Archive item to the madison
+# station (stations.js) and bumps the stations.js?v= tag. Never removes anything. Can also be run by hand
+# from the Actions tab.
+name: Madison on the Air update
+on:
+  schedule:
+    - cron: "17 14 * * 4"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the script's own logic
+        run: python3 scripts/madison_sync.py --self-test
+      - name: Check the Archive for new episodes
+        run: python3 scripts/madison_sync.py --summary "$GITHUB_STEP_SUMMARY"
+      - name: Save any changes
+        run: |
+          if git diff --quiet; then echo "No changes"; exit 0; fi
+          git config user.name "The Bee's Knees.fm"
+          git config user.email "thebeeskneesfm@gmail.com"
+          git add stations.js *.html art/screen/theater.js
+          git commit -m "Madison on the Air: add new episodes from the Archive"
+          git pull --rebase
+          git push
