@@ -374,7 +374,9 @@
   /* a silent looping scene from an old public domain film fills the top on stations that have one; the puzzle goes back to taking turns on the right */
   .film { display: none; }
   html.minimal.film-on:not(.scr-mode):not(.vertical) .film { display: block; position: absolute; z-index: 0; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; background: #000; }
-  .film video { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(.12) contrast(1.05); }
+  /* no CSS filter on the film: re-tinting every frame of a full-screen video made it stutter in OBS */
+  .film video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; transition: opacity 1.4s ease; }
+  .film video.on { opacity: 1; }
   .film::after { content: ""; position: absolute; inset: 0; pointer-events: none;
     background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0) 30%); box-shadow: inset 0 0 200px 40px rgba(0,0,0,.7); }
   .film .fc { position: absolute; left: 30px; top: 22px; z-index: 1; font: italic 20px/1 "BK Serif", Georgia, serif; color: rgba(236,222,190,.6); text-shadow: 0 1px 3px #000; }
@@ -389,7 +391,7 @@
     <div><div class="logo head">The Bee's Knees<span>.fm</span></div><div class="tag">Carefully curated to relieve you from our current timeline</div></div>
     <div class="watch"><div>Watch &amp; listen 24/7, free, at</div><b>thebeesknees.fm</b></div>
   </header>
-  <div class="film" id="film" aria-hidden="true"><video id="filmv" muted loop playsinline preload="auto"></video><span class="fc" id="filmc"></span></div>
+  <div class="film" id="film" aria-hidden="true"><video id="filmv" muted playsinline preload="auto"></video><video id="filmw" muted playsinline preload="auto"></video><span class="fc" id="filmc"></span></div>
   <div class="card" id="card"></div>
   <div class="dial" id="dial" aria-hidden="true"><canvas id="viz" width="1112" height="186"></canvas><div class="dial-n"><span>55</span><span>60</span><span>70</span><span>80</span><span>100</span><span>120</span><span>140</span><span>160</span></div></div>
   <img class="tvset" id="tvset" alt="">
@@ -424,6 +426,7 @@
 <script src="stations-more.js?v=1"></script>
 <script src="art/screen/tv-data.js?v=30"></script>
 <script src="art/screen/homemovies-more.js?v=1"></script>
+<script src="art/loops/montages.js?v=1"></script>
 <script src="obs-schedule.js?v=20261120a"></script>
 <script src="ads.js?v=20261102b"></script>
 <script src="house-ads.js?v=2"></script>
@@ -763,15 +766,64 @@
     else if (!same) frame.src = url;
     frame.title = kind === "tv" ? "Bee's Knees TV" : "The Drive-In";
   }
-  /* Radio Night film loops: art/loops/<station>.mp4, silent, 1440 x 810. A station without its own loop gets the spinning record from Noir for now. */
-  var FILMS = { noir: { src: "art/loops/noir.mp4", from: "Detour (1945)" } };
-  function film() {
-    var f = MINIMAL && !VERTICAL && mode === "radio" && Q.get("films") !== "0" ? (FILMS[station.id] || FILMS.noir) : null, v = $("filmv");
-    document.documentElement.classList.toggle("film-on", !!f);
-    if (!f) { if (v.getAttribute("src")) { v.pause(); v.removeAttribute("src"); try { v.load(); } catch (e) {} } return; }
-    $("filmc").textContent = f.from;
-    if (v.getAttribute("src") !== f.src) { v.src = f.src; }
+  /* Radio Night films: each station has a montage of silent scenes from old public domain films
+     (art/loops/montages.js, window.BK_MONTAGES[station id] = [{ u: video address, a: start, b: end, t: film }]).
+     The scenes play in a shuffled order, a new shuffle each time through, cross-fading from one to the
+     next on two video players: while one plays, the other loads the next scene. A station without a
+     montage gets the spinning record from Noir. films=0 in the address turns the films off. */
+  var RECORD = [{ u: "art/loops/noir.mp4", a: 0, b: 0, t: "Detour (1945)", loop: 1 }];
+  var fm = { key: "", list: null, order: [], i: 0, cur: null, nxt: null, t: 0, timer: 0, waits: 0 };
+  function fv(n) { return $(n ? "filmw" : "filmv"); }
+  function fShuffle() { var o = fm.list.map(function (_, k) { return k; }); for (var k = o.length - 1; k > 0; k--) { var j = Math.floor(Math.random() * (k + 1)), x = o[k]; o[k] = o[j]; o[j] = x; } fm.order = o; fm.i = 0; }
+  function fNextClip() { if (fm.i >= fm.order.length) fShuffle(); return fm.list[fm.order[fm.i++]]; }
+  function fLoad(v, c) {   // put a scene into a player, parked at its first frame
+    v._clip = c; v._ready = false; v.loop = !!c.loop;
+    v.style.transform = c.z ? "scale(" + c.z + ")" : "";   // z: zoom past the black bars some films have at the sides
+    var go = function () { try { if (c.a && Math.abs(v.currentTime - c.a) > 0.5) v.currentTime = c.a; } catch (e) {} };
+    v.onloadedmetadata = go;
+    v.onseeked = v.oncanplay = function () { if (v._clip === c && v.readyState >= 3 && (!c.a || Math.abs(v.currentTime - c.a) < 1.5)) v._ready = true; };
+    v.onerror = function () { v._bad = true; };
+    v._bad = false;
+    if (v.getAttribute("src") !== c.u) { v.src = c.u; } else go();
+  }
+  function fStop() {
+    clearInterval(fm.timer); fm.timer = 0; fm.key = "";
+    [0, 1].forEach(function (n) { var v = fv(n); v.classList.remove("on"); v.pause(); v.removeAttribute("src"); try { v.load(); } catch (e) {} });
+  }
+  function fShow(n) {   // fade player n in over the other one and start it
+    var v = fv(n), o = fv(1 - n);
     var p = v.play(); if (p && p.catch) p.catch(function () {});
+    v.classList.add("on"); o.classList.remove("on");
+    fm.cur = n; fm.t = Date.now(); fm.waits = 0;
+    $("filmc").textContent = v._clip.t || "";
+    setTimeout(function () { if (fm.cur === n) { o.pause(); } }, 1600);
+    if (!v._clip.loop) fLoad(o, fNextClip());   // the next scene loads in the hidden player
+  }
+  function fTick() {
+    if (fm.cur == null) return;
+    var v = fv(fm.cur), c = v._clip, o = fv(1 - fm.cur);
+    if (c.loop) return;
+    var end = c.b - 1.2;   // start the cross-fade a little before the scene's end
+    var stuck = Date.now() - fm.t > (c.b - c.a + 20) * 1000;   // it stalled or never really started
+    if (v.currentTime < end && !v.ended && !stuck && !v._bad) return;
+    if (o._ready && !o._bad) { fShow(1 - fm.cur); return; }
+    // the next scene isn't ready yet: keep this one going a few more seconds, then try a different scene
+    if (++fm.waits > 8 || o._bad) { fm.waits = 0; fLoad(o, fNextClip()); }
+  }
+  function film() {
+    var on = MINIMAL && !VERTICAL && mode === "radio" && Q.get("films") !== "0";
+    var list = on ? ((window.BK_MONTAGES || {})[station.id] || RECORD) : null, key = on ? station.id + ":" + list.length : "";
+    document.documentElement.classList.toggle("film-on", !!list);
+    if (!list) { fStop(); return; }
+    if (key === fm.key) { var cv = fv(fm.cur || 0); if (cv.paused) { var p = cv.play(); if (p && p.catch) p.catch(function () {}); } return; }
+    fStop(); fm.key = key; fm.list = list; fShuffle(); fm.cur = null;
+    var v = fv(0); fLoad(v, fNextClip());
+    var tries = 0, first = setInterval(function () {   // show the first scene as soon as it can play (or after 12 seconds, whatever it has)
+      if (fm.key !== key) { clearInterval(first); return; }
+      if (v._ready || ++tries > 24) { clearInterval(first); fShow(0); }
+      else if (v._bad) { fLoad(v, fNextClip()); }
+    }, 500);
+    fm.timer = setInterval(fTick, 500);
   }
   function setMode(x) {
     var was = mode; mode = x.kind;
