@@ -763,10 +763,10 @@
     else if (!same) frame.src = url;
     frame.title = kind === "tv" ? "Bee's Knees TV" : "The Drive-In";
   }
-  /* Radio Night film loops: art/loops/<station>.mp4, silent, 1440 x 810. A station without one keeps the big puzzle. */
+  /* Radio Night film loops: art/loops/<station>.mp4, silent, 1440 x 810. A station without its own loop gets the spinning record from Noir for now. */
   var FILMS = { noir: { src: "art/loops/noir.mp4", from: "Detour (1945)" } };
   function film() {
-    var f = MINIMAL && !VERTICAL && mode === "radio" && Q.get("films") !== "0" ? FILMS[station.id] : null, v = $("filmv");
+    var f = MINIMAL && !VERTICAL && mode === "radio" && Q.get("films") !== "0" ? (FILMS[station.id] || FILMS.noir) : null, v = $("filmv");
     document.documentElement.classList.toggle("film-on", !!f);
     if (!f) { if (v.getAttribute("src")) { v.pause(); v.removeAttribute("src"); try { v.load(); } catch (e) {} } return; }
     $("filmc").textContent = f.from;
